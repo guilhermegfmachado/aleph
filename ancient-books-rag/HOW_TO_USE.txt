@@ -1,0 +1,80 @@
+========================================
+       HOW TO USE ANCIENT BOOKS
+========================================
+
+This is a website for searching and asking questions about
+classical texts (Homer, Plato, Aristotle, etc.)
+
+
+STEP 1: GET YOUR API KEY (one-time setup)
+-----------------------------------------
+1. Go to: https://console.anthropic.com/
+2. Sign up or log in
+3. Add a payment method
+4. Go to: https://console.anthropic.com/settings/keys
+5. Click "Create Key"
+6. Copy the key (it looks like: sk-ant-api03-xxxxx...)
+
+
+STEP 2: ADD YOUR KEY
+-----------------------------------------
+1. Open the file called ".env" in this folder
+2. Find the line: ANTHROPIC_API_KEY=your-api-key-here
+3. Replace "your-api-key-here" with your actual key
+4. Save the file
+
+
+STEP 3: INSTALL (one-time setup)
+-----------------------------------------
+Open a terminal/command prompt and run:
+
+    cd /home/user/claude-projects/ancient-books-rag
+    pip install -e .
+
+
+STEP 4: RUN THE WEBSITE
+-----------------------------------------
+Run this command:
+
+    python setup_and_run.py
+
+The first time, it will download classical texts (takes a few minutes).
+Then it starts the website.
+
+
+STEP 5: USE IT
+-----------------------------------------
+1. Open your web browser (Chrome, Firefox, etc.)
+2. Go to: http://localhost:8000
+3. Type your question
+4. Get answers with exact citations!
+
+
+EXAMPLE QUESTIONS:
+-----------------------------------------
+- What did Homer write about love?
+- What are Aristotle's views on friendship?
+- How does Plato describe the soul?
+- What did Seneca say about anger?
+
+
+TO STOP THE WEBSITE:
+-----------------------------------------
+Press Ctrl+C in the terminal
+
+
+COSTS:
+-----------------------------------------
+- Each question costs about $0.01 - $0.05
+- Light use: ~$5-10/month
+- Heavy use: ~$20-50/month
+
+
+NEED HELP?
+-----------------------------------------
+Something not working? Check:
+1. Is your API key correct in the .env file?
+2. Did you run "pip install -e ." ?
+3. Is another program using port 8000?
+
+========================================

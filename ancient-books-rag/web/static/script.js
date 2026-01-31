@@ -1,4 +1,4 @@
-// Classical Texts Library - Frontend JavaScript
+// Borges - Frontend JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const authorFilter = document.getElementById('author-filter');
     const sourceFilter = document.getElementById('source-filter');
     const resultsDiv = document.getElementById('results');
+
+    let currentQuery = '';
 
     // Load filters
     loadFilters();
@@ -35,19 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function loadFilters() {
         try {
-            // Load authors
             const authorsRes = await fetch('/api/authors');
             const authorsData = await authorsRes.json();
             if (authorFilter && authorsData.authors) {
                 authorsData.authors.forEach(author => {
                     const option = document.createElement('option');
                     option.value = author;
-                    option.textContent = author;
+                    option.textContent = author.toLowerCase();
                     authorFilter.appendChild(option);
                 });
             }
 
-            // Load sources
             const sourcesRes = await fetch('/api/sources');
             const sourcesData = await sourcesRes.json();
             if (sourceFilter && sourcesData.sources) {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         } catch (error) {
-            console.error('Failed to load filters:', error);
+            console.error('failed to load filters:', error);
         }
     }
 
@@ -67,11 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const query = searchInput.value.trim();
         if (!query) return;
 
-        // Show loading
+        currentQuery = query;
+
         resultsDiv.innerHTML = `
             <div class="loading">
                 <div class="spinner"></div>
-                <p>Searching...</p>
+                <p>searching...</p>
             </div>
         `;
 
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (!response.ok) {
                 const error = await response.json();
-                throw new Error(error.detail || 'Search failed');
+                throw new Error(error.detail || 'search failed');
             }
 
             const data = await response.json();
@@ -98,8 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             resultsDiv.innerHTML = `
                 <div class="error">
-                    <p>Error: ${error.message}</p>
-                    <p>Try a simpler search term or check if the library has been populated.</p>
+                    <p>error: ${error.message}</p>
                 </div>
             `;
         }
@@ -109,8 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (results.length === 0) {
             resultsDiv.innerHTML = `
                 <div class="no-results">
-                    <h3>No results found for "${query}"</h3>
-                    <p>Try different keywords or check spelling.</p>
+                    <p>no results for "${query}"</p>
                 </div>
             `;
             return;
@@ -118,22 +117,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let html = `
             <div class="results-header">
-                <h3>Found ${results.length} passages matching "${query}"</h3>
+                <h3>found ${results.length} results for "${query}"</h3>
             </div>
             <div class="results-list">
         `;
 
         results.forEach(result => {
+            // Pass query to book page for highlighting
+            const bookUrl = `/book/${result.book_id}?q=${encodeURIComponent(query)}`;
+
             html += `
                 <div class="result-card">
                     <div class="result-header">
-                        <a href="/book/${result.book_id}" class="result-title">${result.title}</a>
-                        <span class="result-author">by ${result.author}</span>
+                        <a href="${bookUrl}" class="result-title">${result.title.toLowerCase()}</a>
+                        <span class="result-author">— ${result.author.toLowerCase()}</span>
                     </div>
                     <div class="result-snippet">${result.snippet}</div>
                     <div class="result-meta">
-                        <span class="result-source">${result.source}</span>
-                        <a href="/book/${result.book_id}" class="read-more">Read full text →</a>
+                        <span class="result-source">[${result.source}]</span>
+                        <a href="${bookUrl}" class="read-more">read →</a>
                     </div>
                 </div>
             `;

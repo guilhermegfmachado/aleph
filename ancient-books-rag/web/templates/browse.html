@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse — Borges</title>
+    <title>browse - borges</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📚 Borges</h1>
-            <p class="subtitle">Browse all texts in the library</p>
+            <h1>borges</h1>
+            <p class="subtitle">browse all texts</p>
             <nav>
-                <a href="/">Search</a>
-                <a href="/browse" class="active">Browse</a>
-                <a href="/upload">Upload</a>
+                <a href="/">search</a>
+                <a href="/browse" class="active">browse</a>
+                <a href="/upload">upload</a>
             </nav>
         </header>
 
@@ -23,16 +22,16 @@
             <div class="browse-filters">
                 <form method="get" action="/browse">
                     <select name="author" onchange="this.form.submit()">
-                        <option value="">All Authors</option>
+                        <option value="">all authors</option>
                         {% for author in authors %}
                         <option value="{{ author }}" {% if author == current_author %}selected{% endif %}>
-                            {{ author }}
+                            {{ author|lower }}
                         </option>
                         {% endfor %}
                     </select>
 
                     <select name="source" onchange="this.form.submit()">
-                        <option value="">All Sources</option>
+                        <option value="">all sources</option>
                         {% for source in sources %}
                         <option value="{{ source }}" {% if source == current_source %}selected{% endif %}>
                             {{ source }}
@@ -46,36 +45,35 @@
                 {% if books %}
                     {% for book in books %}
                     <div class="book-card">
-                        <h3><a href="/book/{{ book.id }}">{{ book.title }}</a></h3>
+                        <h3><a href="/book/{{ book.id }}">{{ book.title|lower }}</a></h3>
                         <p class="book-meta">
-                            <span class="author">{{ book.author }}</span>
-                            <span class="source">{{ book.source }}</span>
+                            <span class="author">{{ book.author|lower }}</span>
+                            <span class="source">[{{ book.source }}]</span>
                         </p>
-                        <p class="book-snippet">{{ book.snippet(200) }}</p>
                     </div>
                     {% endfor %}
 
                     <div class="pagination">
                         {% if page > 1 %}
-                        <a href="/browse?page={{ page - 1 }}{% if current_author %}&author={{ current_author }}{% endif %}{% if current_source %}&source={{ current_source }}{% endif %}">← Previous</a>
+                        <a href="/browse?page={{ page - 1 }}{% if current_author %}&author={{ current_author }}{% endif %}{% if current_source %}&source={{ current_source }}{% endif %}">← prev</a>
                         {% endif %}
 
-                        <span>Page {{ page }}</span>
+                        <span>page {{ page }}</span>
 
                         {% if books|length == 50 %}
-                        <a href="/browse?page={{ page + 1 }}{% if current_author %}&author={{ current_author }}{% endif %}{% if current_source %}&source={{ current_source }}{% endif %}">Next →</a>
+                        <a href="/browse?page={{ page + 1 }}{% if current_author %}&author={{ current_author }}{% endif %}{% if current_source %}&source={{ current_source }}{% endif %}">next →</a>
                         {% endif %}
                     </div>
                 {% else %}
                     <div class="no-books">
-                        <p>No texts found. <a href="/upload">Upload some books</a> or run the ingestion script.</p>
+                        <p>no texts found. <a href="/upload">upload some</a> or run the populate script.</p>
                     </div>
                 {% endif %}
             </div>
         </main>
 
         <footer>
-            <p>Sources: MIT Classics • Loeb Classical Library • Perseus • Project Gutenberg • Sacred Texts</p>
+            <p>sources: mit classics / gutenberg / perseus / sacred texts</p>
         </footer>
     </div>
 </body>

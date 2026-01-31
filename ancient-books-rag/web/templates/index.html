@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borges — The Searchable Library</title>
+    <title>borges</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📚 Borges</h1>
-            <p class="subtitle">The searchable Library of Babel — all classical texts in one place</p>
+            <h1>borges</h1>
+            <p class="subtitle">searchable library of classical texts</p>
             <nav>
-                <a href="/" class="active">Search</a>
-                <a href="/browse">Browse</a>
-                <a href="/upload">Upload</a>
+                <a href="/" class="active">search</a>
+                <a href="/browse">browse</a>
+                <a href="/upload">upload</a>
             </nav>
         </header>
 
@@ -25,41 +23,37 @@
                 <input
                     type="text"
                     id="search-input"
-                    placeholder="Search for: love, justice, death, virtue..."
+                    placeholder="search: love, justice, death, virtue..."
                     autofocus
                 >
                 <div class="search-filters">
                     <select id="author-filter">
-                        <option value="">All Authors</option>
+                        <option value="">all authors</option>
                     </select>
                     <select id="source-filter">
-                        <option value="">All Sources</option>
+                        <option value="">all sources</option>
                     </select>
-                    <button id="search-btn">Search</button>
+                    <button id="search-btn">search</button>
                 </div>
             </div>
 
             <div class="search-tips">
-                <p><strong>Tips:</strong> Use quotes for exact phrases ("know thyself"),
-                   OR for alternatives (love OR desire),
-                   NOT to exclude (justice NOT revenge)</p>
+                <p>use quotes for exact phrases ("know thyself"), OR for alternatives, NOT to exclude</p>
             </div>
 
             <div id="results" class="results">
                 <div class="welcome">
-                    <h2>Welcome to the Library</h2>
-                    <p>{{ stats.total_books }} texts from {{ stats.total_authors }} authors</p>
+                    <h2>{{ stats.total_books }} texts from {{ stats.total_authors }} authors</h2>
                     <div class="quick-searches">
-                        <p>Quick searches:</p>
+                        <p>try:</p>
                         <div class="quick-links">
-                            <a href="#" class="quick-search" data-query="love">Love</a>
-                            <a href="#" class="quick-search" data-query="death">Death</a>
-                            <a href="#" class="quick-search" data-query="justice">Justice</a>
-                            <a href="#" class="quick-search" data-query="virtue">Virtue</a>
-                            <a href="#" class="quick-search" data-query="war">War</a>
-                            <a href="#" class="quick-search" data-query="soul">Soul</a>
-                            <a href="#" class="quick-search" data-query="god OR gods">Gods</a>
-                            <a href="#" class="quick-search" data-query="fate OR destiny">Fate</a>
+                            <a href="#" class="quick-search" data-query="love">love</a>
+                            <a href="#" class="quick-search" data-query="death">death</a>
+                            <a href="#" class="quick-search" data-query="justice">justice</a>
+                            <a href="#" class="quick-search" data-query="virtue">virtue</a>
+                            <a href="#" class="quick-search" data-query="war">war</a>
+                            <a href="#" class="quick-search" data-query="soul">soul</a>
+                            <a href="#" class="quick-search" data-query="fate">fate</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +61,7 @@
         </main>
 
         <footer>
-            <p>Sources: MIT Classics • Loeb Classical Library • Perseus • Project Gutenberg • Sacred Texts</p>
+            <p>sources: mit classics / gutenberg / perseus / sacred texts</p>
         </footer>
     </div>
 

@@ -3,52 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ book.title }} — Borges</title>
+    <title>{{ book.title }} - borges</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📚 Borges</h1>
+            <h1>borges</h1>
             <nav>
-                <a href="/">Search</a>
-                <a href="/browse">Browse</a>
-                <a href="/upload">Upload</a>
+                <a href="/">search</a>
+                <a href="/browse">browse</a>
+                <a href="/upload">upload</a>
             </nav>
         </header>
 
         <main class="book-view">
             <div class="book-header">
                 <h1 class="book-title">{{ book.title }}</h1>
-                <p class="book-author">by {{ book.author }}</p>
+                <p class="book-author">{{ book.author }}</p>
                 <div class="book-info">
                     {% if book.translator %}
-                    <span>Translated by {{ book.translator }}</span>
+                    <span>trans. {{ book.translator }}</span>
                     {% endif %}
-                    {% if book.year_written %}
-                    <span>Written: {{ book.year_written }}</span>
-                    {% endif %}
-                    <span>Source: {{ book.source }}</span>
+                    <span>source: {{ book.source }}</span>
                     {% if book.url %}
-                    <a href="{{ book.url }}" target="_blank">Original source ↗</a>
+                    <a href="{{ book.url }}" target="_blank">original</a>
                     {% endif %}
                 </div>
             </div>
 
             <div class="book-content">
-                <pre>{{ book.content }}</pre>
+                <div id="text-body" class="text-body">{{ book.content }}</div>
             </div>
 
             <div class="book-nav">
-                <a href="/browse?author={{ book.author }}">More by {{ book.author }}</a>
-                <a href="/browse">Back to Browse</a>
+                <a href="/browse?author={{ book.author }}">more by {{ book.author }}</a>
+                <a href="/">back to search</a>
             </div>
         </main>
 
         <footer>
-            <p>Sources: MIT Classics • Loeb Classical Library • Perseus • Project Gutenberg • Sacred Texts</p>
+            <p>sources: mit classics / gutenberg / perseus / sacred texts</p>
         </footer>
     </div>
+
+    <script>
+        // Get search query from URL if present
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('q');
+
+        if (searchQuery) {
+            const textBody = document.getElementById('text-body');
+            const content = textBody.innerHTML;
+
+            // Create regex to find the search term (case insensitive)
+            const regex = new RegExp(`(${searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+            // Replace with highlighted version
+            const highlighted = content.replace(regex, '<span class="highlight" id="first-match">$1</span>');
+            textBody.innerHTML = highlighted;
+
+            // Only keep id on first match
+            const matches = textBody.querySelectorAll('.highlight');
+            matches.forEach((match, index) => {
+                if (index > 0) match.removeAttribute('id');
+            });
+
+            // Scroll to first match
+            const firstMatch = document.getElementById('first-match');
+            if (firstMatch) {
+                setTimeout(() => {
+                    firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,30 +1,13 @@
 ========================================
-       HOW TO USE ANCIENT BOOKS
+         HOW TO USE BORGES
+    The Searchable Library of Babel
 ========================================
 
-This is a website for searching and asking questions about
-classical texts (Homer, Plato, Aristotle, etc.)
+Search and browse classical texts from Homer to Seneca.
+No AI, no API keys, no monthly fees - everything runs locally.
 
 
-STEP 1: GET YOUR API KEY (one-time setup)
------------------------------------------
-1. Go to: https://console.anthropic.com/
-2. Sign up or log in
-3. Add a payment method
-4. Go to: https://console.anthropic.com/settings/keys
-5. Click "Create Key"
-6. Copy the key (it looks like: sk-ant-api03-xxxxx...)
-
-
-STEP 2: ADD YOUR KEY
------------------------------------------
-1. Open the file called ".env" in this folder
-2. Find the line: ANTHROPIC_API_KEY=your-api-key-here
-3. Replace "your-api-key-here" with your actual key
-4. Save the file
-
-
-STEP 3: INSTALL (one-time setup)
+STEP 1: INSTALL (one time)
 -----------------------------------------
 Open a terminal/command prompt and run:
 
@@ -32,49 +15,59 @@ Open a terminal/command prompt and run:
     pip install -e .
 
 
-STEP 4: RUN THE WEBSITE
+STEP 2: RUN
 -----------------------------------------
-Run this command:
-
     python setup_and_run.py
 
-The first time, it will download classical texts (takes a few minutes).
-Then it starts the website.
+First time: downloads 100 classical texts (takes a few minutes)
+After that: starts instantly
 
 
-STEP 5: USE IT
+STEP 3: USE
 -----------------------------------------
-1. Open your web browser (Chrome, Firefox, etc.)
+1. Open your browser (Chrome, Firefox, etc.)
 2. Go to: http://localhost:8000
-3. Type your question
-4. Get answers with exact citations!
+3. Type a search term: love, death, justice, virtue...
+4. Click on results to read full texts
 
 
-EXAMPLE QUESTIONS:
+FEATURES:
 -----------------------------------------
-- What did Homer write about love?
-- What are Aristotle's views on friendship?
-- How does Plato describe the soul?
-- What did Seneca say about anger?
+✓ Search across all texts instantly
+✓ Browse by author or source
+✓ Upload your own books (PDF, TXT, EPUB)
+✓ Works offline after initial download
 
 
-TO STOP THE WEBSITE:
+ADD MORE BOOKS:
+-----------------------------------------
+From MIT Classics (441 works):
+    python scripts/populate_library.py --source mit
+
+From Project Gutenberg:
+    python scripts/populate_library.py --source gutenberg
+
+From Sacred Texts Archive:
+    python scripts/populate_library.py --source sacred
+
+All sources:
+    python scripts/populate_library.py --source all
+
+
+UPLOAD YOUR OWN:
+-----------------------------------------
+1. Go to http://localhost:8000/upload
+2. Choose a file (PDF, TXT, EPUB, HTML)
+3. Click Upload
+
+
+TO STOP:
 -----------------------------------------
 Press Ctrl+C in the terminal
 
 
-COSTS:
+COST:
 -----------------------------------------
-- Each question costs about $0.01 - $0.05
-- Light use: ~$5-10/month
-- Heavy use: ~$20-50/month
-
-
-NEED HELP?
------------------------------------------
-Something not working? Check:
-1. Is your API key correct in the .env file?
-2. Did you run "pip install -e ." ?
-3. Is another program using port 8000?
+$0. Everything runs on your computer.
 
 ========================================

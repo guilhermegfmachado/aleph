@@ -1,100 +1,53 @@
 #!/usr/bin/env python3
 """
-Simple setup script for Ancient Books.
+Borges - The Searchable Library
 
-This script:
-1. Checks if texts are already indexed
-2. If not, downloads and indexes classical texts
+Simple setup script that:
+1. Checks if books are in the library
+2. If not, downloads classical texts
 3. Starts the web server
 
 Just run: python setup_and_run.py
 """
 
-import os
+import subprocess
 import sys
 from pathlib import Path
 
-# Add the project to the path
 sys.path.insert(0, str(Path(__file__).parent))
 
 
-def check_api_key():
-    """Check if the Anthropic API key is set."""
-    from dotenv import load_dotenv
-    load_dotenv()
+def check_and_populate():
+    """Check if library has books, populate if empty."""
+    from src.library import Library
 
-    key = os.getenv("ANTHROPIC_API_KEY")
-    if not key or key == "your-api-key-here":
-        print("\n" + "=" * 60)
-        print("SETUP REQUIRED: Anthropic API Key")
-        print("=" * 60)
-        print("\n1. Go to: https://console.anthropic.com/settings/keys")
-        print("2. Create a new API key")
-        print("3. Open the file '.env' in this folder")
-        print("4. Replace 'your-api-key-here' with your actual key")
-        print("5. Save and run this script again")
-        print("\n" + "=" * 60 + "\n")
-        return False
-    return True
+    library = Library()
+    stats = library.get_stats()
 
-
-def check_and_setup_texts():
-    """Check if texts are indexed, if not, download and index them."""
-    from src.embeddings import VectorStore
-
-    print("Checking indexed texts...")
-    store = VectorStore()
-    stats = store.get_stats()
-
-    if stats["total_chunks"] > 0:
-        print(f"Found {stats['total_chunks']} passages from {stats['works_count']} works.")
+    if stats['total_books'] > 0:
+        print(f"✓ Library has {stats['total_books']} books from {stats['total_authors']} authors")
         return True
 
-    print("\nNo texts indexed yet. Let's download some classical texts...")
+    print("\n📚 Library is empty. Let's add some classical texts...")
     print("This will take a few minutes on first run.\n")
 
-    # Import and run ingestion
-    from src.sources import get_source
-    from src.chunking import ChunkingConfig, chunk_documents
+    # Run the populate script
+    script = Path(__file__).parent / "scripts" / "populate_library.py"
+    subprocess.run([sys.executable, str(script), "--source", "mit", "--limit", "100"])
 
-    config = ChunkingConfig()
-    total_added = 0
-
-    # Start with MIT Classics - most reliable and fastest
-    print("Downloading from MIT Internet Classics Archive...")
-    try:
-        source = get_source("mit_classics")
-        works = source.list_works()
-        print(f"Found {len(works)} works available.")
-
-        # Download first 50 works for initial setup
-        for i, work in enumerate(works[:50], 1):
-            try:
-                print(f"  [{i}/50] {work.get('title', work['id'])}...")
-                file_path = source.download_work(work["id"])
-                documents = list(source.extract_text(file_path))
-                chunks = list(chunk_documents(iter(documents), config))
-                if chunks:
-                    added = store.add_documents(chunks, show_progress=False)
-                    total_added += added
-            except Exception as e:
-                print(f"    (skipped: {e})")
-
-    except Exception as e:
-        print(f"Error with MIT Classics: {e}")
-
-    print(f"\nDone! Indexed {total_added} passages.")
-    return total_added > 0
+    # Check again
+    stats = library.get_stats()
+    return stats['total_books'] > 0
 
 
 def run_server():
     """Start the web server."""
-    print("\n" + "=" * 60)
-    print("Starting Ancient Books web server...")
-    print("=" * 60)
+    print("\n" + "=" * 50)
+    print("   📚 BORGES - Starting web server...")
+    print("=" * 50)
     print("\nOpen your browser and go to:")
     print("\n    http://localhost:8000")
-    print("\nPress Ctrl+C to stop the server.\n")
+    print("\nPress Ctrl+C to stop.\n")
 
     import uvicorn
     from web.app import app
@@ -103,20 +56,16 @@ def run_server():
 
 
 def main():
-    print("\n" + "=" * 60)
-    print("       ANCIENT BOOKS - Classical Texts Research")
-    print("=" * 60 + "\n")
+    print("\n" + "=" * 50)
+    print("   📚 BORGES - The Searchable Library of Babel")
+    print("=" * 50 + "\n")
 
-    # Step 1: Check API key
-    if not check_api_key():
-        return
+    # Check/populate library
+    if not check_and_populate():
+        print("\n⚠ Could not populate library. Check your internet connection.")
+        print("You can still run the server and upload books manually.\n")
 
-    # Step 2: Check/setup texts
-    if not check_and_setup_texts():
-        print("Failed to set up texts. Please check your internet connection.")
-        return
-
-    # Step 3: Run server
+    # Run server
     run_server()
 
 

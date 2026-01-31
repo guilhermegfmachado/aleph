@@ -3,76 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ancient Books - Classical Texts Research</title>
+    <title>Borges — The Searchable Library</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header>
-            <h1>📚 Ancient Books</h1>
-            <p class="subtitle">Ask questions about classical texts. Get answers with exact citations.</p>
+            <h1>📚 Borges</h1>
+            <p class="subtitle">The searchable Library of Babel — all classical texts in one place</p>
+            <nav>
+                <a href="/" class="active">Search</a>
+                <a href="/browse">Browse</a>
+                <a href="/upload">Upload</a>
+            </nav>
         </header>
 
-        <!-- Main Search/Ask Interface -->
         <main>
-            <!-- Mode Toggle -->
-            <div class="mode-toggle">
-                <button class="mode-btn active" data-mode="ask">Ask a Question</button>
-                <button class="mode-btn" data-mode="search">Search Texts</button>
-            </div>
-
-            <!-- Input Area -->
-            <div class="input-area">
-                <textarea
-                    id="query-input"
-                    placeholder="Example: What did Homer write about love?"
-                    rows="3"
-                ></textarea>
-
-                <!-- Filters -->
-                <div class="filters">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search for: love, justice, death, virtue..."
+                    autofocus
+                >
+                <div class="search-filters">
                     <select id="author-filter">
                         <option value="">All Authors</option>
                     </select>
+                    <select id="source-filter">
+                        <option value="">All Sources</option>
+                    </select>
+                    <button id="search-btn">Search</button>
                 </div>
-
-                <button id="submit-btn" class="submit-btn">
-                    <span class="btn-text">Ask</span>
-                    <span class="btn-loading" style="display: none;">Searching...</span>
-                </button>
             </div>
 
-            <!-- Results Area -->
+            <div class="search-tips">
+                <p><strong>Tips:</strong> Use quotes for exact phrases ("know thyself"),
+                   OR for alternatives (love OR desire),
+                   NOT to exclude (justice NOT revenge)</p>
+            </div>
+
             <div id="results" class="results">
-                <!-- Welcome message -->
                 <div class="welcome">
-                    <h2>Welcome</h2>
-                    <p>Ask any question about classical literature and get answers backed by real citations from ancient texts.</p>
-                    <div class="examples">
-                        <p><strong>Try asking:</strong></p>
-                        <ul>
-                            <li><a href="#" class="example-query">"What did Plato say about the nature of justice?"</a></li>
-                            <li><a href="#" class="example-query">"How does Homer describe the underworld?"</a></li>
-                            <li><a href="#" class="example-query">"What are Aristotle's views on friendship?"</a></li>
-                            <li><a href="#" class="example-query">"What did Seneca write about anger?"</a></li>
-                        </ul>
+                    <h2>Welcome to the Library</h2>
+                    <p>{{ stats.total_books }} texts from {{ stats.total_authors }} authors</p>
+                    <div class="quick-searches">
+                        <p>Quick searches:</p>
+                        <div class="quick-links">
+                            <a href="#" class="quick-search" data-query="love">Love</a>
+                            <a href="#" class="quick-search" data-query="death">Death</a>
+                            <a href="#" class="quick-search" data-query="justice">Justice</a>
+                            <a href="#" class="quick-search" data-query="virtue">Virtue</a>
+                            <a href="#" class="quick-search" data-query="war">War</a>
+                            <a href="#" class="quick-search" data-query="soul">Soul</a>
+                            <a href="#" class="quick-search" data-query="god OR gods">Gods</a>
+                            <a href="#" class="quick-search" data-query="fate OR destiny">Fate</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- Footer -->
         <footer>
-            <p>
-                <span id="stats-display">Loading texts...</span>
-            </p>
-            <p class="sources">
-                Sources: MIT Classics, Project Gutenberg, Perseus Digital Library, Loeb Classical Library
-            </p>
+            <p>Sources: MIT Classics • Loeb Classical Library • Perseus • Project Gutenberg • Sacred Texts</p>
         </footer>
     </div>
 

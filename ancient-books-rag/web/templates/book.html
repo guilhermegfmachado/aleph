@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }} — Borges</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Borges</h1>
+            <nav>
+                <a href="/">Search</a>
+                <a href="/browse">Browse</a>
+                <a href="/upload">Upload</a>
+            </nav>
+        </header>
+
+        <main class="book-view">
+            <div class="book-header">
+                <h1 class="book-title">{{ book.title }}</h1>
+                <p class="book-author">by {{ book.author }}</p>
+                <div class="book-info">
+                    {% if book.translator %}
+                    <span>Translated by {{ book.translator }}</span>
+                    {% endif %}
+                    {% if book.year_written %}
+                    <span>Written: {{ book.year_written }}</span>
+                    {% endif %}
+                    <span>Source: {{ book.source }}</span>
+                    {% if book.url %}
+                    <a href="{{ book.url }}" target="_blank">Original source ↗</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="book-content">
+                <pre>{{ book.content }}</pre>
+            </div>
+
+            <div class="book-nav">
+                <a href="/browse?author={{ book.author }}">More by {{ book.author }}</a>
+                <a href="/browse">Back to Browse</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>Sources: MIT Classics • Loeb Classical Library • Perseus • Project Gutenberg • Sacred Texts</p>
+        </footer>
+    </div>
+</body>
+</html>

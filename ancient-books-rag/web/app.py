@@ -1,21 +1,28 @@
-"""Web application for Ancient Books RAG."""
+"""
+Web application for the Classical Texts Library.
+
+Simple search and browse - no AI required.
+"""
 
 import os
 import sys
+import tempfile
 from pathlib import Path
 
-# Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, File, Form, HTTPException, Query, Request, UploadFile
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 
+from src.library import Library
+from src.importer import import_file
+
 app = FastAPI(
-    title="Ancient Books",
-    description="Search and ask questions about classical texts",
+    title="Classical Texts Library",
+    description="Search and browse ancient texts from multiple sources",
 )
 
 # Mount static files and templates
@@ -23,129 +30,185 @@ web_dir = Path(__file__).parent
 app.mount("/static", StaticFiles(directory=web_dir / "static"), name="static")
 templates = Jinja2Templates(directory=web_dir / "templates")
 
-# Initialize RAG engine (lazy loading)
-_rag_engine = None
-
-
-def get_rag_engine():
-    """Get or create the RAG engine."""
-    global _rag_engine
-    if _rag_engine is None:
-        from src.rag import RAGEngine
-        _rag_engine = RAGEngine()
-    return _rag_engine
-
-
-class Question(BaseModel):
-    """A question to ask."""
-    query: str
-    author_filter: str | None = None
-    source_filter: str | None = None
-    num_sources: int = 8
+# Initialize library
+library = Library()
 
 
 class SearchQuery(BaseModel):
-    """A search query."""
     query: str
-    author_filter: str | None = None
-    limit: int = 20
+    author: str | None = None
+    source: str | None = None
+    limit: int = 50
 
+
+# =============================================================================
+# Web Pages
+# =============================================================================
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    """Render the home page."""
-    return templates.TemplateResponse("index.html", {"request": request})
+    """Home page."""
+    stats = library.get_stats()
+    return templates.TemplateResponse("index.html", {
+        "request": request,
+        "stats": stats,
+    })
 
 
-@app.post("/api/ask")
-async def ask_question(question: Question):
-    """Ask a question and get an answer with citations."""
-    try:
-        rag = get_rag_engine()
+@app.get("/book/{book_id}", response_class=HTMLResponse)
+async def view_book(request: Request, book_id: int):
+    """View a single book."""
+    book = library.get_book(book_id)
+    if not book:
+        raise HTTPException(status_code=404, detail="Book not found")
+    return templates.TemplateResponse("book.html", {
+        "request": request,
+        "book": book,
+    })
 
-        response = rag.query(
-            question=question.query,
-            n_sources=question.num_sources,
-            author_filter=question.author_filter,
-            source_filter=question.source_filter,
-        )
 
-        # Format citations for the frontend
-        citations = []
-        for i, citation in enumerate(response.citations, 1):
-            citations.append({
-                "number": i,
-                "author": citation.author,
-                "title": citation.title,
-                "section": citation.section,
-                "passage": citation.passage,
-                "score": round(citation.score, 3),
-                "url": citation.url,
-            })
+@app.get("/browse", response_class=HTMLResponse)
+async def browse_page(
+    request: Request,
+    author: str = None,
+    source: str = None,
+    page: int = 1
+):
+    """Browse all books."""
+    limit = 50
+    offset = (page - 1) * limit
+    books = library.browse(author=author, source=source, limit=limit, offset=offset)
+    authors = library.get_authors()
+    sources = library.get_sources()
 
-        return {
-            "answer": response.answer,
-            "citations": citations,
-            "sources_used": response.sources_used,
-        }
+    return templates.TemplateResponse("browse.html", {
+        "request": request,
+        "books": books,
+        "authors": authors,
+        "sources": sources,
+        "current_author": author,
+        "current_source": source,
+        "page": page,
+    })
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/upload", response_class=HTMLResponse)
+async def upload_page(request: Request):
+    """Upload page."""
+    return templates.TemplateResponse("upload.html", {"request": request})
+
+
+# =============================================================================
+# API Endpoints
+# =============================================================================
 
 @app.post("/api/search")
-async def search_texts(search: SearchQuery):
-    """Search for passages in the texts."""
+async def search(query: SearchQuery):
+    """Search the library."""
     try:
-        rag = get_rag_engine()
-
-        where = {}
-        if search.author_filter:
-            where["author"] = search.author_filter
-
-        results = rag.vector_store.search(
-            query=search.query,
-            n_results=search.limit,
-            where=where if where else None,
+        results = library.search(
+            query=query.query,
+            author=query.author,
+            source=query.source,
+            limit=query.limit
         )
-
-        # Format results
-        formatted = []
-        for result in results:
-            formatted.append({
-                "author": result["metadata"].get("author", "Unknown"),
-                "title": result["metadata"].get("title", "Unknown"),
-                "passage": result["content"],
-                "score": round(result["score"], 3),
-                "source": result["metadata"].get("source", "unknown"),
-            })
-
-        return {"results": formatted}
-
+        return {
+            "results": [
+                {
+                    "book_id": r.book_id,
+                    "title": r.title,
+                    "author": r.author,
+                    "source": r.source,
+                    "snippet": r.snippet,
+                }
+                for r in results
+            ],
+            "count": len(results),
+        }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e))
 
 
-@app.get("/api/stats")
-async def get_stats():
-    """Get statistics about indexed texts."""
-    try:
-        rag = get_rag_engine()
-        stats = rag.vector_store.get_stats()
-        return stats
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+@app.get("/api/book/{book_id}")
+async def get_book(book_id: int):
+    """Get a book by ID."""
+    book = library.get_book(book_id)
+    if not book:
+        raise HTTPException(status_code=404, detail="Book not found")
+    return {
+        "id": book.id,
+        "title": book.title,
+        "author": book.author,
+        "source": book.source,
+        "language": book.language,
+        "content": book.content,
+        "year_written": book.year_written,
+        "translator": book.translator,
+        "url": book.url,
+    }
 
 
 @app.get("/api/authors")
 async def get_authors():
-    """Get list of all indexed authors."""
+    """Get all authors."""
+    return {"authors": library.get_authors()}
+
+
+@app.get("/api/sources")
+async def get_sources():
+    """Get all sources."""
+    return {"sources": library.get_sources()}
+
+
+@app.get("/api/stats")
+async def get_stats():
+    """Get library statistics."""
+    return library.get_stats()
+
+
+@app.post("/api/upload")
+async def upload_book(
+    file: UploadFile = File(...),
+    title: str = Form(None),
+    author: str = Form(None),
+):
+    """Upload a book file."""
+    # Save to temp file
+    suffix = Path(file.filename).suffix
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+        content = await file.read()
+        tmp.write(content)
+        tmp_path = Path(tmp.name)
+
     try:
-        rag = get_rag_engine()
-        stats = rag.vector_store.get_stats()
-        return {"authors": stats["authors"]}
+        # Import the file
+        book = import_file(
+            tmp_path,
+            title=title or None,
+            author=author or None,
+            source="uploaded"
+        )
+
+        # Check if already exists
+        if library.book_exists(book.title, book.author, book.source):
+            return {"success": False, "error": "Book already exists"}
+
+        # Add to library
+        book_id = library.add_book(book)
+
+        return {
+            "success": True,
+            "book_id": book_id,
+            "title": book.title,
+            "author": book.author,
+        }
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e))
+
+    finally:
+        # Cleanup
+        tmp_path.unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

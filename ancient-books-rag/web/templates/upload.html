@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload — Borges</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Borges</h1>
+            <p class="subtitle">Add your own books to the library</p>
+            <nav>
+                <a href="/">Search</a>
+                <a href="/browse">Browse</a>
+                <a href="/upload" class="active">Upload</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="upload-box">
+                <h2>Upload a Book</h2>
+                <p>Add your own texts to make them searchable alongside the classics.</p>
+
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">File (TXT, PDF, EPUB, HTML)</label>
+                        <input type="file" id="file" name="file" accept=".txt,.pdf,.epub,.html,.htm" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Title (optional - auto-detected from filename)</label>
+                        <input type="text" id="title" name="title" placeholder="e.g., The Republic">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author (optional)</label>
+                        <input type="text" id="author" name="author" placeholder="e.g., Plato">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Upload</button>
+                </form>
+
+                <div id="upload-status" class="upload-status"></div>
+            </div>
+
+            <div class="upload-info">
+                <h3>Supported Formats</h3>
+                <ul>
+                    <li><strong>TXT</strong> - Plain text files</li>
+                    <li><strong>PDF</strong> - PDF documents (text will be extracted)</li>
+                    <li><strong>EPUB</strong> - E-book format</li>
+                    <li><strong>HTML</strong> - Web pages (text will be extracted)</li>
+                </ul>
+
+                <h3>Tips</h3>
+                <ul>
+                    <li>Larger files take longer to process</li>
+                    <li>PDFs with scanned images won't work well (need actual text)</li>
+                    <li>Uploaded books appear under source "uploaded"</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Sources: MIT Classics • Loeb Classical Library • Perseus • Project Gutenberg • Sacred Texts</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const status = document.getElementById('upload-status');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Uploading...';
+            status.innerHTML = '';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    status.innerHTML = `
+                        <div class="success">
+                            ✓ Uploaded successfully!<br>
+                            <strong>${data.title}</strong> by ${data.author}<br>
+                            <a href="/book/${data.book_id}">View book →</a>
+                        </div>
+                    `;
+                    form.reset();
+                } else {
+                    status.innerHTML = `<div class="error">Error: ${data.error || data.detail}</div>`;
+                }
+            } catch (error) {
+                status.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Upload';
+            }
+        });
+    </script>
+</body>
+</html>

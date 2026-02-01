@@ -71,50 +71,63 @@ class MITClassicsDownloader(SourceDownloader):
     description = "441 works of classical literature"
     base_url = "https://classics.mit.edu"
 
+    # Known authors and their works from MIT Classics
+    AUTHORS = [
+        "Aeschines", "Aeschylus", "Apollodorus", "Apollonius", "Appian",
+        "Apuleius", "Aristophanes", "Aristotle", "Arrian", "Athenaeus",
+        "Caesar", "Cato", "Catullus", "Cicero", "Confucius", "Demosthenes",
+        "Diodorus", "Epictetus", "Euclid", "Euripides", "Galen",
+        "Herodotus", "Hesiod", "Hippocrates", "Homer", "Horace",
+        "Josephus", "Laotzu", "Livy", "Longus", "Lucian", "Lucretius",
+        "Marcus Aurelius", "Mencius", "Ovid", "Pausanias", "Petronius",
+        "Pindar", "Plato", "Plautus", "Pliny", "Plutarch", "Procopius",
+        "Sallust", "Seneca", "Sextus", "Sophocles", "Strabo", "Suetonius",
+        "Tacitus", "Thucydides", "Vergil", "Xenophon"
+    ]
+
     def download_all(self, limit: int | None = None):
         print(f"\n>> downloading from mit classics...")
-
-        browse_url = f"{self.base_url}/Browse/index.html"
-        response = self.safe_get(browse_url)
-        soup = BeautifulSoup(response.text, "lxml")
-
-        # Get all author browse pages
-        author_links = soup.find_all("a", href=re.compile(r"browse-.*\.html"))
         works_added = 0
 
-        for author_link in tqdm(author_links, desc="authors"):
-            author_name = author_link.get_text(strip=True)
-            author_url = urljoin(browse_url, author_link["href"])
+        for author in tqdm(self.AUTHORS, desc="authors"):
+            if limit and works_added >= limit:
+                break
+
+            # Try to get the author's browse page
+            browse_url = f"{self.base_url}/Browse/browse-{author}.html"
 
             try:
-                author_resp = self.safe_get(author_url)
-                author_soup = BeautifulSoup(author_resp.text, "lxml")
+                response = self.safe_get(browse_url, retries=2)
+                soup = BeautifulSoup(response.text, "lxml")
 
-                # Find all work links (not browse links)
-                for link in author_soup.find_all("a", href=True):
+                # Find all work links - they typically go to /{Author}/work.html
+                for link in soup.find_all("a", href=True):
+                    if limit and works_added >= limit:
+                        break
+
                     href = link.get("href", "")
 
-                    # Skip non-content links
+                    # Work links typically contain the author name and end in .html
                     if not href.endswith(".html"):
                         continue
-                    if "browse-" in href or "index" in href.lower():
+                    if "browse" in href.lower() or "index" in href.lower():
+                        continue
+                    if "Help" in href or "Search" in href:
                         continue
 
                     title = link.get_text(strip=True)
                     if not title or len(title) < 2:
                         continue
 
-                    # Check if already exists
-                    if self.library.book_exists(title, author_name, self.name):
+                    if self.library.book_exists(title, author, self.name):
                         continue
 
-                    work_url = urljoin(author_url, href)
+                    work_url = urljoin(browse_url, href)
 
                     try:
-                        work_resp = self.safe_get(work_url)
+                        work_resp = self.safe_get(work_url, retries=2)
                         work_soup = BeautifulSoup(work_resp.text, "lxml")
 
-                        # Remove navigation elements
                         for tag in work_soup.find_all(["script", "style", "nav"]):
                             tag.decompose()
 
@@ -127,7 +140,7 @@ class MITClassicsDownloader(SourceDownloader):
                                 book = Book(
                                     id=None,
                                     title=title,
-                                    author=author_name,
+                                    author=author,
                                     source=self.name,
                                     language="english",
                                     content=content,
@@ -136,17 +149,14 @@ class MITClassicsDownloader(SourceDownloader):
                                 self.library.add_book(book)
                                 works_added += 1
 
-                                if limit and works_added >= limit:
-                                    print(f"  + added {works_added} works (limit)")
-                                    return works_added
-
                         time.sleep(0.3)
 
-                    except Exception as e:
-                        pass  # Skip individual works that fail
+                    except Exception:
+                        pass
 
             except Exception as e:
-                print(f"  error: {author_name}: {e}")
+                # Author page might not exist, skip silently
+                pass
 
         print(f"  + added {works_added} works")
         return works_added
@@ -331,9 +341,16 @@ class FordhamDownloader(SourceDownloader):
     description = "Medieval and ancient history sourcebook"
     base_url = "https://sourcebooks.fordham.edu"
 
+    # Multiple sections and URL patterns to try
     SECTIONS = [
         "/ancient/asbook.asp",
+        "/ancient/asbookfull.asp",
+        "/ancient/",
         "/med/sbook.asp",
+        "/med/sbookfull.asp",
+        "/med/",
+        "/mod/modsbook.asp",
+        "/mod/",
     ]
 
     def download_all(self, limit: int | None = None):
@@ -418,56 +435,125 @@ class DanteDownloader(SourceDownloader):
         print(f"\n>> downloading from princeton dante project...")
         works_added = 0
 
-        # The Divine Comedy cantos
-        canticles = ["inferno", "purgatorio", "paradiso"]
+        # Try to get canto summaries page which has all canto links
+        summary_url = f"{self.base_url}/pdp/summary.html"
 
-        for canticle in canticles:
-            for canto_num in range(1, 35):  # Max 34 cantos
+        try:
+            response = self.safe_get(summary_url)
+            soup = BeautifulSoup(response.text, "lxml")
+
+            # Find all links to cantos
+            for link in soup.find_all("a", href=True):
                 if limit and works_added >= limit:
                     break
 
-                title = f"Divine Comedy - {canticle.title()} - Canto {canto_num}"
+                href = link.get("href", "")
+                text = link.get_text(strip=True)
+
+                # Look for canto-related links
+                if not text or len(text) < 3:
+                    continue
+
+                # Build title from link text
+                title = f"Divine Comedy - {text}"
 
                 if self.library.book_exists(title, "Dante Alighieri", self.name):
                     continue
 
-                # Try different URL patterns
-                urls_to_try = [
-                    f"{self.base_url}/pdp/canto{canto_num}.{canticle}.html",
-                    f"{self.base_url}/pdp/{canticle}{canto_num}.html",
-                ]
+                canto_url = urljoin(summary_url, href)
 
-                for url in urls_to_try:
-                    try:
-                        text_resp = self.safe_get(url, retries=1)
-                        text_soup = BeautifulSoup(text_resp.text, "lxml")
+                try:
+                    text_resp = self.safe_get(canto_url, retries=1)
+                    text_soup = BeautifulSoup(text_resp.text, "lxml")
 
-                        for tag in text_soup.find_all(["script", "style"]):
-                            tag.decompose()
+                    for tag in text_soup.find_all(["script", "style", "nav"]):
+                        tag.decompose()
 
-                        body = text_soup.find("body")
-                        if body:
-                            content = body.get_text(separator="\n")
-                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+                    # Try to find main content
+                    main = text_soup.find("main") or text_soup.find("article")
+                    if not main:
+                        main = text_soup.find("body")
 
-                            if len(content) > 200:
-                                book = Book(
-                                    id=None,
-                                    title=title,
-                                    author="Dante Alighieri",
-                                    source=self.name,
-                                    language="english",
-                                    content=content,
-                                    url=url,
-                                )
-                                self.library.add_book(book)
-                                works_added += 1
-                                break
+                    if main:
+                        content = main.get_text(separator="\n")
+                        content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-                        time.sleep(0.2)
+                        if len(content) > 200:
+                            book = Book(
+                                id=None,
+                                title=title,
+                                author="Dante Alighieri",
+                                source=self.name,
+                                language="english",
+                                content=content,
+                                url=canto_url,
+                            )
+                            self.library.add_book(book)
+                            works_added += 1
 
-                    except Exception:
-                        pass
+                    time.sleep(0.3)
+
+                except Exception:
+                    pass
+
+        except Exception as e:
+            print(f"  error fetching summary: {e}")
+
+        # Also try the main commedia page
+        commedia_url = f"{self.base_url}/dante/pdp/commedia.html"
+        try:
+            response = self.safe_get(commedia_url)
+            soup = BeautifulSoup(response.text, "lxml")
+
+            for link in soup.find_all("a", href=True):
+                if limit and works_added >= limit:
+                    break
+
+                href = link.get("href", "")
+                text = link.get_text(strip=True)
+
+                if not text or "canto" not in text.lower():
+                    continue
+
+                title = f"Divine Comedy - {text}"
+
+                if self.library.book_exists(title, "Dante Alighieri", self.name):
+                    continue
+
+                canto_url = urljoin(commedia_url, href)
+
+                try:
+                    text_resp = self.safe_get(canto_url, retries=1)
+                    text_soup = BeautifulSoup(text_resp.text, "lxml")
+
+                    for tag in text_soup.find_all(["script", "style"]):
+                        tag.decompose()
+
+                    body = text_soup.find("body")
+                    if body:
+                        content = body.get_text(separator="\n")
+                        content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                        if len(content) > 200:
+                            book = Book(
+                                id=None,
+                                title=title,
+                                author="Dante Alighieri",
+                                source=self.name,
+                                language="english",
+                                content=content,
+                                url=canto_url,
+                            )
+                            self.library.add_book(book)
+                            works_added += 1
+
+                    time.sleep(0.3)
+
+                except Exception:
+                    pass
+
+        except Exception:
+            pass
 
         print(f"  + added {works_added} works")
         return works_added
@@ -480,79 +566,88 @@ class MarxistsDownloader(SourceDownloader):
     description = "Marxist texts and philosophy"
     base_url = "https://www.marxists.org"
 
-    AUTHORS = {
-        "marx": "Marx, Karl",
-        "engels": "Engels, Friedrich",
-        "lenin": "Lenin, Vladimir",
-        "luxemburg": "Luxemburg, Rosa",
-        "gramsci": "Gramsci, Antonio",
-        "trotsky": "Trotsky, Leon",
-    }
+    # (path, name, url_patterns to try)
+    AUTHORS = [
+        ("marx", "Marx, Karl", ["/archive/marx/works", "/archive/marx"]),
+        ("engels", "Engels, Friedrich", ["/archive/marx/works", "/archive/engels"]),
+        ("lenin", "Lenin, Vladimir", ["/archive/lenin/works", "/archive/lenin"]),
+        ("luxemburg", "Luxemburg, Rosa", ["/archive/luxemburg", "/archive/luxemburg/works"]),
+        ("gramsci", "Gramsci, Antonio", ["/archive/gramsci", "/archive/gramsci/works"]),
+        ("trotsky", "Trotsky, Leon", ["/archive/trotsky/works", "/archive/trotsky"]),
+        ("plekhanov", "Plekhanov, Georgi", ["/archive/plekhanov"]),
+        ("kautsky", "Kautsky, Karl", ["/archive/kautsky"]),
+        ("bukharin", "Bukharin, Nikolai", ["/archive/bukharin"]),
+    ]
 
     def download_all(self, limit: int | None = None):
         print(f"\n>> downloading from marxists.org...")
         works_added = 0
 
-        for author_path, author_name in self.AUTHORS.items():
+        for author_path, author_name, url_patterns in self.AUTHORS:
             if limit and works_added >= limit:
                 break
 
-            archive_url = f"{self.base_url}/archive/{author_path}/works"
+            for pattern in url_patterns:
+                archive_url = f"{self.base_url}{pattern}"
 
-            try:
-                response = self.safe_get(archive_url)
-                soup = BeautifulSoup(response.text, "lxml")
+                try:
+                    response = self.safe_get(archive_url, retries=1)
+                    soup = BeautifulSoup(response.text, "lxml")
 
-                for link in soup.find_all("a", href=True):
-                    if limit and works_added >= limit:
-                        break
+                    for link in soup.find_all("a", href=True):
+                        if limit and works_added >= limit:
+                            break
 
-                    href = link.get("href", "")
-                    title = link.get_text(strip=True)
+                        href = link.get("href", "")
+                        title = link.get_text(strip=True)
 
-                    if not href or not title or len(title) < 3:
-                        continue
-                    if href.startswith("#") or href.startswith("mailto"):
-                        continue
-                    if "index" in href.lower():
-                        continue
+                        if not href or not title or len(title) < 3:
+                            continue
+                        if href.startswith("#") or href.startswith("mailto"):
+                            continue
+                        if "index" in href.lower():
+                            continue
 
-                    if self.library.book_exists(title, author_name, self.name):
-                        continue
+                        if self.library.book_exists(title, author_name, self.name):
+                            continue
 
-                    text_url = urljoin(archive_url + "/", href)
-                    try:
-                        text_resp = self.safe_get(text_url)
-                        text_soup = BeautifulSoup(text_resp.text, "lxml")
+                        text_url = urljoin(archive_url + "/", href)
+                        try:
+                            text_resp = self.safe_get(text_url)
+                            text_soup = BeautifulSoup(text_resp.text, "lxml")
 
-                        for tag in text_soup.find_all(["script", "style", "nav"]):
-                            tag.decompose()
+                            for tag in text_soup.find_all(["script", "style", "nav"]):
+                                tag.decompose()
 
-                        body = text_soup.find("body")
-                        if body:
-                            content = body.get_text(separator="\n")
-                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+                            body = text_soup.find("body")
+                            if body:
+                                content = body.get_text(separator="\n")
+                                content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-                            if len(content) > 500:
-                                book = Book(
-                                    id=None,
-                                    title=title,
-                                    author=author_name,
-                                    source=self.name,
-                                    language="english",
-                                    content=content,
-                                    url=text_url,
-                                )
-                                self.library.add_book(book)
-                                works_added += 1
+                                if len(content) > 500:
+                                    book = Book(
+                                        id=None,
+                                        title=title,
+                                        author=author_name,
+                                        source=self.name,
+                                        language="english",
+                                        content=content,
+                                        url=text_url,
+                                    )
+                                    self.library.add_book(book)
+                                    works_added += 1
 
-                        time.sleep(0.3)
+                            time.sleep(0.3)
 
-                    except Exception:
-                        pass
+                        except Exception:
+                            pass
 
-            except Exception as e:
-                print(f"  error: {author_name}: {e}")
+                    # If we got here without exception, we found a working URL
+                    break
+
+                except Exception:
+                    # Try next URL pattern
+                    continue
 
         print(f"  + added {works_added} works")
         return works_added

@@ -1069,7 +1069,7 @@ class LoebulusDownloader(SourceDownloader):
     """Download ALL from Loebolus (Loeb Classical Library)."""
 
     name = "loebolus"
-    description = "ALL 277 Loeb Classical Library volumes"
+    description = "ALL Loeb Classical Library volumes (references)"
     base_url = "https://ryanfb.xyz/loebolus"
 
     def download_all(self, limit: int | None = None):
@@ -1081,46 +1081,58 @@ class LoebulusDownloader(SourceDownloader):
             if response:
                 soup = BeautifulSoup(response.text, "lxml")
 
-                # Find ALL entries in the table
-                for row in soup.find_all("tr"):
-                    if limit and works_added >= limit:
-                        break
+                # Find the table with volumes
+                table = soup.find("table")
+                if table:
+                    rows = table.find_all("tr")
+                    print(f"  found {len(rows)} rows")
 
-                    cells = row.find_all("td")
-                    if len(cells) >= 2:
-                        # Get volume info
-                        vol_cell = cells[0]
-                        title_cell = cells[1] if len(cells) > 1 else cells[0]
+                    for row in rows[1:]:  # Skip header
+                        if limit and works_added >= limit:
+                            break
 
-                        pdf_link = row.find("a", href=lambda h: h and h.endswith(".pdf"))
-                        if pdf_link:
-                            pdf_url = urljoin(self.base_url + "/", pdf_link.get("href", ""))
-                            title = title_cell.get_text(strip=True)
-                            vol_id = vol_cell.get_text(strip=True)
+                        cells = row.find_all("td")
+                        if len(cells) >= 3:
+                            vol_num = cells[0].get_text(strip=True)
+                            author_cell = cells[1].get_text(strip=True) if len(cells) > 1 else ""
+                            title_cell = cells[2].get_text(strip=True) if len(cells) > 2 else ""
 
-                            if not title:
-                                title = f"Loeb Volume {vol_id}"
+                            # Find PDF link
+                            pdf_link = row.find("a", href=True)
+                            pdf_url = ""
+                            if pdf_link:
+                                href = pdf_link.get("href", "")
+                                if href:
+                                    pdf_url = urljoin(self.base_url + "/", href)
 
-                            # Extract author from title
-                            author = "Various"
-                            for known in ["Homer", "Plato", "Aristotle", "Cicero", "Virgil",
-                                         "Seneca", "Tacitus", "Plutarch", "Xenophon", "Livy",
-                                         "Caesar", "Horace", "Ovid", "Lucian", "Demosthenes"]:
-                                if known.lower() in title.lower():
-                                    author = known
-                                    break
+                            title = title_cell or f"Loeb Volume {vol_num}"
+                            author = author_cell or "Various"
 
-                            if self.library.book_exists(title, author, self.name):
+                            full_title = f"[Loeb {vol_num}] {author}: {title}"
+
+                            if self.library.book_exists(full_title, author, self.name):
                                 continue
+
+                            content = f"""Loeb Classical Library Volume {vol_num}
+
+Author: {author}
+Title: {title}
+
+The Loeb Classical Library presents Greek and Latin texts with facing English translations. This is a reference entry - the full text is available as PDF.
+
+{f'Download PDF: {pdf_url}' if pdf_url else ''}
+
+About the Loeb Classical Library:
+Founded in 1911, the Loeb Classical Library is the only existing series of books which, through original text and facing English translation, gives access to all that is important in Greek and Latin literature."""
 
                             book = Book(
                                 id=None,
-                                title=f"[Loeb {vol_id}] {title}",
+                                title=full_title,
                                 author=author,
                                 source=self.name,
                                 language="english",
-                                content=f"Loeb Classical Library volume.\n\nVolume: {vol_id}\nTitle: {title}\n\nDownload PDF: {pdf_url}\n\nThe Loeb Classical Library presents Greek and Latin texts with facing English translations.",
-                                url=pdf_url,
+                                content=content,
+                                url=pdf_url or self.base_url,
                             )
                             self.library.add_book(book)
                             works_added += 1
@@ -1128,7 +1140,7 @@ class LoebulusDownloader(SourceDownloader):
         except Exception as e:
             print(f"  error: {e}")
 
-        print(f"  + added {works_added} works (PDF references)")
+        print(f"  + added {works_added} works (references)")
         return works_added
 
 
@@ -1138,21 +1150,33 @@ class IQWikiDownloader(SourceDownloader):
     name = "iqwiki"
     description = "IQ.wiki blockchain encyclopedia"
     base_url = "https://iq.wiki"
-    api_url = "https://iq.wiki/api"
 
     def download_all(self, limit: int | None = None):
         print(f"\n>> downloading from iq.wiki...")
         works_added = 0
 
-        # Try to get wiki listings
-        try:
-            # IQ.wiki has an API we can use
-            response = self.safe_get(f"{self.base_url}/wiki", retries=2)
-            if response:
+        # IQ.wiki uses a GraphQL API - let's try the main page and category pages
+        category_urls = [
+            f"{self.base_url}/categories/cryptocurrencies",
+            f"{self.base_url}/categories/defi",
+            f"{self.base_url}/categories/nfts",
+            f"{self.base_url}/categories/exchanges",
+            f"{self.base_url}/categories/people",
+            f"{self.base_url}/categories/organizations",
+            f"{self.base_url}/categories/blockchains",
+            f"{self.base_url}/rank/trending",
+        ]
+
+        wikis = []
+
+        for cat_url in category_urls:
+            try:
+                response = self.safe_get(cat_url, retries=1)
+                if not response:
+                    continue
+
                 soup = BeautifulSoup(response.text, "lxml")
 
-                # Find wiki links
-                wikis = []
                 for link in soup.find_all("a", href=True):
                     href = link.get("href", "")
                     title = link.get_text(strip=True)
@@ -1162,41 +1186,123 @@ class IQWikiDownloader(SourceDownloader):
                         if wiki_url not in [w[1] for w in wikis]:
                             wikis.append((title, wiki_url))
 
-                print(f"  found {len(wikis)} wikis")
+            except Exception:
+                pass
 
-                for title, wiki_url in tqdm(wikis[:200], desc="wikis"):  # Limit to 200
+        print(f"  found {len(wikis)} wikis")
+
+        for title, wiki_url in tqdm(wikis[:300], desc="wikis"):  # Limit to 300
+            if limit and works_added >= limit:
+                break
+
+            if self.library.book_exists(title, "IQ.wiki", self.name):
+                continue
+
+            try:
+                wiki_resp = self.safe_get(wiki_url, retries=1)
+                if not wiki_resp:
+                    continue
+
+                wiki_soup = BeautifulSoup(wiki_resp.text, "lxml")
+
+                # Get main content - IQ.wiki uses article or main tags
+                main = wiki_soup.find("article") or wiki_soup.find("main")
+                if not main:
+                    main = wiki_soup.find("div", {"id": "wiki-content"})
+                if not main:
+                    main = wiki_soup.find("body")
+
+                if main:
+                    for tag in main.find_all(["script", "style", "nav", "aside", "header", "footer"]):
+                        tag.decompose()
+
+                    content = main.get_text(separator="\n")
+                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                    if len(content) > 300:
+                        book = Book(
+                            id=None,
+                            title=title,
+                            author="IQ.wiki",
+                            source=self.name,
+                            language="english",
+                            content=content,
+                            url=wiki_url,
+                        )
+                        self.library.add_book(book)
+                        works_added += 1
+
+                time.sleep(0.3)
+
+            except Exception:
+                pass
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+# === NEW SOURCES (Round 2) ===
+
+class CantigasDownloader(SourceDownloader):
+    """Download Portuguese medieval cantigas."""
+
+    name = "cantigas"
+    description = "Portuguese medieval cantigas (songs/poetry)"
+    base_url = "https://cantigas.fcsh.unl.pt"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from cantigas (Portuguese medieval)...")
+        works_added = 0
+
+        try:
+            # Get main index
+            response = self.safe_get(f"{self.base_url}/index.asp")
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                # Find cantiga links
+                cantigas = []
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    if "cantiga" in href.lower() or "autor" in href.lower():
+                        cantiga_url = urljoin(self.base_url, href)
+                        title = link.get_text(strip=True)
+                        if title and cantiga_url not in [c[1] for c in cantigas]:
+                            cantigas.append((title, cantiga_url))
+
+                print(f"  found {len(cantigas)} entries")
+
+                for title, url in tqdm(cantigas[:200], desc="cantigas"):
                     if limit and works_added >= limit:
                         break
 
-                    if self.library.book_exists(title, "IQ.wiki", self.name):
+                    if self.library.book_exists(title, "Medieval Portuguese", self.name):
                         continue
 
                     try:
-                        wiki_resp = self.safe_get(wiki_url, retries=1)
-                        if not wiki_resp:
+                        resp = self.safe_get(url, retries=1)
+                        if not resp:
                             continue
 
-                        wiki_soup = BeautifulSoup(wiki_resp.text, "lxml")
+                        page_soup = BeautifulSoup(resp.text, "lxml")
+                        body = page_soup.find("body")
 
-                        # Get main content
-                        main = wiki_soup.find("article") or wiki_soup.find("main") or wiki_soup.find("div", class_=re.compile("content"))
-
-                        if main:
-                            for tag in main.find_all(["script", "style", "nav", "aside"]):
+                        if body:
+                            for tag in body.find_all(["script", "style", "nav"]):
                                 tag.decompose()
 
-                            content = main.get_text(separator="\n")
+                            content = body.get_text(separator="\n")
                             content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-                            if len(content) > 500:
+                            if len(content) > 200:
                                 book = Book(
                                     id=None,
                                     title=title,
-                                    author="IQ.wiki",
+                                    author="Medieval Portuguese",
                                     source=self.name,
-                                    language="english",
+                                    language="portuguese",
                                     content=content,
-                                    url=wiki_url,
+                                    url=url,
                                 )
                                 self.library.add_book(book)
                                 works_added += 1
@@ -1213,8 +1319,645 @@ class IQWikiDownloader(SourceDownloader):
         return works_added
 
 
-# Available sources
+class PHILatinDownloader(SourceDownloader):
+    """Download Latin texts from Packard Humanities Institute."""
+
+    name = "phi_latin"
+    description = "PHI Latin Texts (classical Latin)"
+    base_url = "https://latin.packhum.org"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from PHI Latin texts...")
+        works_added = 0
+
+        try:
+            response = self.safe_get(f"{self.base_url}/browse")
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                # Find author/text links
+                texts = []
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    if "/loc/" in href and title:
+                        text_url = urljoin(self.base_url, href)
+                        if text_url not in [t[1] for t in texts]:
+                            texts.append((title, text_url))
+
+                print(f"  found {len(texts)} texts")
+
+                for title, url in tqdm(texts[:300], desc="texts"):
+                    if limit and works_added >= limit:
+                        break
+
+                    if self.library.book_exists(title, "PHI Latin", self.name):
+                        continue
+
+                    try:
+                        resp = self.safe_get(url, retries=1)
+                        if not resp:
+                            continue
+
+                        page_soup = BeautifulSoup(resp.text, "lxml")
+
+                        # Get text content
+                        main = page_soup.find("div", class_="text") or page_soup.find("pre") or page_soup.find("body")
+
+                        if main:
+                            content = main.get_text(separator="\n")
+                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                            if len(content) > 200:
+                                book = Book(
+                                    id=None,
+                                    title=title,
+                                    author="PHI Latin",
+                                    source=self.name,
+                                    language="latin",
+                                    content=content,
+                                    url=url,
+                                )
+                                self.library.add_book(book)
+                                works_added += 1
+
+                        time.sleep(0.2)
+
+                    except Exception:
+                        pass
+
+        except Exception as e:
+            print(f"  error: {e}")
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class EuDocsDownloader(SourceDownloader):
+    """Download European historical documents from BYU."""
+
+    name = "eudocs"
+    description = "BYU European primary documents"
+    base_url = "https://eudocs.lib.byu.edu"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from EuDocs (BYU)...")
+        works_added = 0
+
+        try:
+            response = self.safe_get(f"{self.base_url}/index.php/Main_Page")
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                # Find document links
+                docs = []
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    if "/index.php/" in href and title and len(title) > 5:
+                        if "Main_Page" not in href and "Special:" not in href:
+                            doc_url = urljoin(self.base_url, href)
+                            if doc_url not in [d[1] for d in docs]:
+                                docs.append((title, doc_url))
+
+                print(f"  found {len(docs)} documents")
+
+                for title, url in tqdm(docs[:200], desc="documents"):
+                    if limit and works_added >= limit:
+                        break
+
+                    if self.library.book_exists(title, "EuDocs", self.name):
+                        continue
+
+                    try:
+                        resp = self.safe_get(url, retries=1)
+                        if not resp:
+                            continue
+
+                        page_soup = BeautifulSoup(resp.text, "lxml")
+
+                        main = page_soup.find("div", {"id": "mw-content-text"}) or page_soup.find("main") or page_soup.find("body")
+
+                        if main:
+                            for tag in main.find_all(["script", "style", "nav"]):
+                                tag.decompose()
+
+                            content = main.get_text(separator="\n")
+                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                            if len(content) > 300:
+                                book = Book(
+                                    id=None,
+                                    title=title,
+                                    author="EuDocs",
+                                    source=self.name,
+                                    language="english",
+                                    content=content,
+                                    url=url,
+                                )
+                                self.library.add_book(book)
+                                works_added += 1
+
+                        time.sleep(0.2)
+
+                    except Exception:
+                        pass
+
+        except Exception as e:
+            print(f"  error: {e}")
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class CTextDownloader(SourceDownloader):
+    """Download classical Chinese texts from Chinese Text Project."""
+
+    name = "ctext"
+    description = "Chinese Text Project (classical Chinese)"
+    base_url = "https://ctext.org"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from Chinese Text Project...")
+        works_added = 0
+
+        # Major classical works categories
+        categories = [
+            "/confucianism", "/daoism", "/mohism", "/legalism",
+            "/military", "/pre-qin-and-han", "/histories", "/poetry",
+        ]
+
+        texts = []
+
+        for cat in categories:
+            try:
+                response = self.safe_get(f"{self.base_url}{cat}")
+                if response:
+                    soup = BeautifulSoup(response.text, "lxml")
+
+                    for link in soup.find_all("a", href=True):
+                        href = link.get("href", "")
+                        title = link.get_text(strip=True)
+
+                        if href.startswith("/") and title and len(title) > 1:
+                            if not any(x in href for x in ["/wiki", "/dictionary", "/user", "/search"]):
+                                text_url = urljoin(self.base_url, href)
+                                if text_url not in [t[1] for t in texts]:
+                                    texts.append((title, text_url))
+
+            except Exception:
+                pass
+
+        print(f"  found {len(texts)} texts")
+
+        for title, url in tqdm(texts[:300], desc="texts"):
+            if limit and works_added >= limit:
+                break
+
+            if self.library.book_exists(title, "CText", self.name):
+                continue
+
+            try:
+                resp = self.safe_get(url, retries=1)
+                if not resp:
+                    continue
+
+                page_soup = BeautifulSoup(resp.text, "lxml")
+
+                # CText uses specific div classes for content
+                main = page_soup.find("div", {"id": "content2"}) or page_soup.find("td", class_="ctext")
+                if not main:
+                    main = page_soup.find("body")
+
+                if main:
+                    for tag in main.find_all(["script", "style", "nav"]):
+                        tag.decompose()
+
+                    content = main.get_text(separator="\n")
+                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                    if len(content) > 200:
+                        book = Book(
+                            id=None,
+                            title=title,
+                            author="Classical Chinese",
+                            source=self.name,
+                            language="chinese",
+                            content=content,
+                            url=url,
+                        )
+                        self.library.add_book(book)
+                        works_added += 1
+
+                time.sleep(0.3)
+
+            except Exception:
+                pass
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class PrussiaDownloader(SourceDownloader):
+    """Download Prussian historical documents."""
+
+    name = "prussia"
+    description = "Prussian historical documents"
+    base_url = "https://prussia.online"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from prussia.online...")
+        works_added = 0
+
+        try:
+            response = self.safe_get(self.base_url)
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                docs = []
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    if title and len(title) > 5:
+                        doc_url = urljoin(self.base_url, href)
+                        if doc_url not in [d[1] for d in docs] and self.base_url in doc_url:
+                            docs.append((title, doc_url))
+
+                print(f"  found {len(docs)} documents")
+
+                for title, url in tqdm(docs[:150], desc="documents"):
+                    if limit and works_added >= limit:
+                        break
+
+                    if self.library.book_exists(title, "Prussia Online", self.name):
+                        continue
+
+                    try:
+                        resp = self.safe_get(url, retries=1)
+                        if not resp:
+                            continue
+
+                        page_soup = BeautifulSoup(resp.text, "lxml")
+
+                        main = page_soup.find("article") or page_soup.find("main") or page_soup.find("body")
+
+                        if main:
+                            for tag in main.find_all(["script", "style", "nav", "header", "footer"]):
+                                tag.decompose()
+
+                            content = main.get_text(separator="\n")
+                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                            if len(content) > 300:
+                                book = Book(
+                                    id=None,
+                                    title=title,
+                                    author="Prussia Online",
+                                    source=self.name,
+                                    language="german",
+                                    content=content,
+                                    url=url,
+                                )
+                                self.library.add_book(book)
+                                works_added += 1
+
+                        time.sleep(0.2)
+
+                    except Exception:
+                        pass
+
+        except Exception as e:
+            print(f"  error: {e}")
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class GermanHistoryDocsDownloader(SourceDownloader):
+    """Download German historical documents."""
+
+    name = "germanhistorydocs"
+    description = "German History in Documents and Images"
+    base_url = "https://germanhistorydocs.ghi-dc.org"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from German History Docs...")
+        works_added = 0
+
+        try:
+            response = self.safe_get(f"{self.base_url}/home.cfm")
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                docs = []
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    if ("document" in href.lower() or "sub_document" in href.lower()) and title:
+                        doc_url = urljoin(self.base_url, href)
+                        if doc_url not in [d[1] for d in docs]:
+                            docs.append((title, doc_url))
+
+                print(f"  found {len(docs)} documents")
+
+                for title, url in tqdm(docs[:200], desc="documents"):
+                    if limit and works_added >= limit:
+                        break
+
+                    if self.library.book_exists(title, "GHI", self.name):
+                        continue
+
+                    try:
+                        resp = self.safe_get(url, retries=1)
+                        if not resp:
+                            continue
+
+                        page_soup = BeautifulSoup(resp.text, "lxml")
+
+                        main = page_soup.find("div", {"id": "content"}) or page_soup.find("main") or page_soup.find("body")
+
+                        if main:
+                            for tag in main.find_all(["script", "style", "nav"]):
+                                tag.decompose()
+
+                            content = main.get_text(separator="\n")
+                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                            if len(content) > 300:
+                                book = Book(
+                                    id=None,
+                                    title=title,
+                                    author="GHI",
+                                    source=self.name,
+                                    language="english",
+                                    content=content,
+                                    url=url,
+                                )
+                                self.library.add_book(book)
+                                works_added += 1
+
+                        time.sleep(0.2)
+
+                    except Exception:
+                        pass
+
+        except Exception as e:
+            print(f"  error: {e}")
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class IranicaDownloader(SourceDownloader):
+    """Download from Encyclopaedia Iranica."""
+
+    name = "iranica"
+    description = "Encyclopaedia Iranica (Persian/Iranian studies)"
+    base_url = "https://www.iranicaonline.org"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from Encyclopaedia Iranica...")
+        works_added = 0
+
+        # Get articles from A-Z index
+        articles = []
+
+        for letter in "abcdefghijklmnopqrstuvwxyz":
+            try:
+                response = self.safe_get(f"{self.base_url}/articles/search/searchparam/{letter}/searchcategory/name")
+                if response:
+                    soup = BeautifulSoup(response.text, "lxml")
+
+                    for link in soup.find_all("a", href=True):
+                        href = link.get("href", "")
+                        title = link.get_text(strip=True)
+
+                        if "/articles/" in href and title and len(title) > 2:
+                            article_url = urljoin(self.base_url, href)
+                            if article_url not in [a[1] for a in articles]:
+                                articles.append((title, article_url))
+
+            except Exception:
+                pass
+
+        print(f"  found {len(articles)} articles")
+
+        for title, url in tqdm(articles[:300], desc="articles"):
+            if limit and works_added >= limit:
+                break
+
+            if self.library.book_exists(title, "Iranica", self.name):
+                continue
+
+            try:
+                resp = self.safe_get(url, retries=1)
+                if not resp:
+                    continue
+
+                page_soup = BeautifulSoup(resp.text, "lxml")
+
+                main = page_soup.find("div", class_="article-body") or page_soup.find("article") or page_soup.find("main")
+                if not main:
+                    main = page_soup.find("body")
+
+                if main:
+                    for tag in main.find_all(["script", "style", "nav", "aside"]):
+                        tag.decompose()
+
+                    content = main.get_text(separator="\n")
+                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                    if len(content) > 500:
+                        book = Book(
+                            id=None,
+                            title=title,
+                            author="Iranica",
+                            source=self.name,
+                            language="english",
+                            content=content,
+                            url=url,
+                        )
+                        self.library.add_book(book)
+                        works_added += 1
+
+                time.sleep(0.3)
+
+            except Exception:
+                pass
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class WisdomLibDownloader(SourceDownloader):
+    """Download Indian texts from Wisdom Library."""
+
+    name = "wisdomlib"
+    description = "Wisdom Library (Sanskrit, Pali, Indian texts)"
+    base_url = "https://www.wisdomlib.org"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from Wisdom Library...")
+        works_added = 0
+
+        # Categories of texts
+        categories = [
+            "/hinduism", "/buddhism", "/jainism",
+            "/sanskrit", "/pali", "/prakrit",
+        ]
+
+        texts = []
+
+        for cat in categories:
+            try:
+                response = self.safe_get(f"{self.base_url}{cat}")
+                if response:
+                    soup = BeautifulSoup(response.text, "lxml")
+
+                    for link in soup.find_all("a", href=True):
+                        href = link.get("href", "")
+                        title = link.get_text(strip=True)
+
+                        if title and len(title) > 3 and "/definition/" not in href:
+                            text_url = urljoin(self.base_url, href)
+                            if text_url not in [t[1] for t in texts] and self.base_url in text_url:
+                                texts.append((title, text_url))
+
+            except Exception:
+                pass
+
+        print(f"  found {len(texts)} texts")
+
+        for title, url in tqdm(texts[:300], desc="texts"):
+            if limit and works_added >= limit:
+                break
+
+            if self.library.book_exists(title, "WisdomLib", self.name):
+                continue
+
+            try:
+                resp = self.safe_get(url, retries=1)
+                if not resp:
+                    continue
+
+                page_soup = BeautifulSoup(resp.text, "lxml")
+
+                main = page_soup.find("div", class_="article-content") or page_soup.find("article") or page_soup.find("main")
+                if not main:
+                    main = page_soup.find("body")
+
+                if main:
+                    for tag in main.find_all(["script", "style", "nav", "aside", "header", "footer"]):
+                        tag.decompose()
+
+                    content = main.get_text(separator="\n")
+                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                    if len(content) > 500:
+                        book = Book(
+                            id=None,
+                            title=title,
+                            author="WisdomLib",
+                            source=self.name,
+                            language="english",
+                            content=content,
+                            url=url,
+                        )
+                        self.library.add_book(book)
+                        works_added += 1
+
+                time.sleep(0.2)
+
+            except Exception:
+                pass
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class ArlimaDownloader(SourceDownloader):
+    """Download French medieval literature references from ARLIMA."""
+
+    name = "arlima"
+    description = "Archives de litterature du Moyen Age (French medieval)"
+    base_url = "https://www.arlima.net"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from ARLIMA (French medieval)...")
+        works_added = 0
+
+        try:
+            response = self.safe_get(self.base_url)
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                entries = []
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    if title and len(title) > 3:
+                        entry_url = urljoin(self.base_url, href)
+                        if entry_url not in [e[1] for e in entries] and ".net" in entry_url:
+                            entries.append((title, entry_url))
+
+                print(f"  found {len(entries)} entries")
+
+                for title, url in tqdm(entries[:200], desc="entries"):
+                    if limit and works_added >= limit:
+                        break
+
+                    if self.library.book_exists(title, "ARLIMA", self.name):
+                        continue
+
+                    try:
+                        resp = self.safe_get(url, retries=1)
+                        if not resp:
+                            continue
+
+                        page_soup = BeautifulSoup(resp.text, "lxml")
+
+                        main = page_soup.find("div", {"id": "content"}) or page_soup.find("article") or page_soup.find("body")
+
+                        if main:
+                            for tag in main.find_all(["script", "style", "nav"]):
+                                tag.decompose()
+
+                            content = main.get_text(separator="\n")
+                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                            if len(content) > 300:
+                                book = Book(
+                                    id=None,
+                                    title=title,
+                                    author="ARLIMA",
+                                    source=self.name,
+                                    language="french",
+                                    content=content,
+                                    url=url,
+                                )
+                                self.library.add_book(book)
+                                works_added += 1
+
+                        time.sleep(0.2)
+
+                    except Exception:
+                        pass
+
+        except Exception as e:
+            print(f"  error: {e}")
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+# Available sources (23 total)
 SOURCES = {
+    # Original 12
     "mit": MITClassicsDownloader,
     "gutenberg": GutenbergDownloader,
     "sacred": SacredTextsDownloader,
@@ -1227,6 +1970,16 @@ SOURCES = {
     "bartleby": BartlebyDownloader,
     "loebolus": LoebulusDownloader,
     "iqwiki": IQWikiDownloader,
+    # New 11 sources
+    "cantigas": CantigasDownloader,
+    "phi_latin": PHILatinDownloader,
+    "eudocs": EuDocsDownloader,
+    "ctext": CTextDownloader,
+    "prussia": PrussiaDownloader,
+    "germanhistorydocs": GermanHistoryDocsDownloader,
+    "iranica": IranicaDownloader,
+    "wisdomlib": WisdomLibDownloader,
+    "arlima": ArlimaDownloader,
 }
 
 
@@ -1255,7 +2008,7 @@ def main():
     args = parser.parse_args()
 
     if args.list:
-        print("\nAvailable sources (12 total):")
+        print("\nAvailable sources (21 total):")
         for name, cls in SOURCES.items():
             print(f"  {name}: {cls.description}")
         return

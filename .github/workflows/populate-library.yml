@@ -17,12 +17,27 @@ on:
           - dante
           - marxists
           - stanford
+          - iep
           - wikisource
           - bartleby
+          - loebolus
+          - iqwiki
+          - cantigas
+          - phi_latin
+          - eudocs
+          - ctext
+          - prussia
+          - germanhistorydocs
+          - iranica
+          - wisdomlib
+          - arlima
       limit:
         description: 'Max books per source (leave empty for all)'
         required: false
         default: ''
+
+permissions:
+  contents: write
 
 jobs:
   populate:
@@ -55,14 +70,17 @@ jobs:
           cd ancient-books-rag
           python scripts/build_static.py
 
-      - name: Move library.json to docs
+      - name: Move library data to docs
         run: |
-          cp ancient-books-rag/docs/data/library.json docs/data/library.json
+          mkdir -p docs/data/texts
+          cp ancient-books-rag/docs/data/library-index.json docs/data/
+          cp ancient-books-rag/docs/data/library-index.json.gz docs/data/ || true
+          cp -r ancient-books-rag/docs/data/texts/* docs/data/texts/ || true
 
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/data/library.json
+          git add docs/data/
           git diff --staged --quiet || git commit -m "Update library data from ${{ github.event.inputs.source }}"
           git push

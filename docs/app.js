@@ -1,18 +1,19 @@
 // Borges - Client-side library application
+// Split data architecture: index loads first, full texts load on demand
 
 let library = {
-    books: [],
-    index: null,
-    loaded: false
+    books: [],      // Index data (metadata + snippets)
+    loaded: false,
+    textCache: {}   // Cache for loaded full texts
 };
 
-// Load library data
+// Load library index
 async function loadLibrary() {
     if (library.loaded) return;
 
     try {
-        const response = await fetch('data/library.json');
-        if (!response.ok) throw new Error('Failed to load library');
+        const response = await fetch('data/library-index.json');
+        if (!response.ok) throw new Error('Failed to load library index');
 
         const data = await response.json();
         library.books = data.books || [];
@@ -25,7 +26,28 @@ async function loadLibrary() {
 
     } catch (error) {
         console.error('Error loading library:', error);
-        showError('Failed to load library. Make sure data/library.json exists.');
+        showError('Failed to load library. Make sure data/library-index.json exists.');
+    }
+}
+
+// Load full text for a specific book
+async function loadBookText(bookId) {
+    // Check cache first
+    if (library.textCache[bookId]) {
+        return library.textCache[bookId];
+    }
+
+    try {
+        const response = await fetch(`data/texts/${bookId}.json`);
+        if (!response.ok) throw new Error('Failed to load book text');
+
+        const book = await response.json();
+        library.textCache[bookId] = book;
+        return book;
+
+    } catch (error) {
+        console.error('Error loading book text:', error);
+        return null;
     }
 }
 
@@ -34,11 +56,11 @@ function updateStats() {
     const authorCount = document.getElementById('author-count');
 
     if (bookCount) {
-        bookCount.textContent = library.books.length;
+        bookCount.textContent = library.books.length.toLocaleString();
     }
     if (authorCount) {
         const authors = new Set(library.books.map(b => b.author));
-        authorCount.textContent = authors.size;
+        authorCount.textContent = authors.size.toLocaleString();
     }
 }
 
@@ -76,7 +98,7 @@ function populateFilters() {
     }
 }
 
-// Search functionality
+// Search functionality - searches title, author, and snippet
 function search(query, authorFilter = '', sourceFilter = '') {
     if (!query.trim()) return [];
 
@@ -89,38 +111,51 @@ function search(query, authorFilter = '', sourceFilter = '') {
         if (authorFilter && book.author !== authorFilter) return false;
         if (sourceFilter && book.source !== sourceFilter) return false;
 
-        // Search in content
-        const contentLower = book.content.toLowerCase();
-        return contentLower.includes(searchTerm);
+        // Search in title, author, and snippet
+        const titleLower = (book.title || '').toLowerCase();
+        const authorLower = (book.author || '').toLowerCase();
+        const snippetLower = (book.snippet || '').toLowerCase();
+
+        return titleLower.includes(searchTerm) ||
+               authorLower.includes(searchTerm) ||
+               snippetLower.includes(searchTerm);
     });
 
-    // Add snippets with highlighting
+    // Add highlighted snippets
     results = results.map(book => {
-        const snippet = getSnippet(book.content, searchTerm);
-        return { ...book, snippet };
+        const snippet = getHighlightedSnippet(book.snippet || '', searchTerm);
+        return { ...book, highlightedSnippet: snippet };
     });
 
     return results.slice(0, 100); // Limit results
 }
 
-function getSnippet(content, term) {
-    const lowerContent = content.toLowerCase();
-    const index = lowerContent.indexOf(term);
+function getHighlightedSnippet(snippet, term) {
+    if (!snippet) return '';
 
-    if (index === -1) return content.slice(0, 200) + '...';
+    const lowerSnippet = snippet.toLowerCase();
+    const index = lowerSnippet.indexOf(term);
 
-    const start = Math.max(0, index - 100);
-    const end = Math.min(content.length, index + term.length + 100);
+    let displaySnippet = snippet;
 
-    let snippet = content.slice(start, end);
-    if (start > 0) snippet = '...' + snippet;
-    if (end < content.length) snippet = snippet + '...';
+    if (index !== -1) {
+        // Show context around the match
+        const start = Math.max(0, index - 80);
+        const end = Math.min(snippet.length, index + term.length + 80);
+        displaySnippet = snippet.slice(start, end);
+        if (start > 0) displaySnippet = '...' + displaySnippet;
+        if (end < snippet.length) displaySnippet = displaySnippet + '...';
+    } else {
+        // Just show first part of snippet
+        displaySnippet = snippet.slice(0, 200);
+        if (snippet.length > 200) displaySnippet += '...';
+    }
 
     // Highlight the term
     const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
-    snippet = snippet.replace(regex, '<mark>$1</mark>');
+    displaySnippet = displaySnippet.replace(regex, '<mark>$1</mark>');
 
-    return snippet;
+    return displaySnippet;
 }
 
 function escapeRegex(string) {
@@ -160,7 +195,7 @@ function showResults(results, query) {
                     <a href="book.html?id=${book.id}&q=${encodeURIComponent(query)}" class="result-title">${escapeHtml(book.title)}</a>
                     <div class="result-author">${escapeHtml(book.author)}</div>
                 </div>
-                <div class="result-snippet">${book.snippet}</div>
+                <div class="result-snippet">${book.highlightedSnippet}</div>
                 <div class="result-meta">
                     <span class="result-source">${book.source.replace(/_/g, ' ')}</span>
                     <a href="book.html?id=${book.id}&q=${encodeURIComponent(query)}" class="read-more">read &rarr;</a>
@@ -279,7 +314,7 @@ function renderBrowseList() {
 
     let html = '';
     pageBooks.forEach(book => {
-        const snippet = book.content.slice(0, 150).replace(/\n/g, ' ') + '...';
+        const snippet = (book.snippet || '').slice(0, 150) + '...';
         html += `
             <div class="book-card">
                 <h3><a href="book.html?id=${book.id}">${escapeHtml(book.title)}</a></h3>
@@ -314,64 +349,78 @@ function gotoPage(page) {
     window.scrollTo(0, 0);
 }
 
-// Book view page
-function initBookView() {
-    loadLibrary().then(() => {
-        const params = new URLSearchParams(window.location.search);
-        const bookId = parseInt(params.get('id'));
-        const searchQuery = params.get('q');
+// Book view page - loads full text on demand
+async function initBookView() {
+    await loadLibrary();
 
-        const book = library.books.find(b => b.id === bookId);
-        const contentDiv = document.getElementById('book-content');
+    const params = new URLSearchParams(window.location.search);
+    const bookId = parseInt(params.get('id'));
+    const searchQuery = params.get('q');
 
-        if (!book) {
-            contentDiv.innerHTML = '<div class="error">book not found</div>';
-            return;
-        }
+    const contentDiv = document.getElementById('book-content');
 
-        document.title = `borges - ${book.title}`;
-
-        let content = escapeHtml(book.content);
-
-        // Highlight search term
-        if (searchQuery) {
-            const regex = new RegExp(`(${escapeRegex(searchQuery)})`, 'gi');
-            content = content.replace(regex, '<span class="highlight" id="first-match">$1</span>');
-            // Only mark first one
-            content = content.replace('id="first-match"', 'id="first-match"');
-            let count = 0;
-            content = content.replace(/id="first-match"/g, () => {
-                count++;
-                return count === 1 ? 'id="first-match"' : '';
-            });
-        }
-
+    // Show loading state
+    const indexBook = library.books.find(b => b.id === bookId);
+    if (indexBook) {
+        document.title = `borges - ${indexBook.title}`;
         contentDiv.innerHTML = `
             <div class="book-header">
-                <h1 class="book-title">${escapeHtml(book.title)}</h1>
-                <div class="book-author">${escapeHtml(book.author)}</div>
-                <div class="book-info">
-                    <span>source: ${book.source.replace(/_/g, ' ')}</span>
-                    ${book.url ? `<a href="${book.url}" target="_blank">original &rarr;</a>` : ''}
-                </div>
+                <h1 class="book-title">${escapeHtml(indexBook.title)}</h1>
+                <div class="book-author">${escapeHtml(indexBook.author)}</div>
             </div>
-            <div class="book-content">
-                <div class="text-body">${content}</div>
-            </div>
-            <div class="book-nav">
-                <a href="browse.html">&larr; back to browse</a>
-                ${searchQuery ? `<a href="index.html">new search</a>` : ''}
-            </div>
+            <div class="loading">loading text...</div>
         `;
+    }
 
-        // Scroll to first match
-        if (searchQuery) {
-            setTimeout(() => {
-                const firstMatch = document.getElementById('first-match');
-                if (firstMatch) {
-                    firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }, 100);
-        }
-    });
+    // Load full text
+    const book = await loadBookText(bookId);
+
+    if (!book) {
+        contentDiv.innerHTML = '<div class="error">book not found or failed to load</div>';
+        return;
+    }
+
+    document.title = `borges - ${book.title}`;
+
+    let content = escapeHtml(book.content);
+
+    // Highlight search term
+    if (searchQuery) {
+        const regex = new RegExp(`(${escapeRegex(searchQuery)})`, 'gi');
+        content = content.replace(regex, '<span class="highlight" id="first-match">$1</span>');
+        // Only mark first one
+        let count = 0;
+        content = content.replace(/id="first-match"/g, () => {
+            count++;
+            return count === 1 ? 'id="first-match"' : '';
+        });
+    }
+
+    contentDiv.innerHTML = `
+        <div class="book-header">
+            <h1 class="book-title">${escapeHtml(book.title)}</h1>
+            <div class="book-author">${escapeHtml(book.author)}</div>
+            <div class="book-info">
+                <span>source: ${book.source.replace(/_/g, ' ')}</span>
+                ${book.url ? `<a href="${book.url}" target="_blank">original &rarr;</a>` : ''}
+            </div>
+        </div>
+        <div class="book-content">
+            <div class="text-body">${content}</div>
+        </div>
+        <div class="book-nav">
+            <a href="browse.html">&larr; back to browse</a>
+            ${searchQuery ? `<a href="index.html">new search</a>` : ''}
+        </div>
+    `;
+
+    // Scroll to first match
+    if (searchQuery) {
+        setTimeout(() => {
+            const firstMatch = document.getElementById('first-match');
+            if (firstMatch) {
+                firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }, 100);
+    }
 }

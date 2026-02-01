@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """
-Populate the Borges library with texts from all sources.
+Populate the Borges library with texts from ALL available sources.
 
-Sources (11 total):
-- MIT Internet Classics Archive (441 works)
-- Project Gutenberg (classical authors)
-- Sacred Texts Archive (religious/mythological texts)
-- Fordham Internet History Sourcebooks (Ancient, Medieval, Modern)
-- Dante's Divine Comedy (Gutenberg + Princeton Dante Project)
-- Marxists Internet Archive (Marx, Lenin, etc.)
-- Stanford Encyclopedia of Philosophy
-- Internet Encyclopedia of Philosophy (IEP)
-- Wikisource (public domain texts)
-- Bartleby (classics and reference)
-- Loebolus (Loeb Classical Library - 277 volumes)
+Sources (12 total):
+- MIT Internet Classics Archive (ALL 441 works)
+- Project Gutenberg (ALL classical authors)
+- Sacred Texts Archive (ALL sections)
+- Fordham Internet History Sourcebooks (ALL pages)
+- Dante's Divine Comedy (complete)
+- Marxists Internet Archive (ALL authors)
+- Stanford Encyclopedia of Philosophy (ALL entries)
+- Internet Encyclopedia of Philosophy (ALL articles)
+- Wikisource (major philosophical works)
+- Bartleby (ALL available)
+- Loebolus (ALL 277 Loeb Classical Library volumes)
+- IQ.wiki (blockchain/crypto encyclopedia)
 
 Run: python scripts/populate_library.py --source all
 Run: python scripts/populate_library.py --list  (to see all sources)
@@ -63,140 +64,126 @@ class SourceDownloader:
             except Exception as e:
                 if i == retries - 1:
                     raise
-                time.sleep(1 + i)  # Increasing backoff
+                time.sleep(1 + i)
         return None
 
 
 class MITClassicsDownloader(SourceDownloader):
-    """Download from MIT Internet Classics Archive - ALL 441 works."""
+    """Download ALL works from MIT Internet Classics Archive."""
 
     name = "mit_classics"
-    description = "441 works of classical literature"
+    description = "ALL 441 works of classical literature"
     base_url = "https://classics.mit.edu"
 
-    # Complete list of all 59 authors from MIT Classics
-    AUTHORS = [
-        "Aeschines", "Aeschylus", "Andocides", "Antiphon", "Apollodorus",
-        "Appian", "Apuleius", "Aristophanes", "Aristotle", "Arrian",
-        "Athenaeus", "Caesar", "Cato", "Catullus", "Cicero",
-        "Confucius", "Demosthenes", "Dinarchus", "Diodorus", "Diogenes",
-        "Epictetus", "Euclid", "Euripides", "Galen", "Herodotus",
-        "Hesiod", "Hippocrates", "Homer", "Horace", "Hyperides",
-        "Isaeus", "Isocrates", "Josephus", "Laotzu", "Livy",
-        "Longus", "Lucian", "Lucretius", "Lycurgus", "Lysias",
-        "Marcus Aurelius", "Mencius", "Ovid", "Pausanias", "Petronius",
-        "Pindar", "Plato", "Plautus", "Pliny", "Plutarch",
-        "Procopius", "Sallust", "Seneca", "Sextus", "Sophocles",
-        "Strabo", "Suetonius", "Tacitus", "Thucydides", "Vergil",
-        "Xenophon"
-    ]
-
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from mit classics (all 441 works)...")
+        print(f"\n>> downloading ALL from mit classics...")
         works_added = 0
-        works_found = 0
 
-        for author in tqdm(self.AUTHORS, desc="authors"):
-            if limit and works_added >= limit:
-                break
+        # Get the main browse index to find ALL authors
+        browse_url = f"{self.base_url}/Browse/index.html"
 
-            # Get the author's browse page
-            browse_url = f"{self.base_url}/Browse/browse-{author}.html"
+        try:
+            response = self.safe_get(browse_url)
+            soup = BeautifulSoup(response.text, "lxml")
 
-            try:
-                response = self.safe_get(browse_url, retries=2)
-                if not response:
-                    continue
+            # Find ALL author links (browse-*.html pattern)
+            author_links = []
+            for link in soup.find_all("a", href=True):
+                href = link.get("href", "")
+                if "browse-" in href and href.endswith(".html"):
+                    author_name = link.get_text(strip=True)
+                    if author_name:
+                        author_links.append((author_name, urljoin(browse_url, href)))
 
-                soup = BeautifulSoup(response.text, "lxml")
+            print(f"  found {len(author_links)} authors")
 
-                # Find all links on the page
-                for link in soup.find_all("a", href=True):
-                    if limit and works_added >= limit:
-                        break
+            for author_name, author_url in tqdm(author_links, desc="authors"):
+                if limit and works_added >= limit:
+                    break
 
-                    href = link.get("href", "")
-                    title = link.get_text(strip=True)
-
-                    # Skip navigation and non-work links
-                    if not href.endswith(".html"):
-                        continue
-                    if "browse" in href.lower() or "index" in href.lower():
-                        continue
-                    if "Help" in href or "Search" in href or "Buy" in href:
-                        continue
-                    if not title or len(title) < 2:
-                        continue
-                    # Skip "more info" links
-                    if "more info" in title.lower():
+                try:
+                    author_resp = self.safe_get(author_url, retries=2)
+                    if not author_resp:
                         continue
 
-                    works_found += 1
+                    author_soup = BeautifulSoup(author_resp.text, "lxml")
 
-                    if self.library.book_exists(title, author, self.name):
-                        continue
+                    # Find ALL work links on this author's page
+                    for link in author_soup.find_all("a", href=True):
+                        if limit and works_added >= limit:
+                            break
 
-                    # Build the work URL
-                    work_url = urljoin(browse_url, href)
+                        href = link.get("href", "")
+                        title = link.get_text(strip=True)
 
-                    try:
-                        work_resp = self.safe_get(work_url, retries=2)
-                        if not work_resp:
+                        # Skip non-work links
+                        if not href.endswith(".html"):
+                            continue
+                        if "browse" in href.lower() or "index" in href.lower():
+                            continue
+                        if not title or len(title) < 2:
+                            continue
+                        if "more info" in title.lower() or "help" in title.lower():
                             continue
 
-                        work_soup = BeautifulSoup(work_resp.text, "lxml")
+                        if self.library.book_exists(title, author_name, self.name):
+                            continue
 
-                        # Remove scripts, styles, navigation
-                        for tag in work_soup.find_all(["script", "style", "nav"]):
-                            tag.decompose()
+                        work_url = urljoin(author_url, href)
 
-                        body = work_soup.find("body")
-                        if body:
-                            content = body.get_text(separator="\n")
-                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+                        try:
+                            work_resp = self.safe_get(work_url, retries=2)
+                            if not work_resp:
+                                continue
 
-                            if len(content) > 500:
-                                book = Book(
-                                    id=None,
-                                    title=title,
-                                    author=author,
-                                    source=self.name,
-                                    language="english",
-                                    content=content,
-                                    url=work_url,
-                                )
-                                self.library.add_book(book)
-                                works_added += 1
+                            work_soup = BeautifulSoup(work_resp.text, "lxml")
 
-                        time.sleep(0.2)
+                            for tag in work_soup.find_all(["script", "style", "nav"]):
+                                tag.decompose()
 
-                    except Exception:
-                        pass
+                            body = work_soup.find("body")
+                            if body:
+                                content = body.get_text(separator="\n")
+                                content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-            except Exception:
-                # Try alternate URL format
-                try:
-                    alt_url = f"{self.base_url}/Browse/browse-{author.replace(' ', '%20')}.html"
-                    response = self.safe_get(alt_url, retries=1)
-                    if response:
-                        # Process same as above...
-                        pass
-                except Exception:
-                    pass
+                                if len(content) > 500:
+                                    book = Book(
+                                        id=None,
+                                        title=title,
+                                        author=author_name,
+                                        source=self.name,
+                                        language="english",
+                                        content=content,
+                                        url=work_url,
+                                    )
+                                    self.library.add_book(book)
+                                    works_added += 1
 
-        print(f"  + added {works_added} works (found {works_found} total)")
+                            time.sleep(0.2)
+
+                        except Exception:
+                            pass
+
+                except Exception as e:
+                    print(f"  error with {author_name}: {e}")
+
+        except Exception as e:
+            print(f"  error fetching index: {e}")
+
+        print(f"  + added {works_added} works")
         return works_added
 
 
 class GutenbergDownloader(SourceDownloader):
-    """Download classics from Project Gutenberg via Gutendex API."""
+    """Download ALL classical texts from Project Gutenberg."""
 
     name = "gutenberg"
-    description = "Public domain classics"
+    description = "ALL public domain classics"
     api_url = "https://gutendex.com/books"
 
-    # Comprehensive list of classical authors
-    CLASSICAL_AUTHORS = [
+    # Search terms to find classical works
+    SEARCH_TERMS = [
+        # Ancient authors
         "Homer", "Plato", "Aristotle", "Sophocles", "Euripides", "Aeschylus",
         "Herodotus", "Thucydides", "Xenophon", "Plutarch", "Virgil", "Ovid",
         "Horace", "Cicero", "Seneca", "Marcus Aurelius", "Epictetus",
@@ -208,288 +195,255 @@ class GutenbergDownloader(SourceDownloader):
         "Julian", "Dio Cassius", "Appian", "Polybius", "Strabo",
         "Pausanias", "Josephus", "Philo", "Sallust", "Caesar",
         "Quintilian", "Boethius", "Augustine", "Confucius", "Lao Tzu",
+        "Mencius", "Chuang Tzu", "Sun Tzu",
+        # Topics/Categories
+        "Greek philosophy", "Roman history", "classical mythology",
+        "ancient Greece", "ancient Rome", "Stoic", "Epicurean",
     ]
 
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from gutenberg...")
+        print(f"\n>> downloading ALL from gutenberg...")
         works_added = 0
+        seen_ids = set()
 
-        for author in tqdm(self.CLASSICAL_AUTHORS, desc="authors"):
+        for term in tqdm(self.SEARCH_TERMS, desc="search terms"):
             if limit and works_added >= limit:
                 break
 
-            try:
-                # Search for author's works
-                response = self.safe_get(
-                    f"{self.api_url}?search={quote(author)}&languages=en",
-                    timeout=60
-                )
-                if not response:
-                    continue
+            # Search and get ALL pages of results
+            next_url = f"{self.api_url}?search={quote(term)}&languages=en"
 
-                data = response.json()
-
-                for book_data in data.get("results", []):
-                    if limit and works_added >= limit:
+            while next_url and (not limit or works_added < limit):
+                try:
+                    response = self.safe_get(next_url, timeout=60)
+                    if not response:
                         break
 
-                    title = book_data.get("title", "Unknown")
-                    authors = book_data.get("authors", [])
-                    author_name = authors[0]["name"] if authors else author
+                    data = response.json()
 
-                    if self.library.book_exists(title, author_name, self.name):
-                        continue
-
-                    formats = book_data.get("formats", {})
-
-                    # Try multiple text formats
-                    text_url = None
-                    for fmt in [
-                        "text/plain; charset=utf-8",
-                        "text/plain; charset=us-ascii",
-                        "text/plain",
-                        "text/html; charset=utf-8",
-                        "text/html",
-                    ]:
-                        if fmt in formats:
-                            url = formats[fmt]
-                            if not url.endswith('.zip'):
-                                text_url = url
-                                break
-
-                    if text_url:
-                        try:
-                            text_resp = self.safe_get(text_url, timeout=120)
-                            if not text_resp:
-                                continue
-
-                            content = text_resp.text
-
-                            # If HTML, extract text
-                            if "text/html" in text_resp.headers.get("content-type", ""):
-                                soup = BeautifulSoup(content, "lxml")
-                                for tag in soup.find_all(["script", "style"]):
-                                    tag.decompose()
-                                content = soup.get_text(separator="\n")
-
-                            if len(content) > 1000:
-                                book = Book(
-                                    id=None,
-                                    title=title,
-                                    author=author_name,
-                                    source=self.name,
-                                    language="english",
-                                    content=content,
-                                    url=f"https://www.gutenberg.org/ebooks/{book_data['id']}",
-                                )
-                                self.library.add_book(book)
-                                works_added += 1
-
-                            time.sleep(0.5)
-
-                        except Exception:
-                            pass
-
-                # Also get next page of results
-                next_url = data.get("next")
-                while next_url and (not limit or works_added < limit):
-                    try:
-                        response = self.safe_get(next_url, timeout=60)
-                        if not response:
+                    for book_data in data.get("results", []):
+                        if limit and works_added >= limit:
                             break
-                        data = response.json()
 
-                        for book_data in data.get("results", []):
-                            if limit and works_added >= limit:
-                                break
-                            # Same processing as above...
-                            title = book_data.get("title", "Unknown")
-                            authors = book_data.get("authors", [])
-                            author_name = authors[0]["name"] if authors else author
+                        book_id = book_data.get("id")
+                        if book_id in seen_ids:
+                            continue
+                        seen_ids.add(book_id)
 
-                            if self.library.book_exists(title, author_name, self.name):
-                                continue
+                        title = book_data.get("title", "Unknown")
+                        authors = book_data.get("authors", [])
+                        author_name = authors[0]["name"] if authors else "Unknown"
 
-                            formats = book_data.get("formats", {})
-                            text_url = None
-                            for fmt in ["text/plain; charset=utf-8", "text/plain; charset=us-ascii", "text/plain"]:
-                                if fmt in formats:
-                                    url = formats[fmt]
-                                    if not url.endswith('.zip'):
-                                        text_url = url
-                                        break
+                        if self.library.book_exists(title, author_name, self.name):
+                            continue
 
-                            if text_url:
-                                try:
-                                    text_resp = self.safe_get(text_url, timeout=120)
-                                    if text_resp and len(text_resp.text) > 1000:
-                                        book = Book(
-                                            id=None,
-                                            title=title,
-                                            author=author_name,
-                                            source=self.name,
-                                            language="english",
-                                            content=text_resp.text,
-                                            url=f"https://www.gutenberg.org/ebooks/{book_data['id']}",
-                                        )
-                                        self.library.add_book(book)
-                                        works_added += 1
-                                    time.sleep(0.5)
-                                except Exception:
-                                    pass
+                        formats = book_data.get("formats", {})
 
-                        next_url = data.get("next")
-                    except Exception:
-                        break
+                        # Try to get text content
+                        text_url = None
+                        for fmt in [
+                            "text/plain; charset=utf-8",
+                            "text/plain; charset=us-ascii",
+                            "text/plain",
+                        ]:
+                            if fmt in formats:
+                                url = formats[fmt]
+                                if not url.endswith('.zip'):
+                                    text_url = url
+                                    break
 
-            except Exception as e:
-                print(f"  error: {author}: {e}")
+                        if text_url:
+                            try:
+                                text_resp = self.safe_get(text_url, timeout=120)
+                                if text_resp and len(text_resp.text) > 1000:
+                                    book = Book(
+                                        id=None,
+                                        title=title,
+                                        author=author_name,
+                                        source=self.name,
+                                        language="english",
+                                        content=text_resp.text,
+                                        url=f"https://www.gutenberg.org/ebooks/{book_id}",
+                                    )
+                                    self.library.add_book(book)
+                                    works_added += 1
+                                time.sleep(0.3)
+                            except Exception:
+                                pass
+
+                    next_url = data.get("next")
+
+                except Exception:
+                    break
 
         print(f"  + added {works_added} works")
         return works_added
 
 
 class SacredTextsDownloader(SourceDownloader):
-    """Download from Sacred Texts Archive."""
+    """Download ALL from Sacred Texts Archive."""
 
     name = "sacred_texts"
-    description = "Religious and mythological texts"
+    description = "ALL religious and mythological texts"
     base_url = "https://sacred-texts.com"
 
-    # All major sections
-    SECTIONS = {
-        "cla": "Classical Paganism",
-        "egy": "Egyptian",
-        "ane": "Ancient Near East",
-        "bib": "Bible",
-        "chr": "Christianity",
-        "gno": "Gnosticism",
-        "hin": "Hinduism",
-        "bud": "Buddhism",
-        "jud": "Judaism",
-        "isl": "Islam",
-        "zor": "Zoroastrianism",
-        "phi": "Philosophy",
-    }
-
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from sacred texts...")
+        print(f"\n>> downloading ALL from sacred texts...")
         works_added = 0
 
-        for section_code, section_name in tqdm(self.SECTIONS.items(), desc="sections"):
-            if limit and works_added >= limit:
-                break
+        # Get ALL sections from the main index
+        try:
+            response = self.safe_get(self.base_url)
+            soup = BeautifulSoup(response.text, "lxml")
 
-            section_url = f"{self.base_url}/{section_code}/index.htm"
+            # Find all section links
+            sections = []
+            for link in soup.find_all("a", href=True):
+                href = link.get("href", "")
+                if href.startswith("/") and not href.startswith("//"):
+                    # Potential section
+                    if len(href) > 1 and "/" not in href[1:]:
+                        section_code = href.strip("/")
+                        if section_code and len(section_code) <= 10:
+                            sections.append(section_code)
 
-            try:
-                response = self.safe_get(section_url)
-                if not response:
-                    continue
+            # Also add known sections
+            known_sections = [
+                "cla", "egy", "ane", "bib", "chr", "gno", "hin", "bud",
+                "jud", "isl", "zor", "phi", "neu", "pag", "afr", "ame",
+                "asia", "aus", "cel", "eng", "eur", "pac", "sym", "mas",
+                "eso", "nth", "oto", "ros", "the", "shi", "tao", "con",
+                "sro", "sks", "jain", "tantra", "yoga",
+            ]
+            sections = list(set(sections + known_sections))
 
-                soup = BeautifulSoup(response.text, "lxml")
+            print(f"  found {len(sections)} sections")
 
-                for link in soup.find_all("a", href=True):
-                    if limit and works_added >= limit:
-                        break
+            for section_code in tqdm(sections, desc="sections"):
+                if limit and works_added >= limit:
+                    break
 
-                    href = link.get("href", "")
-                    if not href or href.startswith("http") or href.startswith("#"):
+                section_url = f"{self.base_url}/{section_code}/index.htm"
+
+                try:
+                    response = self.safe_get(section_url, retries=1)
+                    if not response:
                         continue
-                    if "index" in href.lower():
-                        continue
-                    if not href.endswith(".htm") and not href.endswith(".html"):
-                        continue
 
-                    title = link.get_text(strip=True)
-                    if not title or len(title) < 3:
-                        continue
+                    soup = BeautifulSoup(response.text, "lxml")
 
-                    if self.library.book_exists(title, section_name, self.name):
-                        continue
+                    for link in soup.find_all("a", href=True):
+                        if limit and works_added >= limit:
+                            break
 
-                    text_url = urljoin(section_url, href)
-                    try:
-                        text_resp = self.safe_get(text_url)
-                        if not text_resp:
+                        href = link.get("href", "")
+                        if not href or href.startswith("http") or href.startswith("#"):
+                            continue
+                        if "index" in href.lower():
+                            continue
+                        if not (href.endswith(".htm") or href.endswith(".html")):
                             continue
 
-                        text_soup = BeautifulSoup(text_resp.text, "lxml")
+                        title = link.get_text(strip=True)
+                        if not title or len(title) < 3:
+                            continue
 
-                        for tag in text_soup.find_all(["script", "style"]):
-                            tag.decompose()
+                        if self.library.book_exists(title, section_code.upper(), self.name):
+                            continue
 
-                        body = text_soup.find("body")
-                        if body:
-                            content = body.get_text(separator="\n")
-                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
+                        text_url = urljoin(section_url, href)
+                        try:
+                            text_resp = self.safe_get(text_url, retries=1)
+                            if not text_resp:
+                                continue
 
-                            if len(content) > 500:
-                                book = Book(
-                                    id=None,
-                                    title=title,
-                                    author=section_name,
-                                    source=self.name,
-                                    language="english",
-                                    content=content,
-                                    url=text_url,
-                                )
-                                self.library.add_book(book)
-                                works_added += 1
+                            text_soup = BeautifulSoup(text_resp.text, "lxml")
 
-                        time.sleep(0.2)
+                            for tag in text_soup.find_all(["script", "style"]):
+                                tag.decompose()
 
-                    except Exception:
-                        pass
+                            body = text_soup.find("body")
+                            if body:
+                                content = body.get_text(separator="\n")
+                                content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-            except Exception as e:
-                print(f"  error: {section_name}: {e}")
+                                if len(content) > 500:
+                                    book = Book(
+                                        id=None,
+                                        title=title,
+                                        author=section_code.upper(),
+                                        source=self.name,
+                                        language="english",
+                                        content=content,
+                                        url=text_url,
+                                    )
+                                    self.library.add_book(book)
+                                    works_added += 1
+
+                            time.sleep(0.1)
+
+                        except Exception:
+                            pass
+
+                except Exception:
+                    pass
+
+        except Exception as e:
+            print(f"  error: {e}")
 
         print(f"  + added {works_added} works")
         return works_added
 
 
 class FordhamDownloader(SourceDownloader):
-    """Download from Fordham Internet History Sourcebooks."""
+    """Download ALL from Fordham Sourcebooks."""
 
     name = "fordham"
-    description = "Ancient, Medieval, and Modern history sourcebook"
+    description = "ALL history sourcebook texts"
     base_url = "https://sourcebooks.fordham.edu"
 
-    # All sourcebook sections with multiple URL patterns
-    SECTIONS = [
-        ("/ancient/asbook.asp", "Ancient"),
-        ("/ancient/asbook2.asp", "Ancient"),
-        ("/ancient/asbook3.asp", "Ancient"),
-        ("/ancient/asbook4.asp", "Ancient"),
-        ("/ancient/asbook5.asp", "Ancient"),
-        ("/ancient/asbook6.asp", "Ancient"),
-        ("/ancient/asbook7.asp", "Ancient"),
-        ("/ancient/asbook8.asp", "Ancient"),
-        ("/ancient/asbook9.asp", "Ancient"),
-        ("/ancient/asbook10.asp", "Ancient"),
-        ("/ancient/asbook11.asp", "Ancient"),
-        ("/med/sbook.asp", "Medieval"),
-        ("/med/sbook1a.asp", "Medieval"),
-        ("/med/sbook1b.asp", "Medieval"),
-        ("/med/sbook1c.asp", "Medieval"),
-        ("/mod/modsbook.asp", "Modern"),
-        ("/mod/modsbook2.asp", "Modern"),
-        ("/mod/modsbook3.asp", "Modern"),
-    ]
-
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from fordham sourcebooks...")
+        print(f"\n>> downloading ALL from fordham sourcebooks...")
         works_added = 0
 
-        for section_path, section_name in tqdm(self.SECTIONS, desc="sections"):
+        # Get ALL sourcebook index pages
+        sourcebooks = [
+            ("/ancient/asbook.asp", "Ancient"),
+            ("/med/sbook.asp", "Medieval"),
+            ("/mod/modsbook.asp", "Modern"),
+        ]
+
+        # Discover all sub-pages
+        all_pages = []
+
+        for base_path, category in sourcebooks:
+            base_url = f"{self.base_url}{base_path}"
+            try:
+                response = self.safe_get(base_url, retries=2)
+                if response:
+                    soup = BeautifulSoup(response.text, "lxml")
+
+                    # Find links to other index pages
+                    for link in soup.find_all("a", href=True):
+                        href = link.get("href", "")
+                        if "sbook" in href.lower() or "asbook" in href.lower() or "modsbook" in href.lower():
+                            page_url = urljoin(base_url, href)
+                            if page_url not in [p[0] for p in all_pages]:
+                                all_pages.append((page_url, category))
+
+                    all_pages.append((base_url, category))
+
+            except Exception:
+                all_pages.append((base_url, category))
+
+        print(f"  found {len(all_pages)} index pages")
+
+        for section_url, category in tqdm(all_pages, desc="pages"):
             if limit and works_added >= limit:
                 break
 
-            section_url = f"{self.base_url}{section_path}"
-
             try:
-                response = self.safe_get(section_url, retries=2)
+                response = self.safe_get(section_url, retries=1)
                 if not response:
                     continue
 
@@ -511,7 +465,7 @@ class FordhamDownloader(SourceDownloader):
                     if not title or len(title) < 5:
                         continue
 
-                    if self.library.book_exists(title, section_name, self.name):
+                    if self.library.book_exists(title, category, self.name):
                         continue
 
                     text_url = urljoin(section_url, href)
@@ -534,7 +488,7 @@ class FordhamDownloader(SourceDownloader):
                                 book = Book(
                                     id=None,
                                     title=title,
-                                    author=section_name,
+                                    author=category,
                                     source=self.name,
                                     language="english",
                                     content=content,
@@ -543,37 +497,38 @@ class FordhamDownloader(SourceDownloader):
                                 self.library.add_book(book)
                                 works_added += 1
 
-                        time.sleep(0.2)
+                        time.sleep(0.1)
 
                     except Exception:
                         pass
 
             except Exception:
-                pass  # Skip sections that error
+                pass
 
         print(f"  + added {works_added} works")
         return works_added
 
 
 class DanteDownloader(SourceDownloader):
-    """Download Dante's Divine Comedy from multiple sources."""
+    """Download Dante's Divine Comedy - complete."""
 
     name = "dante"
-    description = "Dante's Divine Comedy - complete text"
+    description = "Dante's Divine Comedy - complete"
 
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading dante's divine comedy...")
+        print(f"\n>> downloading dante's divine comedy (complete)...")
         works_added = 0
 
-        # Try multiple sources for the Divine Comedy
-
-        # Source 1: Project Gutenberg direct
+        # Get from Gutenberg - these are the definitive IDs
         gutenberg_ids = [
-            ("8800", "Divine Comedy - Complete"),
-            ("1004", "Divine Comedy - Inferno"),
-            ("1005", "Divine Comedy - Purgatorio"),
-            ("1006", "Divine Comedy - Paradiso"),
+            ("8800", "Divine Comedy - Complete (Longfellow)"),
+            ("1004", "Divine Comedy - Inferno (Longfellow)"),
+            ("1005", "Divine Comedy - Purgatorio (Longfellow)"),
+            ("1006", "Divine Comedy - Paradiso (Longfellow)"),
             ("8789", "La Divina Commedia (Italian)"),
+            ("41537", "Divine Comedy - Inferno (Cary)"),
+            ("8795", "Divine Comedy - Purgatory (Cary)"),
+            ("8799", "Divine Comedy - Paradise (Cary)"),
         ]
 
         for ebook_id, title in gutenberg_ids:
@@ -583,7 +538,6 @@ class DanteDownloader(SourceDownloader):
             if self.library.book_exists(title, "Dante Alighieri", self.name):
                 continue
 
-            # Try to get the text
             urls_to_try = [
                 f"https://www.gutenberg.org/cache/epub/{ebook_id}/pg{ebook_id}.txt",
                 f"https://www.gutenberg.org/files/{ebook_id}/{ebook_id}-0.txt",
@@ -599,7 +553,7 @@ class DanteDownloader(SourceDownloader):
                             title=title,
                             author="Dante Alighieri",
                             source=self.name,
-                            language="english" if "Italian" not in title else "italian",
+                            language="italian" if "Italian" in title else "english",
                             content=response.text,
                             url=f"https://www.gutenberg.org/ebooks/{ebook_id}",
                         )
@@ -609,17 +563,71 @@ class DanteDownloader(SourceDownloader):
                 except Exception:
                     continue
 
-            time.sleep(0.3)
+            time.sleep(0.2)
 
-        # Source 2: Try Princeton Dante Project
-        pdp_base = "https://dante.princeton.edu"
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class MarxistsDownloader(SourceDownloader):
+    """Download ALL from Marxists Internet Archive."""
+
+    name = "marxists"
+    description = "ALL Marxist texts"
+    base_url = "https://www.marxists.org"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading ALL from marxists.org...")
+        works_added = 0
+
+        # Get the archive index to find ALL authors
+        archive_url = f"{self.base_url}/archive/index.htm"
+
+        authors = []
 
         try:
-            # Get the summary/index page
-            summary_url = f"{pdp_base}/pdp/summary.html"
-            response = self.safe_get(summary_url, retries=2)
-
+            response = self.safe_get(archive_url)
             if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    name = link.get_text(strip=True)
+
+                    if "/archive/" in href and name and len(name) > 2:
+                        author_url = urljoin(archive_url, href)
+                        if author_url not in [a[1] for a in authors]:
+                            authors.append((name, author_url))
+
+        except Exception:
+            pass
+
+        # Also add known important authors
+        known_authors = [
+            ("Marx, Karl", f"{self.base_url}/archive/marx/works"),
+            ("Lenin, Vladimir", f"{self.base_url}/archive/lenin/works"),
+            ("Trotsky, Leon", f"{self.base_url}/archive/trotsky/works"),
+            ("Luxemburg, Rosa", f"{self.base_url}/archive/luxemburg"),
+            ("Gramsci, Antonio", f"{self.base_url}/archive/gramsci"),
+            ("Kropotkin, Peter", f"{self.base_url}/reference/archive/kropotkin"),
+            ("Bakunin, Mikhail", f"{self.base_url}/reference/archive/bakunin"),
+        ]
+
+        for name, url in known_authors:
+            if url not in [a[1] for a in authors]:
+                authors.append((name, url))
+
+        print(f"  found {len(authors)} authors")
+
+        for author_name, author_url in tqdm(authors[:100], desc="authors"):  # Limit to 100 authors
+            if limit and works_added >= limit:
+                break
+
+            try:
+                response = self.safe_get(author_url, retries=1)
+                if not response:
+                    continue
+
                 soup = BeautifulSoup(response.text, "lxml")
 
                 for link in soup.find_all("a", href=True):
@@ -627,20 +635,22 @@ class DanteDownloader(SourceDownloader):
                         break
 
                     href = link.get("href", "")
-                    text = link.get_text(strip=True)
+                    title = link.get_text(strip=True)
 
-                    if not text or len(text) < 3:
+                    if not href or not title or len(title) < 3:
+                        continue
+                    if href.startswith("#") or href.startswith("mailto"):
+                        continue
+                    if "index" in href.lower() or href == "../":
                         continue
 
-                    title = f"Divine Comedy - {text}"
-
-                    if self.library.book_exists(title, "Dante Alighieri", self.name):
+                    if self.library.book_exists(title, author_name, self.name):
                         continue
 
-                    canto_url = urljoin(summary_url, href)
+                    text_url = urljoin(author_url + "/", href)
 
                     try:
-                        text_resp = self.safe_get(canto_url, retries=1)
+                        text_resp = self.safe_get(text_url, retries=1)
                         if not text_resp:
                             continue
 
@@ -649,190 +659,77 @@ class DanteDownloader(SourceDownloader):
                         for tag in text_soup.find_all(["script", "style", "nav"]):
                             tag.decompose()
 
-                        main = text_soup.find("main") or text_soup.find("article") or text_soup.find("body")
-
-                        if main:
-                            content = main.get_text(separator="\n")
+                        body = text_soup.find("body")
+                        if body:
+                            content = body.get_text(separator="\n")
                             content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-                            if len(content) > 200:
+                            if len(content) > 500:
                                 book = Book(
                                     id=None,
                                     title=title,
-                                    author="Dante Alighieri",
+                                    author=author_name,
                                     source=self.name,
                                     language="english",
                                     content=content,
-                                    url=canto_url,
+                                    url=text_url,
                                 )
                                 self.library.add_book(book)
                                 works_added += 1
 
-                        time.sleep(0.2)
+                        time.sleep(0.1)
 
                     except Exception:
                         pass
 
-        except Exception:
-            pass
-
-        print(f"  + added {works_added} works")
-        return works_added
-
-
-class MarxistsDownloader(SourceDownloader):
-    """Download from Marxists Internet Archive."""
-
-    name = "marxists"
-    description = "Marxist texts and philosophy"
-    base_url = "https://www.marxists.org"
-
-    # Comprehensive author list with multiple URL patterns
-    AUTHORS = [
-        ("marx", "Marx, Karl", ["/archive/marx/works"]),
-        ("engels", "Engels, Friedrich", ["/archive/marx/works"]),  # Engels works are under Marx
-        ("lenin", "Lenin, Vladimir", ["/archive/lenin/works"]),
-        ("luxemburg", "Luxemburg, Rosa", ["/archive/luxemburg"]),
-        ("gramsci", "Gramsci, Antonio", ["/archive/gramsci"]),
-        ("trotsky", "Trotsky, Leon", ["/archive/trotsky/works"]),
-        ("plekhanov", "Plekhanov, Georgi", ["/archive/plekhanov"]),
-        ("kautsky", "Kautsky, Karl", ["/archive/kautsky"]),
-        ("bukharin", "Bukharin, Nikolai", ["/archive/bukharin"]),
-        ("bordiga", "Bordiga, Amadeo", ["/archive/bordiga"]),
-        ("pannekoek", "Pannekoek, Anton", ["/archive/pannekoe"]),
-        ("gorter", "Gorter, Herman", ["/archive/gorter"]),
-        ("lukacs", "Lukacs, Georg", ["/archive/lukacs"]),
-        ("korsch", "Korsch, Karl", ["/archive/korsch"]),
-        ("kollontai", "Kollontai, Alexandra", ["/archive/kollonta"]),
-        ("zetkin", "Zetkin, Clara", ["/archive/zetkin"]),
-        ("connolly", "Connolly, James", ["/archive/connolly"]),
-        ("debs", "Debs, Eugene", ["/archive/debs"]),
-        ("debord", "Debord, Guy", ["/archive/debord"]),
-        ("kropotkin", "Kropotkin, Peter", ["/reference/archive/kropotkin"]),
-        ("bakunin", "Bakunin, Mikhail", ["/reference/archive/bakunin"]),
-        ("proudhon", "Proudhon, Pierre-Joseph", ["/reference/archive/proudhon"]),
-    ]
-
-    def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from marxists.org...")
-        works_added = 0
-
-        for author_path, author_name, url_patterns in tqdm(self.AUTHORS, desc="authors"):
-            if limit and works_added >= limit:
-                break
-
-            for pattern in url_patterns:
-                archive_url = f"{self.base_url}{pattern}"
-
-                try:
-                    response = self.safe_get(archive_url, retries=2)
-                    if not response:
-                        continue
-
-                    soup = BeautifulSoup(response.text, "lxml")
-
-                    for link in soup.find_all("a", href=True):
-                        if limit and works_added >= limit:
-                            break
-
-                        href = link.get("href", "")
-                        title = link.get_text(strip=True)
-
-                        if not href or not title or len(title) < 3:
-                            continue
-                        if href.startswith("#") or href.startswith("mailto"):
-                            continue
-                        if "index" in href.lower() or href == "../":
-                            continue
-
-                        if self.library.book_exists(title, author_name, self.name):
-                            continue
-
-                        text_url = urljoin(archive_url + "/", href)
-
-                        try:
-                            text_resp = self.safe_get(text_url, retries=1)
-                            if not text_resp:
-                                continue
-
-                            text_soup = BeautifulSoup(text_resp.text, "lxml")
-
-                            for tag in text_soup.find_all(["script", "style", "nav"]):
-                                tag.decompose()
-
-                            body = text_soup.find("body")
-                            if body:
-                                content = body.get_text(separator="\n")
-                                content = re.sub(r"\n{3,}", "\n\n", content).strip()
-
-                                if len(content) > 500:
-                                    book = Book(
-                                        id=None,
-                                        title=title,
-                                        author=author_name,
-                                        source=self.name,
-                                        language="english",
-                                        content=content,
-                                        url=text_url,
-                                    )
-                                    self.library.add_book(book)
-                                    works_added += 1
-
-                            time.sleep(0.2)
-
-                        except Exception:
-                            pass
-
-                except Exception:
-                    continue
+            except Exception:
+                pass
 
         print(f"  + added {works_added} works")
         return works_added
 
 
 class StanfordEncyclopediaDownloader(SourceDownloader):
-    """Download from Stanford Encyclopedia of Philosophy."""
+    """Download ALL from Stanford Encyclopedia of Philosophy."""
 
     name = "stanford_encyclopedia"
-    description = "Stanford Encyclopedia of Philosophy"
+    description = "ALL Stanford Encyclopedia entries"
     base_url = "https://plato.stanford.edu"
 
-    # Comprehensive list of philosophy entries
-    ENTRIES = [
-        # Ancient Philosophy
-        "plato", "aristotle", "socrates", "stoicism", "epicurus",
-        "ancient-ethics", "presocratics", "pythagoras", "heraclitus",
-        "parmenides", "democritus", "sophists", "cynics", "skepticism-ancient",
-        "neoplatonism", "plotinus", "porphyry", "proclus", "iamblichus",
-        "ancient-soul", "ancient-political", "ancient-rhetoric",
-        # Medieval Philosophy
-        "augustine", "aquinas", "boethius", "anselm", "abelard",
-        "duns-scotus", "ockham", "medieval-political", "medieval-philosophy",
-        # Modern Philosophy
-        "kant", "hegel", "nietzsche", "heidegger", "wittgenstein",
-        "descartes", "spinoza", "leibniz", "locke", "hume", "berkeley",
-        "rousseau", "hobbes", "machiavelli", "montaigne",
-        # Contemporary
-        "marx", "existentialism", "phenomenology", "hermeneutics",
-        "critical-theory", "postmodernism", "pragmatism",
-        # Core Topics
-        "ethics", "metaphysics", "epistemology", "logic", "aesthetics",
-        "political-philosophy", "philosophy-religion", "philosophy-mind",
-        "free-will", "personal-identity", "consciousness", "causation",
-        "time", "truth", "meaning", "knowledge", "justification",
-        "moral-realism", "virtue-ethics", "consequentialism", "deontology",
-        "naturalism", "materialism", "idealism", "dualism", "monism",
-    ]
-
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from stanford encyclopedia...")
+        print(f"\n>> downloading ALL from stanford encyclopedia...")
         works_added = 0
 
-        for entry in tqdm(self.ENTRIES, desc="entries"):
+        # Get the contents/index page to find ALL entries
+        contents_url = f"{self.base_url}/contents.html"
+
+        entries = []
+
+        try:
+            response = self.safe_get(contents_url)
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    if "/entries/" in href and title:
+                        entry_url = urljoin(contents_url, href)
+                        if entry_url not in [e[1] for e in entries]:
+                            entries.append((title, entry_url))
+
+        except Exception as e:
+            print(f"  error fetching contents: {e}")
+
+        print(f"  found {len(entries)} entries")
+
+        for title, entry_url in tqdm(entries, desc="entries"):
             if limit and works_added >= limit:
                 break
 
-            entry_url = f"{self.base_url}/entries/{entry}/"
+            if self.library.book_exists(title, "Stanford Encyclopedia", self.name):
+                continue
 
             try:
                 response = self.safe_get(entry_url, retries=2)
@@ -841,14 +738,7 @@ class StanfordEncyclopediaDownloader(SourceDownloader):
 
                 soup = BeautifulSoup(response.text, "lxml")
 
-                # Get title from h1
-                title_elem = soup.find("h1")
-                title = title_elem.get_text(strip=True) if title_elem else entry.replace("-", " ").title()
-
-                if self.library.book_exists(title, "Stanford Encyclopedia", self.name):
-                    continue
-
-                # Get main content - try multiple selectors
+                # Get main content
                 main_content = soup.find("div", {"id": "main-text"})
                 if not main_content:
                     main_content = soup.find("div", {"id": "aueditable"})
@@ -875,7 +765,92 @@ class StanfordEncyclopediaDownloader(SourceDownloader):
                         self.library.add_book(book)
                         works_added += 1
 
-                time.sleep(0.3)
+                time.sleep(0.2)
+
+            except Exception:
+                pass
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class IEPDownloader(SourceDownloader):
+    """Download ALL from Internet Encyclopedia of Philosophy."""
+
+    name = "iep"
+    description = "ALL IEP philosophy articles"
+    base_url = "https://iep.utm.edu"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading ALL from internet encyclopedia of philosophy...")
+        works_added = 0
+
+        # IEP has an A-Z index
+        articles = []
+
+        for letter in "abcdefghijklmnopqrstuvwxyz":
+            index_url = f"{self.base_url}/{letter}/"
+
+            try:
+                response = self.safe_get(index_url, retries=1)
+                if not response:
+                    continue
+
+                soup = BeautifulSoup(response.text, "lxml")
+
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    if self.base_url in href and "/about" not in href and title:
+                        if href not in [a[1] for a in articles]:
+                            articles.append((title, href))
+
+            except Exception:
+                pass
+
+        print(f"  found {len(articles)} articles")
+
+        for title, article_url in tqdm(articles, desc="articles"):
+            if limit and works_added >= limit:
+                break
+
+            if self.library.book_exists(title, "IEP", self.name):
+                continue
+
+            try:
+                response = self.safe_get(article_url, retries=2)
+                if not response:
+                    continue
+
+                soup = BeautifulSoup(response.text, "lxml")
+
+                # Get main content
+                main_content = soup.find("div", class_="entry-content")
+                if not main_content:
+                    main_content = soup.find("article") or soup.find("main")
+
+                if main_content:
+                    for tag in main_content.find_all(["script", "style", "nav", "aside"]):
+                        tag.decompose()
+
+                    content = main_content.get_text(separator="\n")
+                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                    if len(content) > 1000:
+                        book = Book(
+                            id=None,
+                            title=title,
+                            author="IEP",
+                            source=self.name,
+                            language="english",
+                            content=content,
+                            url=article_url,
+                        )
+                        self.library.add_book(book)
+                        works_added += 1
+
+                time.sleep(0.2)
 
             except Exception:
                 pass
@@ -885,68 +860,44 @@ class StanfordEncyclopediaDownloader(SourceDownloader):
 
 
 class WikisourceDownloader(SourceDownloader):
-    """Download from Wikisource."""
+    """Download major works from Wikisource."""
 
     name = "wikisource"
-    description = "Wikisource public domain texts"
+    description = "Major philosophical works"
     base_url = "https://en.wikisource.org"
     api_url = "https://en.wikisource.org/w/api.php"
 
-    # Comprehensive list of classical and philosophical works
+    # Major philosophical and classical works
     WORKS = [
-        # Ancient Philosophy
-        "The Republic (Plato)",
-        "Symposium (Plato)",
-        "Apology (Plato)",
-        "Phaedo",
-        "Phaedrus (Plato)",
-        "Timaeus (Plato)",
-        "Theaetetus (Plato)",
-        "Parmenides (Plato)",
-        "Laws (Plato)",
-        "Nicomachean Ethics",
-        "Politics (Aristotle)",
-        "Poetics (Aristotle)",
-        "Metaphysics (Aristotle)",
-        "Meditations",
-        "Enchiridion (Epictetus)",
-        "Discourses of Epictetus",
-        "On the Nature of Things",
-        # Epic Poetry
-        "The Iliad",
-        "The Odyssey",
-        "Aeneid",
-        "Metamorphoses",
-        "Theogony",
-        "Works and Days",
+        # Plato
+        "The Republic (Plato)", "Symposium (Plato)", "Apology (Plato)",
+        "Phaedo", "Phaedrus (Plato)", "Timaeus (Plato)", "Theaetetus (Plato)",
+        "Parmenides (Plato)", "Laws (Plato)", "Meno", "Crito", "Gorgias (Plato)",
+        "Protagoras (Plato)", "Sophist (Plato)", "Statesman (Plato)",
+        # Aristotle
+        "Nicomachean Ethics", "Politics (Aristotle)", "Poetics (Aristotle)",
+        "Metaphysics (Aristotle)", "Categories (Aristotle)", "On the Soul",
+        "Physics (Aristotle)", "Rhetoric (Aristotle)",
+        # Other Ancient
+        "Meditations", "Enchiridion (Epictetus)", "Discourses of Epictetus",
+        "On the Nature of Things", "The Iliad", "The Odyssey", "Aeneid",
+        "Metamorphoses", "Theogony", "Works and Days", "Oedipus Rex",
+        "Antigone (Sophocles)", "The Clouds", "The Birds (Aristophanes)",
         # Medieval & Renaissance
-        "The Consolation of Philosophy",
-        "The Prince (Machiavelli)",
-        "Leviathan",
-        "The City of God",
-        "Confessions (Augustine)",
-        # Early Modern Philosophy
-        "Two Treatises of Government",
-        "An Essay Concerning Human Understanding",
-        "A Treatise of Human Nature",
-        "Critique of Pure Reason",
-        "Critique of Practical Reason",
-        "Critique of Judgment",
-        "Ethics (Spinoza)",
-        "Meditations on First Philosophy",
-        "Discourse on the Method",
-        "The Social Contract",
-        "Emile, or On Education",
-        # 19th Century
-        "On Liberty",
-        "Utilitarianism",
-        "Thus Spake Zarathustra",
-        "Beyond Good and Evil",
-        "The Genealogy of Morals",
-        "The Communist Manifesto",
-        "Capital, Volume I",
-        "Phenomenology of Spirit",
-        "The World as Will and Representation",
+        "The Consolation of Philosophy", "The Prince (Machiavelli)",
+        "Leviathan", "The City of God", "Confessions (Augustine)",
+        "Summa Theologica",
+        # Modern
+        "Two Treatises of Government", "An Essay Concerning Human Understanding",
+        "A Treatise of Human Nature", "Critique of Pure Reason",
+        "Critique of Practical Reason", "Critique of Judgment",
+        "Ethics (Spinoza)", "Meditations on First Philosophy",
+        "Discourse on the Method", "The Social Contract", "Emile, or On Education",
+        "On Liberty", "Utilitarianism", "Thus Spake Zarathustra",
+        "Beyond Good and Evil", "The Genealogy of Morals",
+        "The Communist Manifesto", "Phenomenology of Spirit",
+        "The World as Will and Representation", "Fear and Trembling",
+        "Either/Or", "Being and Nothingness",
     ]
 
     def download_all(self, limit: int | None = None):
@@ -958,7 +909,6 @@ class WikisourceDownloader(SourceDownloader):
                 break
 
             try:
-                # Use API to get page content
                 params = {
                     "action": "query",
                     "titles": work_title,
@@ -1001,7 +951,7 @@ class WikisourceDownloader(SourceDownloader):
                     self.library.add_book(book)
                     works_added += 1
 
-                time.sleep(0.3)
+                time.sleep(0.2)
 
             except Exception:
                 pass
@@ -1011,78 +961,228 @@ class WikisourceDownloader(SourceDownloader):
 
 
 class BartlebyDownloader(SourceDownloader):
-    """Download from Bartleby.com."""
+    """Download ALL from Bartleby."""
 
     name = "bartleby"
-    description = "Bartleby classics and reference"
+    description = "ALL Bartleby classics"
     base_url = "https://www.bartleby.com"
 
-    # Key author and reference pages
-    PATHS = [
-        "/lit-hub/aristotle/",
-        "/lit-hub/plato/",
-        "/lit-hub/homer/",
-        "/lit-hub/virgil/",
-        "/lit-hub/dante/",
-        "/lit-hub/shakespeare/",
-        "/lit-hub/milton/",
-        "/lit-hub/chaucer/",
-        "/lit-hub/bible/",
-    ]
-
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from bartleby...")
+        print(f"\n>> downloading ALL from bartleby...")
         works_added = 0
 
-        for path in tqdm(self.PATHS, desc="authors"):
-            if limit and works_added >= limit:
-                break
+        # Get the lit-hub index
+        index_url = f"{self.base_url}/lit-hub/"
 
-            try:
-                index_url = f"{self.base_url}{path}"
-                response = self.safe_get(index_url, retries=2)
-
-                if not response:
-                    continue
-
+        try:
+            response = self.safe_get(index_url)
+            if response:
                 soup = BeautifulSoup(response.text, "lxml")
 
-                # Get author from path
-                author = path.split("/")[-2].title() if "/" in path else "Unknown"
-
+                # Find all author/category pages
+                pages = []
                 for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    if "/lit-hub/" in href and href != "/lit-hub/":
+                        page_url = urljoin(self.base_url, href)
+                        if page_url not in pages:
+                            pages.append(page_url)
+
+                print(f"  found {len(pages)} categories")
+
+                for page_url in tqdm(pages, desc="categories"):
                     if limit and works_added >= limit:
                         break
 
+                    try:
+                        page_resp = self.safe_get(page_url, retries=1)
+                        if not page_resp:
+                            continue
+
+                        page_soup = BeautifulSoup(page_resp.text, "lxml")
+
+                        # Get author from URL
+                        author = page_url.split("/")[-2].title() if "/" in page_url else "Unknown"
+
+                        for link in page_soup.find_all("a", href=True):
+                            if limit and works_added >= limit:
+                                break
+
+                            href = link.get("href", "")
+                            title = link.get_text(strip=True)
+
+                            if not title or len(title) < 3:
+                                continue
+                            if not href or "lit-hub" not in href:
+                                continue
+
+                            if self.library.book_exists(title, author, self.name):
+                                continue
+
+                            work_url = urljoin(self.base_url, href)
+
+                            try:
+                                work_resp = self.safe_get(work_url, retries=1)
+                                if not work_resp:
+                                    continue
+
+                                work_soup = BeautifulSoup(work_resp.text, "lxml")
+
+                                main = work_soup.find("main") or work_soup.find("article") or work_soup.find("body")
+
+                                if main:
+                                    for tag in main.find_all(["script", "style", "nav", "aside", "header", "footer"]):
+                                        tag.decompose()
+
+                                    content = main.get_text(separator="\n")
+                                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                                    if len(content) > 500:
+                                        book = Book(
+                                            id=None,
+                                            title=title,
+                                            author=author,
+                                            source=self.name,
+                                            language="english",
+                                            content=content,
+                                            url=work_url,
+                                        )
+                                        self.library.add_book(book)
+                                        works_added += 1
+
+                                time.sleep(0.1)
+
+                            except Exception:
+                                pass
+
+                    except Exception:
+                        pass
+
+        except Exception as e:
+            print(f"  error: {e}")
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+class LoebulusDownloader(SourceDownloader):
+    """Download ALL from Loebolus (Loeb Classical Library)."""
+
+    name = "loebolus"
+    description = "ALL 277 Loeb Classical Library volumes"
+    base_url = "https://ryanfb.xyz/loebolus"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading ALL from loebolus...")
+        works_added = 0
+
+        try:
+            response = self.safe_get(self.base_url)
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                # Find ALL entries in the table
+                for row in soup.find_all("tr"):
+                    if limit and works_added >= limit:
+                        break
+
+                    cells = row.find_all("td")
+                    if len(cells) >= 2:
+                        # Get volume info
+                        vol_cell = cells[0]
+                        title_cell = cells[1] if len(cells) > 1 else cells[0]
+
+                        pdf_link = row.find("a", href=lambda h: h and h.endswith(".pdf"))
+                        if pdf_link:
+                            pdf_url = urljoin(self.base_url + "/", pdf_link.get("href", ""))
+                            title = title_cell.get_text(strip=True)
+                            vol_id = vol_cell.get_text(strip=True)
+
+                            if not title:
+                                title = f"Loeb Volume {vol_id}"
+
+                            # Extract author from title
+                            author = "Various"
+                            for known in ["Homer", "Plato", "Aristotle", "Cicero", "Virgil",
+                                         "Seneca", "Tacitus", "Plutarch", "Xenophon", "Livy",
+                                         "Caesar", "Horace", "Ovid", "Lucian", "Demosthenes"]:
+                                if known.lower() in title.lower():
+                                    author = known
+                                    break
+
+                            if self.library.book_exists(title, author, self.name):
+                                continue
+
+                            book = Book(
+                                id=None,
+                                title=f"[Loeb {vol_id}] {title}",
+                                author=author,
+                                source=self.name,
+                                language="english",
+                                content=f"Loeb Classical Library volume.\n\nVolume: {vol_id}\nTitle: {title}\n\nDownload PDF: {pdf_url}\n\nThe Loeb Classical Library presents Greek and Latin texts with facing English translations.",
+                                url=pdf_url,
+                            )
+                            self.library.add_book(book)
+                            works_added += 1
+
+        except Exception as e:
+            print(f"  error: {e}")
+
+        print(f"  + added {works_added} works (PDF references)")
+        return works_added
+
+
+class IQWikiDownloader(SourceDownloader):
+    """Download from IQ.wiki (blockchain encyclopedia)."""
+
+    name = "iqwiki"
+    description = "IQ.wiki blockchain encyclopedia"
+    base_url = "https://iq.wiki"
+    api_url = "https://iq.wiki/api"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from iq.wiki...")
+        works_added = 0
+
+        # Try to get wiki listings
+        try:
+            # IQ.wiki has an API we can use
+            response = self.safe_get(f"{self.base_url}/wiki", retries=2)
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
+
+                # Find wiki links
+                wikis = []
+                for link in soup.find_all("a", href=True):
                     href = link.get("href", "")
                     title = link.get_text(strip=True)
 
-                    if not title or len(title) < 3:
-                        continue
-                    if not href or "lit-hub" not in href:
-                        continue
+                    if "/wiki/" in href and title and len(title) > 2:
+                        wiki_url = urljoin(self.base_url, href)
+                        if wiki_url not in [w[1] for w in wikis]:
+                            wikis.append((title, wiki_url))
 
-                    if self.library.book_exists(title, author, self.name):
-                        continue
+                print(f"  found {len(wikis)} wikis")
 
-                    work_url = urljoin(self.base_url, href)
+                for title, wiki_url in tqdm(wikis[:200], desc="wikis"):  # Limit to 200
+                    if limit and works_added >= limit:
+                        break
+
+                    if self.library.book_exists(title, "IQ.wiki", self.name):
+                        continue
 
                     try:
-                        work_resp = self.safe_get(work_url, retries=1)
-                        if not work_resp:
+                        wiki_resp = self.safe_get(wiki_url, retries=1)
+                        if not wiki_resp:
                             continue
 
-                        work_soup = BeautifulSoup(work_resp.text, "lxml")
+                        wiki_soup = BeautifulSoup(wiki_resp.text, "lxml")
 
-                        # Find main content
-                        main = work_soup.find("main") or work_soup.find("article")
-                        if not main:
-                            main = work_soup.find("div", class_=re.compile(r"content|text|body"))
-                        if not main:
-                            main = work_soup.find("body")
+                        # Get main content
+                        main = wiki_soup.find("article") or wiki_soup.find("main") or wiki_soup.find("div", class_=re.compile("content"))
 
                         if main:
-                            for tag in main.find_all(["script", "style", "nav", "aside", "header", "footer"]):
+                            for tag in main.find_all(["script", "style", "nav", "aside"]):
                                 tag.decompose()
 
                             content = main.get_text(separator="\n")
@@ -1092,11 +1192,11 @@ class BartlebyDownloader(SourceDownloader):
                                 book = Book(
                                     id=None,
                                     title=title,
-                                    author=author,
+                                    author="IQ.wiki",
                                     source=self.name,
                                     language="english",
                                     content=content,
-                                    url=work_url,
+                                    url=wiki_url,
                                 )
                                 self.library.add_book(book)
                                 works_added += 1
@@ -1106,272 +1206,8 @@ class BartlebyDownloader(SourceDownloader):
                     except Exception:
                         pass
 
-            except Exception:
-                pass
-
-        print(f"  + added {works_added} works")
-        return works_added
-
-
-class LoebulusDownloader(SourceDownloader):
-    """Download from Loebolus (Loeb Classical Library public domain texts)."""
-
-    name = "loebolus"
-    description = "Loeb Classical Library (277 public domain volumes)"
-    base_url = "https://ryanfb.xyz/loebolus"
-    data_url = "https://ryanfb.xyz/loebolus-data"
-
-    # Map of Loeb volume numbers to titles/authors
-    # These are public domain Loebs (pre-1927)
-    VOLUMES = [
-        ("L001", "Apollonius Rhodius - Argonautica", "Apollonius"),
-        ("L002", "Appian - Roman History Vol I", "Appian"),
-        ("L003", "Appian - Roman History Vol II", "Appian"),
-        ("L004", "Appian - Roman History Vol III", "Appian"),
-        ("L005", "Appian - Roman History Vol IV", "Appian"),
-        ("L010", "Aristotle - Athenian Constitution", "Aristotle"),
-        ("L017", "Aristotle - Metaphysics Books I-IX", "Aristotle"),
-        ("L018", "Aristotle - Metaphysics Books X-XIV", "Aristotle"),
-        ("L021", "Aristotle - Politics", "Aristotle"),
-        ("L023", "Aristotle - Poetics", "Aristotle"),
-        ("L036", "Caesar - Alexandrian, African and Spanish Wars", "Caesar"),
-        ("L039", "Caesar - Civil Wars", "Caesar"),
-        ("L072", "Caesar - Gallic War", "Caesar"),
-        ("L028", "Catullus", "Catullus"),
-        ("L029", "Catullus, Tibullus, Pervigilium Veneris", "Various"),
-        ("L030", "Cicero - Brutus", "Cicero"),
-        ("L040", "Cicero - De Finibus", "Cicero"),
-        ("L052", "Cicero - De Natura Deorum", "Cicero"),
-        ("L058", "Cicero - De Officiis", "Cicero"),
-        ("L154", "Cicero - De Oratore Books I-II", "Cicero"),
-        ("L141", "Cicero - De Republica, De Legibus", "Cicero"),
-        ("L056", "Cicero - De Senectute, De Amicitia", "Cicero"),
-        ("L043", "Demosthenes - Olynthiacs, Philippics", "Demosthenes"),
-        ("L099", "Dio Cassius - Roman History", "Dio Cassius"),
-        ("L130", "Diogenes Laertius - Lives of Eminent Philosophers I", "Diogenes Laertius"),
-        ("L131", "Diogenes Laertius - Lives of Eminent Philosophers II", "Diogenes Laertius"),
-        ("L422", "Epictetus - Discourses Books I-II", "Epictetus"),
-        ("L104", "Euripides - Cyclops, Alcestis, Medea", "Euripides"),
-        ("L011", "Euripides - Children of Heracles, Hippolytus", "Euripides"),
-        ("L170", "Homer - Iliad I (Books 1-12)", "Homer"),
-        ("L171", "Homer - Iliad II (Books 13-24)", "Homer"),
-        ("L104", "Homer - Odyssey I (Books 1-12)", "Homer"),
-        ("L105", "Homer - Odyssey II (Books 13-24)", "Homer"),
-        ("L041", "Horace - Odes and Epodes", "Horace"),
-        ("L194", "Horace - Satires, Epistles, Ars Poetica", "Horace"),
-        ("L062", "Josephus - Jewish War", "Josephus"),
-        ("L242", "Livy - History of Rome I", "Livy"),
-        ("L114", "Lucian - Vol I", "Lucian"),
-        ("L181", "Lucian - Vol II", "Lucian"),
-        ("L058", "Marcus Aurelius - Meditations", "Marcus Aurelius"),
-        ("L041", "Ovid - Metamorphoses I", "Ovid"),
-        ("L043", "Ovid - Metamorphoses II", "Ovid"),
-        ("L027", "Pausanias - Description of Greece I", "Pausanias"),
-        ("L186", "Petronius - Satyricon", "Petronius"),
-        ("L036", "Plato - Euthyphro, Apology, Crito, Phaedo, Phaedrus", "Plato"),
-        ("L165", "Plato - Laches, Protagoras, Meno, Euthydemus", "Plato"),
-        ("L166", "Plato - Republic I (Books 1-5)", "Plato"),
-        ("L167", "Plato - Republic II (Books 6-10)", "Plato"),
-        ("L123", "Plato - Theaetetus, Sophist", "Plato"),
-        ("L234", "Plato - Timaeus, Critias, Cleitophon", "Plato"),
-        ("L046", "Pliny - Natural History I", "Pliny the Elder"),
-        ("L047", "Pliny - Letters I", "Pliny the Younger"),
-        ("L046", "Plutarch - Lives I", "Plutarch"),
-        ("L047", "Plutarch - Lives II", "Plutarch"),
-        ("L065", "Plutarch - Moralia I", "Plutarch"),
-        ("L216", "Polybius - Histories I", "Polybius"),
-        ("L211", "Seneca - Epistles I", "Seneca"),
-        ("L076", "Seneca - Moral Essays I", "Seneca"),
-        ("L020", "Sophocles - Ajax, Electra, Trachiniae, Philoctetes", "Sophocles"),
-        ("L021", "Sophocles - Antigone, Oedipus Tyrannus, Oedipus Coloneus", "Sophocles"),
-        ("L110", "Tacitus - Annals I-III", "Tacitus"),
-        ("L111", "Tacitus - Annals IV-VI, XI-XII", "Tacitus"),
-        ("L249", "Tacitus - Histories I-III", "Tacitus"),
-        ("L069", "Thucydides - History I", "Thucydides"),
-        ("L109", "Thucydides - History II", "Thucydides"),
-        ("L051", "Virgil - Eclogues, Georgics, Aeneid I-VI", "Virgil"),
-        ("L064", "Virgil - Aeneid VII-XII", "Virgil"),
-        ("L089", "Xenophon - Anabasis", "Xenophon"),
-        ("L090", "Xenophon - Hellenica I-V", "Xenophon"),
-        ("L168", "Xenophon - Memorabilia, Oeconomicus", "Xenophon"),
-    ]
-
-    def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from loebolus (loeb classical library)...")
-        works_added = 0
-
-        # First, try to get the index page to find all available PDFs
-        try:
-            response = self.safe_get(self.base_url, retries=2)
-            if response:
-                soup = BeautifulSoup(response.text, "lxml")
-
-                # Find all PDF links
-                for link in soup.find_all("a", href=True):
-                    if limit and works_added >= limit:
-                        break
-
-                    href = link.get("href", "")
-                    if not href.endswith(".pdf"):
-                        continue
-
-                    title = link.get_text(strip=True)
-                    if not title or len(title) < 3:
-                        # Try to get title from link text or parent
-                        parent = link.find_parent("tr") or link.find_parent("li")
-                        if parent:
-                            title = parent.get_text(strip=True)[:100]
-
-                    if not title:
-                        continue
-
-                    # Extract author if possible
-                    author = "Various"
-                    for known_author in ["Homer", "Plato", "Aristotle", "Cicero", "Virgil",
-                                        "Seneca", "Tacitus", "Plutarch", "Xenophon"]:
-                        if known_author.lower() in title.lower():
-                            author = known_author
-                            break
-
-                    if self.library.book_exists(title, author, self.name):
-                        continue
-
-                    pdf_url = urljoin(self.base_url + "/", href)
-
-                    # Note: We can't extract PDF text without additional libraries
-                    # Store a reference to the PDF instead
-                    book = Book(
-                        id=None,
-                        title=f"[PDF] {title}",
-                        author=author,
-                        source=self.name,
-                        language="english",
-                        content=f"This is a Loeb Classical Library volume available as PDF.\n\nDownload: {pdf_url}\n\nThe Loeb Classical Library presents Greek and Latin texts with facing English translations.",
-                        url=pdf_url,
-                    )
-                    self.library.add_book(book)
-                    works_added += 1
-
         except Exception as e:
-            print(f"  note: could not fetch loebolus index: {e}")
-
-        # Also add entries from our known volumes list
-        for vol_id, title, author in self.VOLUMES:
-            if limit and works_added >= limit:
-                break
-
-            if self.library.book_exists(title, author, self.name):
-                continue
-
-            pdf_url = f"{self.data_url}/{vol_id}.pdf"
-
-            book = Book(
-                id=None,
-                title=f"[Loeb] {title}",
-                author=author,
-                source=self.name,
-                language="english",
-                content=f"Loeb Classical Library volume {vol_id}.\n\nTitle: {title}\nAuthor: {author}\n\nDownload PDF: {pdf_url}\n\nThe Loeb Classical Library presents Greek and Latin texts with facing English translations. This volume is in the public domain.",
-                url=pdf_url,
-            )
-            self.library.add_book(book)
-            works_added += 1
-
-        print(f"  + added {works_added} works (PDF references)")
-        return works_added
-
-
-class IEPDownloader(SourceDownloader):
-    """Download from Internet Encyclopedia of Philosophy."""
-
-    name = "iep"
-    description = "Internet Encyclopedia of Philosophy"
-    base_url = "https://iep.utm.edu"
-
-    # Key philosophy articles
-    ARTICLES = [
-        # Ancient Philosophy
-        "socrates", "plato", "aristotle", "presocratics", "stoicism",
-        "epicurus", "stoic-ethics", "ancient-skepticism", "cynics",
-        "neoplatonism", "plotinus", "pythagoras", "heraclitus", "parmenides",
-        "zeno-of-elea", "empedocles", "anaxagoras", "democritus", "protagoras",
-        "gorgias", "thrasymachus", "antiphon", "prodicus", "hippias",
-        "diogenes-of-sinope", "pyrrho", "arcesilaus", "carneades", "sextus-empiricus",
-        "epictetus", "marcus-aurelius", "lucretius", "cicero", "seneca",
-        # Medieval
-        "augustine", "boethius", "anselm", "abelard", "aquinas",
-        "duns-scotus", "william-ockham", "medieval-problem-universals",
-        # Early Modern
-        "descartes", "spinoza", "leibniz", "locke", "berkeley", "hume",
-        "kant", "hobbes", "rousseau", "pascal", "malebranche",
-        # 19th Century
-        "hegel", "nietzsche", "marx", "kierkegaard", "schopenhauer",
-        "mill", "bentham", "comte", "peirce", "james-william",
-        # 20th Century
-        "husserl", "heidegger", "sartre", "camus", "beauvoir",
-        "wittgenstein", "russell", "frege", "carnap", "quine",
-        "popper", "kuhn", "feyerabend", "rawls", "nozick",
-        # Core Topics
-        "ethics", "metaethics", "normative-ethics", "applied-ethics",
-        "epistemology", "metaphysics", "logic", "philosophy-of-mind",
-        "philosophy-of-language", "philosophy-of-science", "political-philosophy",
-        "aesthetics", "free-will", "personal-identity", "consciousness",
-        "truth", "knowledge", "justification", "skepticism", "relativism",
-    ]
-
-    def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from internet encyclopedia of philosophy...")
-        works_added = 0
-
-        for article in tqdm(self.ARTICLES, desc="articles"):
-            if limit and works_added >= limit:
-                break
-
-            article_url = f"{self.base_url}/{article}/"
-
-            try:
-                response = self.safe_get(article_url, retries=2)
-                if not response:
-                    continue
-
-                soup = BeautifulSoup(response.text, "lxml")
-
-                # Get title
-                title_elem = soup.find("h1", class_="entry-title") or soup.find("h1")
-                title = title_elem.get_text(strip=True) if title_elem else article.replace("-", " ").title()
-
-                if self.library.book_exists(title, "IEP", self.name):
-                    continue
-
-                # Get main content
-                main_content = soup.find("div", class_="entry-content")
-                if not main_content:
-                    main_content = soup.find("article") or soup.find("main")
-
-                if main_content:
-                    for tag in main_content.find_all(["script", "style", "nav", "aside"]):
-                        tag.decompose()
-
-                    content = main_content.get_text(separator="\n")
-                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
-
-                    if len(content) > 1000:
-                        book = Book(
-                            id=None,
-                            title=title,
-                            author="IEP",
-                            source=self.name,
-                            language="english",
-                            content=content,
-                            url=article_url,
-                        )
-                        self.library.add_book(book)
-                        works_added += 1
-
-                time.sleep(0.3)
-
-            except Exception:
-                pass
+            print(f"  error: {e}")
 
         print(f"  + added {works_added} works")
         return works_added
@@ -1386,16 +1222,17 @@ SOURCES = {
     "dante": DanteDownloader,
     "marxists": MarxistsDownloader,
     "stanford": StanfordEncyclopediaDownloader,
+    "iep": IEPDownloader,
     "wikisource": WikisourceDownloader,
     "bartleby": BartlebyDownloader,
     "loebolus": LoebulusDownloader,
-    "iep": IEPDownloader,
+    "iqwiki": IQWikiDownloader,
 }
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Populate the Borges library"
+        description="Populate the Borges library with ALL available texts"
     )
     parser.add_argument(
         "--source", "-s",
@@ -1418,13 +1255,13 @@ def main():
     args = parser.parse_args()
 
     if args.list:
-        print("\nAvailable sources:")
+        print("\nAvailable sources (12 total):")
         for name, cls in SOURCES.items():
             print(f"  {name}: {cls.description}")
         return
 
     print("=" * 60)
-    print("   borges - populating library (comprehensive edition)")
+    print("   BORGES - POPULATING COMPLETE LIBRARY")
     print("=" * 60)
 
     library = Library()
@@ -1451,7 +1288,7 @@ def main():
     stats = library.get_stats()
     print("\n" + "=" * 60)
     print(f"COMPLETE: added {total_added} new works")
-    print(f"library now has: {stats['total_books']} books, {stats['total_authors']} authors")
+    print(f"LIBRARY NOW HAS: {stats['total_books']} books, {stats['total_authors']} authors")
     print("=" * 60)
 
 

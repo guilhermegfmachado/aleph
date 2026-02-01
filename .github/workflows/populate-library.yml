@@ -1,0 +1,68 @@
+name: Populate Library
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Source to download from'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - mit
+          - gutenberg
+          - sacred
+          - fordham
+          - dante
+          - marxists
+          - stanford
+          - wikisource
+          - bartleby
+      limit:
+        description: 'Max books per source (leave empty for all)'
+        required: false
+        default: ''
+
+jobs:
+  populate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml tqdm
+
+      - name: Populate library
+        run: |
+          cd ancient-books-rag
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            python scripts/populate_library.py --source ${{ github.event.inputs.source }} --limit ${{ github.event.inputs.limit }}
+          else
+            python scripts/populate_library.py --source ${{ github.event.inputs.source }}
+          fi
+
+      - name: Build static site data
+        run: |
+          cd ancient-books-rag
+          python scripts/build_static.py
+
+      - name: Move library.json to docs
+        run: |
+          cp ancient-books-rag/docs/data/library.json docs/data/library.json
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/data/library.json
+          git diff --staged --quiet || git commit -m "Update library data from ${{ github.event.inputs.source }}"
+          git push

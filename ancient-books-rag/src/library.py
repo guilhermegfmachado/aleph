@@ -269,6 +269,12 @@ class Library:
             conn.commit()
             return cursor.rowcount
 
+    def get_all_books(self) -> list["Book"]:
+        """Get all books in the library."""
+        with self._get_conn() as conn:
+            rows = conn.execute('SELECT * FROM books ORDER BY author, title').fetchall()
+            return [self._row_to_book(row) for row in rows]
+
     def book_exists(self, title: str, author: str, source: str) -> bool:
         """Check if a book already exists."""
         with self._get_conn() as conn:

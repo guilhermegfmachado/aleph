@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>borges - browse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>borges</h1>
+            <p class="subtitle">a personal library</p>
+            <nav>
+                <a href="index.html">search</a>
+                <a href="browse.html" class="active">browse</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="browse-filters">
+                <select id="author-filter">
+                    <option value="">all authors</option>
+                </select>
+                <select id="source-filter">
+                    <option value="">all sources</option>
+                </select>
+                <select id="sort-filter">
+                    <option value="title">sort by title</option>
+                    <option value="author">sort by author</option>
+                    <option value="source">sort by source</option>
+                </select>
+            </div>
+
+            <div id="book-list" class="books-list">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>loading library...</p>
+                </div>
+            </div>
+
+            <div id="pagination" class="pagination"></div>
+        </main>
+
+        <footer>
+            <p id="sources-footer">sources: loading...</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initBrowse();
+        });
+    </script>
+</body>
+</html>

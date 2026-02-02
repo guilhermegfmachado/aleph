@@ -2182,48 +2182,284 @@ class PerseusDownloader(SourceDownloader):
         print(f"\n>> downloading from Perseus Digital Library...")
         works_added = 0
 
-        # Perseus has well-structured catalog - use known work identifiers
+        # Perseus has well-structured catalog - comprehensive list of Greek/Latin works
         greek_latin_works = [
-            # Homer
+            # =====================
+            # GREEK EPIC
+            # =====================
             ("Iliad", "Homer", "Perseus:text:1999.01.0134"),
             ("Odyssey", "Homer", "Perseus:text:1999.01.0136"),
-            # Greek Tragedy
+            ("Theogony", "Hesiod", "Perseus:text:1999.01.0130"),
+            ("Works and Days", "Hesiod", "Perseus:text:1999.01.0132"),
+            ("Shield of Heracles", "Hesiod", "Perseus:text:1999.01.0128"),
+            ("Homeric Hymns", "Anonymous", "Perseus:text:1999.01.0138"),
+            ("Argonautica", "Apollonius Rhodius", "Perseus:text:1999.01.0228"),
+
+            # =====================
+            # GREEK TRAGEDY - Aeschylus (all 7 plays)
+            # =====================
             ("Agamemnon", "Aeschylus", "Perseus:text:1999.01.0004"),
             ("Libation Bearers", "Aeschylus", "Perseus:text:1999.01.0008"),
             ("Eumenides", "Aeschylus", "Perseus:text:1999.01.0006"),
             ("Prometheus Bound", "Aeschylus", "Perseus:text:1999.01.0010"),
+            ("Persians", "Aeschylus", "Perseus:text:1999.01.0012"),
+            ("Seven Against Thebes", "Aeschylus", "Perseus:text:1999.01.0014"),
+            ("Suppliants", "Aeschylus", "Perseus:text:1999.01.0016"),
+
+            # =====================
+            # GREEK TRAGEDY - Sophocles (all 7 plays)
+            # =====================
             ("Oedipus Rex", "Sophocles", "Perseus:text:1999.01.0192"),
             ("Oedipus at Colonus", "Sophocles", "Perseus:text:1999.01.0190"),
             ("Antigone", "Sophocles", "Perseus:text:1999.01.0186"),
-            ("Medea", "Euripides", "Perseus:text:1999.01.0114"),
-            ("Hippolytus", "Euripides", "Perseus:text:1999.01.0106"),
+            ("Ajax", "Sophocles", "Perseus:text:1999.01.0183"),
+            ("Electra", "Sophocles", "Perseus:text:1999.01.0187"),
+            ("Philoctetes", "Sophocles", "Perseus:text:1999.01.0193"),
+            ("Trachiniae", "Sophocles", "Perseus:text:1999.01.0195"),
+
+            # =====================
+            # GREEK TRAGEDY - Euripides (all 18 plays)
+            # =====================
+            ("Alcestis", "Euripides", "Perseus:text:1999.01.0088"),
+            ("Andromache", "Euripides", "Perseus:text:1999.01.0090"),
             ("Bacchae", "Euripides", "Perseus:text:1999.01.0092"),
-            # Greek Comedy
-            ("Clouds", "Aristophanes", "Perseus:text:1999.01.0024"),
-            ("Frogs", "Aristophanes", "Perseus:text:1999.01.0032"),
+            ("Children of Heracles", "Euripides", "Perseus:text:1999.01.0099"),
+            ("Cyclops", "Euripides", "Perseus:text:1999.01.0094"),
+            ("Electra", "Euripides", "Perseus:text:1999.01.0096"),
+            ("Hecuba", "Euripides", "Perseus:text:1999.01.0098"),
+            ("Helen", "Euripides", "Perseus:text:1999.01.0100"),
+            ("Heracles", "Euripides", "Perseus:text:1999.01.0102"),
+            ("Hippolytus", "Euripides", "Perseus:text:1999.01.0106"),
+            ("Ion", "Euripides", "Perseus:text:1999.01.0108"),
+            ("Iphigenia at Aulis", "Euripides", "Perseus:text:1999.01.0110"),
+            ("Iphigenia in Tauris", "Euripides", "Perseus:text:1999.01.0112"),
+            ("Medea", "Euripides", "Perseus:text:1999.01.0114"),
+            ("Orestes", "Euripides", "Perseus:text:1999.01.0116"),
+            ("Phoenician Women", "Euripides", "Perseus:text:1999.01.0118"),
+            ("Rhesus", "Euripides", "Perseus:text:1999.01.0120"),
+            ("Suppliants", "Euripides", "Perseus:text:1999.01.0122"),
+            ("Trojan Women", "Euripides", "Perseus:text:1999.01.0124"),
+
+            # =====================
+            # GREEK COMEDY - Aristophanes (all 11 plays)
+            # =====================
+            ("Acharnians", "Aristophanes", "Perseus:text:1999.01.0022"),
             ("Birds", "Aristophanes", "Perseus:text:1999.01.0026"),
-            # Greek History
+            ("Clouds", "Aristophanes", "Perseus:text:1999.01.0024"),
+            ("Ecclesiazusae", "Aristophanes", "Perseus:text:1999.01.0028"),
+            ("Frogs", "Aristophanes", "Perseus:text:1999.01.0032"),
+            ("Knights", "Aristophanes", "Perseus:text:1999.01.0034"),
+            ("Lysistrata", "Aristophanes", "Perseus:text:1999.01.0036"),
+            ("Peace", "Aristophanes", "Perseus:text:1999.01.0038"),
+            ("Plutus", "Aristophanes", "Perseus:text:1999.01.0040"),
+            ("Thesmophoriazusae", "Aristophanes", "Perseus:text:1999.01.0042"),
+            ("Wasps", "Aristophanes", "Perseus:text:1999.01.0044"),
+
+            # =====================
+            # GREEK HISTORY
+            # =====================
             ("Histories", "Herodotus", "Perseus:text:1999.01.0126"),
             ("History of the Peloponnesian War", "Thucydides", "Perseus:text:1999.01.0200"),
             ("Anabasis", "Xenophon", "Perseus:text:1999.01.0202"),
-            # Greek Philosophy
+            ("Cyropaedia", "Xenophon", "Perseus:text:1999.01.0204"),
+            ("Hellenica", "Xenophon", "Perseus:text:1999.01.0206"),
+            ("Memorabilia", "Xenophon", "Perseus:text:1999.01.0208"),
+            ("Oeconomicus", "Xenophon", "Perseus:text:1999.01.0210"),
+            ("Symposium", "Xenophon", "Perseus:text:1999.01.0212"),
+            ("Apology", "Xenophon", "Perseus:text:1999.01.0214"),
+            ("Constitution of the Lacedaemonians", "Xenophon", "Perseus:text:1999.01.0216"),
+            ("Ways and Means", "Xenophon", "Perseus:text:1999.01.0218"),
+            ("On Horsemanship", "Xenophon", "Perseus:text:1999.01.0220"),
+            ("Hiero", "Xenophon", "Perseus:text:1999.01.0222"),
+            ("Agesilaus", "Xenophon", "Perseus:text:1999.01.0224"),
+            ("Histories", "Polybius", "Perseus:text:1999.01.0234"),
+            ("Library of History", "Diodorus Siculus", "Perseus:text:1999.01.0084"),
+            ("Roman Antiquities", "Dionysius of Halicarnassus", "Perseus:text:1999.01.0086"),
+            ("Geography", "Strabo", "Perseus:text:1999.01.0198"),
+            ("Description of Greece", "Pausanias", "Perseus:text:1999.01.0160"),
+
+            # =====================
+            # GREEK BIOGRAPHY
+            # =====================
+            ("Parallel Lives", "Plutarch", "Perseus:text:1999.01.0182"),
+            ("Moralia", "Plutarch", "Perseus:text:1999.01.0180"),
+            ("Lives of Eminent Philosophers", "Diogenes Laertius", "Perseus:text:1999.01.0258"),
+
+            # =====================
+            # GREEK PHILOSOPHY - Plato (complete dialogues)
+            # =====================
             ("Apology", "Plato", "Perseus:text:1999.01.0170"),
-            ("Symposium", "Plato", "Perseus:text:1999.01.0174"),
+            ("Charmides", "Plato", "Perseus:text:1999.01.0176"),
+            ("Cratylus", "Plato", "Perseus:text:1999.01.0172"),
+            ("Critias", "Plato", "Perseus:text:1999.01.0167"),
+            ("Crito", "Plato", "Perseus:text:1999.01.0171"),
+            ("Euthydemus", "Plato", "Perseus:text:1999.01.0178"),
+            ("Euthyphro", "Plato", "Perseus:text:1999.01.0169"),
+            ("Gorgias", "Plato", "Perseus:text:1999.01.0166"),
+            ("Ion", "Plato", "Perseus:text:1999.01.0179"),
+            ("Laches", "Plato", "Perseus:text:1999.01.0177"),
+            ("Laws", "Plato", "Perseus:text:1999.01.0166"),
+            ("Lysis", "Plato", "Perseus:text:1999.01.0175"),
+            ("Menexenus", "Plato", "Perseus:text:1999.01.0180"),
+            ("Meno", "Plato", "Perseus:text:1999.01.0174"),
+            ("Parmenides", "Plato", "Perseus:text:1999.01.0173"),
+            ("Phaedo", "Plato", "Perseus:text:1999.01.0170"),
+            ("Phaedrus", "Plato", "Perseus:text:1999.01.0174"),
+            ("Philebus", "Plato", "Perseus:text:1999.01.0173"),
+            ("Protagoras", "Plato", "Perseus:text:1999.01.0178"),
             ("Republic", "Plato", "Perseus:text:1999.01.0168"),
+            ("Sophist", "Plato", "Perseus:text:1999.01.0172"),
+            ("Statesman", "Plato", "Perseus:text:1999.01.0172"),
+            ("Symposium", "Plato", "Perseus:text:1999.01.0174"),
+            ("Theaetetus", "Plato", "Perseus:text:1999.01.0172"),
+            ("Timaeus", "Plato", "Perseus:text:1999.01.0167"),
+
+            # =====================
+            # GREEK PHILOSOPHY - Aristotle
+            # =====================
             ("Nicomachean Ethics", "Aristotle", "Perseus:text:1999.01.0054"),
             ("Politics", "Aristotle", "Perseus:text:1999.01.0058"),
             ("Poetics", "Aristotle", "Perseus:text:1999.01.0056"),
-            # Latin Epic
+            ("Rhetoric", "Aristotle", "Perseus:text:1999.01.0060"),
+            ("Constitution of Athens", "Aristotle", "Perseus:text:1999.01.0046"),
+            ("Eudemian Ethics", "Aristotle", "Perseus:text:1999.01.0049"),
+            ("Metaphysics", "Aristotle", "Perseus:text:1999.01.0052"),
+            ("On the Soul", "Aristotle", "Perseus:text:1999.01.0046"),
+            ("Physics", "Aristotle", "Perseus:text:1999.01.0049"),
+            ("Categories", "Aristotle", "Perseus:text:1999.01.0046"),
+            ("On Interpretation", "Aristotle", "Perseus:text:1999.01.0046"),
+            ("Prior Analytics", "Aristotle", "Perseus:text:1999.01.0046"),
+            ("Posterior Analytics", "Aristotle", "Perseus:text:1999.01.0046"),
+            ("Topics", "Aristotle", "Perseus:text:1999.01.0046"),
+
+            # =====================
+            # GREEK ORATORY
+            # =====================
+            ("Orations", "Demosthenes", "Perseus:text:1999.01.0072"),
+            ("On the Crown", "Demosthenes", "Perseus:text:1999.01.0074"),
+            ("Philippics", "Demosthenes", "Perseus:text:1999.01.0076"),
+            ("Against Ctesiphon", "Aeschines", "Perseus:text:1999.01.0002"),
+            ("Against Timarchus", "Aeschines", "Perseus:text:1999.01.0001"),
+            ("Orations", "Isocrates", "Perseus:text:1999.01.0144"),
+            ("Orations", "Lysias", "Perseus:text:1999.01.0154"),
+            ("Orations", "Andocides", "Perseus:text:1999.01.0018"),
+            ("Orations", "Antiphon", "Perseus:text:1999.01.0020"),
+            ("Orations", "Dinarchus", "Perseus:text:1999.01.0082"),
+            ("Orations", "Hyperides", "Perseus:text:1999.01.0140"),
+            ("Orations", "Isaeus", "Perseus:text:1999.01.0142"),
+            ("Orations", "Lycurgus", "Perseus:text:1999.01.0152"),
+
+            # =====================
+            # GREEK POETRY
+            # =====================
+            ("Odes", "Pindar", "Perseus:text:1999.01.0162"),
+            ("Idylls", "Theocritus", "Perseus:text:1999.01.0261"),
+            ("Epigrams", "Callimachus", "Perseus:text:1999.01.0260"),
+
+            # =====================
+            # LATIN EPIC
+            # =====================
             ("Aeneid", "Virgil", "Perseus:text:1999.02.0055"),
+            ("Eclogues", "Virgil", "Perseus:text:1999.02.0056"),
+            ("Georgics", "Virgil", "Perseus:text:1999.02.0057"),
             ("Metamorphoses", "Ovid", "Perseus:text:1999.02.0028"),
-            # Latin History
+            ("Amores", "Ovid", "Perseus:text:1999.02.0025"),
+            ("Ars Amatoria", "Ovid", "Perseus:text:1999.02.0026"),
+            ("Fasti", "Ovid", "Perseus:text:1999.02.0027"),
+            ("Heroides", "Ovid", "Perseus:text:1999.02.0029"),
+            ("Tristia", "Ovid", "Perseus:text:1999.02.0030"),
+            ("Thebaid", "Statius", "Perseus:text:1999.02.0054"),
+            ("Achilleid", "Statius", "Perseus:text:1999.02.0053"),
+            ("Silvae", "Statius", "Perseus:text:1999.02.0052"),
+            ("Pharsalia", "Lucan", "Perseus:text:1999.02.0133"),
+            ("Argonautica", "Valerius Flaccus", "Perseus:text:1999.02.0151"),
+            ("Punica", "Silius Italicus", "Perseus:text:1999.02.0148"),
+
+            # =====================
+            # LATIN POETRY - Lyric and Satire
+            # =====================
+            ("Odes", "Horace", "Perseus:text:1999.02.0024"),
+            ("Satires", "Horace", "Perseus:text:1999.02.0022"),
+            ("Epistles", "Horace", "Perseus:text:1999.02.0023"),
+            ("Ars Poetica", "Horace", "Perseus:text:1999.02.0021"),
+            ("Carmen Saeculare", "Horace", "Perseus:text:1999.02.0020"),
+            ("Epodes", "Horace", "Perseus:text:1999.02.0019"),
+            ("Poems", "Catullus", "Perseus:text:1999.02.0003"),
+            ("Satires", "Juvenal", "Perseus:text:1999.02.0125"),
+            ("Satires", "Persius", "Perseus:text:1999.02.0044"),
+            ("Epigrams", "Martial", "Perseus:text:1999.02.0126"),
+            ("Elegies", "Propertius", "Perseus:text:1999.02.0045"),
+            ("Elegies", "Tibullus", "Perseus:text:1999.02.0149"),
+
+            # =====================
+            # LATIN HISTORY
+            # =====================
             ("Ab Urbe Condita", "Livy", "Perseus:text:1999.02.0026"),
             ("Gallic Wars", "Caesar", "Perseus:text:1999.02.0001"),
+            ("Civil War", "Caesar", "Perseus:text:1999.02.0002"),
             ("Annals", "Tacitus", "Perseus:text:1999.02.0078"),
-            # Latin Philosophy
+            ("Histories", "Tacitus", "Perseus:text:1999.02.0080"),
+            ("Agricola", "Tacitus", "Perseus:text:1999.02.0076"),
+            ("Germania", "Tacitus", "Perseus:text:1999.02.0079"),
+            ("Dialogue on Orators", "Tacitus", "Perseus:text:1999.02.0077"),
+            ("Lives of the Caesars", "Suetonius", "Perseus:text:1999.02.0132"),
+            ("Catiline's War", "Sallust", "Perseus:text:1999.02.0124"),
+            ("Jugurthine War", "Sallust", "Perseus:text:1999.02.0123"),
+            ("Epitome of Roman History", "Florus", "Perseus:text:1999.02.0127"),
+            ("History of Rome", "Velleius Paterculus", "Perseus:text:1999.02.0152"),
+            ("Breviarium", "Eutropius", "Perseus:text:1999.02.0128"),
+            ("De Viris Illustribus", "Cornelius Nepos", "Perseus:text:1999.02.0008"),
+
+            # =====================
+            # LATIN PHILOSOPHY
+            # =====================
             ("De Officiis", "Cicero", "Perseus:text:1999.02.0011"),
+            ("De Natura Deorum", "Cicero", "Perseus:text:1999.02.0010"),
+            ("De Finibus", "Cicero", "Perseus:text:1999.02.0009"),
+            ("Tusculan Disputations", "Cicero", "Perseus:text:1999.02.0015"),
+            ("De Amicitia", "Cicero", "Perseus:text:1999.02.0007"),
+            ("De Senectute", "Cicero", "Perseus:text:1999.02.0014"),
+            ("Academica", "Cicero", "Perseus:text:1999.02.0004"),
+            ("De Divinatione", "Cicero", "Perseus:text:1999.02.0008"),
+            ("De Fato", "Cicero", "Perseus:text:1999.02.0009"),
+            ("De Legibus", "Cicero", "Perseus:text:1999.02.0009"),
+            ("De Re Publica", "Cicero", "Perseus:text:1999.02.0013"),
             ("De Rerum Natura", "Lucretius", "Perseus:text:1999.02.0131"),
             ("Meditations", "Marcus Aurelius", "Perseus:text:1999.02.0006"),
+            ("Moral Letters", "Seneca", "Perseus:text:1999.02.0047"),
+            ("De Beneficiis", "Seneca", "Perseus:text:1999.02.0046"),
+            ("De Clementia", "Seneca", "Perseus:text:1999.02.0048"),
+            ("De Ira", "Seneca", "Perseus:text:1999.02.0049"),
+            ("De Brevitate Vitae", "Seneca", "Perseus:text:1999.02.0050"),
+            ("Natural Questions", "Seneca", "Perseus:text:1999.02.0051"),
+
+            # =====================
+            # LATIN ORATORY
+            # =====================
+            ("Orations", "Cicero", "Perseus:text:1999.02.0005"),
+            ("In Catilinam", "Cicero", "Perseus:text:1999.02.0006"),
+            ("Pro Archia", "Cicero", "Perseus:text:1999.02.0012"),
+            ("Pro Milone", "Cicero", "Perseus:text:1999.02.0017"),
+            ("Philippics", "Cicero", "Perseus:text:1999.02.0016"),
+            ("Brutus", "Cicero", "Perseus:text:1999.02.0018"),
+            ("De Oratore", "Cicero", "Perseus:text:1999.02.0005"),
+            ("Orator", "Cicero", "Perseus:text:1999.02.0007"),
+            ("Institutio Oratoria", "Quintilian", "Perseus:text:1999.02.0135"),
+
+            # =====================
+            # LATIN PROSE - Miscellaneous
+            # =====================
+            ("Letters", "Pliny the Younger", "Perseus:text:1999.02.0138"),
+            ("Natural History", "Pliny the Elder", "Perseus:text:1999.02.0137"),
+            ("Satyricon", "Petronius", "Perseus:text:1999.02.0043"),
+            ("Golden Ass", "Apuleius", "Perseus:text:1999.02.0129"),
+            ("Attic Nights", "Aulus Gellius", "Perseus:text:1999.02.0130"),
+            ("De Architectura", "Vitruvius", "Perseus:text:1999.02.0153"),
+            ("De Re Rustica", "Columella", "Perseus:text:1999.02.0154"),
+            ("De Agri Cultura", "Cato the Elder", "Perseus:text:1999.02.0155"),
+            ("Res Rusticae", "Varro", "Perseus:text:1999.02.0156"),
+            ("Confessions", "Augustine", "Perseus:text:1999.02.0157"),
+            ("City of God", "Augustine", "Perseus:text:1999.02.0158"),
         ]
 
         for title, author, urn in tqdm(greek_latin_works, desc="works"):

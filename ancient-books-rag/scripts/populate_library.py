@@ -2259,6 +2259,21 @@ def main():
         action="store_true",
         help="List available sources"
     )
+    parser.add_argument(
+        "--remove-source", "-r",
+        choices=list(SOURCES.keys()) + ["bartleby"],  # Include removed sources for cleanup
+        help="Remove all books from a source (no re-downloading)"
+    )
+    parser.add_argument(
+        "--db-path",
+        default="data/library.db",
+        help="Path to the SQLite database"
+    )
+    parser.add_argument(
+        "--stats",
+        action="store_true",
+        help="Show library statistics and exit"
+    )
 
     args = parser.parse_args()
 
@@ -2268,11 +2283,34 @@ def main():
             print(f"  {name}: {cls.description}")
         return
 
+    library = Library(db_path=args.db_path)
+
+    # Show stats and exit
+    if args.stats:
+        stats = library.get_stats()
+        print(f"\nLibrary: {stats['total_books']} books, {stats['total_authors']} authors")
+        print("\nBooks by source:")
+        for source in library.get_sources():
+            with library._get_conn() as conn:
+                count = conn.execute(
+                    'SELECT COUNT(*) as count FROM books WHERE source = ?', (source,)
+                ).fetchone()['count']
+                print(f"  {source}: {count}")
+        return
+
+    # Remove source mode - just delete and rebuild JSON
+    if args.remove_source:
+        print(f"\n>> Removing all books from source: {args.remove_source}")
+        deleted = library.delete_by_source(args.remove_source)
+        print(f"   Deleted {deleted} books")
+        stats = library.get_stats()
+        print(f"\nLIBRARY NOW HAS: {stats['total_books']} books, {stats['total_authors']} authors")
+        print("\nRun build_static.py to update the JSON files.")
+        return
+
     print("=" * 60)
     print("   BORGES - POPULATING COMPLETE LIBRARY")
     print("=" * 60)
-
-    library = Library()
 
     stats = library.get_stats()
     print(f"\ncurrent: {stats['total_books']} books, {stats['total_authors']} authors")

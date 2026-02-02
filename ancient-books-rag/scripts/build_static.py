@@ -9,8 +9,10 @@ This script:
 
 Run after populating the library:
   python scripts/build_static.py
+  python scripts/build_static.py --db-path ../docs/data/library.db
 """
 
+import argparse
 import json
 import gzip
 import sys
@@ -22,12 +24,12 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.library import Library
 
 
-def build_static():
+def build_static(db_path: str = "data/library.db"):
     print("=" * 50)
     print("   borges - building static site data")
     print("=" * 50)
 
-    library = Library()
+    library = Library(db_path=db_path)
     stats = library.get_stats()
 
     print(f"\nlibrary: {stats['total_books']} books, {stats['total_authors']} authors")
@@ -107,4 +109,11 @@ def build_static():
 
 
 if __name__ == "__main__":
-    build_static()
+    parser = argparse.ArgumentParser(description="Build static site data from library")
+    parser.add_argument(
+        "--db-path",
+        default="data/library.db",
+        help="Path to the SQLite database"
+    )
+    args = parser.parse_args()
+    build_static(db_path=args.db_path)

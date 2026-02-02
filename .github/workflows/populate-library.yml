@@ -3,8 +3,16 @@ name: Populate Library
 on:
   workflow_dispatch:
     inputs:
+      operation:
+        description: 'Operation to perform'
+        required: true
+        default: 'add'
+        type: choice
+        options:
+          - add
+          - remove
       source:
-        description: 'Source to download from'
+        description: 'Source to add/remove'
         required: true
         default: 'all'
         type: choice
@@ -31,8 +39,9 @@ on:
           - iranica
           - wisdomlib
           - arlima
+          - bartleby
       limit:
-        description: 'Max books per source (leave empty for all)'
+        description: 'Max books per source (leave empty for all, only for add)'
         required: false
         default: ''
 
@@ -56,31 +65,43 @@ jobs:
         run: |
           pip install requests beautifulsoup4 lxml tqdm
 
-      - name: Populate library
+      - name: Create data directory
+        run: |
+          mkdir -p docs/data
+
+      - name: Run library operation
         run: |
           cd ancient-books-rag
-          if [ -n "${{ github.event.inputs.limit }}" ]; then
-            python scripts/populate_library.py --source ${{ github.event.inputs.source }} --limit ${{ github.event.inputs.limit }}
+          DB_PATH="../docs/data/library.db"
+
+          if [ "${{ github.event.inputs.operation }}" = "remove" ]; then
+            echo "Removing source: ${{ github.event.inputs.source }}"
+            python scripts/populate_library.py --db-path "$DB_PATH" --remove-source ${{ github.event.inputs.source }}
           else
-            python scripts/populate_library.py --source ${{ github.event.inputs.source }}
+            echo "Adding source: ${{ github.event.inputs.source }}"
+            if [ -n "${{ github.event.inputs.limit }}" ]; then
+              python scripts/populate_library.py --db-path "$DB_PATH" --source ${{ github.event.inputs.source }} --limit ${{ github.event.inputs.limit }}
+            else
+              python scripts/populate_library.py --db-path "$DB_PATH" --source ${{ github.event.inputs.source }}
+            fi
           fi
 
       - name: Build static site data
         run: |
           cd ancient-books-rag
-          python scripts/build_static.py
+          python scripts/build_static.py --db-path ../docs/data/library.db
 
       - name: Move library data to docs
         run: |
           mkdir -p docs/data/texts
-          cp ancient-books-rag/docs/data/library-index.json docs/data/
+          cp ancient-books-rag/docs/data/library-index.json docs/data/ || true
           cp ancient-books-rag/docs/data/library-index.json.gz docs/data/ || true
-          cp -r ancient-books-rag/docs/data/texts/* docs/data/texts/ || true
+          cp -r ancient-books-rag/docs/data/texts/* docs/data/texts/ 2>/dev/null || true
 
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add docs/data/
-          git diff --staged --quiet || git commit -m "Update library data from ${{ github.event.inputs.source }}"
+          git diff --staged --quiet || git commit -m "${{ github.event.inputs.operation }}: ${{ github.event.inputs.source }}"
           git push

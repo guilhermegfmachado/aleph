@@ -240,32 +240,62 @@ class MITClassicsDownloader(SourceDownloader):
     """Download ALL works from MIT Internet Classics Archive."""
 
     name = "mit_classics"
-    description = "ALL 441 works of classical literature"
+    description = "441 works of classical literature"
     base_url = "https://classics.mit.edu"
+
+    # Known authors from the archive (based on GitHub repo)
+    AUTHORS = [
+        ("Aeschylus", "Aeschylus"),
+        ("Apollodorus", "Apollodorus"),
+        ("Apollonius Rhodius", "Apollonius"),
+        ("Aristophanes", "Aristophanes"),
+        ("Aristotle", "Aristotle"),
+        ("Caesar", "Caesar"),
+        ("Cato the Elder", "Cato"),
+        ("Cicero", "Cicero"),
+        ("Confucius", "Confucius"),
+        ("Demosthenes", "Demosthenes"),
+        ("Diogenes Laertius", "Diogenes"),
+        ("Epictetus", "Epictetus"),
+        ("Euclid", "Euclid"),
+        ("Euripides", "Euripides"),
+        ("Galen", "Galen"),
+        ("Herodotus", "Herodotus"),
+        ("Hippocrates", "Hippocrates"),
+        ("Homer", "Homer"),
+        ("Horace", "Horace"),
+        ("Josephus", "Josephus"),
+        ("Lao Tzu", "Lao"),
+        ("Livy", "Livy"),
+        ("Lucretius", "Lucretius"),
+        ("Marcus Aurelius", "Aurelius"),
+        ("Mencius", "Mencius"),
+        ("Omar Khayyam", "Khayyam"),
+        ("Ovid", "Ovid"),
+        ("Plato", "Plato"),
+        ("Plautus", "Plautus"),
+        ("Pliny the Younger", "Pliny"),
+        ("Plutarch", "Plutarch"),
+        ("Sallust", "Sallust"),
+        ("Sappho", "Sappho"),
+        ("Seneca", "Seneca"),
+        ("Sophocles", "Sophocles"),
+        ("Suetonius", "Suetonius"),
+        ("Tacitus", "Tacitus"),
+        ("Thucydides", "Thucydides"),
+        ("Virgil", "Virgil"),
+        ("Xenophon", "Xenophon"),
+    ]
 
     def download_all(self, limit: int | None = None):
         print(f"\n>> downloading ALL from mit classics...")
         works_added = 0
 
-        # Get the main browse index to find ALL authors
-        browse_url = f"{self.base_url}/Browse/index.html"
+        # Use known author list
+        author_links = [(name, f"{self.base_url}/{folder}/") for name, folder in self.AUTHORS]
+        print(f"  checking {len(author_links)} authors")
 
-        try:
-            response = self.safe_get(browse_url)
-            soup = BeautifulSoup(response.text, "lxml")
-
-            # Find ALL author links (browse-*.html pattern)
-            author_links = []
-            for link in soup.find_all("a", href=True):
-                href = link.get("href", "")
-                if "browse-" in href and href.endswith(".html"):
-                    author_name = link.get_text(strip=True)
-                    if author_name:
-                        author_links.append((author_name, urljoin(browse_url, href)))
-
-            print(f"  found {len(author_links)} authors")
-
-            for author_name, author_url in tqdm(author_links, desc="authors"):
+        for author_name, author_url in tqdm(author_links, desc="authors"):
                 if limit and works_added >= limit:
                     break
 
@@ -332,11 +362,8 @@ class MITClassicsDownloader(SourceDownloader):
                         except Exception:
                             pass
 
-                except Exception as e:
-                    print(f"  error with {author_name}: {e}")
-
-        except Exception as e:
-            print(f"  error fetching index: {e}")
+            except Exception as e:
+                print(f"  error with {author_name}: {e}")
 
         print(f"  + added {works_added} works")
         return works_added

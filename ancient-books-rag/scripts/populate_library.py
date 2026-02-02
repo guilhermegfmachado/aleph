@@ -37,6 +37,115 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.library import Library, Book
 
 
+# === QUALITY VALIDATION FILTER ===
+
+# Patterns that indicate boilerplate/navigation content
+BOILERPLATE_PATTERNS = [
+    r"click here",
+    r"javascript:",
+    r"cookie policy",
+    r"privacy policy",
+    r"terms of service",
+    r"all rights reserved",
+    r"copyright \d{4}",
+    r"subscribe to",
+    r"sign up for",
+    r"follow us on",
+    r"share on facebook",
+    r"tweet this",
+    r"navigation",
+    r"skip to content",
+    r"breadcrumb",
+    r"sidebar",
+    r"advertisement",
+    r"sponsored",
+    r"related articles",
+    r"you may also like",
+    r"loading\.\.\.",
+    r"please wait",
+    r"404 not found",
+    r"page not found",
+    r"error \d{3}",
+]
+
+# Generic/useless titles to reject
+BAD_TITLES = [
+    "untitled", "unknown", "n/a", "none", "null", "undefined",
+    "index", "home", "main", "page", "document", "file",
+    "click here", "read more", "more info", "details",
+    "link", "url", "http", "www", "html", "php", "asp",
+]
+
+# Minimum requirements
+MIN_TITLE_LENGTH = 3
+MIN_AUTHOR_LENGTH = 2
+MIN_CONTENT_LENGTH = 500
+MAX_BOILERPLATE_RATIO = 0.3  # Max 30% boilerplate-like content
+
+
+def validate_book_quality(title: str, author: str, content: str) -> tuple[bool, str]:
+    """
+    Validate that a book meets quality standards for the library.
+
+    Returns:
+        (is_valid, reason) - True if valid, False with reason if rejected
+    """
+    # Check title
+    if not title or len(title.strip()) < MIN_TITLE_LENGTH:
+        return False, "title too short"
+
+    title_lower = title.lower().strip()
+
+    # Reject if title is just numbers or codes
+    if re.match(r'^[\d\s\-_\.]+$', title_lower):
+        return False, "title is just numbers/codes"
+
+    # Reject generic/bad titles
+    for bad in BAD_TITLES:
+        if title_lower == bad or title_lower.startswith(bad + " ") or title_lower.endswith(" " + bad):
+            return False, f"generic title: {bad}"
+
+    # Check author
+    if not author or len(author.strip()) < MIN_AUTHOR_LENGTH:
+        return False, "author missing or too short"
+
+    author_lower = author.lower().strip()
+    if author_lower in ["unknown", "anonymous", "n/a", "none", "various", ""]:
+        # Allow "Anonymous" and "Various" for certain sources, but flag others
+        if author_lower in ["n/a", "none", ""]:
+            return False, "author not identified"
+
+    # Check content length
+    if not content or len(content.strip()) < MIN_CONTENT_LENGTH:
+        return False, f"content too short ({len(content) if content else 0} chars)"
+
+    # Check for boilerplate ratio
+    content_lower = content.lower()
+    boilerplate_matches = 0
+    for pattern in BOILERPLATE_PATTERNS:
+        if re.search(pattern, content_lower):
+            boilerplate_matches += 1
+
+    # If too many boilerplate patterns found, reject
+    if boilerplate_matches > 5:
+        return False, f"too much boilerplate ({boilerplate_matches} patterns)"
+
+    # Check if content is mostly navigation/links (high ratio of "http" or "www")
+    link_count = len(re.findall(r'https?://|www\.', content_lower))
+    words = len(content.split())
+    if words > 0 and link_count / words > 0.1:  # More than 10% links
+        return False, "content is mostly links"
+
+    # Check if content has too many repeated lines (likely boilerplate)
+    lines = [l.strip() for l in content.split('\n') if l.strip()]
+    if len(lines) > 10:
+        unique_lines = set(lines)
+        if len(unique_lines) / len(lines) < 0.5:  # Less than 50% unique
+            return False, "too much repeated content"
+
+    return True, "valid"
+
+
 class SourceDownloader:
     """Base class for source downloaders."""
 
@@ -66,6 +175,35 @@ class SourceDownloader:
                     raise
                 time.sleep(1 + i)
         return None
+
+    def add_validated_book(self, title: str, author: str, content: str,
+                           language: str = "english", url: str = "") -> bool:
+        """
+        Validate and add a book to the library.
+        Returns True if book was added, False if rejected.
+        """
+        # Run quality validation
+        is_valid, reason = validate_book_quality(title, author, content)
+
+        if not is_valid:
+            # Silently skip invalid entries
+            return False
+
+        # Check if already exists
+        if self.library.book_exists(title, author, self.name):
+            return False
+
+        book = Book(
+            id=None,
+            title=title,
+            author=author,
+            source=self.name,
+            language=language,
+            content=content,
+            url=url,
+        )
+        self.library.add_book(book)
+        return True
 
 
 class MITClassicsDownloader(SourceDownloader):
@@ -1483,75 +1621,96 @@ class CTextDownloader(SourceDownloader):
         print(f"\n>> downloading from Chinese Text Project...")
         works_added = 0
 
-        # Major classical works categories
-        categories = [
-            "/confucianism", "/daoism", "/mohism", "/legalism",
-            "/military", "/pre-qin-and-han", "/histories", "/poetry",
+        # Known major classical Chinese texts with their paths
+        # CText organizes texts by work, then chapters
+        major_works = [
+            # Confucian Classics
+            ("Analects (論語)", "analects", "Confucius"),
+            ("Great Learning (大學)", "da-xue", "Confucian"),
+            ("Doctrine of the Mean (中庸)", "zhong-yong", "Confucian"),
+            ("Mencius (孟子)", "mengzi", "Mencius"),
+            ("Classic of Poetry (詩經)", "book-of-poetry", "Various"),
+            ("Book of Documents (書經)", "shang-shu", "Various"),
+            ("Book of Rites (禮記)", "lerta-ji", "Various"),
+            ("I Ching (易經)", "book-of-changes", "Various"),
+            ("Spring and Autumn Annals (春秋)", "chun-qiu-zuo-zhuan", "Various"),
+            # Daoist
+            ("Tao Te Ching (道德經)", "dao-de-jing", "Laozi"),
+            ("Zhuangzi (莊子)", "zhuangzi", "Zhuangzi"),
+            ("Liezi (列子)", "liezi", "Liezi"),
+            # Legalist
+            ("Han Feizi (韓非子)", "han-feizi", "Han Fei"),
+            ("Book of Lord Shang (商君書)", "shang-jun-shu", "Shang Yang"),
+            # Military
+            ("Art of War (孫子兵法)", "erta-bing-fa", "Sun Tzu"),
+            ("Wei Liaozi (尉繚子)", "wei-liao-zi", "Wei Liao"),
+            # Mohist
+            ("Mozi (墨子)", "mozi", "Mozi"),
+            # History
+            ("Records of Grand Historian (史記)", "sherta-ji", "Sima Qian"),
+            ("Bamboo Annals (竹書紀年)", "bamboo-annals", "Various"),
+            # Other Philosophy
+            ("Xunzi (荀子)", "xunzi", "Xunzi"),
+            ("Huainanzi (淮南子)", "huainanzi", "Liu An"),
+            ("Guanzi (管子)", "guanzi", "Guan Zhong"),
         ]
 
-        texts = []
-
-        for cat in categories:
-            try:
-                response = self.safe_get(f"{self.base_url}{cat}")
-                if response:
-                    soup = BeautifulSoup(response.text, "lxml")
-
-                    for link in soup.find_all("a", href=True):
-                        href = link.get("href", "")
-                        title = link.get_text(strip=True)
-
-                        if href.startswith("/") and title and len(title) > 1:
-                            if not any(x in href for x in ["/wiki", "/dictionary", "/user", "/search"]):
-                                text_url = urljoin(self.base_url, href)
-                                if text_url not in [t[1] for t in texts]:
-                                    texts.append((title, text_url))
-
-            except Exception:
-                pass
-
-        print(f"  found {len(texts)} texts")
-
-        for title, url in tqdm(texts[:300], desc="texts"):
+        for work_title, work_path, author in tqdm(major_works, desc="works"):
             if limit and works_added >= limit:
                 break
 
-            if self.library.book_exists(title, "CText", self.name):
+            if self.library.book_exists(work_title, author, self.name):
                 continue
 
             try:
-                resp = self.safe_get(url, retries=1)
+                # Get the main work page which lists chapters
+                work_url = f"{self.base_url}/{work_path}"
+                resp = self.safe_get(work_url, retries=2)
                 if not resp:
                     continue
 
-                page_soup = BeautifulSoup(resp.text, "lxml")
+                soup = BeautifulSoup(resp.text, "lxml")
 
-                # CText uses specific div classes for content
-                main = page_soup.find("div", {"id": "content2"}) or page_soup.find("td", class_="ctext")
-                if not main:
-                    main = page_soup.find("body")
+                # Collect all chapter content
+                full_content = f"{work_title}\n{'=' * 40}\n\n"
 
-                if main:
-                    for tag in main.find_all(["script", "style", "nav"]):
-                        tag.decompose()
+                # Find chapter links
+                chapter_links = []
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    text = link.get_text(strip=True)
 
-                    content = main.get_text(separator="\n")
-                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+                    if href.startswith(f"/{work_path}/") and text:
+                        chapter_url = urljoin(self.base_url, href)
+                        if chapter_url not in [c[1] for c in chapter_links]:
+                            chapter_links.append((text, chapter_url))
 
-                    if len(content) > 200:
-                        book = Book(
-                            id=None,
-                            title=title,
-                            author="Classical Chinese",
-                            source=self.name,
-                            language="chinese",
-                            content=content,
-                            url=url,
-                        )
-                        self.library.add_book(book)
+                # Get content from chapters (limit to first 20)
+                for chap_title, chap_url in chapter_links[:20]:
+                    try:
+                        chap_resp = self.safe_get(chap_url, retries=1)
+                        if not chap_resp:
+                            continue
+
+                        chap_soup = BeautifulSoup(chap_resp.text, "lxml")
+
+                        # Find the Chinese text content
+                        text_td = chap_soup.find("td", class_="ctext")
+                        if text_td:
+                            chap_content = text_td.get_text(separator="\n")
+                            full_content += f"\n{chap_title}\n{'-' * 30}\n{chap_content}\n"
+
+                        time.sleep(0.2)
+
+                    except Exception:
+                        continue
+
+                if len(full_content) > 1000:
+                    if self.add_validated_book(work_title, author, full_content, "chinese", work_url):
                         works_added += 1
 
-                time.sleep(0.3)
+            except Exception as e:
+                print(f"  error with {work_title}: {e}")
 
             except Exception:
                 pass
@@ -1955,9 +2114,105 @@ class ArlimaDownloader(SourceDownloader):
         return works_added
 
 
-# Available sources (23 total)
+class PerseusDownloader(SourceDownloader):
+    """Download from Perseus Digital Library (Greek and Latin texts)."""
+
+    name = "perseus"
+    description = "Perseus Digital Library (Greek/Latin classics)"
+    base_url = "https://www.perseus.tufts.edu"
+
+    def download_all(self, limit: int | None = None):
+        print(f"\n>> downloading from Perseus Digital Library...")
+        works_added = 0
+
+        # Perseus has well-structured catalog - use known work identifiers
+        greek_latin_works = [
+            # Homer
+            ("Iliad", "Homer", "Perseus:text:1999.01.0134"),
+            ("Odyssey", "Homer", "Perseus:text:1999.01.0136"),
+            # Greek Tragedy
+            ("Agamemnon", "Aeschylus", "Perseus:text:1999.01.0004"),
+            ("Libation Bearers", "Aeschylus", "Perseus:text:1999.01.0008"),
+            ("Eumenides", "Aeschylus", "Perseus:text:1999.01.0006"),
+            ("Prometheus Bound", "Aeschylus", "Perseus:text:1999.01.0010"),
+            ("Oedipus Rex", "Sophocles", "Perseus:text:1999.01.0192"),
+            ("Oedipus at Colonus", "Sophocles", "Perseus:text:1999.01.0190"),
+            ("Antigone", "Sophocles", "Perseus:text:1999.01.0186"),
+            ("Medea", "Euripides", "Perseus:text:1999.01.0114"),
+            ("Hippolytus", "Euripides", "Perseus:text:1999.01.0106"),
+            ("Bacchae", "Euripides", "Perseus:text:1999.01.0092"),
+            # Greek Comedy
+            ("Clouds", "Aristophanes", "Perseus:text:1999.01.0024"),
+            ("Frogs", "Aristophanes", "Perseus:text:1999.01.0032"),
+            ("Birds", "Aristophanes", "Perseus:text:1999.01.0026"),
+            # Greek History
+            ("Histories", "Herodotus", "Perseus:text:1999.01.0126"),
+            ("History of the Peloponnesian War", "Thucydides", "Perseus:text:1999.01.0200"),
+            ("Anabasis", "Xenophon", "Perseus:text:1999.01.0202"),
+            # Greek Philosophy
+            ("Apology", "Plato", "Perseus:text:1999.01.0170"),
+            ("Symposium", "Plato", "Perseus:text:1999.01.0174"),
+            ("Republic", "Plato", "Perseus:text:1999.01.0168"),
+            ("Nicomachean Ethics", "Aristotle", "Perseus:text:1999.01.0054"),
+            ("Politics", "Aristotle", "Perseus:text:1999.01.0058"),
+            ("Poetics", "Aristotle", "Perseus:text:1999.01.0056"),
+            # Latin Epic
+            ("Aeneid", "Virgil", "Perseus:text:1999.02.0055"),
+            ("Metamorphoses", "Ovid", "Perseus:text:1999.02.0028"),
+            # Latin History
+            ("Ab Urbe Condita", "Livy", "Perseus:text:1999.02.0026"),
+            ("Gallic Wars", "Caesar", "Perseus:text:1999.02.0001"),
+            ("Annals", "Tacitus", "Perseus:text:1999.02.0078"),
+            # Latin Philosophy
+            ("De Officiis", "Cicero", "Perseus:text:1999.02.0011"),
+            ("De Rerum Natura", "Lucretius", "Perseus:text:1999.02.0131"),
+            ("Meditations", "Marcus Aurelius", "Perseus:text:1999.02.0006"),
+        ]
+
+        for title, author, urn in tqdm(greek_latin_works, desc="works"):
+            if limit and works_added >= limit:
+                break
+
+            if self.library.book_exists(title, author, self.name):
+                continue
+
+            try:
+                text_url = f"{self.base_url}/hopper/text?doc={quote(urn)}"
+                resp = self.safe_get(text_url, retries=2)
+                if not resp:
+                    continue
+
+                soup = BeautifulSoup(resp.text, "lxml")
+
+                text_div = soup.find("div", {"class": "text_container"})
+                if not text_div:
+                    text_div = soup.find("div", {"id": "text_container"})
+                if not text_div:
+                    text_div = soup.find("div", class_=re.compile("text"))
+
+                if text_div:
+                    for tag in text_div.find_all(["script", "style", "nav", "aside"]):
+                        tag.decompose()
+
+                    content = text_div.get_text(separator="\n")
+                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
+
+                    if len(content) > 500:
+                        if self.add_validated_book(title, author, content, "english", text_url):
+                            works_added += 1
+
+                time.sleep(0.3)
+
+            except Exception:
+                pass
+
+        print(f"  + added {works_added} works")
+        return works_added
+
+
+# Available sources (21 total - Bartleby removed for quality)
 SOURCES = {
-    # Original 12
+    # Core classical sources
     "mit": MITClassicsDownloader,
     "gutenberg": GutenbergDownloader,
     "sacred": SacredTextsDownloader,
@@ -1967,10 +2222,10 @@ SOURCES = {
     "stanford": StanfordEncyclopediaDownloader,
     "iep": IEPDownloader,
     "wikisource": WikisourceDownloader,
-    "bartleby": BartlebyDownloader,
     "loebolus": LoebulusDownloader,
     "iqwiki": IQWikiDownloader,
-    # New 11 sources
+    "perseus": PerseusDownloader,
+    # Regional/specialized sources
     "cantigas": CantigasDownloader,
     "phi_latin": PHILatinDownloader,
     "eudocs": EuDocsDownloader,
@@ -2008,7 +2263,7 @@ def main():
     args = parser.parse_args()
 
     if args.list:
-        print("\nAvailable sources (21 total):")
+        print("\nAvailable sources (21 total - quality filtered):")
         for name, cls in SOURCES.items():
             print(f"  {name}: {cls.description}")
         return

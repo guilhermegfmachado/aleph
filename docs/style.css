@@ -7,14 +7,14 @@
 }
 
 :root {
-    --bg: #0a0a0a;
-    --bg-light: #141414;
-    --text: #b0b0b0;
-    --text-bright: #e0e0e0;
-    --accent: #4a9f4a;
-    --accent-dim: #2d6b2d;
-    --border: #333;
-    --highlight: #3a3a00;
+    --bg: #1a1a1f;
+    --bg-light: #252530;
+    --text: #c0c0c0;
+    --text-bright: #e8e8e8;
+    --accent: #d4a857;
+    --accent-dim: #a68032;
+    --border: #3a3a45;
+    --highlight: #3d3520;
 }
 
 body {

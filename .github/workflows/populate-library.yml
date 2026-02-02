@@ -19,9 +19,9 @@ on:
           - stanford
           - iep
           - wikisource
-          - bartleby
           - loebolus
           - iqwiki
+          - perseus
           - cantigas
           - phi_latin
           - eudocs

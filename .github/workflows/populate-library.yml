@@ -21,7 +21,6 @@ on:
           - mit
           - gutenberg
           - sacred
-          - fordham
           - dante
           - marxists
           - stanford
@@ -40,6 +39,7 @@ on:
           - wisdomlib
           - arlima
           - bartleby
+          - fordham
       limit:
         description: 'Max books per source (leave empty for all, only for add)'
         required: false

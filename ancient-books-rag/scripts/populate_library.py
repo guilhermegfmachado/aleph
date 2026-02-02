@@ -66,6 +66,26 @@ BOILERPLATE_PATTERNS = [
     r"404 not found",
     r"page not found",
     r"error \d{3}",
+    # Catalog/manuscript metadata (not actual texts)
+    r"permalien:",
+    r"signaler une erreur",
+    r"dernière mise à jour",
+    r"foliotation:",
+    r"description matérielle",
+    r"ancienne cote:",
+    r"possesseurs",
+    r"copiste:",
+    r"reliure:",
+]
+
+# Encoding garbage patterns (broken UTF-8)
+ENCODING_GARBAGE_PATTERNS = [
+    r"ï»¿",              # BOM
+    r"Ã©|Ã¨|Ãª|Ã |Ã¢",  # Broken French accents
+    r"â€"|â€™|â€œ|â€",   # Broken quotes/dashes
+    r"Â |Â·|Â»|Â«",      # Broken spacing/guillemets
+    r"Ã¼|Ã¶|Ã¤|Ã",      # Broken German umlauts
+    r"Ã§|Ã±",            # Broken cedilla/tilde
 ]
 
 # Generic/useless titles to reject
@@ -74,6 +94,7 @@ BAD_TITLES = [
     "index", "home", "main", "page", "document", "file",
     "click here", "read more", "more info", "details",
     "link", "url", "http", "www", "html", "php", "asp",
+    "manuscrit", "manuscript", "catalogue", "bibliography",
 ]
 
 # Minimum requirements
@@ -142,6 +163,15 @@ def validate_book_quality(title: str, author: str, content: str) -> tuple[bool, 
         unique_lines = set(lines)
         if len(unique_lines) / len(lines) < 0.5:  # Less than 50% unique
             return False, "too much repeated content"
+
+    # Check for encoding garbage (broken UTF-8)
+    garbage_count = 0
+    for pattern in ENCODING_GARBAGE_PATTERNS:
+        matches = len(re.findall(pattern, content))
+        garbage_count += matches
+
+    if garbage_count > 10:  # More than 10 encoding artifacts
+        return False, f"encoding garbage detected ({garbage_count} artifacts)"
 
     return True, "valid"
 
@@ -2210,13 +2240,12 @@ class PerseusDownloader(SourceDownloader):
         return works_added
 
 
-# Available sources (21 total - Bartleby removed for quality)
+# Available sources (19 total - Bartleby, Fordham removed for quality)
 SOURCES = {
     # Core classical sources
     "mit": MITClassicsDownloader,
     "gutenberg": GutenbergDownloader,
     "sacred": SacredTextsDownloader,
-    "fordham": FordhamDownloader,
     "dante": DanteDownloader,
     "marxists": MarxistsDownloader,
     "stanford": StanfordEncyclopediaDownloader,
@@ -2278,7 +2307,7 @@ def main():
     args = parser.parse_args()
 
     if args.list:
-        print("\nAvailable sources (21 total - quality filtered):")
+        print("\nAvailable sources (19 total - quality filtered):")
         for name, cls in SOURCES.items():
             print(f"  {name}: {cls.description}")
         return

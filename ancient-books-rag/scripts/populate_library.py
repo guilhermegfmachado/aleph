@@ -765,117 +765,211 @@ class DanteDownloader(SourceDownloader):
 
 
 class MarxistsDownloader(SourceDownloader):
-    """Download ALL from Marxists Internet Archive."""
+    """Download from Marxists Internet Archive - comprehensive works list."""
 
     name = "marxists"
-    description = "ALL Marxist texts"
+    description = "Marxists Internet Archive (socialist, anarchist, labor texts)"
     base_url = "https://www.marxists.org"
 
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading ALL from marxists.org...")
+        print(f"\n>> downloading from Marxists Internet Archive...")
         works_added = 0
 
-        # Get the archive index to find ALL authors
-        archive_url = f"{self.base_url}/archive/index.htm"
+        # Comprehensive list of major works with direct URLs
+        works = [
+            # =====================
+            # KARL MARX
+            # =====================
+            ("The Communist Manifesto", "Karl Marx & Friedrich Engels", "/archive/marx/works/1848/communist-manifesto/"),
+            ("Capital, Volume I", "Karl Marx", "/archive/marx/works/1867-c1/"),
+            ("Capital, Volume II", "Karl Marx", "/archive/marx/works/1885-c2/"),
+            ("Capital, Volume III", "Karl Marx", "/archive/marx/works/1894-c3/"),
+            ("Grundrisse", "Karl Marx", "/archive/marx/works/1857/grundrisse/"),
+            ("Economic and Philosophic Manuscripts of 1844", "Karl Marx", "/archive/marx/works/1844/manuscripts/preface.htm"),
+            ("The German Ideology", "Karl Marx & Friedrich Engels", "/archive/marx/works/1845/german-ideology/"),
+            ("Critique of the Gotha Programme", "Karl Marx", "/archive/marx/works/1875/gotha/"),
+            ("The Poverty of Philosophy", "Karl Marx", "/archive/marx/works/1847/poverty-philosophy/"),
+            ("Wage Labour and Capital", "Karl Marx", "/archive/marx/works/1847/wage-labour/"),
+            ("Value, Price and Profit", "Karl Marx", "/archive/marx/works/1865/value-price-profit/"),
+            ("The Eighteenth Brumaire of Louis Bonaparte", "Karl Marx", "/archive/marx/works/1852/18th-brumaire/"),
+            ("The Civil War in France", "Karl Marx", "/archive/marx/works/1871/civil-war-france/"),
+            ("A Contribution to the Critique of Political Economy", "Karl Marx", "/archive/marx/works/1859/critique-pol-economy/"),
+            ("Theses on Feuerbach", "Karl Marx", "/archive/marx/works/1845/theses/theses.htm"),
+            ("The Class Struggles in France", "Karl Marx", "/archive/marx/works/1850/class-struggles-france/"),
+            ("Critique of Hegel's Philosophy of Right", "Karl Marx", "/archive/marx/works/1843/critique-hpr/"),
 
-        authors = []
+            # =====================
+            # FRIEDRICH ENGELS
+            # =====================
+            ("Anti-Dühring", "Friedrich Engels", "/archive/marx/works/1877/anti-duhring/"),
+            ("The Origin of the Family, Private Property and the State", "Friedrich Engels", "/archive/marx/works/1884/origin-family/"),
+            ("The Condition of the Working Class in England", "Friedrich Engels", "/archive/marx/works/1845/condition-working-class/"),
+            ("Socialism: Utopian and Scientific", "Friedrich Engels", "/archive/marx/works/1880/soc-utop/"),
+            ("Dialectics of Nature", "Friedrich Engels", "/archive/marx/works/1883/don/"),
+            ("Ludwig Feuerbach and the End of Classical German Philosophy", "Friedrich Engels", "/archive/marx/works/1886/ludwig-feuerbach/"),
+            ("The Peasant War in Germany", "Friedrich Engels", "/archive/marx/works/1850/peasant-war-germany/"),
 
-        try:
-            response = self.safe_get(archive_url)
-            if response:
-                soup = BeautifulSoup(response.text, "lxml")
+            # =====================
+            # VLADIMIR LENIN
+            # =====================
+            ("The State and Revolution", "Vladimir Lenin", "/archive/lenin/works/1917/staterev/"),
+            ("Imperialism, the Highest Stage of Capitalism", "Vladimir Lenin", "/archive/lenin/works/1916/imp-hsc/"),
+            ("What Is To Be Done?", "Vladimir Lenin", "/archive/lenin/works/1901/witbd/"),
+            ("Left-Wing Communism: An Infantile Disorder", "Vladimir Lenin", "/archive/lenin/works/1920/lwc/"),
+            ("Materialism and Empirio-criticism", "Vladimir Lenin", "/archive/lenin/works/1908/mec/"),
+            ("The Development of Capitalism in Russia", "Vladimir Lenin", "/archive/lenin/works/1899/devel/"),
+            ("Two Tactics of Social-Democracy", "Vladimir Lenin", "/archive/lenin/works/1905/tactics/"),
+            ("One Step Forward, Two Steps Back", "Vladimir Lenin", "/archive/lenin/works/1904/onestep/"),
+            ("The Proletarian Revolution and the Renegade Kautsky", "Vladimir Lenin", "/archive/lenin/works/1918/prrk/"),
+            ("The April Theses", "Vladimir Lenin", "/archive/lenin/works/1917/apr/theses.htm"),
+            ("Philosophical Notebooks", "Vladimir Lenin", "/archive/lenin/works/cw38/"),
 
-                for link in soup.find_all("a", href=True):
-                    href = link.get("href", "")
-                    name = link.get_text(strip=True)
+            # =====================
+            # LEON TROTSKY
+            # =====================
+            ("The Permanent Revolution", "Leon Trotsky", "/archive/trotsky/1931/tpr/"),
+            ("The History of the Russian Revolution", "Leon Trotsky", "/archive/trotsky/1930/hrr/"),
+            ("The Revolution Betrayed", "Leon Trotsky", "/archive/trotsky/1936/revbet/"),
+            ("Results and Prospects", "Leon Trotsky", "/archive/trotsky/1931/tpr/rp-index.htm"),
+            ("Literature and Revolution", "Leon Trotsky", "/archive/trotsky/1924/lit_revo/"),
+            ("Terrorism and Communism", "Leon Trotsky", "/archive/trotsky/1920/terrcomm/"),
+            ("Their Morals and Ours", "Leon Trotsky", "/archive/trotsky/1938/morals/morals.htm"),
+            ("In Defense of Marxism", "Leon Trotsky", "/archive/trotsky/idom/dm/"),
+            ("The Transitional Program", "Leon Trotsky", "/archive/trotsky/1938/tp/"),
 
-                    if "/archive/" in href and name and len(name) > 2:
-                        author_url = urljoin(archive_url, href)
-                        if author_url not in [a[1] for a in authors]:
-                            authors.append((name, author_url))
+            # =====================
+            # ROSA LUXEMBURG
+            # =====================
+            ("Reform or Revolution", "Rosa Luxemburg", "/archive/luxemburg/1900/reform-revolution/"),
+            ("The Accumulation of Capital", "Rosa Luxemburg", "/archive/luxemburg/1913/accumulation-capital/"),
+            ("The Mass Strike", "Rosa Luxemburg", "/archive/luxemburg/1906/mass-strike/"),
+            ("The Russian Revolution", "Rosa Luxemburg", "/archive/luxemburg/1918/russian-revolution/"),
+            ("The Junius Pamphlet", "Rosa Luxemburg", "/archive/luxemburg/1915/junius/"),
+            ("Social Reform or Revolution", "Rosa Luxemburg", "/archive/luxemburg/1900/reform-revolution/"),
 
-        except Exception:
-            pass
+            # =====================
+            # ANTONIO GRAMSCI
+            # =====================
+            ("Prison Notebooks", "Antonio Gramsci", "/archive/gramsci/prison_notebooks/"),
+            ("Selections from Political Writings 1910-1920", "Antonio Gramsci", "/archive/gramsci/editions/spw1/"),
+            ("Selections from Political Writings 1921-1926", "Antonio Gramsci", "/archive/gramsci/editions/spw2/"),
 
-        # Also add known important authors
-        known_authors = [
-            ("Marx, Karl", f"{self.base_url}/archive/marx/works"),
-            ("Lenin, Vladimir", f"{self.base_url}/archive/lenin/works"),
-            ("Trotsky, Leon", f"{self.base_url}/archive/trotsky/works"),
-            ("Luxemburg, Rosa", f"{self.base_url}/archive/luxemburg"),
-            ("Gramsci, Antonio", f"{self.base_url}/archive/gramsci"),
-            ("Kropotkin, Peter", f"{self.base_url}/reference/archive/kropotkin"),
-            ("Bakunin, Mikhail", f"{self.base_url}/reference/archive/bakunin"),
+            # =====================
+            # ANARCHIST WRITERS
+            # =====================
+            ("The Conquest of Bread", "Peter Kropotkin", "/reference/archive/kropotkin/1892/conquest-bread.htm"),
+            ("Mutual Aid: A Factor of Evolution", "Peter Kropotkin", "/reference/archive/kropotkin/1902/mutual-aid/"),
+            ("Fields, Factories and Workshops", "Peter Kropotkin", "/reference/archive/kropotkin/1912/fields-factories-workshops/"),
+            ("The State: Its Historic Role", "Peter Kropotkin", "/reference/archive/kropotkin/1897/state.htm"),
+            ("Anarchism: Its Philosophy and Ideal", "Peter Kropotkin", "/reference/archive/kropotkin/1896/science-anarchy.htm"),
+            ("God and the State", "Mikhail Bakunin", "/reference/archive/bakunin/works/godstate/"),
+            ("Statism and Anarchy", "Mikhail Bakunin", "/reference/archive/bakunin/works/1873/statism-anarchy.htm"),
+            ("The Capitalist System", "Mikhail Bakunin", "/reference/archive/bakunin/works/writings/ch04.htm"),
+            ("What is Property?", "Pierre-Joseph Proudhon", "/reference/subject/economics/proudhon/property/"),
+
+            # =====================
+            # EARLY SOCIALISTS
+            # =====================
+            ("Utopia", "Thomas More", "/reference/archive/more/utopia/"),
+            ("The New Atlantis", "Francis Bacon", "/reference/archive/bacon/works/atlantis/atlantis.htm"),
+            ("The Social Contract", "Jean-Jacques Rousseau", "/reference/subject/economics/rousseau/social-contract/"),
+
+            # =====================
+            # LATER MARXISTS
+            # =====================
+            ("History and Class Consciousness", "Georg Lukács", "/archive/lukacs/works/history/"),
+            ("The Theory of the Novel", "Georg Lukács", "/archive/lukacs/works/theory-novel/"),
+            ("Illuminations", "Walter Benjamin", "/reference/archive/benjamin/1940/history.htm"),
+            ("The Work of Art in the Age of Mechanical Reproduction", "Walter Benjamin", "/reference/subject/philosophy/works/ge/benjamin.htm"),
+            ("One-Dimensional Man", "Herbert Marcuse", "/reference/archive/marcuse/works/one-dimensional-man/"),
+            ("Eros and Civilization", "Herbert Marcuse", "/reference/archive/marcuse/works/eros-civilisation/"),
+            ("Dialectic of Enlightenment", "Theodor Adorno & Max Horkheimer", "/reference/archive/adorno/1944/culture-industry.htm"),
+            ("Minima Moralia", "Theodor Adorno", "/reference/archive/adorno/1951/mm/"),
+            ("Being and Time (excerpts)", "Martin Heidegger", "/reference/subject/philosophy/works/ge/heidegge.htm"),
+
+            # =====================
+            # SOCIALIST FEMINISM
+            # =====================
+            ("Woman and Socialism", "August Bebel", "/archive/bebel/1879/woman-socialism/"),
+            ("The Origin of the Family (abridged)", "Friedrich Engels", "/archive/marx/works/1884/origin-family/"),
+            ("Women and Economics", "Charlotte Perkins Gilman", "/reference/subject/economics/gilman/women-economics/"),
+            ("A Vindication of the Rights of Woman", "Mary Wollstonecraft", "/reference/archive/wollstonecraft/1792/vindication-rights-woman/"),
+
+            # =====================
+            # ANTI-COLONIAL / THIRD WORLD
+            # =====================
+            ("The Wretched of the Earth", "Frantz Fanon", "/subject/africa/fanon/"),
+            ("Black Skin, White Masks", "Frantz Fanon", "/subject/africa/fanon/skin-masks/"),
+            ("Discourse on Colonialism", "Aimé Césaire", "/subject/africa/cesaire/discourse/"),
+            ("Pedagogy of the Oppressed", "Paulo Freire", "/subject/education/freire/pedagogy/"),
+            ("Imperialism and World Economy", "Nikolai Bukharin", "/archive/bukharin/works/1917/imperial/"),
+            ("ABC of Communism", "Nikolai Bukharin & Evgeny Preobrazhensky", "/archive/bukharin/works/1920/abc/"),
+
+            # =====================
+            # CLASSICAL ECONOMISTS
+            # =====================
+            ("The Wealth of Nations", "Adam Smith", "/reference/archive/smith-adam/works/wealth-of-nations/"),
+            ("Principles of Political Economy", "David Ricardo", "/reference/subject/economics/ricardo/principles/"),
+            ("Essay on Population", "Thomas Malthus", "/reference/subject/economics/malthus/population/"),
+            ("General Theory of Employment, Interest and Money", "John Maynard Keynes", "/reference/subject/economics/keynes/general-theory/"),
+
+            # =====================
+            # PHILOSOPHY
+            # =====================
+            ("The Phenomenology of Spirit", "G.W.F. Hegel", "/reference/archive/hegel/works/ph/"),
+            ("Science of Logic", "G.W.F. Hegel", "/reference/archive/hegel/works/sl/"),
+            ("Philosophy of Right", "G.W.F. Hegel", "/reference/archive/hegel/works/pr/"),
+            ("Philosophy of History", "G.W.F. Hegel", "/reference/archive/hegel/works/hi/"),
+            ("The Essence of Christianity", "Ludwig Feuerbach", "/reference/archive/feuerbach/works/essence/"),
+            ("The World as Will and Representation (excerpts)", "Arthur Schopenhauer", "/reference/subject/philosophy/works/ge/schopenhauer.htm"),
+            ("Thus Spoke Zarathustra (excerpts)", "Friedrich Nietzsche", "/reference/archive/nietzsche/1884/zarathustra/"),
+            ("Beyond Good and Evil (excerpts)", "Friedrich Nietzsche", "/reference/archive/nietzsche/1886/beyond-good-evil/"),
+
+            # =====================
+            # LABOR MOVEMENT
+            # =====================
+            ("The Iron Heel", "Jack London", "/archive/london/1908/iron-heel/"),
+            ("The Jungle (excerpts)", "Upton Sinclair", "/subject/usa/sinclair-upton/"),
+            ("Mother", "Maxim Gorky", "/archive/gorky/works/mother/"),
         ]
 
-        for name, url in known_authors:
-            if url not in [a[1] for a in authors]:
-                authors.append((name, url))
-
-        print(f"  found {len(authors)} authors")
-
-        for author_name, author_url in tqdm(authors[:100], desc="authors"):  # Limit to 100 authors
+        for title, author, path in tqdm(works, desc="works"):
             if limit and works_added >= limit:
                 break
 
+            if self.library.book_exists(title, author, self.name):
+                continue
+
             try:
-                response = self.safe_get(author_url, retries=1)
-                if not response:
+                text_url = f"{self.base_url}{path}"
+                resp = self.safe_get(text_url, retries=2)
+                if not resp:
                     continue
 
-                soup = BeautifulSoup(response.text, "lxml")
+                soup = BeautifulSoup(resp.text, "lxml")
 
-                for link in soup.find_all("a", href=True):
-                    if limit and works_added >= limit:
-                        break
+                # Remove navigation elements
+                for tag in soup.find_all(["script", "style", "nav", "header", "footer"]):
+                    tag.decompose()
+                for tag in soup.find_all(class_=re.compile(r"nav|menu|header|footer|sidebar")):
+                    tag.decompose()
 
-                    href = link.get("href", "")
-                    title = link.get_text(strip=True)
+                # Find main content
+                content_div = soup.find("div", {"id": "content"})
+                if not content_div:
+                    content_div = soup.find("div", class_="content")
+                if not content_div:
+                    content_div = soup.find("body")
 
-                    if not href or not title or len(title) < 3:
-                        continue
-                    if href.startswith("#") or href.startswith("mailto"):
-                        continue
-                    if "index" in href.lower() or href == "../":
-                        continue
+                if content_div:
+                    content = content_div.get_text(separator="\n")
+                    content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-                    if self.library.book_exists(title, author_name, self.name):
-                        continue
+                    if len(content) > 500:
+                        if self.add_validated_book(title, author, content, "english", text_url):
+                            works_added += 1
 
-                    text_url = urljoin(author_url + "/", href)
-
-                    try:
-                        text_resp = self.safe_get(text_url, retries=1)
-                        if not text_resp:
-                            continue
-
-                        text_soup = BeautifulSoup(text_resp.text, "lxml")
-
-                        for tag in text_soup.find_all(["script", "style", "nav"]):
-                            tag.decompose()
-
-                        body = text_soup.find("body")
-                        if body:
-                            content = body.get_text(separator="\n")
-                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
-
-                            if len(content) > 500:
-                                book = Book(
-                                    id=None,
-                                    title=title,
-                                    author=author_name,
-                                    source=self.name,
-                                    language="english",
-                                    content=content,
-                                    url=text_url,
-                                )
-                                self.library.add_book(book)
-                                works_added += 1
-
-                        time.sleep(0.1)
-
-                    except Exception:
-                        pass
+                time.sleep(0.3)
 
             except Exception:
                 pass
@@ -2503,12 +2597,11 @@ class PerseusDownloader(SourceDownloader):
         return works_added
 
 
-# Available sources (19 total - Bartleby, Fordham removed for quality)
+# Available sources (18 total - Bartleby, Fordham, Sacred removed for quality)
 SOURCES = {
     # Core classical sources
     "mit": MITClassicsDownloader,
     "gutenberg": GutenbergDownloader,
-    "sacred": SacredTextsDownloader,
     "dante": DanteDownloader,
     "marxists": MarxistsDownloader,
     "stanford": StanfordEncyclopediaDownloader,

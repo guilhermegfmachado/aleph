@@ -3,20 +3,101 @@
 
 let library = {
     books: [],      // Index data (metadata + snippets)
+    userBooks: [],  // User-uploaded books from IndexedDB
     loaded: false,
     textCache: {}   // Cache for loaded full texts
 };
+
+// IndexedDB for user books
+const USER_DB_NAME = 'borges_user_library';
+const USER_DB_VERSION = 1;
+const USER_STORE_NAME = 'user_books';
+let userDB = null;
+
+async function openUserDB() {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(USER_DB_NAME, USER_DB_VERSION);
+        request.onerror = () => reject(request.error);
+        request.onsuccess = () => {
+            userDB = request.result;
+            resolve(userDB);
+        };
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+            if (!db.objectStoreNames.contains(USER_STORE_NAME)) {
+                db.createObjectStore(USER_STORE_NAME, { keyPath: 'id', autoIncrement: true });
+            }
+        };
+    });
+}
+
+async function loadUserBooks() {
+    try {
+        if (!userDB) await openUserDB();
+        return new Promise((resolve, reject) => {
+            const tx = userDB.transaction([USER_STORE_NAME], 'readonly');
+            const store = tx.objectStore(USER_STORE_NAME);
+            const request = store.getAll();
+            request.onsuccess = () => {
+                const books = request.result || [];
+                // Mark as user books and add user_ prefix to IDs to avoid conflicts
+                library.userBooks = books.map(b => ({
+                    ...b,
+                    id: 'user_' + b.id,
+                    source: 'user_upload',
+                    isUserBook: true
+                }));
+                resolve(library.userBooks);
+            };
+            request.onerror = () => reject(request.error);
+        });
+    } catch (e) {
+        console.warn('Could not load user books:', e);
+        library.userBooks = [];
+        return [];
+    }
+}
+
+// Get single user book
+async function loadUserBookText(bookId) {
+    const numericId = parseInt(bookId.replace('user_', ''));
+    try {
+        if (!userDB) await openUserDB();
+        return new Promise((resolve, reject) => {
+            const tx = userDB.transaction([USER_STORE_NAME], 'readonly');
+            const store = tx.objectStore(USER_STORE_NAME);
+            const request = store.get(numericId);
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(request.error);
+        });
+    } catch (e) {
+        console.error('Error loading user book:', e);
+        return null;
+    }
+}
+
+// Reload library with fresh user books
+async function reloadLibraryWithUserBooks() {
+    await loadUserBooks();
+    updateStats();
+    populateFilters();
+}
 
 // Load library index
 async function loadLibrary() {
     if (library.loaded) return;
 
     try {
+        // Load main library
         const response = await fetch('data/library-index.json');
         if (!response.ok) throw new Error('Failed to load library index');
 
         const data = await response.json();
         library.books = data.books || [];
+
+        // Also load user books
+        await loadUserBooks();
+
         library.loaded = true;
 
         // Update UI counts
@@ -26,7 +107,11 @@ async function loadLibrary() {
 
     } catch (error) {
         console.error('Error loading library:', error);
-        showError('Failed to load library. Make sure data/library-index.json exists.');
+        // Try to still load user books even if main library fails
+        await loadUserBooks();
+        library.loaded = true;
+        updateStats();
+        showError('Main library failed to load, but your uploaded books are available.');
     }
 }
 
@@ -51,15 +136,21 @@ async function loadBookText(bookId) {
     }
 }
 
+function getAllBooks() {
+    // Combine main library + user books
+    return [...library.books, ...library.userBooks];
+}
+
 function updateStats() {
     const bookCount = document.getElementById('book-count');
     const authorCount = document.getElementById('author-count');
+    const allBooks = getAllBooks();
 
     if (bookCount) {
-        bookCount.textContent = library.books.length.toLocaleString();
+        bookCount.textContent = allBooks.length.toLocaleString();
     }
     if (authorCount) {
-        const authors = new Set(library.books.map(b => b.author));
+        const authors = new Set(allBooks.map(b => b.author));
         authorCount.textContent = authors.size.toLocaleString();
     }
 }
@@ -67,7 +158,8 @@ function updateStats() {
 function updateSourcesFooter() {
     const footer = document.getElementById('sources-footer');
     if (footer) {
-        const sources = [...new Set(library.books.map(b => b.source))];
+        const allBooks = getAllBooks();
+        const sources = [...new Set(allBooks.map(b => b.source))];
         const sourceNames = sources.map(s => s.replace(/_/g, ' ')).join(' / ');
         footer.textContent = 'sources: ' + (sourceNames || 'none loaded');
     }
@@ -76,9 +168,14 @@ function updateSourcesFooter() {
 function populateFilters() {
     const authorFilter = document.getElementById('author-filter');
     const sourceFilter = document.getElementById('source-filter');
+    const allBooks = getAllBooks();
 
     if (authorFilter) {
-        const authors = [...new Set(library.books.map(b => b.author))].sort();
+        // Clear existing options except first
+        while (authorFilter.options.length > 1) {
+            authorFilter.remove(1);
+        }
+        const authors = [...new Set(allBooks.map(b => b.author))].sort();
         authors.forEach(author => {
             const option = document.createElement('option');
             option.value = author;
@@ -88,7 +185,11 @@ function populateFilters() {
     }
 
     if (sourceFilter) {
-        const sources = [...new Set(library.books.map(b => b.source))].sort();
+        // Clear existing options except first
+        while (sourceFilter.options.length > 1) {
+            sourceFilter.remove(1);
+        }
+        const sources = [...new Set(allBooks.map(b => b.source))].sort();
         sources.forEach(source => {
             const option = document.createElement('option');
             option.value = source;
@@ -98,7 +199,7 @@ function populateFilters() {
     }
 }
 
-// Search functionality - searches title, author, and snippet
+// Search functionality - searches title, author, and snippet (including user books)
 function search(query, authorFilter = '', sourceFilter = '') {
     if (!query.trim()) return [];
 
@@ -106,7 +207,8 @@ function search(query, authorFilter = '', sourceFilter = '') {
     const isExact = query.startsWith('"') && query.endsWith('"');
     const searchTerm = isExact ? query.slice(1, -1).toLowerCase() : queryLower;
 
-    let results = library.books.filter(book => {
+    const allBooks = getAllBooks();
+    let results = allBooks.filter(book => {
         // Apply filters
         if (authorFilter && book.author !== authorFilter) return false;
         if (sourceFilter && book.source !== sourceFilter) return false;
@@ -287,7 +389,7 @@ function renderBrowseList() {
     const sourceFilter = document.getElementById('source-filter');
     const sortFilter = document.getElementById('sort-filter');
 
-    let books = [...library.books];
+    let books = [...getAllBooks()];
 
     // Filter
     if (authorFilter && authorFilter.value) {
@@ -354,26 +456,44 @@ async function initBookView() {
     await loadLibrary();
 
     const params = new URLSearchParams(window.location.search);
-    const bookId = parseInt(params.get('id'));
+    const bookIdParam = params.get('id');
+    const userIdParam = params.get('user');  // For user-uploaded books
     const searchQuery = params.get('q');
 
     const contentDiv = document.getElementById('book-content');
 
-    // Show loading state
-    const indexBook = library.books.find(b => b.id === bookId);
-    if (indexBook) {
-        document.title = `borges - ${indexBook.title}`;
-        contentDiv.innerHTML = `
-            <div class="book-header">
-                <h1 class="book-title">${escapeHtml(indexBook.title)}</h1>
-                <div class="book-author">${escapeHtml(indexBook.author)}</div>
-            </div>
-            <div class="loading">loading text...</div>
-        `;
+    let book = null;
+    let indexBook = null;
+
+    // Check if it's a user book
+    if (userIdParam) {
+        const userBook = await loadUserBookText('user_' + userIdParam);
+        if (userBook) {
+            book = userBook;
+            indexBook = userBook;
+        }
+    } else if (bookIdParam) {
+        const bookId = parseInt(bookIdParam);
+        // Show loading state
+        indexBook = library.books.find(b => b.id === bookId);
+        if (indexBook) {
+            document.title = `borges - ${indexBook.title}`;
+            contentDiv.innerHTML = `
+                <div class="book-header">
+                    <h1 class="book-title">${escapeHtml(indexBook.title)}</h1>
+                    <div class="book-author">${escapeHtml(indexBook.author)}</div>
+                </div>
+                <div class="loading">loading text...</div>
+            `;
+        }
+        // Load full text
+        book = await loadBookText(bookId);
     }
 
-    // Load full text
-    const book = await loadBookText(bookId);
+    // Legacy loading for non-user books if book not yet loaded
+    if (!book && bookIdParam) {
+        book = await loadBookText(parseInt(bookIdParam));
+    }
 
     if (!book) {
         contentDiv.innerHTML = '<div class="error">book not found or failed to load</div>';

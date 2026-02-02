@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>borges - add text</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>borges</h1>
+            <p class="subtitle">a personal library</p>
+            <nav>
+                <a href="index.html">search</a>
+                <a href="browse.html">browse</a>
+                <a href="upload.html" class="active">add</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <h2>add to your library</h2>
+                <p class="upload-desc">Add your own texts. They're stored locally in your browser.</p>
+
+                <div class="upload-tabs">
+                    <button class="tab-btn active" data-tab="pdf">upload pdf</button>
+                    <button class="tab-btn" data-tab="url">paste url</button>
+                    <button class="tab-btn" data-tab="text">paste text</button>
+                </div>
+
+                <!-- PDF Upload Tab -->
+                <div class="tab-content active" id="tab-pdf">
+                    <div class="upload-box" id="pdf-dropzone">
+                        <div class="dropzone-content">
+                            <p>drag & drop PDF here</p>
+                            <p>or</p>
+                            <input type="file" id="pdf-input" accept=".pdf" hidden>
+                            <button class="btn" onclick="document.getElementById('pdf-input').click()">choose file</button>
+                        </div>
+                    </div>
+                    <div id="pdf-preview" class="preview hidden">
+                        <div class="preview-header">
+                            <span id="pdf-filename"></span>
+                            <button class="btn-small" onclick="clearPdfPreview()">clear</button>
+                        </div>
+                        <div class="preview-status" id="pdf-status">extracting text...</div>
+                        <div class="preview-text" id="pdf-text-preview"></div>
+                    </div>
+                </div>
+
+                <!-- URL Tab -->
+                <div class="tab-content" id="tab-url">
+                    <div class="form-group">
+                        <label for="url-input">webpage url</label>
+                        <input type="url" id="url-input" placeholder="https://example.com/article">
+                        <button class="btn" id="fetch-url-btn">fetch content</button>
+                    </div>
+                    <div id="url-preview" class="preview hidden">
+                        <div class="preview-status" id="url-status">fetching...</div>
+                        <div class="preview-text" id="url-text-preview"></div>
+                    </div>
+                </div>
+
+                <!-- Text Tab -->
+                <div class="tab-content" id="tab-text">
+                    <div class="form-group">
+                        <label for="text-input">paste your text</label>
+                        <textarea id="text-input" rows="10" placeholder="Paste the full text here..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Metadata Form (shared) -->
+                <div class="metadata-form">
+                    <h3>text details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="title-input">title *</label>
+                            <input type="text" id="title-input" placeholder="Title of the work" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="author-input">author *</label>
+                            <input type="text" id="author-input" placeholder="Author name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="language-input">language</label>
+                            <select id="language-input">
+                                <option value="english">English</option>
+                                <option value="latin">Latin</option>
+                                <option value="greek">Greek</option>
+                                <option value="german">German</option>
+                                <option value="french">French</option>
+                                <option value="spanish">Spanish</option>
+                                <option value="italian">Italian</option>
+                                <option value="portuguese">Portuguese</option>
+                                <option value="russian">Russian</option>
+                                <option value="chinese">Chinese</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="source-url-input">source url (optional)</label>
+                            <input type="url" id="source-url-input" placeholder="Original source URL">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary" id="save-btn" disabled>save to library</button>
+                        <span class="save-status" id="save-status"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Books List -->
+            <div class="user-books-section">
+                <h3>your uploaded texts <span id="user-book-count">(0)</span></h3>
+                <div id="user-books-list" class="user-books-list">
+                    <p class="empty-state">no uploaded texts yet</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>texts you add are stored locally in your browser</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>

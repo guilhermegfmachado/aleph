@@ -30,6 +30,16 @@ from urllib.parse import urljoin, urlparse, quote
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+import tempfile
+import io
+
+# Try to import PDF extraction library
+try:
+    import fitz  # PyMuPDF
+    HAS_PDF_SUPPORT = True
+except ImportError:
+    HAS_PDF_SUPPORT = False
+    print("Note: PyMuPDF not installed. PDF extraction disabled. Install with: pip install PyMuPDF")
 
 # Add parent to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -896,14 +906,94 @@ class MarxistsDownloader(SourceDownloader):
             ("A Vindication of the Rights of Woman", "Mary Wollstonecraft", "/reference/archive/wollstonecraft/1792/vindication-rights-woman/"),
 
             # =====================
-            # ANTI-COLONIAL / THIRD WORLD
+            # SOVIET ECONOMISTS & THEORISTS
             # =====================
-            ("The Wretched of the Earth", "Frantz Fanon", "/subject/africa/fanon/"),
-            ("Black Skin, White Masks", "Frantz Fanon", "/subject/africa/fanon/skin-masks/"),
-            ("Discourse on Colonialism", "Aimé Césaire", "/subject/africa/cesaire/discourse/"),
-            ("Pedagogy of the Oppressed", "Paulo Freire", "/subject/education/freire/pedagogy/"),
             ("Imperialism and World Economy", "Nikolai Bukharin", "/archive/bukharin/works/1917/imperial/"),
             ("ABC of Communism", "Nikolai Bukharin & Evgeny Preobrazhensky", "/archive/bukharin/works/1920/abc/"),
+            ("Economics of the Transformation Period", "Nikolai Bukharin", "/archive/bukharin/works/1920/econtp/"),
+            ("Historical Materialism", "Nikolai Bukharin", "/archive/bukharin/works/1921/histmat/"),
+            ("The New Economics", "Evgeny Preobrazhensky", "/archive/preobrazhensky/1926/newecon/"),
+
+            # =====================
+            # EASTERN BLOC - ROMANIA (Ceaușescu)
+            # =====================
+            ("Romania on the Way of Completing Socialist Construction", "Nicolae Ceaușescu", "/archive/ceausescu/"),
+            ("Independence and Socialist Development", "Nicolae Ceaușescu", "/archive/ceausescu/1969/x01.htm"),
+
+            # =====================
+            # EASTERN BLOC - ALBANIA (Hoxha)
+            # =====================
+            ("Imperialism and the Revolution", "Enver Hoxha", "/reference/archive/hoxha/works/imp_rev/"),
+            ("The Khrushchevites", "Enver Hoxha", "/reference/archive/hoxha/works/khrush/"),
+            ("Eurocommunism Is Anti-Communism", "Enver Hoxha", "/reference/archive/hoxha/works/euroco/"),
+            ("Reflections on China (Volume I)", "Enver Hoxha", "/reference/archive/hoxha/works/china1/"),
+            ("Reflections on China (Volume II)", "Enver Hoxha", "/reference/archive/hoxha/works/china2/"),
+            ("The Titoites", "Enver Hoxha", "/reference/archive/hoxha/works/titoites/"),
+            ("Yugoslav Self-Administration", "Enver Hoxha", "/reference/archive/hoxha/works/yug_self/"),
+            ("With Stalin", "Enver Hoxha", "/reference/archive/hoxha/works/stalin/"),
+            ("Laying the Foundations of the New Albania", "Enver Hoxha", "/reference/archive/hoxha/works/lfna/"),
+            ("Selected Works Volume I", "Enver Hoxha", "/reference/archive/hoxha/works/sw1/"),
+            ("Selected Works Volume II", "Enver Hoxha", "/reference/archive/hoxha/works/sw2/"),
+            ("Selected Works Volume III", "Enver Hoxha", "/reference/archive/hoxha/works/sw3/"),
+            ("Selected Works Volume IV", "Enver Hoxha", "/reference/archive/hoxha/works/sw4/"),
+            ("Selected Works Volume V", "Enver Hoxha", "/reference/archive/hoxha/works/sw5/"),
+            ("The Anglo-American Threat to Albania", "Enver Hoxha", "/reference/archive/hoxha/works/angam/"),
+            ("Two Friendly Peoples", "Enver Hoxha", "/reference/archive/hoxha/works/twofrnd/"),
+
+            # =====================
+            # EASTERN BLOC - BULGARIA
+            # =====================
+            ("The United Front Against Fascism", "Georgi Dimitrov", "/reference/archive/dimitrov/works/1935/08_02.htm"),
+            ("Report to the 7th World Congress", "Georgi Dimitrov", "/reference/archive/dimitrov/works/1935/unity.htm"),
+            ("The Reichstag Fire Trial", "Georgi Dimitrov", "/reference/archive/dimitrov/works/1933/reichstag/"),
+            ("Against Fascism and War", "Georgi Dimitrov", "/reference/archive/dimitrov/works/1935/"),
+            ("For a United and Popular Front", "Georgi Dimitrov", "/reference/archive/dimitrov/works/1936/gpf.htm"),
+
+            # =====================
+            # EASTERN BLOC - EAST GERMANY
+            # =====================
+            ("Whither Germany?", "Walter Ulbricht", "/archive/ulbricht/1966/whither.htm"),
+            ("The Development of the German People's Democratic State", "Walter Ulbricht", "/archive/ulbricht/"),
+
+            # =====================
+            # EASTERN BLOC - YUGOSLAVIA
+            # =====================
+            ("Workers Manage Factories in Yugoslavia", "Josip Broz Tito", "/archive/tito/1950/factories.htm"),
+            ("Report to the 5th Congress of the CPY", "Josip Broz Tito", "/archive/tito/1948/5th-congress.htm"),
+            ("Selected Military Works", "Josip Broz Tito", "/archive/tito/military/"),
+
+            # =====================
+            # EASTERN BLOC - HUNGARY
+            # =====================
+            ("Building Up the People's Democracy", "Mátyás Rákosi", "/archive/rakosi/1952/peoples-democracy.htm"),
+
+            # =====================
+            # EASTERN BLOC - CZECHOSLOVAKIA
+            # =====================
+            ("Selected Speeches and Writings", "Klement Gottwald", "/archive/gottwald/"),
+
+            # =====================
+            # EASTERN BLOC - POLAND
+            # =====================
+            ("For Lasting Peace, For a People's Democracy", "Bolesław Bierut", "/archive/bierut/"),
+
+            # =====================
+            # SOVIET LEADERS
+            # =====================
+            ("Foundations of Leninism", "Joseph Stalin", "/reference/archive/stalin/works/1924/foundations-leninism/"),
+            ("Dialectical and Historical Materialism", "Joseph Stalin", "/reference/archive/stalin/works/1938/09.htm"),
+            ("Economic Problems of Socialism in the USSR", "Joseph Stalin", "/reference/archive/stalin/works/1951/economic-problems/"),
+            ("Marxism and the National Question", "Joseph Stalin", "/reference/archive/stalin/works/1913/03.htm"),
+            ("History of the CPSU(b) Short Course", "Joseph Stalin", "/reference/archive/stalin/works/1939/x01/"),
+            ("Report to the 17th Party Congress", "Joseph Stalin", "/reference/archive/stalin/works/1934/01/26.htm"),
+            ("Report to the 18th Party Congress", "Joseph Stalin", "/reference/archive/stalin/works/1939/03/10.htm"),
+            ("On the Opposition", "Joseph Stalin", "/reference/archive/stalin/works/1927/09/27.htm"),
+
+            # =====================
+            # CRITICAL PEDAGOGY
+            # =====================
+            ("Pedagogy of the Oppressed", "Paulo Freire", "/subject/education/freire/pedagogy/"),
+            ("Education for Critical Consciousness", "Paulo Freire", "/subject/education/freire/critical/"),
 
             # =====================
             # CLASSICAL ECONOMISTS
@@ -1355,14 +1445,48 @@ class BartlebyDownloader(SourceDownloader):
 
 
 class LoebulusDownloader(SourceDownloader):
-    """Download ALL from Loebolus (Loeb Classical Library)."""
+    """Download ALL from Loebolus (Loeb Classical Library) with PDF extraction."""
 
     name = "loebolus"
-    description = "ALL Loeb Classical Library volumes (references)"
+    description = "Loeb Classical Library volumes (full text from PDFs)"
     base_url = "https://ryanfb.xyz/loebolus"
 
+    def extract_text_from_pdf(self, pdf_content: bytes) -> str:
+        """Extract text from PDF bytes using PyMuPDF."""
+        if not HAS_PDF_SUPPORT:
+            return ""
+
+        try:
+            # Open PDF from bytes
+            doc = fitz.open(stream=pdf_content, filetype="pdf")
+            text_parts = []
+
+            for page_num in range(len(doc)):
+                page = doc[page_num]
+                text = page.get_text()
+                if text.strip():
+                    text_parts.append(text)
+
+            doc.close()
+
+            full_text = "\n\n".join(text_parts)
+            # Clean up common OCR artifacts
+            full_text = re.sub(r'\n{3,}', '\n\n', full_text)
+            full_text = re.sub(r' {2,}', ' ', full_text)
+
+            return full_text.strip()
+
+        except Exception as e:
+            print(f"    PDF extraction error: {e}")
+            return ""
+
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading ALL from loebolus...")
+        print(f"\n>> downloading ALL from loebolus (Loeb Classical Library)...")
+
+        if not HAS_PDF_SUPPORT:
+            print("  WARNING: PyMuPDF not installed. Install with: pip install PyMuPDF")
+            print("  Falling back to reference-only mode.")
+
         works_added = 0
 
         try:
@@ -1374,9 +1498,9 @@ class LoebulusDownloader(SourceDownloader):
                 table = soup.find("table")
                 if table:
                     rows = table.find_all("tr")
-                    print(f"  found {len(rows)} rows")
+                    print(f"  found {len(rows)} Loeb volumes")
 
-                    for row in rows[1:]:  # Skip header
+                    for row in tqdm(rows[1:], desc="volumes"):  # Skip header
                         if limit and works_added >= limit:
                             break
 
@@ -1391,45 +1515,52 @@ class LoebulusDownloader(SourceDownloader):
                             pdf_url = ""
                             if pdf_link:
                                 href = pdf_link.get("href", "")
-                                if href:
+                                if href and href.endswith(".pdf"):
                                     pdf_url = urljoin(self.base_url + "/", href)
 
                             title = title_cell or f"Loeb Volume {vol_num}"
                             author = author_cell or "Various"
 
-                            full_title = f"[Loeb {vol_num}] {author}: {title}"
+                            full_title = f"{title} (Loeb {vol_num})"
 
                             if self.library.book_exists(full_title, author, self.name):
                                 continue
 
-                            content = f"""Loeb Classical Library Volume {vol_num}
+                            content = ""
+
+                            # Try to extract PDF content if we have the library and a PDF URL
+                            if HAS_PDF_SUPPORT and pdf_url:
+                                try:
+                                    pdf_resp = self.safe_get(pdf_url, retries=2, timeout=60)
+                                    if pdf_resp and pdf_resp.status_code == 200:
+                                        extracted_text = self.extract_text_from_pdf(pdf_resp.content)
+                                        if extracted_text and len(extracted_text) > 1000:
+                                            content = extracted_text
+                                    time.sleep(1)  # Be nice to the server
+                                except Exception as e:
+                                    print(f"    Failed to download PDF for {title}: {e}")
+
+                            # Fallback to reference if no PDF content
+                            if not content:
+                                content = f"""Loeb Classical Library Volume {vol_num}
 
 Author: {author}
 Title: {title}
 
-The Loeb Classical Library presents Greek and Latin texts with facing English translations. This is a reference entry - the full text is available as PDF.
+The Loeb Classical Library presents Greek and Latin texts with facing English translations.
 
-{f'Download PDF: {pdf_url}' if pdf_url else ''}
+{f'PDF available at: {pdf_url}' if pdf_url else ''}
 
 About the Loeb Classical Library:
 Founded in 1911, the Loeb Classical Library is the only existing series of books which, through original text and facing English translation, gives access to all that is important in Greek and Latin literature."""
 
-                            book = Book(
-                                id=None,
-                                title=full_title,
-                                author=author,
-                                source=self.name,
-                                language="english",
-                                content=content,
-                                url=pdf_url or self.base_url,
-                            )
-                            self.library.add_book(book)
-                            works_added += 1
+                            if self.add_validated_book(full_title, author, content, "english", pdf_url or self.base_url):
+                                works_added += 1
 
         except Exception as e:
             print(f"  error: {e}")
 
-        print(f"  + added {works_added} works (references)")
+        print(f"  + added {works_added} Loeb volumes")
         return works_added
 
 
@@ -2266,302 +2397,96 @@ class ArlimaDownloader(SourceDownloader):
 
 
 class PerseusDownloader(SourceDownloader):
-    """Download from Perseus Digital Library (Greek and Latin texts)."""
+    """Download ALL texts from Perseus Digital Library (Greek and Latin)."""
 
     name = "perseus"
-    description = "Perseus Digital Library (Greek/Latin classics)"
+    description = "Perseus Digital Library - ALL Greek/Latin classics"
     base_url = "https://www.perseus.tufts.edu"
 
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from Perseus Digital Library...")
+        print(f"\n>> downloading ALL from Perseus Digital Library...")
         works_added = 0
 
-        # Perseus has well-structured catalog - comprehensive list of Greek/Latin works
-        greek_latin_works = [
-            # =====================
-            # GREEK EPIC
-            # =====================
-            ("Iliad", "Homer", "Perseus:text:1999.01.0134"),
-            ("Odyssey", "Homer", "Perseus:text:1999.01.0136"),
-            ("Theogony", "Hesiod", "Perseus:text:1999.01.0130"),
-            ("Works and Days", "Hesiod", "Perseus:text:1999.01.0132"),
-            ("Shield of Heracles", "Hesiod", "Perseus:text:1999.01.0128"),
-            ("Homeric Hymns", "Anonymous", "Perseus:text:1999.01.0138"),
-            ("Argonautica", "Apollonius Rhodius", "Perseus:text:1999.01.0228"),
-
-            # =====================
-            # GREEK TRAGEDY - Aeschylus (all 7 plays)
-            # =====================
-            ("Agamemnon", "Aeschylus", "Perseus:text:1999.01.0004"),
-            ("Libation Bearers", "Aeschylus", "Perseus:text:1999.01.0008"),
-            ("Eumenides", "Aeschylus", "Perseus:text:1999.01.0006"),
-            ("Prometheus Bound", "Aeschylus", "Perseus:text:1999.01.0010"),
-            ("Persians", "Aeschylus", "Perseus:text:1999.01.0012"),
-            ("Seven Against Thebes", "Aeschylus", "Perseus:text:1999.01.0014"),
-            ("Suppliants", "Aeschylus", "Perseus:text:1999.01.0016"),
-
-            # =====================
-            # GREEK TRAGEDY - Sophocles (all 7 plays)
-            # =====================
-            ("Oedipus Rex", "Sophocles", "Perseus:text:1999.01.0192"),
-            ("Oedipus at Colonus", "Sophocles", "Perseus:text:1999.01.0190"),
-            ("Antigone", "Sophocles", "Perseus:text:1999.01.0186"),
-            ("Ajax", "Sophocles", "Perseus:text:1999.01.0183"),
-            ("Electra", "Sophocles", "Perseus:text:1999.01.0187"),
-            ("Philoctetes", "Sophocles", "Perseus:text:1999.01.0193"),
-            ("Trachiniae", "Sophocles", "Perseus:text:1999.01.0195"),
-
-            # =====================
-            # GREEK TRAGEDY - Euripides (all 18 plays)
-            # =====================
-            ("Alcestis", "Euripides", "Perseus:text:1999.01.0088"),
-            ("Andromache", "Euripides", "Perseus:text:1999.01.0090"),
-            ("Bacchae", "Euripides", "Perseus:text:1999.01.0092"),
-            ("Children of Heracles", "Euripides", "Perseus:text:1999.01.0099"),
-            ("Cyclops", "Euripides", "Perseus:text:1999.01.0094"),
-            ("Electra", "Euripides", "Perseus:text:1999.01.0096"),
-            ("Hecuba", "Euripides", "Perseus:text:1999.01.0098"),
-            ("Helen", "Euripides", "Perseus:text:1999.01.0100"),
-            ("Heracles", "Euripides", "Perseus:text:1999.01.0102"),
-            ("Hippolytus", "Euripides", "Perseus:text:1999.01.0106"),
-            ("Ion", "Euripides", "Perseus:text:1999.01.0108"),
-            ("Iphigenia at Aulis", "Euripides", "Perseus:text:1999.01.0110"),
-            ("Iphigenia in Tauris", "Euripides", "Perseus:text:1999.01.0112"),
-            ("Medea", "Euripides", "Perseus:text:1999.01.0114"),
-            ("Orestes", "Euripides", "Perseus:text:1999.01.0116"),
-            ("Phoenician Women", "Euripides", "Perseus:text:1999.01.0118"),
-            ("Rhesus", "Euripides", "Perseus:text:1999.01.0120"),
-            ("Suppliants", "Euripides", "Perseus:text:1999.01.0122"),
-            ("Trojan Women", "Euripides", "Perseus:text:1999.01.0124"),
-
-            # =====================
-            # GREEK COMEDY - Aristophanes (all 11 plays)
-            # =====================
-            ("Acharnians", "Aristophanes", "Perseus:text:1999.01.0022"),
-            ("Birds", "Aristophanes", "Perseus:text:1999.01.0026"),
-            ("Clouds", "Aristophanes", "Perseus:text:1999.01.0024"),
-            ("Ecclesiazusae", "Aristophanes", "Perseus:text:1999.01.0028"),
-            ("Frogs", "Aristophanes", "Perseus:text:1999.01.0032"),
-            ("Knights", "Aristophanes", "Perseus:text:1999.01.0034"),
-            ("Lysistrata", "Aristophanes", "Perseus:text:1999.01.0036"),
-            ("Peace", "Aristophanes", "Perseus:text:1999.01.0038"),
-            ("Plutus", "Aristophanes", "Perseus:text:1999.01.0040"),
-            ("Thesmophoriazusae", "Aristophanes", "Perseus:text:1999.01.0042"),
-            ("Wasps", "Aristophanes", "Perseus:text:1999.01.0044"),
-
-            # =====================
-            # GREEK HISTORY
-            # =====================
-            ("Histories", "Herodotus", "Perseus:text:1999.01.0126"),
-            ("History of the Peloponnesian War", "Thucydides", "Perseus:text:1999.01.0200"),
-            ("Anabasis", "Xenophon", "Perseus:text:1999.01.0202"),
-            ("Cyropaedia", "Xenophon", "Perseus:text:1999.01.0204"),
-            ("Hellenica", "Xenophon", "Perseus:text:1999.01.0206"),
-            ("Memorabilia", "Xenophon", "Perseus:text:1999.01.0208"),
-            ("Oeconomicus", "Xenophon", "Perseus:text:1999.01.0210"),
-            ("Symposium", "Xenophon", "Perseus:text:1999.01.0212"),
-            ("Apology", "Xenophon", "Perseus:text:1999.01.0214"),
-            ("Constitution of the Lacedaemonians", "Xenophon", "Perseus:text:1999.01.0216"),
-            ("Ways and Means", "Xenophon", "Perseus:text:1999.01.0218"),
-            ("On Horsemanship", "Xenophon", "Perseus:text:1999.01.0220"),
-            ("Hiero", "Xenophon", "Perseus:text:1999.01.0222"),
-            ("Agesilaus", "Xenophon", "Perseus:text:1999.01.0224"),
-            ("Histories", "Polybius", "Perseus:text:1999.01.0234"),
-            ("Library of History", "Diodorus Siculus", "Perseus:text:1999.01.0084"),
-            ("Roman Antiquities", "Dionysius of Halicarnassus", "Perseus:text:1999.01.0086"),
-            ("Geography", "Strabo", "Perseus:text:1999.01.0198"),
-            ("Description of Greece", "Pausanias", "Perseus:text:1999.01.0160"),
-
-            # =====================
-            # GREEK BIOGRAPHY
-            # =====================
-            ("Parallel Lives", "Plutarch", "Perseus:text:1999.01.0182"),
-            ("Moralia", "Plutarch", "Perseus:text:1999.01.0180"),
-            ("Lives of Eminent Philosophers", "Diogenes Laertius", "Perseus:text:1999.01.0258"),
-
-            # =====================
-            # GREEK PHILOSOPHY - Plato (complete dialogues)
-            # =====================
-            ("Apology", "Plato", "Perseus:text:1999.01.0170"),
-            ("Charmides", "Plato", "Perseus:text:1999.01.0176"),
-            ("Cratylus", "Plato", "Perseus:text:1999.01.0172"),
-            ("Critias", "Plato", "Perseus:text:1999.01.0167"),
-            ("Crito", "Plato", "Perseus:text:1999.01.0171"),
-            ("Euthydemus", "Plato", "Perseus:text:1999.01.0178"),
-            ("Euthyphro", "Plato", "Perseus:text:1999.01.0169"),
-            ("Gorgias", "Plato", "Perseus:text:1999.01.0166"),
-            ("Ion", "Plato", "Perseus:text:1999.01.0179"),
-            ("Laches", "Plato", "Perseus:text:1999.01.0177"),
-            ("Laws", "Plato", "Perseus:text:1999.01.0166"),
-            ("Lysis", "Plato", "Perseus:text:1999.01.0175"),
-            ("Menexenus", "Plato", "Perseus:text:1999.01.0180"),
-            ("Meno", "Plato", "Perseus:text:1999.01.0174"),
-            ("Parmenides", "Plato", "Perseus:text:1999.01.0173"),
-            ("Phaedo", "Plato", "Perseus:text:1999.01.0170"),
-            ("Phaedrus", "Plato", "Perseus:text:1999.01.0174"),
-            ("Philebus", "Plato", "Perseus:text:1999.01.0173"),
-            ("Protagoras", "Plato", "Perseus:text:1999.01.0178"),
-            ("Republic", "Plato", "Perseus:text:1999.01.0168"),
-            ("Sophist", "Plato", "Perseus:text:1999.01.0172"),
-            ("Statesman", "Plato", "Perseus:text:1999.01.0172"),
-            ("Symposium", "Plato", "Perseus:text:1999.01.0174"),
-            ("Theaetetus", "Plato", "Perseus:text:1999.01.0172"),
-            ("Timaeus", "Plato", "Perseus:text:1999.01.0167"),
-
-            # =====================
-            # GREEK PHILOSOPHY - Aristotle
-            # =====================
-            ("Nicomachean Ethics", "Aristotle", "Perseus:text:1999.01.0054"),
-            ("Politics", "Aristotle", "Perseus:text:1999.01.0058"),
-            ("Poetics", "Aristotle", "Perseus:text:1999.01.0056"),
-            ("Rhetoric", "Aristotle", "Perseus:text:1999.01.0060"),
-            ("Constitution of Athens", "Aristotle", "Perseus:text:1999.01.0046"),
-            ("Eudemian Ethics", "Aristotle", "Perseus:text:1999.01.0049"),
-            ("Metaphysics", "Aristotle", "Perseus:text:1999.01.0052"),
-            ("On the Soul", "Aristotle", "Perseus:text:1999.01.0046"),
-            ("Physics", "Aristotle", "Perseus:text:1999.01.0049"),
-            ("Categories", "Aristotle", "Perseus:text:1999.01.0046"),
-            ("On Interpretation", "Aristotle", "Perseus:text:1999.01.0046"),
-            ("Prior Analytics", "Aristotle", "Perseus:text:1999.01.0046"),
-            ("Posterior Analytics", "Aristotle", "Perseus:text:1999.01.0046"),
-            ("Topics", "Aristotle", "Perseus:text:1999.01.0046"),
-
-            # =====================
-            # GREEK ORATORY
-            # =====================
-            ("Orations", "Demosthenes", "Perseus:text:1999.01.0072"),
-            ("On the Crown", "Demosthenes", "Perseus:text:1999.01.0074"),
-            ("Philippics", "Demosthenes", "Perseus:text:1999.01.0076"),
-            ("Against Ctesiphon", "Aeschines", "Perseus:text:1999.01.0002"),
-            ("Against Timarchus", "Aeschines", "Perseus:text:1999.01.0001"),
-            ("Orations", "Isocrates", "Perseus:text:1999.01.0144"),
-            ("Orations", "Lysias", "Perseus:text:1999.01.0154"),
-            ("Orations", "Andocides", "Perseus:text:1999.01.0018"),
-            ("Orations", "Antiphon", "Perseus:text:1999.01.0020"),
-            ("Orations", "Dinarchus", "Perseus:text:1999.01.0082"),
-            ("Orations", "Hyperides", "Perseus:text:1999.01.0140"),
-            ("Orations", "Isaeus", "Perseus:text:1999.01.0142"),
-            ("Orations", "Lycurgus", "Perseus:text:1999.01.0152"),
-
-            # =====================
-            # GREEK POETRY
-            # =====================
-            ("Odes", "Pindar", "Perseus:text:1999.01.0162"),
-            ("Idylls", "Theocritus", "Perseus:text:1999.01.0261"),
-            ("Epigrams", "Callimachus", "Perseus:text:1999.01.0260"),
-
-            # =====================
-            # LATIN EPIC
-            # =====================
-            ("Aeneid", "Virgil", "Perseus:text:1999.02.0055"),
-            ("Eclogues", "Virgil", "Perseus:text:1999.02.0056"),
-            ("Georgics", "Virgil", "Perseus:text:1999.02.0057"),
-            ("Metamorphoses", "Ovid", "Perseus:text:1999.02.0028"),
-            ("Amores", "Ovid", "Perseus:text:1999.02.0025"),
-            ("Ars Amatoria", "Ovid", "Perseus:text:1999.02.0026"),
-            ("Fasti", "Ovid", "Perseus:text:1999.02.0027"),
-            ("Heroides", "Ovid", "Perseus:text:1999.02.0029"),
-            ("Tristia", "Ovid", "Perseus:text:1999.02.0030"),
-            ("Thebaid", "Statius", "Perseus:text:1999.02.0054"),
-            ("Achilleid", "Statius", "Perseus:text:1999.02.0053"),
-            ("Silvae", "Statius", "Perseus:text:1999.02.0052"),
-            ("Pharsalia", "Lucan", "Perseus:text:1999.02.0133"),
-            ("Argonautica", "Valerius Flaccus", "Perseus:text:1999.02.0151"),
-            ("Punica", "Silius Italicus", "Perseus:text:1999.02.0148"),
-
-            # =====================
-            # LATIN POETRY - Lyric and Satire
-            # =====================
-            ("Odes", "Horace", "Perseus:text:1999.02.0024"),
-            ("Satires", "Horace", "Perseus:text:1999.02.0022"),
-            ("Epistles", "Horace", "Perseus:text:1999.02.0023"),
-            ("Ars Poetica", "Horace", "Perseus:text:1999.02.0021"),
-            ("Carmen Saeculare", "Horace", "Perseus:text:1999.02.0020"),
-            ("Epodes", "Horace", "Perseus:text:1999.02.0019"),
-            ("Poems", "Catullus", "Perseus:text:1999.02.0003"),
-            ("Satires", "Juvenal", "Perseus:text:1999.02.0125"),
-            ("Satires", "Persius", "Perseus:text:1999.02.0044"),
-            ("Epigrams", "Martial", "Perseus:text:1999.02.0126"),
-            ("Elegies", "Propertius", "Perseus:text:1999.02.0045"),
-            ("Elegies", "Tibullus", "Perseus:text:1999.02.0149"),
-
-            # =====================
-            # LATIN HISTORY
-            # =====================
-            ("Ab Urbe Condita", "Livy", "Perseus:text:1999.02.0026"),
-            ("Gallic Wars", "Caesar", "Perseus:text:1999.02.0001"),
-            ("Civil War", "Caesar", "Perseus:text:1999.02.0002"),
-            ("Annals", "Tacitus", "Perseus:text:1999.02.0078"),
-            ("Histories", "Tacitus", "Perseus:text:1999.02.0080"),
-            ("Agricola", "Tacitus", "Perseus:text:1999.02.0076"),
-            ("Germania", "Tacitus", "Perseus:text:1999.02.0079"),
-            ("Dialogue on Orators", "Tacitus", "Perseus:text:1999.02.0077"),
-            ("Lives of the Caesars", "Suetonius", "Perseus:text:1999.02.0132"),
-            ("Catiline's War", "Sallust", "Perseus:text:1999.02.0124"),
-            ("Jugurthine War", "Sallust", "Perseus:text:1999.02.0123"),
-            ("Epitome of Roman History", "Florus", "Perseus:text:1999.02.0127"),
-            ("History of Rome", "Velleius Paterculus", "Perseus:text:1999.02.0152"),
-            ("Breviarium", "Eutropius", "Perseus:text:1999.02.0128"),
-            ("De Viris Illustribus", "Cornelius Nepos", "Perseus:text:1999.02.0008"),
-
-            # =====================
-            # LATIN PHILOSOPHY
-            # =====================
-            ("De Officiis", "Cicero", "Perseus:text:1999.02.0011"),
-            ("De Natura Deorum", "Cicero", "Perseus:text:1999.02.0010"),
-            ("De Finibus", "Cicero", "Perseus:text:1999.02.0009"),
-            ("Tusculan Disputations", "Cicero", "Perseus:text:1999.02.0015"),
-            ("De Amicitia", "Cicero", "Perseus:text:1999.02.0007"),
-            ("De Senectute", "Cicero", "Perseus:text:1999.02.0014"),
-            ("Academica", "Cicero", "Perseus:text:1999.02.0004"),
-            ("De Divinatione", "Cicero", "Perseus:text:1999.02.0008"),
-            ("De Fato", "Cicero", "Perseus:text:1999.02.0009"),
-            ("De Legibus", "Cicero", "Perseus:text:1999.02.0009"),
-            ("De Re Publica", "Cicero", "Perseus:text:1999.02.0013"),
-            ("De Rerum Natura", "Lucretius", "Perseus:text:1999.02.0131"),
-            ("Meditations", "Marcus Aurelius", "Perseus:text:1999.02.0006"),
-            ("Moral Letters", "Seneca", "Perseus:text:1999.02.0047"),
-            ("De Beneficiis", "Seneca", "Perseus:text:1999.02.0046"),
-            ("De Clementia", "Seneca", "Perseus:text:1999.02.0048"),
-            ("De Ira", "Seneca", "Perseus:text:1999.02.0049"),
-            ("De Brevitate Vitae", "Seneca", "Perseus:text:1999.02.0050"),
-            ("Natural Questions", "Seneca", "Perseus:text:1999.02.0051"),
-
-            # =====================
-            # LATIN ORATORY
-            # =====================
-            ("Orations", "Cicero", "Perseus:text:1999.02.0005"),
-            ("In Catilinam", "Cicero", "Perseus:text:1999.02.0006"),
-            ("Pro Archia", "Cicero", "Perseus:text:1999.02.0012"),
-            ("Pro Milone", "Cicero", "Perseus:text:1999.02.0017"),
-            ("Philippics", "Cicero", "Perseus:text:1999.02.0016"),
-            ("Brutus", "Cicero", "Perseus:text:1999.02.0018"),
-            ("De Oratore", "Cicero", "Perseus:text:1999.02.0005"),
-            ("Orator", "Cicero", "Perseus:text:1999.02.0007"),
-            ("Institutio Oratoria", "Quintilian", "Perseus:text:1999.02.0135"),
-
-            # =====================
-            # LATIN PROSE - Miscellaneous
-            # =====================
-            ("Letters", "Pliny the Younger", "Perseus:text:1999.02.0138"),
-            ("Natural History", "Pliny the Elder", "Perseus:text:1999.02.0137"),
-            ("Satyricon", "Petronius", "Perseus:text:1999.02.0043"),
-            ("Golden Ass", "Apuleius", "Perseus:text:1999.02.0129"),
-            ("Attic Nights", "Aulus Gellius", "Perseus:text:1999.02.0130"),
-            ("De Architectura", "Vitruvius", "Perseus:text:1999.02.0153"),
-            ("De Re Rustica", "Columella", "Perseus:text:1999.02.0154"),
-            ("De Agri Cultura", "Cato the Elder", "Perseus:text:1999.02.0155"),
-            ("Res Rusticae", "Varro", "Perseus:text:1999.02.0156"),
-            ("Confessions", "Augustine", "Perseus:text:1999.02.0157"),
-            ("City of God", "Augustine", "Perseus:text:1999.02.0158"),
+        # Scrape the entire Perseus Greek and Roman collection dynamically
+        collections = [
+            ("Perseus:collection:Greco-Roman", "Greek and Roman"),
+            ("Perseus:collection:GrecoRoman", "Greco-Roman"),
         ]
 
-        for title, author, urn in tqdm(greek_latin_works, desc="works"):
+        all_texts = []
+
+        # Get all texts from each collection
+        for collection_id, collection_name in collections:
+            try:
+                catalog_url = f"{self.base_url}/hopper/collection?collection={quote(collection_id)}"
+                resp = self.safe_get(catalog_url, retries=2)
+                if not resp:
+                    continue
+
+                soup = BeautifulSoup(resp.text, "lxml")
+
+                # Find all text links in the collection
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    text = link.get_text(strip=True)
+
+                    # Look for text document links
+                    if "doc=Perseus" in href and ":text:" in href:
+                        # Extract the URN
+                        match = re.search(r"doc=(Perseus[^&\"']+)", href)
+                        if match:
+                            urn = match.group(1)
+                            # Parse title and author from text if possible
+                            title = text if text else urn.split(":")[-1]
+                            all_texts.append((title, urn))
+
+            except Exception:
+                pass
+
+        # Also crawl author pages for comprehensive coverage
+        author_index_url = f"{self.base_url}/hopper/collection?collection=Perseus:collection:Greco-Roman"
+        try:
+            resp = self.safe_get(author_index_url, retries=2)
+            if resp:
+                soup = BeautifulSoup(resp.text, "lxml")
+
+                # Find author collection links
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    if "collection=" in href and "Perseus:collection" in href:
+                        author_url = urljoin(self.base_url, href)
+                        try:
+                            author_resp = self.safe_get(author_url, retries=1)
+                            if author_resp:
+                                author_soup = BeautifulSoup(author_resp.text, "lxml")
+                                for text_link in author_soup.find_all("a", href=True):
+                                    text_href = text_link.get("href", "")
+                                    text_title = text_link.get_text(strip=True)
+                                    if "doc=Perseus" in text_href and ":text:" in text_href:
+                                        match = re.search(r"doc=(Perseus[^&\"']+)", text_href)
+                                        if match:
+                                            urn = match.group(1)
+                                            all_texts.append((text_title, urn))
+                            time.sleep(0.2)
+                        except Exception:
+                            pass
+        except Exception:
+            pass
+
+        # Deduplicate by URN
+        seen_urns = set()
+        unique_texts = []
+        for title, urn in all_texts:
+            if urn not in seen_urns:
+                seen_urns.add(urn)
+                unique_texts.append((title, urn))
+
+        print(f"  found {len(unique_texts)} unique texts in Perseus catalog")
+
+        # Download each text
+        for title, urn in tqdm(unique_texts, desc="texts"):
             if limit and works_added >= limit:
                 break
-
-            if self.library.book_exists(title, author, self.name):
-                continue
 
             try:
                 text_url = f"{self.base_url}/hopper/text?doc={quote(urn)}"
@@ -2571,6 +2496,31 @@ class PerseusDownloader(SourceDownloader):
 
                 soup = BeautifulSoup(resp.text, "lxml")
 
+                # Extract author from page if available
+                author = "Unknown"
+                author_elem = soup.find("span", class_="author")
+                if author_elem:
+                    author = author_elem.get_text(strip=True)
+                else:
+                    # Try to extract from breadcrumb or header
+                    header = soup.find("div", class_="header")
+                    if header:
+                        header_text = header.get_text()
+                        # Pattern like "Homer, Iliad"
+                        if "," in header_text:
+                            parts = header_text.split(",")
+                            author = parts[0].strip()
+
+                # Extract better title from page
+                title_elem = soup.find("span", class_="title")
+                if title_elem:
+                    title = title_elem.get_text(strip=True)
+
+                # Skip if already exists
+                if self.library.book_exists(title, author, self.name):
+                    continue
+
+                # Find text content
                 text_div = soup.find("div", {"class": "text_container"})
                 if not text_div:
                     text_div = soup.find("div", {"id": "text_container"})
@@ -2584,8 +2534,11 @@ class PerseusDownloader(SourceDownloader):
                     content = text_div.get_text(separator="\n")
                     content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
+                    # Determine language from URN
+                    language = "greek" if ".01." in urn else "latin" if ".02." in urn else "english"
+
                     if len(content) > 500:
-                        if self.add_validated_book(title, author, content, "english", text_url):
+                        if self.add_validated_book(title, author, content, language, text_url):
                             works_added += 1
 
                 time.sleep(0.3)

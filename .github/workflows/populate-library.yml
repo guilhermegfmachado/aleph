@@ -20,7 +20,6 @@ on:
           - all
           - mit
           - gutenberg
-          - sacred
           - dante
           - marxists
           - stanford
@@ -38,8 +37,6 @@ on:
           - iranica
           - wisdomlib
           - arlima
-          - bartleby
-          - fordham
       limit:
         description: 'Max books per source (leave empty for all, only for add)'
         required: false
@@ -63,7 +60,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 lxml tqdm
+          pip install requests beautifulsoup4 lxml tqdm PyMuPDF
 
       - name: Create data directory
         run: |

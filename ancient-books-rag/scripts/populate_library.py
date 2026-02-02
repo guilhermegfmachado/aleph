@@ -92,7 +92,7 @@ BOILERPLATE_PATTERNS = [
 ENCODING_GARBAGE_PATTERNS = [
     r"ï»¿",              # BOM
     r"Ã©|Ã¨|Ãª|Ã |Ã¢",  # Broken French accents
-    r"â€"|â€™|â€œ|â€",   # Broken quotes/dashes
+    r"â€|â€™|â€œ|â€",   # Broken quotes/dashes
     r"Â |Â·|Â»|Â«",      # Broken spacing/guillemets
     r"Ã¼|Ã¶|Ã¤|Ã",      # Broken German umlauts
     r"Ã§|Ã±",            # Broken cedilla/tilde

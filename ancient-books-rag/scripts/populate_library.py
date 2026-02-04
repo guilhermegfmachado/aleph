@@ -1069,150 +1069,48 @@ class MarxistsDownloader(SourceDownloader):
 
 
 class StanfordEncyclopediaDownloader(SourceDownloader):
-    """Download from Stanford Encyclopedia of Philosophy."""
+    """Download ALL entries from Stanford Encyclopedia of Philosophy."""
 
     name = "stanford"
-    description = "Stanford Encyclopedia of Philosophy"
+    description = "Stanford Encyclopedia of Philosophy - ALL entries"
     base_url = "https://plato.stanford.edu"
 
     def download_all(self, limit: int | None = None):
-        print(f"\n>> downloading from Stanford Encyclopedia of Philosophy...")
+        print(f"\n>> downloading ALL from Stanford Encyclopedia of Philosophy...")
         works_added = 0
 
-        # Comprehensive list of important philosophy entries
-        # SEP has ~1800 entries but we'll start with key philosophical topics
-        entries = [
-            # Ancient Philosophy
-            ("Plato", "plato"),
-            ("Aristotle", "aristotle"),
-            ("Socrates", "socrates"),
-            ("Presocratic Philosophy", "presocratics"),
-            ("Ancient Ethics", "ethics-ancient"),
-            ("Stoicism", "stoicism"),
-            ("Epicurus", "epicurus"),
-            ("Ancient Skepticism", "skepticism-ancient"),
-            ("Plotinus", "plotinus"),
-            ("Neoplatonism", "neoplatonism"),
+        # Fetch the complete contents page to get ALL entries
+        contents_url = f"{self.base_url}/contents.html"
+        entries = []
 
-            # Medieval Philosophy
-            ("Augustine", "augustine"),
-            ("Thomas Aquinas", "aquinas"),
-            ("Medieval Philosophy", "medieval-philosophy"),
-            ("Anselm of Canterbury", "anselm"),
-            ("Duns Scotus", "duns-scotus"),
-            ("William of Ockham", "ockham"),
-            ("Maimonides", "maimonides"),
-            ("Averroes", "ibn-rushd"),
-            ("Avicenna", "ibn-sina"),
+        try:
+            response = self.safe_get(contents_url, retries=3)
+            if response:
+                soup = BeautifulSoup(response.text, "lxml")
 
-            # Early Modern Philosophy
-            ("Descartes", "descartes"),
-            ("Spinoza", "spinoza"),
-            ("Leibniz", "leibniz"),
-            ("Locke", "locke"),
-            ("Berkeley", "berkeley"),
-            ("Hume", "hume"),
-            ("Kant", "kant"),
-            ("Hobbes", "hobbes"),
-            ("Rousseau", "rousseau"),
+                # Find all entry links - they're in format /entries/slug/
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
 
-            # 19th Century Philosophy
-            ("Hegel", "hegel"),
-            ("Marx", "marx"),
-            ("Nietzsche", "nietzsche"),
-            ("Kierkegaard", "kierkegaard"),
-            ("Schopenhauer", "schopenhauer"),
-            ("John Stuart Mill", "mill"),
-            ("William James", "james"),
-            ("Charles Sanders Peirce", "peirce"),
+                    # Match entry URLs
+                    if "/entries/" in href and title and len(title) > 2:
+                        # Extract slug from href
+                        match = re.search(r"/entries/([^/]+)/?", href)
+                        if match:
+                            slug = match.group(1)
+                            # Skip index and navigation pages
+                            if slug not in ["index", "index.html", ""]:
+                                entry_url = f"{self.base_url}/entries/{slug}/"
+                                if entry_url not in [e[1] for e in entries]:
+                                    entries.append((title, entry_url, slug))
 
-            # 20th Century Philosophy
-            ("Wittgenstein", "wittgenstein"),
-            ("Heidegger", "heidegger"),
-            ("Husserl", "husserl"),
-            ("Sartre", "sartre"),
-            ("Bertrand Russell", "russell"),
-            ("Frege", "frege"),
-            ("Quine", "quine"),
-            ("Rawls", "rawls"),
-            ("Foucault", "foucault"),
-            ("Derrida", "derrida"),
+        except Exception as e:
+            print(f"  error fetching contents: {e}")
 
-            # Core Areas
-            ("Metaphysics", "metaphysics"),
-            ("Epistemology", "epistemology"),
-            ("Ethics", "ethics-virtue"),
-            ("Logic", "logic-classical"),
-            ("Philosophy of Mind", "philosophy-mind"),
-            ("Philosophy of Language", "philosophy-language"),
-            ("Philosophy of Science", "scientific-method"),
-            ("Political Philosophy", "political-philosophy"),
-            ("Aesthetics", "aesthetics"),
-            ("Philosophy of Religion", "philosophy-religion"),
+        print(f"  found {len(entries)} entries in SEP catalog")
 
-            # Key Concepts
-            ("Free Will", "freewill"),
-            ("Personal Identity", "identity-personal"),
-            ("Consciousness", "consciousness"),
-            ("Truth", "truth"),
-            ("Knowledge", "knowledge-analysis"),
-            ("Causation", "causation-metaphysics"),
-            ("Time", "time"),
-            ("Space", "space"),
-            ("Properties", "properties"),
-            ("Substance", "substance"),
-            ("Universals", "universals-medieval"),
-            ("Possible Worlds", "possible-worlds"),
-
-            # Ethics & Political
-            ("Utilitarianism", "utilitarianism"),
-            ("Deontological Ethics", "ethics-deontological"),
-            ("Virtue Ethics", "ethics-virtue"),
-            ("Moral Relativism", "moral-relativism"),
-            ("Natural Law", "natural-law-theories"),
-            ("Social Contract", "contractarianism"),
-            ("Justice", "justice"),
-            ("Rights", "rights"),
-            ("Democracy", "democracy"),
-            ("Liberalism", "liberalism"),
-            ("Feminism", "feminism-topics"),
-
-            # Philosophy of Mind
-            ("Dualism", "dualism"),
-            ("Physicalism", "physicalism"),
-            ("Functionalism", "functionalism"),
-            ("Mental Causation", "mental-causation"),
-            ("Intentionality", "intentionality"),
-            ("Qualia", "qualia"),
-            ("The Mind-Body Problem", "mind-body"),
-
-            # Logic & Language
-            ("Propositional Logic", "logic-propositional"),
-            ("First-Order Logic", "logic-firstorder"),
-            ("Modal Logic", "logic-modal"),
-            ("Reference", "reference"),
-            ("Meaning", "meaning"),
-            ("Speech Acts", "speech-acts"),
-
-            # Epistemology
-            ("A Priori Knowledge", "apriori"),
-            ("Empiricism", "rationalism-empiricism"),
-            ("Skepticism", "skepticism"),
-            ("Justification", "justification-public"),
-            ("Perception", "perception-contents"),
-
-            # Metaphysics
-            ("Existence", "existence"),
-            ("Identity", "identity"),
-            ("Modality", "modality-epistemology"),
-            ("Abstract Objects", "abstract-objects"),
-            ("Nominalism", "nominalism-metaphysics"),
-            ("Realism", "realism"),
-        ]
-
-        print(f"  processing {len(entries)} philosophy entries...")
-
-        for title, slug in tqdm(entries, desc="entries"):
+        for title, entry_url, slug in tqdm(entries, desc="entries"):
             if limit and works_added >= limit:
                 break
 
@@ -1220,14 +1118,23 @@ class StanfordEncyclopediaDownloader(SourceDownloader):
                 continue
 
             try:
-                entry_url = f"{self.base_url}/entries/{slug}/"
                 response = self.safe_get(entry_url, retries=2)
                 if not response:
                     continue
 
                 soup = BeautifulSoup(response.text, "lxml")
 
-                # Get main content - SEP uses id="main-text" or "aueditable"
+                # Get article author if available
+                author = "Stanford Encyclopedia"
+                author_div = soup.find("div", {"id": "article-copyright"})
+                if author_div:
+                    author_text = author_div.get_text()
+                    # Extract author name from copyright notice
+                    match = re.search(r"by\s+([^,]+)", author_text)
+                    if match:
+                        author = match.group(1).strip()
+
+                # Get main content
                 main_content = soup.find("div", {"id": "main-text"})
                 if not main_content:
                     main_content = soup.find("div", {"id": "aueditable"})
@@ -1240,19 +1147,19 @@ class StanfordEncyclopediaDownloader(SourceDownloader):
                     # Remove unwanted elements
                     for tag in main_content.find_all(["script", "style", "nav", "aside", "footer"]):
                         tag.decompose()
-                    for tag in main_content.find_all(class_=re.compile("(toc|nav|menu|sidebar)")):
+                    for tag in main_content.find_all(class_=re.compile("(toc|nav|menu|sidebar|copyright)")):
                         tag.decompose()
 
                     content = main_content.get_text(separator="\n")
                     content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
                     if len(content) > 1000:
-                        if self.add_validated_book(title, "Stanford Encyclopedia", content, "english", entry_url):
+                        if self.add_validated_book(title, author, content, "english", entry_url):
                             works_added += 1
 
-                time.sleep(0.3)
+                time.sleep(0.2)
 
-            except Exception as e:
+            except Exception:
                 pass
 
         print(f"  + added {works_added} entries")
@@ -2509,83 +2416,105 @@ class PerseusDownloader(SourceDownloader):
     description = "Perseus Digital Library - ALL Greek/Latin classics"
     base_url = "https://www.perseus.tufts.edu"
 
+    def crawl_collections_recursive(self, url, visited_collections, all_texts, depth=0):
+        """Recursively crawl Perseus collections to find all texts."""
+        if depth > 5 or url in visited_collections:
+            return
+        visited_collections.add(url)
+
+        try:
+            resp = self.safe_get(url, retries=2)
+            if not resp:
+                return
+
+            soup = BeautifulSoup(resp.text, "lxml")
+
+            # Find all links
+            for link in soup.find_all("a", href=True):
+                href = link.get("href", "")
+                text = link.get_text(strip=True)
+
+                # Text document links (what we want)
+                if "doc=Perseus" in href and ":text:" in href:
+                    match = re.search(r"doc=(Perseus[^&\"']+)", href)
+                    if match:
+                        urn = match.group(1)
+                        all_texts.append((text if text else urn.split(":")[-1], urn))
+
+                # Sub-collection links (recurse into)
+                elif "collection=" in href and "Perseus:collection" in href:
+                    full_url = urljoin(self.base_url, href)
+                    if full_url not in visited_collections:
+                        time.sleep(0.15)
+                        self.crawl_collections_recursive(full_url, visited_collections, all_texts, depth + 1)
+
+        except Exception:
+            pass
+
     def download_all(self, limit: int | None = None):
         print(f"\n>> downloading ALL from Perseus Digital Library...")
         works_added = 0
+        all_texts = []
+        visited_collections = set()
 
-        # Scrape the entire Perseus Greek and Roman collection dynamically
-        collections = [
-            ("Perseus:collection:Greco-Roman", "Greek and Roman"),
-            ("Perseus:collection:GrecoRoman", "Greco-Roman"),
+        # Start from main collection pages and recursively crawl everything
+        entry_points = [
+            f"{self.base_url}/hopper/collection?collection=Perseus%3Acollection%3AGreco-Roman",
+            f"{self.base_url}/hopper/collection?collection=Perseus:collection:Greco-Roman",
+            f"{self.base_url}/hopper/collection?collection=Perseus%3Acollection%3AGreece",
+            f"{self.base_url}/hopper/collection?collection=Perseus%3Acollection%3ARome",
+            f"{self.base_url}/hopper/collection?collection=Perseus%3Acollection%3APrimary%20Texts",
         ]
 
-        all_texts = []
+        print("  crawling Perseus collections recursively...")
+        for entry_url in entry_points:
+            self.crawl_collections_recursive(entry_url, visited_collections, all_texts)
 
-        # Get all texts from each collection
-        for collection_id, collection_name in collections:
-            try:
-                catalog_url = f"{self.base_url}/hopper/collection?collection={quote(collection_id)}"
-                resp = self.safe_get(catalog_url, retries=2)
-                if not resp:
-                    continue
+        print(f"  crawled {len(visited_collections)} collection pages")
 
+        # Also try the catalog browse pages directly
+        try:
+            catalog_url = f"{self.base_url}/hopper/browse"
+            resp = self.safe_get(catalog_url, retries=2)
+            if resp:
                 soup = BeautifulSoup(resp.text, "lxml")
-
-                # Find all text links in the collection
                 for link in soup.find_all("a", href=True):
                     href = link.get("href", "")
                     text = link.get_text(strip=True)
-
-                    # Look for text document links
                     if "doc=Perseus" in href and ":text:" in href:
-                        # Extract the URN
                         match = re.search(r"doc=(Perseus[^&\"']+)", href)
                         if match:
-                            urn = match.group(1)
-                            # Parse title and author from text if possible
-                            title = text if text else urn.split(":")[-1]
-                            all_texts.append((title, urn))
-
-            except Exception:
-                pass
-
-        # Also crawl author pages for comprehensive coverage
-        author_index_url = f"{self.base_url}/hopper/collection?collection=Perseus:collection:Greco-Roman"
-        try:
-            resp = self.safe_get(author_index_url, retries=2)
-            if resp:
-                soup = BeautifulSoup(resp.text, "lxml")
-
-                # Find author collection links
-                for link in soup.find_all("a", href=True):
-                    href = link.get("href", "")
-                    if "collection=" in href and "Perseus:collection" in href:
-                        author_url = urljoin(self.base_url, href)
-                        try:
-                            author_resp = self.safe_get(author_url, retries=1)
-                            if author_resp:
-                                author_soup = BeautifulSoup(author_resp.text, "lxml")
-                                for text_link in author_soup.find_all("a", href=True):
-                                    text_href = text_link.get("href", "")
-                                    text_title = text_link.get_text(strip=True)
-                                    if "doc=Perseus" in text_href and ":text:" in text_href:
-                                        match = re.search(r"doc=(Perseus[^&\"']+)", text_href)
-                                        if match:
-                                            urn = match.group(1)
-                                            all_texts.append((text_title, urn))
-                            time.sleep(0.2)
-                        except Exception:
-                            pass
+                            all_texts.append((text, match.group(1)))
         except Exception:
             pass
+
+        # Additionally, try systematic URN probing for known ranges
+        # Greek texts are typically 1999.01.XXXX, Latin are 1999.02.XXXX
+        print("  probing known URN ranges...")
+        for prefix, lang_name in [("1999.01", "Greek"), ("1999.02", "Latin")]:
+            for num in range(1, 400):  # Most texts are in lower ranges
+                urn = f"Perseus:text:{prefix}.{num:04d}"
+                text_url = f"{self.base_url}/hopper/text?doc={quote(urn)}"
+                try:
+                    resp = self.safe_get(text_url, retries=1, timeout=5)
+                    if resp and resp.status_code == 200 and "text_container" in resp.text:
+                        soup = BeautifulSoup(resp.text, "lxml")
+                        title_elem = soup.find("span", class_="title") or soup.find("title")
+                        title = title_elem.get_text(strip=True) if title_elem else f"{lang_name} Text {num}"
+                        all_texts.append((title, urn))
+                    time.sleep(0.1)
+                except Exception:
+                    pass
 
         # Deduplicate by URN
         seen_urns = set()
         unique_texts = []
         for title, urn in all_texts:
-            if urn not in seen_urns:
-                seen_urns.add(urn)
-                unique_texts.append((title, urn))
+            # Normalize URN
+            urn_clean = urn.replace("%3A", ":").replace("%2F", "/")
+            if urn_clean not in seen_urns:
+                seen_urns.add(urn_clean)
+                unique_texts.append((title, urn_clean))
 
         print(f"  found {len(unique_texts)} unique texts in Perseus catalog")
 
@@ -2602,39 +2531,67 @@ class PerseusDownloader(SourceDownloader):
 
                 soup = BeautifulSoup(resp.text, "lxml")
 
-                # Extract author from page if available
+                # Extract author from page
                 author = "Unknown"
+                # Try multiple places for author
                 author_elem = soup.find("span", class_="author")
                 if author_elem:
                     author = author_elem.get_text(strip=True)
                 else:
-                    # Try to extract from breadcrumb or header
+                    # Try header breadcrumb
                     header = soup.find("div", class_="header")
                     if header:
-                        header_text = header.get_text()
-                        # Pattern like "Homer, Iliad"
-                        if "," in header_text:
-                            parts = header_text.split(",")
-                            author = parts[0].strip()
+                        # Look for author link
+                        author_link = header.find("a", href=lambda h: h and "collection=" in h)
+                        if author_link:
+                            author = author_link.get_text(strip=True)
+                    # Try document info
+                    if author == "Unknown":
+                        doc_info = soup.find("div", class_="document_info")
+                        if doc_info:
+                            text = doc_info.get_text()
+                            if "," in text:
+                                author = text.split(",")[0].strip()
 
                 # Extract better title from page
                 title_elem = soup.find("span", class_="title")
                 if title_elem:
                     title = title_elem.get_text(strip=True)
+                else:
+                    # Try h1 or page title
+                    h1 = soup.find("h1")
+                    if h1:
+                        title = h1.get_text(strip=True)
+
+                # Clean up title and author
+                title = re.sub(r"\s+", " ", title).strip()
+                author = re.sub(r"\s+", " ", author).strip()
 
                 # Skip if already exists
                 if self.library.book_exists(title, author, self.name):
                     continue
 
-                # Find text content
-                text_div = soup.find("div", {"class": "text_container"})
+                # Find text content - try multiple selectors
+                text_div = None
+                for selector in [
+                    {"class": "text_container"},
+                    {"id": "text_container"},
+                    {"class": "perseus_text"},
+                    {"id": "content"},
+                ]:
+                    text_div = soup.find("div", selector)
+                    if text_div:
+                        break
+
                 if not text_div:
-                    text_div = soup.find("div", {"id": "text_container"})
-                if not text_div:
-                    text_div = soup.find("div", class_=re.compile("text"))
+                    # Fallback: find any div with significant text
+                    for div in soup.find_all("div"):
+                        if len(div.get_text(strip=True)) > 1000:
+                            text_div = div
+                            break
 
                 if text_div:
-                    for tag in text_div.find_all(["script", "style", "nav", "aside"]):
+                    for tag in text_div.find_all(["script", "style", "nav", "aside", "footer", "header"]):
                         tag.decompose()
 
                     content = text_div.get_text(separator="\n")
@@ -2647,7 +2604,7 @@ class PerseusDownloader(SourceDownloader):
                         if self.add_validated_book(title, author, content, language, text_url):
                             works_added += 1
 
-                time.sleep(0.3)
+                time.sleep(0.2)
 
             except Exception:
                 pass
@@ -2656,7 +2613,7 @@ class PerseusDownloader(SourceDownloader):
         return works_added
 
 
-# Available sources (18 total - Bartleby, Fordham, Sacred removed for quality)
+# Available sources (16 total - Bartleby, Fordham, Sacred, IEP, Wikisource removed)
 SOURCES = {
     # Core classical sources
     "mit": MITClassicsDownloader,
@@ -2664,8 +2621,6 @@ SOURCES = {
     "dante": DanteDownloader,
     "marxists": MarxistsDownloader,
     "stanford": StanfordEncyclopediaDownloader,
-    "iep": IEPDownloader,
-    "wikisource": WikisourceDownloader,
     "loebolus": LoebulusDownloader,
     "iqwiki": IQWikiDownloader,
     "perseus": PerseusDownloader,

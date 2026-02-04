@@ -19,6 +19,14 @@
         </header>
 
         <main>
+            <!-- Catalog Stats -->
+            <div class="catalog-stats" id="catalog-stats">
+                <div class="stats-summary">
+                    <span id="total-books">0</span> texts from <span id="total-sources">0</span> sources
+                </div>
+                <div class="stats-breakdown" id="stats-breakdown"></div>
+            </div>
+
             <div class="browse-filters">
                 <select id="author-filter">
                     <option value="">all authors</option>
@@ -30,6 +38,10 @@
                     <option value="title">sort by title</option>
                     <option value="author">sort by author</option>
                     <option value="source">sort by source</option>
+                </select>
+                <select id="view-filter">
+                    <option value="list">list view</option>
+                    <option value="compact">compact</option>
                 </select>
             </div>
 

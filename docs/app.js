@@ -271,6 +271,16 @@ function showError(message) {
     }
 }
 
+// Helper to generate correct book link based on book type
+function getBookLink(book, query = '') {
+    const queryParam = query ? `&q=${encodeURIComponent(query)}` : '';
+    if (book.isUserBook || String(book.id).startsWith('user_')) {
+        const userId = String(book.id).replace('user_', '');
+        return `book.html?user=${userId}${queryParam}`;
+    }
+    return `book.html?id=${book.id}${queryParam}`;
+}
+
 function showResults(results, query) {
     const resultsDiv = document.getElementById('results');
     if (!resultsDiv) return;
@@ -291,16 +301,17 @@ function showResults(results, query) {
     `;
 
     results.forEach(book => {
+        const bookLink = getBookLink(book, query);
         html += `
             <div class="result-card">
                 <div class="result-header">
-                    <a href="book.html?id=${book.id}&q=${encodeURIComponent(query)}" class="result-title">${escapeHtml(book.title)}</a>
+                    <a href="${bookLink}" class="result-title">${escapeHtml(book.title)}</a>
                     <div class="result-author">${escapeHtml(book.author)}</div>
                 </div>
                 <div class="result-snippet">${book.highlightedSnippet}</div>
                 <div class="result-meta">
                     <span class="result-source">${book.source.replace(/_/g, ' ')}</span>
-                    <a href="book.html?id=${book.id}&q=${encodeURIComponent(query)}" class="read-more">read &rarr;</a>
+                    <a href="${bookLink}" class="read-more">read &rarr;</a>
                 </div>
             </div>
         `;
@@ -363,13 +374,15 @@ const booksPerPage = 20;
 
 function initBrowse() {
     loadLibrary().then(() => {
+        renderCatalogStats();
         renderBrowseList();
 
         const authorFilter = document.getElementById('author-filter');
         const sourceFilter = document.getElementById('source-filter');
         const sortFilter = document.getElementById('sort-filter');
+        const viewFilter = document.getElementById('view-filter');
 
-        [authorFilter, sourceFilter, sortFilter].forEach(filter => {
+        [authorFilter, sourceFilter, sortFilter, viewFilter].forEach(filter => {
             if (filter) {
                 filter.addEventListener('change', () => {
                     browsePage = 1;
@@ -380,6 +393,44 @@ function initBrowse() {
     });
 }
 
+// Render catalog stats at top of browse page
+function renderCatalogStats() {
+    const allBooks = getAllBooks();
+    const statsDiv = document.getElementById('catalog-stats');
+    const breakdownDiv = document.getElementById('stats-breakdown');
+
+    if (!statsDiv) return;
+
+    // Count by source
+    const sourceCounts = {};
+    allBooks.forEach(b => {
+        const src = b.source || 'unknown';
+        sourceCounts[src] = (sourceCounts[src] || 0) + 1;
+    });
+
+    // Update summary
+    document.getElementById('total-books').textContent = allBooks.length.toLocaleString();
+    document.getElementById('total-sources').textContent = Object.keys(sourceCounts).length;
+
+    // Render breakdown
+    if (breakdownDiv) {
+        const sorted = Object.entries(sourceCounts).sort((a, b) => b[1] - a[1]);
+        breakdownDiv.innerHTML = sorted.map(([src, count]) =>
+            `<span class="stat-item" onclick="filterBySource('${src}')">${src.replace(/_/g, ' ')}: ${count}</span>`
+        ).join('');
+    }
+}
+
+// Quick filter by clicking on source stat
+function filterBySource(source) {
+    const sourceFilter = document.getElementById('source-filter');
+    if (sourceFilter) {
+        sourceFilter.value = source;
+        browsePage = 1;
+        renderBrowseList();
+    }
+}
+
 function renderBrowseList() {
     const listDiv = document.getElementById('book-list');
     const paginationDiv = document.getElementById('pagination');
@@ -388,6 +439,8 @@ function renderBrowseList() {
     const authorFilter = document.getElementById('author-filter');
     const sourceFilter = document.getElementById('source-filter');
     const sortFilter = document.getElementById('sort-filter');
+    const viewFilter = document.getElementById('view-filter');
+    const isCompact = viewFilter && viewFilter.value === 'compact';
 
     let books = [...getAllBooks()];
 
@@ -415,19 +468,37 @@ function renderBrowseList() {
     }
 
     let html = '';
-    pageBooks.forEach(book => {
-        const snippet = (book.snippet || '').slice(0, 150) + '...';
-        html += `
-            <div class="book-card">
-                <h3><a href="book.html?id=${book.id}">${escapeHtml(book.title)}</a></h3>
-                <div class="book-meta">
-                    ${escapeHtml(book.author)}
-                    <span class="source">[${book.source.replace(/_/g, ' ')}]</span>
+    if (isCompact) {
+        // Compact table view
+        html = '<table class="book-table"><thead><tr><th>Title</th><th>Author</th><th>Source</th></tr></thead><tbody>';
+        pageBooks.forEach(book => {
+            const bookLink = getBookLink(book);
+            html += `
+                <tr>
+                    <td><a href="${bookLink}">${escapeHtml(book.title)}</a></td>
+                    <td>${escapeHtml(book.author)}</td>
+                    <td>${book.source.replace(/_/g, ' ')}</td>
+                </tr>
+            `;
+        });
+        html += '</tbody></table>';
+    } else {
+        // List view with snippets
+        pageBooks.forEach(book => {
+            const snippet = (book.snippet || '').slice(0, 150) + '...';
+            const bookLink = getBookLink(book);
+            html += `
+                <div class="book-card">
+                    <h3><a href="${bookLink}">${escapeHtml(book.title)}</a></h3>
+                    <div class="book-meta">
+                        ${escapeHtml(book.author)}
+                        <span class="source">[${book.source.replace(/_/g, ' ')}]</span>
+                    </div>
+                    <div class="book-snippet">${escapeHtml(snippet)}</div>
                 </div>
-                <div class="book-snippet">${escapeHtml(snippet)}</div>
-            </div>
-        `;
-    });
+            `;
+        });
+    }
 
     listDiv.innerHTML = html;
 

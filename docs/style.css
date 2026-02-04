@@ -486,6 +486,78 @@ footer {
     background: #444;
 }
 
+/* Catalog Stats */
+.catalog-stats {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stats-summary {
+    font-size: 0.95rem;
+    color: var(--text-bright);
+    margin-bottom: 0.75rem;
+}
+
+.stats-summary span {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.stats-breakdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stat-item {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.stat-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Compact Table View */
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.book-table th,
+.book-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.book-table th {
+    background: var(--bg-light);
+    color: var(--text-bright);
+    font-weight: normal;
+}
+
+.book-table tr:hover {
+    background: var(--bg-light);
+}
+
+.book-table a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.book-table a:hover {
+    text-decoration: underline;
+}
+
 /* Upload Page */
 .upload-section {
     margin-bottom: 2rem;

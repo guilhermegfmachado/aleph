@@ -398,6 +398,8 @@ function renderCatalogStats() {
     const allBooks = getAllBooks();
     const statsDiv = document.getElementById('catalog-stats');
     const breakdownDiv = document.getElementById('stats-breakdown');
+    const totalBooksEl = document.getElementById('total-books');
+    const totalSourcesEl = document.getElementById('total-sources');
 
     if (!statsDiv) return;
 
@@ -408,9 +410,9 @@ function renderCatalogStats() {
         sourceCounts[src] = (sourceCounts[src] || 0) + 1;
     });
 
-    // Update summary
-    document.getElementById('total-books').textContent = allBooks.length.toLocaleString();
-    document.getElementById('total-sources').textContent = Object.keys(sourceCounts).length;
+    // Update summary (with null checks)
+    if (totalBooksEl) totalBooksEl.textContent = allBooks.length.toLocaleString();
+    if (totalSourcesEl) totalSourcesEl.textContent = Object.keys(sourceCounts).length;
 
     // Render breakdown
     if (breakdownDiv) {
@@ -421,7 +423,7 @@ function renderCatalogStats() {
     }
 }
 
-// Quick filter by clicking on source stat
+// Quick filter by clicking on source stat (exposed globally for onclick)
 function filterBySource(source) {
     const sourceFilter = document.getElementById('source-filter');
     if (sourceFilter) {
@@ -430,6 +432,7 @@ function filterBySource(source) {
         renderBrowseList();
     }
 }
+window.filterBySource = filterBySource;
 
 function renderBrowseList() {
     const listDiv = document.getElementById('book-list');
@@ -527,6 +530,7 @@ function gotoPage(page) {
     renderBrowseList();
     window.scrollTo(0, 0);
 }
+window.gotoPage = gotoPage;
 
 // Book view page - loads full text on demand
 async function initBookView() {

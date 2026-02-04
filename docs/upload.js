@@ -452,7 +452,8 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-// Export for integration with main app
+// Export for integration with main app and onclick handlers
 window.getUserBooks = getUserBooks;
 window.getUserBook = getUserBook;
 window.confirmDeleteBook = confirmDeleteBook;
+window.clearPdfPreview = clearPdfPreview;

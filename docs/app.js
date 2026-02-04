@@ -503,16 +503,22 @@ function renderBrowseList() {
     listDiv.innerHTML = html;
 
     // Pagination
-    if (paginationDiv && totalPages > 1) {
-        let pagHtml = '';
-        if (browsePage > 1) {
-            pagHtml += `<a href="#" onclick="gotoPage(${browsePage - 1}); return false;">&larr; prev</a>`;
+    if (paginationDiv) {
+        if (totalPages > 1) {
+            let pagHtml = '';
+            if (browsePage > 1) {
+                pagHtml += `<a href="#" onclick="gotoPage(${browsePage - 1}); return false;">&larr; prev</a>`;
+            }
+            pagHtml += `<span class="current">page ${browsePage} of ${totalPages} (${books.length} texts)</span>`;
+            if (browsePage < totalPages) {
+                pagHtml += `<a href="#" onclick="gotoPage(${browsePage + 1}); return false;">next &rarr;</a>`;
+            }
+            paginationDiv.innerHTML = pagHtml;
+        } else if (books.length > 0) {
+            paginationDiv.innerHTML = `<span class="current">${books.length} text${books.length !== 1 ? 's' : ''}</span>`;
+        } else {
+            paginationDiv.innerHTML = '';
         }
-        pagHtml += `<span class="current">page ${browsePage} of ${totalPages}</span>`;
-        if (browsePage < totalPages) {
-            pagHtml += `<a href="#" onclick="gotoPage(${browsePage + 1}); return false;">next &rarr;</a>`;
-        }
-        paginationDiv.innerHTML = pagHtml;
     }
 }
 

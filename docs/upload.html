@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>borges - add text</title>
+    <title>borges - add texts</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -22,118 +22,68 @@
 
         <main>
             <div class="upload-section">
-                <h2>add to your library</h2>
-                <p class="upload-desc">Add your own texts. They're stored locally in your browser.</p>
+                <h2>add to library</h2>
 
-                <div class="upload-tabs">
-                    <button class="tab-btn active" data-tab="pdf">upload pdf</button>
-                    <button class="tab-btn" data-tab="url">paste url</button>
-                    <button class="tab-btn" data-tab="text">paste text</button>
-                </div>
-
-                <!-- PDF Upload Tab -->
-                <div class="tab-content active" id="tab-pdf">
-                    <div class="upload-box" id="pdf-dropzone">
-                        <div class="dropzone-content">
-                            <div class="drop-icon">📄</div>
-                            <p>drop your files here</p>
-                            <p>PDF, TXT, or EPUB</p>
-                            <p style="margin: 1rem 0; color: #888;">— or —</p>
-                            <input type="file" id="pdf-input" accept=".pdf,.txt,.epub" hidden>
-                            <button class="btn" onclick="document.getElementById('pdf-input').click()">choose file</button>
-                        </div>
-                    </div>
-                    <div id="pdf-preview" class="preview hidden">
-                        <div class="preview-header">
-                            <span id="pdf-filename"></span>
-                            <button class="btn-small" onclick="clearPdfPreview()">clear</button>
-                        </div>
-                        <div class="preview-status" id="pdf-status">extracting text...</div>
-                        <div class="preview-text" id="pdf-text-preview"></div>
+                <!-- Drop zone for bulk upload -->
+                <div class="upload-box" id="dropzone">
+                    <div class="dropzone-content">
+                        <div class="drop-icon">📚</div>
+                        <p>drop files here</p>
+                        <p class="hint">PDF, EPUB, or TXT • multiple files OK</p>
+                        <p style="margin: 1rem 0; color: #888;">— or —</p>
+                        <input type="file" id="file-input" accept=".pdf,.txt,.epub" multiple hidden>
+                        <button class="btn" onclick="document.getElementById('file-input').click()">choose files</button>
                     </div>
                 </div>
 
-                <!-- URL Tab -->
-                <div class="tab-content" id="tab-url">
-                    <div class="form-group">
-                        <label for="url-input">webpage url</label>
-                        <input type="url" id="url-input" placeholder="https://example.com/article">
-                        <button class="btn" id="fetch-url-btn">fetch content</button>
-                    </div>
-                    <div id="url-preview" class="preview hidden">
-                        <div class="preview-status" id="url-status">fetching...</div>
-                        <div class="preview-text" id="url-text-preview"></div>
-                    </div>
+                <!-- Processing status -->
+                <div id="processing-status" class="processing-status hidden">
+                    <div class="spinner"></div>
+                    <span id="status-text">processing...</span>
                 </div>
 
-                <!-- Text Tab -->
-                <div class="tab-content" id="tab-text">
-                    <div class="form-group">
-                        <label for="text-input">paste your text</label>
-                        <textarea id="text-input" rows="10" placeholder="Paste the full text here..."></textarea>
-                    </div>
-                </div>
-
-                <!-- Metadata Form (shared) -->
-                <div class="metadata-form">
-                    <h3>text details</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="title-input">title *</label>
-                            <input type="text" id="title-input" placeholder="Title of the work" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="author-input">author *</label>
-                            <input type="text" id="author-input" placeholder="Author name" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="language-input">language</label>
-                            <select id="language-input">
-                                <option value="english">English</option>
-                                <option value="latin">Latin</option>
-                                <option value="greek">Greek</option>
-                                <option value="german">German</option>
-                                <option value="french">French</option>
-                                <option value="spanish">Spanish</option>
-                                <option value="italian">Italian</option>
-                                <option value="portuguese">Portuguese</option>
-                                <option value="russian">Russian</option>
-                                <option value="chinese">Chinese</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="source-url-input">source url (optional)</label>
-                            <input type="url" id="source-url-input" placeholder="Original source URL">
-                        </div>
-                    </div>
-
-                    <div class="form-actions">
-                        <button class="btn btn-primary" id="save-btn" disabled>save to library</button>
-                        <span class="save-status" id="save-status"></span>
-                    </div>
+                <!-- Queue of files being processed -->
+                <div id="upload-queue" class="upload-queue hidden">
+                    <h3>uploading <span id="queue-count">0</span> files</h3>
+                    <div id="queue-list"></div>
                 </div>
             </div>
 
-            <!-- User Books List -->
+            <!-- Library -->
             <div class="user-books-section">
-                <h3>your uploaded texts <span id="user-book-count">(0)</span></h3>
-                <div class="library-actions">
-                    <button class="btn" onclick="exportLibrary()">export library</button>
-                    <button class="btn" onclick="document.getElementById('import-input').click()">import library</button>
-                    <input type="file" id="import-input" accept=".json" hidden>
+                <div class="section-header">
+                    <h3>your library <span id="user-book-count">(0)</span></h3>
+                    <div class="library-actions">
+                        <button class="btn" onclick="publishToGitHub()">publish to repo</button>
+                        <button class="btn btn-small" onclick="clearAllBooks()">clear all</button>
+                    </div>
                 </div>
-                <p class="library-hint">Export your library, then commit the JSON file to the repo for everyone to see.</p>
+                <p class="library-hint" id="publish-hint">Click "publish" to save your library to GitHub so everyone can see it.</p>
                 <div id="user-books-list" class="user-books-list">
-                    <p class="empty-state">no uploaded texts yet</p>
+                    <p class="empty-state">no texts yet - drop some files above</p>
                 </div>
             </div>
+
+            <!-- GitHub Settings (collapsed by default) -->
+            <details class="github-settings">
+                <summary>GitHub settings</summary>
+                <div class="settings-content">
+                    <p>To auto-publish, enter your GitHub personal access token:</p>
+                    <div class="form-group">
+                        <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxx">
+                        <button class="btn btn-small" onclick="saveGitHubToken()">save</button>
+                    </div>
+                    <p class="hint">Token needs "repo" scope. <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">Create one here</a></p>
+                    <div class="form-group">
+                        <label>Repository (owner/repo):</label>
+                        <input type="text" id="github-repo" placeholder="username/repo-name">
+                    </div>
+                </div>
+            </details>
         </main>
 
         <footer>
-            <p>texts stored locally • export & commit to share with everyone</p>
+            <p>drop files • auto-extracts text • publish to share</p>
         </footer>
     </div>
 

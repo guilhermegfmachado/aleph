@@ -1,7 +1,7 @@
-// Upload functionality for user-added texts
-// Uses IndexedDB for local storage and PDF.js for PDF extraction
+// Bulk upload with auto-processing
+// No forms to fill - just drop files and go
 
-// Initialize PDF.js worker
+// PDF.js worker
 if (typeof pdfjsLib !== 'undefined') {
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 }
@@ -10,24 +10,19 @@ if (typeof pdfjsLib !== 'undefined') {
 const DB_NAME = 'borges_user_library';
 const DB_VERSION = 1;
 const STORE_NAME = 'user_books';
-
 let db = null;
-let extractedContent = '';
-let currentTab = 'pdf';
 
-// Open/create IndexedDB
+// Open database
 async function openDB() {
     return new Promise((resolve, reject) => {
         const request = indexedDB.open(DB_NAME, DB_VERSION);
-
         request.onerror = () => reject(request.error);
         request.onsuccess = () => {
             db = request.result;
             resolve(db);
         };
-
-        request.onupgradeneeded = (event) => {
-            const database = event.target.result;
+        request.onupgradeneeded = (e) => {
+            const database = e.target.result;
             if (!database.objectStoreNames.contains(STORE_NAME)) {
                 const store = database.createObjectStore(STORE_NAME, { keyPath: 'id', autoIncrement: true });
                 store.createIndex('title', 'title', { unique: false });
@@ -37,166 +32,218 @@ async function openDB() {
     });
 }
 
-// Save book to IndexedDB
-async function saveUserBook(book) {
+// Save book
+async function saveBook(book) {
     if (!db) await openDB();
-
     return new Promise((resolve, reject) => {
-        const transaction = db.transaction([STORE_NAME], 'readwrite');
-        const store = transaction.objectStore(STORE_NAME);
-
+        const tx = db.transaction([STORE_NAME], 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
         book.createdAt = new Date().toISOString();
         book.source = 'user_upload';
-
         const request = store.add(book);
         request.onsuccess = () => resolve(request.result);
         request.onerror = () => reject(request.error);
     });
 }
 
-// Get all user books
+// Get all books
 async function getUserBooks() {
     if (!db) await openDB();
-
     return new Promise((resolve, reject) => {
-        const transaction = db.transaction([STORE_NAME], 'readonly');
-        const store = transaction.objectStore(STORE_NAME);
+        const tx = db.transaction([STORE_NAME], 'readonly');
+        const store = tx.objectStore(STORE_NAME);
         const request = store.getAll();
-
         request.onsuccess = () => resolve(request.result || []);
         request.onerror = () => reject(request.error);
     });
 }
 
-// Delete user book
-async function deleteUserBook(id) {
-    if (!db) await openDB();
-
-    return new Promise((resolve, reject) => {
-        const transaction = db.transaction([STORE_NAME], 'readwrite');
-        const store = transaction.objectStore(STORE_NAME);
-        const request = store.delete(id);
-
-        request.onsuccess = () => resolve();
-        request.onerror = () => reject(request.error);
-    });
-}
-
-// Get single user book
+// Get single book
 async function getUserBook(id) {
     if (!db) await openDB();
-
     return new Promise((resolve, reject) => {
-        const transaction = db.transaction([STORE_NAME], 'readonly');
-        const store = transaction.objectStore(STORE_NAME);
+        const tx = db.transaction([STORE_NAME], 'readonly');
+        const store = tx.objectStore(STORE_NAME);
         const request = store.get(id);
-
         request.onsuccess = () => resolve(request.result);
         request.onerror = () => reject(request.error);
     });
 }
 
-// Extract text from PDF using PDF.js
-async function extractTextFromPDF(file) {
-    if (typeof pdfjsLib === 'undefined') {
-        throw new Error('PDF.js not loaded');
-    }
+// Delete book
+async function deleteBook(id) {
+    if (!db) await openDB();
+    return new Promise((resolve, reject) => {
+        const tx = db.transaction([STORE_NAME], 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        const request = store.delete(id);
+        request.onsuccess = () => resolve();
+        request.onerror = () => reject(request.error);
+    });
+}
+
+// Clear all books
+async function clearAllBooks() {
+    if (!confirm('Delete all books from your library?')) return;
+    if (!db) await openDB();
+    return new Promise((resolve, reject) => {
+        const tx = db.transaction([STORE_NAME], 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        const request = store.clear();
+        request.onsuccess = () => {
+            renderUserBooks();
+            resolve();
+        };
+        request.onerror = () => reject(request.error);
+    });
+}
+
+// Extract title from filename
+function titleFromFilename(filename) {
+    return filename
+        .replace(/\.[^/.]+$/, '')  // Remove extension
+        .replace(/[-_]/g, ' ')      // Replace dashes/underscores with spaces
+        .replace(/\s+/g, ' ')       // Collapse multiple spaces
+        .trim();
+}
+
+// Extract text from PDF
+async function extractPdfText(file) {
+    if (typeof pdfjsLib === 'undefined') throw new Error('PDF.js not loaded');
 
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
 
-    let fullText = '';
-    const totalPages = pdf.numPages;
+    let text = '';
+    let metadata = {};
 
-    for (let i = 1; i <= totalPages; i++) {
-        const page = await pdf.getPage(i);
-        const textContent = await page.getTextContent();
-        const pageText = textContent.items.map(item => item.str).join(' ');
-        fullText += pageText + '\n\n';
-
-        // Update status
-        document.getElementById('pdf-status').textContent = `extracting page ${i} of ${totalPages}...`;
-    }
-
-    return fullText.trim();
-}
-
-// Fetch content from URL (via proxy to avoid CORS)
-async function fetchURLContent(url) {
-    // Use a CORS proxy or fetch directly if same-origin
-    // For demo, we'll try direct fetch first, then show instructions
+    // Try to get metadata
     try {
-        const response = await fetch(url);
-        const html = await response.text();
+        const meta = await pdf.getMetadata();
+        if (meta.info) {
+            metadata.title = meta.info.Title;
+            metadata.author = meta.info.Author;
+        }
+    } catch (e) {}
 
-        // Parse HTML and extract text content
+    // Extract text from all pages
+    for (let i = 1; i <= pdf.numPages; i++) {
+        const page = await pdf.getPage(i);
+        const content = await page.getTextContent();
+        text += content.items.map(item => item.str).join(' ') + '\n\n';
+    }
+
+    return { text: text.trim(), metadata };
+}
+
+// Extract text from EPUB
+async function extractEpubText(file) {
+    if (typeof JSZip === 'undefined') throw new Error('JSZip not loaded');
+
+    const arrayBuffer = await file.arrayBuffer();
+    const zip = await JSZip.loadAsync(arrayBuffer);
+
+    let text = '';
+    const contentFiles = Object.keys(zip.files)
+        .filter(name => name.endsWith('.xhtml') || name.endsWith('.html') || name.endsWith('.htm'))
+        .sort();
+
+    for (const fileName of contentFiles) {
+        const content = await zip.files[fileName].async('text');
         const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-
-        // Remove scripts, styles, nav, footer
-        ['script', 'style', 'nav', 'footer', 'header', 'aside'].forEach(tag => {
-            doc.querySelectorAll(tag).forEach(el => el.remove());
-        });
-
-        // Get main content or body
-        const main = doc.querySelector('main, article, .content, #content, .post, .entry') || doc.body;
-        return main ? main.textContent.trim() : '';
-
-    } catch (error) {
-        // CORS error - show instructions
-        throw new Error('Could not fetch URL due to CORS restrictions. Try copying the text manually.');
-    }
-}
-
-// Tab switching
-function switchTab(tabName) {
-    currentTab = tabName;
-
-    // Update tab buttons
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.tab === tabName);
-    });
-
-    // Update tab content
-    document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.toggle('active', content.id === `tab-${tabName}`);
-    });
-
-    // Clear extracted content when switching tabs
-    extractedContent = '';
-    updateSaveButton();
-}
-
-// Update save button state
-function updateSaveButton() {
-    const titleInput = document.getElementById('title-input');
-    const authorInput = document.getElementById('author-input');
-    const saveBtn = document.getElementById('save-btn');
-
-    let hasContent = false;
-
-    if (currentTab === 'pdf') {
-        hasContent = extractedContent.length > 100;
-    } else if (currentTab === 'url') {
-        hasContent = extractedContent.length > 100;
-    } else if (currentTab === 'text') {
-        const textInput = document.getElementById('text-input');
-        hasContent = textInput && textInput.value.trim().length > 100;
+        const doc = parser.parseFromString(content, 'text/html');
+        text += (doc.body ? doc.body.textContent : '') + '\n\n';
     }
 
-    const hasMetadata = titleInput.value.trim() && authorInput.value.trim();
-    saveBtn.disabled = !(hasContent && hasMetadata);
+    return { text: text.trim(), metadata: {} };
 }
 
-// Clear PDF preview
-function clearPdfPreview() {
-    document.getElementById('pdf-preview').classList.add('hidden');
-    document.getElementById('pdf-input').value = '';
-    extractedContent = '';
-    updateSaveButton();
+// Extract text from TXT
+async function extractTxtText(file) {
+    const text = await file.text();
+    return { text: text.trim(), metadata: {} };
 }
 
-// Render user books list
+// Process a single file
+async function processFile(file) {
+    const ext = file.name.split('.').pop().toLowerCase();
+    let result;
+
+    if (ext === 'pdf') {
+        result = await extractPdfText(file);
+    } else if (ext === 'epub') {
+        result = await extractEpubText(file);
+    } else {
+        result = await extractTxtText(file);
+    }
+
+    if (!result.text || result.text.length < 100) {
+        throw new Error('No text extracted (or too short)');
+    }
+
+    // Build book object with auto-detected metadata
+    const book = {
+        title: result.metadata.title || titleFromFilename(file.name),
+        author: result.metadata.author || 'Unknown',
+        content: result.text,
+        language: 'english',
+        snippet: result.text.slice(0, 1000),
+        filename: file.name
+    };
+
+    return book;
+}
+
+// Process multiple files
+async function processFiles(files) {
+    const statusDiv = document.getElementById('processing-status');
+    const statusText = document.getElementById('status-text');
+    const queueDiv = document.getElementById('upload-queue');
+    const queueList = document.getElementById('queue-list');
+    const queueCount = document.getElementById('queue-count');
+
+    if (files.length === 0) return;
+
+    statusDiv.classList.remove('hidden');
+    queueDiv.classList.remove('hidden');
+    queueCount.textContent = files.length;
+    queueList.innerHTML = '';
+
+    let processed = 0;
+    let failed = 0;
+
+    for (const file of files) {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'queue-item';
+        itemDiv.innerHTML = `<span class="filename">${escapeHtml(file.name)}</span><span class="status">processing...</span>`;
+        queueList.appendChild(itemDiv);
+
+        statusText.textContent = `processing ${processed + 1} of ${files.length}...`;
+
+        try {
+            const book = await processFile(file);
+            await saveBook(book);
+            itemDiv.querySelector('.status').textContent = '✓';
+            itemDiv.querySelector('.status').className = 'status success';
+            processed++;
+        } catch (error) {
+            console.error(`Error processing ${file.name}:`, error);
+            itemDiv.querySelector('.status').textContent = '✗ ' + error.message;
+            itemDiv.querySelector('.status').className = 'status error';
+            failed++;
+        }
+    }
+
+    statusText.textContent = `done! ${processed} added${failed ? `, ${failed} failed` : ''}`;
+    setTimeout(() => {
+        statusDiv.classList.add('hidden');
+        queueDiv.classList.add('hidden');
+    }, 3000);
+
+    await renderUserBooks();
+}
+
+// Render books list
 async function renderUserBooks() {
     const listDiv = document.getElementById('user-books-list');
     const countSpan = document.getElementById('user-book-count');
@@ -204,132 +251,164 @@ async function renderUserBooks() {
 
     try {
         const books = await getUserBooks();
-        countSpan.textContent = `(${books.length})`;
+        if (countSpan) countSpan.textContent = `(${books.length})`;
 
         if (books.length === 0) {
-            listDiv.innerHTML = '<p class="empty-state">no uploaded texts yet</p>';
+            listDiv.innerHTML = '<p class="empty-state">no texts yet - drop some files above</p>';
             return;
         }
 
-        let html = '';
-        books.forEach(book => {
-            const snippet = book.content.slice(0, 100) + '...';
-            html += `
-                <div class="user-book-card">
-                    <div class="user-book-info">
-                        <a href="book.html?user=${book.id}" class="user-book-title">${escapeHtml(book.title)}</a>
-                        <div class="user-book-author">${escapeHtml(book.author)}</div>
-                        <div class="user-book-snippet">${escapeHtml(snippet)}</div>
-                    </div>
-                    <button class="btn-delete" onclick="confirmDeleteBook(${book.id})" title="Delete">×</button>
+        listDiv.innerHTML = books.map(book => `
+            <div class="user-book-card">
+                <div class="user-book-info">
+                    <a href="book.html?user=${book.id}" class="user-book-title">${escapeHtml(book.title)}</a>
+                    <div class="user-book-author">${escapeHtml(book.author)}</div>
                 </div>
-            `;
-        });
-
-        listDiv.innerHTML = html;
+                <button class="btn-delete" onclick="confirmDeleteBook(${book.id})" title="Delete">×</button>
+            </div>
+        `).join('');
     } catch (error) {
-        console.error('Error loading user books:', error);
-        listDiv.innerHTML = '<p class="error">Error loading your books</p>';
+        console.error('Error loading books:', error);
+        listDiv.innerHTML = '<p class="error">Error loading books</p>';
     }
 }
 
-// Confirm and delete book
+// Confirm and delete
 async function confirmDeleteBook(id) {
-    if (confirm('Delete this text from your library?')) {
-        try {
-            await deleteUserBook(id);
-            await renderUserBooks();
-            // Also update the main library if we're integrating
-            if (typeof reloadLibraryWithUserBooks === 'function') {
-                reloadLibraryWithUserBooks();
-            }
-        } catch (error) {
-            console.error('Error deleting book:', error);
-            alert('Failed to delete book');
-        }
+    if (confirm('Delete this book?')) {
+        await deleteBook(id);
+        await renderUserBooks();
     }
 }
 
-// Save the current book
-async function saveBook() {
-    const titleInput = document.getElementById('title-input');
-    const authorInput = document.getElementById('author-input');
-    const languageInput = document.getElementById('language-input');
-    const sourceUrlInput = document.getElementById('source-url-input');
-    const saveStatus = document.getElementById('save-status');
-    const saveBtn = document.getElementById('save-btn');
+// GitHub integration
+function getGitHubSettings() {
+    return {
+        token: localStorage.getItem('github_token') || '',
+        repo: localStorage.getItem('github_repo') || ''
+    };
+}
 
-    let content = '';
+function saveGitHubToken() {
+    const token = document.getElementById('github-token').value.trim();
+    const repo = document.getElementById('github-repo').value.trim();
+    localStorage.setItem('github_token', token);
+    localStorage.setItem('github_repo', repo);
+    alert('Settings saved!');
+}
 
-    if (currentTab === 'pdf' || currentTab === 'url') {
-        content = extractedContent;
-    } else if (currentTab === 'text') {
-        content = document.getElementById('text-input').value.trim();
-    }
+function loadGitHubSettings() {
+    const settings = getGitHubSettings();
+    const tokenInput = document.getElementById('github-token');
+    const repoInput = document.getElementById('github-repo');
+    if (tokenInput && settings.token) tokenInput.value = settings.token;
+    if (repoInput && settings.repo) repoInput.value = settings.repo;
+}
 
-    if (!content || content.length < 100) {
-        saveStatus.textContent = 'Content too short (min 100 chars)';
-        saveStatus.className = 'save-status error';
+// Publish library to GitHub
+async function publishToGitHub() {
+    const settings = getGitHubSettings();
+
+    if (!settings.token || !settings.repo) {
+        alert('Please configure GitHub settings first (click "GitHub settings" below)');
+        document.querySelector('.github-settings').open = true;
         return;
     }
 
-    const book = {
-        title: titleInput.value.trim(),
-        author: authorInput.value.trim(),
-        content: content,
-        language: languageInput.value,
-        url: sourceUrlInput.value.trim() || null,
-        snippet: content.slice(0, 1000)
+    const books = await getUserBooks();
+    if (books.length === 0) {
+        alert('No books to publish');
+        return;
+    }
+
+    // Build library JSON
+    const libraryData = {
+        books: books.map((b, idx) => ({
+            id: idx + 1,
+            title: b.title,
+            author: b.author,
+            source: 'user_upload',
+            language: b.language || 'english',
+            snippet: (b.content || '').slice(0, 1000)
+        })),
+        texts: books.map((b, idx) => ({
+            id: idx + 1,
+            content: b.content
+        })),
+        publishedAt: new Date().toISOString(),
+        totalBooks: books.length
     };
 
+    const content = JSON.stringify(libraryData, null, 2);
+    const contentBase64 = btoa(unescape(encodeURIComponent(content)));
+
     try {
-        saveBtn.disabled = true;
-        saveStatus.textContent = 'saving...';
-        saveStatus.className = 'save-status';
+        const statusHint = document.getElementById('publish-hint');
+        statusHint.textContent = 'Publishing...';
 
-        await saveUserBook(book);
+        // Check if file exists (to get SHA for update)
+        const [owner, repo] = settings.repo.split('/');
+        const path = 'docs/data/shared-library.json';
+        let sha = null;
 
-        saveStatus.textContent = 'saved!';
-        saveStatus.className = 'save-status success';
+        try {
+            const existing = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+                headers: { 'Authorization': `token ${settings.token}` }
+            });
+            if (existing.ok) {
+                const data = await existing.json();
+                sha = data.sha;
+            }
+        } catch (e) {}
 
-        // Clear form
-        titleInput.value = '';
-        authorInput.value = '';
-        sourceUrlInput.value = '';
-        document.getElementById('text-input').value = '';
-        extractedContent = '';
-        clearPdfPreview();
+        // Create or update file
+        const body = {
+            message: `Update library (${books.length} books)`,
+            content: contentBase64,
+            branch: 'main'
+        };
+        if (sha) body.sha = sha;
 
-        // Refresh list
-        await renderUserBooks();
+        const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${settings.token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
 
-        // Reload main library integration
-        if (typeof reloadLibraryWithUserBooks === 'function') {
-            reloadLibraryWithUserBooks();
+        if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.message || 'Failed to publish');
         }
 
+        statusHint.textContent = `Published ${books.length} books! Everyone can see them now.`;
+        statusHint.style.color = '#4a4';
+
     } catch (error) {
-        console.error('Error saving book:', error);
-        saveStatus.textContent = 'Error saving';
-        saveStatus.className = 'save-status error';
-    } finally {
-        updateSaveButton();
+        console.error('Publish error:', error);
+        alert('Publish failed: ' + error.message);
+        document.getElementById('publish-hint').textContent = 'Publish failed. Check your GitHub settings.';
     }
 }
 
-// Initialize upload page
+// Escape HTML
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// Initialize
 document.addEventListener('DOMContentLoaded', async () => {
     await openDB();
     await renderUserBooks();
+    loadGitHubSettings();
 
-    // Tab switching
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => switchTab(btn.dataset.tab));
-    });
-
-    // PDF drag and drop
-    const dropzone = document.getElementById('pdf-dropzone');
-    const pdfInput = document.getElementById('pdf-input');
+    // Drag and drop
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('file-input');
 
     if (dropzone) {
         dropzone.addEventListener('dragover', (e) => {
@@ -344,326 +423,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         dropzone.addEventListener('drop', async (e) => {
             e.preventDefault();
             dropzone.classList.remove('dragover');
-
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                await handleFile(files[0]);
-            }
+            await processFiles(Array.from(e.dataTransfer.files));
         });
     }
 
-    if (pdfInput) {
-        pdfInput.addEventListener('change', async (e) => {
-            if (e.target.files.length > 0) {
-                await handleFile(e.target.files[0]);
-            }
-        });
-    }
-
-    // URL fetch button
-    const fetchUrlBtn = document.getElementById('fetch-url-btn');
-    if (fetchUrlBtn) {
-        fetchUrlBtn.addEventListener('click', async () => {
-            const urlInput = document.getElementById('url-input');
-            const statusDiv = document.getElementById('url-status');
-            const previewDiv = document.getElementById('url-preview');
-            const textPreview = document.getElementById('url-text-preview');
-
-            if (!urlInput.value.trim()) return;
-
-            previewDiv.classList.remove('hidden');
-            statusDiv.textContent = 'fetching...';
-
-            try {
-                const content = await fetchURLContent(urlInput.value.trim());
-                extractedContent = content;
-
-                if (content.length > 0) {
-                    statusDiv.textContent = `extracted ${content.length.toLocaleString()} characters`;
-                    textPreview.textContent = content.slice(0, 500) + '...';
-                } else {
-                    statusDiv.textContent = 'No content found';
-                }
-            } catch (error) {
-                statusDiv.textContent = error.message;
-                statusDiv.className = 'preview-status error';
-            }
-
-            updateSaveButton();
-        });
-    }
-
-    // Text input change
-    const textInput = document.getElementById('text-input');
-    if (textInput) {
-        textInput.addEventListener('input', updateSaveButton);
-    }
-
-    // Metadata input changes
-    document.getElementById('title-input').addEventListener('input', updateSaveButton);
-    document.getElementById('author-input').addEventListener('input', updateSaveButton);
-
-    // Save button
-    document.getElementById('save-btn').addEventListener('click', saveBook);
-});
-
-// Handle any supported file type
-async function handleFile(file) {
-    const ext = file.name.split('.').pop().toLowerCase();
-    const type = file.type;
-
-    if (type === 'application/pdf' || ext === 'pdf') {
-        await handlePDFFile(file);
-    } else if (type === 'text/plain' || ext === 'txt') {
-        await handleTextFile(file);
-    } else if (type === 'application/epub+zip' || ext === 'epub') {
-        await handleEpubFile(file);
-    } else {
-        // Try as text file
-        await handleTextFile(file);
-    }
-}
-
-// Handle plain text file
-async function handleTextFile(file) {
-    const preview = document.getElementById('pdf-preview');
-    const filename = document.getElementById('pdf-filename');
-    const status = document.getElementById('pdf-status');
-    const textPreview = document.getElementById('pdf-text-preview');
-
-    preview.classList.remove('hidden');
-    filename.textContent = file.name;
-    status.textContent = 'reading file...';
-    textPreview.textContent = '';
-
-    try {
-        const text = await file.text();
-        extractedContent = text.trim();
-
-        if (extractedContent.length > 0) {
-            status.textContent = `loaded ${extractedContent.length.toLocaleString()} characters`;
-            textPreview.textContent = extractedContent.slice(0, 500) + '...';
-
-            // Auto-fill title from filename
-            const titleInput = document.getElementById('title-input');
-            if (!titleInput.value) {
-                titleInput.value = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
-            }
-        } else {
-            status.textContent = 'File is empty';
-            status.className = 'preview-status error';
-        }
-    } catch (error) {
-        console.error('File read error:', error);
-        status.textContent = 'Error reading file: ' + error.message;
-        status.className = 'preview-status error';
-    }
-
-    updateSaveButton();
-}
-
-// Handle EPUB file (basic text extraction)
-async function handleEpubFile(file) {
-    const preview = document.getElementById('pdf-preview');
-    const filename = document.getElementById('pdf-filename');
-    const status = document.getElementById('pdf-status');
-    const textPreview = document.getElementById('pdf-text-preview');
-
-    preview.classList.remove('hidden');
-    filename.textContent = file.name;
-    status.textContent = 'extracting from EPUB...';
-    textPreview.textContent = '';
-
-    try {
-        // EPUBs are ZIP files - we'll extract and parse the HTML content
-        const arrayBuffer = await file.arrayBuffer();
-        const zip = await JSZip.loadAsync(arrayBuffer);
-
-        let fullText = '';
-
-        // Find and read content files (usually .xhtml or .html)
-        const contentFiles = Object.keys(zip.files).filter(name =>
-            name.endsWith('.xhtml') || name.endsWith('.html') || name.endsWith('.htm')
-        ).sort();
-
-        for (const fileName of contentFiles) {
-            const content = await zip.files[fileName].async('text');
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(content, 'text/html');
-            const text = doc.body ? doc.body.textContent : '';
-            fullText += text + '\n\n';
-        }
-
-        extractedContent = fullText.trim();
-
-        if (extractedContent.length > 0) {
-            status.textContent = `extracted ${extractedContent.length.toLocaleString()} characters`;
-            textPreview.textContent = extractedContent.slice(0, 500) + '...';
-
-            const titleInput = document.getElementById('title-input');
-            if (!titleInput.value) {
-                titleInput.value = file.name.replace('.epub', '').replace(/[-_]/g, ' ');
-            }
-        } else {
-            status.textContent = 'No text content found in EPUB';
-            status.className = 'preview-status error';
-        }
-    } catch (error) {
-        console.error('EPUB extraction error:', error);
-        status.textContent = 'Error: Install JSZip for EPUB support, or use PDF/TXT';
-        status.className = 'preview-status error';
-    }
-
-    updateSaveButton();
-}
-
-// Handle PDF file
-async function handlePDFFile(file) {
-    const preview = document.getElementById('pdf-preview');
-    const filename = document.getElementById('pdf-filename');
-    const status = document.getElementById('pdf-status');
-    const textPreview = document.getElementById('pdf-text-preview');
-
-    preview.classList.remove('hidden');
-    filename.textContent = file.name;
-    status.textContent = 'extracting text...';
-    textPreview.textContent = '';
-
-    try {
-        const text = await extractTextFromPDF(file);
-        extractedContent = text;
-
-        if (text.length > 0) {
-            status.textContent = `extracted ${text.length.toLocaleString()} characters`;
-            textPreview.textContent = text.slice(0, 500) + '...';
-
-            // Try to auto-fill title from filename
-            const titleInput = document.getElementById('title-input');
-            if (!titleInput.value) {
-                titleInput.value = file.name.replace('.pdf', '').replace(/[-_]/g, ' ');
-            }
-        } else {
-            status.textContent = 'No text found (might be scanned images)';
-            status.className = 'preview-status error';
-        }
-    } catch (error) {
-        console.error('PDF extraction error:', error);
-        status.textContent = 'Error extracting text: ' + error.message;
-        status.className = 'preview-status error';
-    }
-
-    updateSaveButton();
-}
-
-// Helper - escape HTML
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
-// Export library as JSON file for committing to repo
-async function exportLibrary() {
-    try {
-        const books = await getUserBooks();
-        if (books.length === 0) {
-            alert('No books to export');
-            return;
-        }
-
-        // Format for the static library structure
-        const exportData = {
-            books: books.map((b, idx) => ({
-                id: idx + 1,
-                title: b.title,
-                author: b.author,
-                source: 'user_upload',
-                language: b.language || 'english',
-                url: b.url || '',
-                snippet: (b.content || '').slice(0, 1000)
-            })),
-            texts: books.map((b, idx) => ({
-                id: idx + 1,
-                content: b.content
-            })),
-            exportedAt: new Date().toISOString(),
-            totalBooks: books.length
-        };
-
-        const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'borges-library.json';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-
-        alert(`Exported ${books.length} books!\n\nTo make them public:\n1. Commit this file to docs/data/shared-library.json\n2. Everyone will see your library`);
-    } catch (error) {
-        console.error('Export error:', error);
-        alert('Export failed: ' + error.message);
-    }
-}
-
-// Import library from JSON file
-async function importLibrary(file) {
-    try {
-        const text = await file.text();
-        const data = JSON.parse(text);
-
-        let imported = 0;
-        const books = data.books || [];
-        const texts = data.texts || [];
-
-        // Create a map of id -> content
-        const contentMap = {};
-        texts.forEach(t => {
-            contentMap[t.id] = t.content;
-        });
-
-        for (const book of books) {
-            const content = contentMap[book.id] || book.content || '';
-            if (!content || content.length < 100) continue;
-
-            await saveUserBook({
-                title: book.title,
-                author: book.author,
-                content: content,
-                language: book.language || 'english',
-                url: book.url || '',
-                snippet: content.slice(0, 1000)
-            });
-            imported++;
-        }
-
-        await renderUserBooks();
-        alert(`Imported ${imported} books!`);
-
-    } catch (error) {
-        console.error('Import error:', error);
-        alert('Import failed: ' + error.message);
-    }
-}
-
-// Setup import file handler
-document.addEventListener('DOMContentLoaded', () => {
-    const importInput = document.getElementById('import-input');
-    if (importInput) {
-        importInput.addEventListener('change', async (e) => {
-            if (e.target.files.length > 0) {
-                await importLibrary(e.target.files[0]);
-                e.target.value = '';
-            }
+    if (fileInput) {
+        fileInput.addEventListener('change', async (e) => {
+            await processFiles(Array.from(e.target.files));
+            e.target.value = '';
         });
     }
 });
 
-// Export for integration with main app and onclick handlers
+// Exports
 window.getUserBooks = getUserBooks;
 window.getUserBook = getUserBook;
 window.confirmDeleteBook = confirmDeleteBook;
-window.clearPdfPreview = clearPdfPreview;
-window.exportLibrary = exportLibrary;
-window.importLibrary = importLibrary;
+window.clearAllBooks = clearAllBooks;
+window.publishToGitHub = publishToGitHub;
+window.saveGitHubToken = saveGitHubToken;

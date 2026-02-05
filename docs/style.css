@@ -839,10 +839,16 @@ footer {
     color: #666;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
 .library-actions {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .library-actions .btn {
@@ -855,6 +861,123 @@ footer {
     color: #888;
     margin-bottom: 1rem;
     font-style: italic;
+}
+
+/* Processing status */
+.processing-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    margin-top: 1rem;
+}
+
+.processing-status.hidden {
+    display: none;
+}
+
+/* Upload queue */
+.upload-queue {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+}
+
+.upload-queue.hidden {
+    display: none;
+}
+
+.upload-queue h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.queue-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    font-size: 0.85rem;
+}
+
+.queue-item .filename {
+    color: var(--text);
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.queue-item .status {
+    color: #888;
+}
+
+.queue-item .status.success {
+    color: #4a4;
+}
+
+.queue-item .status.error {
+    color: #a44;
+}
+
+/* GitHub settings */
+.github-settings {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+}
+
+.github-settings summary {
+    cursor: pointer;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.github-settings .settings-content {
+    margin-top: 1rem;
+}
+
+.github-settings .settings-content p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.github-settings .form-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.github-settings .form-group label {
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.github-settings input {
+    flex: 1;
+    padding: 0.4rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-bright);
+}
+
+.github-settings .hint {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.github-settings .hint a {
+    color: var(--accent);
+}
+
+.hint {
+    font-size: 0.8rem;
+    color: #888;
 }
 
 .user-books-list {

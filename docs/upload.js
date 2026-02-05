@@ -346,8 +346,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             dropzone.classList.remove('dragover');
 
             const files = e.dataTransfer.files;
-            if (files.length > 0 && files[0].type === 'application/pdf') {
-                await handlePDFFile(files[0]);
+            if (files.length > 0) {
+                await handleFile(files[0]);
             }
         });
     }
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (pdfInput) {
         pdfInput.addEventListener('change', async (e) => {
             if (e.target.files.length > 0) {
-                await handlePDFFile(e.target.files[0]);
+                await handleFile(e.target.files[0]);
             }
         });
     }
@@ -406,6 +406,116 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Save button
     document.getElementById('save-btn').addEventListener('click', saveBook);
 });
+
+// Handle any supported file type
+async function handleFile(file) {
+    const ext = file.name.split('.').pop().toLowerCase();
+    const type = file.type;
+
+    if (type === 'application/pdf' || ext === 'pdf') {
+        await handlePDFFile(file);
+    } else if (type === 'text/plain' || ext === 'txt') {
+        await handleTextFile(file);
+    } else if (type === 'application/epub+zip' || ext === 'epub') {
+        await handleEpubFile(file);
+    } else {
+        // Try as text file
+        await handleTextFile(file);
+    }
+}
+
+// Handle plain text file
+async function handleTextFile(file) {
+    const preview = document.getElementById('pdf-preview');
+    const filename = document.getElementById('pdf-filename');
+    const status = document.getElementById('pdf-status');
+    const textPreview = document.getElementById('pdf-text-preview');
+
+    preview.classList.remove('hidden');
+    filename.textContent = file.name;
+    status.textContent = 'reading file...';
+    textPreview.textContent = '';
+
+    try {
+        const text = await file.text();
+        extractedContent = text.trim();
+
+        if (extractedContent.length > 0) {
+            status.textContent = `loaded ${extractedContent.length.toLocaleString()} characters`;
+            textPreview.textContent = extractedContent.slice(0, 500) + '...';
+
+            // Auto-fill title from filename
+            const titleInput = document.getElementById('title-input');
+            if (!titleInput.value) {
+                titleInput.value = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
+            }
+        } else {
+            status.textContent = 'File is empty';
+            status.className = 'preview-status error';
+        }
+    } catch (error) {
+        console.error('File read error:', error);
+        status.textContent = 'Error reading file: ' + error.message;
+        status.className = 'preview-status error';
+    }
+
+    updateSaveButton();
+}
+
+// Handle EPUB file (basic text extraction)
+async function handleEpubFile(file) {
+    const preview = document.getElementById('pdf-preview');
+    const filename = document.getElementById('pdf-filename');
+    const status = document.getElementById('pdf-status');
+    const textPreview = document.getElementById('pdf-text-preview');
+
+    preview.classList.remove('hidden');
+    filename.textContent = file.name;
+    status.textContent = 'extracting from EPUB...';
+    textPreview.textContent = '';
+
+    try {
+        // EPUBs are ZIP files - we'll extract and parse the HTML content
+        const arrayBuffer = await file.arrayBuffer();
+        const zip = await JSZip.loadAsync(arrayBuffer);
+
+        let fullText = '';
+
+        // Find and read content files (usually .xhtml or .html)
+        const contentFiles = Object.keys(zip.files).filter(name =>
+            name.endsWith('.xhtml') || name.endsWith('.html') || name.endsWith('.htm')
+        ).sort();
+
+        for (const fileName of contentFiles) {
+            const content = await zip.files[fileName].async('text');
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(content, 'text/html');
+            const text = doc.body ? doc.body.textContent : '';
+            fullText += text + '\n\n';
+        }
+
+        extractedContent = fullText.trim();
+
+        if (extractedContent.length > 0) {
+            status.textContent = `extracted ${extractedContent.length.toLocaleString()} characters`;
+            textPreview.textContent = extractedContent.slice(0, 500) + '...';
+
+            const titleInput = document.getElementById('title-input');
+            if (!titleInput.value) {
+                titleInput.value = file.name.replace('.epub', '').replace(/[-_]/g, ' ');
+            }
+        } else {
+            status.textContent = 'No text content found in EPUB';
+            status.className = 'preview-status error';
+        }
+    } catch (error) {
+        console.error('EPUB extraction error:', error);
+        status.textContent = 'Error: Install JSZip for EPUB support, or use PDF/TXT';
+        status.className = 'preview-status error';
+    }
+
+    updateSaveButton();
+}
 
 // Handle PDF file
 async function handlePDFFile(file) {

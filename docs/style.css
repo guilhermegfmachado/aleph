@@ -625,20 +625,47 @@ footer {
 
 .upload-box {
     border: 2px dashed var(--border);
+    border-radius: 8px;
     padding: 3rem 2rem;
     text-align: center;
     background: var(--bg);
     transition: all 0.2s;
+    cursor: pointer;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-box:hover {
+    border-color: var(--accent);
+    background: rgba(200, 180, 140, 0.05);
 }
 
 .upload-box.dragover {
     border-color: var(--accent);
     background: var(--highlight);
+    transform: scale(1.02);
+}
+
+.dropzone-content {
+    width: 100%;
+}
+
+.dropzone-content .drop-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.6;
 }
 
 .dropzone-content p {
     margin-bottom: 0.5rem;
     color: #666;
+}
+
+.dropzone-content p:first-of-type {
+    font-size: 1.1rem;
+    color: var(--text);
 }
 
 .btn {

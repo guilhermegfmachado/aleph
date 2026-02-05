@@ -6,6 +6,7 @@
     <title>borges - add text</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -34,9 +35,11 @@
                 <div class="tab-content active" id="tab-pdf">
                     <div class="upload-box" id="pdf-dropzone">
                         <div class="dropzone-content">
-                            <p>drag & drop PDF here</p>
-                            <p>or</p>
-                            <input type="file" id="pdf-input" accept=".pdf" hidden>
+                            <div class="drop-icon">📄</div>
+                            <p>drop your files here</p>
+                            <p>PDF, TXT, or EPUB</p>
+                            <p style="margin: 1rem 0; color: #888;">— or —</p>
+                            <input type="file" id="pdf-input" accept=".pdf,.txt,.epub" hidden>
                             <button class="btn" onclick="document.getElementById('pdf-input').click()">choose file</button>
                         </div>
                     </div>

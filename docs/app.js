@@ -88,14 +88,47 @@ async function loadLibrary() {
     if (library.loaded) return;
 
     try {
-        // Load main library
-        const response = await fetch('data/library-index.json');
-        if (!response.ok) throw new Error('Failed to load library index');
+        // Try to load shared library (user-exported, committed to repo)
+        let sharedBooks = [];
+        let sharedTexts = {};
+        try {
+            const sharedResp = await fetch('data/shared-library.json');
+            if (sharedResp.ok) {
+                const sharedData = await sharedResp.json();
+                sharedBooks = (sharedData.books || []).map(b => ({
+                    ...b,
+                    source: 'shared',
+                    isShared: true
+                }));
+                // Cache the texts
+                (sharedData.texts || []).forEach(t => {
+                    library.textCache[`shared_${t.id}`] = { content: t.content };
+                });
+                // Remap IDs to avoid conflicts
+                sharedBooks = sharedBooks.map(b => ({
+                    ...b,
+                    id: `shared_${b.id}`
+                }));
+            }
+        } catch (e) {
+            // No shared library, that's fine
+        }
 
-        const data = await response.json();
-        library.books = data.books || [];
+        // Load main library index (if any)
+        let mainBooks = [];
+        try {
+            const response = await fetch('data/library-index.json');
+            if (response.ok) {
+                const data = await response.json();
+                mainBooks = data.books || [];
+            }
+        } catch (e) {
+            // No main library, that's fine
+        }
 
-        // Also load user books
+        library.books = [...mainBooks, ...sharedBooks];
+
+        // Also load user books from IndexedDB
         await loadUserBooks();
 
         library.loaded = true;
@@ -111,15 +144,20 @@ async function loadLibrary() {
         await loadUserBooks();
         library.loaded = true;
         updateStats();
-        showError('Main library failed to load, but your uploaded books are available.');
     }
 }
 
 // Load full text for a specific book
 async function loadBookText(bookId) {
-    // Check cache first
+    // Check cache first (shared books are pre-cached)
     if (library.textCache[bookId]) {
         return library.textCache[bookId];
+    }
+
+    // Shared books should already be in cache
+    if (String(bookId).startsWith('shared_')) {
+        console.warn('Shared book text not found in cache:', bookId);
+        return null;
     }
 
     try {

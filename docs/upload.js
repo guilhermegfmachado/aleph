@@ -562,8 +562,108 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+// Export library as JSON file for committing to repo
+async function exportLibrary() {
+    try {
+        const books = await getUserBooks();
+        if (books.length === 0) {
+            alert('No books to export');
+            return;
+        }
+
+        // Format for the static library structure
+        const exportData = {
+            books: books.map((b, idx) => ({
+                id: idx + 1,
+                title: b.title,
+                author: b.author,
+                source: 'user_upload',
+                language: b.language || 'english',
+                url: b.url || '',
+                snippet: (b.content || '').slice(0, 1000)
+            })),
+            texts: books.map((b, idx) => ({
+                id: idx + 1,
+                content: b.content
+            })),
+            exportedAt: new Date().toISOString(),
+            totalBooks: books.length
+        };
+
+        const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'borges-library.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        alert(`Exported ${books.length} books!\n\nTo make them public:\n1. Commit this file to docs/data/shared-library.json\n2. Everyone will see your library`);
+    } catch (error) {
+        console.error('Export error:', error);
+        alert('Export failed: ' + error.message);
+    }
+}
+
+// Import library from JSON file
+async function importLibrary(file) {
+    try {
+        const text = await file.text();
+        const data = JSON.parse(text);
+
+        let imported = 0;
+        const books = data.books || [];
+        const texts = data.texts || [];
+
+        // Create a map of id -> content
+        const contentMap = {};
+        texts.forEach(t => {
+            contentMap[t.id] = t.content;
+        });
+
+        for (const book of books) {
+            const content = contentMap[book.id] || book.content || '';
+            if (!content || content.length < 100) continue;
+
+            await saveUserBook({
+                title: book.title,
+                author: book.author,
+                content: content,
+                language: book.language || 'english',
+                url: book.url || '',
+                snippet: content.slice(0, 1000)
+            });
+            imported++;
+        }
+
+        await renderUserBooks();
+        alert(`Imported ${imported} books!`);
+
+    } catch (error) {
+        console.error('Import error:', error);
+        alert('Import failed: ' + error.message);
+    }
+}
+
+// Setup import file handler
+document.addEventListener('DOMContentLoaded', () => {
+    const importInput = document.getElementById('import-input');
+    if (importInput) {
+        importInput.addEventListener('change', async (e) => {
+            if (e.target.files.length > 0) {
+                await importLibrary(e.target.files[0]);
+                e.target.value = '';
+            }
+        });
+    }
+});
+
 // Export for integration with main app and onclick handlers
 window.getUserBooks = getUserBooks;
 window.getUserBook = getUserBook;
 window.confirmDeleteBook = confirmDeleteBook;
 window.clearPdfPreview = clearPdfPreview;
+window.exportLibrary = exportLibrary;
+window.importLibrary = importLibrary;

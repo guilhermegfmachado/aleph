@@ -120,6 +120,12 @@
             <!-- User Books List -->
             <div class="user-books-section">
                 <h3>your uploaded texts <span id="user-book-count">(0)</span></h3>
+                <div class="library-actions">
+                    <button class="btn" onclick="exportLibrary()">export library</button>
+                    <button class="btn" onclick="document.getElementById('import-input').click()">import library</button>
+                    <input type="file" id="import-input" accept=".json" hidden>
+                </div>
+                <p class="library-hint">Export your library, then commit the JSON file to the repo for everyone to see.</p>
                 <div id="user-books-list" class="user-books-list">
                     <p class="empty-state">no uploaded texts yet</p>
                 </div>
@@ -127,7 +133,7 @@
         </main>
 
         <footer>
-            <p>texts you add are stored locally in your browser</p>
+            <p>texts stored locally • export & commit to share with everyone</p>
         </footer>
     </div>
 

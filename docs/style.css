@@ -839,6 +839,24 @@ footer {
     color: #666;
 }
 
+.library-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.library-actions .btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+}
+
+.library-hint {
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
 .user-books-list {
     display: grid;
     gap: 0.5rem;

@@ -249,9 +249,9 @@ class SourceDownloader:
 class MITClassicsDownloader(SourceDownloader):
     """Download ALL works from MIT Internet Classics Archive."""
 
-    name = "mit_classics"
+    name = "mit"
     description = "441 works of classical literature"
-    base_url = "https://classics.mit.edu"
+    base_url = "http://classics.mit.edu"  # HTTP only - HTTPS redirects to cert-required site
 
     # Known authors from the archive (based on GitHub repo)
     AUTHORS = [
@@ -2673,6 +2673,11 @@ def main():
         action="store_true",
         help="Show library statistics and exit"
     )
+    parser.add_argument(
+        "--incremental", "-i",
+        action="store_true",
+        help="Skip sources that already have entries (only add new sources)"
+    )
 
     args = parser.parse_args()
 
@@ -2722,8 +2727,21 @@ def main():
     else:
         downloaders.append(SOURCES[args.source](library))
 
+    # Get existing source counts for incremental mode
+    source_counts = {}
+    if args.incremental:
+        with library._get_conn() as conn:
+            for row in conn.execute('SELECT source, COUNT(*) as count FROM books GROUP BY source'):
+                source_counts[row['source']] = row['count']
+        print(f"\nINCREMENTAL MODE: will skip sources that already have entries")
+
     total_added = 0
     for downloader in downloaders:
+        # Skip sources with existing entries in incremental mode
+        if args.incremental and source_counts.get(downloader.name, 0) > 0:
+            print(f"\n>> skipping {downloader.name} ({source_counts[downloader.name]} existing entries)")
+            continue
+
         try:
             added = downloader.download_all(limit=args.limit)
             total_added += added

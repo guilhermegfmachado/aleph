@@ -39,6 +39,11 @@ on:
         description: 'Max books per source (leave empty for all, only for add)'
         required: false
         default: ''
+      incremental:
+        description: 'Skip sources that already have entries'
+        required: false
+        default: true
+        type: boolean
 
 permissions:
   contents: write
@@ -74,11 +79,14 @@ jobs:
             python scripts/populate_library.py --db-path "$DB_PATH" --remove-source ${{ github.event.inputs.source }}
           else
             echo "Adding source: ${{ github.event.inputs.source }}"
+            ARGS="--db-path $DB_PATH --source ${{ github.event.inputs.source }}"
             if [ -n "${{ github.event.inputs.limit }}" ]; then
-              python scripts/populate_library.py --db-path "$DB_PATH" --source ${{ github.event.inputs.source }} --limit ${{ github.event.inputs.limit }}
-            else
-              python scripts/populate_library.py --db-path "$DB_PATH" --source ${{ github.event.inputs.source }}
+              ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
             fi
+            if [ "${{ github.event.inputs.incremental }}" = "true" ]; then
+              ARGS="$ARGS --incremental"
+            fi
+            python scripts/populate_library.py $ARGS
           fi
 
       - name: Build static site data

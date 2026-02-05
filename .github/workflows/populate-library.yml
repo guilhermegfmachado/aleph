@@ -105,11 +105,30 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+
+          # Get current branch name
+          BRANCH=$(git branch --show-current)
+
+          # Fetch latest from remote first
+          git fetch origin $BRANCH
+
+          # Rebase our working changes on top of latest
+          git rebase origin/$BRANCH || git rebase --abort
+
+          # Now stage and commit
           git add docs/data/
           git diff --staged --quiet || git commit -m "${{ github.event.inputs.operation }}: ${{ github.event.inputs.source }}"
-          # Handle concurrent pushes by pulling and retrying
-          for i in 1 2 3; do
-            git pull --rebase origin $(git branch --show-current) && git push && break
-            echo "Retry $i..."
-            sleep 2
+
+          # Push with retry
+          for i in 1 2 3 4 5; do
+            if git push origin $BRANCH; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            echo "Push failed, retry $i - fetching and rebasing..."
+            git fetch origin $BRANCH
+            git rebase origin/$BRANCH || git rebase --abort
+            sleep 3
           done
+          echo "Push failed after retries"
+          exit 1

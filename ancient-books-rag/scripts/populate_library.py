@@ -306,71 +306,71 @@ class MITClassicsDownloader(SourceDownloader):
         print(f"  checking {len(author_links)} authors")
 
         for author_name, author_url in tqdm(author_links, desc="authors"):
-                if limit and works_added >= limit:
-                    break
+            if limit and works_added >= limit:
+                break
 
-                try:
-                    author_resp = self.safe_get(author_url, retries=2)
-                    if not author_resp:
+            try:
+                author_resp = self.safe_get(author_url, retries=2)
+                if not author_resp:
+                    continue
+
+                author_soup = BeautifulSoup(author_resp.text, "lxml")
+
+                # Find ALL work links on this author's page
+                for link in author_soup.find_all("a", href=True):
+                    if limit and works_added >= limit:
+                        break
+
+                    href = link.get("href", "")
+                    title = link.get_text(strip=True)
+
+                    # Skip non-work links
+                    if not href.endswith(".html"):
+                        continue
+                    if "browse" in href.lower() or "index" in href.lower():
+                        continue
+                    if not title or len(title) < 2:
+                        continue
+                    if "more info" in title.lower() or "help" in title.lower():
                         continue
 
-                    author_soup = BeautifulSoup(author_resp.text, "lxml")
+                    if self.library.book_exists(title, author_name, self.name):
+                        continue
 
-                    # Find ALL work links on this author's page
-                    for link in author_soup.find_all("a", href=True):
-                        if limit and works_added >= limit:
-                            break
+                    work_url = urljoin(author_url, href)
 
-                        href = link.get("href", "")
-                        title = link.get_text(strip=True)
-
-                        # Skip non-work links
-                        if not href.endswith(".html"):
-                            continue
-                        if "browse" in href.lower() or "index" in href.lower():
-                            continue
-                        if not title or len(title) < 2:
-                            continue
-                        if "more info" in title.lower() or "help" in title.lower():
+                    try:
+                        work_resp = self.safe_get(work_url, retries=2)
+                        if not work_resp:
                             continue
 
-                        if self.library.book_exists(title, author_name, self.name):
-                            continue
+                        work_soup = BeautifulSoup(work_resp.text, "lxml")
 
-                        work_url = urljoin(author_url, href)
+                        for tag in work_soup.find_all(["script", "style", "nav"]):
+                            tag.decompose()
 
-                        try:
-                            work_resp = self.safe_get(work_url, retries=2)
-                            if not work_resp:
-                                continue
+                        body = work_soup.find("body")
+                        if body:
+                            content = body.get_text(separator="\n")
+                            content = re.sub(r"\n{3,}", "\n\n", content).strip()
 
-                            work_soup = BeautifulSoup(work_resp.text, "lxml")
+                            if len(content) > 500:
+                                book = Book(
+                                    id=None,
+                                    title=title,
+                                    author=author_name,
+                                    source=self.name,
+                                    language="english",
+                                    content=content,
+                                    url=work_url,
+                                )
+                                self.library.add_book(book)
+                                works_added += 1
 
-                            for tag in work_soup.find_all(["script", "style", "nav"]):
-                                tag.decompose()
+                        time.sleep(0.2)
 
-                            body = work_soup.find("body")
-                            if body:
-                                content = body.get_text(separator="\n")
-                                content = re.sub(r"\n{3,}", "\n\n", content).strip()
-
-                                if len(content) > 500:
-                                    book = Book(
-                                        id=None,
-                                        title=title,
-                                        author=author_name,
-                                        source=self.name,
-                                        language="english",
-                                        content=content,
-                                        url=work_url,
-                                    )
-                                    self.library.add_book(book)
-                                    works_added += 1
-
-                            time.sleep(0.2)
-
-                        except Exception:
-                            pass
+                    except Exception:
+                        pass
 
             except Exception as e:
                 print(f"  error with {author_name}: {e}")

@@ -107,5 +107,9 @@ jobs:
           git config --local user.name "GitHub Action"
           git add docs/data/
           git diff --staged --quiet || git commit -m "${{ github.event.inputs.operation }}: ${{ github.event.inputs.source }}"
-          git pull --rebase origin ${{ github.ref_name }} || true
-          git push
+          # Handle concurrent pushes by pulling and retrying
+          for i in 1 2 3; do
+            git pull --rebase origin $(git branch --show-current) && git push && break
+            echo "Retry $i..."
+            sleep 2
+          done

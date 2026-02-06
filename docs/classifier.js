@@ -377,6 +377,236 @@ const Classifier = {
                 /\b(executive compensation|golden parachute)\b/i
             ],
             docTypes: ['employment_agreement', 'offer_letter', 'non_compete', 'severance', 'handbook']
+        },
+
+        // ═══════════════════════════════════════════════════════════════
+        // EUROPEAN CORPORATE
+        // ═══════════════════════════════════════════════════════════════
+
+        eu_corporate: {
+            name: 'EU Corporate Documents',
+            patterns: [
+                /\b(societas europaea|se company)\b/i,
+                /\b(gmbh|gesellschaft mit beschränkter haftung)\b/i,
+                /\b(aktiengesellschaft|ag)\b/i,
+                /\b(société anonyme|s\.?a\.?)\b/i,
+                /\b(société à responsabilité limitée|sarl)\b/i,
+                /\b(besloten vennootschap|b\.?v\.?)\b/i,
+                /\b(naamloze vennootschap|n\.?v\.?)\b/i,
+                /\b(società per azioni|s\.?p\.?a\.?)\b/i,
+                /\b(società a responsabilità limitata|s\.?r\.?l\.?)\b/i,
+                /\b(handelsregister|registro mercantil|registre du commerce)\b/i,
+                /\b(geschäftsführer|gérant|amministratore)\b/i,
+                /\b(aufsichtsrat|conseil de surveillance|supervisory board)\b/i,
+                /\b(hauptversammlung|assemblée générale)\b/i,
+                /\b(kapitalerhöhung|augmentation de capital)\b/i,
+                /\b(mifid|ucits|aifmd|emir)\b/i,
+                /\b(european company|cross-border merger)\b/i
+            ],
+            docTypes: ['gesellschaftsvertrag', 'satzung', 'handelsregisterauszug', 'jahresabschluss', 'lagebericht']
+        },
+
+        uk_corporate: {
+            name: 'UK Corporate Documents',
+            patterns: [
+                /\b(companies house|company number)\b/i,
+                /\b(limited company|ltd|plc)\b/i,
+                /\b(memorandum of association)\b/i,
+                /\b(articles of association)\b/i,
+                /\b(certificate of incorporation)\b/i,
+                /\b(confirmation statement|annual return)\b/i,
+                /\b(persons with significant control|psc)\b/i,
+                /\b(share capital|ordinary shares|preference shares)\b/i,
+                /\b(board minutes|written resolution)\b/i,
+                /\b(companies act 2006)\b/i,
+                /\b(fca|financial conduct authority)\b/i,
+                /\b(isa|sipp|pension scheme)\b/i
+            ],
+            docTypes: ['memorandum', 'articles', 'certificate', 'annual_accounts', 'directors_report']
+        },
+
+        // ═══════════════════════════════════════════════════════════════
+        // CHINESE CORPORATE
+        // ═══════════════════════════════════════════════════════════════
+
+        china_corporate: {
+            name: 'Chinese Corporate Documents',
+            patterns: [
+                /\b(有限责任公司|有限公司|股份有限公司)\b/,
+                /\b(营业执照|工商登记|企业法人)\b/,
+                /\b(公司章程|股东会决议|董事会决议)\b/,
+                /\b(法定代表人|执行董事|监事)\b/,
+                /\b(注册资本|实缴资本|认缴资本)\b/,
+                /\b(外商投资企业|wfoe|sino-foreign)\b/i,
+                /\b(variable interest entity|vie structure)\b/i,
+                /\b(state administration|samr|mofcom)\b/i,
+                /\b(csrc|china securities regulatory)\b/i,
+                /\b(shanghai stock exchange|shenzhen stock exchange|sse|szse)\b/i,
+                /\b(a-shares?|b-shares?|h-shares?)\b/i,
+                /\b(red chip|p chip)\b/i,
+                /\b(qualified foreign institutional investor|qfii|rqfii)\b/i
+            ],
+            docTypes: ['business_license', 'company_charter', 'shareholder_resolution', 'board_resolution', 'joint_venture']
+        },
+
+        // ═══════════════════════════════════════════════════════════════
+        // JAPANESE CORPORATE
+        // ═══════════════════════════════════════════════════════════════
+
+        japan_corporate: {
+            name: 'Japanese Corporate Documents',
+            patterns: [
+                /\b(株式会社|kabushiki kaisha|k\.?k\.?)\b/i,
+                /\b(合同会社|godo kaisha|g\.?k\.?)\b/i,
+                /\b(有限会社|yugen kaisha)\b/i,
+                /\b(定款|teikan|articles of incorporation)\b/i,
+                /\b(取締役会|torishimariyakukai|board of directors)\b/i,
+                /\b(株主総会|kabunushi soukai|shareholders meeting)\b/i,
+                /\b(登記簿謄本|certificate of registration)\b/i,
+                /\b(代表取締役|representative director)\b/i,
+                /\b(監査役|kansayaku|statutory auditor)\b/i,
+                /\b(tokyo stock exchange|tse|jpx)\b/i,
+                /\b(financial services agency|fsa japan|jfsa)\b/i,
+                /\b(keiretsu|zaibatsu)\b/i,
+                /\b(j-reit|tokutei mokuteki kaisha|tmk)\b/i
+            ],
+            docTypes: ['teikan', 'touki', 'kabunushi_soukai', 'torishimariyakukai', 'yukashoken']
+        },
+
+        // ═══════════════════════════════════════════════════════════════
+        // KOREAN CORPORATE
+        // ═══════════════════════════════════════════════════════════════
+
+        korea_corporate: {
+            name: 'Korean Corporate Documents',
+            patterns: [
+                /\b(주식회사|chusik hoesa)\b/i,
+                /\b(유한회사|yuhan hoesa)\b/i,
+                /\b(유한책임회사|yuhan chaekim hoesa)\b/i,
+                /\b(정관|articles of incorporation)\b/i,
+                /\b(이사회|board of directors)\b/i,
+                /\b(주주총회|shareholders meeting)\b/i,
+                /\b(법인등기부등본|corporate registry)\b/i,
+                /\b(대표이사|representative director)\b/i,
+                /\b(감사|auditor)\b/i,
+                /\b(korea exchange|krx|kospi|kosdaq)\b/i,
+                /\b(financial supervisory service|fss)\b/i,
+                /\b(chaebol|재벌)\b/i,
+                /\b(k-ifrs|korean accounting standards)\b/i
+            ],
+            docTypes: ['jeonggwan', 'deunggibubdeungbon', 'jusik_chonghoe', 'isahoe', 'gamsabogoseo']
+        },
+
+        // ═══════════════════════════════════════════════════════════════
+        // SOUTHEAST ASIAN CORPORATE
+        // ═══════════════════════════════════════════════════════════════
+
+        singapore_corporate: {
+            name: 'Singapore Corporate Documents',
+            patterns: [
+                /\b(acra|accounting and corporate regulatory authority)\b/i,
+                /\b(private limited|pte\.?\s*ltd)\b/i,
+                /\b(bizfile|sgx|singapore exchange)\b/i,
+                /\b(memorandum and articles|m&aa)\b/i,
+                /\b(company secretary|resident director)\b/i,
+                /\b(central provident fund|cpf)\b/i,
+                /\b(monetary authority of singapore|mas)\b/i,
+                /\b(variable capital company|vcc)\b/i,
+                /\b(registered office|registered address)\b/i
+            ],
+            docTypes: ['bizfile_profile', 'constitution', 'directors_resolution', 'agm_minutes', 'annual_return']
+        },
+
+        hk_corporate: {
+            name: 'Hong Kong Corporate Documents',
+            patterns: [
+                /\b(companies registry|cr\.gov\.hk)\b/i,
+                /\b(hong kong limited|hk limited)\b/i,
+                /\b(certificate of incorporation|ci)\b/i,
+                /\b(business registration certificate|brc)\b/i,
+                /\b(annual return|nar1)\b/i,
+                /\b(company secretary|director.?s report)\b/i,
+                /\b(hong kong stock exchange|hkex|sehk)\b/i,
+                /\b(securities and futures commission|sfc)\b/i,
+                /\b(mpf|mandatory provident fund)\b/i
+            ],
+            docTypes: ['ci', 'brc', 'nar1', 'articles', 'directors_resolution']
+        },
+
+        asean_corporate: {
+            name: 'ASEAN Corporate Documents',
+            patterns: [
+                /\b(perseroan terbatas|p\.?t\.?)\b/i,  // Indonesia
+                /\b(berhad|bhd|sdn bhd)\b/i,  // Malaysia
+                /\b(บริษัท|borisat)\b/i,  // Thailand
+                /\b(công ty|cong ty|tnhh)\b/i,  // Vietnam
+                /\b(corporation|inc)\s+(philippines|ph)\b/i,
+                /\b(ojk|otoritas jasa keuangan)\b/i,  // Indonesia regulator
+                /\b(bursa malaysia|idx|set|hose)\b/i,  // SE Asian exchanges
+                /\b(board of investment|boi)\b/i,
+                /\b(foreign business act|fba)\b/i
+            ],
+            docTypes: ['akta_pendirian', 'anggaran_dasar', 'sk_kemenkumham', 'rups', 'company_profile']
+        },
+
+        // ═══════════════════════════════════════════════════════════════
+        // MIDDLE EAST / ARAB CORPORATE
+        // ═══════════════════════════════════════════════════════════════
+
+        gcc_corporate: {
+            name: 'GCC Corporate Documents',
+            patterns: [
+                /\b(شركة ذات مسؤولية محدودة|ذ\.م\.م)\b/,  // LLC Arabic
+                /\b(شركة مساهمة|ش\.م\.ع)\b/,  // Joint stock
+                /\b(السجل التجاري|commercial register)\b/i,
+                /\b(عقد التأسيس|memorandum of association)\b/i,
+                /\b(النظام الأساسي|articles of association)\b/i,
+                /\b(المدير العام|general manager)\b/i,
+                /\b(مجلس الإدارة|board of directors)\b/i,
+                /\b(الجمعية العمومية|general assembly)\b/i,
+                /\b(free zone|freezon|jafza|difc|adgm|dmcc)\b/i,
+                /\b(dubai financial market|dfm|adx|tadawul|qse)\b/i,
+                /\b(uae commercial companies law|ccl)\b/i,
+                /\b(local sponsor|service agent)\b/i,
+                /\b(saudi capital market authority|cma)\b/i,
+                /\b(qatar financial centre|qfc)\b/i,
+                /\b(bahrain commercial companies law)\b/i,
+                /\b(oman commercial register)\b/i
+            ],
+            docTypes: ['trade_license', 'moa_arabic', 'aoa_arabic', 'commercial_register', 'board_resolution']
+        },
+
+        uae_corporate: {
+            name: 'UAE Corporate Documents',
+            patterns: [
+                /\b(limited liability company|llc|l\.l\.c)\b/i,
+                /\b(free zone company|fzco|fze)\b/i,
+                /\b(department of economic development|ded)\b/i,
+                /\b(emirates id|trade license)\b/i,
+                /\b(mainland company|onshore)\b/i,
+                /\b(shareholder agreement|sha)\b/i,
+                /\b(power of attorney|poa)\b/i,
+                /\b(uae federal law|company law)\b/i,
+                /\b(ministry of economy)\b/i,
+                /\b(sca|securities and commodities authority)\b/i
+            ],
+            docTypes: ['trade_license', 'moa', 'shareholder_resolution', 'manager_resolution', 'establishment_card']
+        },
+
+        saudi_corporate: {
+            name: 'Saudi Corporate Documents',
+            patterns: [
+                /\b(شركة ذات مسؤولية محدودة سعودية)\b/,
+                /\b(ministry of commerce|moc|mc\.gov\.sa)\b/i,
+                /\b(commercial registration|cr number)\b/i,
+                /\b(chamber of commerce)\b/i,
+                /\b(saudization|nitaqat)\b/i,
+                /\b(general organization for social insurance|gosi)\b/i,
+                /\b(saudi arabian general investment authority|sagia)\b/i,
+                /\b(vision 2030|neom|pif)\b/i,
+                /\b(zakat|gazt)\b/i
+            ],
+            docTypes: ['commercial_registration', 'articles_of_association', 'partners_resolution', 'chamber_certificate']
         }
     },
 

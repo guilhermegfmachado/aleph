@@ -188,6 +188,199 @@ const Classifier = {
     },
 
     // ═══════════════════════════════════════════════════════════════
+    // CORPORATE/BUSINESS DOCUMENT TYPES
+    // ═══════════════════════════════════════════════════════════════
+
+    corporate: {
+        sec_filings: {
+            name: 'SEC Filings',
+            patterns: [
+                /\b(form\s+)?(10-K|10-Q|8-K|S-1|S-3|S-4|DEF\s*14A|424B)/i,
+                /\b(securities and exchange commission|sec\.gov)\b/i,
+                /\b(edgar|cik\s*[:#]?\s*\d+)\b/i,
+                /\baccession\s*(number|no\.?)[:\s]*\d+-\d+-\d+/i,
+                /\b(annual report|quarterly report)\s+pursuant/i,
+                /\bsection\s+13\s+or\s+15\(d\)/i,
+                /\b(proxy statement|schedule 14a)\b/i,
+                /\bregistration statement/i
+            ],
+            docTypes: ['10-K', '10-Q', '8-K', 'S-1', 'proxy', 'prospectus']
+        },
+
+        financial_statements: {
+            name: 'Financial Statements',
+            patterns: [
+                /\b(balance sheet|statement of financial position)\b/i,
+                /\b(income statement|profit and loss|p&l)\b/i,
+                /\b(cash flow statement|statement of cash flows)\b/i,
+                /\b(statement of (shareholders'?|stockholders'?) equity)\b/i,
+                /\b(consolidated financial statements)\b/i,
+                /\b(notes to (the )?financial statements)\b/i,
+                /\b(gaap|ifrs|accounting standards)\b/i,
+                /\b(auditor'?s? report|independent audit)\b/i,
+                /\b(total assets|total liabilities|net income|revenue)\b/i,
+                /\b(fiscal year|fy\s*\d{2,4})\b/i
+            ],
+            docTypes: ['balance_sheet', 'income_statement', 'cash_flow', 'audit_report', 'annual_report']
+        },
+
+        contracts: {
+            name: 'Contracts & Agreements',
+            patterns: [
+                /\b(this agreement|this contract)\s+(is\s+)?(made|entered)/i,
+                /\b(parties|party)\s+(hereto|to this)/i,
+                /\b(whereas|witnesseth|now,?\s+therefore)\b/i,
+                /\b(representations and warranties)\b/i,
+                /\b(indemnification|indemnify)\b/i,
+                /\b(governing law|jurisdiction)\b/i,
+                /\b(term and termination|effective date)\b/i,
+                /\b(confidential(ity)?|non-disclosure|nda)\b/i,
+                /\b(intellectual property|ip rights)\b/i,
+                /\b(force majeure|severability)\b/i,
+                /\bin\s+witness\s+whereof\b/i,
+                /\b(executed|signed)\s+(as of|on)\b/i
+            ],
+            docTypes: ['service_agreement', 'nda', 'license', 'employment', 'partnership', 'lease', 'loan']
+        },
+
+        corporate_governance: {
+            name: 'Corporate Governance',
+            patterns: [
+                /\b(board of directors|board resolution)\b/i,
+                /\b(articles of (incorporation|association))\b/i,
+                /\b(bylaws|by-laws|corporate charter)\b/i,
+                /\b(shareholders'? (agreement|meeting|resolution))\b/i,
+                /\b(corporate governance|governance committee)\b/i,
+                /\b(fiduciary duty|duty of care|duty of loyalty)\b/i,
+                /\b(annual (general )?meeting|agm|egm)\b/i,
+                /\b(proxy|voting rights|quorum)\b/i,
+                /\b(dividend|stock option|equity compensation)\b/i,
+                /\b(audit committee|compensation committee|nominating)\b/i
+            ],
+            docTypes: ['articles', 'bylaws', 'board_resolution', 'shareholder_agreement', 'minutes']
+        },
+
+        ma_documents: {
+            name: 'M&A Documents',
+            patterns: [
+                /\b(merger agreement|acquisition agreement)\b/i,
+                /\b(letter of intent|loi|term sheet)\b/i,
+                /\b(due diligence|target company|acquirer)\b/i,
+                /\b(purchase price|consideration|earnout)\b/i,
+                /\b(asset purchase|stock purchase|share exchange)\b/i,
+                /\b(tender offer|hostile takeover|friendly merger)\b/i,
+                /\b(hart-scott-rodino|hsr|antitrust)\b/i,
+                /\b(closing conditions|material adverse)\b/i,
+                /\b(break-up fee|termination fee|no-shop)\b/i,
+                /\b(fairness opinion|valuation)\b/i
+            ],
+            docTypes: ['merger_agreement', 'loi', 'term_sheet', 'due_diligence', 'fairness_opinion']
+        },
+
+        securities: {
+            name: 'Securities Documents',
+            patterns: [
+                /\b(prospectus|offering memorandum|ppm)\b/i,
+                /\b(private placement|regulation d|reg d|506\(b\)|506\(c\))\b/i,
+                /\b(accredited investor|qualified purchaser)\b/i,
+                /\b(subscription agreement)\b/i,
+                /\b(ipo|initial public offering)\b/i,
+                /\b(underwriting agreement|underwriter)\b/i,
+                /\b(securities act|exchange act)\b/i,
+                /\b(blue sky|state securities)\b/i,
+                /\b(safe|simple agreement for future equity)\b/i,
+                /\b(convertible note|conversion price)\b/i
+            ],
+            docTypes: ['prospectus', 'ppm', 'subscription', 'underwriting', 'safe', 'convertible_note']
+        },
+
+        esg_reports: {
+            name: 'ESG & Sustainability',
+            patterns: [
+                /\b(esg|environmental,?\s+social,?\s+(and\s+)?governance)\b/i,
+                /\b(sustainability report|corporate responsibility)\b/i,
+                /\b(carbon (footprint|emissions|neutral))\b/i,
+                /\b(climate (risk|change|disclosure))\b/i,
+                /\b(gri|global reporting initiative)\b/i,
+                /\b(sasb|tcfd|cdp)\b/i,
+                /\b(scope\s+[123]|ghg emissions)\b/i,
+                /\b(diversity,?\s+(equity,?\s+)?(and\s+)?inclusion|dei)\b/i,
+                /\b(stakeholder engagement)\b/i,
+                /\b(net zero|renewable energy)\b/i
+            ],
+            docTypes: ['esg_report', 'sustainability_report', 'climate_disclosure', 'dei_report']
+        },
+
+        ip_documents: {
+            name: 'Intellectual Property',
+            patterns: [
+                /\b(patent\s+(application|grant|claim))\b/i,
+                /\b(trademark\s+(registration|application))\b/i,
+                /\b(copyright\s+(registration|notice))\b/i,
+                /\b(license agreement|licensing)\b/i,
+                /\b(trade secret|proprietary information)\b/i,
+                /\b(infringement|prior art|novelty)\b/i,
+                /\b(assignment of (ip|intellectual property))\b/i,
+                /\b(work for hire|invention assignment)\b/i,
+                /\b(claims?\s+\d+|dependent claim|independent claim)\b/i,
+                /\b(uspto|epo|wipo|pct)\b/i
+            ],
+            docTypes: ['patent', 'trademark', 'copyright', 'license', 'assignment']
+        },
+
+        banking_finance: {
+            name: 'Banking & Finance',
+            patterns: [
+                /\b(credit agreement|loan agreement|facility agreement)\b/i,
+                /\b(promissory note|security agreement)\b/i,
+                /\b(mortgage|deed of trust)\b/i,
+                /\b(collateral|pledge|lien|security interest)\b/i,
+                /\b(covenant|default|event of default)\b/i,
+                /\b(libor|sofr|interest rate|basis points)\b/i,
+                /\b(amortization|principal|maturity)\b/i,
+                /\b(syndicated loan|lead arranger)\b/i,
+                /\b(subordination|intercreditor)\b/i,
+                /\b(ucc|uniform commercial code)\b/i
+            ],
+            docTypes: ['credit_agreement', 'promissory_note', 'security_agreement', 'mortgage', 'guarantee']
+        },
+
+        real_estate: {
+            name: 'Real Estate',
+            patterns: [
+                /\b(purchase and sale agreement|psa)\b/i,
+                /\b(lease agreement|commercial lease|residential lease)\b/i,
+                /\b(deed|title|conveyance)\b/i,
+                /\b(easement|right of way|encumbrance)\b/i,
+                /\b(zoning|land use|permit)\b/i,
+                /\b(landlord|tenant|lessor|lessee)\b/i,
+                /\b(rent|security deposit|common area)\b/i,
+                /\b(closing|escrow|title insurance)\b/i,
+                /\b(survey|environmental assessment|phase [12])\b/i,
+                /\b(reit|real estate investment trust)\b/i
+            ],
+            docTypes: ['purchase_agreement', 'lease', 'deed', 'easement', 'closing_documents']
+        },
+
+        employment: {
+            name: 'Employment Documents',
+            patterns: [
+                /\b(employment agreement|offer letter)\b/i,
+                /\b(non-compete|non-solicitation|restrictive covenant)\b/i,
+                /\b(severance|termination|resignation)\b/i,
+                /\b(compensation|salary|bonus|equity)\b/i,
+                /\b(employee handbook|hr policy)\b/i,
+                /\b(at-will employment|for cause)\b/i,
+                /\b(benefits|401\(k\)|health insurance)\b/i,
+                /\b(arbitration agreement|dispute resolution)\b/i,
+                /\b(invention assignment|work product)\b/i,
+                /\b(executive compensation|golden parachute)\b/i
+            ],
+            docTypes: ['employment_agreement', 'offer_letter', 'non_compete', 'severance', 'handbook']
+        }
+    },
+
+    // ═══════════════════════════════════════════════════════════════
     // DOCUMENT TYPE PATTERNS (non-legal)
     // ═══════════════════════════════════════════════════════════════
 
@@ -267,6 +460,33 @@ const Classifier = {
         };
     },
 
+    detectCorporateType(text) {
+        const sample = text.slice(0, 25000);
+        const scores = {};
+
+        for (const [category, config] of Object.entries(this.corporate)) {
+            let score = 0;
+            for (const pattern of config.patterns) {
+                const matches = sample.match(new RegExp(pattern, 'gi')) || [];
+                score += matches.length;
+            }
+            if (score > 3) {
+                scores[category] = { score, name: config.name, docTypes: config.docTypes };
+            }
+        }
+
+        const sorted = Object.entries(scores).sort((a, b) => b[1].score - a[1].score);
+        if (sorted.length === 0) return null;
+
+        return {
+            primary: sorted[0][0],
+            name: sorted[0][1].name,
+            confidence: Math.min(sorted[0][1].score / 20, 1),
+            possibleTypes: sorted[0][1].docTypes,
+            all: sorted.slice(0, 3).map(([code, data]) => ({ code, name: data.name, score: data.score }))
+        };
+    },
+
     detectDocumentType(text) {
         const sample = text.slice(0, 15000);
         const scores = {};
@@ -329,7 +549,7 @@ const Classifier = {
     // METADATA EXTRACTION
     // ═══════════════════════════════════════════════════════════════
 
-    extractMetadata(text, jurisdiction, docType) {
+    extractMetadata(text, jurisdiction, docType, corporateType) {
         const meta = {};
         const sample = text.slice(0, 25000);
 
@@ -343,11 +563,119 @@ const Classifier = {
             if (extractor) Object.assign(meta, extractor.call(this, sample));
         }
 
+        // Corporate-specific
+        if (corporateType) {
+            Object.assign(meta, this.extractCorporateMetadata(sample, corporateType));
+        }
+
         // Type-specific
         if (docType?.startsWith('ancient')) {
             Object.assign(meta, this.extractAncientMetadata(sample));
         } else if (docType === 'scientific') {
             Object.assign(meta, this.extractScientificMetadata(sample));
+        }
+
+        return meta;
+    },
+
+    extractCorporateMetadata(text, corporateType) {
+        const meta = {};
+
+        // SEC filing specifics
+        if (corporateType === 'sec_filings') {
+            const form = text.match(/\bform\s*(10-K|10-Q|8-K|S-1|DEF\s*14A)/i);
+            if (form) meta.formType = form[1].toUpperCase();
+
+            const cik = text.match(/\bCIK[:\s#]*(\d{7,10})/i);
+            if (cik) meta.cik = cik[1];
+
+            const accession = text.match(/accession\s*(?:number|no\.?)?[:\s]*(\d{10}-\d{2}-\d{6})/i);
+            if (accession) meta.accessionNumber = accession[1];
+
+            const filer = text.match(/(?:company|registrant|issuer)\s*(?:name)?[:\s]*([A-Z][A-Za-z\s&,\.]+(?:Inc|Corp|LLC|LP|Ltd))/i);
+            if (filer) meta.filerName = filer[1].trim();
+
+            const fiscalYear = text.match(/fiscal\s+year\s+(?:end(?:ed|ing)?)?[:\s]*(?:december|january|february|march|april|may|june|july|august|september|october|november)\s+\d{1,2},?\s*(\d{4})/i);
+            if (fiscalYear) meta.fiscalYear = fiscalYear[1];
+        }
+
+        // Financial statements
+        if (corporateType === 'financial_statements') {
+            const totalAssets = text.match(/total\s+assets[:\s$]*([0-9,]+)/i);
+            if (totalAssets) meta.totalAssets = totalAssets[1];
+
+            const revenue = text.match(/(?:total\s+)?(?:revenue|net\s+sales)[:\s$]*([0-9,]+)/i);
+            if (revenue) meta.revenue = revenue[1];
+
+            const accounting = text.match(/\b(GAAP|IFRS)\b/i);
+            if (accounting) meta.accountingStandard = accounting[1].toUpperCase();
+
+            const auditor = text.match(/(?:audited by|independent auditors?)[:\s]*([A-Z][A-Za-z\s&]+(?:LLP|LLC))/i);
+            if (auditor) meta.auditor = auditor[1].trim();
+        }
+
+        // Contracts
+        if (corporateType === 'contracts') {
+            const effectiveDate = text.match(/effective\s+(?:as\s+of\s+)?(?:date)?[:\s]*(\w+\s+\d{1,2},?\s+\d{4})/i);
+            if (effectiveDate) meta.effectiveDate = effectiveDate[1];
+
+            const parties = text.match(/(?:between|by and between)[:\s]*([^,]+),?\s*(?:a\s+)?(\w+)?\s*(?:corporation|company|llc)/i);
+            if (parties) meta.party1 = parties[1].trim();
+
+            const governingLaw = text.match(/governing\s+law[:\s]*(?:the\s+)?(?:laws\s+of\s+)?(?:the\s+)?(?:state\s+of\s+)?(\w+)/i);
+            if (governingLaw) meta.governingLaw = governingLaw[1];
+
+            const term = text.match(/(?:initial\s+)?term[:\s]*(\d+)\s*(year|month|day)/i);
+            if (term) meta.term = `${term[1]} ${term[2]}s`;
+        }
+
+        // M&A
+        if (corporateType === 'ma_documents') {
+            const purchasePrice = text.match(/(?:purchase|consideration|aggregate)\s+price[:\s$]*([0-9,\.]+)\s*(million|billion)?/i);
+            if (purchasePrice) meta.purchasePrice = purchasePrice[0];
+
+            const target = text.match(/(?:target|acquired)\s+(?:company|entity)[:\s]*([A-Z][A-Za-z\s&,]+(?:Inc|Corp|LLC))/i);
+            if (target) meta.target = target[1].trim();
+
+            const acquirer = text.match(/(?:acquirer|buyer|purchaser)[:\s]*([A-Z][A-Za-z\s&,]+(?:Inc|Corp|LLC))/i);
+            if (acquirer) meta.acquirer = acquirer[1].trim();
+        }
+
+        // Securities
+        if (corporateType === 'securities') {
+            const offeringAmount = text.match(/(?:aggregate\s+)?offering\s+(?:price|amount)[:\s$]*([0-9,\.]+)/i);
+            if (offeringAmount) meta.offeringAmount = offeringAmount[1];
+
+            const sharePrice = text.match(/(?:per\s+share|share\s+price)[:\s$]*([0-9\.]+)/i);
+            if (sharePrice) meta.sharePrice = sharePrice[1];
+
+            if (/\b506\(b\)/i.test(text)) meta.exemption = 'Reg D 506(b)';
+            else if (/\b506\(c\)/i.test(text)) meta.exemption = 'Reg D 506(c)';
+            else if (/\bregulation\s+a/i.test(text)) meta.exemption = 'Reg A';
+        }
+
+        // ESG
+        if (corporateType === 'esg_reports') {
+            const scope1 = text.match(/scope\s+1[:\s]*([0-9,\.]+)\s*(?:metric\s+)?(?:tons?|tonnes?)/i);
+            if (scope1) meta.scope1Emissions = scope1[1];
+
+            const scope2 = text.match(/scope\s+2[:\s]*([0-9,\.]+)\s*(?:metric\s+)?(?:tons?|tonnes?)/i);
+            if (scope2) meta.scope2Emissions = scope2[1];
+
+            const framework = text.match(/\b(GRI|SASB|TCFD|CDP)\b/gi);
+            if (framework) meta.reportingFramework = [...new Set(framework.map(f => f.toUpperCase()))];
+        }
+
+        // IP
+        if (corporateType === 'ip_documents') {
+            const patentNum = text.match(/(?:patent\s+(?:no\.?|number)[:\s]*)?(US\s*[0-9,]+)/i);
+            if (patentNum) meta.patentNumber = patentNum[1];
+
+            const applicationNum = text.match(/application\s+(?:no\.?|number)[:\s]*(\d{2}\/\d{3},\d{3})/i);
+            if (applicationNum) meta.applicationNumber = applicationNum[1];
+
+            const filingDate = text.match(/(?:filing|filed)\s+date[:\s]*(\w+\s+\d{1,2},?\s+\d{4})/i);
+            if (filingDate) meta.filingDate = filingDate[1];
         }
 
         return meta;
@@ -572,13 +900,20 @@ const Classifier = {
         return score;
     },
 
-    generateTags(jurisdiction, docType, period, metadata) {
+    generateTags(jurisdiction, corporateType, docType, period, metadata) {
         const tags = [];
 
         // Jurisdiction tags
         if (jurisdiction?.primary) {
             tags.push(jurisdiction.primary);
             tags.push('legal');
+        }
+
+        // Corporate tags
+        if (corporateType?.primary) {
+            tags.push(corporateType.primary.replace('_', '-'));
+            tags.push('corporate');
+            tags.push('business');
         }
 
         // Document type tags
@@ -593,6 +928,7 @@ const Classifier = {
 
         // Metadata-based
         if (metadata?.docType) tags.push(metadata.docType);
+        if (metadata?.formType) tags.push(metadata.formType.toLowerCase());
         if (metadata?.language) tags.push(`lang:${metadata.language}`);
         if (metadata?.originalLanguage) tags.push(metadata.originalLanguage.toLowerCase());
 
@@ -604,24 +940,29 @@ const Classifier = {
     // ═══════════════════════════════════════════════════════════════
 
     classify(text, existingMeta = {}) {
-        // Detect jurisdiction first (legal documents)
+        // Detect jurisdiction (legal documents)
         const jurisdiction = this.detectJurisdiction(text);
 
-        // Detect document type (for non-legal or additional classification)
+        // Detect corporate type (business documents)
+        const corporateType = this.detectCorporateType(text);
+
+        // Detect document type (for non-legal/non-corporate)
         let docType;
         if (jurisdiction) {
-            // Legal document - use jurisdiction as primary type
             docType = { primary: `legal/${jurisdiction.primary}`, confidence: jurisdiction.confidence, all: [] };
+        } else if (corporateType) {
+            docType = { primary: `corporate/${corporateType.primary}`, confidence: corporateType.confidence, all: [] };
         } else {
             docType = this.detectDocumentType(text);
         }
 
         const period = this.detectPeriod(text);
-        const metadata = this.extractMetadata(text, jurisdiction?.primary, docType?.primary);
-        const tags = this.generateTags(jurisdiction, docType, period, metadata);
+        const metadata = this.extractMetadata(text, jurisdiction?.primary, docType?.primary, corporateType?.primary);
+        const tags = this.generateTags(jurisdiction, corporateType, docType, period, metadata);
 
         return {
             jurisdiction,
+            corporateType,
             type: docType,
             period,
             metadata: { ...existingMeta, ...metadata },

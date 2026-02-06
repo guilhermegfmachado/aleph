@@ -1,392 +1,700 @@
 {
-  "version": "1.0",
-  "description": "Aleph Universal Corpus - curated multilingual library",
+  "version": "2.0",
+  "description": "Aleph Universal Corpus - law, business, and foundational texts",
   "sources": {
     "gutenberg": "https://www.gutenberg.org",
-    "perseus": "https://www.perseus.tufts.edu",
-    "wikisource": "https://wikisource.org",
-    "sacred-texts": "https://sacred-texts.com",
     "eurlex": "https://eur-lex.europa.eu",
-    "avalon": "https://avalon.law.yale.edu"
+    "avalon": "https://avalon.law.yale.edu",
+    "un": "https://www.un.org",
+    "wto": "https://www.wto.org",
+    "uncitral": "https://uncitral.un.org",
+    "sec": "https://www.sec.gov",
+    "echr": "https://www.echr.coe.int",
+    "icj": "https://www.icj-cij.org",
+    "oecd": "https://www.oecd.org",
+    "bis": "https://www.bis.org",
+    "legislation.gov.uk": "https://www.legislation.gov.uk"
   },
   "corpus": {
-    "philosophy_ancient": {
-      "name": "Ancient Philosophy",
+    "legal_eu_primary": {
+      "name": "EU Primary Law",
       "documents": [
         {
-          "id": "plato-republic",
-          "title": "The Republic",
-          "author": "Plato",
-          "period": "classical",
+          "id": "eu-teu",
+          "title": "Treaty on European Union (Maastricht)",
+          "author": "European Union",
+          "period": "contemporary",
+          "year": 1992,
+          "celex": "12012M/TXT",
           "languages": {
-            "grc": { "source": "perseus", "title": "Πολιτεία" },
-            "lat": { "source": "perseus", "title": "Res Publica" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1497 },
-            "fr": { "source": "wikisource", "title": "La République" },
-            "de": { "source": "gutenberg", "title": "Der Staat" }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "es": { "source": "eurlex" },
+            "it": { "source": "eurlex" },
+            "nl": { "source": "eurlex" },
+            "pt": { "source": "eurlex" },
+            "pl": { "source": "eurlex" }
           },
-          "tags": ["political philosophy", "justice", "ideal state"]
+          "tags": ["eu", "treaty", "constitutional", "maastricht"]
         },
         {
-          "id": "plato-symposium",
-          "title": "Symposium",
-          "author": "Plato",
-          "period": "classical",
+          "id": "eu-tfeu",
+          "title": "Treaty on the Functioning of the European Union",
+          "author": "European Union",
+          "period": "contemporary",
+          "celex": "12012E/TXT",
           "languages": {
-            "grc": { "source": "perseus", "title": "Συμπόσιον" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1600 },
-            "fr": { "source": "wikisource" }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "es": { "source": "eurlex" },
+            "it": { "source": "eurlex" },
+            "nl": { "source": "eurlex" },
+            "pt": { "source": "eurlex" },
+            "pl": { "source": "eurlex" }
           },
-          "tags": ["love", "eros", "beauty"]
+          "tags": ["eu", "treaty", "institutions", "internal market"]
         },
         {
-          "id": "plato-apology",
-          "title": "Apology",
-          "author": "Plato",
-          "period": "classical",
+          "id": "eu-charter-fundamental",
+          "title": "Charter of Fundamental Rights",
+          "author": "European Union",
+          "period": "contemporary",
+          "year": 2000,
+          "celex": "12012P/TXT",
           "languages": {
-            "grc": { "source": "perseus", "title": "Ἀπολογία Σωκράτους" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1656 }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "es": { "source": "eurlex" },
+            "it": { "source": "eurlex" }
           },
-          "tags": ["socrates", "trial", "death", "philosophy of life"]
-        },
-        {
-          "id": "aristotle-nicomachean",
-          "title": "Nicomachean Ethics",
-          "author": "Aristotle",
-          "period": "classical",
-          "languages": {
-            "grc": { "source": "perseus", "title": "Ἠθικὰ Νικομάχεια" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8438 },
-            "la": { "source": "archive" }
-          },
-          "tags": ["ethics", "virtue", "happiness", "eudaimonia"]
-        },
-        {
-          "id": "aristotle-politics",
-          "title": "Politics",
-          "author": "Aristotle",
-          "period": "classical",
-          "languages": {
-            "grc": { "source": "perseus", "title": "Πολιτικά" },
-            "en": { "source": "gutenberg", "gutenberg_id": 6762 }
-          },
-          "tags": ["political philosophy", "state", "citizenship"]
-        },
-        {
-          "id": "marcus-aurelius-meditations",
-          "title": "Meditations",
-          "author": "Marcus Aurelius",
-          "period": "classical",
-          "languages": {
-            "grc": { "source": "perseus", "title": "Τὰ εἰς ἑαυτόν" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2680 },
-            "fr": { "source": "wikisource", "title": "Pensées pour moi-même" }
-          },
-          "tags": ["stoicism", "self-reflection", "ethics"]
-        },
-        {
-          "id": "epictetus-enchiridion",
-          "title": "Enchiridion",
-          "author": "Epictetus",
-          "period": "classical",
-          "languages": {
-            "grc": { "source": "perseus", "title": "Ἐγχειρίδιον" },
-            "en": { "source": "gutenberg", "gutenberg_id": 45109 }
-          },
-          "tags": ["stoicism", "practical philosophy", "manual"]
-        },
-        {
-          "id": "seneca-letters",
-          "title": "Moral Letters to Lucilius",
-          "author": "Seneca",
-          "period": "classical",
-          "languages": {
-            "la": { "source": "latin-library", "title": "Epistulae Morales ad Lucilium" },
-            "en": { "source": "gutenberg", "gutenberg_id": 97967 }
-          },
-          "tags": ["stoicism", "ethics", "letters"]
+          "tags": ["eu", "human rights", "fundamental rights", "charter"]
         }
       ]
     },
-    "philosophy_eastern": {
-      "name": "Eastern Philosophy",
+    "legal_eu_data": {
+      "name": "EU Data & Digital Law",
       "documents": [
         {
-          "id": "laozi-tao",
-          "title": "Tao Te Ching",
-          "author": "Laozi",
-          "period": "ancient",
+          "id": "gdpr",
+          "title": "General Data Protection Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2016,
+          "celex": "32016R0679",
           "languages": {
-            "zh": { "source": "ctext", "title": "道德經" },
-            "en": { "source": "gutenberg", "gutenberg_id": 216 },
-            "de": { "source": "wikisource" }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "es": { "source": "eurlex" },
+            "it": { "source": "eurlex" },
+            "pt": { "source": "eurlex" },
+            "nl": { "source": "eurlex" },
+            "pl": { "source": "eurlex" }
           },
-          "tags": ["taoism", "way", "virtue", "nature"]
+          "tags": ["eu", "privacy", "data protection", "regulation", "gdpr"]
         },
         {
-          "id": "confucius-analects",
-          "title": "Analects",
-          "author": "Confucius",
-          "period": "ancient",
+          "id": "eu-ai-act",
+          "title": "Artificial Intelligence Act",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2024,
+          "celex": "32024R1689",
           "languages": {
-            "zh": { "source": "ctext", "title": "論語" },
-            "en": { "source": "gutenberg", "gutenberg_id": 4094 }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
           },
-          "tags": ["confucianism", "ethics", "governance", "virtue"]
+          "tags": ["eu", "ai", "regulation", "technology", "risk-based"]
         },
         {
-          "id": "sunzi-art-of-war",
-          "title": "The Art of War",
-          "author": "Sun Tzu",
-          "period": "ancient",
+          "id": "eu-dsa",
+          "title": "Digital Services Act",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2022,
+          "celex": "32022R2065",
           "languages": {
-            "zh": { "source": "ctext", "title": "孫子兵法" },
-            "en": { "source": "gutenberg", "gutenberg_id": 132 },
-            "fr": { "source": "wikisource" }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
           },
-          "tags": ["strategy", "military", "tactics"]
+          "tags": ["eu", "digital", "platforms", "content moderation", "intermediaries"]
         },
         {
-          "id": "bhagavad-gita",
-          "title": "Bhagavad Gita",
-          "author": "Vyasa",
-          "period": "ancient",
+          "id": "eu-dma",
+          "title": "Digital Markets Act",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2022,
+          "celex": "32022R1925",
           "languages": {
-            "sa": { "source": "sacred-texts", "title": "भगवद्गीता" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2388 }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
           },
-          "tags": ["hinduism", "dharma", "duty", "yoga"]
+          "tags": ["eu", "competition", "gatekeepers", "big tech", "antitrust"]
+        },
+        {
+          "id": "eu-data-act",
+          "title": "Data Act",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2023,
+          "celex": "32023R2854",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "data sharing", "iot", "cloud", "data economy"]
+        },
+        {
+          "id": "eu-data-governance",
+          "title": "Data Governance Act",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2022,
+          "celex": "32022R0868",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "data governance", "data intermediaries", "data altruism"]
         }
       ]
     },
-    "religious_texts": {
-      "name": "Religious & Sacred Texts",
+    "legal_eu_financial": {
+      "name": "EU Financial Law",
       "documents": [
         {
-          "id": "bible-genesis",
-          "title": "Genesis",
-          "author": "Traditional",
-          "period": "ancient",
+          "id": "eu-mifid2",
+          "title": "Markets in Financial Instruments Directive II",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2014,
+          "celex": "32014L0065",
           "languages": {
-            "he": { "source": "mechon-mamre", "title": "בְּרֵאשִׁית" },
-            "grc": { "source": "perseus", "title": "Γένεσις (Septuagint)" },
-            "la": { "source": "vulgate", "title": "Liber Genesis" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
-            "ar": { "source": "quran.com" }
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
           },
-          "tags": ["creation", "origins", "torah", "old testament"]
+          "tags": ["eu", "financial markets", "investment services", "investor protection"]
         },
         {
-          "id": "quran-fatiha",
-          "title": "Al-Fatiha (The Opening)",
-          "author": "Traditional",
+          "id": "eu-mifir",
+          "title": "Markets in Financial Instruments Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2014,
+          "celex": "32014R0600",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "trading", "transparency", "financial markets"]
+        },
+        {
+          "id": "eu-emir",
+          "title": "European Market Infrastructure Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2012,
+          "celex": "32012R0648",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "derivatives", "clearing", "otc", "counterparty risk"]
+        },
+        {
+          "id": "eu-mar",
+          "title": "Market Abuse Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2014,
+          "celex": "32014R0596",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "market abuse", "insider trading", "manipulation"]
+        },
+        {
+          "id": "eu-ucits",
+          "title": "UCITS Directive",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2009,
+          "celex": "32009L0065",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "investment funds", "asset management", "ucits"]
+        },
+        {
+          "id": "eu-aifmd",
+          "title": "Alternative Investment Fund Managers Directive",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2011,
+          "celex": "32011L0061",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "hedge funds", "private equity", "aifm"]
+        },
+        {
+          "id": "eu-psd2",
+          "title": "Payment Services Directive II",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2015,
+          "celex": "32015L2366",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "payments", "open banking", "fintech"]
+        },
+        {
+          "id": "eu-mica",
+          "title": "Markets in Crypto-Assets Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2023,
+          "celex": "32023R1114",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "crypto", "digital assets", "stablecoins", "defi"]
+        },
+        {
+          "id": "eu-dora",
+          "title": "Digital Operational Resilience Act",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2022,
+          "celex": "32022R2554",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "cybersecurity", "financial sector", "ict risk"]
+        }
+      ]
+    },
+    "legal_eu_corporate": {
+      "name": "EU Corporate & ESG Law",
+      "documents": [
+        {
+          "id": "eu-csrd",
+          "title": "Corporate Sustainability Reporting Directive",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2022,
+          "celex": "32022L2464",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "esg", "sustainability", "reporting", "disclosure"]
+        },
+        {
+          "id": "eu-csddd",
+          "title": "Corporate Sustainability Due Diligence Directive",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2024,
+          "celex": "32024L1760",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "due diligence", "supply chain", "human rights", "environment"]
+        },
+        {
+          "id": "eu-taxonomy",
+          "title": "EU Taxonomy Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2020,
+          "celex": "32020R0852",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "green finance", "sustainability", "classification"]
+        },
+        {
+          "id": "eu-sfdr",
+          "title": "Sustainable Finance Disclosure Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2019,
+          "celex": "32019R2088",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "esg", "disclosure", "sustainable investment"]
+        },
+        {
+          "id": "eu-shareholder-rights",
+          "title": "Shareholder Rights Directive II",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2017,
+          "celex": "32017L0828",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "corporate governance", "shareholder rights", "engagement"]
+        }
+      ]
+    },
+    "legal_eu_aml": {
+      "name": "EU Anti-Money Laundering",
+      "documents": [
+        {
+          "id": "eu-amld6",
+          "title": "6th Anti-Money Laundering Directive",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2018,
+          "celex": "32018L1673",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "aml", "money laundering", "criminal law"]
+        },
+        {
+          "id": "eu-amlr",
+          "title": "Anti-Money Laundering Regulation (2024)",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2024,
+          "celex": "32024R1624",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "aml", "beneficial ownership", "kyc", "single rulebook"]
+        }
+      ]
+    },
+    "legal_international_trade": {
+      "name": "International Trade Law",
+      "documents": [
+        {
+          "id": "cisg",
+          "title": "UN Convention on Contracts for the International Sale of Goods",
+          "author": "UNCITRAL",
+          "period": "contemporary",
+          "year": 1980,
+          "languages": {
+            "en": { "source": "uncitral" },
+            "fr": { "source": "uncitral" },
+            "es": { "source": "uncitral" },
+            "ar": { "source": "uncitral" },
+            "zh": { "source": "uncitral" },
+            "ru": { "source": "uncitral" }
+          },
+          "tags": ["international", "trade", "contracts", "sale of goods", "cisg"]
+        },
+        {
+          "id": "uncitral-model-arbitration",
+          "title": "UNCITRAL Model Law on International Commercial Arbitration",
+          "author": "UNCITRAL",
+          "period": "contemporary",
+          "year": 1985,
+          "languages": {
+            "en": { "source": "uncitral" },
+            "fr": { "source": "uncitral" },
+            "es": { "source": "uncitral" }
+          },
+          "tags": ["international", "arbitration", "dispute resolution", "model law"]
+        },
+        {
+          "id": "new-york-convention",
+          "title": "New York Convention on Recognition and Enforcement of Foreign Arbitral Awards",
+          "author": "United Nations",
+          "period": "contemporary",
+          "year": 1958,
+          "languages": {
+            "en": { "source": "un" },
+            "fr": { "source": "un" },
+            "es": { "source": "un" }
+          },
+          "tags": ["international", "arbitration", "enforcement", "convention"]
+        },
+        {
+          "id": "wto-gatt",
+          "title": "General Agreement on Tariffs and Trade",
+          "author": "WTO",
+          "period": "contemporary",
+          "year": 1947,
+          "languages": {
+            "en": { "source": "wto" },
+            "fr": { "source": "wto" },
+            "es": { "source": "wto" }
+          },
+          "tags": ["wto", "trade", "tariffs", "gatt"]
+        },
+        {
+          "id": "wto-gats",
+          "title": "General Agreement on Trade in Services",
+          "author": "WTO",
+          "period": "contemporary",
+          "year": 1995,
+          "languages": {
+            "en": { "source": "wto" },
+            "fr": { "source": "wto" },
+            "es": { "source": "wto" }
+          },
+          "tags": ["wto", "services", "trade", "gats"]
+        },
+        {
+          "id": "wto-trips",
+          "title": "Agreement on Trade-Related Aspects of Intellectual Property Rights",
+          "author": "WTO",
+          "period": "contemporary",
+          "year": 1994,
+          "languages": {
+            "en": { "source": "wto" },
+            "fr": { "source": "wto" },
+            "es": { "source": "wto" }
+          },
+          "tags": ["wto", "intellectual property", "patents", "copyright", "trips"]
+        },
+        {
+          "id": "icsid-convention",
+          "title": "ICSID Convention (Washington Convention)",
+          "author": "World Bank",
+          "period": "contemporary",
+          "year": 1965,
+          "languages": {
+            "en": { "source": "worldbank" },
+            "fr": { "source": "worldbank" },
+            "es": { "source": "worldbank" }
+          },
+          "tags": ["investment", "arbitration", "isds", "icsid"]
+        }
+      ]
+    },
+    "legal_international_hr": {
+      "name": "International Human Rights",
+      "documents": [
+        {
+          "id": "udhr",
+          "title": "Universal Declaration of Human Rights",
+          "author": "United Nations",
+          "period": "contemporary",
+          "year": 1948,
+          "languages": {
+            "en": { "source": "un" },
+            "fr": { "source": "un" },
+            "es": { "source": "un" },
+            "ar": { "source": "un" },
+            "zh": { "source": "un" },
+            "ru": { "source": "un" }
+          },
+          "tags": ["human rights", "un", "declaration"]
+        },
+        {
+          "id": "iccpr",
+          "title": "International Covenant on Civil and Political Rights",
+          "author": "United Nations",
+          "period": "contemporary",
+          "year": 1966,
+          "languages": {
+            "en": { "source": "un" },
+            "fr": { "source": "un" },
+            "es": { "source": "un" }
+          },
+          "tags": ["human rights", "civil rights", "political rights", "covenant"]
+        },
+        {
+          "id": "icescr",
+          "title": "International Covenant on Economic, Social and Cultural Rights",
+          "author": "United Nations",
+          "period": "contemporary",
+          "year": 1966,
+          "languages": {
+            "en": { "source": "un" },
+            "fr": { "source": "un" },
+            "es": { "source": "un" }
+          },
+          "tags": ["human rights", "economic rights", "social rights", "covenant"]
+        },
+        {
+          "id": "echr",
+          "title": "European Convention on Human Rights",
+          "author": "Council of Europe",
+          "period": "contemporary",
+          "year": 1950,
+          "languages": {
+            "en": { "source": "echr" },
+            "fr": { "source": "echr" }
+          },
+          "tags": ["human rights", "europe", "convention", "echr"]
+        }
+      ]
+    },
+    "legal_us": {
+      "name": "US Law",
+      "documents": [
+        {
+          "id": "us-constitution",
+          "title": "Constitution of the United States",
+          "author": "Constitutional Convention",
+          "period": "modern",
+          "year": 1787,
+          "languages": {
+            "en": { "source": "avalon" },
+            "es": { "source": "congress.gov" }
+          },
+          "tags": ["constitutional", "us", "federalism", "bill of rights"]
+        },
+        {
+          "id": "us-securities-act-1933",
+          "title": "Securities Act of 1933",
+          "author": "US Congress",
+          "period": "contemporary",
+          "year": 1933,
+          "languages": {
+            "en": { "source": "sec" }
+          },
+          "tags": ["us", "securities", "registration", "disclosure"]
+        },
+        {
+          "id": "us-securities-exchange-act-1934",
+          "title": "Securities Exchange Act of 1934",
+          "author": "US Congress",
+          "period": "contemporary",
+          "year": 1934,
+          "languages": {
+            "en": { "source": "sec" }
+          },
+          "tags": ["us", "securities", "sec", "exchanges", "reporting"]
+        },
+        {
+          "id": "us-sarbanes-oxley",
+          "title": "Sarbanes-Oxley Act",
+          "author": "US Congress",
+          "period": "contemporary",
+          "year": 2002,
+          "languages": {
+            "en": { "source": "sec" }
+          },
+          "tags": ["us", "corporate governance", "audit", "sox", "accounting"]
+        },
+        {
+          "id": "us-dodd-frank",
+          "title": "Dodd-Frank Wall Street Reform Act",
+          "author": "US Congress",
+          "period": "contemporary",
+          "year": 2010,
+          "languages": {
+            "en": { "source": "sec" }
+          },
+          "tags": ["us", "financial regulation", "systemic risk", "consumer protection"]
+        },
+        {
+          "id": "us-fcpa",
+          "title": "Foreign Corrupt Practices Act",
+          "author": "US Congress",
+          "period": "contemporary",
+          "year": 1977,
+          "languages": {
+            "en": { "source": "doj" }
+          },
+          "tags": ["us", "anti-corruption", "bribery", "fcpa"]
+        }
+      ]
+    },
+    "legal_uk": {
+      "name": "UK Law",
+      "documents": [
+        {
+          "id": "magna-carta",
+          "title": "Magna Carta",
+          "author": "King John / Barons",
           "period": "medieval",
+          "year": 1215,
           "languages": {
-            "ar": { "source": "quran.com", "title": "الفاتحة" },
-            "en": { "source": "quran.com" },
-            "fr": { "source": "quran.com" },
-            "de": { "source": "quran.com" }
+            "la": { "source": "avalon", "title": "Magna Carta Libertatum" },
+            "en": { "source": "avalon" }
           },
-          "tags": ["islam", "quran", "prayer", "surah"]
+          "tags": ["constitutional", "uk", "liberty", "rights"]
         },
         {
-          "id": "dhammapada",
-          "title": "Dhammapada",
-          "author": "Traditional",
-          "period": "ancient",
+          "id": "uk-companies-act-2006",
+          "title": "Companies Act 2006",
+          "author": "UK Parliament",
+          "period": "contemporary",
+          "year": 2006,
           "languages": {
-            "pi": { "source": "sacred-texts", "title": "धम्मपद" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2017 }
+            "en": { "source": "legislation.gov.uk" }
           },
-          "tags": ["buddhism", "teachings", "buddha", "verses"]
-        }
-      ]
-    },
-    "literature_epic": {
-      "name": "Epic Literature",
-      "documents": [
-        {
-          "id": "homer-iliad",
-          "title": "Iliad",
-          "author": "Homer",
-          "period": "ancient",
-          "languages": {
-            "grc": { "source": "perseus", "title": "Ἰλιάς" },
-            "en": { "source": "gutenberg", "gutenberg_id": 6130 },
-            "fr": { "source": "wikisource", "title": "L'Iliade" },
-            "de": { "source": "gutenberg", "title": "Ilias" }
-          },
-          "tags": ["epic", "troy", "war", "achilles"]
+          "tags": ["uk", "company law", "directors duties", "corporate governance"]
         },
         {
-          "id": "homer-odyssey",
-          "title": "Odyssey",
-          "author": "Homer",
-          "period": "ancient",
+          "id": "uk-bribery-act",
+          "title": "Bribery Act 2010",
+          "author": "UK Parliament",
+          "period": "contemporary",
+          "year": 2010,
           "languages": {
-            "grc": { "source": "perseus", "title": "Ὀδύσσεια" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1727 },
-            "fr": { "source": "wikisource", "title": "L'Odyssée" }
+            "en": { "source": "legislation.gov.uk" }
           },
-          "tags": ["epic", "journey", "odysseus", "homecoming"]
+          "tags": ["uk", "anti-corruption", "bribery", "criminal law"]
         },
         {
-          "id": "virgil-aeneid",
-          "title": "Aeneid",
-          "author": "Virgil",
-          "period": "classical",
+          "id": "uk-modern-slavery",
+          "title": "Modern Slavery Act 2015",
+          "author": "UK Parliament",
+          "period": "contemporary",
+          "year": 2015,
           "languages": {
-            "la": { "source": "perseus", "title": "Aeneis" },
-            "en": { "source": "gutenberg", "gutenberg_id": 228 },
-            "it": { "source": "wikisource", "title": "Eneide" }
+            "en": { "source": "legislation.gov.uk" }
           },
-          "tags": ["epic", "rome", "aeneas", "destiny"]
+          "tags": ["uk", "human rights", "supply chain", "transparency"]
         },
         {
-          "id": "dante-inferno",
-          "title": "Inferno (Divine Comedy)",
-          "author": "Dante Alighieri",
-          "period": "medieval",
+          "id": "uk-corporate-governance",
+          "title": "UK Corporate Governance Code",
+          "author": "Financial Reporting Council",
+          "period": "contemporary",
+          "year": 2024,
           "languages": {
-            "it": { "source": "wikisource", "title": "Inferno" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8800 },
-            "fr": { "source": "wikisource", "title": "L'Enfer" }
+            "en": { "source": "frc.org.uk" }
           },
-          "tags": ["epic", "hell", "afterlife", "allegory"]
-        },
-        {
-          "id": "milton-paradise-lost",
-          "title": "Paradise Lost",
-          "author": "John Milton",
-          "period": "early_modern",
-          "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 26 }
-          },
-          "tags": ["epic", "fall", "satan", "eden"]
-        }
-      ]
-    },
-    "literature_drama": {
-      "name": "Drama & Theatre",
-      "documents": [
-        {
-          "id": "sophocles-oedipus",
-          "title": "Oedipus Rex",
-          "author": "Sophocles",
-          "period": "classical",
-          "languages": {
-            "grc": { "source": "perseus", "title": "Οἰδίπους Τύραννος" },
-            "en": { "source": "gutenberg", "gutenberg_id": 31 },
-            "fr": { "source": "wikisource", "title": "Œdipe roi" }
-          },
-          "tags": ["tragedy", "fate", "hubris", "oracle"]
-        },
-        {
-          "id": "shakespeare-hamlet",
-          "title": "Hamlet",
-          "author": "William Shakespeare",
-          "period": "early_modern",
-          "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 1524 },
-            "de": { "source": "gutenberg" },
-            "fr": { "source": "wikisource" }
-          },
-          "tags": ["tragedy", "revenge", "madness", "mortality"]
-        },
-        {
-          "id": "shakespeare-macbeth",
-          "title": "Macbeth",
-          "author": "William Shakespeare",
-          "period": "early_modern",
-          "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 1533 }
-          },
-          "tags": ["tragedy", "ambition", "guilt", "prophecy"]
-        },
-        {
-          "id": "moliere-tartuffe",
-          "title": "Tartuffe",
-          "author": "Molière",
-          "period": "early_modern",
-          "languages": {
-            "fr": { "source": "wikisource", "title": "Le Tartuffe" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2027 }
-          },
-          "tags": ["comedy", "hypocrisy", "religion", "satire"]
-        }
-      ]
-    },
-    "literature_novel": {
-      "name": "Classic Novels",
-      "documents": [
-        {
-          "id": "cervantes-quixote",
-          "title": "Don Quixote",
-          "author": "Miguel de Cervantes",
-          "period": "early_modern",
-          "languages": {
-            "es": { "source": "wikisource", "title": "El ingenioso hidalgo don Quijote de la Mancha" },
-            "en": { "source": "gutenberg", "gutenberg_id": 996 },
-            "fr": { "source": "wikisource" }
-          },
-          "tags": ["novel", "satire", "chivalry", "madness"]
-        },
-        {
-          "id": "goethe-faust",
-          "title": "Faust",
-          "author": "Johann Wolfgang von Goethe",
-          "period": "modern",
-          "languages": {
-            "de": { "source": "gutenberg", "gutenberg_id": 2229 },
-            "en": { "source": "gutenberg", "gutenberg_id": 14591 }
-          },
-          "tags": ["drama", "devil", "knowledge", "damnation"]
-        },
-        {
-          "id": "dostoevsky-brothers",
-          "title": "The Brothers Karamazov",
-          "author": "Fyodor Dostoevsky",
-          "period": "modern",
-          "languages": {
-            "ru": { "source": "wikisource", "title": "Братья Карамазовы" },
-            "en": { "source": "gutenberg", "gutenberg_id": 28054 },
-            "fr": { "source": "wikisource", "title": "Les Frères Karamazov" }
-          },
-          "tags": ["novel", "faith", "doubt", "patricide"]
-        },
-        {
-          "id": "dostoevsky-crime",
-          "title": "Crime and Punishment",
-          "author": "Fyodor Dostoevsky",
-          "period": "modern",
-          "languages": {
-            "ru": { "source": "wikisource", "title": "Преступление и наказание" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2554 }
-          },
-          "tags": ["novel", "guilt", "redemption", "psychology"]
-        },
-        {
-          "id": "tolstoy-war-peace",
-          "title": "War and Peace",
-          "author": "Leo Tolstoy",
-          "period": "modern",
-          "languages": {
-            "ru": { "source": "wikisource", "title": "Война и мир" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2600 }
-          },
-          "tags": ["novel", "war", "napoleon", "history"]
-        },
-        {
-          "id": "kafka-metamorphosis",
-          "title": "The Metamorphosis",
-          "author": "Franz Kafka",
-          "period": "modern",
-          "languages": {
-            "de": { "source": "gutenberg", "title": "Die Verwandlung" },
-            "en": { "source": "gutenberg", "gutenberg_id": 5200 }
-          },
-          "tags": ["novella", "alienation", "absurd", "transformation"]
+          "tags": ["uk", "corporate governance", "board", "comply or explain"]
         }
       ]
     },
@@ -416,17 +724,6 @@
           "tags": ["roman law", "civil law", "legal education"]
         },
         {
-          "id": "magna-carta",
-          "title": "Magna Carta",
-          "author": "King John / Barons",
-          "period": "medieval",
-          "languages": {
-            "la": { "source": "avalon", "title": "Magna Carta Libertatum" },
-            "en": { "source": "avalon" }
-          },
-          "tags": ["constitutional", "rights", "english law", "liberty"]
-        },
-        {
           "id": "declaration-rights-man",
           "title": "Declaration of the Rights of Man and of the Citizen",
           "author": "National Constituent Assembly",
@@ -438,184 +735,270 @@
             "de": { "source": "wikisource" }
           },
           "tags": ["human rights", "revolution", "constitutional", "france"]
-        },
+        }
+      ]
+    },
+    "business_governance": {
+      "name": "Corporate Governance & Standards",
+      "documents": [
         {
-          "id": "us-constitution",
-          "title": "Constitution of the United States",
-          "author": "Constitutional Convention",
-          "period": "modern",
-          "year": 1787,
+          "id": "oecd-corporate-governance",
+          "title": "G20/OECD Principles of Corporate Governance",
+          "author": "OECD",
+          "period": "contemporary",
+          "year": 2023,
           "languages": {
-            "en": { "source": "avalon" },
-            "es": { "source": "congress.gov" },
-            "fr": { "source": "wikisource" }
+            "en": { "source": "oecd" },
+            "fr": { "source": "oecd" }
           },
-          "tags": ["constitutional", "federalism", "separation of powers"]
+          "tags": ["corporate governance", "oecd", "principles", "best practice"]
         },
         {
-          "id": "udhr",
-          "title": "Universal Declaration of Human Rights",
+          "id": "un-global-compact",
+          "title": "UN Global Compact Ten Principles",
           "author": "United Nations",
           "period": "contemporary",
-          "year": 1948,
-          "languages": {
-            "en": { "source": "un.org" },
-            "fr": { "source": "un.org" },
-            "es": { "source": "un.org" },
-            "ar": { "source": "un.org" },
-            "zh": { "source": "un.org" },
-            "ru": { "source": "un.org" }
-          },
-          "tags": ["human rights", "international law", "un"]
-        }
-      ]
-    },
-    "legal_eu": {
-      "name": "European Union Law",
-      "documents": [
-        {
-          "id": "eu-treaty-rome",
-          "title": "Treaty of Rome",
-          "author": "European Communities",
-          "period": "contemporary",
-          "year": 1957,
-          "celex": "11957E",
-          "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "it": { "source": "eurlex" },
-            "nl": { "source": "eurlex" }
-          },
-          "tags": ["eu", "treaty", "founding", "eec"]
-        },
-        {
-          "id": "eu-tfeu",
-          "title": "Treaty on the Functioning of the European Union",
-          "author": "European Union",
-          "period": "contemporary",
-          "celex": "12012E/TXT",
-          "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "es": { "source": "eurlex" },
-            "it": { "source": "eurlex" },
-            "pt": { "source": "eurlex" },
-            "nl": { "source": "eurlex" },
-            "pl": { "source": "eurlex" }
-          },
-          "tags": ["eu", "treaty", "constitutional", "institutions"]
-        },
-        {
-          "id": "eu-charter-fundamental",
-          "title": "Charter of Fundamental Rights of the European Union",
-          "author": "European Union",
-          "period": "contemporary",
           "year": 2000,
-          "celex": "12012P/TXT",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "es": { "source": "eurlex" },
-            "it": { "source": "eurlex" }
+            "en": { "source": "un" },
+            "fr": { "source": "un" },
+            "es": { "source": "un" }
           },
-          "tags": ["eu", "human rights", "fundamental rights", "charter"]
+          "tags": ["corporate responsibility", "un", "sustainability", "principles"]
         },
         {
-          "id": "gdpr",
-          "title": "General Data Protection Regulation",
-          "author": "European Parliament",
+          "id": "un-guiding-principles",
+          "title": "UN Guiding Principles on Business and Human Rights",
+          "author": "United Nations",
           "period": "contemporary",
-          "year": 2016,
-          "celex": "32016R0679",
+          "year": 2011,
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "es": { "source": "eurlex" },
-            "it": { "source": "eurlex" },
-            "pt": { "source": "eurlex" },
-            "nl": { "source": "eurlex" },
-            "pl": { "source": "eurlex" }
+            "en": { "source": "un" },
+            "fr": { "source": "un" },
+            "es": { "source": "un" }
           },
-          "tags": ["eu", "privacy", "data protection", "regulation"]
+          "tags": ["human rights", "business", "due diligence", "ruggie"]
         },
         {
-          "id": "eu-ai-act",
-          "title": "Artificial Intelligence Act",
-          "author": "European Parliament",
+          "id": "oecd-mne-guidelines",
+          "title": "OECD Guidelines for Multinational Enterprises",
+          "author": "OECD",
           "period": "contemporary",
-          "year": 2024,
-          "celex": "32024R1689",
+          "year": 2023,
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": { "source": "oecd" },
+            "fr": { "source": "oecd" }
           },
-          "tags": ["eu", "ai", "regulation", "technology"]
+          "tags": ["mne", "corporate responsibility", "oecd", "guidelines"]
         }
       ]
     },
-    "scientific": {
-      "name": "Scientific Foundations",
+    "business_financial": {
+      "name": "Financial Standards & Frameworks",
       "documents": [
         {
-          "id": "euclid-elements",
-          "title": "Elements",
-          "author": "Euclid",
+          "id": "basel3",
+          "title": "Basel III Framework",
+          "author": "Basel Committee on Banking Supervision",
+          "period": "contemporary",
+          "year": 2017,
+          "languages": {
+            "en": { "source": "bis" }
+          },
+          "tags": ["banking", "capital", "liquidity", "basel"]
+        },
+        {
+          "id": "ifrs-conceptual",
+          "title": "IFRS Conceptual Framework",
+          "author": "IASB",
+          "period": "contemporary",
+          "year": 2018,
+          "languages": {
+            "en": { "source": "ifrs.org" }
+          },
+          "tags": ["accounting", "ifrs", "financial reporting", "framework"]
+        },
+        {
+          "id": "tcfd-recommendations",
+          "title": "TCFD Recommendations",
+          "author": "Task Force on Climate-related Financial Disclosures",
+          "period": "contemporary",
+          "year": 2017,
+          "languages": {
+            "en": { "source": "fsb-tcfd.org" }
+          },
+          "tags": ["climate", "disclosure", "risk", "tcfd"]
+        },
+        {
+          "id": "issb-s1",
+          "title": "IFRS S1 General Requirements for Sustainability Disclosures",
+          "author": "ISSB",
+          "period": "contemporary",
+          "year": 2023,
+          "languages": {
+            "en": { "source": "ifrs.org" }
+          },
+          "tags": ["sustainability", "disclosure", "issb", "reporting"]
+        },
+        {
+          "id": "issb-s2",
+          "title": "IFRS S2 Climate-related Disclosures",
+          "author": "ISSB",
+          "period": "contemporary",
+          "year": 2023,
+          "languages": {
+            "en": { "source": "ifrs.org" }
+          },
+          "tags": ["climate", "disclosure", "issb", "reporting"]
+        }
+      ]
+    },
+    "business_economics_classics": {
+      "name": "Economics Classics",
+      "documents": [
+        {
+          "id": "smith-wealth-nations",
+          "title": "The Wealth of Nations",
+          "author": "Adam Smith",
+          "period": "modern",
+          "year": 1776,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 3300 }
+          },
+          "tags": ["economics", "capitalism", "free market", "classical"]
+        },
+        {
+          "id": "ricardo-political-economy",
+          "title": "Principles of Political Economy and Taxation",
+          "author": "David Ricardo",
+          "period": "modern",
+          "year": 1817,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 33310 }
+          },
+          "tags": ["economics", "trade", "comparative advantage", "classical"]
+        },
+        {
+          "id": "mill-political-economy",
+          "title": "Principles of Political Economy",
+          "author": "John Stuart Mill",
+          "period": "modern",
+          "year": 1848,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 30107 }
+          },
+          "tags": ["economics", "utilitarianism", "classical", "liberalism"]
+        },
+        {
+          "id": "keynes-general-theory",
+          "title": "The General Theory of Employment, Interest and Money",
+          "author": "John Maynard Keynes",
+          "period": "modern",
+          "year": 1936,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 15776 }
+          },
+          "tags": ["economics", "keynesian", "macroeconomics", "monetary"]
+        },
+        {
+          "id": "hayek-road-serfdom",
+          "title": "The Road to Serfdom",
+          "author": "Friedrich Hayek",
+          "period": "modern",
+          "year": 1944,
+          "languages": {
+            "en": { "source": "archive" }
+          },
+          "tags": ["economics", "liberty", "socialism", "austrian"]
+        }
+      ]
+    },
+    "philosophy_core": {
+      "name": "Core Philosophy",
+      "documents": [
+        {
+          "id": "plato-republic",
+          "title": "The Republic",
+          "author": "Plato",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Στοιχεῖα" },
-            "en": { "source": "gutenberg", "gutenberg_id": 21076 },
-            "la": { "source": "archive" }
+            "grc": { "source": "perseus", "title": "Πολιτεία" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1497 },
+            "fr": { "source": "wikisource", "title": "La République" }
           },
-          "tags": ["mathematics", "geometry", "proof", "axioms"]
+          "tags": ["political philosophy", "justice", "ideal state"]
         },
         {
-          "id": "newton-principia",
-          "title": "Principia Mathematica",
-          "author": "Isaac Newton",
+          "id": "aristotle-politics",
+          "title": "Politics",
+          "author": "Aristotle",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Πολιτικά" },
+            "en": { "source": "gutenberg", "gutenberg_id": 6762 }
+          },
+          "tags": ["political philosophy", "state", "citizenship"]
+        },
+        {
+          "id": "marcus-aurelius-meditations",
+          "title": "Meditations",
+          "author": "Marcus Aurelius",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Τὰ εἰς ἑαυτόν" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2680 }
+          },
+          "tags": ["stoicism", "self-reflection", "ethics"]
+        },
+        {
+          "id": "machiavelli-prince",
+          "title": "The Prince",
+          "author": "Niccolò Machiavelli",
           "period": "early_modern",
-          "year": 1687,
+          "year": 1532,
           "languages": {
-            "la": { "source": "archive", "title": "Philosophiæ Naturalis Principia Mathematica" },
-            "en": { "source": "gutenberg", "gutenberg_id": 28233 }
+            "it": { "source": "wikisource", "title": "Il Principe" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1232 }
           },
-          "tags": ["physics", "mechanics", "gravity", "calculus"]
+          "tags": ["political philosophy", "power", "statecraft", "realism"]
         },
         {
-          "id": "darwin-origin",
-          "title": "On the Origin of Species",
-          "author": "Charles Darwin",
-          "period": "modern",
-          "year": 1859,
+          "id": "locke-government",
+          "title": "Two Treatises of Government",
+          "author": "John Locke",
+          "period": "early_modern",
+          "year": 1689,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 1228 },
-            "de": { "source": "gutenberg" }
+            "en": { "source": "gutenberg", "gutenberg_id": 7370 }
           },
-          "tags": ["biology", "evolution", "natural selection"]
+          "tags": ["political philosophy", "liberalism", "natural rights", "social contract"]
         },
         {
-          "id": "einstein-relativity",
-          "title": "Relativity: The Special and General Theory",
-          "author": "Albert Einstein",
-          "period": "modern",
-          "year": 1916,
+          "id": "hobbes-leviathan",
+          "title": "Leviathan",
+          "author": "Thomas Hobbes",
+          "period": "early_modern",
+          "year": 1651,
           "languages": {
-            "de": { "source": "gutenberg", "title": "Über die spezielle und die allgemeine Relativitätstheorie" },
-            "en": { "source": "gutenberg", "gutenberg_id": 5001 }
+            "en": { "source": "gutenberg", "gutenberg_id": 3207 }
           },
-          "tags": ["physics", "relativity", "spacetime", "gravity"]
+          "tags": ["political philosophy", "sovereignty", "social contract", "state"]
         }
       ]
     }
   },
   "stats": {
-    "total_documents": 52,
-    "total_languages": 15,
-    "languages": ["en", "fr", "de", "es", "it", "pt", "nl", "pl", "ru", "grc", "la", "he", "ar", "zh", "sa"],
-    "periods": ["ancient", "classical", "medieval", "early_modern", "modern", "contemporary"]
+    "total_documents": 85,
+    "categories": {
+      "eu_law": 28,
+      "international_law": 14,
+      "us_law": 6,
+      "uk_law": 5,
+      "business_governance": 12,
+      "economics": 5,
+      "philosophy": 6,
+      "foundations": 9
+    },
+    "languages": ["en", "fr", "de", "es", "it", "pt", "nl", "pl", "ru", "ar", "zh", "grc", "la", "he"]
   }
 }

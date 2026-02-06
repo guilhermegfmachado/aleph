@@ -9,7 +9,8 @@ const library = {
     books: [],
     userBooks: [],
     loaded: false,
-    textCache: {}
+    textCache: {},
+    graph: null
 };
 
 // IndexedDB
@@ -86,6 +87,18 @@ async function loadLibrary() {
         if (resp.ok) {
             const data = await resp.json();
             library.books = [...library.books, ...(data.books || [])];
+            if (data.graph) library.graph = data.graph;
+        }
+    } catch (e) {}
+
+    // Load texts (for full text search)
+    try {
+        const resp = await fetch('data/library-texts.json');
+        if (resp.ok) {
+            const data = await resp.json();
+            (data.texts || []).forEach(t => {
+                library.textCache[t.id] = { content: t.content };
+            });
         }
     } catch (e) {}
 
@@ -124,21 +137,19 @@ function updateStats() {
 
 function populateFilters() {
     const all = getAllBooks();
-    const authorFilter = document.getElementById('author-filter');
-    const sourceFilter = document.getElementById('source-filter');
+    const filters = {
+        'author-filter': [...new Set(all.map(b => b.author).filter(Boolean))].sort(),
+        'source-filter': [...new Set(all.map(b => b.source).filter(Boolean))].sort(),
+        'type-filter': [...new Set(all.map(b => b.type).filter(Boolean))].sort(),
+        'period-filter': [...new Set(all.map(b => b.period).filter(Boolean))].sort()
+    };
 
-    if (authorFilter) {
-        while (authorFilter.options.length > 1) authorFilter.remove(1);
-        [...new Set(all.map(b => b.author))].sort().forEach(a => {
-            authorFilter.add(new Option(a, a));
-        });
-    }
-
-    if (sourceFilter) {
-        while (sourceFilter.options.length > 1) sourceFilter.remove(1);
-        [...new Set(all.map(b => b.source))].sort().forEach(s => {
-            sourceFilter.add(new Option(s, s));
-        });
+    for (const [id, values] of Object.entries(filters)) {
+        const el = document.getElementById(id);
+        if (el) {
+            while (el.options.length > 1) el.remove(1);
+            values.forEach(v => el.add(new Option(v, v)));
+        }
     }
 }
 
@@ -262,7 +273,7 @@ function initBrowse() {
         renderStats();
         renderList();
 
-        ['author-filter', 'source-filter', 'sort-filter', 'view-filter'].forEach(id => {
+        ['author-filter', 'source-filter', 'type-filter', 'period-filter', 'sort-filter', 'view-filter'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.addEventListener('change', () => { browsePage = 1; renderList(); });
         });
@@ -303,12 +314,16 @@ function renderList() {
 
     const authorF = document.getElementById('author-filter')?.value || '';
     const sourceF = document.getElementById('source-filter')?.value || '';
+    const typeF = document.getElementById('type-filter')?.value || '';
+    const periodF = document.getElementById('period-filter')?.value || '';
     const sortBy = document.getElementById('sort-filter')?.value || 'title';
     const compact = document.getElementById('view-filter')?.value === 'compact';
 
     let books = getAllBooks();
     if (authorF) books = books.filter(b => b.author === authorF);
     if (sourceF) books = books.filter(b => b.source === sourceF);
+    if (typeF) books = books.filter(b => b.type === typeF);
+    if (periodF) books = books.filter(b => b.period === periodF);
     books.sort((a, b) => (a[sortBy] || '').localeCompare(b[sortBy] || ''));
 
     const total = Math.ceil(books.length / perPage);
@@ -340,6 +355,7 @@ function renderList() {
             <div class="book-card">
                 <h3><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></h3>
                 <div class="book-meta">${escapeHtml(b.author)} <span class="source">[${b.source}]</span></div>
+                ${b.tags?.length ? `<div class="book-tags">${b.tags.slice(0, 4).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
                 <div class="book-snippet">${escapeHtml((b.snippet || '').slice(0, 150))}...</div>
             </div>
         `).join('');
@@ -362,6 +378,49 @@ function gotoPage(p) {
     window.scrollTo(0, 0);
 }
 window.gotoPage = gotoPage;
+
+// Get related books using graph or shared tags
+function getRelatedBooks(book) {
+    if (!book) return [];
+    const all = getAllBooks();
+    const related = [];
+
+    // Use relationship graph if available
+    if (library.graph?.edges) {
+        const edges = library.graph.edges.filter(e =>
+            e.source === book.id || e.target === book.id
+        );
+        for (const edge of edges) {
+            const otherId = edge.source === book.id ? edge.target : edge.source;
+            const other = all.find(b => b.id === otherId);
+            if (other && !related.find(r => r.id === other.id)) {
+                related.push({ ...other, relationship: edge.type });
+            }
+        }
+    }
+
+    // Also find by shared tags
+    if (book.tags?.length && related.length < 5) {
+        const byTags = all.filter(b =>
+            b.id !== book.id &&
+            !related.find(r => r.id === b.id) &&
+            b.tags?.some(t => book.tags.includes(t))
+        ).slice(0, 5 - related.length);
+        related.push(...byTags);
+    }
+
+    // Also find by same author
+    if (related.length < 5) {
+        const byAuthor = all.filter(b =>
+            b.id !== book.id &&
+            b.author === book.author &&
+            !related.find(r => r.id === b.id)
+        ).slice(0, 5 - related.length);
+        related.push(...byAuthor);
+    }
+
+    return related.slice(0, 5);
+}
 
 // Book view
 async function initBookView() {
@@ -403,15 +462,29 @@ async function initBookView() {
         });
     }
 
+    // Find related books
+    const related = getRelatedBooks(book);
+
     contentDiv.innerHTML = `
         <div class="book-header">
             <h1 class="book-title">${escapeHtml(book.title)}</h1>
             <div class="book-author">${escapeHtml(book.author)}</div>
             <div class="book-info">
                 <span>${book.source || 'local'}</span>
+                ${book.type ? `<span class="type-badge">${book.type}</span>` : ''}
+                ${book.period ? `<span class="period-badge">${book.period}</span>` : ''}
                 ${book.url ? `<a href="${book.url}" target="_blank">source</a>` : ''}
             </div>
+            ${book.tags?.length ? `<div class="book-tags">${book.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
         </div>
+        ${related.length ? `
+            <div class="related-section">
+                <h4>related texts</h4>
+                <div class="related-list">
+                    ${related.map(r => `<a href="${getBookLink(r)}" class="related-link">${escapeHtml(r.title)}</a>`).join('')}
+                </div>
+            </div>
+        ` : ''}
         <div class="book-content">
             <div class="text-body">${content}</div>
         </div>

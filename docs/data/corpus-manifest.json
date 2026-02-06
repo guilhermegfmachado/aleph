@@ -1,0 +1,621 @@
+{
+  "version": "1.0",
+  "description": "Aleph Universal Corpus - curated multilingual library",
+  "sources": {
+    "gutenberg": "https://www.gutenberg.org",
+    "perseus": "https://www.perseus.tufts.edu",
+    "wikisource": "https://wikisource.org",
+    "sacred-texts": "https://sacred-texts.com",
+    "eurlex": "https://eur-lex.europa.eu",
+    "avalon": "https://avalon.law.yale.edu"
+  },
+  "corpus": {
+    "philosophy_ancient": {
+      "name": "Ancient Philosophy",
+      "documents": [
+        {
+          "id": "plato-republic",
+          "title": "The Republic",
+          "author": "Plato",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Πολιτεία" },
+            "lat": { "source": "perseus", "title": "Res Publica" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1497 },
+            "fr": { "source": "wikisource", "title": "La République" },
+            "de": { "source": "gutenberg", "title": "Der Staat" }
+          },
+          "tags": ["political philosophy", "justice", "ideal state"]
+        },
+        {
+          "id": "plato-symposium",
+          "title": "Symposium",
+          "author": "Plato",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Συμπόσιον" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1600 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["love", "eros", "beauty"]
+        },
+        {
+          "id": "plato-apology",
+          "title": "Apology",
+          "author": "Plato",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἀπολογία Σωκράτους" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1656 }
+          },
+          "tags": ["socrates", "trial", "death", "philosophy of life"]
+        },
+        {
+          "id": "aristotle-nicomachean",
+          "title": "Nicomachean Ethics",
+          "author": "Aristotle",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἠθικὰ Νικομάχεια" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8438 },
+            "la": { "source": "archive" }
+          },
+          "tags": ["ethics", "virtue", "happiness", "eudaimonia"]
+        },
+        {
+          "id": "aristotle-politics",
+          "title": "Politics",
+          "author": "Aristotle",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Πολιτικά" },
+            "en": { "source": "gutenberg", "gutenberg_id": 6762 }
+          },
+          "tags": ["political philosophy", "state", "citizenship"]
+        },
+        {
+          "id": "marcus-aurelius-meditations",
+          "title": "Meditations",
+          "author": "Marcus Aurelius",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Τὰ εἰς ἑαυτόν" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2680 },
+            "fr": { "source": "wikisource", "title": "Pensées pour moi-même" }
+          },
+          "tags": ["stoicism", "self-reflection", "ethics"]
+        },
+        {
+          "id": "epictetus-enchiridion",
+          "title": "Enchiridion",
+          "author": "Epictetus",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἐγχειρίδιον" },
+            "en": { "source": "gutenberg", "gutenberg_id": 45109 }
+          },
+          "tags": ["stoicism", "practical philosophy", "manual"]
+        },
+        {
+          "id": "seneca-letters",
+          "title": "Moral Letters to Lucilius",
+          "author": "Seneca",
+          "period": "classical",
+          "languages": {
+            "la": { "source": "latin-library", "title": "Epistulae Morales ad Lucilium" },
+            "en": { "source": "gutenberg", "gutenberg_id": 97967 }
+          },
+          "tags": ["stoicism", "ethics", "letters"]
+        }
+      ]
+    },
+    "philosophy_eastern": {
+      "name": "Eastern Philosophy",
+      "documents": [
+        {
+          "id": "laozi-tao",
+          "title": "Tao Te Ching",
+          "author": "Laozi",
+          "period": "ancient",
+          "languages": {
+            "zh": { "source": "ctext", "title": "道德經" },
+            "en": { "source": "gutenberg", "gutenberg_id": 216 },
+            "de": { "source": "wikisource" }
+          },
+          "tags": ["taoism", "way", "virtue", "nature"]
+        },
+        {
+          "id": "confucius-analects",
+          "title": "Analects",
+          "author": "Confucius",
+          "period": "ancient",
+          "languages": {
+            "zh": { "source": "ctext", "title": "論語" },
+            "en": { "source": "gutenberg", "gutenberg_id": 4094 }
+          },
+          "tags": ["confucianism", "ethics", "governance", "virtue"]
+        },
+        {
+          "id": "sunzi-art-of-war",
+          "title": "The Art of War",
+          "author": "Sun Tzu",
+          "period": "ancient",
+          "languages": {
+            "zh": { "source": "ctext", "title": "孫子兵法" },
+            "en": { "source": "gutenberg", "gutenberg_id": 132 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["strategy", "military", "tactics"]
+        },
+        {
+          "id": "bhagavad-gita",
+          "title": "Bhagavad Gita",
+          "author": "Vyasa",
+          "period": "ancient",
+          "languages": {
+            "sa": { "source": "sacred-texts", "title": "भगवद्गीता" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2388 }
+          },
+          "tags": ["hinduism", "dharma", "duty", "yoga"]
+        }
+      ]
+    },
+    "religious_texts": {
+      "name": "Religious & Sacred Texts",
+      "documents": [
+        {
+          "id": "bible-genesis",
+          "title": "Genesis",
+          "author": "Traditional",
+          "period": "ancient",
+          "languages": {
+            "he": { "source": "mechon-mamre", "title": "בְּרֵאשִׁית" },
+            "grc": { "source": "perseus", "title": "Γένεσις (Septuagint)" },
+            "la": { "source": "vulgate", "title": "Liber Genesis" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
+            "ar": { "source": "quran.com" }
+          },
+          "tags": ["creation", "origins", "torah", "old testament"]
+        },
+        {
+          "id": "quran-fatiha",
+          "title": "Al-Fatiha (The Opening)",
+          "author": "Traditional",
+          "period": "medieval",
+          "languages": {
+            "ar": { "source": "quran.com", "title": "الفاتحة" },
+            "en": { "source": "quran.com" },
+            "fr": { "source": "quran.com" },
+            "de": { "source": "quran.com" }
+          },
+          "tags": ["islam", "quran", "prayer", "surah"]
+        },
+        {
+          "id": "dhammapada",
+          "title": "Dhammapada",
+          "author": "Traditional",
+          "period": "ancient",
+          "languages": {
+            "pi": { "source": "sacred-texts", "title": "धम्मपद" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2017 }
+          },
+          "tags": ["buddhism", "teachings", "buddha", "verses"]
+        }
+      ]
+    },
+    "literature_epic": {
+      "name": "Epic Literature",
+      "documents": [
+        {
+          "id": "homer-iliad",
+          "title": "Iliad",
+          "author": "Homer",
+          "period": "ancient",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἰλιάς" },
+            "en": { "source": "gutenberg", "gutenberg_id": 6130 },
+            "fr": { "source": "wikisource", "title": "L'Iliade" },
+            "de": { "source": "gutenberg", "title": "Ilias" }
+          },
+          "tags": ["epic", "troy", "war", "achilles"]
+        },
+        {
+          "id": "homer-odyssey",
+          "title": "Odyssey",
+          "author": "Homer",
+          "period": "ancient",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ὀδύσσεια" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1727 },
+            "fr": { "source": "wikisource", "title": "L'Odyssée" }
+          },
+          "tags": ["epic", "journey", "odysseus", "homecoming"]
+        },
+        {
+          "id": "virgil-aeneid",
+          "title": "Aeneid",
+          "author": "Virgil",
+          "period": "classical",
+          "languages": {
+            "la": { "source": "perseus", "title": "Aeneis" },
+            "en": { "source": "gutenberg", "gutenberg_id": 228 },
+            "it": { "source": "wikisource", "title": "Eneide" }
+          },
+          "tags": ["epic", "rome", "aeneas", "destiny"]
+        },
+        {
+          "id": "dante-inferno",
+          "title": "Inferno (Divine Comedy)",
+          "author": "Dante Alighieri",
+          "period": "medieval",
+          "languages": {
+            "it": { "source": "wikisource", "title": "Inferno" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8800 },
+            "fr": { "source": "wikisource", "title": "L'Enfer" }
+          },
+          "tags": ["epic", "hell", "afterlife", "allegory"]
+        },
+        {
+          "id": "milton-paradise-lost",
+          "title": "Paradise Lost",
+          "author": "John Milton",
+          "period": "early_modern",
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 26 }
+          },
+          "tags": ["epic", "fall", "satan", "eden"]
+        }
+      ]
+    },
+    "literature_drama": {
+      "name": "Drama & Theatre",
+      "documents": [
+        {
+          "id": "sophocles-oedipus",
+          "title": "Oedipus Rex",
+          "author": "Sophocles",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Οἰδίπους Τύραννος" },
+            "en": { "source": "gutenberg", "gutenberg_id": 31 },
+            "fr": { "source": "wikisource", "title": "Œdipe roi" }
+          },
+          "tags": ["tragedy", "fate", "hubris", "oracle"]
+        },
+        {
+          "id": "shakespeare-hamlet",
+          "title": "Hamlet",
+          "author": "William Shakespeare",
+          "period": "early_modern",
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 1524 },
+            "de": { "source": "gutenberg" },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["tragedy", "revenge", "madness", "mortality"]
+        },
+        {
+          "id": "shakespeare-macbeth",
+          "title": "Macbeth",
+          "author": "William Shakespeare",
+          "period": "early_modern",
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 1533 }
+          },
+          "tags": ["tragedy", "ambition", "guilt", "prophecy"]
+        },
+        {
+          "id": "moliere-tartuffe",
+          "title": "Tartuffe",
+          "author": "Molière",
+          "period": "early_modern",
+          "languages": {
+            "fr": { "source": "wikisource", "title": "Le Tartuffe" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2027 }
+          },
+          "tags": ["comedy", "hypocrisy", "religion", "satire"]
+        }
+      ]
+    },
+    "literature_novel": {
+      "name": "Classic Novels",
+      "documents": [
+        {
+          "id": "cervantes-quixote",
+          "title": "Don Quixote",
+          "author": "Miguel de Cervantes",
+          "period": "early_modern",
+          "languages": {
+            "es": { "source": "wikisource", "title": "El ingenioso hidalgo don Quijote de la Mancha" },
+            "en": { "source": "gutenberg", "gutenberg_id": 996 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["novel", "satire", "chivalry", "madness"]
+        },
+        {
+          "id": "goethe-faust",
+          "title": "Faust",
+          "author": "Johann Wolfgang von Goethe",
+          "period": "modern",
+          "languages": {
+            "de": { "source": "gutenberg", "gutenberg_id": 2229 },
+            "en": { "source": "gutenberg", "gutenberg_id": 14591 }
+          },
+          "tags": ["drama", "devil", "knowledge", "damnation"]
+        },
+        {
+          "id": "dostoevsky-brothers",
+          "title": "The Brothers Karamazov",
+          "author": "Fyodor Dostoevsky",
+          "period": "modern",
+          "languages": {
+            "ru": { "source": "wikisource", "title": "Братья Карамазовы" },
+            "en": { "source": "gutenberg", "gutenberg_id": 28054 },
+            "fr": { "source": "wikisource", "title": "Les Frères Karamazov" }
+          },
+          "tags": ["novel", "faith", "doubt", "patricide"]
+        },
+        {
+          "id": "dostoevsky-crime",
+          "title": "Crime and Punishment",
+          "author": "Fyodor Dostoevsky",
+          "period": "modern",
+          "languages": {
+            "ru": { "source": "wikisource", "title": "Преступление и наказание" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2554 }
+          },
+          "tags": ["novel", "guilt", "redemption", "psychology"]
+        },
+        {
+          "id": "tolstoy-war-peace",
+          "title": "War and Peace",
+          "author": "Leo Tolstoy",
+          "period": "modern",
+          "languages": {
+            "ru": { "source": "wikisource", "title": "Война и мир" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2600 }
+          },
+          "tags": ["novel", "war", "napoleon", "history"]
+        },
+        {
+          "id": "kafka-metamorphosis",
+          "title": "The Metamorphosis",
+          "author": "Franz Kafka",
+          "period": "modern",
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Die Verwandlung" },
+            "en": { "source": "gutenberg", "gutenberg_id": 5200 }
+          },
+          "tags": ["novella", "alienation", "absurd", "transformation"]
+        }
+      ]
+    },
+    "legal_foundations": {
+      "name": "Legal Foundations",
+      "documents": [
+        {
+          "id": "hammurabi-code",
+          "title": "Code of Hammurabi",
+          "author": "Hammurabi",
+          "period": "ancient",
+          "languages": {
+            "akk": { "source": "yale", "title": "𒁺𒄩𒈬𒊏𒁉" },
+            "en": { "source": "avalon" }
+          },
+          "tags": ["law", "ancient", "babylon", "code"]
+        },
+        {
+          "id": "justinian-institutes",
+          "title": "Institutes of Justinian",
+          "author": "Justinian I",
+          "period": "classical",
+          "languages": {
+            "la": { "source": "latin-library", "title": "Institutiones" },
+            "en": { "source": "constitution.org" }
+          },
+          "tags": ["roman law", "civil law", "legal education"]
+        },
+        {
+          "id": "magna-carta",
+          "title": "Magna Carta",
+          "author": "King John / Barons",
+          "period": "medieval",
+          "languages": {
+            "la": { "source": "avalon", "title": "Magna Carta Libertatum" },
+            "en": { "source": "avalon" }
+          },
+          "tags": ["constitutional", "rights", "english law", "liberty"]
+        },
+        {
+          "id": "declaration-rights-man",
+          "title": "Declaration of the Rights of Man and of the Citizen",
+          "author": "National Constituent Assembly",
+          "period": "modern",
+          "year": 1789,
+          "languages": {
+            "fr": { "source": "wikisource", "title": "Déclaration des droits de l'homme et du citoyen de 1789" },
+            "en": { "source": "avalon" },
+            "de": { "source": "wikisource" }
+          },
+          "tags": ["human rights", "revolution", "constitutional", "france"]
+        },
+        {
+          "id": "us-constitution",
+          "title": "Constitution of the United States",
+          "author": "Constitutional Convention",
+          "period": "modern",
+          "year": 1787,
+          "languages": {
+            "en": { "source": "avalon" },
+            "es": { "source": "congress.gov" },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["constitutional", "federalism", "separation of powers"]
+        },
+        {
+          "id": "udhr",
+          "title": "Universal Declaration of Human Rights",
+          "author": "United Nations",
+          "period": "contemporary",
+          "year": 1948,
+          "languages": {
+            "en": { "source": "un.org" },
+            "fr": { "source": "un.org" },
+            "es": { "source": "un.org" },
+            "ar": { "source": "un.org" },
+            "zh": { "source": "un.org" },
+            "ru": { "source": "un.org" }
+          },
+          "tags": ["human rights", "international law", "un"]
+        }
+      ]
+    },
+    "legal_eu": {
+      "name": "European Union Law",
+      "documents": [
+        {
+          "id": "eu-treaty-rome",
+          "title": "Treaty of Rome",
+          "author": "European Communities",
+          "period": "contemporary",
+          "year": 1957,
+          "celex": "11957E",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "it": { "source": "eurlex" },
+            "nl": { "source": "eurlex" }
+          },
+          "tags": ["eu", "treaty", "founding", "eec"]
+        },
+        {
+          "id": "eu-tfeu",
+          "title": "Treaty on the Functioning of the European Union",
+          "author": "European Union",
+          "period": "contemporary",
+          "celex": "12012E/TXT",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "es": { "source": "eurlex" },
+            "it": { "source": "eurlex" },
+            "pt": { "source": "eurlex" },
+            "nl": { "source": "eurlex" },
+            "pl": { "source": "eurlex" }
+          },
+          "tags": ["eu", "treaty", "constitutional", "institutions"]
+        },
+        {
+          "id": "eu-charter-fundamental",
+          "title": "Charter of Fundamental Rights of the European Union",
+          "author": "European Union",
+          "period": "contemporary",
+          "year": 2000,
+          "celex": "12012P/TXT",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "es": { "source": "eurlex" },
+            "it": { "source": "eurlex" }
+          },
+          "tags": ["eu", "human rights", "fundamental rights", "charter"]
+        },
+        {
+          "id": "gdpr",
+          "title": "General Data Protection Regulation",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2016,
+          "celex": "32016R0679",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" },
+            "es": { "source": "eurlex" },
+            "it": { "source": "eurlex" },
+            "pt": { "source": "eurlex" },
+            "nl": { "source": "eurlex" },
+            "pl": { "source": "eurlex" }
+          },
+          "tags": ["eu", "privacy", "data protection", "regulation"]
+        },
+        {
+          "id": "eu-ai-act",
+          "title": "Artificial Intelligence Act",
+          "author": "European Parliament",
+          "period": "contemporary",
+          "year": 2024,
+          "celex": "32024R1689",
+          "languages": {
+            "en": { "source": "eurlex" },
+            "fr": { "source": "eurlex" },
+            "de": { "source": "eurlex" }
+          },
+          "tags": ["eu", "ai", "regulation", "technology"]
+        }
+      ]
+    },
+    "scientific": {
+      "name": "Scientific Foundations",
+      "documents": [
+        {
+          "id": "euclid-elements",
+          "title": "Elements",
+          "author": "Euclid",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Στοιχεῖα" },
+            "en": { "source": "gutenberg", "gutenberg_id": 21076 },
+            "la": { "source": "archive" }
+          },
+          "tags": ["mathematics", "geometry", "proof", "axioms"]
+        },
+        {
+          "id": "newton-principia",
+          "title": "Principia Mathematica",
+          "author": "Isaac Newton",
+          "period": "early_modern",
+          "year": 1687,
+          "languages": {
+            "la": { "source": "archive", "title": "Philosophiæ Naturalis Principia Mathematica" },
+            "en": { "source": "gutenberg", "gutenberg_id": 28233 }
+          },
+          "tags": ["physics", "mechanics", "gravity", "calculus"]
+        },
+        {
+          "id": "darwin-origin",
+          "title": "On the Origin of Species",
+          "author": "Charles Darwin",
+          "period": "modern",
+          "year": 1859,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 1228 },
+            "de": { "source": "gutenberg" }
+          },
+          "tags": ["biology", "evolution", "natural selection"]
+        },
+        {
+          "id": "einstein-relativity",
+          "title": "Relativity: The Special and General Theory",
+          "author": "Albert Einstein",
+          "period": "modern",
+          "year": 1916,
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Über die spezielle und die allgemeine Relativitätstheorie" },
+            "en": { "source": "gutenberg", "gutenberg_id": 5001 }
+          },
+          "tags": ["physics", "relativity", "spacetime", "gravity"]
+        }
+      ]
+    }
+  },
+  "stats": {
+    "total_documents": 52,
+    "total_languages": 15,
+    "languages": ["en", "fr", "de", "es", "it", "pt", "nl", "pl", "ru", "grc", "la", "he", "ar", "zh", "sa"],
+    "periods": ["ancient", "classical", "medieval", "early_modern", "modern", "contemporary"]
+  }
+}

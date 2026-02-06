@@ -422,19 +422,89 @@ function getRelatedBooks(book) {
     return related.slice(0, 5);
 }
 
+// Language names for display
+const LANG_NAMES = {
+    en: 'English', fr: 'Français', de: 'Deutsch', es: 'Español',
+    it: 'Italiano', pt: 'Português', nl: 'Nederlands', pl: 'Polski',
+    ru: 'Русский', grc: 'Ἑλληνικά', la: 'Latina', he: 'עברית',
+    ar: 'العربية', zh: '中文', sa: 'संस्कृत', ja: '日本語',
+    ko: '한국어', pi: 'Pāli', akk: 'Akkadian'
+};
+
+// Book view state
+const bookViewState = {
+    book: null,
+    languages: {},
+    selectedLangs: [],
+    viewMode: 'single',
+    corpus: null
+};
+
+// Load corpus manifest
+async function loadCorpus() {
+    if (bookViewState.corpus) return bookViewState.corpus;
+    try {
+        const resp = await fetch('data/corpus-manifest.json');
+        if (resp.ok) {
+            bookViewState.corpus = await resp.json();
+            return bookViewState.corpus;
+        }
+    } catch (e) {}
+    return null;
+}
+
+// Find document in corpus by ID
+function findInCorpus(docId) {
+    const corpus = bookViewState.corpus;
+    if (!corpus?.corpus) return null;
+
+    for (const category of Object.values(corpus.corpus)) {
+        const doc = category.documents?.find(d => d.id === docId);
+        if (doc) return { ...doc, category: category.name };
+    }
+    return null;
+}
+
 // Book view
 async function initBookView() {
     await loadLibrary();
+    await loadCorpus();
 
     const params = new URLSearchParams(location.search);
     const userId = params.get('user');
     const bookId = params.get('id');
+    const corpusId = params.get('corpus');
     const query = params.get('q');
+    const lang = params.get('lang') || 'en';
+
     const contentDiv = document.getElementById('book-content');
+    const headerDiv = document.getElementById('book-header');
+    const titleEl = document.getElementById('book-title');
+    const authorEl = document.getElementById('book-author');
+    const tagsEl = document.getElementById('book-tags');
+    const langControls = document.getElementById('language-controls');
+    const viewToggle = document.getElementById('view-toggle');
 
     let book = null;
+    let corpusDoc = null;
 
-    if (userId) {
+    // Check if it's a corpus document (multilingual)
+    if (corpusId) {
+        corpusDoc = findInCorpus(corpusId);
+        if (corpusDoc) {
+            book = {
+                id: corpusId,
+                title: corpusDoc.title,
+                author: corpusDoc.author,
+                period: corpusDoc.period,
+                tags: corpusDoc.tags,
+                languages: corpusDoc.languages,
+                isCorpus: true
+            };
+            bookViewState.languages = corpusDoc.languages || {};
+            bookViewState.selectedLangs = [lang];
+        }
+    } else if (userId) {
         book = await loadUserBookText('user_' + userId);
     } else if (bookId) {
         const id = bookId.startsWith('shared_') ? bookId : parseInt(bookId);
@@ -450,53 +520,145 @@ async function initBookView() {
         return;
     }
 
+    bookViewState.book = book;
     document.title = `aleph - ${book.title}`;
 
-    let content = escapeHtml(book.content);
-    if (query) {
-        let first = true;
-        content = content.replace(new RegExp(`(${escapeRegex(query)})`, 'gi'), (m) => {
-            const id = first ? ' id="first-match"' : '';
-            first = false;
-            return `<span class="highlight"${id}>${m}</span>`;
-        });
+    // Update header
+    if (titleEl) titleEl.textContent = book.title;
+    if (authorEl) authorEl.textContent = book.author;
+    if (tagsEl && book.tags?.length) {
+        tagsEl.innerHTML = book.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
     }
 
-    // Find related books
-    const related = getRelatedBooks(book);
+    // Setup language controls for multilingual docs
+    if (book.languages && Object.keys(book.languages).length > 1 && langControls) {
+        const langs = Object.keys(book.languages);
+        langControls.innerHTML = langs.map(l => `
+            <button class="lang-btn ${bookViewState.selectedLangs.includes(l) ? 'selected' : ''}"
+                    data-lang="${l}" onclick="toggleLanguage('${l}')">
+                ${l.toUpperCase()}
+                <span class="lang-name">${LANG_NAMES[l] || l}</span>
+            </button>
+        `).join('');
+        langControls.classList.remove('hidden');
 
-    contentDiv.innerHTML = `
-        <div class="book-header">
-            <h1 class="book-title">${escapeHtml(book.title)}</h1>
-            <div class="book-author">${escapeHtml(book.author)}</div>
-            <div class="book-info">
-                <span>${book.source || 'local'}</span>
-                ${book.type ? `<span class="type-badge">${book.type}</span>` : ''}
-                ${book.period ? `<span class="period-badge">${book.period}</span>` : ''}
-                ${book.url ? `<a href="${book.url}" target="_blank">source</a>` : ''}
-            </div>
-            ${book.tags?.length ? `<div class="book-tags">${book.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
-        </div>
-        ${related.length ? `
-            <div class="related-section">
-                <h4>related texts</h4>
-                <div class="related-list">
-                    ${related.map(r => `<a href="${getBookLink(r)}" class="related-link">${escapeHtml(r.title)}</a>`).join('')}
+        // Setup view toggle
+        if (viewToggle) {
+            viewToggle.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    viewToggle.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    bookViewState.viewMode = btn.dataset.view;
+                    renderBookContent();
+                });
+            });
+        }
+    } else if (langControls) {
+        langControls.classList.add('hidden');
+        if (viewToggle) viewToggle.classList.add('hidden');
+    }
+
+    // Render content
+    renderBookContent(query);
+}
+
+function toggleLanguage(lang) {
+    const idx = bookViewState.selectedLangs.indexOf(lang);
+    if (idx > -1) {
+        if (bookViewState.selectedLangs.length > 1) {
+            bookViewState.selectedLangs.splice(idx, 1);
+        }
+    } else {
+        if (bookViewState.viewMode === 'single') {
+            bookViewState.selectedLangs = [lang];
+        } else {
+            if (bookViewState.selectedLangs.length < 3) {
+                bookViewState.selectedLangs.push(lang);
+            }
+        }
+    }
+
+    // Update button states
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('selected', bookViewState.selectedLangs.includes(btn.dataset.lang));
+    });
+
+    renderBookContent();
+}
+window.toggleLanguage = toggleLanguage;
+
+async function renderBookContent(query = null) {
+    const contentDiv = document.getElementById('book-content');
+    const book = bookViewState.book;
+
+    if (!book) return;
+
+    // For corpus documents, show language-specific content
+    if (book.isCorpus && book.languages) {
+        const langs = bookViewState.selectedLangs;
+
+        if (bookViewState.viewMode === 'parallel' && langs.length > 1) {
+            // Parallel view
+            contentDiv.className = `book-content parallel-view ${langs.length === 3 ? 'three-col' : ''}`;
+            contentDiv.innerHTML = langs.map(lang => {
+                const langInfo = book.languages[lang] || {};
+                const title = langInfo.title || book.title;
+                return `
+                    <div class="text-column" data-lang="${lang}">
+                        <div class="text-column-header">
+                            <span class="lang-label">${LANG_NAMES[lang] || lang}</span>
+                            <span class="lang-title">${escapeHtml(title)}</span>
+                        </div>
+                        <div class="text-body">
+                            <div class="placeholder-text">
+                                [${LANG_NAMES[lang] || lang} text from ${langInfo.source || 'source'}]
+                                <br><br>
+                                Full text will be loaded when corpus is populated.
+                                <br><br>
+                                Source: ${langInfo.source || 'unknown'}
+                                ${langInfo.gutenberg_id ? `<br>Gutenberg ID: ${langInfo.gutenberg_id}` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        } else {
+            // Single view
+            const lang = langs[0] || 'en';
+            const langInfo = book.languages[lang] || {};
+            contentDiv.className = 'book-content single-view';
+            contentDiv.innerHTML = `
+                <div class="text-body">
+                    <div class="placeholder-text">
+                        <strong>${LANG_NAMES[lang] || lang}</strong>: ${langInfo.title || book.title}
+                        <br><br>
+                        [Full text will be loaded when corpus is populated]
+                        <br><br>
+                        Source: ${langInfo.source || 'unknown'}
+                        ${langInfo.gutenberg_id ? `<br>Gutenberg ID: ${langInfo.gutenberg_id}` : ''}
+                    </div>
                 </div>
-            </div>
-        ` : ''}
-        <div class="book-content">
-            <div class="text-body">${content}</div>
-        </div>
-        <div class="book-nav">
-            <a href="browse.html">back</a>
-            ${query ? '<a href="index.html">new search</a>' : ''}
-        </div>
-    `;
+            `;
+        }
+    } else {
+        // Regular book (user uploaded or single language)
+        let content = escapeHtml(book.content || '');
+        if (query) {
+            let first = true;
+            content = content.replace(new RegExp(`(${escapeRegex(query)})`, 'gi'), (m) => {
+                const id = first ? ' id="first-match"' : '';
+                first = false;
+                return `<span class="highlight"${id}>${m}</span>`;
+            });
+        }
 
-    if (query) {
-        setTimeout(() => {
-            document.getElementById('first-match')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
+        contentDiv.className = 'book-content single-view';
+        contentDiv.innerHTML = `<div class="text-body">${content}</div>`;
+
+        if (query) {
+            setTimeout(() => {
+                document.getElementById('first-match')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
     }
 }

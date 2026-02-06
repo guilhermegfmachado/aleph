@@ -1,25 +1,8 @@
 // aleph - upload handling
-
-const DB_NAME = 'aleph_library';
-const STORE_NAME = 'texts';
-let db = null;
+// Note: DB_NAME, STORE_NAME, db, and openDB are defined in app.js
 
 if (typeof pdfjsLib !== 'undefined') {
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-}
-
-async function openDB() {
-    if (db) return db;
-    return new Promise((resolve, reject) => {
-        const req = indexedDB.open(DB_NAME, 1);
-        req.onerror = () => reject(req.error);
-        req.onsuccess = () => { db = req.result; resolve(db); };
-        req.onupgradeneeded = e => {
-            const store = e.target.result.createObjectStore(STORE_NAME, { keyPath: 'id', autoIncrement: true });
-            store.createIndex('title', 'title');
-            store.createIndex('author', 'author');
-        };
-    });
 }
 
 async function saveBook(book) {

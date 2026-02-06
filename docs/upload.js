@@ -312,10 +312,11 @@ function escapeHtml(text) {
 }
 
 // Init
+console.log('upload.js: script loaded');
 document.addEventListener('DOMContentLoaded', async () => {
+    console.log('upload.js: DOMContentLoaded fired');
     await openDB();
     await renderUserBooks();
-    loadGitHubSettings();
 
     const drop = document.getElementById('dropzone');
     const input = document.getElementById('file-input');
@@ -335,10 +336,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     if (input) {
+        console.log('upload.js: file input found, attaching listener');
         input.addEventListener('change', async e => {
+            console.log('upload.js: file change event fired', e.target.files);
             await processFiles(Array.from(e.target.files));
             e.target.value = '';
         });
+    } else {
+        console.error('upload.js: file-input element not found!');
     }
 });
 

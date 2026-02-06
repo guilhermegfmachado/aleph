@@ -47,32 +47,12 @@
             <div class="user-books-section">
                 <div class="section-header">
                     <h3>your texts <span id="user-book-count">(0)</span></h3>
-                    <div class="library-actions">
-                        <button class="btn" onclick="publishToGitHub()">publish</button>
-                        <button class="btn btn-small" onclick="clearAllBooks()">clear</button>
-                    </div>
+                    <button class="btn btn-small" onclick="clearAllBooks()">clear all</button>
                 </div>
-                <p class="library-hint" id="publish-hint">publish to share with others</p>
                 <div id="user-books-list" class="user-books-list">
                     <p class="empty-state">no texts yet</p>
                 </div>
             </div>
-
-            <details class="github-settings">
-                <summary>settings</summary>
-                <div class="settings-content">
-                    <p>GitHub token for publishing:</p>
-                    <div class="form-group">
-                        <input type="password" id="github-token" placeholder="ghp_...">
-                        <button class="btn btn-small" onclick="saveGitHubToken()">save</button>
-                    </div>
-                    <div class="form-group">
-                        <label>Repository:</label>
-                        <input type="text" id="github-repo" placeholder="user/repo">
-                    </div>
-                    <p class="hint"><a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">create token</a> with repo scope</p>
-                </div>
-            </details>
         </main>
 
         <footer></footer>

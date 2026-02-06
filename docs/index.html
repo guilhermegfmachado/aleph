@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>borges</title>
+    <title>aleph</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>borges</h1>
-            <p class="subtitle">a personal library</p>
+            <h1>aleph</h1>
+            <p class="subtitle">an infinite library</p>
             <nav>
                 <a href="index.html" class="active">search</a>
                 <a href="browse.html">browse</a>
@@ -20,25 +20,13 @@
 
         <main>
             <div class="search-box">
-                <input
-                    type="text"
-                    id="search-input"
-                    placeholder="search: love, justice, death, virtue..."
-                    autofocus
-                >
+                <input type="text" id="search-input" placeholder="search the infinite..." autofocus>
                 <div class="search-filters">
                     <select id="author-filter">
                         <option value="">all authors</option>
                     </select>
-                    <select id="source-filter">
-                        <option value="">all sources</option>
-                    </select>
                     <button id="search-btn">search</button>
                 </div>
-            </div>
-
-            <div class="search-tips">
-                <p>habent sua fata libelli</p>
             </div>
 
             <div id="results" class="results">
@@ -51,7 +39,6 @@
                             <a href="#" class="quick-search" data-query="death">death</a>
                             <a href="#" class="quick-search" data-query="justice">justice</a>
                             <a href="#" class="quick-search" data-query="virtue">virtue</a>
-                            <a href="#" class="quick-search" data-query="war">war</a>
                             <a href="#" class="quick-search" data-query="soul">soul</a>
                             <a href="#" class="quick-search" data-query="fate">fate</a>
                         </div>
@@ -61,7 +48,7 @@
         </main>
 
         <footer>
-            <p id="sources-footer">sources: loading...</p>
+            <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
         </footer>
     </div>
 

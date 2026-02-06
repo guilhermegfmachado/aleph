@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>borges - add texts</title>
+    <title>aleph - add</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>borges</h1>
-            <p class="subtitle">a personal library</p>
+            <h1>aleph</h1>
+            <p class="subtitle">an infinite library</p>
             <nav>
                 <a href="index.html">search</a>
                 <a href="browse.html">browse</a>
@@ -22,69 +22,60 @@
 
         <main>
             <div class="upload-section">
-                <h2>add to library</h2>
+                <h2>expand the library</h2>
 
-                <!-- Drop zone for bulk upload -->
                 <div class="upload-box" id="dropzone">
                     <div class="dropzone-content">
-                        <div class="drop-icon">📚</div>
+                        <div class="drop-icon">+</div>
                         <p>drop files here</p>
-                        <p class="hint">PDF, EPUB, or TXT • multiple files OK</p>
-                        <p style="margin: 1rem 0; color: #888;">— or —</p>
+                        <p class="hint">PDF, EPUB, TXT</p>
                         <input type="file" id="file-input" accept=".pdf,.txt,.epub" multiple hidden>
                         <button class="btn" onclick="document.getElementById('file-input').click()">choose files</button>
                     </div>
                 </div>
 
-                <!-- Processing status -->
                 <div id="processing-status" class="processing-status hidden">
-                    <div class="spinner"></div>
                     <span id="status-text">processing...</span>
                 </div>
 
-                <!-- Queue of files being processed -->
                 <div id="upload-queue" class="upload-queue hidden">
-                    <h3>uploading <span id="queue-count">0</span> files</h3>
+                    <h3><span id="queue-count">0</span> files</h3>
                     <div id="queue-list"></div>
                 </div>
             </div>
 
-            <!-- Library -->
             <div class="user-books-section">
                 <div class="section-header">
-                    <h3>your library <span id="user-book-count">(0)</span></h3>
+                    <h3>your texts <span id="user-book-count">(0)</span></h3>
                     <div class="library-actions">
-                        <button class="btn" onclick="publishToGitHub()">publish to repo</button>
-                        <button class="btn btn-small" onclick="clearAllBooks()">clear all</button>
+                        <button class="btn" onclick="publishToGitHub()">publish</button>
+                        <button class="btn btn-small" onclick="clearAllBooks()">clear</button>
                     </div>
                 </div>
-                <p class="library-hint" id="publish-hint">Click "publish" to save your library to GitHub so everyone can see it.</p>
+                <p class="library-hint" id="publish-hint">publish to share with others</p>
                 <div id="user-books-list" class="user-books-list">
-                    <p class="empty-state">no texts yet - drop some files above</p>
+                    <p class="empty-state">no texts yet</p>
                 </div>
             </div>
 
-            <!-- GitHub Settings (collapsed by default) -->
             <details class="github-settings">
-                <summary>GitHub settings</summary>
+                <summary>settings</summary>
                 <div class="settings-content">
-                    <p>To auto-publish, enter your GitHub personal access token:</p>
+                    <p>GitHub token for publishing:</p>
                     <div class="form-group">
-                        <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxx">
+                        <input type="password" id="github-token" placeholder="ghp_...">
                         <button class="btn btn-small" onclick="saveGitHubToken()">save</button>
                     </div>
-                    <p class="hint">Token needs "repo" scope. <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">Create one here</a></p>
                     <div class="form-group">
-                        <label>Repository (owner/repo):</label>
-                        <input type="text" id="github-repo" placeholder="username/repo-name">
+                        <label>Repository:</label>
+                        <input type="text" id="github-repo" placeholder="user/repo">
                     </div>
+                    <p class="hint"><a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">create token</a> with repo scope</p>
                 </div>
             </details>
         </main>
 
-        <footer>
-            <p>drop files • auto-extracts text • publish to share</p>
-        </footer>
+        <footer></footer>
     </div>
 
     <script src="app.js"></script>

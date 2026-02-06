@@ -95,7 +95,8 @@ function normalizeText(text) {
 }
 
 async function extractPdfText(file) {
-    const pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
+    const arrayBuffer = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
     let text = '', meta = {};
 
     try {
@@ -103,12 +104,24 @@ async function extractPdfText(file) {
         if (m.info) { meta.title = m.info.Title; meta.author = m.info.Author; }
     } catch (e) {}
 
-    for (let i = 1; i <= pdf.numPages; i++) {
+    // Extract some text for search/classification (first few pages)
+    const maxPages = Math.min(pdf.numPages, 5);
+    for (let i = 1; i <= maxPages; i++) {
         const page = await pdf.getPage(i);
         const content = await page.getTextContent();
         text += content.items.map(item => item.str).join(' ') + '\n\n';
     }
-    return { text: text.trim(), meta };
+
+    // Store original PDF as base64 for proper rendering
+    const base64 = btoa(new Uint8Array(arrayBuffer).reduce((data, byte) => data + String.fromCharCode(byte), ''));
+
+    return {
+        text: text.trim(),
+        meta,
+        pdfData: base64,
+        pageCount: pdf.numPages,
+        isPdf: true
+    };
 }
 
 async function extractEpubText(file) {

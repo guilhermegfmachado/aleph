@@ -1,4 +1,4 @@
-// aleph - an infinite library
+// aleph - universal catalog
 // Client-side search and browsing
 
 const DB_NAME = 'aleph_library';

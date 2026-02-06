@@ -103,11 +103,22 @@ async function processFile(file) {
     const ext = file.name.split('.').pop().toLowerCase();
     let result;
 
-    if (ext === 'pdf') result = await extractPdfText(file);
-    else if (ext === 'epub') result = await extractEpubText(file);
-    else result = await extractTxtText(file);
+    try {
+        if (ext === 'pdf') {
+            if (typeof pdfjsLib === 'undefined') throw new Error('PDF library not loaded');
+            result = await extractPdfText(file);
+        } else if (ext === 'epub') {
+            if (typeof JSZip === 'undefined') throw new Error('EPUB library not loaded');
+            result = await extractEpubText(file);
+        } else {
+            result = await extractTxtText(file);
+        }
+    } catch (e) {
+        console.error('Extraction error:', e);
+        throw new Error('extraction failed: ' + e.message);
+    }
 
-    if (!result.text || result.text.length < 100) throw new Error('too short');
+    if (!result.text || result.text.length < 50) throw new Error('too short or empty');
 
     // Run classification
     const classification = window.Classifier ? Classifier.classify(result.text, result.meta) : null;
@@ -232,10 +243,11 @@ async function autoPublish() {
 }
 
 async function publishToGitHub(silent = false) {
+    const hint = document.getElementById('publish-hint');
     const s = getGitHubSettings();
     if (!s.token || !s.repo) {
         if (!silent) {
-            alert('Configure GitHub settings first');
+            if (hint) hint.textContent = 'configure settings below first';
             document.querySelector('.github-settings').open = true;
         }
         return;
@@ -316,6 +328,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             e.preventDefault();
             drop.classList.remove('dragover');
             await processFiles(Array.from(e.dataTransfer.files));
+        });
+        // Make entire dropzone clickable
+        drop.addEventListener('click', e => {
+            if (e.target.tagName !== 'BUTTON' && input) input.click();
         });
     }
 

@@ -1,34 +1,51 @@
 // aleph - upload handling
-// Note: DB_NAME, STORE_NAME, db, and openDB are defined in app.js
+
+var UPLOAD_DB_NAME = 'aleph_library';
+var UPLOAD_STORE_NAME = 'texts';
+var uploadDb = null;
 
 if (typeof pdfjsLib !== 'undefined') {
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 }
 
-async function saveBook(book) {
-    await openDB();
+async function openUploadDB() {
+    if (uploadDb) return uploadDb;
     return new Promise((resolve, reject) => {
-        const tx = db.transaction([STORE_NAME], 'readwrite');
+        const req = indexedDB.open(UPLOAD_DB_NAME, 1);
+        req.onerror = () => reject(req.error);
+        req.onsuccess = () => { uploadDb = req.result; resolve(uploadDb); };
+        req.onupgradeneeded = e => {
+            const store = e.target.result.createObjectStore(UPLOAD_STORE_NAME, { keyPath: 'id', autoIncrement: true });
+            store.createIndex('title', 'title');
+            store.createIndex('author', 'author');
+        };
+    });
+}
+
+async function saveBook(book) {
+    await openUploadDB();
+    return new Promise((resolve, reject) => {
+        const tx = uploadDb.transaction([UPLOAD_STORE_NAME], 'readwrite');
         book.createdAt = new Date().toISOString();
-        const req = tx.objectStore(STORE_NAME).add(book);
+        const req = tx.objectStore(UPLOAD_STORE_NAME).add(book);
         req.onsuccess = () => resolve(req.result);
         req.onerror = () => reject(req.error);
     });
 }
 
 async function getUserBooks() {
-    await openDB();
+    await openUploadDB();
     return new Promise((resolve, reject) => {
-        const req = db.transaction([STORE_NAME], 'readonly').objectStore(STORE_NAME).getAll();
+        const req = uploadDb.transaction([UPLOAD_STORE_NAME], 'readonly').objectStore(UPLOAD_STORE_NAME).getAll();
         req.onsuccess = () => resolve(req.result || []);
         req.onerror = () => reject(req.error);
     });
 }
 
 async function deleteBook(id) {
-    await openDB();
+    await openUploadDB();
     return new Promise((resolve, reject) => {
-        const req = db.transaction([STORE_NAME], 'readwrite').objectStore(STORE_NAME).delete(id);
+        const req = uploadDb.transaction([UPLOAD_STORE_NAME], 'readwrite').objectStore(UPLOAD_STORE_NAME).delete(id);
         req.onsuccess = () => resolve();
         req.onerror = () => reject(req.error);
     });
@@ -36,9 +53,9 @@ async function deleteBook(id) {
 
 async function clearAllBooks() {
     if (!confirm('Delete all texts?')) return;
-    await openDB();
+    await openUploadDB();
     return new Promise((resolve, reject) => {
-        const req = db.transaction([STORE_NAME], 'readwrite').objectStore(STORE_NAME).clear();
+        const req = uploadDb.transaction([UPLOAD_STORE_NAME], 'readwrite').objectStore(UPLOAD_STORE_NAME).clear();
         req.onsuccess = () => { renderUserBooks(); resolve(); };
         req.onerror = () => reject(req.error);
     });
@@ -298,8 +315,12 @@ function escapeHtml(text) {
 console.log('upload.js: script loaded');
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('upload.js: DOMContentLoaded fired');
-    await openDB();
-    await renderUserBooks();
+    try {
+        await openUploadDB();
+        await renderUserBooks();
+    } catch (e) {
+        console.error('upload.js: init error', e);
+    }
 
     const drop = document.getElementById('dropzone');
     const input = document.getElementById('file-input');

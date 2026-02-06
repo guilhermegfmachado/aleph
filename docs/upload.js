@@ -65,6 +65,35 @@ function titleFromFilename(name) {
     return name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
 }
 
+// Normalize text for consistent readability
+function normalizeText(text) {
+    return text
+        // Normalize line endings
+        .replace(/\r\n/g, '\n')
+        .replace(/\r/g, '\n')
+        // Fix common OCR/PDF artifacts
+        .replace(/\s*-\s*\n\s*/g, '')  // Remove hyphenation at line breaks
+        .replace(/(\w)\s*\n\s*(\w)/g, '$1 $2')  // Join broken words
+        // Normalize whitespace
+        .replace(/[ \t]+/g, ' ')  // Multiple spaces/tabs to single space
+        .replace(/\n{3,}/g, '\n\n')  // Max 2 newlines (1 blank line)
+        .replace(/^\s+|\s+$/gm, '')  // Trim each line
+        // Normalize quotes and dashes
+        .replace(/[""]/g, '"')
+        .replace(/['']/g, "'")
+        .replace(/[–—]/g, '-')
+        .replace(/…/g, '...')
+        // Remove page numbers (common patterns)
+        .replace(/\n\s*\d+\s*\n/g, '\n\n')
+        .replace(/\n\s*-\s*\d+\s*-\s*\n/g, '\n\n')
+        .replace(/\n\s*Page\s+\d+\s*\n/gi, '\n\n')
+        // Clean up common header/footer patterns
+        .replace(/\n\s*(Chapter|Section|Part)\s+(\d+|[IVXLC]+)\s*\n/gi, '\n\n$1 $2\n\n')
+        // Final cleanup
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+}
+
 async function extractPdfText(file) {
     const pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
     let text = '', meta = {};
@@ -120,14 +149,17 @@ async function processFile(file) {
 
     if (!result.text || result.text.length < 50) throw new Error('too short or empty');
 
+    // Normalize text for consistent formatting
+    const normalizedText = normalizeText(result.text);
+
     // Run classification
-    const classification = window.Classifier ? Classifier.classify(result.text, result.meta) : null;
+    const classification = window.Classifier ? Classifier.classify(normalizedText, result.meta) : null;
 
     return {
         title: result.meta.title || titleFromFilename(file.name),
         author: result.meta.author || 'Unknown',
-        content: result.text,
-        snippet: result.text.slice(0, 1000),
+        content: normalizedText,
+        snippet: normalizedText.slice(0, 1000),
         filename: file.name,
         // Classification data
         classification: classification,

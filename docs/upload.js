@@ -275,7 +275,6 @@ async function publishToGitHub(silent = false) {
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
     const [owner, repo] = s.repo.split('/');
     const path = 'docs/data/shared-library.json';
-    const hint = document.getElementById('publish-hint');
 
     try {
         if (!silent && hint) hint.textContent = 'publishing...';

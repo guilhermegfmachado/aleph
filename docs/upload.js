@@ -109,12 +109,21 @@ async function processFile(file) {
 
     if (!result.text || result.text.length < 100) throw new Error('too short');
 
+    // Run classification
+    const classification = window.Classifier ? Classifier.classify(result.text, result.meta) : null;
+
     return {
         title: result.meta.title || titleFromFilename(file.name),
         author: result.meta.author || 'Unknown',
         content: result.text,
         snippet: result.text.slice(0, 1000),
-        filename: file.name
+        filename: file.name,
+        // Classification data
+        classification: classification,
+        type: classification?.type?.primary || 'unclassified',
+        period: classification?.period?.period || 'unknown',
+        tags: classification?.tags || [],
+        metadata: classification?.metadata || {}
     };
 }
 
@@ -181,6 +190,7 @@ async function renderUserBooks() {
             <div class="user-book-info">
                 <a href="book.html?user=${b.id}" class="user-book-title">${escapeHtml(b.title)}</a>
                 <div class="user-book-author">${escapeHtml(b.author)}</div>
+                ${b.tags && b.tags.length ? `<div class="user-book-tags">${b.tags.slice(0, 4).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
             </div>
             <button class="btn-delete" onclick="confirmDeleteBook(${b.id})">x</button>
         </div>

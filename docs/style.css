@@ -638,6 +638,16 @@ footer {
 .user-book-title:hover { text-decoration: underline; }
 .user-book-author { color: #666; font-size: 0.8rem; }
 
+.user-book-tags { margin-top: 0.25rem; display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.tag {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.7rem;
+    color: #666;
+}
+.tag:hover { border-color: var(--accent); color: var(--accent); }
+
 .btn-delete {
     background: transparent;
     border: 1px solid var(--border);

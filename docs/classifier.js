@@ -700,7 +700,8 @@ const Classifier = {
                 const matches = sample.match(new RegExp(pattern, 'gi')) || [];
                 score += matches.length;
             }
-            if (score > 3) {
+            // Require higher threshold to avoid false positives
+            if (score > 8) {
                 scores[category] = { score, name: config.name, docTypes: config.docTypes };
             }
         }
@@ -711,7 +712,7 @@ const Classifier = {
         return {
             primary: sorted[0][0],
             name: sorted[0][1].name,
-            confidence: Math.min(sorted[0][1].score / 20, 1),
+            confidence: Math.min(sorted[0][1].score / 25, 1),
             possibleTypes: sorted[0][1].docTypes,
             all: sorted.slice(0, 3).map(([code, data]) => ({ code, name: data.name, score: data.score }))
         };
@@ -1170,29 +1171,45 @@ const Classifier = {
     // ═══════════════════════════════════════════════════════════════
 
     classify(text, existingMeta = {}) {
-        // Detect jurisdiction (legal documents)
+        // Detect all types first, then pick the best match
         const jurisdiction = this.detectJurisdiction(text);
-
-        // Detect corporate type (business documents)
         const corporateType = this.detectCorporateType(text);
+        const generalDocType = this.detectDocumentType(text);
+        const period = this.detectPeriod(text);
 
-        // Detect document type (for non-legal/non-corporate)
+        // Determine the best classification by comparing confidence
         let docType;
-        if (jurisdiction) {
+        let finalCorporateType = corporateType;
+
+        // Ancient/literary texts take priority if they have good confidence
+        const isAncientOrLiterary = generalDocType.primary.startsWith('ancient/') ||
+                                     generalDocType.primary === 'literary';
+        const ancientConfidence = generalDocType.confidence || 0;
+
+        if (jurisdiction && jurisdiction.confidence > 0.3) {
+            // Strong legal document signal
             docType = { primary: `legal/${jurisdiction.primary}`, confidence: jurisdiction.confidence, all: [] };
-        } else if (corporateType) {
+        } else if (isAncientOrLiterary && ancientConfidence > 0.2) {
+            // Ancient or literary text - don't classify as corporate
+            docType = generalDocType;
+            finalCorporateType = null;
+        } else if (corporateType && corporateType.confidence > 0.3) {
+            // Strong corporate document signal
             docType = { primary: `corporate/${corporateType.primary}`, confidence: corporateType.confidence, all: [] };
+        } else if (generalDocType.primary !== 'unclassified') {
+            // Use general classification
+            docType = generalDocType;
+            finalCorporateType = null;
         } else {
-            docType = this.detectDocumentType(text);
+            docType = generalDocType;
         }
 
-        const period = this.detectPeriod(text);
-        const metadata = this.extractMetadata(text, jurisdiction?.primary, docType?.primary, corporateType?.primary);
-        const tags = this.generateTags(jurisdiction, corporateType, docType, period, metadata);
+        const metadata = this.extractMetadata(text, jurisdiction?.primary, docType?.primary, finalCorporateType?.primary);
+        const tags = this.generateTags(jurisdiction, finalCorporateType, docType, period, metadata);
 
         return {
             jurisdiction,
-            corporateType,
+            corporateType: finalCorporateType,
             type: docType,
             period,
             metadata: { ...existingMeta, ...metadata },

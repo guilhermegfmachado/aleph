@@ -96,7 +96,11 @@ function normalizeText(text) {
 
 async function extractPdfText(file) {
     const arrayBuffer = await file.arrayBuffer();
-    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    // Make a copy for base64 conversion (PDF.js may detach the original buffer)
+    const uint8Array = new Uint8Array(arrayBuffer);
+    const uint8Copy = new Uint8Array(uint8Array);
+
+    const pdf = await pdfjsLib.getDocument({ data: uint8Array }).promise;
     let text = '', meta = {};
 
     try {
@@ -112,8 +116,8 @@ async function extractPdfText(file) {
         text += content.items.map(item => item.str).join(' ') + '\n\n';
     }
 
-    // Store original PDF as base64 for proper rendering
-    const base64 = btoa(new Uint8Array(arrayBuffer).reduce((data, byte) => data + String.fromCharCode(byte), ''));
+    // Store original PDF as base64 for proper rendering (using the copy)
+    const base64 = btoa(uint8Copy.reduce((data, byte) => data + String.fromCharCode(byte), ''));
 
     return {
         text: text.trim(),

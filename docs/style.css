@@ -982,6 +982,174 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
+.pdf-separator {
+    color: var(--border);
+    margin: 0 0.25rem;
+}
+
+.pdf-search-input {
+    padding: 0.25rem 0.5rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-bright);
+    width: 120px;
+}
+
+.pdf-search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.pdf-search-results {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-top: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.pdf-search-results.hidden { display: none; }
+
+.pdf-search-results .search-summary {
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.pdf-search-results .match-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.pdf-match-btn {
+    padding: 0.2rem 0.5rem;
+    font-family: inherit;
+    font-size: 0.75rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.pdf-match-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.pdf-match-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+/* Text highlight layer for PDF */
+.pdf-text-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0.3;
+    line-height: 1.0;
+    pointer-events: none;
+}
+
+.pdf-text-layer span {
+    color: transparent;
+    position: absolute;
+    white-space: pre;
+}
+
+.pdf-text-layer .highlight {
+    background: var(--highlight);
+    border-radius: 2px;
+}
+
+.pdf-container {
+    position: relative;
+}
+
+/* Translation Popup */
+.translate-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-size: 0.9rem;
+}
+
+.translate-popup.hidden { display: none; }
+
+.translate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.translate-header select {
+    padding: 0.25rem 0.5rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0 0.25rem;
+}
+
+.btn-close:hover { color: var(--accent); }
+
+.translate-text {
+    padding: 0.75rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    max-height: 100px;
+    overflow-y: auto;
+    font-style: italic;
+}
+
+.translate-result {
+    padding: 0.75rem;
+    color: var(--text-bright);
+    min-height: 50px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.translate-result.loading {
+    color: var(--accent);
+}
+
+.translate-result.error {
+    color: #a44;
+}
+
+/* Text selection highlight in book content */
+.book-content ::selection,
+.pdf-container ::selection {
+    background: var(--accent-dim);
+    color: var(--bg);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .container.wide { max-width: 100%; }

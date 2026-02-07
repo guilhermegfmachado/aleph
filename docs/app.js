@@ -704,6 +704,16 @@ async function initPdfViewer(base64Data, pageCount) {
         document.getElementById('pdf-zoom-in')?.addEventListener('click', () => changeZoom(0.25));
         document.getElementById('pdf-zoom-out')?.addEventListener('click', () => changeZoom(-0.25));
 
+        // Setup search
+        const searchInput = document.getElementById('pdf-search');
+        const searchBtn = document.getElementById('pdf-search-btn');
+        if (searchInput && searchBtn) {
+            searchBtn.addEventListener('click', () => searchPdf(searchInput.value));
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') searchPdf(searchInput.value);
+            });
+        }
+
         renderPdfPage();
     } catch (e) {
         console.error('PDF load error:', e);
@@ -744,3 +754,210 @@ function changeZoom(delta) {
         renderPdfPage();
     }
 }
+
+// PDF Search
+const pdfSearchState = {
+    query: '',
+    matches: [], // {page, text, index}
+    currentMatch: -1
+};
+
+async function searchPdf(query) {
+    if (!pdfState.pdf || !query.trim()) return;
+
+    pdfSearchState.query = query.toLowerCase();
+    pdfSearchState.matches = [];
+    pdfSearchState.currentMatch = -1;
+
+    const resultsDiv = document.getElementById('pdf-search-results');
+
+    // Search through all pages
+    for (let i = 1; i <= pdfState.totalPages; i++) {
+        const page = await pdfState.pdf.getPage(i);
+        const content = await page.getTextContent();
+        const text = content.items.map(item => item.str).join(' ');
+        const lower = text.toLowerCase();
+
+        let idx = 0;
+        while ((idx = lower.indexOf(pdfSearchState.query, idx)) !== -1) {
+            const context = text.slice(Math.max(0, idx - 20), Math.min(text.length, idx + query.length + 20));
+            pdfSearchState.matches.push({
+                page: i,
+                text: context,
+                position: idx
+            });
+            idx += query.length;
+        }
+    }
+
+    // Show results
+    if (pdfSearchState.matches.length > 0) {
+        resultsDiv.classList.remove('hidden');
+        resultsDiv.innerHTML = `
+            <div class="search-summary">${pdfSearchState.matches.length} matches for "${escapeHtml(query)}"</div>
+            <div class="match-list">
+                ${pdfSearchState.matches.map((m, i) => `
+                    <button class="pdf-match-btn" onclick="goToMatch(${i})">p.${m.page}</button>
+                `).join('')}
+            </div>
+        `;
+        goToMatch(0);
+    } else {
+        resultsDiv.classList.remove('hidden');
+        resultsDiv.innerHTML = `<div class="search-summary">no matches for "${escapeHtml(query)}"</div>`;
+    }
+}
+
+async function goToMatch(index) {
+    if (index < 0 || index >= pdfSearchState.matches.length) return;
+
+    pdfSearchState.currentMatch = index;
+    const match = pdfSearchState.matches[index];
+
+    // Update button states
+    document.querySelectorAll('.pdf-match-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+    });
+
+    // Go to page
+    if (pdfState.currentPage !== match.page) {
+        pdfState.currentPage = match.page;
+        await renderPdfPage();
+    }
+
+    // Highlight on canvas
+    await highlightPdfMatches();
+}
+window.goToMatch = goToMatch;
+
+async function highlightPdfMatches() {
+    if (!pdfState.pdf || !pdfSearchState.query) return;
+
+    const page = await pdfState.pdf.getPage(pdfState.currentPage);
+    const content = await page.getTextContent();
+    const canvas = document.getElementById('pdf-canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Re-render page first
+    const viewport = page.getViewport({ scale: pdfState.scale });
+    await page.render({ canvasContext: ctx, viewport }).promise;
+
+    // Find and highlight matches on current page
+    const query = pdfSearchState.query;
+    ctx.fillStyle = 'rgba(255, 243, 205, 0.6)';
+
+    for (const item of content.items) {
+        const text = item.str.toLowerCase();
+        let idx = 0;
+        while ((idx = text.indexOf(query, idx)) !== -1) {
+            // Calculate position
+            const tx = pdfjsLib.Util.transform(viewport.transform, item.transform);
+            const x = tx[4] + (idx / item.str.length) * item.width * pdfState.scale;
+            const width = (query.length / item.str.length) * item.width * pdfState.scale;
+            const height = item.height * pdfState.scale;
+            const y = tx[5] - height;
+
+            ctx.fillRect(x, y, width, height);
+            idx += query.length;
+        }
+    }
+}
+
+// Translation feature
+const translateState = {
+    selectedText: '',
+    targetLang: 'en'
+};
+
+function initTranslation() {
+    const popup = document.getElementById('translate-popup');
+    const langSelect = document.getElementById('translate-lang');
+    const closeBtn = document.getElementById('translate-close');
+
+    if (!popup) return;
+
+    // Listen for text selection
+    document.addEventListener('mouseup', async (e) => {
+        const selection = window.getSelection();
+        const text = selection.toString().trim();
+
+        if (text && text.length > 1 && text.length < 1000) {
+            translateState.selectedText = text;
+            showTranslatePopup(text);
+        }
+    });
+
+    // Language change
+    if (langSelect) {
+        langSelect.addEventListener('change', () => {
+            translateState.targetLang = langSelect.value;
+            if (translateState.selectedText) {
+                translateText(translateState.selectedText, translateState.targetLang);
+            }
+        });
+    }
+
+    // Close button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            popup.classList.add('hidden');
+        });
+    }
+}
+
+function showTranslatePopup(text) {
+    const popup = document.getElementById('translate-popup');
+    const originalDiv = document.getElementById('translate-original');
+    const resultDiv = document.getElementById('translate-result');
+
+    if (!popup) return;
+
+    popup.classList.remove('hidden');
+    originalDiv.textContent = text.length > 150 ? text.slice(0, 150) + '...' : text;
+    resultDiv.textContent = 'translating...';
+    resultDiv.className = 'translate-result loading';
+
+    translateText(text, translateState.targetLang);
+}
+
+async function translateText(text, targetLang) {
+    const resultDiv = document.getElementById('translate-result');
+
+    try {
+        // Using MyMemory API (free, no key required)
+        const sourceLang = detectLanguage(text);
+        const pair = `${sourceLang}|${targetLang}`;
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${pair}`;
+
+        const resp = await fetch(url);
+        const data = await resp.json();
+
+        if (data.responseStatus === 200 && data.responseData?.translatedText) {
+            resultDiv.textContent = data.responseData.translatedText;
+            resultDiv.className = 'translate-result';
+        } else {
+            throw new Error(data.responseDetails || 'Translation failed');
+        }
+    } catch (e) {
+        resultDiv.textContent = 'translation error: ' + e.message;
+        resultDiv.className = 'translate-result error';
+    }
+}
+
+function detectLanguage(text) {
+    // Simple language detection based on character ranges
+    if (/[\u4e00-\u9fff]/.test(text)) return 'zh';
+    if (/[\u3040-\u309f\u30a0-\u30ff]/.test(text)) return 'ja';
+    if (/[\u0600-\u06ff]/.test(text)) return 'ar';
+    if (/[\u0400-\u04ff]/.test(text)) return 'ru';
+    if (/[\u0370-\u03ff]/.test(text)) return 'el';
+    if (/[\u0590-\u05ff]/.test(text)) return 'he';
+
+    // Latin-based - default to auto-detect
+    return 'auto';
+}
+
+// Initialize translation on page load
+document.addEventListener('DOMContentLoaded', () => {
+    initTranslation();
+});

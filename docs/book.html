@@ -40,9 +40,36 @@
                 <button id="pdf-prev" class="btn btn-small">prev</button>
                 <span id="pdf-page-info">page 1 of 1</span>
                 <button id="pdf-next" class="btn btn-small">next</button>
+                <span class="pdf-separator">|</span>
                 <button id="pdf-zoom-out" class="btn btn-small">-</button>
                 <span id="pdf-zoom-info">100%</span>
                 <button id="pdf-zoom-in" class="btn btn-small">+</button>
+                <span class="pdf-separator">|</span>
+                <input type="text" id="pdf-search" placeholder="search..." class="pdf-search-input">
+                <button id="pdf-search-btn" class="btn btn-small">find</button>
+            </div>
+            <div id="pdf-search-results" class="pdf-search-results hidden"></div>
+
+            <!-- Translation popup -->
+            <div id="translate-popup" class="translate-popup hidden">
+                <div class="translate-header">
+                    <select id="translate-lang">
+                        <option value="en">English</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ar">Arabic</option>
+                        <option value="la">Latin</option>
+                    </select>
+                    <button id="translate-close" class="btn-close">x</button>
+                </div>
+                <div id="translate-original" class="translate-text"></div>
+                <div id="translate-result" class="translate-result">select text to translate</div>
             </div>
 
             <div id="book-content" class="book-content single-view">

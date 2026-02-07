@@ -174,6 +174,10 @@ async function processFile(file) {
         content: normalizedText,
         snippet: normalizedText.slice(0, 1000),
         filename: file.name,
+        // PDF data for rendering
+        pdfData: result.pdfData || null,
+        pageCount: result.pageCount || null,
+        isPdf: result.isPdf || false,
         // Classification data
         classification: classification,
         type: classification?.type?.primary || 'unclassified',

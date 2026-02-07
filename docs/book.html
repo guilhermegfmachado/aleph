@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aleph</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
     <div class="container wide">
@@ -35,8 +36,21 @@
                 <button class="view-btn" data-view="parallel">parallel</button>
             </div>
 
+            <div id="pdf-controls" class="pdf-controls hidden">
+                <button id="pdf-prev" class="btn btn-small">prev</button>
+                <span id="pdf-page-info">page 1 of 1</span>
+                <button id="pdf-next" class="btn btn-small">next</button>
+                <button id="pdf-zoom-out" class="btn btn-small">-</button>
+                <span id="pdf-zoom-info">100%</span>
+                <button id="pdf-zoom-in" class="btn btn-small">+</button>
+            </div>
+
             <div id="book-content" class="book-content single-view">
                 <div class="loading">loading...</div>
+            </div>
+
+            <div id="pdf-container" class="pdf-container hidden">
+                <canvas id="pdf-canvas"></canvas>
             </div>
         </main>
 
@@ -44,6 +58,11 @@
     </div>
 
     <script src="app.js"></script>
-    <script>initBookView();</script>
+    <script>
+        if (typeof pdfjsLib !== 'undefined') {
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        }
+        initBookView();
+    </script>
 </body>
 </html>

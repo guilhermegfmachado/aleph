@@ -640,6 +640,15 @@ async function renderBookContent(query = null) {
                 </div>
             `;
         }
+    } else if (book.isPdf && book.pdfData) {
+        // PDF - render with PDF.js
+        contentDiv.classList.add('hidden');
+        const pdfContainer = document.getElementById('pdf-container');
+        const pdfControls = document.getElementById('pdf-controls');
+        if (pdfContainer) pdfContainer.classList.remove('hidden');
+        if (pdfControls) pdfControls.classList.remove('hidden');
+
+        initPdfViewer(book.pdfData, book.pageCount);
     } else {
         // Regular book (user uploaded or single language)
         let content = escapeHtml(book.content || '');
@@ -660,5 +669,78 @@ async function renderBookContent(query = null) {
                 document.getElementById('first-match')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 100);
         }
+    }
+}
+
+// PDF Viewer
+const pdfState = {
+    pdf: null,
+    currentPage: 1,
+    totalPages: 1,
+    scale: 1.5
+};
+
+async function initPdfViewer(base64Data, pageCount) {
+    if (typeof pdfjsLib === 'undefined') {
+        console.error('PDF.js not loaded');
+        return;
+    }
+
+    try {
+        // Decode base64 to array buffer
+        const binary = atob(base64Data);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+
+        pdfState.pdf = await pdfjsLib.getDocument({ data: bytes }).promise;
+        pdfState.totalPages = pdfState.pdf.numPages;
+        pdfState.currentPage = 1;
+
+        // Setup controls
+        document.getElementById('pdf-prev')?.addEventListener('click', () => changePage(-1));
+        document.getElementById('pdf-next')?.addEventListener('click', () => changePage(1));
+        document.getElementById('pdf-zoom-in')?.addEventListener('click', () => changeZoom(0.25));
+        document.getElementById('pdf-zoom-out')?.addEventListener('click', () => changeZoom(-0.25));
+
+        renderPdfPage();
+    } catch (e) {
+        console.error('PDF load error:', e);
+        document.getElementById('pdf-container').innerHTML = '<div class="error">Failed to load PDF</div>';
+    }
+}
+
+async function renderPdfPage() {
+    if (!pdfState.pdf) return;
+
+    const page = await pdfState.pdf.getPage(pdfState.currentPage);
+    const canvas = document.getElementById('pdf-canvas');
+    const ctx = canvas.getContext('2d');
+
+    const viewport = page.getViewport({ scale: pdfState.scale });
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    await page.render({ canvasContext: ctx, viewport }).promise;
+
+    // Update controls
+    document.getElementById('pdf-page-info').textContent = `page ${pdfState.currentPage} of ${pdfState.totalPages}`;
+    document.getElementById('pdf-zoom-info').textContent = `${Math.round(pdfState.scale * 100)}%`;
+}
+
+function changePage(delta) {
+    const newPage = pdfState.currentPage + delta;
+    if (newPage >= 1 && newPage <= pdfState.totalPages) {
+        pdfState.currentPage = newPage;
+        renderPdfPage();
+    }
+}
+
+function changeZoom(delta) {
+    const newScale = pdfState.scale + delta;
+    if (newScale >= 0.5 && newScale <= 3) {
+        pdfState.scale = newScale;
+        renderPdfPage();
     }
 }

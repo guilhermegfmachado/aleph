@@ -6,26 +6,57 @@
     <title>aleph - sources</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .sources-nav {
-            display: flex;
-            flex-wrap: wrap;
+        .sources-tree {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 0.5rem;
             margin-bottom: 1.5rem;
             padding: 1rem;
             background: var(--bg-light);
             border: 1px solid var(--border);
         }
-        .sources-nav a {
-            padding: 0.25rem 0.75rem;
-            background: var(--bg);
+        .tree-branch {
             border: 1px solid var(--border);
+            background: var(--bg);
+        }
+        .tree-branch summary {
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--text-bright);
+            background: var(--bg-light);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tree-branch summary::-webkit-details-marker { display: none; }
+        .tree-branch summary::after {
+            content: '▸';
+            font-size: 0.7rem;
+            color: var(--text);
+            transition: transform 0.2s;
+        }
+        .tree-branch[open] summary::after {
+            transform: rotate(90deg);
+        }
+        .tree-leaves {
+            display: flex;
+            flex-direction: column;
+            padding: 0.25rem 0;
+        }
+        .tree-leaves a {
+            padding: 0.35rem 0.75rem;
             color: var(--text);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            border-left: 2px solid transparent;
         }
-        .sources-nav a:hover {
-            border-color: var(--accent);
+        .tree-leaves a:hover {
+            background: var(--bg-light);
             color: var(--accent);
+            border-left-color: var(--accent);
         }
         .source-section {
             margin-bottom: 1.5rem;
@@ -103,7 +134,7 @@
         }
         .key-terms {
             font-size: 0.8rem;
-            color: #666;
+            color: #444;
             line-height: 1.4;
         }
         .terms-box {
@@ -123,13 +154,25 @@
             padding: 0.15rem 0.4rem;
             font-size: 0.8rem;
         }
+        @media (max-width: 768px) {
+            .sources-tree {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
         @media (max-width: 600px) {
+            .sources-tree {
+                grid-template-columns: 1fr;
+            }
             .source-table {
                 font-size: 0.75rem;
             }
             .source-table th,
             .source-table td {
                 padding: 0.35rem;
+            }
+            .source-section summary {
+                font-size: 1rem;
+                padding: 0.5rem 0.75rem;
             }
         }
     </style>
@@ -148,25 +191,54 @@
         </header>
 
         <main>
-            <nav class="sources-nav">
-                <a href="#texts">Texts</a>
-                <a href="#osint">OSINT</a>
-                <a href="#linguistics">Linguistics</a>
-                <a href="#computers">Computers</a>
-                <a href="#music">Music</a>
-                <a href="#politics">Politics</a>
-                <a href="#maps">Maps</a>
-                <a href="#economics">Economics</a>
-                <a href="#science">Science</a>
-                <a href="#international">International</a>
-                <a href="#eu">EU</a>
-                <a href="#uk">UK</a>
-                <a href="#us">US</a>
-                <a href="#asia">Asia</a>
-                <a href="#gulf">Gulf</a>
-                <a href="#documents">Documents</a>
-                <a href="#citations">Citations</a>
-                <a href="#books">Books</a>
+            <nav class="sources-tree">
+                <details class="tree-branch" open>
+                    <summary>Knowledge</summary>
+                    <div class="tree-leaves">
+                        <a href="#texts">Texts & Archives</a>
+                        <a href="#osint">OSINT</a>
+                        <a href="#linguistics">Linguistics</a>
+                        <a href="#computers">Computing</a>
+                    </div>
+                </details>
+                <details class="tree-branch" open>
+                    <summary>Culture</summary>
+                    <div class="tree-leaves">
+                        <a href="#music">Music</a>
+                        <a href="#arts">Arts & Theatre</a>
+                        <a href="#social">Social Sciences</a>
+                        <a href="#politics">Political Archives</a>
+                    </div>
+                </details>
+                <details class="tree-branch" open>
+                    <summary>Science & Industry</summary>
+                    <div class="tree-leaves">
+                        <a href="#science">Science</a>
+                        <a href="#economics">Economics & Finance</a>
+                        <a href="#practical">Trades & Crafts</a>
+                        <a href="#maps">Maps & Geography</a>
+                    </div>
+                </details>
+                <details class="tree-branch" open>
+                    <summary>Regional</summary>
+                    <div class="tree-leaves">
+                        <a href="#eastasia">Japan & China</a>
+                        <a href="#asia">Asia-Pacific</a>
+                        <a href="#gulf">Middle East</a>
+                        <a href="#eu">EU</a>
+                        <a href="#uk">UK</a>
+                        <a href="#us">US</a>
+                        <a href="#international">International</a>
+                    </div>
+                </details>
+                <details class="tree-branch" open>
+                    <summary>Reference</summary>
+                    <div class="tree-leaves">
+                        <a href="#documents">Documents</a>
+                        <a href="#citations">Citations</a>
+                        <a href="#books">Books</a>
+                    </div>
+                </details>
             </nav>
 
             <!-- TEXTS -->
@@ -258,14 +330,6 @@
                     </tbody>
                 </table>
 
-                <h3>Crypto & Web3</h3>
-                <table class="source-table">
-                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
-                    <tbody>
-                        <tr><td>IQ.wiki</td><td><a href="https://iq.wiki" target="_blank">iq.wiki</a></td><td class="key-terms">Blockchain encyclopedia, crypto wiki, decentralized</td></tr>
-                        <tr><td>Ethereum Whitepaper</td><td><a href="https://ethereum.org/en/whitepaper/" target="_blank">ethereum.org</a></td><td class="key-terms">Smart contracts, Vitalik Buterin, EVM</td></tr>
-                    </tbody>
-                </table>
                 </div>
             </details>
 
@@ -532,10 +596,10 @@
 
             <!-- ECONOMICS -->
             <details id="economics" class="source-section">
-                <summary><h2>8. Economics & Investing</h2></summary>
+                <summary><h2>8. Economics, Finance & Industry</h2></summary>
                 <div class="section-content">
 
-                <h3>Economic Data</h3>
+                <h3>Economic Data & Research</h3>
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
@@ -544,18 +608,112 @@
                         <tr><td>Our World in Data</td><td><a href="https://ourworldindata.org" target="_blank">ourworldindata.org</a></td><td class="key-terms">Long-term trends, visualizations, open source</td></tr>
                         <tr><td>Macrotrends</td><td><a href="https://www.macrotrends.net" target="_blank">macrotrends.net</a></td><td class="key-terms">Historical charts, commodities, stocks</td></tr>
                         <tr><td>Nasdaq Data Link</td><td><a href="https://data.nasdaq.com" target="_blank">data.nasdaq.com</a></td><td class="key-terms">Alternative data, financial datasets, API</td></tr>
+                        <tr><td>NBER Papers</td><td><a href="https://www.nber.org/papers" target="_blank">nber.org/papers</a></td><td class="key-terms">Economic research, working papers</td></tr>
+                        <tr><td>VoxEU</td><td><a href="https://cepr.org/voxeu" target="_blank">cepr.org/voxeu</a></td><td class="key-terms">Policy research, economic analysis, CEPR</td></tr>
                     </tbody>
                 </table>
 
-                <h3>Investing & Markets</h3>
+                <h3>Crypto & DeFi (Advanced)</h3>
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
-                        <tr><td>Yahoo Finance</td><td><a href="https://finance.yahoo.com" target="_blank">finance.yahoo.com</a></td><td class="key-terms">Quotes, financials, screening</td></tr>
+                        <tr><td>DeFi Llama</td><td><a href="https://defillama.com" target="_blank">defillama.com</a></td><td class="key-terms">TVL tracking, protocol analytics, chains</td></tr>
+                        <tr><td>Dune Analytics</td><td><a href="https://dune.com" target="_blank">dune.com</a></td><td class="key-terms">On-chain SQL queries, dashboards, MEV</td></tr>
+                        <tr><td>Flashbots</td><td><a href="https://flashbots.net" target="_blank">flashbots.net</a></td><td class="key-terms">MEV research, auction, PBS</td></tr>
+                        <tr><td>Token Terminal</td><td><a href="https://tokenterminal.com" target="_blank">tokenterminal.com</a></td><td class="key-terms">Protocol fundamentals, revenue, P/E</td></tr>
+                        <tr><td>L2Beat</td><td><a href="https://l2beat.com" target="_blank">l2beat.com</a></td><td class="key-terms">Layer 2 risk analysis, rollups, bridges</td></tr>
+                        <tr><td>Rekt News</td><td><a href="https://rekt.news" target="_blank">rekt.news</a></td><td class="key-terms">Exploit post-mortems, security analysis</td></tr>
+                        <tr><td>Paradigm Research</td><td><a href="https://www.paradigm.xyz/writing" target="_blank">paradigm.xyz/writing</a></td><td class="key-terms">Crypto mechanism design, AMM theory</td></tr>
+                        <tr><td>a]16z Crypto</td><td><a href="https://a16zcrypto.com" target="_blank">a16zcrypto.com</a></td><td class="key-terms">Web3 research, token economics</td></tr>
+                        <tr><td>Messari</td><td><a href="https://messari.io" target="_blank">messari.io</a></td><td class="key-terms">Crypto research, governance, protocol analysis</td></tr>
+                        <tr><td>EigenPhi</td><td><a href="https://eigenphi.io" target="_blank">eigenphi.io</a></td><td class="key-terms">MEV tracking, sandwich attacks, arbitrage</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>ETFs & Funds</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>ETF.com</td><td><a href="https://www.etf.com" target="_blank">etf.com</a></td><td class="key-terms">ETF screener, flows, expense ratios</td></tr>
+                        <tr><td>ETFdb</td><td><a href="https://etfdb.com" target="_blank">etfdb.com</a></td><td class="key-terms">ETF database, holdings, comparison</td></tr>
+                        <tr><td>Morningstar</td><td><a href="https://www.morningstar.com" target="_blank">morningstar.com</a></td><td class="key-terms">Fund ratings, analysis, sustainability</td></tr>
                         <tr><td>Finviz</td><td><a href="https://finviz.com" target="_blank">finviz.com</a></td><td class="key-terms">Stock screener, heatmaps, technicals</td></tr>
-                        <tr><td>Investopedia</td><td><a href="https://www.investopedia.com" target="_blank">investopedia.com</a></td><td class="key-terms">Financial education, dictionary, tutorials</td></tr>
-                        <tr><td>NBER Papers</td><td><a href="https://www.nber.org/papers" target="_blank">nber.org/papers</a></td><td class="key-terms">Economic research, working papers</td></tr>
-                        <tr><td>VoxEU</td><td><a href="https://cepr.org/voxeu" target="_blank">cepr.org/voxeu</a></td><td class="key-terms">Policy research, economic analysis, CEPR</td></tr>
+                        <tr><td>WhaleWisdom</td><td><a href="https://whalewisdom.com" target="_blank">whalewisdom.com</a></td><td class="key-terms">13F filings, hedge fund tracking</td></tr>
+                        <tr><td>Dataroma</td><td><a href="https://www.dataroma.com" target="_blank">dataroma.com</a></td><td class="key-terms">Superinvestor portfolios, Buffett, Ackman</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Commodities & Trading Houses</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Glencore</td><td><a href="https://www.glencore.com" target="_blank">glencore.com</a></td><td class="key-terms">Mining, metals, energy trading, Baar</td></tr>
+                        <tr><td>Trafigura</td><td><a href="https://www.trafigura.com" target="_blank">trafigura.com</a></td><td class="key-terms">Oil, metals trading, Geneva/Singapore</td></tr>
+                        <tr><td>Vitol</td><td><a href="https://www.vitol.com" target="_blank">vitol.com</a></td><td class="key-terms">Energy trading, LNG, Rotterdam</td></tr>
+                        <tr><td>Mercuria</td><td><a href="https://www.mercuria.com" target="_blank">mercuria.com</a></td><td class="key-terms">Energy, commodities, Geneva</td></tr>
+                        <tr><td>Gunvor</td><td><a href="https://gunvorgroup.com" target="_blank">gunvorgroup.com</a></td><td class="key-terms">Oil trading, infrastructure, Cyprus</td></tr>
+                        <tr><td>Rio Tinto</td><td><a href="https://www.riotinto.com" target="_blank">riotinto.com</a></td><td class="key-terms">Mining, iron ore, aluminum, copper</td></tr>
+                        <tr><td>Exxaro</td><td><a href="https://www.exxaro.com" target="_blank">exxaro.com</a></td><td class="key-terms">South African mining, coal, minerals</td></tr>
+                        <tr><td>BHP</td><td><a href="https://www.bhp.com" target="_blank">bhp.com</a></td><td class="key-terms">Mining, metals, petroleum</td></tr>
+                        <tr><td>Argus Media</td><td><a href="https://www.argusmedia.com" target="_blank">argusmedia.com</a></td><td class="key-terms">Commodity price reporting, benchmarks</td></tr>
+                        <tr><td>S&P Global Commodity</td><td><a href="https://www.spglobal.com/commodityinsights" target="_blank">spglobal.com/commodity</a></td><td class="key-terms">Platts, price assessments, LNG</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>VC & Private Equity</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Crunchbase</td><td><a href="https://www.crunchbase.com" target="_blank">crunchbase.com</a></td><td class="key-terms">Startup database, funding rounds, investors</td></tr>
+                        <tr><td>PitchBook</td><td><a href="https://pitchbook.com" target="_blank">pitchbook.com</a></td><td class="key-terms">PE/VC data, valuations, deals</td></tr>
+                        <tr><td>CB Insights</td><td><a href="https://www.cbinsights.com" target="_blank">cbinsights.com</a></td><td class="key-terms">Unicorns, market maps, research</td></tr>
+                        <tr><td>Dealroom</td><td><a href="https://dealroom.co" target="_blank">dealroom.co</a></td><td class="key-terms">European startups, ecosystems, data</td></tr>
+                        <tr><td>Indico Capital</td><td><a href="https://www.indicocapital.com" target="_blank">indicocapital.com</a></td><td class="key-terms">Portuguese VC, Iberian tech</td></tr>
+                        <tr><td>Bynd VC</td><td><a href="https://bynd.vc" target="_blank">bynd.vc</a></td><td class="key-terms">Portuguese VC, seed stage</td></tr>
+                        <tr><td>Atomico</td><td><a href="https://www.atomico.com" target="_blank">atomico.com</a></td><td class="key-terms">European VC, State of European Tech</td></tr>
+                        <tr><td>Sequoia</td><td><a href="https://www.sequoiacap.com" target="_blank">sequoiacap.com</a></td><td class="key-terms">Top-tier VC, portfolio, thesis</td></tr>
+                        <tr><td>a16z</td><td><a href="https://a16z.com" target="_blank">a16z.com</a></td><td class="key-terms">Andreessen Horowitz, Future</td></tr>
+                        <tr><td>First Round Review</td><td><a href="https://review.firstround.com" target="_blank">review.firstround.com</a></td><td class="key-terms">Startup advice, operator interviews</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>FIRE (Finance, Insurance, Real Estate)</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>REIS</td><td><a href="https://www.reis.com" target="_blank">reis.com</a></td><td class="key-terms">Commercial real estate data, Moody's</td></tr>
+                        <tr><td>CoStar</td><td><a href="https://www.costar.com" target="_blank">costar.com</a></td><td class="key-terms">CRE analytics, property data</td></tr>
+                        <tr><td>Green Street</td><td><a href="https://www.greenstreet.com" target="_blank">greenstreet.com</a></td><td class="key-terms">REIT research, property sectors</td></tr>
+                        <tr><td>AM Best</td><td><a href="https://www.ambest.com" target="_blank">ambest.com</a></td><td class="key-terms">Insurance ratings, financial strength</td></tr>
+                        <tr><td>Swiss Re Institute</td><td><a href="https://www.swissre.com/institute" target="_blank">swissre.com/institute</a></td><td class="key-terms">Reinsurance research, sigma</td></tr>
+                        <tr><td>Lloyd's</td><td><a href="https://www.lloyds.com" target="_blank">lloyds.com</a></td><td class="key-terms">Specialty insurance, syndicates</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Certification & Standards</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>ISO</td><td><a href="https://www.iso.org" target="_blank">iso.org</a></td><td class="key-terms">International standards, 9001, 27001</td></tr>
+                        <tr><td>ASTM</td><td><a href="https://www.astm.org" target="_blank">astm.org</a></td><td class="key-terms">Materials, testing standards</td></tr>
+                        <tr><td>IEC</td><td><a href="https://www.iec.ch" target="_blank">iec.ch</a></td><td class="key-terms">Electrotechnical standards</td></tr>
+                        <tr><td>BSI</td><td><a href="https://www.bsigroup.com" target="_blank">bsigroup.com</a></td><td class="key-terms">British Standards, PAS, certification</td></tr>
+                        <tr><td>DNV</td><td><a href="https://www.dnv.com" target="_blank">dnv.com</a></td><td class="key-terms">Classification, maritime, energy</td></tr>
+                        <tr><td>Bureau Veritas</td><td><a href="https://www.bureauveritas.com" target="_blank">bureauveritas.com</a></td><td class="key-terms">TIC, testing, inspection</td></tr>
+                        <tr><td>SGS</td><td><a href="https://www.sgs.com" target="_blank">sgs.com</a></td><td class="key-terms">Inspection, verification, testing</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>MICE (Meetings, Incentives, Conferences, Exhibitions)</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>ICCA</td><td><a href="https://www.iccaworld.org" target="_blank">iccaworld.org</a></td><td class="key-terms">International Congress, association meetings</td></tr>
+                        <tr><td>UFI</td><td><a href="https://www.ufi.org" target="_blank">ufi.org</a></td><td class="key-terms">Global Association of Exhibition Industry</td></tr>
+                        <tr><td>MPI</td><td><a href="https://www.mpi.org" target="_blank">mpi.org</a></td><td class="key-terms">Meeting Professionals International</td></tr>
+                        <tr><td>PCMA</td><td><a href="https://www.pcma.org" target="_blank">pcma.org</a></td><td class="key-terms">Professional Convention Management</td></tr>
+                        <tr><td>Reed Exhibitions</td><td><a href="https://www.rxglobal.com" target="_blank">rxglobal.com</a></td><td class="key-terms">Trade shows, B2B events</td></tr>
+                        <tr><td>Informa Markets</td><td><a href="https://www.informamarkets.com" target="_blank">informamarkets.com</a></td><td class="key-terms">Exhibitions, B2B events</td></tr>
                     </tbody>
                 </table>
                 </div>
@@ -590,9 +748,258 @@
                 </div>
             </details>
 
+            <!-- SOCIAL SCIENCES -->
+            <details id="social" class="source-section">
+                <summary><h2>10. Psychology, Sociology & Anthropology</h2></summary>
+                <div class="section-content">
+
+                <h3>Psychology (Academic)</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>APA PsycNET</td><td><a href="https://psycnet.apa.org" target="_blank">psycnet.apa.org</a></td><td class="key-terms">Psychology research, journals, DSM</td></tr>
+                        <tr><td>Classics in History of Psychology</td><td><a href="https://psychclassics.yorku.ca" target="_blank">psychclassics.yorku.ca</a></td><td class="key-terms">Freud, Jung, Skinner, primary texts</td></tr>
+                        <tr><td>Lacan Online</td><td><a href="http://www.lacan.com" target="_blank">lacan.com</a></td><td class="key-terms">Lacanian psychoanalysis, seminars</td></tr>
+                        <tr><td>No Subject</td><td><a href="https://nosubject.com" target="_blank">nosubject.com</a></td><td class="key-terms">Lacan encyclopedia, Žižek, theory</td></tr>
+                        <tr><td>Retraction Watch</td><td><a href="https://retractionwatch.com" target="_blank">retractionwatch.com</a></td><td class="key-terms">Replication crisis, fraud, methodology</td></tr>
+                        <tr><td>OSF Preprints (PsyArXiv)</td><td><a href="https://osf.io/preprints/psyarxiv" target="_blank">osf.io/psyarxiv</a></td><td class="key-terms">Psychology preprints, open science</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Sociology & Social Theory</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Dead Sociologists Society</td><td><a href="https://www.deadwriters.net" target="_blank">deadwriters.net</a></td><td class="key-terms">Weber, Durkheim, Marx, classical theory</td></tr>
+                        <tr><td>Sociology LibreTexts</td><td><a href="https://socialsci.libretexts.org/Bookshelves/Sociology" target="_blank">libretexts.org/sociology</a></td><td class="key-terms">Open textbooks, methodology</td></tr>
+                        <tr><td>Critical Theory</td><td><a href="https://www.critical-theory.com" target="_blank">critical-theory.com</a></td><td class="key-terms">Frankfurt School, Adorno, Habermas</td></tr>
+                        <tr><td>Theory Talks</td><td><a href="http://www.theory-talks.org" target="_blank">theory-talks.org</a></td><td class="key-terms">IR theory interviews, political theory</td></tr>
+                        <tr><td>European Sociological Review</td><td><a href="https://academic.oup.com/esr" target="_blank">oup.com/esr</a></td><td class="key-terms">European sociology, quantitative</td></tr>
+                        <tr><td>Émile Durkheim Archive</td><td><a href="https://durkheim.uchicago.edu" target="_blank">durkheim.uchicago.edu</a></td><td class="key-terms">Durkheim texts, Année sociologique</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Anthropology</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>HRAF (eHRAF)</td><td><a href="https://ehrafworldcultures.yale.edu" target="_blank">ehrafworldcultures.yale.edu</a></td><td class="key-terms">Cross-cultural database, ethnography</td></tr>
+                        <tr><td>Ethnographic Atlas</td><td><a href="https://d-place.org" target="_blank">d-place.org</a></td><td class="key-terms">D-PLACE, cultural variables, societies</td></tr>
+                        <tr><td>AnthroSource</td><td><a href="https://anthrosource.onlinelibrary.wiley.com" target="_blank">anthrosource.wiley.com</a></td><td class="key-terms">AAA journals, American anthropology</td></tr>
+                        <tr><td>Savage Minds / Anthrodendum</td><td><a href="https://anthrodendum.org" target="_blank">anthrodendum.org</a></td><td class="key-terms">Public anthropology, blog, discourse</td></tr>
+                        <tr><td>HAU: Journal of Ethnographic Theory</td><td><a href="https://www.haujournal.org" target="_blank">haujournal.org</a></td><td class="key-terms">Ethnographic theory, Cambridge</td></tr>
+                        <tr><td>AIATSIS</td><td><a href="https://aiatsis.gov.au" target="_blank">aiatsis.gov.au</a></td><td class="key-terms">Australian Indigenous, Torres Strait</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Ethnography & Field Collections</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Pitt Rivers Museum</td><td><a href="https://www.prm.ox.ac.uk" target="_blank">prm.ox.ac.uk</a></td><td class="key-terms">Object collections, Oxford, ethnographic</td></tr>
+                        <tr><td>Quai Branly Collections</td><td><a href="https://www.quaibranly.fr/en/explore-collections" target="_blank">quaibranly.fr</a></td><td class="key-terms">Non-Western art, ethnography, Paris</td></tr>
+                        <tr><td>Smithsonian Anthropology</td><td><a href="https://anthropology.si.edu" target="_blank">anthropology.si.edu</a></td><td class="key-terms">Collections, archives, research</td></tr>
+                        <tr><td>Museum of Archaeology & Anthropology</td><td><a href="https://maa.cam.ac.uk" target="_blank">maa.cam.ac.uk</a></td><td class="key-terms">Cambridge, Pacific, world cultures</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </details>
+
+            <!-- ARTS -->
+            <details id="arts" class="source-section">
+                <summary><h2>11. Theatre, Visual Arts & Performance</h2></summary>
+                <div class="section-content">
+
+                <h3>Theatre & Drama</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>MIT Global Shakespeares</td><td><a href="https://globalshakespeares.mit.edu" target="_blank">globalshakespeares.mit.edu</a></td><td class="key-terms">Shakespeare adaptations, world theatre</td></tr>
+                        <tr><td>Digital Theatre+</td><td><a href="https://www.digitaltheatreplus.com" target="_blank">digitaltheatreplus.com</a></td><td class="key-terms">Recorded productions, study guides</td></tr>
+                        <tr><td>Theatricalia</td><td><a href="https://theatricalia.com" target="_blank">theatricalia.com</a></td><td class="key-terms">Production database, casts, history</td></tr>
+                        <tr><td>SIBMAS</td><td><a href="https://www.sibmas.org" target="_blank">sibmas.org</a></td><td class="key-terms">Performing arts libraries, museums</td></tr>
+                        <tr><td>Doollee</td><td><a href="https://www.doollee.com" target="_blank">doollee.com</a></td><td class="key-terms">Playwrights database, plays</td></tr>
+                        <tr><td>Theatre Communications Group</td><td><a href="https://www.tcg.org" target="_blank">tcg.org</a></td><td class="key-terms">American theatre, ART/NY</td></tr>
+                        <tr><td>Artaud Archive</td><td><a href="http://www.yourpersonalartfarm.com/artaud" target="_blank">artaud archive</a></td><td class="key-terms">Antonin Artaud, Theatre of Cruelty</td></tr>
+                        <tr><td>Grotowski Institute</td><td><a href="https://grotowski.net" target="_blank">grotowski.net</a></td><td class="key-terms">Poor theatre, physical theatre, Wrocław</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Visual Arts & Art History</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Web Gallery of Art</td><td><a href="https://www.wga.hu" target="_blank">wga.hu</a></td><td class="key-terms">European painting, sculpture, 1000-1850</td></tr>
+                        <tr><td>Google Arts & Culture</td><td><a href="https://artsandculture.google.com" target="_blank">artsandculture.google.com</a></td><td class="key-terms">High-res art, virtual tours, museums</td></tr>
+                        <tr><td>WikiArt</td><td><a href="https://www.wikiart.org" target="_blank">wikiart.org</a></td><td class="key-terms">Visual art encyclopedia, 250k+ works</td></tr>
+                        <tr><td>Smarthistory</td><td><a href="https://smarthistory.org" target="_blank">smarthistory.org</a></td><td class="key-terms">Art history textbook, videos</td></tr>
+                        <tr><td>Artsy</td><td><a href="https://www.artsy.net" target="_blank">artsy.net</a></td><td class="key-terms">Contemporary art, galleries, market</td></tr>
+                        <tr><td>e-flux</td><td><a href="https://www.e-flux.com" target="_blank">e-flux.com</a></td><td class="key-terms">Contemporary art, criticism, theory</td></tr>
+                        <tr><td>Frieze</td><td><a href="https://www.frieze.com" target="_blank">frieze.com</a></td><td class="key-terms">Contemporary art magazine, fairs</td></tr>
+                        <tr><td>October Journal</td><td><a href="https://www.mitpressjournals.org/loi/octo" target="_blank">october.mitpress.edu</a></td><td class="key-terms">Art theory, criticism, MIT Press</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Museums & Collections</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Met Open Access</td><td><a href="https://www.metmuseum.org/art/collection" target="_blank">metmuseum.org/collection</a></td><td class="key-terms">470k+ works, CC0, high-res</td></tr>
+                        <tr><td>Rijksmuseum</td><td><a href="https://www.rijksmuseum.nl/en/rijksstudio" target="_blank">rijksmuseum.nl/rijksstudio</a></td><td class="key-terms">Dutch masters, open access</td></tr>
+                        <tr><td>Louvre Collections</td><td><a href="https://collections.louvre.fr" target="_blank">collections.louvre.fr</a></td><td class="key-terms">480k+ works, French collections</td></tr>
+                        <tr><td>British Museum Collection</td><td><a href="https://www.britishmuseum.org/collection" target="_blank">britishmuseum.org/collection</a></td><td class="key-terms">4M+ objects, world history</td></tr>
+                        <tr><td>Art Institute Chicago</td><td><a href="https://www.artic.edu/collection" target="_blank">artic.edu/collection</a></td><td class="key-terms">Open access, CC0, API</td></tr>
+                        <tr><td>Prado Online</td><td><a href="https://www.museodelprado.es/en/the-collection" target="_blank">museodelprado.es</a></td><td class="key-terms">Spanish masters, Velázquez, Goya</td></tr>
+                        <tr><td>Uffizi</td><td><a href="https://www.uffizi.it/en/online-exhibitions" target="_blank">uffizi.it</a></td><td class="key-terms">Florentine art, Renaissance</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Contemporary & Experimental</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Rhizome ArtBase</td><td><a href="https://rhizome.org/art/artbase" target="_blank">rhizome.org/artbase</a></td><td class="key-terms">Net art, digital art, preservation</td></tr>
+                        <tr><td>UbuWeb (Film/Video)</td><td><a href="https://ubu.com/film" target="_blank">ubu.com/film</a></td><td class="key-terms">Avant-garde film, video art</td></tr>
+                        <tr><td>Arsenal Berlin</td><td><a href="https://www.arsenal-berlin.de" target="_blank">arsenal-berlin.de</a></td><td class="key-terms">Experimental cinema, Forum</td></tr>
+                        <tr><td>Fluxus Portal</td><td><a href="http://www.fluxus.org" target="_blank">fluxus.org</a></td><td class="key-terms">Fluxus movement, intermedia</td></tr>
+                        <tr><td>Ars Electronica Archive</td><td><a href="https://archive.aec.at" target="_blank">archive.aec.at</a></td><td class="key-terms">Media art, Prix Ars Electronica</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </details>
+
+            <!-- PRACTICAL -->
+            <details id="practical" class="source-section">
+                <summary><h2>12. Practical Knowledge & Trades</h2></summary>
+                <div class="section-content">
+
+                <h3>Building Trades</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Fine Homebuilding</td><td><a href="https://www.finehomebuilding.com" target="_blank">finehomebuilding.com</a></td><td class="key-terms">Carpentry, construction, Taunton</td></tr>
+                        <tr><td>This Old House</td><td><a href="https://www.thisoldhouse.com" target="_blank">thisoldhouse.com</a></td><td class="key-terms">Renovation, repairs, how-to</td></tr>
+                        <tr><td>JLC (Journal of Light Construction)</td><td><a href="https://www.jlconline.com" target="_blank">jlconline.com</a></td><td class="key-terms">Professional building, details</td></tr>
+                        <tr><td>Building Science Corporation</td><td><a href="https://buildingscience.com" target="_blank">buildingscience.com</a></td><td class="key-terms">Building enclosures, moisture, Joe Lstiburek</td></tr>
+                        <tr><td>Green Building Advisor</td><td><a href="https://www.greenbuildingadvisor.com" target="_blank">greenbuildingadvisor.com</a></td><td class="key-terms">Energy efficiency, sustainable building</td></tr>
+                        <tr><td>Stonemason Resources</td><td><a href="https://stonemasonry.org" target="_blank">stonemasonry.org</a></td><td class="key-terms">Traditional masonry, preservation</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Woodworking & Furniture</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Fine Woodworking</td><td><a href="https://www.finewoodworking.com" target="_blank">finewoodworking.com</a></td><td class="key-terms">Joinery, hand tools, furniture</td></tr>
+                        <tr><td>Popular Woodworking</td><td><a href="https://www.popularwoodworking.com" target="_blank">popularwoodworking.com</a></td><td class="key-terms">Woodworking projects, techniques</td></tr>
+                        <tr><td>Wood Database</td><td><a href="https://www.wood-database.com" target="_blank">wood-database.com</a></td><td class="key-terms">Wood species, properties, identification</td></tr>
+                        <tr><td>Lost Art Press</td><td><a href="https://lostartpress.com" target="_blank">lostartpress.com</a></td><td class="key-terms">Traditional woodworking, Schwarz</td></tr>
+                        <tr><td>Paul Sellers</td><td><a href="https://paulsellers.com" target="_blank">paulsellers.com</a></td><td class="key-terms">Hand tool woodworking, education</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Metalwork & Smithing</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>IForge Iron</td><td><a href="https://www.iforgeiron.com" target="_blank">iforgeiron.com</a></td><td class="key-terms">Blacksmithing, forging, community</td></tr>
+                        <tr><td>ABANA</td><td><a href="https://abana.org" target="_blank">abana.org</a></td><td class="key-terms">Artist-Blacksmith's Association</td></tr>
+                        <tr><td>Anvilfire</td><td><a href="http://www.anvilfire.com" target="_blank">anvilfire.com</a></td><td class="key-terms">Blacksmithing encyclopedia, FAQs</td></tr>
+                        <tr><td>Welding Tips and Tricks</td><td><a href="https://www.weldingtipsandtricks.com" target="_blank">weldingtipsandtricks.com</a></td><td class="key-terms">MIG, TIG, stick welding</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Traditional Crafts & Skills</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Heritage Crafts</td><td><a href="https://heritagecrafts.org.uk" target="_blank">heritagecrafts.org.uk</a></td><td class="key-terms">Endangered crafts, Red List, UK</td></tr>
+                        <tr><td>SPAB (Repair Not Replace)</td><td><a href="https://www.spab.org.uk" target="_blank">spab.org.uk</a></td><td class="key-terms">Building conservation, lime, heritage</td></tr>
+                        <tr><td>Craftsmanspace</td><td><a href="https://www.craftsmanspace.com" target="_blank">craftsmanspace.com</a></td><td class="key-terms">Plans, patterns, woodcarving</td></tr>
+                        <tr><td>Instructables</td><td><a href="https://www.instructables.com" target="_blank">instructables.com</a></td><td class="key-terms">DIY, maker projects, community</td></tr>
+                        <tr><td>Thingiverse</td><td><a href="https://www.thingiverse.com" target="_blank">thingiverse.com</a></td><td class="key-terms">3D printing, models, maker</td></tr>
+                        <tr><td>Hackaday</td><td><a href="https://hackaday.com" target="_blank">hackaday.com</a></td><td class="key-terms">Electronics, hardware hacking</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Agriculture & Land</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>ATTRA</td><td><a href="https://attra.ncat.org" target="_blank">attra.ncat.org</a></td><td class="key-terms">Sustainable agriculture, organic farming</td></tr>
+                        <tr><td>Small Farm Permaculture</td><td><a href="https://www.permaculturenews.org" target="_blank">permaculturenews.org</a></td><td class="key-terms">Permaculture design, food forests</td></tr>
+                        <tr><td>eOrganic</td><td><a href="https://eorganic.org" target="_blank">eorganic.org</a></td><td class="key-terms">Organic farming, research</td></tr>
+                        <tr><td>USDA PLANTS</td><td><a href="https://plants.usda.gov" target="_blank">plants.usda.gov</a></td><td class="key-terms">Plant database, native species</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </details>
+
+            <!-- EAST ASIA -->
+            <details id="eastasia" class="source-section">
+                <summary><h2>13. Japan & China (Deep Resources)</h2></summary>
+                <div class="section-content">
+
+                <h3>Japanese Resources</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Aozora Bunko</td><td><a href="https://www.aozora.gr.jp" target="_blank">aozora.gr.jp</a></td><td class="key-terms">青空文庫, Japanese public domain texts</td></tr>
+                        <tr><td>JAIRO</td><td><a href="https://jairo.nii.ac.jp" target="_blank">jairo.nii.ac.jp</a></td><td class="key-terms">Japanese institutional repositories</td></tr>
+                        <tr><td>CiNii</td><td><a href="https://cir.nii.ac.jp" target="_blank">cir.nii.ac.jp</a></td><td class="key-terms">Japanese academic papers, NII</td></tr>
+                        <tr><td>J-Stage</td><td><a href="https://www.jstage.jst.go.jp" target="_blank">jstage.jst.go.jp</a></td><td class="key-terms">Japanese journals, open access</td></tr>
+                        <tr><td>National Diet Library Digital</td><td><a href="https://dl.ndl.go.jp" target="_blank">dl.ndl.go.jp</a></td><td class="key-terms">国立国会図書館, rare books, maps</td></tr>
+                        <tr><td>Japanese Text Initiative (UVA)</td><td><a href="https://jti.lib.virginia.edu" target="_blank">jti.lib.virginia.edu</a></td><td class="key-terms">Classical Japanese, 万葉集, 源氏物語</td></tr>
+                        <tr><td>SAT Daizōkyō</td><td><a href="https://21dzk.l.u-tokyo.ac.jp/SAT/" target="_blank">21dzk.l.u-tokyo.ac.jp/SAT</a></td><td class="key-terms">Taishō Buddhist canon, 大正新脩大藏經</td></tr>
+                        <tr><td>Kotobank</td><td><a href="https://kotobank.jp" target="_blank">kotobank.jp</a></td><td class="key-terms">Japanese encyclopedias, dictionaries</td></tr>
+                        <tr><td>Waseda Kotenseki</td><td><a href="https://www.wul.waseda.ac.jp/kotenseki" target="_blank">wul.waseda.ac.jp/kotenseki</a></td><td class="key-terms">Classical Japanese manuscripts</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Japanese Culture & Arts</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Ukiyo-e.org</td><td><a href="https://ukiyo-e.org" target="_blank">ukiyo-e.org</a></td><td class="key-terms">Woodblock prints, 浮世絵, Hokusai</td></tr>
+                        <tr><td>Noh Archive</td><td><a href="https://www.the-noh.com/en" target="_blank">the-noh.com</a></td><td class="key-terms">能, traditional theatre, Zeami</td></tr>
+                        <tr><td>Japanese Architecture & Art Net</td><td><a href="https://www.aisf.or.jp/~jaanus" target="_blank">aisf.or.jp/jaanus</a></td><td class="key-terms">JAANUS, architecture, terminology</td></tr>
+                        <tr><td>E-Museum (National Museums)</td><td><a href="https://emuseum.nich.go.jp" target="_blank">emuseum.nich.go.jp</a></td><td class="key-terms">National Treasures, 国宝</td></tr>
+                        <tr><td>ColBase</td><td><a href="https://colbase.nich.go.jp" target="_blank">colbase.nich.go.jp</a></td><td class="key-terms">National museum collections</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Chinese Resources</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Chinese Text Project</td><td><a href="https://ctext.org" target="_blank">ctext.org</a></td><td class="key-terms">Pre-Qin to Qing, 經史子集, 25 dynasties</td></tr>
+                        <tr><td>CBETA</td><td><a href="https://cbetaonline.dila.edu.tw" target="_blank">cbetaonline.dila.edu.tw</a></td><td class="key-terms">Chinese Buddhist Electronic Texts</td></tr>
+                        <tr><td>Wikisource Chinese</td><td><a href="https://zh.wikisource.org" target="_blank">zh.wikisource.org</a></td><td class="key-terms">維基文庫, classical texts</td></tr>
+                        <tr><td>Kanripo</td><td><a href="https://www.kanripo.org" target="_blank">kanripo.org</a></td><td class="key-terms">Digital Kanbun texts, 漢文</td></tr>
+                        <tr><td>CHANT</td><td><a href="https://chant.org" target="_blank">chant.org</a></td><td class="key-terms">Chinese Ancient Texts database, HKU</td></tr>
+                        <tr><td>Digital Archive of Dunhuang</td><td><a href="https://idp.bl.uk" target="_blank">idp.bl.uk</a></td><td class="key-terms">Silk Road manuscripts, 敦煌</td></tr>
+                        <tr><td>Academia Sinica Databases</td><td><a href="https://newdoc.nccu.edu.tw/thdl" target="_blank">nccu.edu.tw/thdl</a></td><td class="key-terms">Taiwan historical databases</td></tr>
+                        <tr><td>Zhonghua Book Company</td><td><a href="https://www.zhonghuabook.com" target="_blank">zhonghuabook.com</a></td><td class="key-terms">中华书局, critical editions, 二十四史</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Chinese Art & Material Culture</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Palace Museum Digital</td><td><a href="https://www.dpm.org.cn/explore/collections.html" target="_blank">dpm.org.cn</a></td><td class="key-terms">故宫, Forbidden City collections</td></tr>
+                        <tr><td>National Palace Museum (Taiwan)</td><td><a href="https://www.npm.gov.tw" target="_blank">npm.gov.tw</a></td><td class="key-terms">國立故宮博物院, Jadeite cabbage</td></tr>
+                        <tr><td>Freer Sackler Open Access</td><td><a href="https://asia.si.edu/explore-art-culture/collections" target="_blank">asia.si.edu</a></td><td class="key-terms">Asian art, Smithsonian</td></tr>
+                        <tr><td>China Heritage Quarterly</td><td><a href="https://chinaheritage.net" target="_blank">chinaheritage.net</a></td><td class="key-terms">Sinology, Geremie Barmé, ANU</td></tr>
+                        <tr><td>Ming Qing Women's Writings</td><td><a href="https://digital.library.mcgill.ca/mingqing" target="_blank">mcgill.ca/mingqing</a></td><td class="key-terms">Women's poetry, 閨秀, McGill</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </details>
+
             <!-- INTERNATIONAL -->
             <details id="international" class="source-section">
-                <summary><h2>10. International Organizations</h2></summary>
+                <summary><h2>14. International Organizations</h2></summary>
                 <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
@@ -614,7 +1021,7 @@
 
             <!-- EU -->
             <details id="eu" class="source-section">
-                <summary><h2>11. European Union</h2></summary>
+                <summary><h2>15. European Union</h2></summary>
                 <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
@@ -636,7 +1043,7 @@
 
             <!-- UK -->
             <details id="uk" class="source-section">
-                <summary><h2>12. United Kingdom</h2></summary>
+                <summary><h2>16. United Kingdom</h2></summary>
                 <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
@@ -656,7 +1063,7 @@
 
             <!-- US -->
             <details id="us" class="source-section">
-                <summary><h2>13. United States</h2></summary>
+                <summary><h2>17. United States</h2></summary>
                 <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
@@ -679,7 +1086,7 @@
 
             <!-- ASIA -->
             <details id="asia" class="source-section">
-                <summary><h2>14. Asia-Pacific</h2></summary>
+                <summary><h2>18. Asia-Pacific</h2></summary>
                 <div class="section-content">
 
                 <h3>China</h3>
@@ -753,7 +1160,7 @@
 
             <!-- GULF -->
             <details id="gulf" class="source-section">
-                <summary><h2>15. Middle East & Gulf</h2></summary>
+                <summary><h2>19. Middle East & Gulf</h2></summary>
                 <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
@@ -777,7 +1184,7 @@
 
             <!-- DOCUMENTS -->
             <details id="documents" class="source-section">
-                <summary><h2>16. Document Classification</h2></summary>
+                <summary><h2>20. Document Classification</h2></summary>
                 <div class="section-content">
 
                 <h3>SEC & Financial Filings</h3>
@@ -843,7 +1250,7 @@
 
             <!-- CITATIONS -->
             <details id="citations" class="source-section">
-                <summary><h2>17. Legal Citation Formats</h2></summary>
+                <summary><h2>21. Legal Citation Formats</h2></summary>
                 <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Jurisdiction</th><th>Example</th><th>Pattern</th></tr></thead>
@@ -869,7 +1276,7 @@
 
             <!-- BOOKS -->
             <details id="books" class="source-section">
-                <summary><h2>18. Bookshops & Publishers</h2></summary>
+                <summary><h2>22. Bookshops & Publishers</h2></summary>
                 <div class="section-content">
 
                 <h3>Used & Antiquarian</h3>

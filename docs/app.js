@@ -651,7 +651,9 @@ async function renderBookContent(query = null) {
         initPdfViewer(book.pdfData, book.pageCount);
     } else {
         // Regular book (user uploaded or single language)
-        let content = escapeHtml(book.content || '');
+        // Check both direct content and content nested in languages
+        let rawContent = book.content || (book.languages?.en?.content) || '';
+        let content = escapeHtml(rawContent);
         if (query) {
             let first = true;
             content = content.replace(new RegExp(`(${escapeRegex(query)})`, 'gi'), (m) => {

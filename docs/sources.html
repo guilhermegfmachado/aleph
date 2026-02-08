@@ -28,21 +28,50 @@
             color: var(--accent);
         }
         .source-section {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .source-section summary {
+            font-size: 1.1rem;
+            font-weight: normal;
+            color: var(--accent);
+            padding: 0.75rem 1rem;
+            background: var(--bg-light);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .source-section summary::-webkit-details-marker { display: none; }
+        .source-section summary::after {
+            content: '+';
+            font-size: 1.2rem;
+            color: var(--text);
+        }
+        .source-section[open] summary::after {
+            content: '−';
+        }
+        .source-section summary:hover {
+            background: var(--bg);
+        }
+        .source-section .section-content {
+            padding: 1rem;
         }
         .source-section h2 {
             font-size: 1.1rem;
             font-weight: normal;
             color: var(--accent);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
+            margin: 0;
         }
         .source-section h3 {
             font-size: 0.95rem;
             font-weight: normal;
             color: var(--text-bright);
             margin: 1rem 0 0.5rem;
+        }
+        .source-section h3:first-child {
+            margin-top: 0;
         }
         .source-table {
             width: 100%;
@@ -122,6 +151,7 @@
             <nav class="sources-nav">
                 <a href="#texts">Texts</a>
                 <a href="#osint">OSINT</a>
+                <a href="#linguistics">Linguistics</a>
                 <a href="#international">International</a>
                 <a href="#eu">EU</a>
                 <a href="#uk">UK</a>
@@ -133,8 +163,9 @@
             </nav>
 
             <!-- TEXTS -->
-            <section id="texts" class="source-section">
-                <h2>1. Open Text Repositories</h2>
+            <details id="texts" class="source-section" open>
+                <summary><h2>1. Open Text Repositories</h2></summary>
+                <div class="section-content">
 
                 <h3>Classical & Ancient Texts</h3>
                 <table class="source-table">
@@ -144,7 +175,7 @@
                         <tr><td>Internet Archive</td><td><a href="https://archive.org" target="_blank">archive.org</a></td><td class="key-terms">Books, Wayback Machine, borrowing, scans</td></tr>
                         <tr><td>OpenLibrary</td><td><a href="https://openlibrary.org" target="_blank">openlibrary.org</a></td><td class="key-terms">Borrowable books, metadata, Open Library ID</td></tr>
                         <tr><td>Perseus Digital Library</td><td><a href="https://www.perseus.tufts.edu" target="_blank">perseus.tufts.edu</a></td><td class="key-terms">Greek, Latin, classical texts, morphology</td></tr>
-                        <tr><td>Loebulus</td><td><a href="https://rfrench.github.io/loebinger/" target="_blank">loebulus</a></td><td class="key-terms">Loeb Classical Library, Greek/Latin parallel</td></tr>
+                        <tr><td>Loebulus</td><td><a href="https://ryanfb.xyz/loebolus/" target="_blank">loebolus</a></td><td class="key-terms">Loeb Classical Library, Greek/Latin parallel</td></tr>
                         <tr><td>The Latin Library</td><td><a href="https://www.thelatinlibrary.com" target="_blank">thelatinlibrary.com</a></td><td class="key-terms">Latin texts, classical authors</td></tr>
                         <tr><td>Sacred Texts</td><td><a href="https://www.sacred-texts.com" target="_blank">sacred-texts.com</a></td><td class="key-terms">Religious texts, philosophy, mythology</td></tr>
                     </tbody>
@@ -159,22 +190,27 @@
                         <tr><td>PhilPapers</td><td><a href="https://philpapers.org" target="_blank">philpapers.org</a></td><td class="key-terms">Philosophy papers, bibliography</td></tr>
                         <tr><td>JSTOR</td><td><a href="https://www.jstor.org" target="_blank">jstor.org</a></td><td class="key-terms">Journals, academic archives (partial free)</td></tr>
                         <tr><td>Google Scholar</td><td><a href="https://scholar.google.com" target="_blank">scholar.google.com</a></td><td class="key-terms">Citations, case law, papers</td></tr>
+                        <tr><td>UbuWeb</td><td><a href="https://ubu.com" target="_blank">ubu.com</a></td><td class="key-terms">Avant-garde, sound, film, conceptual art</td></tr>
+                        <tr><td>Monoskop</td><td><a href="https://monoskop.org" target="_blank">monoskop.org</a></td><td class="key-terms">Media art, theory, philosophy, archives</td></tr>
+                        <tr><td>Memory of the World</td><td><a href="https://library.memoryoftheworld.org" target="_blank">memoryoftheworld.org</a></td><td class="key-terms">Shadow library, public library, theory</td></tr>
                     </tbody>
                 </table>
 
-                <h3>Crypto & Tech</h3>
+                <h3>Crypto & Web3</h3>
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
-                        <tr><td>Bitcoin Whitepaper</td><td><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">bitcoin.org/bitcoin.pdf</a></td><td class="key-terms">Satoshi Nakamoto, cryptocurrency, blockchain</td></tr>
+                        <tr><td>IQ.wiki</td><td><a href="https://iq.wiki" target="_blank">iq.wiki</a></td><td class="key-terms">Blockchain encyclopedia, crypto wiki, decentralized</td></tr>
                         <tr><td>Ethereum Whitepaper</td><td><a href="https://ethereum.org/en/whitepaper/" target="_blank">ethereum.org</a></td><td class="key-terms">Smart contracts, Vitalik Buterin, EVM</td></tr>
                     </tbody>
                 </table>
-            </section>
+                </div>
+            </details>
 
             <!-- OSINT -->
-            <section id="osint" class="source-section">
-                <h2>2. OSINT & Research Tools</h2>
+            <details id="osint" class="source-section">
+                <summary><h2>2. OSINT & Research Tools</h2></summary>
+                <div class="section-content">
 
                 <h3>Web Archives</h3>
                 <table class="source-table">
@@ -217,11 +253,71 @@
                         <tr><td>Have I Been Pwned</td><td><a href="https://haveibeenpwned.com" target="_blank">haveibeenpwned.com</a></td><td class="key-terms">Data breach check</td></tr>
                     </tbody>
                 </table>
-            </section>
+                </div>
+            </details>
+
+            <!-- LINGUISTICS -->
+            <details id="linguistics" class="source-section">
+                <summary><h2>3. Linguistics & Languages</h2></summary>
+                <div class="section-content">
+
+                <h3>Language Databases</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Glottolog</td><td><a href="https://glottolog.org" target="_blank">glottolog.org</a></td><td class="key-terms">Language families, genealogical classification, ISO 639-3</td></tr>
+                        <tr><td>WALS</td><td><a href="https://wals.info" target="_blank">wals.info</a></td><td class="key-terms">World Atlas of Language Structures, typology, features</td></tr>
+                        <tr><td>Ethnologue</td><td><a href="https://www.ethnologue.com" target="_blank">ethnologue.com</a></td><td class="key-terms">Living languages, speakers, endangerment</td></tr>
+                        <tr><td>Omniglot</td><td><a href="https://www.omniglot.com" target="_blank">omniglot.com</a></td><td class="key-terms">Writing systems, scripts, alphabets</td></tr>
+                        <tr><td>PHOIBLE</td><td><a href="https://phoible.org" target="_blank">phoible.org</a></td><td class="key-terms">Phoneme inventories, IPA, phonology</td></tr>
+                        <tr><td>LingBuzz</td><td><a href="https://ling.auf.net/lingbuzz" target="_blank">lingbuzz</a></td><td class="key-terms">Linguistics preprints, syntax, semantics, phonology</td></tr>
+                        <tr><td>LINGUIST List</td><td><a href="https://linguistlist.org" target="_blank">linguistlist.org</a></td><td class="key-terms">Academic linguistics, jobs, conferences, reviews</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Historical & Comparative</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Indo-European Etymological Dict</td><td><a href="https://lrc.la.utexas.edu/lex" target="_blank">utexas.edu/lex</a></td><td class="key-terms">PIE roots, cognates, reconstruction</td></tr>
+                        <tr><td>Wiktionary</td><td><a href="https://en.wiktionary.org" target="_blank">wiktionary.org</a></td><td class="key-terms">Etymology, definitions, translations</td></tr>
+                        <tr><td>ELAR</td><td><a href="https://www.elararchive.org" target="_blank">elararchive.org</a></td><td class="key-terms">Endangered Languages Archive, documentation</td></tr>
+                        <tr><td>ASJP</td><td><a href="https://asjp.clld.org" target="_blank">asjp.clld.org</a></td><td class="key-terms">Automated Similarity Judgment, Swadesh lists</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Constructed Languages (Conlangs)</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>ConWorkShop</td><td><a href="https://conworkshop.com" target="_blank">conworkshop.com</a></td><td class="key-terms">Conlang creation tools, dictionary, grammar</td></tr>
+                        <tr><td>Lojban</td><td><a href="https://lojban.org" target="_blank">lojban.org</a></td><td class="key-terms">Logical language, predicate logic, unambiguous</td></tr>
+                        <tr><td>Esperanto</td><td><a href="https://lernu.net" target="_blank">lernu.net</a></td><td class="key-terms">International auxiliary language, Zamenhof</td></tr>
+                        <tr><td>Toki Pona</td><td><a href="https://tokipona.org" target="_blank">tokipona.org</a></td><td class="key-terms">Minimalist, 120 words, philosophical language</td></tr>
+                        <tr><td>Language Creation Society</td><td><a href="https://conlang.org" target="_blank">conlang.org</a></td><td class="key-terms">Community, resources, LCS</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Esoteric Programming Languages</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Esolang Wiki</td><td><a href="https://esolangs.org" target="_blank">esolangs.org</a></td><td class="key-terms">Brainfuck, Befunge, Whitespace, Malbolge</td></tr>
+                        <tr><td>TryItOnline</td><td><a href="https://tio.run" target="_blank">tio.run</a></td><td class="key-terms">Run 600+ languages, including esolangs</td></tr>
+                        <tr><td>Rosetta Code</td><td><a href="https://rosettacode.org" target="_blank">rosettacode.org</a></td><td class="key-terms">Same task, many languages, comparison</td></tr>
+                        <tr><td>Code Golf</td><td><a href="https://codegolf.stackexchange.com" target="_blank">codegolf.stackexchange.com</a></td><td class="key-terms">Minimal code, byte counting, challenges</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>Key Concepts:</strong> Phonology (sound systems), Morphology (word structure), Syntax (sentence structure), Semantics (meaning), Pragmatics (context), Typology (cross-linguistic patterns), Turing-completeness (computational languages)
+                </div>
+                </div>
+            </details>
 
             <!-- INTERNATIONAL -->
-            <section id="international" class="source-section">
-                <h2>3. International Organizations</h2>
+            <details id="international" class="source-section">
+                <summary><h2>4. International Organizations</h2></summary>
+                <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
@@ -237,11 +333,13 @@
                         <tr><td>ICC</td><td><a href="https://iccwbo.org" target="_blank">iccwbo.org</a></td><td class="key-terms">Incoterms, arbitration, UCP 600</td></tr>
                     </tbody>
                 </table>
-            </section>
+                </div>
+            </details>
 
             <!-- EU -->
-            <section id="eu" class="source-section">
-                <h2>4. European Union</h2>
+            <details id="eu" class="source-section">
+                <summary><h2>5. European Union</h2></summary>
+                <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
@@ -256,11 +354,13 @@
                 <div class="terms-box">
                     <strong>EU Corporate Terms:</strong> GmbH, AG, SA, SARL, BV, NV, SpA, SRL, Societas Europaea (SE), GDPR, MiFID, UCITS, AIFMD
                 </div>
-            </section>
+                </div>
+            </details>
 
             <!-- UK -->
-            <section id="uk" class="source-section">
-                <h2>5. United Kingdom</h2>
+            <details id="uk" class="source-section">
+                <summary><h2>6. United Kingdom</h2></summary>
+                <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
@@ -274,11 +374,13 @@
                 <div class="terms-box">
                     <strong>UK Corporate Terms:</strong> Ltd, PLC, LLP, Articles of Association, FCA, PRA, Companies Act 2006
                 </div>
-            </section>
+                </div>
+            </details>
 
             <!-- US -->
-            <section id="us" class="source-section">
-                <h2>6. United States</h2>
+            <details id="us" class="source-section">
+                <summary><h2>7. United States</h2></summary>
+                <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
@@ -295,11 +397,13 @@
                 <div class="terms-box">
                     <strong>US Corporate Terms:</strong> Inc, Corp, LLC, Delaware, DGCL, 10-K, 10-Q, 8-K, proxy, Reg D, accredited investor
                 </div>
-            </section>
+                </div>
+            </details>
 
             <!-- ASIA -->
-            <section id="asia" class="source-section">
-                <h2>7. Asia-Pacific</h2>
+            <details id="asia" class="source-section">
+                <summary><h2>8. Asia-Pacific</h2></summary>
+                <div class="section-content">
 
                 <h3>China</h3>
                 <table class="source-table">
@@ -367,11 +471,13 @@
                         <tr><td>India</td><td><a href="https://www.mca.gov.in" target="_blank">mca.gov.in</a></td><td class="key-terms">Pvt Ltd, Ltd, MCA21, CIN</td></tr>
                     </tbody>
                 </table>
-            </section>
+                </div>
+            </details>
 
             <!-- GULF -->
-            <section id="gulf" class="source-section">
-                <h2>8. Middle East & Gulf</h2>
+            <details id="gulf" class="source-section">
+                <summary><h2>9. Middle East & Gulf</h2></summary>
+                <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
                     <tbody>
@@ -389,11 +495,13 @@
                 <div class="terms-box">
                     <strong>Gulf Terms:</strong> LLC (ذ.م.م), JSC, mainland vs freezone, DIFC, ADGM, Saudization/Nitaqat, Vision 2030
                 </div>
-            </section>
+                </div>
+            </details>
 
             <!-- DOCUMENTS -->
-            <section id="documents" class="source-section">
-                <h2>9. Document Classification</h2>
+            <details id="documents" class="source-section">
+                <summary><h2>10. Document Classification</h2></summary>
+                <div class="section-content">
 
                 <h3>SEC & Financial Filings</h3>
                 <table class="source-table">
@@ -453,11 +561,13 @@
                         <tr><td>CDP</td><td>Carbon disclosure</td><td class="key-terms">Emissions data, targets</td></tr>
                     </tbody>
                 </table>
-            </section>
+                </div>
+            </details>
 
             <!-- CITATIONS -->
-            <section id="citations" class="source-section">
-                <h2>10. Legal Citation Formats</h2>
+            <details id="citations" class="source-section">
+                <summary><h2>11. Legal Citation Formats</h2></summary>
+                <div class="section-content">
                 <table class="source-table">
                     <thead><tr><th>Jurisdiction</th><th>Example</th><th>Pattern</th></tr></thead>
                     <tbody>
@@ -477,7 +587,8 @@
                         <tr><td>Russia</td><td><span class="citation-example">ФЗ № 123-ФЗ</span></td><td class="key-terms">ФЗ № [number]-ФЗ</td></tr>
                     </tbody>
                 </table>
-            </section>
+                </div>
+            </details>
 
         </main>
 

@@ -677,7 +677,8 @@ const pdfState = {
     pdf: null,
     currentPage: 1,
     totalPages: 1,
-    scale: 1.5
+    scale: 1.5,
+    initialized: false
 };
 
 async function initPdfViewer(base64Data, pageCount) {
@@ -685,6 +686,9 @@ async function initPdfViewer(base64Data, pageCount) {
         console.error('PDF.js not loaded');
         return;
     }
+
+    const pdfContainer = document.getElementById('pdf-container');
+    pdfContainer.innerHTML = '<canvas id="pdf-canvas"></canvas><div class="pdf-loading">loading PDF...</div>';
 
     try {
         // Decode base64 to array buffer
@@ -698,60 +702,84 @@ async function initPdfViewer(base64Data, pageCount) {
         pdfState.totalPages = pdfState.pdf.numPages;
         pdfState.currentPage = 1;
 
-        // Setup controls
-        document.getElementById('pdf-prev')?.addEventListener('click', () => changePage(-1));
-        document.getElementById('pdf-next')?.addEventListener('click', () => changePage(1));
-        document.getElementById('pdf-zoom-in')?.addEventListener('click', () => changeZoom(0.25));
-        document.getElementById('pdf-zoom-out')?.addEventListener('click', () => changeZoom(-0.25));
+        // Remove loading indicator
+        const loadingEl = pdfContainer.querySelector('.pdf-loading');
+        if (loadingEl) loadingEl.remove();
 
-        // Setup search
-        const searchInput = document.getElementById('pdf-search');
-        const searchBtn = document.getElementById('pdf-search-btn');
-        if (searchInput && searchBtn) {
-            searchBtn.addEventListener('click', () => searchPdf(searchInput.value));
-            searchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') searchPdf(searchInput.value);
-            });
+        // Setup controls only once
+        if (!pdfState.initialized) {
+            document.getElementById('pdf-prev')?.addEventListener('click', () => changePage(-1));
+            document.getElementById('pdf-next')?.addEventListener('click', () => changePage(1));
+            document.getElementById('pdf-zoom-in')?.addEventListener('click', () => changeZoom(0.25));
+            document.getElementById('pdf-zoom-out')?.addEventListener('click', () => changeZoom(-0.25));
+
+            // Setup search
+            const searchInput = document.getElementById('pdf-search');
+            const searchBtn = document.getElementById('pdf-search-btn');
+            if (searchInput && searchBtn) {
+                searchBtn.addEventListener('click', () => searchPdf(searchInput.value));
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') searchPdf(searchInput.value);
+                });
+            }
+            pdfState.initialized = true;
         }
 
         renderPdfPage();
     } catch (e) {
         console.error('PDF load error:', e);
-        document.getElementById('pdf-container').innerHTML = '<div class="error">Failed to load PDF</div>';
+        pdfContainer.innerHTML = '<div class="error">Failed to load PDF</div>';
     }
 }
 
-async function renderPdfPage() {
-    if (!pdfState.pdf) return;
-
-    const page = await pdfState.pdf.getPage(pdfState.currentPage);
-    const canvas = document.getElementById('pdf-canvas');
-    const ctx = canvas.getContext('2d');
-
-    const viewport = page.getViewport({ scale: pdfState.scale });
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    await page.render({ canvasContext: ctx, viewport }).promise;
-
-    // Update controls
-    document.getElementById('pdf-page-info').textContent = `page ${pdfState.currentPage} of ${pdfState.totalPages}`;
-    document.getElementById('pdf-zoom-info').textContent = `${Math.round(pdfState.scale * 100)}%`;
-}
-
-function changePage(delta) {
+// Expose functions globally for button onclick
+window.changePage = function(delta) {
     const newPage = pdfState.currentPage + delta;
     if (newPage >= 1 && newPage <= pdfState.totalPages) {
         pdfState.currentPage = newPage;
         renderPdfPage();
     }
-}
+};
 
-function changeZoom(delta) {
+window.changeZoom = function(delta) {
     const newScale = pdfState.scale + delta;
     if (newScale >= 0.5 && newScale <= 3) {
         pdfState.scale = newScale;
         renderPdfPage();
+    }
+};
+
+function changePage(delta) { window.changePage(delta); }
+function changeZoom(delta) { window.changeZoom(delta); }
+
+async function renderPdfPage() {
+    if (!pdfState.pdf) return;
+
+    try {
+        const page = await pdfState.pdf.getPage(pdfState.currentPage);
+        const canvas = document.getElementById('pdf-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        // Adjust scale for mobile
+        let scale = pdfState.scale;
+        if (window.innerWidth < 600) {
+            scale = Math.min(scale, (window.innerWidth - 40) / 612);
+        }
+
+        const viewport = page.getViewport({ scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        await page.render({ canvasContext: ctx, viewport }).promise;
+
+        // Update controls
+        const pageInfo = document.getElementById('pdf-page-info');
+        const zoomInfo = document.getElementById('pdf-zoom-info');
+        if (pageInfo) pageInfo.textContent = `${pdfState.currentPage} / ${pdfState.totalPages}`;
+        if (zoomInfo) zoomInfo.textContent = `${Math.round(pdfState.scale * 100)}%`;
+    } catch (e) {
+        console.error('Render error:', e);
     }
 }
 
@@ -866,7 +894,8 @@ async function highlightPdfMatches() {
 // Translation feature
 const translateState = {
     selectedText: '',
-    targetLang: 'en'
+    targetLang: 'pt',
+    dismissed: false
 };
 
 function initTranslation() {
@@ -876,14 +905,35 @@ function initTranslation() {
 
     if (!popup) return;
 
-    // Listen for text selection
-    document.addEventListener('mouseup', async (e) => {
-        const selection = window.getSelection();
-        const text = selection.toString().trim();
+    // Set default language
+    if (langSelect) langSelect.value = 'pt';
 
-        if (text && text.length > 1 && text.length < 1000) {
-            translateState.selectedText = text;
-            showTranslatePopup(text);
+    // Listen for text selection (with delay to avoid flickering)
+    let selectionTimeout;
+    document.addEventListener('mouseup', (e) => {
+        // Don't trigger if clicking inside popup
+        if (popup.contains(e.target)) return;
+
+        clearTimeout(selectionTimeout);
+        selectionTimeout = setTimeout(() => {
+            const selection = window.getSelection();
+            const text = selection.toString().trim();
+
+            if (text && text.length > 2 && text.length < 500) {
+                translateState.selectedText = text;
+                translateState.dismissed = false;
+                showTranslatePopup(text);
+            }
+        }, 300);
+    });
+
+    // Hide on click outside
+    document.addEventListener('mousedown', (e) => {
+        if (!popup.contains(e.target) && !popup.classList.contains('hidden')) {
+            const selection = window.getSelection();
+            if (!selection.toString().trim()) {
+                popup.classList.add('hidden');
+            }
         }
     });
 
@@ -901,11 +951,14 @@ function initTranslation() {
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             popup.classList.add('hidden');
+            translateState.dismissed = true;
         });
     }
 }
 
 function showTranslatePopup(text) {
+    if (translateState.dismissed) return;
+
     const popup = document.getElementById('translate-popup');
     const originalDiv = document.getElementById('translate-original');
     const resultDiv = document.getElementById('translate-result');
@@ -913,7 +966,7 @@ function showTranslatePopup(text) {
     if (!popup) return;
 
     popup.classList.remove('hidden');
-    originalDiv.textContent = text.length > 150 ? text.slice(0, 150) + '...' : text;
+    originalDiv.textContent = text.length > 100 ? text.slice(0, 100) + '...' : text;
     resultDiv.textContent = 'translating...';
     resultDiv.className = 'translate-result loading';
 
@@ -924,37 +977,72 @@ async function translateText(text, targetLang) {
     const resultDiv = document.getElementById('translate-result');
 
     try {
-        // Using MyMemory API (free, no key required)
         const sourceLang = detectLanguage(text);
+        // Don't translate if same language
+        if (sourceLang === targetLang) {
+            resultDiv.textContent = text;
+            resultDiv.className = 'translate-result';
+            return;
+        }
+
         const pair = `${sourceLang}|${targetLang}`;
-        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${pair}`;
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text.slice(0, 500))}&langpair=${pair}`;
 
         const resp = await fetch(url);
         const data = await resp.json();
 
         if (data.responseStatus === 200 && data.responseData?.translatedText) {
-            resultDiv.textContent = data.responseData.translatedText;
+            let result = data.responseData.translatedText;
+            // Clean up common API artifacts
+            result = result.replace(/MYMEMORY WARNING.*$/i, '').trim();
+            resultDiv.textContent = result || text;
             resultDiv.className = 'translate-result';
         } else {
-            throw new Error(data.responseDetails || 'Translation failed');
+            throw new Error(data.responseDetails || 'failed');
         }
     } catch (e) {
-        resultDiv.textContent = 'translation error: ' + e.message;
+        resultDiv.textContent = 'error: ' + e.message;
         resultDiv.className = 'translate-result error';
     }
 }
 
 function detectLanguage(text) {
-    // Simple language detection based on character ranges
-    if (/[\u4e00-\u9fff]/.test(text)) return 'zh';
+    // Non-Latin scripts
+    if (/[\u4e00-\u9fff]/.test(text)) return 'zh-CN';
     if (/[\u3040-\u309f\u30a0-\u30ff]/.test(text)) return 'ja';
     if (/[\u0600-\u06ff]/.test(text)) return 'ar';
     if (/[\u0400-\u04ff]/.test(text)) return 'ru';
     if (/[\u0370-\u03ff]/.test(text)) return 'el';
     if (/[\u0590-\u05ff]/.test(text)) return 'he';
+    if (/[\uAC00-\uD7AF]/.test(text)) return 'ko';
 
-    // Latin-based - default to auto-detect
-    return 'auto';
+    // Latin scripts - check for language-specific patterns
+    const lower = text.toLowerCase();
+
+    // Portuguese indicators
+    if (/\b(não|são|está|também|você|então|até|já|só|há|às|é)\b/.test(lower)) return 'pt';
+    if (/[ãõ]/.test(lower)) return 'pt';
+
+    // Spanish indicators
+    if (/\b(está|pero|muy|tiene|años|también|puede|después)\b/.test(lower)) return 'es';
+    if (/[ñ¿¡]/.test(lower)) return 'es';
+
+    // French indicators
+    if (/\b(est|sont|dans|avec|pour|cette|être|très|même)\b/.test(lower)) return 'fr';
+    if (/[œæ]/.test(lower) || /\b(qu'|l'|d'|n'|c')\b/.test(lower)) return 'fr';
+
+    // German indicators
+    if (/\b(und|ist|das|die|der|nicht|sich|mit|auch)\b/.test(lower)) return 'de';
+    if (/[äöüß]/.test(lower)) return 'de';
+
+    // Italian indicators
+    if (/\b(che|non|della|sono|questo|anche|essere|stato)\b/.test(lower)) return 'it';
+
+    // English indicators
+    if (/\b(the|and|that|have|for|not|with|you|this|but|from|they|would|there|their)\b/.test(lower)) return 'en';
+
+    // Default
+    return 'en';
 }
 
 // Initialize translation on page load

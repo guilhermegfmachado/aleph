@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aleph - sources</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sources-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+        }
+        .sources-nav a {
+            padding: 0.25rem 0.75rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .sources-nav a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .source-section {
+            margin-bottom: 2rem;
+        }
+        .source-section h2 {
+            font-size: 1.1rem;
+            font-weight: normal;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .source-section h3 {
+            font-size: 0.95rem;
+            font-weight: normal;
+            color: var(--text-bright);
+            margin: 1rem 0 0.5rem;
+        }
+        .source-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        .source-table th,
+        .source-table td {
+            padding: 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        .source-table th {
+            background: var(--bg-light);
+            color: var(--text-bright);
+            font-weight: normal;
+        }
+        .source-table tr:hover {
+            background: var(--bg-light);
+        }
+        .source-table a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .source-table a:hover {
+            text-decoration: underline;
+        }
+        .key-terms {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        .terms-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 0.75rem;
+            margin: 0.5rem 0 1rem;
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+        .terms-box strong {
+            color: var(--text-bright);
+        }
+        .citation-example {
+            font-family: monospace;
+            background: var(--bg-light);
+            padding: 0.15rem 0.4rem;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 600px) {
+            .source-table {
+                font-size: 0.75rem;
+            }
+            .source-table th,
+            .source-table td {
+                padding: 0.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container wide">
+        <header>
+            <h1>aleph</h1>
+            <p class="subtitle">sources reference</p>
+            <nav>
+                <a href="index.html">search</a>
+                <a href="browse.html">browse</a>
+                <a href="upload.html">add</a>
+                <a href="sources.html" class="active">sources</a>
+            </nav>
+        </header>
+
+        <main>
+            <nav class="sources-nav">
+                <a href="#texts">Texts</a>
+                <a href="#osint">OSINT</a>
+                <a href="#international">International</a>
+                <a href="#eu">EU</a>
+                <a href="#uk">UK</a>
+                <a href="#us">US</a>
+                <a href="#asia">Asia</a>
+                <a href="#gulf">Gulf</a>
+                <a href="#documents">Documents</a>
+                <a href="#citations">Citations</a>
+            </nav>
+
+            <!-- TEXTS -->
+            <section id="texts" class="source-section">
+                <h2>1. Open Text Repositories</h2>
+
+                <h3>Classical & Ancient Texts</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Project Gutenberg</td><td><a href="https://www.gutenberg.org" target="_blank">gutenberg.org</a></td><td class="key-terms">Public domain, 60k+ books, ePub, plain text</td></tr>
+                        <tr><td>Internet Archive</td><td><a href="https://archive.org" target="_blank">archive.org</a></td><td class="key-terms">Books, Wayback Machine, borrowing, scans</td></tr>
+                        <tr><td>OpenLibrary</td><td><a href="https://openlibrary.org" target="_blank">openlibrary.org</a></td><td class="key-terms">Borrowable books, metadata, Open Library ID</td></tr>
+                        <tr><td>Perseus Digital Library</td><td><a href="https://www.perseus.tufts.edu" target="_blank">perseus.tufts.edu</a></td><td class="key-terms">Greek, Latin, classical texts, morphology</td></tr>
+                        <tr><td>Loebulus</td><td><a href="https://rfrench.github.io/loebinger/" target="_blank">loebulus</a></td><td class="key-terms">Loeb Classical Library, Greek/Latin parallel</td></tr>
+                        <tr><td>The Latin Library</td><td><a href="https://www.thelatinlibrary.com" target="_blank">thelatinlibrary.com</a></td><td class="key-terms">Latin texts, classical authors</td></tr>
+                        <tr><td>Sacred Texts</td><td><a href="https://www.sacred-texts.com" target="_blank">sacred-texts.com</a></td><td class="key-terms">Religious texts, philosophy, mythology</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Academic & Research</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>arXiv</td><td><a href="https://arxiv.org" target="_blank">arxiv.org</a></td><td class="key-terms">Preprints, physics, math, CS, open access</td></tr>
+                        <tr><td>SSRN</td><td><a href="https://ssrn.com" target="_blank">ssrn.com</a></td><td class="key-terms">Social science, law, economics, working papers</td></tr>
+                        <tr><td>PhilPapers</td><td><a href="https://philpapers.org" target="_blank">philpapers.org</a></td><td class="key-terms">Philosophy papers, bibliography</td></tr>
+                        <tr><td>JSTOR</td><td><a href="https://www.jstor.org" target="_blank">jstor.org</a></td><td class="key-terms">Journals, academic archives (partial free)</td></tr>
+                        <tr><td>Google Scholar</td><td><a href="https://scholar.google.com" target="_blank">scholar.google.com</a></td><td class="key-terms">Citations, case law, papers</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Crypto & Tech</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Bitcoin Whitepaper</td><td><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">bitcoin.org/bitcoin.pdf</a></td><td class="key-terms">Satoshi Nakamoto, cryptocurrency, blockchain</td></tr>
+                        <tr><td>Ethereum Whitepaper</td><td><a href="https://ethereum.org/en/whitepaper/" target="_blank">ethereum.org</a></td><td class="key-terms">Smart contracts, Vitalik Buterin, EVM</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- OSINT -->
+            <section id="osint" class="source-section">
+                <h2>2. OSINT & Research Tools</h2>
+
+                <h3>Web Archives</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Wayback Machine</td><td><a href="https://web.archive.org" target="_blank">web.archive.org</a></td><td class="key-terms">Historical snapshots, deleted pages</td></tr>
+                        <tr><td>Archive.today</td><td><a href="https://archive.is" target="_blank">archive.is</a></td><td class="key-terms">Page snapshots, permanent links</td></tr>
+                        <tr><td>CachedView</td><td><a href="https://cachedview.com" target="_blank">cachedview.com</a></td><td class="key-terms">Google cache, Coral cache</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Image & Media</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>TinEye</td><td><a href="https://tineye.com" target="_blank">tineye.com</a></td><td class="key-terms">Reverse image search, image origin</td></tr>
+                        <tr><td>Google Images</td><td><a href="https://images.google.com" target="_blank">images.google.com</a></td><td class="key-terms">Reverse search, similar images</td></tr>
+                        <tr><td>Yandex Images</td><td><a href="https://yandex.com/images/" target="_blank">yandex.com/images</a></td><td class="key-terms">Reverse search (good for faces)</td></tr>
+                        <tr><td>FotoForensics</td><td><a href="https://fotoforensics.com" target="_blank">fotoforensics.com</a></td><td class="key-terms">Image analysis, ELA, metadata</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Companies & People</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>OpenCorporates</td><td><a href="https://opencorporates.com" target="_blank">opencorporates.com</a></td><td class="key-terms">200M+ companies, global registry</td></tr>
+                        <tr><td>GLEIF</td><td><a href="https://www.gleif.org" target="_blank">gleif.org</a></td><td class="key-terms">LEI lookup, legal entity identifiers</td></tr>
+                        <tr><td>ICANN WHOIS</td><td><a href="https://lookup.icann.org" target="_blank">lookup.icann.org</a></td><td class="key-terms">Domain ownership, registrar info</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Technical OSINT</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Shodan</td><td><a href="https://www.shodan.io" target="_blank">shodan.io</a></td><td class="key-terms">IoT search, exposed devices, ports</td></tr>
+                        <tr><td>Censys</td><td><a href="https://search.censys.io" target="_blank">censys.io</a></td><td class="key-terms">Internet scanning, certificates</td></tr>
+                        <tr><td>Hunter.io</td><td><a href="https://hunter.io" target="_blank">hunter.io</a></td><td class="key-terms">Email finder, domain search</td></tr>
+                        <tr><td>Have I Been Pwned</td><td><a href="https://haveibeenpwned.com" target="_blank">haveibeenpwned.com</a></td><td class="key-terms">Data breach check</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- INTERNATIONAL -->
+            <section id="international" class="source-section">
+                <h2>3. International Organizations</h2>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>UN Documents</td><td><a href="https://documents.un.org" target="_blank">documents.un.org</a></td><td class="key-terms">Resolutions (A/RES/xx/xx), reports</td></tr>
+                        <tr><td>UN Treaties</td><td><a href="https://treaties.un.org" target="_blank">treaties.un.org</a></td><td class="key-terms">International treaties, signatories</td></tr>
+                        <tr><td>ICJ</td><td><a href="https://www.icj-cij.org" target="_blank">icj-cij.org</a></td><td class="key-terms">International Court of Justice</td></tr>
+                        <tr><td>WTO</td><td><a href="https://docs.wto.org" target="_blank">docs.wto.org</a></td><td class="key-terms">Trade agreements, disputes, GATT</td></tr>
+                        <tr><td>WIPO</td><td><a href="https://www.wipo.int" target="_blank">wipo.int</a></td><td class="key-terms">IP treaties, PCT, Madrid Protocol</td></tr>
+                        <tr><td>IMF</td><td><a href="https://www.imf.org/en/Publications" target="_blank">imf.org</a></td><td class="key-terms">Economic reports, Article IV</td></tr>
+                        <tr><td>World Bank</td><td><a href="https://data.worldbank.org" target="_blank">data.worldbank.org</a></td><td class="key-terms">Development data, indicators</td></tr>
+                        <tr><td>BIS</td><td><a href="https://www.bis.org" target="_blank">bis.org</a></td><td class="key-terms">Basel standards, banking</td></tr>
+                        <tr><td>OECD</td><td><a href="https://www.oecd.org" target="_blank">oecd.org</a></td><td class="key-terms">BEPS, transfer pricing, policy</td></tr>
+                        <tr><td>ICC</td><td><a href="https://iccwbo.org" target="_blank">iccwbo.org</a></td><td class="key-terms">Incoterms, arbitration, UCP 600</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- EU -->
+            <section id="eu" class="source-section">
+                <h2>4. European Union</h2>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>EUR-Lex</td><td><a href="https://eur-lex.europa.eu" target="_blank">eur-lex.europa.eu</a></td><td class="key-terms">CELEX, OJ reference, regulations, directives</td></tr>
+                        <tr><td>CURIA</td><td><a href="https://curia.europa.eu" target="_blank">curia.europa.eu</a></td><td class="key-terms">CJEU cases, ECLI citations</td></tr>
+                        <tr><td>ECHR HUDOC</td><td><a href="https://hudoc.echr.coe.int" target="_blank">hudoc.echr.coe.int</a></td><td class="key-terms">Human rights cases</td></tr>
+                        <tr><td>EBA</td><td><a href="https://www.eba.europa.eu" target="_blank">eba.europa.eu</a></td><td class="key-terms">Banking regulations, CRD/CRR</td></tr>
+                        <tr><td>ESMA</td><td><a href="https://www.esma.europa.eu" target="_blank">esma.europa.eu</a></td><td class="key-terms">MiFID II, UCITS, AIFMD</td></tr>
+                        <tr><td>Lexxion</td><td><a href="https://shop.lexxion.eu" target="_blank">shop.lexxion.eu</a></td><td class="key-terms">EU law publications, state aid</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>EU Corporate Terms:</strong> GmbH, AG, SA, SARL, BV, NV, SpA, SRL, Societas Europaea (SE), GDPR, MiFID, UCITS, AIFMD
+                </div>
+            </section>
+
+            <!-- UK -->
+            <section id="uk" class="source-section">
+                <h2>5. United Kingdom</h2>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Legislation.gov.uk</td><td><a href="https://www.legislation.gov.uk" target="_blank">legislation.gov.uk</a></td><td class="key-terms">Acts, SIs, chapter numbers</td></tr>
+                        <tr><td>Companies House</td><td><a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House</a></td><td class="key-terms">Company search, filings, directors</td></tr>
+                        <tr><td>FCA Register</td><td><a href="https://register.fca.org.uk" target="_blank">register.fca.org.uk</a></td><td class="key-terms">Authorized firms, permissions</td></tr>
+                        <tr><td>BAILII</td><td><a href="https://www.bailii.org" target="_blank">bailii.org</a></td><td class="key-terms">Case law, neutral citations</td></tr>
+                        <tr><td>National Archives</td><td><a href="https://www.nationalarchives.gov.uk" target="_blank">nationalarchives.gov.uk</a></td><td class="key-terms">Historical documents</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>UK Corporate Terms:</strong> Ltd, PLC, LLP, Articles of Association, FCA, PRA, Companies Act 2006
+                </div>
+            </section>
+
+            <!-- US -->
+            <section id="us" class="source-section">
+                <h2>6. United States</h2>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Congress.gov</td><td><a href="https://www.congress.gov" target="_blank">congress.gov</a></td><td class="key-terms">Bills, Public Laws, USC</td></tr>
+                        <tr><td>GovInfo</td><td><a href="https://www.govinfo.gov" target="_blank">govinfo.gov</a></td><td class="key-terms">Federal Register, CFR, statutes</td></tr>
+                        <tr><td>SEC EDGAR</td><td><a href="https://www.sec.gov/edgar" target="_blank">sec.gov/edgar</a></td><td class="key-terms">10-K, 10-Q, 8-K, S-1, proxy, CIK</td></tr>
+                        <tr><td>PACER</td><td><a href="https://pacer.uscourts.gov" target="_blank">pacer.uscourts.gov</a></td><td class="key-terms">Federal court records, dockets</td></tr>
+                        <tr><td>CourtListener</td><td><a href="https://www.courtlistener.com" target="_blank">courtlistener.com</a></td><td class="key-terms">Free case law, RECAP</td></tr>
+                        <tr><td>Cornell LII</td><td><a href="https://www.law.cornell.edu" target="_blank">law.cornell.edu</a></td><td class="key-terms">Legal encyclopedia, USC, CFR</td></tr>
+                        <tr><td>Justia</td><td><a href="https://www.justia.com" target="_blank">justia.com</a></td><td class="key-terms">Free case law, statutes</td></tr>
+                        <tr><td>Yale Avalon</td><td><a href="https://avalon.law.yale.edu" target="_blank">avalon.law.yale.edu</a></td><td class="key-terms">Historical legal documents</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>US Corporate Terms:</strong> Inc, Corp, LLC, Delaware, DGCL, 10-K, 10-Q, 8-K, proxy, Reg D, accredited investor
+                </div>
+            </section>
+
+            <!-- ASIA -->
+            <section id="asia" class="source-section">
+                <h2>7. Asia-Pacific</h2>
+
+                <h3>China</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>GSXT</td><td><a href="https://www.gsxt.gov.cn" target="_blank">gsxt.gov.cn</a></td><td class="key-terms">国家企业信用信息公示系统, company registry</td></tr>
+                        <tr><td>CNINFO</td><td><a href="http://www.cninfo.com.cn" target="_blank">cninfo.com.cn</a></td><td class="key-terms">Listed company filings, 巨潮资讯</td></tr>
+                        <tr><td>PKULaw</td><td><a href="https://www.pkulaw.com" target="_blank">pkulaw.com</a></td><td class="key-terms">Chinese law database, 北大法宝</td></tr>
+                        <tr><td>Court Judgments</td><td><a href="https://wenshu.court.gov.cn" target="_blank">wenshu.court.gov.cn</a></td><td class="key-terms">中国裁判文书网, case law</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>China Terms:</strong> 有限责任公司 (LLC), 股份有限公司 (JSC), VIE structure, WFOE, A/B/H-shares, 民/刑/行
+                </div>
+
+                <h3>Japan</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>e-Gov</td><td><a href="https://elaws.e-gov.go.jp" target="_blank">elaws.e-gov.go.jp</a></td><td class="key-terms">Japanese laws, 電子政府</td></tr>
+                        <tr><td>EDINET</td><td><a href="https://disclosure.edinet-fsa.go.jp" target="_blank">edinet-fsa.go.jp</a></td><td class="key-terms">Listed company filings</td></tr>
+                        <tr><td>JPX</td><td><a href="https://www.jpx.co.jp" target="_blank">jpx.co.jp</a></td><td class="key-terms">TSE, stock exchange</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>Japan Terms:</strong> 株式会社 (KK), 合同会社 (GK), 定款 (articles), 取締役会 (board), 令和X年法律第Y号
+                </div>
+
+                <h3>Korea</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Korean Law</td><td><a href="https://www.law.go.kr" target="_blank">law.go.kr</a></td><td class="key-terms">법제처, statutes</td></tr>
+                        <tr><td>DART</td><td><a href="https://dart.fss.or.kr" target="_blank">dart.fss.or.kr</a></td><td class="key-terms">Company filings, 전자공시</td></tr>
+                        <tr><td>KRX</td><td><a href="http://www.krx.co.kr" target="_blank">krx.co.kr</a></td><td class="key-terms">KOSPI, KOSDAQ</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>Korea Terms:</strong> 주식회사, 유한회사, 재벌 (chaebol), KRX, KOSPI
+                </div>
+
+                <h3>Singapore & Hong Kong</h3>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>SG Statutes</td><td><a href="https://sso.agc.gov.sg" target="_blank">sso.agc.gov.sg</a></td><td class="key-terms">Singapore Acts</td></tr>
+                        <tr><td>ACRA BizFile</td><td><a href="https://www.bizfile.gov.sg" target="_blank">bizfile.gov.sg</a></td><td class="key-terms">Singapore companies, UEN</td></tr>
+                        <tr><td>HK e-Legislation</td><td><a href="https://www.elegislation.gov.hk" target="_blank">elegislation.gov.hk</a></td><td class="key-terms">Hong Kong Ordinances</td></tr>
+                        <tr><td>ICRIS</td><td><a href="https://www.icris.cr.gov.hk" target="_blank">icris.cr.gov.hk</a></td><td class="key-terms">HK company search</td></tr>
+                        <tr><td>HKEX</td><td><a href="https://www.hkex.com.hk" target="_blank">hkex.com.hk</a></td><td class="key-terms">HK stock exchange</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>SG/HK Terms:</strong> Pte Ltd, Limited, VCC, MAS, SFC, HKEX, Main Board, GEM
+                </div>
+
+                <h3>Other Asia</h3>
+                <table class="source-table">
+                    <thead><tr><th>Country</th><th>Registry</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>Indonesia</td><td><a href="https://ahu.go.id" target="_blank">ahu.go.id</a></td><td class="key-terms">PT, OJK</td></tr>
+                        <tr><td>Malaysia</td><td><a href="https://www.ssm.com.my" target="_blank">ssm.com.my</a></td><td class="key-terms">Berhad, Sdn Bhd, SSM</td></tr>
+                        <tr><td>Thailand</td><td><a href="https://www.dbd.go.th" target="_blank">dbd.go.th</a></td><td class="key-terms">บริษัท, DBD</td></tr>
+                        <tr><td>Vietnam</td><td><a href="https://dangkykinhdoanh.gov.vn" target="_blank">dangkykinhdoanh.gov.vn</a></td><td class="key-terms">TNHH, Cổ phần</td></tr>
+                        <tr><td>India</td><td><a href="https://www.mca.gov.in" target="_blank">mca.gov.in</a></td><td class="key-terms">Pvt Ltd, Ltd, MCA21, CIN</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- GULF -->
+            <section id="gulf" class="source-section">
+                <h2>8. Middle East & Gulf</h2>
+                <table class="source-table">
+                    <thead><tr><th>Source</th><th>Link</th><th>Key Terms</th></tr></thead>
+                    <tbody>
+                        <tr><td>UAE Economy</td><td><a href="https://www.economy.gov.ae" target="_blank">economy.gov.ae</a></td><td class="key-terms">Federal licensing</td></tr>
+                        <tr><td>DIFC</td><td><a href="https://www.difc.ae" target="_blank">difc.ae</a></td><td class="key-terms">Dubai financial center, DFSA</td></tr>
+                        <tr><td>ADGM</td><td><a href="https://www.adgm.com" target="_blank">adgm.com</a></td><td class="key-terms">Abu Dhabi financial center, FSRA</td></tr>
+                        <tr><td>DMCC</td><td><a href="https://www.dmcc.ae" target="_blank">dmcc.ae</a></td><td class="key-terms">Dubai commodities, freezone</td></tr>
+                        <tr><td>DED Dubai</td><td><a href="https://www.dubaided.gov.ae" target="_blank">dubaided.gov.ae</a></td><td class="key-terms">Trade licenses, mainland</td></tr>
+                        <tr><td>Tadawul</td><td><a href="https://www.saudiexchange.sa" target="_blank">saudiexchange.sa</a></td><td class="key-terms">Saudi stock exchange</td></tr>
+                        <tr><td>Saudi MOC</td><td><a href="https://mc.gov.sa" target="_blank">mc.gov.sa</a></td><td class="key-terms">Ministry of Commerce</td></tr>
+                        <tr><td>QSE</td><td><a href="https://www.qe.com.qa" target="_blank">qe.com.qa</a></td><td class="key-terms">Qatar Stock Exchange</td></tr>
+                        <tr><td>Bahrain Sijilat</td><td><a href="https://www.sijilat.bh" target="_blank">sijilat.bh</a></td><td class="key-terms">Bahrain company registry</td></tr>
+                    </tbody>
+                </table>
+                <div class="terms-box">
+                    <strong>Gulf Terms:</strong> LLC (ذ.م.م), JSC, mainland vs freezone, DIFC, ADGM, Saudization/Nitaqat, Vision 2030
+                </div>
+            </section>
+
+            <!-- DOCUMENTS -->
+            <section id="documents" class="source-section">
+                <h2>9. Document Classification</h2>
+
+                <h3>SEC & Financial Filings</h3>
+                <table class="source-table">
+                    <thead><tr><th>Document</th><th>Purpose</th><th>Key Fields</th></tr></thead>
+                    <tbody>
+                        <tr><td>10-K</td><td>Annual report</td><td class="key-terms">Revenue, assets, risk factors, auditor</td></tr>
+                        <tr><td>10-Q</td><td>Quarterly report</td><td class="key-terms">Quarterly financials, MD&A</td></tr>
+                        <tr><td>8-K</td><td>Current events</td><td class="key-terms">Material events, exhibits</td></tr>
+                        <tr><td>S-1</td><td>IPO registration</td><td class="key-terms">Use of proceeds, cap table, risks</td></tr>
+                        <tr><td>DEF 14A</td><td>Proxy statement</td><td class="key-terms">Executive comp, board, proposals</td></tr>
+                        <tr><td>13F</td><td>Holdings report</td><td class="key-terms">Institutional positions</td></tr>
+                        <tr><td>SC 13D/G</td><td>Ownership disclosure</td><td class="key-terms">Beneficial ownership >5%</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Contract Types</h3>
+                <table class="source-table">
+                    <thead><tr><th>Type</th><th>Key Clauses</th><th>Extract Fields</th></tr></thead>
+                    <tbody>
+                        <tr><td>NDA</td><td>Confidentiality, term, exclusions</td><td class="key-terms">Parties, effective date, duration</td></tr>
+                        <tr><td>MSA</td><td>Services, SLA, liability</td><td class="key-terms">Governing law, term, renewal</td></tr>
+                        <tr><td>License</td><td>Grant, restrictions, royalties</td><td class="key-terms">Scope, territory, fees</td></tr>
+                        <tr><td>Employment</td><td>Duties, compensation, termination</td><td class="key-terms">Start date, salary, equity, non-compete</td></tr>
+                        <tr><td>Lease</td><td>Premises, rent, term</td><td class="key-terms">Address, rent, CAM, options</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Corporate Documents</h3>
+                <table class="source-table">
+                    <thead><tr><th>Type</th><th>Purpose</th><th>Extract Fields</th></tr></thead>
+                    <tbody>
+                        <tr><td>Articles/Charter</td><td>Formation document</td><td class="key-terms">Jurisdiction, share classes, purpose</td></tr>
+                        <tr><td>Bylaws</td><td>Governance rules</td><td class="key-terms">Board size, quorum, officers</td></tr>
+                        <tr><td>Board Resolution</td><td>Board decisions</td><td class="key-terms">Date, matter, vote</td></tr>
+                        <tr><td>Shareholders Agreement</td><td>Investor rights</td><td class="key-terms">Drag/tag, ROFR, anti-dilution</td></tr>
+                        <tr><td>Stock Purchase Agreement</td><td>Equity sale</td><td class="key-terms">Price, reps, conditions</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>M&A Documents</h3>
+                <table class="source-table">
+                    <thead><tr><th>Type</th><th>Purpose</th><th>Extract Fields</th></tr></thead>
+                    <tbody>
+                        <tr><td>LOI/Term Sheet</td><td>Non-binding terms</td><td class="key-terms">Price, structure, exclusivity</td></tr>
+                        <tr><td>Merger Agreement</td><td>Definitive deal</td><td class="key-terms">Consideration, reps, MAC</td></tr>
+                        <tr><td>Fairness Opinion</td><td>Valuation support</td><td class="key-terms">Range, methodology</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>ESG Frameworks</h3>
+                <table class="source-table">
+                    <thead><tr><th>Framework</th><th>Focus</th><th>Key Metrics</th></tr></thead>
+                    <tbody>
+                        <tr><td>GRI</td><td>Comprehensive sustainability</td><td class="key-terms">Material topics, stakeholders</td></tr>
+                        <tr><td>SASB</td><td>Industry-specific</td><td class="key-terms">Sector metrics, materiality</td></tr>
+                        <tr><td>TCFD</td><td>Climate risk</td><td class="key-terms">Scope 1/2/3, scenarios</td></tr>
+                        <tr><td>CDP</td><td>Carbon disclosure</td><td class="key-terms">Emissions data, targets</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- CITATIONS -->
+            <section id="citations" class="source-section">
+                <h2>10. Legal Citation Formats</h2>
+                <table class="source-table">
+                    <thead><tr><th>Jurisdiction</th><th>Example</th><th>Pattern</th></tr></thead>
+                    <tbody>
+                        <tr><td>EU (CELEX)</td><td><span class="citation-example">32016R0679</span></td><td class="key-terms">[sector][year][type][number]</td></tr>
+                        <tr><td>EU (OJ)</td><td><span class="citation-example">OJ L 119, 4.5.2016, p. 1</span></td><td class="key-terms">OJ [series] [number], [date], p. [page]</td></tr>
+                        <tr><td>UK Neutral</td><td><span class="citation-example">[2024] UKSC 1</span></td><td class="key-terms">[year] [court] [number]</td></tr>
+                        <tr><td>UK Statute</td><td><span class="citation-example">Companies Act 2006, c. 46</span></td><td class="key-terms">[Name] Act [year], c. [chapter]</td></tr>
+                        <tr><td>US Code</td><td><span class="citation-example">15 U.S.C. § 78a</span></td><td class="key-terms">[title] U.S.C. § [section]</td></tr>
+                        <tr><td>US CFR</td><td><span class="citation-example">17 C.F.R. § 240.10b-5</span></td><td class="key-terms">[title] C.F.R. § [section]</td></tr>
+                        <tr><td>US Case</td><td><span class="citation-example">410 U.S. 113 (1973)</span></td><td class="key-terms">[volume] U.S. [page] ([year])</td></tr>
+                        <tr><td>France</td><td><span class="citation-example">Loi n° 2024-123</span></td><td class="key-terms">Loi n° [year]-[number]</td></tr>
+                        <tr><td>Germany</td><td><span class="citation-example">§ 433 BGB</span></td><td class="key-terms">§ [section] [code]</td></tr>
+                        <tr><td>Germany (BGBl)</td><td><span class="citation-example">BGBl. I S. 123</span></td><td class="key-terms">BGBl. [part] S. [page]</td></tr>
+                        <tr><td>China</td><td><span class="citation-example">(2024)最高法民终123号</span></td><td class="key-terms">([year])[court][type][number]号</td></tr>
+                        <tr><td>Japan</td><td><span class="citation-example">令和6年法律第1号</span></td><td class="key-terms">[era][year]年法律第[number]号</td></tr>
+                        <tr><td>Brazil</td><td><span class="citation-example">Lei nº 14.123/2024</span></td><td class="key-terms">Lei nº [number]/[year]</td></tr>
+                        <tr><td>Russia</td><td><span class="citation-example">ФЗ № 123-ФЗ</span></td><td class="key-terms">ФЗ № [number]-ФЗ</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer></footer>
+    </div>
+</body>
+</html>

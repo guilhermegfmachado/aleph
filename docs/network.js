@@ -3,8 +3,8 @@
 
 const networkData = {
     nodes: [
-        // Root
-        { id: "root", label: "א", group: "root", level: 0 },
+        // Root - fixed in center
+        { id: "root", label: "א", group: "root", level: 0, fixed: true },
 
         // Main categories (level 1)
         { id: "savoir", label: "Savoir", group: "category", level: 1 },
@@ -13,9 +13,8 @@ const networkData = {
         { id: "pratique", label: "Pratique", group: "category", level: 1 },
         { id: "juridique", label: "Juridique", group: "category", level: 1 },
 
-        // Savoir children (level 2)
+        // Savoir children (level 2) - now just Textes and Langues
         { id: "textes", label: "Textes & Archives", group: "section", level: 2, parent: "savoir", href: "#textes" },
-        { id: "recherche", label: "Recherche & OSINT", group: "section", level: 2, parent: "savoir", href: "#recherche" },
         { id: "langues", label: "Langues", group: "section", level: 2, parent: "savoir", href: "#langues" },
 
         // Culture children
@@ -23,9 +22,9 @@ const networkData = {
         { id: "musique", label: "Musique", group: "section", level: 2, parent: "culture", href: "#musique" },
         { id: "sciences-humaines", label: "Sciences Humaines", group: "section", level: 2, parent: "culture", href: "#sciences-humaines" },
 
-        // Industrie children
+        // Industrie children - now includes OSINT/Recherche
         { id: "economie", label: "Économie & Finance", group: "section", level: 2, parent: "industrie", href: "#economie" },
-        { id: "informatique", label: "Informatique", group: "section", level: 2, parent: "industrie", href: "#informatique" },
+        { id: "informatique", label: "Informatique & OSINT", group: "section", level: 2, parent: "industrie", href: "#informatique" },
         { id: "metiers", label: "Métiers & Artisanat", group: "section", level: 2, parent: "industrie", href: "#metiers" },
 
         // Pratique children
@@ -47,7 +46,6 @@ const networkData = {
 
         // Savoir to children
         { source: "savoir", target: "textes" },
-        { source: "savoir", target: "recherche" },
         { source: "savoir", target: "langues" },
 
         // Culture to children
@@ -71,10 +69,10 @@ const networkData = {
 
         // Cross-connections (related topics)
         { source: "economie", target: "informatique", type: "related" },
-        { source: "recherche", target: "economie", type: "related" },
         { source: "langues", target: "informatique", type: "related" },
         { source: "arts", target: "textes", type: "related" },
         { source: "sciences-humaines", target: "textes", type: "related" },
+        { source: "informatique", target: "textes", type: "related" },
     ]
 };
 
@@ -138,6 +136,14 @@ function initNetwork(containerId) {
     const nodeSize = d3.scaleOrdinal()
         .domain(["root", "category", "section"])
         .range([20, 14, 10]);
+
+    // Fix root node in center
+    networkData.nodes.forEach(n => {
+        if (n.fixed) {
+            n.fx = width / 2;
+            n.fy = height / 2;
+        }
+    });
 
     // Create force simulation - gentler forces for smoother movement
     const simulation = d3.forceSimulation(networkData.nodes)
@@ -209,8 +215,17 @@ function initNetwork(containerId) {
         hideResourcesPanel();
     });
 
-    // Simulation tick
+    // Simulation tick with bounding box
+    const padding = 50;
     simulation.on("tick", () => {
+        // Keep nodes within bounds
+        networkData.nodes.forEach(d => {
+            if (!d.fixed) {
+                d.x = Math.max(padding, Math.min(width - padding, d.x));
+                d.y = Math.max(padding, Math.min(height - padding, d.y));
+            }
+        });
+
         link
             .attr("x1", d => d.source.x)
             .attr("y1", d => d.source.y)
@@ -222,6 +237,8 @@ function initNetwork(containerId) {
 
     // Drag functions
     function dragstarted(event) {
+        // Don't allow dragging fixed nodes (root)
+        if (event.subject.fixed) return;
         if (!event.active) simulation.alphaTarget(0.1).restart();
         event.subject.fx = event.subject.x;
         event.subject.fy = event.subject.y;
@@ -229,11 +246,14 @@ function initNetwork(containerId) {
     }
 
     function dragged(event) {
-        event.subject.fx = event.x;
-        event.subject.fy = event.y;
+        if (event.subject.fixed) return;
+        // Keep within bounds while dragging
+        event.subject.fx = Math.max(padding, Math.min(width - padding, event.x));
+        event.subject.fy = Math.max(padding, Math.min(height - padding, event.y));
     }
 
     function dragended(event) {
+        if (event.subject.fixed) return;
         if (!event.active) simulation.alphaTarget(0);
         event.subject.fx = null;
         event.subject.fy = null;

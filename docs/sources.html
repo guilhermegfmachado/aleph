@@ -6,7 +6,43 @@
     <title>aleph - sources</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
+        /* View Toggle */
+        .view-controls {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+        }
+        .view-toggle-btn {
+            padding: 0.5rem 1rem;
+            font-family: inherit;
+            font-size: 0.85rem;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .view-toggle-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Network Container */
+        #network-container {
+            width: 100%;
+            min-height: 500px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+        #network-container.hidden {
+            display: none;
+        }
+        #list-container.hidden {
+            display: none;
+        }
+
         /* Tree Navigation */
         .sources-tree {
             display: flex;
@@ -193,6 +229,16 @@
         </header>
 
         <main>
+            <!-- View Toggle -->
+            <div class="view-controls">
+                <button id="view-toggle-btn" class="view-toggle-btn" onclick="toggleNetworkView()">vue réseau</button>
+            </div>
+
+            <!-- Network View -->
+            <div id="network-container" class="hidden"></div>
+
+            <!-- List View -->
+            <div id="list-container">
             <!-- Tree Navigation -->
             <nav class="sources-tree">
                 <details class="tree-category" open>
@@ -1089,12 +1135,15 @@
                 </div>
                 </div>
             </details>
+            </div><!-- end list-container -->
 
         </main>
 
         <footer>
             <p>in girum imus nocte et consumimur igni</p>
         </footer>
+
+    <script src="network.js"></script>
     </div>
 </body>
 </html>

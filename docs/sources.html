@@ -213,6 +213,77 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Resources Panel (Network View Popup) */
+        .resources-panel {
+            position: absolute;
+            width: 200px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 100;
+            font-size: 0.85rem;
+        }
+        .resources-panel.hidden {
+            display: none;
+        }
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0.75rem;
+            background: var(--bg-light);
+            border-bottom: 1px solid var(--border);
+        }
+        .panel-title {
+            font-weight: 600;
+            color: var(--accent);
+        }
+        .panel-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 0;
+            line-height: 1;
+        }
+        .panel-close:hover {
+            color: var(--accent);
+        }
+        .panel-content {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        .panel-resource {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }
+        .panel-resource:last-child {
+            border-bottom: none;
+        }
+        .panel-resource:hover {
+            background: var(--bg-light);
+            color: var(--accent);
+        }
+        .panel-resource .resource-title {
+            display: block;
+        }
+        .panel-more {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            text-align: center;
+            color: var(--accent);
+            text-decoration: none;
+            background: var(--bg-light);
+            font-size: 0.8rem;
+        }
+        .panel-more:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>

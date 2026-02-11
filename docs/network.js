@@ -36,39 +36,6 @@ const networkData = {
         // Juridique children
         { id: "international", label: "Droit International", group: "section", level: 2, parent: "juridique", href: "#international" },
         { id: "regional", label: "Ressources Régionales", group: "section", level: 2, parent: "juridique", href: "#regional" },
-
-        // Level 3 - Subsections (examples)
-        // Textes subsections
-        { id: "classiques", label: "Classiques", group: "subsection", level: 3, parent: "textes" },
-        { id: "bibliotheques", label: "Bibliothèques", group: "subsection", level: 3, parent: "textes" },
-        { id: "manuscrits", label: "Manuscrits", group: "subsection", level: 3, parent: "textes" },
-        { id: "litterature", label: "Littérature", group: "subsection", level: 3, parent: "textes" },
-
-        // Économie subsections
-        { id: "data-eco", label: "Données", group: "subsection", level: 3, parent: "economie" },
-        { id: "crypto", label: "Crypto & DeFi", group: "subsection", level: 3, parent: "economie" },
-        { id: "commodites", label: "Commodités", group: "subsection", level: 3, parent: "economie" },
-        { id: "vc", label: "VC & PE", group: "subsection", level: 3, parent: "economie" },
-
-        // Informatique subsections
-        { id: "hacker", label: "Culture Hacker", group: "subsection", level: 3, parent: "informatique" },
-        { id: "deep-tech", label: "Deep Technical", group: "subsection", level: 3, parent: "informatique" },
-        { id: "math-theory", label: "Math & Théorie", group: "subsection", level: 3, parent: "informatique" },
-
-        // Design subsections
-        { id: "japan-design", label: "Design Japonais", group: "subsection", level: 3, parent: "design" },
-        { id: "euro-design", label: "Design Européen", group: "subsection", level: 3, parent: "design" },
-        { id: "vintage", label: "Vintage", group: "subsection", level: 3, parent: "design" },
-        { id: "velos-instruments", label: "Vélos & Instruments", group: "subsection", level: 3, parent: "design" },
-
-        // Arts subsections
-        { id: "musees", label: "Musées", group: "subsection", level: 3, parent: "arts" },
-        { id: "contemporain", label: "Contemporain", group: "subsection", level: 3, parent: "arts" },
-
-        // Sciences humaines subsections
-        { id: "psycho", label: "Psychologie", group: "subsection", level: 3, parent: "sciences-humaines" },
-        { id: "anthropo", label: "Anthropologie", group: "subsection", level: 3, parent: "sciences-humaines" },
-        { id: "politique", label: "Archives Politiques", group: "subsection", level: 3, parent: "sciences-humaines" },
     ],
     links: [
         // Root to categories
@@ -102,53 +69,46 @@ const networkData = {
         { source: "juridique", target: "international" },
         { source: "juridique", target: "regional" },
 
-        // Textes to subsections
-        { source: "textes", target: "classiques" },
-        { source: "textes", target: "bibliotheques" },
-        { source: "textes", target: "manuscrits" },
-        { source: "textes", target: "litterature" },
-
-        // Économie to subsections
-        { source: "economie", target: "data-eco" },
-        { source: "economie", target: "crypto" },
-        { source: "economie", target: "commodites" },
-        { source: "economie", target: "vc" },
-
-        // Informatique to subsections
-        { source: "informatique", target: "hacker" },
-        { source: "informatique", target: "deep-tech" },
-        { source: "informatique", target: "math-theory" },
-
-        // Design to subsections
-        { source: "design", target: "japan-design" },
-        { source: "design", target: "euro-design" },
-        { source: "design", target: "vintage" },
-        { source: "design", target: "velos-instruments" },
-
-        // Arts to subsections
-        { source: "arts", target: "musees" },
-        { source: "arts", target: "contemporain" },
-
-        // Sciences humaines to subsections
-        { source: "sciences-humaines", target: "psycho" },
-        { source: "sciences-humaines", target: "anthropo" },
-        { source: "sciences-humaines", target: "politique" },
-
         // Cross-connections (related topics)
-        { source: "crypto", target: "informatique", type: "related" },
-        { source: "data-eco", target: "recherche", type: "related" },
-        { source: "math-theory", target: "langues", type: "related" },
-        { source: "manuscrits", target: "arts", type: "related" },
-        { source: "politique", target: "textes", type: "related" },
+        { source: "economie", target: "informatique", type: "related" },
+        { source: "recherche", target: "economie", type: "related" },
+        { source: "langues", target: "informatique", type: "related" },
+        { source: "arts", target: "textes", type: "related" },
+        { source: "sciences-humaines", target: "textes", type: "related" },
     ]
 };
+
+// Store resources by section for popup display
+const sectionResources = {};
+
+function extractResourcesFromDOM() {
+    document.querySelectorAll('.source-section').forEach(section => {
+        const id = section.id;
+        const resources = [];
+        section.querySelectorAll('.resource').forEach(res => {
+            const nameEl = res.querySelector('.resource-name a');
+            const descEl = res.querySelector('.resource-desc');
+            if (nameEl) {
+                resources.push({
+                    name: nameEl.textContent,
+                    url: nameEl.href,
+                    desc: descEl ? descEl.textContent : ''
+                });
+            }
+        });
+        sectionResources[id] = resources;
+    });
+}
 
 function initNetwork(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
+    // Extract resources from DOM
+    extractResourcesFromDOM();
+
     const width = container.clientWidth;
-    const height = Math.max(500, window.innerHeight - 200);
+    const height = Math.max(600, window.innerHeight - 250);
 
     // Clear previous
     container.innerHTML = '';
@@ -157,43 +117,39 @@ function initNetwork(containerId) {
     const svg = d3.select(`#${containerId}`)
         .append("svg")
         .attr("width", width)
-        .attr("height", height)
-        .attr("viewBox", [0, 0, width, height]);
+        .attr("height", height);
 
     // Add zoom behavior
     const g = svg.append("g");
 
     svg.call(d3.zoom()
         .extent([[0, 0], [width, height]])
-        .scaleExtent([0.3, 4])
+        .scaleExtent([0.5, 3])
         .on("zoom", (event) => {
             g.attr("transform", event.transform);
         }));
 
     // Color scale
     const color = d3.scaleOrdinal()
-        .domain(["root", "category", "section", "subsection"])
-        .range(["#c9a227", "#6b4a04", "#8b6914", "#a08050"]);
+        .domain(["root", "category", "section"])
+        .range(["#6b4a04", "#8b6914", "#a08050"]);
 
     // Node size scale
     const nodeSize = d3.scaleOrdinal()
-        .domain(["root", "category", "section", "subsection"])
-        .range([25, 18, 12, 8]);
+        .domain(["root", "category", "section"])
+        .range([20, 14, 10]);
 
-    // Create force simulation
+    // Create force simulation - gentler forces for smoother movement
     const simulation = d3.forceSimulation(networkData.nodes)
         .force("link", d3.forceLink(networkData.links)
             .id(d => d.id)
-            .distance(d => {
-                if (d.type === "related") return 150;
-                const sourceLevel = d.source.level || 0;
-                return 60 + (sourceLevel * 20);
-            })
-            .strength(d => d.type === "related" ? 0.1 : 0.8))
-        .force("charge", d3.forceManyBody()
-            .strength(d => -200 - (d.level * 50)))
+            .distance(d => d.type === "related" ? 180 : 100)
+            .strength(d => d.type === "related" ? 0.05 : 0.4))
+        .force("charge", d3.forceManyBody().strength(-300))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collision", d3.forceCollide().radius(d => nodeSize(d.group) + 10));
+        .force("collision", d3.forceCollide().radius(d => nodeSize(d.group) + 20))
+        .alphaDecay(0.02)
+        .velocityDecay(0.4);
 
     // Draw links
     const link = g.append("g")
@@ -201,10 +157,10 @@ function initNetwork(containerId) {
         .selectAll("line")
         .data(networkData.links)
         .join("line")
-        .attr("stroke", d => d.type === "related" ? "#ddd" : "#999")
-        .attr("stroke-opacity", d => d.type === "related" ? 0.3 : 0.6)
-        .attr("stroke-width", d => d.type === "related" ? 1 : 1.5)
-        .attr("stroke-dasharray", d => d.type === "related" ? "3,3" : "none");
+        .attr("stroke", d => d.type === "related" ? "#ddd" : "#bbb")
+        .attr("stroke-opacity", d => d.type === "related" ? 0.4 : 0.6)
+        .attr("stroke-width", 1)
+        .attr("stroke-dasharray", d => d.type === "related" ? "4,4" : "none");
 
     // Draw nodes
     const node = g.append("g")
@@ -213,7 +169,7 @@ function initNetwork(containerId) {
         .data(networkData.nodes)
         .join("g")
         .attr("class", "node")
-        .style("cursor", d => d.href ? "pointer" : "grab")
+        .style("cursor", "pointer")
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
@@ -224,59 +180,33 @@ function initNetwork(containerId) {
         .attr("r", d => nodeSize(d.group))
         .attr("fill", d => color(d.group))
         .attr("stroke", "#fff")
-        .attr("stroke-width", d => d.group === "root" ? 3 : 1.5);
+        .attr("stroke-width", 1.5);
 
     // Node labels
     node.append("text")
         .text(d => d.label)
-        .attr("x", d => nodeSize(d.group) + 5)
+        .attr("x", d => nodeSize(d.group) + 6)
         .attr("y", 4)
-        .attr("font-size", d => d.group === "root" ? "14px" : d.group === "category" ? "12px" : "10px")
-        .attr("font-weight", d => d.level <= 1 ? "bold" : "normal")
+        .attr("font-size", d => d.group === "root" ? "14px" : d.group === "category" ? "11px" : "10px")
+        .attr("font-weight", d => d.level <= 1 ? "600" : "normal")
         .attr("fill", "#2a2a2a")
         .attr("font-family", "'IBM Plex Mono', monospace");
 
-    // Click handler for navigation
+    // Click handler - show resources panel
     node.on("click", (event, d) => {
-        if (d.href) {
-            // Scroll to section
-            const element = document.querySelector(d.href);
-            if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-                element.setAttribute("open", "");
-            }
+        event.stopPropagation();
+        if (d.href && sectionResources[d.id]) {
+            showResourcesPanel(d, sectionResources[d.id], event);
+        } else if (d.group === "category") {
+            // For categories, show children sections
+            const children = networkData.nodes.filter(n => n.parent === d.id);
+            showCategoryPanel(d, children, event);
         }
     });
 
-    // Hover effects
-    node.on("mouseenter", function(event, d) {
-        d3.select(this).select("circle")
-            .transition()
-            .duration(200)
-            .attr("r", nodeSize(d.group) * 1.3);
-
-        // Highlight connected links
-        link.attr("stroke-opacity", l =>
-            (l.source.id === d.id || l.target.id === d.id) ? 1 : 0.1);
-
-        // Highlight connected nodes
-        node.attr("opacity", n => {
-            if (n.id === d.id) return 1;
-            const connected = networkData.links.some(l =>
-                (l.source.id === d.id && l.target.id === n.id) ||
-                (l.target.id === d.id && l.source.id === n.id));
-            return connected ? 1 : 0.3;
-        });
-    });
-
-    node.on("mouseleave", function(event, d) {
-        d3.select(this).select("circle")
-            .transition()
-            .duration(200)
-            .attr("r", nodeSize(d.group));
-
-        link.attr("stroke-opacity", l => l.type === "related" ? 0.3 : 0.6);
-        node.attr("opacity", 1);
+    // Close panel on background click
+    svg.on("click", () => {
+        hideResourcesPanel();
     });
 
     // Simulation tick
@@ -292,9 +222,10 @@ function initNetwork(containerId) {
 
     // Drag functions
     function dragstarted(event) {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
+        if (!event.active) simulation.alphaTarget(0.1).restart();
         event.subject.fx = event.subject.x;
         event.subject.fy = event.subject.y;
+        hideResourcesPanel();
     }
 
     function dragged(event) {
@@ -308,14 +239,68 @@ function initNetwork(containerId) {
         event.subject.fy = null;
     }
 
-    // Handle resize
-    window.addEventListener("resize", () => {
-        const newWidth = container.clientWidth;
-        const newHeight = Math.max(500, window.innerHeight - 200);
-        svg.attr("width", newWidth).attr("height", newHeight);
-        simulation.force("center", d3.forceCenter(newWidth / 2, newHeight / 2));
-        simulation.alpha(0.3).restart();
-    });
+    // Create resources panel
+    createResourcesPanel(container);
+}
+
+function createResourcesPanel(container) {
+    const panel = document.createElement('div');
+    panel.id = 'resources-panel';
+    panel.className = 'resources-panel hidden';
+    panel.innerHTML = `
+        <div class="panel-header">
+            <span class="panel-title"></span>
+            <button class="panel-close" onclick="hideResourcesPanel()">×</button>
+        </div>
+        <div class="panel-content"></div>
+    `;
+    container.appendChild(panel);
+}
+
+function showResourcesPanel(node, resources, event) {
+    const panel = document.getElementById('resources-panel');
+    if (!panel) return;
+
+    panel.querySelector('.panel-title').textContent = node.label;
+
+    const content = panel.querySelector('.panel-content');
+    content.innerHTML = resources.slice(0, 8).map(r => `
+        <a href="${r.url}" target="_blank" class="panel-resource">
+            <span class="resource-title">${r.name}</span>
+        </a>
+    `).join('') + (resources.length > 8 ? `<a href="${node.href}" class="panel-more">voir tout →</a>` : '');
+
+    panel.classList.remove('hidden');
+
+    // Position panel
+    const rect = event.target.closest('svg').getBoundingClientRect();
+    panel.style.left = Math.min(event.clientX - rect.left + 10, rect.width - 220) + 'px';
+    panel.style.top = Math.min(event.clientY - rect.top + 10, rect.height - 200) + 'px';
+}
+
+function showCategoryPanel(node, children, event) {
+    const panel = document.getElementById('resources-panel');
+    if (!panel) return;
+
+    panel.querySelector('.panel-title').textContent = node.label;
+
+    const content = panel.querySelector('.panel-content');
+    content.innerHTML = children.map(c => `
+        <a href="${c.href || '#'}" class="panel-resource">
+            <span class="resource-title">${c.label}</span>
+        </a>
+    `).join('');
+
+    panel.classList.remove('hidden');
+
+    const rect = event.target.closest('svg').getBoundingClientRect();
+    panel.style.left = Math.min(event.clientX - rect.left + 10, rect.width - 220) + 'px';
+    panel.style.top = Math.min(event.clientY - rect.top + 10, rect.height - 200) + 'px';
+}
+
+function hideResourcesPanel() {
+    const panel = document.getElementById('resources-panel');
+    if (panel) panel.classList.add('hidden');
 }
 
 // Toggle between network and list view
@@ -333,5 +318,6 @@ function toggleNetworkView() {
         networkContainer.classList.add("hidden");
         listContainer.classList.remove("hidden");
         toggleBtn.textContent = "vue réseau";
+        hideResourcesPanel();
     }
 }

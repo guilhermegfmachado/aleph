@@ -121,10 +121,10 @@ function updateNetwork() {
     };
 
     const sizes = {
-        root: 26,
-        category: 18,
-        section: 12,
-        resource: 5
+        root: 30,
+        category: 22,
+        section: 16,
+        resource: 8
     };
 
     // Stop old simulation
@@ -151,8 +151,9 @@ function updateNetwork() {
         .force("charge", d3.forceManyBody()
             .strength(d => d.group === "resource" ? -20 : -150))
         .force("center", d3.forceCenter(width / 2, height / 2).strength(0.05))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 5))
-        .alphaDecay(0.03);
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 8))
+        .alphaDecay(0.008)
+        .velocityDecay(0.6);
 
     // Clear and redraw
     g.selectAll("*").remove();

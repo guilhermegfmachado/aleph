@@ -352,6 +352,7 @@
             <div class="view-controls">
                 <div class="controls-left">
                     <input type="text" id="search-input" class="search-input" placeholder="rechercher..." oninput="filterResources(this.value)">
+                    <button class="ctrl-btn" onclick="randomResource()" title="Découverte aléatoire">ξ</button>
                 </div>
                 <div class="controls-right">
                     <button id="dark-mode-btn" class="ctrl-btn" onclick="toggleDarkMode()" title="Mode sombre">◐</button>
@@ -1242,6 +1243,15 @@
                     section.open = hasMatch;
                 }
             });
+        }
+
+        // Random resource discovery
+        function randomResource() {
+            const allLinks = Array.from(document.querySelectorAll('.resource-name a'));
+            if (allLinks.length > 0) {
+                const randomLink = allLinks[Math.floor(Math.random() * allLinks.length)];
+                window.open(randomLink.href, '_blank');
+            }
         }
 
         // Keyboard shortcuts

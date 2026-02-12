@@ -66,18 +66,24 @@ function buildNetworkData() {
     const links = JSON.parse(JSON.stringify(baseLinks));
 
     // Extract resources from DOM and add as leaf nodes
-    document.querySelectorAll('.source-section').forEach(section => {
-        const sectionId = section.id;
-        let resourceIndex = 0;
+    const sections = document.querySelectorAll('.source-section');
 
-        section.querySelectorAll('.resource').forEach(res => {
+    sections.forEach(section => {
+        const sectionId = section.id;
+        if (!sectionId) return;
+
+        let resourceIndex = 0;
+        const resources = section.querySelectorAll('.resource');
+
+        resources.forEach(res => {
             const link = res.querySelector('.resource-name a');
             if (link && resourceIndex < 6) { // Limit to 6 per section
                 const resourceId = `${sectionId}_r${resourceIndex}`;
+                const text = link.textContent.trim();
                 nodes.push({
                     id: resourceId,
-                    label: link.textContent.length > 20 ? link.textContent.slice(0, 18) + '…' : link.textContent,
-                    fullLabel: link.textContent,
+                    label: text.length > 20 ? text.slice(0, 18) + '…' : text,
+                    fullLabel: text,
                     group: "resource",
                     parent: sectionId,
                     url: link.href
@@ -96,9 +102,19 @@ function buildNetworkData() {
 
 function initNetwork(containerId) {
     const container = document.getElementById(containerId);
-    if (!container) return;
+    if (!container) {
+        console.error('Network container not found:', containerId);
+        return;
+    }
+
+    // Check if D3 is loaded
+    if (typeof d3 === 'undefined') {
+        console.error('D3.js not loaded');
+        return;
+    }
 
     buildNetworkData();
+    console.log('Network data:', networkData.nodes.length, 'nodes,', networkData.links.length, 'links');
 
     const width = container.clientWidth;
     const height = Math.max(600, window.innerHeight - 250);
@@ -284,6 +300,9 @@ function toggleNetworkView() {
 }
 
 // Initialize network view on page load
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => initNetwork("network-container"));
+} else {
+    // DOM already loaded
     initNetwork("network-container");
-});
+}

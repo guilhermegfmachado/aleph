@@ -239,34 +239,48 @@ function createPanel(container) {
     container.appendChild(panel);
 }
 
+let panelTimeout = null;
+
 function showPanel(node, resources, e) {
     const panel = document.getElementById('resources-panel');
     if (!panel) return;
+
+    // Clear any existing timeout
+    if (panelTimeout) clearTimeout(panelTimeout);
 
     panel.querySelector('.panel-title').textContent = node.label;
     const content = panel.querySelector('.panel-content');
     const items = resources.slice(0, 8);
     content.innerHTML = items.map(r =>
-        `<a href="${r.url}" target="_blank" class="panel-resource">${r.name}</a>`
+        `<a href="${r.url}" target="_blank" class="panel-resource" onclick="hidePanel()">${r.name}</a>`
     ).join('') + (resources.length > 8 ?
-        `<a href="${node.href}" class="panel-more">voir tout →</a>` : '');
+        `<a href="#" class="panel-more" onclick="scrollToSection('${node.id}'); return false;">voir tout →</a>` : '');
 
     panel.classList.remove('hidden');
     positionPanel(panel, e);
+
+    // Auto-close after 8 seconds
+    panelTimeout = setTimeout(hidePanel, 8000);
 }
 
 function showCategoryPanel(node, children, e) {
     const panel = document.getElementById('resources-panel');
     if (!panel) return;
 
+    // Clear any existing timeout
+    if (panelTimeout) clearTimeout(panelTimeout);
+
     panel.querySelector('.panel-title').textContent = node.label;
     const content = panel.querySelector('.panel-content');
     content.innerHTML = children.map(c =>
-        `<a href="${c.href || '#'}" class="panel-resource">${c.label}</a>`
+        `<a href="#" class="panel-resource" onclick="scrollToSection('${c.id}'); return false;">${c.label}</a>`
     ).join('');
 
     panel.classList.remove('hidden');
     positionPanel(panel, e);
+
+    // Auto-close after 8 seconds
+    panelTimeout = setTimeout(hidePanel, 8000);
 }
 
 function positionPanel(panel, e) {
@@ -278,8 +292,30 @@ function positionPanel(panel, e) {
 }
 
 function hidePanel() {
+    if (panelTimeout) clearTimeout(panelTimeout);
     const panel = document.getElementById('resources-panel');
     if (panel) panel.classList.add('hidden');
+}
+
+function scrollToSection(sectionId) {
+    hidePanel();
+    // Switch to list view
+    const network = document.getElementById("network-container");
+    const list = document.getElementById("list-container");
+    const btn = document.getElementById("view-toggle-btn");
+
+    if (network && !network.classList.contains("hidden")) {
+        network.classList.add("hidden");
+        list.classList.remove("hidden");
+        btn.textContent = "vue réseau";
+    }
+
+    // Scroll to section and open it
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.open = true;
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 function toggleNetworkView() {

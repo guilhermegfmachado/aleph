@@ -8,11 +8,59 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        /* View Toggle */
+        /* Controls Bar */
         .view-controls {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .controls-left {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .controls-right {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .search-input {
+            padding: 0.5rem 0.75rem;
+            font-family: inherit;
+            font-size: 0.85rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            width: 200px;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .search-input::placeholder {
+            color: var(--text);
+            opacity: 0.5;
+        }
+        .ctrl-btn {
+            padding: 0.5rem 0.75rem;
+            font-family: inherit;
+            font-size: 0.85rem;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .ctrl-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .ctrl-btn.active {
+            background: var(--accent);
+            color: var(--bg);
+            border-color: var(--accent);
         }
         .view-toggle-btn {
             padding: 0.5rem 1rem;
@@ -300,9 +348,16 @@
         </header>
 
         <main>
-            <!-- View Toggle -->
+            <!-- Controls Bar -->
             <div class="view-controls">
-                <button id="view-toggle-btn" class="view-toggle-btn" onclick="toggleNetworkView()">vue liste</button>
+                <div class="controls-left">
+                    <input type="text" id="search-input" class="search-input" placeholder="rechercher..." oninput="filterResources(this.value)">
+                    <button class="ctrl-btn" onclick="randomResource()" title="Découverte aléatoire">↻</button>
+                </div>
+                <div class="controls-right">
+                    <button id="dark-mode-btn" class="ctrl-btn" onclick="toggleDarkMode()" title="Mode sombre">◐</button>
+                    <button id="view-toggle-btn" class="view-toggle-btn" onclick="toggleNetworkView()">vue liste</button>
+                </div>
             </div>
 
             <!-- Network View (default) -->
@@ -1129,6 +1184,90 @@
         </footer>
 
     <script src="network.js"></script>
+    <script>
+        // Dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDark);
+            document.getElementById('dark-mode-btn').classList.toggle('active', isDark);
+        }
+
+        // Load saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('dark-mode-btn').classList.add('active');
+        }
+
+        // Search/filter resources
+        function filterResources(query) {
+            query = query.toLowerCase().trim();
+            const sections = document.querySelectorAll('.source-section');
+            const listContainer = document.getElementById('list-container');
+            const networkContainer = document.getElementById('network-container');
+
+            if (query.length > 0) {
+                // Switch to list view for searching
+                if (!networkContainer.classList.contains('hidden')) {
+                    networkContainer.classList.add('hidden');
+                    listContainer.classList.remove('hidden');
+                    document.getElementById('view-toggle-btn').textContent = 'vue réseau';
+                }
+            }
+
+            sections.forEach(section => {
+                let hasMatch = false;
+                const resources = section.querySelectorAll('.resource');
+
+                resources.forEach(resource => {
+                    const name = resource.querySelector('.resource-name')?.textContent.toLowerCase() || '';
+                    const desc = resource.querySelector('.resource-desc')?.textContent.toLowerCase() || '';
+                    const matches = name.includes(query) || desc.includes(query);
+                    resource.style.display = matches || query === '' ? '' : 'none';
+                    if (matches) hasMatch = true;
+                });
+
+                // Show/hide section based on matches
+                if (query === '') {
+                    section.style.display = '';
+                    section.open = section.id === 'textes';
+                } else {
+                    section.style.display = hasMatch ? '' : 'none';
+                    section.open = hasMatch;
+                }
+            });
+        }
+
+        // Random resource discovery
+        function randomResource() {
+            const allLinks = Array.from(document.querySelectorAll('.resource-name a'));
+            if (allLinks.length > 0) {
+                const randomLink = allLinks[Math.floor(Math.random() * allLinks.length)];
+                window.open(randomLink.href, '_blank');
+            }
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Escape clears search
+            if (e.key === 'Escape') {
+                const searchInput = document.getElementById('search-input');
+                if (searchInput.value) {
+                    searchInput.value = '';
+                    filterResources('');
+                }
+            }
+            // / focuses search
+            if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+                e.preventDefault();
+                document.getElementById('search-input').focus();
+            }
+            // r for random (when not in input)
+            if (e.key === 'r' && document.activeElement.tagName !== 'INPUT') {
+                randomResource();
+            }
+        });
+    </script>
     </div>
 </body>
 </html>

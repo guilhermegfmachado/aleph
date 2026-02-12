@@ -111,12 +111,13 @@ function initNetwork(containerId) {
 
 function updateNetwork() {
     const data = getVisibleData();
+    const isDark = document.body.classList.contains('dark-mode');
 
     const colors = {
-        root: "#6b4a04",
-        category: "#8b6914",
-        section: "#a08050",
-        resource: "#c4a060"
+        root: isDark ? "#c4a060" : "#6b4a04",
+        category: isDark ? "#a08050" : "#8b6914",
+        section: isDark ? "#8b7040" : "#a08050",
+        resource: isDark ? "#706030" : "#c4a060"
     };
 
     const sizes = {
@@ -203,7 +204,10 @@ function updateNetwork() {
             return "8px";
         })
         .attr("font-weight", d => (d.group === "root" || d.group === "category") ? "600" : "normal")
-        .attr("fill", d => d.group === "resource" ? "#666" : "#2a2a2a")
+        .attr("fill", d => {
+            if (isDark) return d.group === "resource" ? "#888" : "#d0d0d0";
+            return d.group === "resource" ? "#666" : "#2a2a2a";
+        })
         .attr("font-family", "'IBM Plex Mono', monospace");
 
     // Click handler

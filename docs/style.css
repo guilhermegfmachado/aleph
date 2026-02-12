@@ -18,6 +18,19 @@
     --highlight: #fff3cd;
 }
 
+/* Dark mode */
+body.dark-mode {
+    --bg: #1a1a1a;
+    --bg-light: #252525;
+    --text: #d0d0d0;
+    --text-bright: #f0f0f0;
+    --text-muted: #888888;
+    --accent: #c4a060;
+    --accent-dim: #a08050;
+    --border: #404040;
+    --highlight: #3a3520;
+}
+
 body {
     font-family: 'IBM Plex Mono', 'Consolas', 'Monaco', monospace;
     background: var(--bg);

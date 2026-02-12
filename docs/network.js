@@ -21,8 +21,8 @@ const allNodes = [
     { id: "humanites", label: "Humanités", group: "section", parent: "reverie" },
 ];
 
-// Track expanded nodes
-let expandedNodes = new Set(["root"]);
+// Track expanded nodes - start with nothing expanded (only root shows)
+let expandedNodes = new Set();
 let resourceNodes = [];
 let simulation = null;
 let svg = null;

@@ -1,99 +1,107 @@
 // Network visualization for sources
 // 4 philosophical categories inspired by Bachelard & Simondon
 
-const networkData = {
-    nodes: [
-        // Root - fixed in center
-        { id: "root", label: "א", group: "root", fixed: true },
+// Base structure - resources added dynamically from DOM
+const baseNodes = [
+    // Root - fixed in center
+    { id: "root", label: "א", group: "root", fixed: true },
 
-        // 4 main categories
-        { id: "archive", label: "L'Archive", group: "category" },
-        { id: "atelier", label: "L'Atelier", group: "category" },
-        { id: "enquete", label: "L'Enquête", group: "category" },
-        { id: "reverie", label: "La Rêverie", group: "category" },
+    // 4 main categories
+    { id: "archive", label: "L'Archive", group: "category" },
+    { id: "atelier", label: "L'Atelier", group: "category" },
+    { id: "enquete", label: "L'Enquête", group: "category" },
+    { id: "reverie", label: "La Rêverie", group: "category" },
 
-        // L'Archive children - accumulated memory
-        { id: "textes", label: "Textes", group: "section", parent: "archive", href: "#textes" },
-        { id: "langues", label: "Langues", group: "section", parent: "archive", href: "#langues" },
+    // L'Archive children
+    { id: "textes", label: "Textes", group: "section", parent: "archive" },
+    { id: "langues", label: "Langues", group: "section", parent: "archive" },
 
-        // L'Atelier children - technical milieu
-        { id: "metiers", label: "Métiers", group: "section", parent: "atelier", href: "#metiers" },
-        { id: "design", label: "Design", group: "section", parent: "atelier", href: "#design" },
-        { id: "transport", label: "Transport", group: "section", parent: "atelier", href: "#transport" },
+    // L'Atelier children
+    { id: "metiers", label: "Métiers", group: "section", parent: "atelier" },
+    { id: "design", label: "Design", group: "section", parent: "atelier" },
+    { id: "transport", label: "Transport", group: "section", parent: "atelier" },
 
-        // L'Enquête children - investigation
-        { id: "informatique", label: "Informatique", group: "section", parent: "enquete", href: "#informatique" },
-        { id: "economie", label: "Économie", group: "section", parent: "enquete", href: "#economie" },
-        { id: "droit", label: "Droit", group: "section", parent: "enquete", href: "#droit" },
+    // L'Enquête children
+    { id: "informatique", label: "Informatique", group: "section", parent: "enquete" },
+    { id: "economie", label: "Économie", group: "section", parent: "enquete" },
+    { id: "droit", label: "Droit", group: "section", parent: "enquete" },
 
-        // La Rêverie children - imagination
-        { id: "arts", label: "Arts", group: "section", parent: "reverie", href: "#arts" },
-        { id: "musique", label: "Musique", group: "section", parent: "reverie", href: "#musique" },
-        { id: "humanites", label: "Humanités", group: "section", parent: "reverie", href: "#humanites" },
-    ],
-    links: [
-        // Root to categories
-        { source: "root", target: "archive" },
-        { source: "root", target: "atelier" },
-        { source: "root", target: "enquete" },
-        { source: "root", target: "reverie" },
+    // La Rêverie children
+    { id: "arts", label: "Arts", group: "section", parent: "reverie" },
+    { id: "musique", label: "Musique", group: "section", parent: "reverie" },
+    { id: "humanites", label: "Humanités", group: "section", parent: "reverie" },
+];
 
-        // Archive children
-        { source: "archive", target: "textes" },
-        { source: "archive", target: "langues" },
+const baseLinks = [
+    // Root to categories
+    { source: "root", target: "archive" },
+    { source: "root", target: "atelier" },
+    { source: "root", target: "enquete" },
+    { source: "root", target: "reverie" },
 
-        // Atelier children
-        { source: "atelier", target: "metiers" },
-        { source: "atelier", target: "design" },
-        { source: "atelier", target: "transport" },
+    // Archive children
+    { source: "archive", target: "textes" },
+    { source: "archive", target: "langues" },
 
-        // Enquête children
-        { source: "enquete", target: "informatique" },
-        { source: "enquete", target: "economie" },
-        { source: "enquete", target: "droit" },
+    // Atelier children
+    { source: "atelier", target: "metiers" },
+    { source: "atelier", target: "design" },
+    { source: "atelier", target: "transport" },
 
-        // Rêverie children
-        { source: "reverie", target: "arts" },
-        { source: "reverie", target: "musique" },
-        { source: "reverie", target: "humanites" },
+    // Enquête children
+    { source: "enquete", target: "informatique" },
+    { source: "enquete", target: "economie" },
+    { source: "enquete", target: "droit" },
 
-        // Cross-connections
-        { source: "informatique", target: "textes", type: "related" },
-        { source: "economie", target: "droit", type: "related" },
-        { source: "arts", target: "textes", type: "related" },
-        { source: "langues", target: "humanites", type: "related" },
-    ]
-};
+    // Rêverie children
+    { source: "reverie", target: "arts" },
+    { source: "reverie", target: "musique" },
+    { source: "reverie", target: "humanites" },
+];
 
-// Resources cache
-let sectionResources = {};
+let networkData = { nodes: [], links: [] };
 
-function extractResourcesFromDOM() {
-    sectionResources = {};
+function buildNetworkData() {
+    const nodes = JSON.parse(JSON.stringify(baseNodes));
+    const links = JSON.parse(JSON.stringify(baseLinks));
+
+    // Extract resources from DOM and add as leaf nodes
     document.querySelectorAll('.source-section').forEach(section => {
-        const id = section.id;
-        const resources = [];
+        const sectionId = section.id;
+        let resourceIndex = 0;
+
         section.querySelectorAll('.resource').forEach(res => {
             const link = res.querySelector('.resource-name a');
-            if (link) {
-                resources.push({
-                    name: link.textContent,
+            if (link && resourceIndex < 6) { // Limit to 6 per section
+                const resourceId = `${sectionId}_r${resourceIndex}`;
+                nodes.push({
+                    id: resourceId,
+                    label: link.textContent.length > 20 ? link.textContent.slice(0, 18) + '…' : link.textContent,
+                    fullLabel: link.textContent,
+                    group: "resource",
+                    parent: sectionId,
                     url: link.href
                 });
+                links.push({
+                    source: sectionId,
+                    target: resourceId
+                });
+                resourceIndex++;
             }
         });
-        sectionResources[id] = resources;
     });
+
+    networkData = { nodes, links };
 }
 
 function initNetwork(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    extractResourcesFromDOM();
+    buildNetworkData();
 
     const width = container.clientWidth;
-    const height = Math.max(500, window.innerHeight - 300);
+    const height = Math.max(600, window.innerHeight - 250);
     container.innerHTML = '';
 
     const svg = d3.select(`#${containerId}`)
@@ -104,19 +112,21 @@ function initNetwork(containerId) {
     const g = svg.append("g");
 
     svg.call(d3.zoom()
-        .scaleExtent([0.5, 3])
+        .scaleExtent([0.3, 3])
         .on("zoom", e => g.attr("transform", e.transform)));
 
     const colors = {
         root: "#6b4a04",
         category: "#8b6914",
-        section: "#a08050"
+        section: "#a08050",
+        resource: "#c4a060"
     };
 
     const sizes = {
-        root: 22,
-        category: 16,
-        section: 10
+        root: 24,
+        category: 18,
+        section: 12,
+        resource: 6
     };
 
     // Fix root in center
@@ -130,21 +140,26 @@ function initNetwork(containerId) {
     const simulation = d3.forceSimulation(networkData.nodes)
         .force("link", d3.forceLink(networkData.links)
             .id(d => d.id)
-            .distance(d => d.type === "related" ? 150 : 90)
-            .strength(d => d.type === "related" ? 0.05 : 0.5))
-        .force("charge", d3.forceManyBody().strength(-250))
+            .distance(d => {
+                if (d.target.group === "resource") return 50;
+                if (d.target.group === "section") return 80;
+                return 100;
+            })
+            .strength(d => d.target.group === "resource" ? 0.8 : 0.5))
+        .force("charge", d3.forceManyBody()
+            .strength(d => d.group === "resource" ? -30 : -200))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 15))
-        .alphaDecay(0.02)
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 8))
+        .alphaDecay(0.015)
         .velocityDecay(0.4);
 
     const link = g.append("g")
         .selectAll("line")
         .data(networkData.links)
         .join("line")
-        .attr("stroke", d => d.type === "related" ? "#ddd" : "#bbb")
-        .attr("stroke-opacity", d => d.type === "related" ? 0.3 : 0.6)
-        .attr("stroke-dasharray", d => d.type === "related" ? "3,3" : "none");
+        .attr("stroke", d => d.target.group === "resource" ? "#ddd" : "#bbb")
+        .attr("stroke-opacity", d => d.target.group === "resource" ? 0.4 : 0.6)
+        .attr("stroke-width", d => d.target.group === "resource" ? 0.5 : 1);
 
     const node = g.append("g")
         .selectAll("g")
@@ -159,31 +174,41 @@ function initNetwork(containerId) {
     node.append("circle")
         .attr("r", d => sizes[d.group])
         .attr("fill", d => colors[d.group])
-        .attr("stroke", "#fff")
-        .attr("stroke-width", 1.5);
+        .attr("stroke", d => d.group === "resource" ? "none" : "#fff")
+        .attr("stroke-width", d => d.group === "resource" ? 0 : 1.5);
 
     node.append("text")
         .text(d => d.label)
-        .attr("x", d => sizes[d.group] + 5)
-        .attr("y", 4)
-        .attr("font-size", d => d.group === "root" ? "14px" : d.group === "category" ? "12px" : "10px")
-        .attr("font-weight", d => d.group !== "section" ? "600" : "normal")
-        .attr("fill", "#2a2a2a")
+        .attr("x", d => sizes[d.group] + 4)
+        .attr("y", 3)
+        .attr("font-size", d => {
+            if (d.group === "root") return "16px";
+            if (d.group === "category") return "12px";
+            if (d.group === "section") return "10px";
+            return "8px";
+        })
+        .attr("font-weight", d => (d.group === "root" || d.group === "category") ? "600" : "normal")
+        .attr("fill", d => d.group === "resource" ? "#666" : "#2a2a2a")
         .attr("font-family", "'IBM Plex Mono', monospace");
 
+    // Click handlers
     node.on("click", (e, d) => {
         e.stopPropagation();
-        if (d.href && sectionResources[d.id]) {
-            showPanel(d, sectionResources[d.id], e);
-        } else if (d.group === "category") {
-            const children = networkData.nodes.filter(n => n.parent === d.id);
-            showCategoryPanel(d, children, e);
+        if (d.group === "resource" && d.url) {
+            window.open(d.url, '_blank');
+        } else if (d.group === "section") {
+            scrollToSection(d.id);
         }
     });
 
-    svg.on("click", hidePanel);
+    // Hover tooltip for resources
+    node.filter(d => d.group === "resource")
+        .append("title")
+        .text(d => d.fullLabel);
 
-    const padding = 40;
+    svg.on("click", () => {});
+
+    const padding = 30;
     simulation.on("tick", () => {
         networkData.nodes.forEach(d => {
             if (!d.fixed) {
@@ -205,7 +230,6 @@ function initNetwork(containerId) {
         if (!e.active) simulation.alphaTarget(0.1).restart();
         e.subject.fx = e.subject.x;
         e.subject.fy = e.subject.y;
-        hidePanel();
     }
 
     function dragging(e) {
@@ -220,85 +244,9 @@ function initNetwork(containerId) {
         e.subject.fx = null;
         e.subject.fy = null;
     }
-
-    createPanel(container);
-}
-
-function createPanel(container) {
-    if (document.getElementById('resources-panel')) return;
-    const panel = document.createElement('div');
-    panel.id = 'resources-panel';
-    panel.className = 'resources-panel hidden';
-    panel.innerHTML = `
-        <div class="panel-header">
-            <span class="panel-title"></span>
-            <button class="panel-close" onclick="hidePanel()">×</button>
-        </div>
-        <div class="panel-content"></div>
-    `;
-    container.appendChild(panel);
-}
-
-let panelTimeout = null;
-
-function showPanel(node, resources, e) {
-    const panel = document.getElementById('resources-panel');
-    if (!panel) return;
-
-    // Clear any existing timeout
-    if (panelTimeout) clearTimeout(panelTimeout);
-
-    panel.querySelector('.panel-title').textContent = node.label;
-    const content = panel.querySelector('.panel-content');
-    const items = resources.slice(0, 8);
-    content.innerHTML = items.map(r =>
-        `<a href="${r.url}" target="_blank" class="panel-resource" onclick="hidePanel()">${r.name}</a>`
-    ).join('') + (resources.length > 8 ?
-        `<a href="#" class="panel-more" onclick="scrollToSection('${node.id}'); return false;">voir tout →</a>` : '');
-
-    panel.classList.remove('hidden');
-    positionPanel(panel, e);
-
-    // Auto-close after 8 seconds
-    panelTimeout = setTimeout(hidePanel, 8000);
-}
-
-function showCategoryPanel(node, children, e) {
-    const panel = document.getElementById('resources-panel');
-    if (!panel) return;
-
-    // Clear any existing timeout
-    if (panelTimeout) clearTimeout(panelTimeout);
-
-    panel.querySelector('.panel-title').textContent = node.label;
-    const content = panel.querySelector('.panel-content');
-    content.innerHTML = children.map(c =>
-        `<a href="#" class="panel-resource" onclick="scrollToSection('${c.id}'); return false;">${c.label}</a>`
-    ).join('');
-
-    panel.classList.remove('hidden');
-    positionPanel(panel, e);
-
-    // Auto-close after 8 seconds
-    panelTimeout = setTimeout(hidePanel, 8000);
-}
-
-function positionPanel(panel, e) {
-    const svg = e.target.closest('svg');
-    if (!svg) return;
-    const rect = svg.getBoundingClientRect();
-    panel.style.left = Math.min(e.clientX - rect.left + 10, rect.width - 220) + 'px';
-    panel.style.top = Math.min(e.clientY - rect.top + 10, rect.height - 200) + 'px';
-}
-
-function hidePanel() {
-    if (panelTimeout) clearTimeout(panelTimeout);
-    const panel = document.getElementById('resources-panel');
-    if (panel) panel.classList.add('hidden');
 }
 
 function scrollToSection(sectionId) {
-    hidePanel();
     // Switch to list view
     const network = document.getElementById("network-container");
     const list = document.getElementById("list-container");
@@ -332,6 +280,10 @@ function toggleNetworkView() {
         network.classList.add("hidden");
         list.classList.remove("hidden");
         btn.textContent = "vue réseau";
-        hidePanel();
     }
 }
+
+// Initialize network view on page load
+document.addEventListener('DOMContentLoaded', () => {
+    initNetwork("network-container");
+});

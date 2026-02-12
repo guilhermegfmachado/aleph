@@ -1,135 +1,116 @@
 // Network visualization for sources
-// 4 philosophical categories inspired by Bachelard & Simondon
+// Collapsible tree - click to expand/collapse
 
-// Base structure - resources added dynamically from DOM
-const baseNodes = [
-    // Root - fixed in center
+// All nodes and their relationships
+const allNodes = [
     { id: "root", label: "א", group: "root", fixed: true },
-
-    // 4 main categories
-    { id: "archive", label: "L'Archive", group: "category" },
-    { id: "atelier", label: "L'Atelier", group: "category" },
-    { id: "enquete", label: "L'Enquête", group: "category" },
-    { id: "reverie", label: "La Rêverie", group: "category" },
-
-    // L'Archive children
+    { id: "archive", label: "L'Archive", group: "category", parent: "root" },
+    { id: "atelier", label: "L'Atelier", group: "category", parent: "root" },
+    { id: "enquete", label: "L'Enquête", group: "category", parent: "root" },
+    { id: "reverie", label: "La Rêverie", group: "category", parent: "root" },
     { id: "textes", label: "Textes", group: "section", parent: "archive" },
     { id: "langues", label: "Langues", group: "section", parent: "archive" },
-
-    // L'Atelier children
     { id: "metiers", label: "Métiers", group: "section", parent: "atelier" },
     { id: "design", label: "Design", group: "section", parent: "atelier" },
     { id: "transport", label: "Transport", group: "section", parent: "atelier" },
-
-    // L'Enquête children
     { id: "informatique", label: "Informatique", group: "section", parent: "enquete" },
     { id: "economie", label: "Économie", group: "section", parent: "enquete" },
     { id: "droit", label: "Droit", group: "section", parent: "enquete" },
-
-    // La Rêverie children
     { id: "arts", label: "Arts", group: "section", parent: "reverie" },
     { id: "musique", label: "Musique", group: "section", parent: "reverie" },
     { id: "humanites", label: "Humanités", group: "section", parent: "reverie" },
 ];
 
-const baseLinks = [
-    // Root to categories
-    { source: "root", target: "archive" },
-    { source: "root", target: "atelier" },
-    { source: "root", target: "enquete" },
-    { source: "root", target: "reverie" },
+// Track expanded nodes
+let expandedNodes = new Set(["root"]);
+let resourceNodes = [];
+let simulation = null;
+let svg = null;
+let g = null;
+let width = 0;
+let height = 0;
 
-    // Archive children
-    { source: "archive", target: "textes" },
-    { source: "archive", target: "langues" },
-
-    // Atelier children
-    { source: "atelier", target: "metiers" },
-    { source: "atelier", target: "design" },
-    { source: "atelier", target: "transport" },
-
-    // Enquête children
-    { source: "enquete", target: "informatique" },
-    { source: "enquete", target: "economie" },
-    { source: "enquete", target: "droit" },
-
-    // Rêverie children
-    { source: "reverie", target: "arts" },
-    { source: "reverie", target: "musique" },
-    { source: "reverie", target: "humanites" },
-];
-
-let networkData = { nodes: [], links: [] };
-
-function buildNetworkData() {
-    const nodes = JSON.parse(JSON.stringify(baseNodes));
-    const links = JSON.parse(JSON.stringify(baseLinks));
-
-    // Extract resources from DOM and add as leaf nodes
-    const sections = document.querySelectorAll('.source-section');
-
-    sections.forEach(section => {
+function extractResources() {
+    resourceNodes = [];
+    document.querySelectorAll('.source-section').forEach(section => {
         const sectionId = section.id;
         if (!sectionId) return;
-
-        let resourceIndex = 0;
-        const resources = section.querySelectorAll('.resource');
-
-        resources.forEach(res => {
+        let i = 0;
+        section.querySelectorAll('.resource').forEach(res => {
             const link = res.querySelector('.resource-name a');
-            if (link && resourceIndex < 6) { // Limit to 6 per section
-                const resourceId = `${sectionId}_r${resourceIndex}`;
+            if (link && i < 8) {
                 const text = link.textContent.trim();
-                nodes.push({
-                    id: resourceId,
-                    label: text.length > 20 ? text.slice(0, 18) + '…' : text,
+                resourceNodes.push({
+                    id: `${sectionId}_r${i}`,
+                    label: text.length > 18 ? text.slice(0, 16) + '…' : text,
                     fullLabel: text,
                     group: "resource",
                     parent: sectionId,
                     url: link.href
                 });
-                links.push({
-                    source: sectionId,
-                    target: resourceId
-                });
-                resourceIndex++;
+                i++;
             }
         });
     });
+}
 
-    networkData = { nodes, links };
+function getVisibleData() {
+    const nodes = [];
+    const links = [];
+    const visibleIds = new Set();
+
+    // Always show root
+    const root = allNodes.find(n => n.id === "root");
+    nodes.push({ ...root });
+    visibleIds.add("root");
+
+    // Show children of expanded nodes
+    allNodes.forEach(node => {
+        if (node.parent && expandedNodes.has(node.parent)) {
+            nodes.push({ ...node });
+            visibleIds.add(node.id);
+            links.push({ source: node.parent, target: node.id });
+        }
+    });
+
+    // Show resources for expanded sections
+    resourceNodes.forEach(node => {
+        if (expandedNodes.has(node.parent)) {
+            nodes.push({ ...node });
+            visibleIds.add(node.id);
+            links.push({ source: node.parent, target: node.id });
+        }
+    });
+
+    return { nodes, links };
 }
 
 function initNetwork(containerId) {
     const container = document.getElementById(containerId);
-    if (!container) {
-        console.error('Network container not found:', containerId);
-        return;
-    }
+    if (!container || typeof d3 === 'undefined') return;
 
-    // Check if D3 is loaded
-    if (typeof d3 === 'undefined') {
-        console.error('D3.js not loaded');
-        return;
-    }
+    extractResources();
 
-    buildNetworkData();
-    console.log('Network data:', networkData.nodes.length, 'nodes,', networkData.links.length, 'links');
-
-    const width = container.clientWidth;
-    const height = Math.max(600, window.innerHeight - 250);
+    width = container.clientWidth;
+    height = Math.max(550, window.innerHeight - 280);
     container.innerHTML = '';
 
-    const svg = d3.select(`#${containerId}`)
+    svg = d3.select(`#${containerId}`)
         .append("svg")
         .attr("width", width)
         .attr("height", height);
 
-    const g = svg.append("g");
+    g = svg.append("g");
 
     svg.call(d3.zoom()
         .scaleExtent([0.3, 3])
         .on("zoom", e => g.attr("transform", e.transform)));
+
+    updateNetwork();
+}
+
+function updateNetwork() {
+    const data = getVisibleData();
 
     const colors = {
         root: "#6b4a04",
@@ -139,47 +120,53 @@ function initNetwork(containerId) {
     };
 
     const sizes = {
-        root: 24,
+        root: 26,
         category: 18,
         section: 12,
-        resource: 6
+        resource: 5
     };
 
-    // Fix root in center
-    networkData.nodes.forEach(n => {
-        if (n.fixed) {
+    // Stop old simulation
+    if (simulation) simulation.stop();
+
+    // Fix root position
+    data.nodes.forEach(n => {
+        if (n.id === "root") {
             n.fx = width / 2;
             n.fy = height / 2;
         }
     });
 
-    const simulation = d3.forceSimulation(networkData.nodes)
-        .force("link", d3.forceLink(networkData.links)
+    // Create simulation
+    simulation = d3.forceSimulation(data.nodes)
+        .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(d => {
-                if (d.target.group === "resource") return 50;
-                if (d.target.group === "section") return 80;
-                return 100;
+                if (d.target.group === "resource") return 40;
+                if (d.target.group === "section") return 70;
+                return 90;
             })
-            .strength(d => d.target.group === "resource" ? 0.8 : 0.5))
+            .strength(0.7))
         .force("charge", d3.forceManyBody()
-            .strength(d => d.group === "resource" ? -30 : -200))
-        .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 8))
-        .alphaDecay(0.015)
-        .velocityDecay(0.4);
+            .strength(d => d.group === "resource" ? -20 : -150))
+        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.05))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 5))
+        .alphaDecay(0.03);
+
+    // Clear and redraw
+    g.selectAll("*").remove();
 
     const link = g.append("g")
         .selectAll("line")
-        .data(networkData.links)
+        .data(data.links)
         .join("line")
         .attr("stroke", d => d.target.group === "resource" ? "#ddd" : "#bbb")
-        .attr("stroke-opacity", d => d.target.group === "resource" ? 0.4 : 0.6)
+        .attr("stroke-opacity", 0.5)
         .attr("stroke-width", d => d.target.group === "resource" ? 0.5 : 1);
 
     const node = g.append("g")
         .selectAll("g")
-        .data(networkData.nodes)
+        .data(data.nodes)
         .join("g")
         .style("cursor", "pointer")
         .call(d3.drag()
@@ -187,18 +174,30 @@ function initNetwork(containerId) {
             .on("drag", dragging)
             .on("end", dragend));
 
+    // Circle for each node
     node.append("circle")
         .attr("r", d => sizes[d.group])
         .attr("fill", d => colors[d.group])
-        .attr("stroke", d => d.group === "resource" ? "none" : "#fff")
-        .attr("stroke-width", d => d.group === "resource" ? 0 : 1.5);
+        .attr("stroke", d => expandedNodes.has(d.id) ? "#fff" : "none")
+        .attr("stroke-width", 2);
 
+    // Expand indicator for expandable nodes
+    node.filter(d => hasChildren(d.id) && !expandedNodes.has(d.id))
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", "0.35em")
+        .attr("fill", "#fff")
+        .attr("font-size", d => d.group === "category" ? "12px" : "10px")
+        .attr("font-weight", "bold")
+        .text("+");
+
+    // Labels
     node.append("text")
         .text(d => d.label)
-        .attr("x", d => sizes[d.group] + 4)
-        .attr("y", 3)
+        .attr("x", d => sizes[d.group] + 5)
+        .attr("y", 4)
         .attr("font-size", d => {
-            if (d.group === "root") return "16px";
+            if (d.group === "root") return "18px";
             if (d.group === "category") return "12px";
             if (d.group === "section") return "10px";
             return "8px";
@@ -207,27 +206,28 @@ function initNetwork(containerId) {
         .attr("fill", d => d.group === "resource" ? "#666" : "#2a2a2a")
         .attr("font-family", "'IBM Plex Mono', monospace");
 
-    // Click handlers
+    // Click handler
     node.on("click", (e, d) => {
         e.stopPropagation();
         if (d.group === "resource" && d.url) {
             window.open(d.url, '_blank');
+        } else if (hasChildren(d.id)) {
+            toggleNode(d.id);
         } else if (d.group === "section") {
             scrollToSection(d.id);
         }
     });
 
-    // Hover tooltip for resources
+    // Tooltip for resources
     node.filter(d => d.group === "resource")
         .append("title")
         .text(d => d.fullLabel);
 
-    svg.on("click", () => {});
-
+    // Tick
     const padding = 30;
     simulation.on("tick", () => {
-        networkData.nodes.forEach(d => {
-            if (!d.fixed) {
+        data.nodes.forEach(d => {
+            if (!d.fx) {
                 d.x = Math.max(padding, Math.min(width - padding, d.x));
                 d.y = Math.max(padding, Math.min(height - padding, d.y));
             }
@@ -262,8 +262,31 @@ function initNetwork(containerId) {
     }
 }
 
+function hasChildren(nodeId) {
+    if (allNodes.some(n => n.parent === nodeId)) return true;
+    if (resourceNodes.some(n => n.parent === nodeId)) return true;
+    return false;
+}
+
+function toggleNode(nodeId) {
+    if (expandedNodes.has(nodeId)) {
+        // Collapse: remove this node and all descendants
+        expandedNodes.delete(nodeId);
+        collapseDescendants(nodeId);
+    } else {
+        expandedNodes.add(nodeId);
+    }
+    updateNetwork();
+}
+
+function collapseDescendants(nodeId) {
+    allNodes.filter(n => n.parent === nodeId).forEach(child => {
+        expandedNodes.delete(child.id);
+        collapseDescendants(child.id);
+    });
+}
+
 function scrollToSection(sectionId) {
-    // Switch to list view
     const network = document.getElementById("network-container");
     const list = document.getElementById("list-container");
     const btn = document.getElementById("view-toggle-btn");
@@ -274,7 +297,6 @@ function scrollToSection(sectionId) {
         btn.textContent = "vue réseau";
     }
 
-    // Scroll to section and open it
     const section = document.getElementById(sectionId);
     if (section) {
         section.open = true;
@@ -299,10 +321,9 @@ function toggleNetworkView() {
     }
 }
 
-// Initialize network view on page load
+// Initialize
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => initNetwork("network-container"));
 } else {
-    // DOM already loaded
     initNetwork("network-container");
 }

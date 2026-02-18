@@ -145,17 +145,17 @@ function updateNetwork() {
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(d => {
-                if (d.target.group === "resource") return 55;
-                if (d.target.group === "section") return 100;
-                return 130;
+                if (d.target.group === "resource") return 60;
+                if (d.target.group === "section") return 110;
+                return 140;
             })
-            .strength(d => d.target.group === "resource" ? 0.9 : 0.4))
+            .strength(d => d.target.group === "resource" ? 0.8 : 0.5))
         .force("charge", d3.forceManyBody()
-            .strength(d => d.group === "resource" ? -20 : -200))
-        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.01))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 10))
-        .alphaDecay(0.005)
-        .velocityDecay(0.75);
+            .strength(d => d.group === "resource" ? -15 : -80))
+        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.005))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 8))
+        .alphaDecay(0.03)
+        .velocityDecay(0.85);
 
     // Clear and redraw
     g.selectAll("*").remove();
@@ -250,7 +250,7 @@ function updateNetwork() {
 
     function dragstart(e) {
         if (e.subject.id === "root") return;
-        if (!e.active) simulation.alphaTarget(0.1).restart();
+        if (!e.active) simulation.alphaTarget(0.03).restart();
         e.subject.fx = e.subject.x;
         e.subject.fy = e.subject.y;
     }

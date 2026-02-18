@@ -28,13 +28,15 @@
             align-items: center;
         }
         .search-input {
-            padding: 0.5rem 0.75rem;
+            padding: 0 0.75rem;
             font-family: inherit;
             font-size: 0.85rem;
             background: var(--bg);
             border: 1px solid var(--border);
             color: var(--text);
-            width: 140px;
+            width: 130px;
+            height: 34px;
+            box-sizing: border-box;
         }
         .search-input:focus {
             outline: none;
@@ -45,13 +47,19 @@
             opacity: 0.5;
         }
         .ctrl-btn {
-            padding: 0.5rem 0.75rem;
+            padding: 0;
             font-family: inherit;
             font-size: 0.85rem;
             background: var(--bg-light);
             border: 1px solid var(--border);
             color: var(--text);
             cursor: pointer;
+            width: 34px;
+            height: 34px;
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         .ctrl-btn:hover {
             border-color: var(--accent);
@@ -63,13 +71,15 @@
             border-color: var(--accent);
         }
         .view-toggle-btn {
-            padding: 0.5rem 1rem;
+            padding: 0 0.75rem;
             font-family: inherit;
             font-size: 0.85rem;
             background: var(--bg-light);
             border: 1px solid var(--border);
             color: var(--text);
             cursor: pointer;
+            height: 34px;
+            box-sizing: border-box;
         }
         .view-toggle-btn:hover {
             border-color: var(--accent);
@@ -322,6 +332,21 @@
         .tree-links a:hover {
             color: var(--accent);
             background: var(--bg);
+        }
+
+        /* Category Groups in List View */
+        .category-group {
+            margin-bottom: 2.5rem;
+        }
+        .category-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin: 0 0 0.75rem 0;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
         }
 
         /* Section Styling */
@@ -1660,7 +1685,6 @@
         // ===== SEARCH =====
         function filterResources(query) {
             query = query.toLowerCase().trim();
-            const sections = document.querySelectorAll('.source-section');
             const listContainer = document.getElementById('list-container');
             const networkContainer = document.getElementById('network-container');
 
@@ -1670,17 +1694,57 @@
                 document.getElementById('view-toggle-btn').textContent = 'vue réseau';
             }
 
-            sections.forEach(section => {
-                let hasMatch = false;
-                section.querySelectorAll('.resource').forEach(resource => {
-                    const name = resource.querySelector('.resource-name')?.textContent.toLowerCase() || '';
-                    const desc = resource.querySelector('.resource-desc')?.textContent.toLowerCase() || '';
-                    const matches = name.includes(query) || desc.includes(query);
-                    resource.style.display = matches || query === '' ? '' : 'none';
-                    if (matches) hasMatch = true;
+            document.querySelectorAll('.source-section').forEach(section => {
+                let sectionHasMatch = false;
+                const content = section.querySelector('.content');
+                if (!content) { section.style.display = ''; return; }
+
+                if (!query) {
+                    // Reset: show everything, only textes open by default
+                    content.querySelectorAll('.resources, h3').forEach(el => el.style.display = '');
+                    content.querySelectorAll('.resource').forEach(r => r.style.display = '');
+                    section.style.display = '';
+                    section.open = section.id === 'textes';
+                    return;
+                }
+
+                // Walk children: H3 then .resources groups
+                let h3Active = false;
+                Array.from(content.children).forEach(child => {
+                    if (child.tagName === 'H3') {
+                        h3Active = child.textContent.toLowerCase().includes(query);
+                        if (h3Active) sectionHasMatch = true;
+                        child.style.display = '';
+                    } else if (child.classList && child.classList.contains('resources')) {
+                        if (h3Active) {
+                            // H3 matched: show whole group
+                            child.style.display = '';
+                            child.querySelectorAll('.resource').forEach(r => r.style.display = '');
+                        } else {
+                            // Check individual resources
+                            let groupHasMatch = false;
+                            child.querySelectorAll('.resource').forEach(res => {
+                                const text = (res.querySelector('.resource-name')?.textContent || '') +
+                                             (res.querySelector('.resource-desc')?.textContent || '');
+                                const m = text.toLowerCase().includes(query);
+                                res.style.display = m ? '' : 'none';
+                                if (m) groupHasMatch = true;
+                            });
+                            child.style.display = groupHasMatch ? '' : 'none';
+                            if (groupHasMatch) sectionHasMatch = true;
+                        }
+                    }
                 });
-                section.style.display = query === '' || hasMatch ? '' : 'none';
-                section.open = query === '' ? section.id === 'textes' : hasMatch;
+
+                section.style.display = sectionHasMatch ? '' : 'none';
+                section.open = sectionHasMatch;
+            });
+
+            // Hide empty category groups
+            document.querySelectorAll('.category-group').forEach(group => {
+                const visible = Array.from(group.querySelectorAll('.source-section'))
+                    .some(s => s.style.display !== 'none');
+                group.style.display = visible ? '' : 'none';
             });
         }
 
@@ -1729,6 +1793,38 @@
                 document.body.classList.add('dark-mode');
                 const btn = document.getElementById('dark-mode-btn');
                 if (btn) btn.classList.add('active');
+            }
+
+            // Group list sections under category headers (matching the network view)
+            const listContainer = document.getElementById('list-container');
+            if (listContainer) {
+                const categories = [
+                    { label: "L'Archive",  sections: ['textes', 'langues'] },
+                    { label: "L'Atelier",  sections: ['metiers', 'design', 'transport'] },
+                    { label: "L'Enquête",  sections: ['informatique', 'economie', 'droit'] },
+                    { label: "La Rêverie", sections: ['arts', 'musique', 'humanites'] }
+                ];
+                // Detach all sections first
+                const detached = {};
+                categories.forEach(cat => cat.sections.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) { detached[id] = el.parentNode.removeChild(el); }
+                }));
+                // Clear remaining list content (any whitespace nodes)
+                while (listContainer.firstChild) listContainer.removeChild(listContainer.firstChild);
+                // Rebuild with category groups
+                categories.forEach(cat => {
+                    const group = document.createElement('div');
+                    group.className = 'category-group';
+                    const header = document.createElement('h2');
+                    header.className = 'category-label';
+                    header.textContent = cat.label;
+                    group.appendChild(header);
+                    cat.sections.forEach(id => {
+                        if (detached[id]) group.appendChild(detached[id]);
+                    });
+                    listContainer.appendChild(group);
+                });
             }
 
             // Add favorite buttons to resources

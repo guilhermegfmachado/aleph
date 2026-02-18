@@ -21,6 +21,17 @@ const allNodes = [
     { id: "humanites", label: "Humanités", group: "section", parent: "reverie" },
 ];
 
+// Pre-defined angles for the 4 categories so they spread into 4 quadrants
+const categoryAngles = {
+    archive:  -Math.PI * 0.75, // top-left
+    atelier:  -Math.PI * 0.25, // top-right
+    enquete:   Math.PI * 0.25, // bottom-right
+    reverie:   Math.PI * 0.75  // bottom-left
+};
+
+// Position cache — preserves node positions across expand/collapse
+const nodePositions = {};
+
 // Track expanded nodes - start with nothing expanded (only root shows)
 let expandedNodes = new Set();
 let resourceNodes = [];
@@ -90,6 +101,8 @@ function initNetwork(containerId) {
     if (!container || typeof d3 === 'undefined') return;
 
     extractResources();
+    // Clear position cache on full reinit so nodes spread fresh
+    Object.keys(nodePositions).forEach(k => delete nodePositions[k]);
 
     width = container.clientWidth;
     height = Math.max(650, window.innerHeight - 200);
@@ -130,32 +143,49 @@ function updateNetwork() {
     // Stop old simulation
     if (simulation) simulation.stop();
 
-    // Fix root position (pin to center, set initial x/y too so it doesn't jump)
+    // Seed positions: root pinned at center; existing nodes restored from cache;
+    // new category nodes placed at preset angles; new others spawned near parent.
     data.nodes.forEach(n => {
         if (n.id === "root") {
             n.fx = width / 2;
             n.fy = height / 2;
-            n.x = width / 2;
-            n.y = height / 2;
+            n.x  = width / 2;
+            n.y  = height / 2;
+            return;
+        }
+        if (nodePositions[n.id]) {
+            n.x = nodePositions[n.id].x;
+            n.y = nodePositions[n.id].y;
+        } else if (n.group === "category" && categoryAngles[n.id] !== undefined) {
+            const angle = categoryAngles[n.id];
+            n.x = width  / 2 + Math.cos(angle) * 140;
+            n.y = height / 2 + Math.sin(angle) * 140;
+        } else {
+            // Spawn near parent
+            const parent = data.nodes.find(p => p.id === n.parent);
+            const px = parent?.x ?? width  / 2;
+            const py = parent?.y ?? height / 2;
+            n.x = px + (Math.random() - 0.5) * 60;
+            n.y = py + (Math.random() - 0.5) * 60;
         }
     });
 
-    // Create simulation
+    // Create simulation (original physics)
     simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(d => {
-                if (d.target.group === "resource") return 60;
-                if (d.target.group === "section") return 110;
-                return 140;
+                if (d.target.group === "resource") return 55;
+                if (d.target.group === "section") return 100;
+                return 130;
             })
-            .strength(d => d.target.group === "resource" ? 0.8 : 0.5))
+            .strength(d => d.target.group === "resource" ? 0.9 : 0.4))
         .force("charge", d3.forceManyBody()
-            .strength(d => d.group === "resource" ? -15 : -80))
-        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.005))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 8))
-        .alphaDecay(0.03)
-        .velocityDecay(0.85);
+            .strength(d => d.group === "resource" ? -20 : -200))
+        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.01))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 10))
+        .alphaDecay(0.005)
+        .velocityDecay(0.75);
 
     // Clear and redraw
     g.selectAll("*").remove();
@@ -238,6 +268,8 @@ function updateNetwork() {
                 d.x = Math.max(padding, Math.min(width - padding, d.x));
                 d.y = Math.max(padding, Math.min(height - padding, d.y));
             }
+            // Cache position for next update
+            nodePositions[d.id] = { x: d.x, y: d.y };
         });
 
         link.attr("x1", d => d.source.x)
@@ -250,7 +282,7 @@ function updateNetwork() {
 
     function dragstart(e) {
         if (e.subject.id === "root") return;
-        if (!e.active) simulation.alphaTarget(0.03).restart();
+        if (!e.active) simulation.alphaTarget(0.1).restart();
         e.subject.fx = e.subject.x;
         e.subject.fy = e.subject.y;
     }

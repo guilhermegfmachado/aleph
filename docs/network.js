@@ -158,8 +158,9 @@ function updateNetwork() {
             n.y = nodePositions[n.id].y;
         } else if (n.group === "category" && categoryAngles[n.id] !== undefined) {
             const angle = categoryAngles[n.id];
-            n.x = width  / 2 + Math.cos(angle) * 140;
-            n.y = height / 2 + Math.sin(angle) * 140;
+            // Start close to root so physics organically pushes them outward
+            n.x = width  / 2 + Math.cos(angle) * 35;
+            n.y = height / 2 + Math.sin(angle) * 35;
         } else {
             // Spawn near parent
             const parent = data.nodes.find(p => p.id === n.parent);

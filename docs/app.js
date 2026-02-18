@@ -91,6 +91,41 @@ async function loadLibrary() {
         }
     } catch (e) {}
 
+    // Load corpus manifest documents into browse library
+    try {
+        const resp = await fetch('data/corpus-manifest.json');
+        if (resp.ok) {
+            const data = await resp.json();
+            bookViewState.corpus = data;
+            const corpusBooks = [];
+            if (data.corpus) {
+                for (const [catKey, category] of Object.entries(data.corpus)) {
+                    const type = catKey.startsWith('legal') ? 'legal'
+                        : catKey.startsWith('business') ? 'business'
+                        : 'philosophy';
+                    (category.documents || []).forEach(doc => {
+                        const langs = Object.keys(doc.languages || {});
+                        const yearStr = doc.year ? ` (${doc.year})` : '';
+                        corpusBooks.push({
+                            id: 'corpus_' + doc.id,
+                            corpusId: doc.id,
+                            title: doc.title,
+                            author: doc.author || '',
+                            period: doc.period || '',
+                            year: doc.year || null,
+                            tags: doc.tags || [],
+                            source: category.name,
+                            type,
+                            snippet: `${category.name}${yearStr}. Available in: ${langs.join(', ')}.`,
+                            isCorpus: true
+                        });
+                    });
+                }
+            }
+            library.books = [...library.books, ...corpusBooks];
+        }
+    } catch (e) {}
+
     // Load texts (for full text search)
     try {
         const resp = await fetch('data/library-texts.json');
@@ -167,6 +202,10 @@ function getBookLink(book, query = '') {
     const q = query ? `&q=${encodeURIComponent(query)}` : '';
     if (book.isUserBook || String(book.id).startsWith('user_')) {
         return `book.html?user=${String(book.id).replace('user_', '')}${q}`;
+    }
+    if (book.isCorpus || String(book.id).startsWith('corpus_')) {
+        const corpusId = book.corpusId || String(book.id).replace('corpus_', '');
+        return `book.html?corpus=${corpusId}${q}`;
     }
     return `book.html?id=${book.id}${q}`;
 }

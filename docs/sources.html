@@ -537,9 +537,6 @@
                 <div class="controls-left">
                     <input type="text" id="search-input" class="search-input" placeholder="rechercher..." oninput="filterResources(this.value)">
                     <button class="ctrl-btn" onclick="randomResource()" title="Découverte aléatoire">ξ</button>
-                    <button class="ctrl-btn lang-btn active" id="lang-btn-all" onclick="setLangFilter('all', this)">all</button>
-                    <button class="ctrl-btn lang-btn" id="lang-btn-fr" onclick="setLangFilter('fr', this)">fr</button>
-                    <button class="ctrl-btn lang-btn" id="lang-btn-en" onclick="setLangFilter('en', this)">en</button>
                 </div>
                 <div class="controls-right">
                     <button class="ctrl-btn" onclick="toggleFullscreen()" title="Plein écran">⛶</button>
@@ -699,6 +696,98 @@
                     <div class="resource">
                         <div class="resource-name"><a href="https://kotobank.jp" target="_blank">Kotobank</a></div>
                         <div class="resource-desc">Portail de dictionnaires et encyclopédies japonais : Daijirin, Britannica Japan, termes spécialisés.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Japonaise</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.aozora.gr.jp" target="_blank">Aozora Bunko 青空文庫</a></div>
+                        <div class="resource-desc">Gutenberg japonais : 17 000+ œuvres en domaine public. Sōseki, Akutagawa, Mishima, Tanizaki — textes intégraux en kanji.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dl.ndl.go.jp" target="_blank">NDL Digital 国立国会図書館</a></div>
+                        <div class="resource-desc">Bibliothèque nationale numérique : livres rares Meiji-Taishō, manuscrits, journaux, gravures ukiyo-e et cartes historiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nichibunken.ac.jp" target="_blank">NICHIBUNKEN 国際日本文化研究センター</a></div>
+                        <div class="resource-desc">Centre international d'études japonaises : archives de recherche, images historiques, base de données de littérature classique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ninjal.ac.jp" target="_blank">NINJAL 国立国語研究所</a></div>
+                        <div class="resource-desc">Institut national de linguistique japonaise : corpus de langue classique et contemporaine, dictionnaires historiques.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Allemande</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.deutschestextarchiv.de" target="_blank">Deutsches Textarchiv</a></div>
+                        <div class="resource-desc">Textes allemands historiques du 16e au 19e siècle en plein texte : Goethe, Schiller, Kant, Luther. Annotations linguistiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.zeno.org" target="_blank">Zeno.org</a></div>
+                        <div class="resource-desc">Bibliothèque numérique germanophone : littérature, philosophie, histoire. Textes intégraux consultables, focus germanistique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://gutenberg.spiegel.de" target="_blank">Projekt Gutenberg-DE</a></div>
+                        <div class="resource-desc">Gutenberg allemand : milliers d'œuvres en domaine public en langue allemande. Présentation soignée, lecture en ligne.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://de.wikisource.org" target="_blank">Wikisource DE</a></div>
+                        <div class="resource-desc">Textes sources allemands libres : Nietzsche, Hegel, Kafka, journaux historiques. Transcriptions collaboratives.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Tchèque</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ndk.cz" target="_blank">Národní digitální knihovna</a></div>
+                        <div class="resource-desc">Bibliothèque nationale numérique tchèque : périodiques historiques, livres anciens, manuscrits. Recherche plein texte en tchèque.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ucl.cas.cz" target="_blank">Ústav pro českou literaturu</a></div>
+                        <div class="resource-desc">Institut de littérature tchèque (Académie des sciences) : bibliographies, dictionnaires, histoire littéraire de Bohème.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cs.wikisource.org" target="_blank">Wikizdroje</a></div>
+                        <div class="resource-desc">Wikisource tchèque : Čapek, Neruda, Mácha, Hašek en texte intégral. Textes classiques de la littérature nationale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.manuscriptorium.com" target="_blank">Manuscriptorium</a></div>
+                        <div class="resource-desc">Manuscrits médiévaux d'Europe centrale numérisés : codex bohémiens, chartes, enluminures. Coopération bibliothèques tchèques.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Polonaise</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://polona.pl" target="_blank">Polona</a></div>
+                        <div class="resource-desc">Bibliothèque nationale polonaise numérique : 5+ millions d'objets, manuscrits, affiches, partitions. Interface remarquable.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://wolnelektury.pl" target="_blank">Wolne Lektury</a></div>
+                        <div class="resource-desc">Gutenberg polonais : textes scolaires et classiques en domaine public. Mickiewicz, Słowacki, Prus, Sienkiewicz.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://rcin.org.pl" target="_blank">RCIN</a></div>
+                        <div class="resource-desc">Collections numériques de recherche polonaises (PAN) : archives scientifiques, publications de l'Académie des sciences.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Hongroise</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mek.oszk.hu" target="_blank">Magyar Elektronikus Könyvtár</a></div>
+                        <div class="resource-desc">Bibliothèque électronique hongroise : Petőfi, Arany, Ady, Babits. Littérature nationale intégrale en domaine public.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://arcanum.hu" target="_blank">Arcanum</a></div>
+                        <div class="resource-desc">Archives numérisées hongroises : journaux historiques, encyclopédies, cartes. Moteur de recherche plein texte OCR.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://hu.wikisource.org" target="_blank">Wikiforrás</a></div>
+                        <div class="resource-desc">Wikisource hongroise : textes sources libres en hongrois. Classiques littéraires et documents historiques.</div>
                     </div>
                 </div>
 
@@ -1218,6 +1307,74 @@
                     </div>
                 </div>
 
+                <h3>Vêtements Vintage — Lisbonne</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.aoutrafacedualua.com" target="_blank">A Outra Face da Lua</a></div>
+                        <div class="resource-desc">Institution du vintage lisbonnite près de l'Intendente : robes années 50-70, tapisseries, disques. Dense, dense, dense.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://deadstocklisboa.com" target="_blank">Dead Stock Lisboa</a></div>
+                        <div class="resource-desc">Deadstock authentique et vintage de qualité. Stock invendu d'époques passées, pièces rares. Intendente.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.humana-portugal.org" target="_blank">Humana Portugal</a></div>
+                        <div class="resource-desc">Réseau de friperies solidaires à Lisbonne : tarifs accessibles, rotation de stock rapide. ONG international.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.kindastore.pt" target="_blank">Kinda Store</a></div>
+                        <div class="resource-desc">Vintage et seconde main sélectionné à Lisbonne : pièces curatées, mix décennies 80-00.</div>
+                    </div>
+                </div>
+
+                <h3>Vêtements Vintage — Paris</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://espacekiliwatch.fr" target="_blank">Kiliwatch</a></div>
+                        <div class="resource-desc">Institution parisienne du Sentier depuis 1991 : vintage américain, workwear, denim. Références militaires et sportswear.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.freepstar.com" target="_blank">Free'P'Star</a></div>
+                        <div class="resource-desc">Vintage accessible au Marais et Châtelet : prix raisonnables, bon turnover. Idéal pour trouver des basiques rétro.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.episode.eu" target="_blank">Episode</a></div>
+                        <div class="resource-desc">Chaîne vintage européenne avec grande surface à Paris : sélection volumineuse, bon rapport qualité/prix.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.thanxgod.com" target="_blank">Thanx God I'm A VIP</a></div>
+                        <div class="resource-desc">Vintage designer haut de gamme au Marais : Chanel, Dior, Saint Laurent. Pièces collector et rare finds.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.emmaus.fr" target="_blank">Emmaüs</a></div>
+                        <div class="resource-desc">Mouvement solidaire : friperies en Île-de-France avec mobilier, vêtements, livres. Inconstant mais parfois exceptionnel.</div>
+                    </div>
+                </div>
+
+                <h3>Vêtements Vintage — Berlin</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.humana-second-hand.de" target="_blank">Humana Berlin</a></div>
+                        <div class="resource-desc">Chaîne emblématique berlinoise : plusieurs grandes surfaces (Mitte, Prenzlauer Berg, Friedrichshain). Prix fixes, volume immense.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://garagecompany.de" target="_blank">Garage</a></div>
+                        <div class="resource-desc">Institution de Wilmersdorf depuis les années 80 : vintage au kilo, grandes quantités. Vente au poids le week-end.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.prachtmaedchen.de" target="_blank">Prachtmädchen</a></div>
+                        <div class="resource-desc">Vintage féminin curaté à Prenzlauer Berg : robes imprimées, manteaux de laine, accessoires. Sélection soignée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://veras-vintage.de" target="_blank">VERAS</a></div>
+                        <div class="resource-desc">Vintage contemporain et rétro à Mitte : focus qualité, pièces des années 70-90. Ambiance boutique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.kleidermarkt.de" target="_blank">Kleidermarkt</a></div>
+                        <div class="resource-desc">Marchés vintage itinérants à Berlin et dans toute l'Allemagne. Calendrier des foires, vente de particuliers.</div>
+                    </div>
+                </div>
+
                 <h3>Vélos & Instruments</h3>
                 <div class="resources">
                     <div class="resource">
@@ -1535,47 +1692,6 @@
                 trackVisit(link.textContent, link.href);
                 window.open(link.href, '_blank');
             }
-        }
-
-        // ===== LANGUAGE FILTER =====
-        const frenchSites = ['gallica', 'bnf.fr', 'legifrance', 'persee', 'cairn', 'openedition', 'revues.org', 'vie-publique', 'senat.fr', 'assemblee-nationale', 'gouvernement.fr', 'service-public', 'insee', 'culture.gouv', 'education.gouv', 'sncf', 'ratp', 'merci-merci', 'selency', 'vinted.fr', 'france'];
-        const englishSites = ['gutenberg', 'archive.org', 'perseus', 'sacred-texts', 'jstor', 'stanford', 'mit.edu', 'yale', 'harvard', 'oxford', 'cambridge', 'cornell', 'wikipedia.org', 'wikisource', '.gov', '.uk', 'github', 'hathitrust', 'google', 'loc.gov', 'sec.gov', 'congress.gov'];
-
-        function detectLang(url) {
-            url = url.toLowerCase();
-            if (frenchSites.some(s => url.includes(s))) return 'fr';
-            if (englishSites.some(s => url.includes(s))) return 'en';
-            if (url.includes('.fr')) return 'fr';
-            if (url.includes('.de') || url.includes('.at')) return 'de';
-            if (url.includes('.jp') || url.includes('.co.jp')) return 'jp';
-            return 'en'; // default
-        }
-
-        function setLangFilter(lang, btn) {
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            filterByLang(lang);
-        }
-
-        function filterByLang(lang) {
-            const resources = document.querySelectorAll('.resource');
-            resources.forEach(resource => {
-                const link = resource.querySelector('.resource-name a');
-                if (!link) return;
-                const resourceLang = detectLang(link.href);
-                if (lang === 'all') {
-                    resource.style.display = '';
-                } else if (lang === 'fr') {
-                    resource.style.display = resourceLang === 'fr' ? '' : 'none';
-                } else if (lang === 'en') {
-                    resource.style.display = (resourceLang === 'en' || resourceLang === 'de' || resourceLang === 'jp') ? '' : 'none';
-                }
-            });
-            // Update section visibility
-            document.querySelectorAll('.source-section').forEach(section => {
-                const visibleResources = section.querySelectorAll('.resource:not([style*="display: none"])');
-                section.style.display = visibleResources.length > 0 ? '' : 'none';
-            });
         }
 
         // ===== KEYBOARD =====

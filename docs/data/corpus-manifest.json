@@ -985,10 +985,558 @@
           "tags": ["political philosophy", "sovereignty", "social contract", "state"]
         }
       ]
+    },
+    "philosophy_continental": {
+      "name": "Continental Philosophy",
+      "documents": [
+        {
+          "id": "descartes-meditations",
+          "title": "Meditations on First Philosophy",
+          "author": "René Descartes",
+          "period": "early_modern",
+          "year": 1641,
+          "languages": {
+            "la": { "source": "gutenberg", "title": "Meditationes de Prima Philosophia" },
+            "en": { "source": "gutenberg", "gutenberg_id": 59 },
+            "fr": { "source": "wikisource", "title": "Méditations métaphysiques" }
+          },
+          "tags": ["rationalism", "cogito", "dualism", "epistemology"]
+        },
+        {
+          "id": "spinoza-ethics",
+          "title": "Ethics",
+          "author": "Baruch Spinoza",
+          "period": "early_modern",
+          "year": 1677,
+          "languages": {
+            "la": { "source": "gutenberg", "title": "Ethica" },
+            "en": { "source": "gutenberg", "gutenberg_id": 3800 }
+          },
+          "tags": ["pantheism", "determinism", "monism", "geometric method"]
+        },
+        {
+          "id": "hume-enquiry",
+          "title": "An Enquiry Concerning Human Understanding",
+          "author": "David Hume",
+          "period": "modern",
+          "year": 1748,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 9662 }
+          },
+          "tags": ["empiricism", "causality", "scepticism", "induction"]
+        },
+        {
+          "id": "kant-critique-pure-reason",
+          "title": "Critique of Pure Reason",
+          "author": "Immanuel Kant",
+          "period": "modern",
+          "year": 1781,
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Kritik der reinen Vernunft" },
+            "en": { "source": "gutenberg", "gutenberg_id": 4280 }
+          },
+          "tags": ["transcendental idealism", "synthetic a priori", "space", "time", "categories"]
+        },
+        {
+          "id": "hegel-phenomenology",
+          "title": "Phenomenology of Spirit",
+          "author": "G.W.F. Hegel",
+          "period": "modern",
+          "year": 1807,
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Phänomenologie des Geistes" },
+            "en": { "source": "archive" },
+            "fr": { "source": "wikisource", "title": "Phénoménologie de l'Esprit" }
+          },
+          "tags": ["dialectic", "absolute idealism", "consciousness", "spirit", "master-slave"]
+        },
+        {
+          "id": "schopenhauer-world-will",
+          "title": "The World as Will and Representation",
+          "author": "Arthur Schopenhauer",
+          "period": "modern",
+          "year": 1818,
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Die Welt als Wille und Vorstellung" },
+            "en": { "source": "gutenberg", "gutenberg_id": 38427 }
+          },
+          "tags": ["pessimism", "will", "aesthetics", "asceticism", "representation"]
+        },
+        {
+          "id": "nietzsche-beyond-good-evil",
+          "title": "Beyond Good and Evil",
+          "author": "Friedrich Nietzsche",
+          "period": "modern",
+          "year": 1886,
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Jenseits von Gut und Böse" },
+            "en": { "source": "gutenberg", "gutenberg_id": 4363 },
+            "fr": { "source": "wikisource", "title": "Par-delà bien et mal" }
+          },
+          "tags": ["will to power", "master morality", "perspectivism", "übermensch"]
+        },
+        {
+          "id": "nietzsche-zarathustra",
+          "title": "Thus Spoke Zarathustra",
+          "author": "Friedrich Nietzsche",
+          "period": "modern",
+          "year": 1883,
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Also sprach Zarathustra" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1998 },
+            "fr": { "source": "wikisource", "title": "Ainsi parlait Zarathoustra" }
+          },
+          "tags": ["eternal recurrence", "übermensch", "nihilism", "literary philosophy"]
+        },
+        {
+          "id": "marx-communist-manifesto",
+          "title": "The Communist Manifesto",
+          "author": "Karl Marx & Friedrich Engels",
+          "period": "modern",
+          "year": 1848,
+          "languages": {
+            "de": { "source": "gutenberg", "title": "Manifest der Kommunistischen Partei" },
+            "en": { "source": "gutenberg", "gutenberg_id": 61 },
+            "fr": { "source": "wikisource", "title": "Manifeste du Parti communiste" }
+          },
+          "tags": ["communism", "class struggle", "historical materialism", "proletariat"]
+        }
+      ]
+    },
+    "literature_epic": {
+      "name": "Epic & Classical Literature",
+      "documents": [
+        {
+          "id": "homer-iliad",
+          "title": "The Iliad",
+          "author": "Homer",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἰλιάς" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2199 },
+            "fr": { "source": "wikisource", "title": "L'Iliade" }
+          },
+          "tags": ["epic", "trojan war", "achilles", "greek mythology", "oral tradition"]
+        },
+        {
+          "id": "homer-odyssey",
+          "title": "The Odyssey",
+          "author": "Homer",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ὀδύσσεια" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1727 },
+            "fr": { "source": "wikisource", "title": "L'Odyssée" }
+          },
+          "tags": ["epic", "odysseus", "nostos", "greek mythology", "journey"]
+        },
+        {
+          "id": "virgil-aeneid",
+          "title": "The Aeneid",
+          "author": "Virgil",
+          "period": "classical",
+          "languages": {
+            "la": { "source": "perseus", "title": "Aeneis" },
+            "en": { "source": "gutenberg", "gutenberg_id": 227 },
+            "fr": { "source": "wikisource", "title": "L'Énéide" }
+          },
+          "tags": ["epic", "rome", "trojan war", "founding myth", "latin poetry"]
+        },
+        {
+          "id": "dante-divine-comedy",
+          "title": "The Divine Comedy",
+          "author": "Dante Alighieri",
+          "period": "medieval",
+          "year": 1320,
+          "languages": {
+            "it": { "source": "wikisource", "title": "Divina Commedia" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8800 },
+            "fr": { "source": "wikisource", "title": "La Divine Comédie" },
+            "la": { "source": "archive" }
+          },
+          "tags": ["allegory", "afterlife", "hell", "purgatory", "paradise", "scholasticism"]
+        },
+        {
+          "id": "cervantes-don-quixote",
+          "title": "Don Quixote",
+          "author": "Miguel de Cervantes",
+          "period": "early_modern",
+          "year": 1605,
+          "languages": {
+            "es": { "source": "gutenberg", "title": "Don Quijote de la Mancha" },
+            "en": { "source": "gutenberg", "gutenberg_id": 996 },
+            "fr": { "source": "wikisource", "title": "Don Quichotte" }
+          },
+          "tags": ["novel", "chivalry", "satire", "reality vs illusion", "first modern novel"]
+        },
+        {
+          "id": "goethe-faust",
+          "title": "Faust",
+          "author": "Johann Wolfgang von Goethe",
+          "period": "modern",
+          "year": 1808,
+          "languages": {
+            "de": { "source": "gutenberg", "gutenberg_id": 2229 },
+            "en": { "source": "gutenberg", "gutenberg_id": 14591 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["tragedy", "pact with devil", "striving", "knowledge", "german classicism"]
+        },
+        {
+          "id": "milton-paradise-lost",
+          "title": "Paradise Lost",
+          "author": "John Milton",
+          "period": "early_modern",
+          "year": 1667,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 26 }
+          },
+          "tags": ["epic", "fall of man", "satan", "epic poetry", "puritanism"]
+        }
+      ]
+    },
+    "literature_drama": {
+      "name": "Drama",
+      "documents": [
+        {
+          "id": "sophocles-oedipus-rex",
+          "title": "Oedipus Rex",
+          "author": "Sophocles",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Οἰδίπους Τύραννος" },
+            "en": { "source": "gutenberg", "gutenberg_id": 31 },
+            "fr": { "source": "wikisource", "title": "Œdipe Roi" }
+          },
+          "tags": ["tragedy", "fate", "prophecy", "recognition", "greek drama"]
+        },
+        {
+          "id": "aeschylus-oresteia",
+          "title": "The Oresteia",
+          "author": "Aeschylus",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ὀρέστεια" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8713 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["tragedy", "justice", "vengeance", "greek drama", "atrides"]
+        },
+        {
+          "id": "shakespeare-hamlet",
+          "title": "Hamlet",
+          "author": "William Shakespeare",
+          "period": "early_modern",
+          "year": 1603,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 1524 },
+            "fr": { "source": "wikisource" },
+            "de": { "source": "wikisource" }
+          },
+          "tags": ["tragedy", "revenge", "madness", "mortality", "theatre"]
+        },
+        {
+          "id": "shakespeare-king-lear",
+          "title": "King Lear",
+          "author": "William Shakespeare",
+          "period": "early_modern",
+          "year": 1606,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 1532 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["tragedy", "power", "old age", "family", "madness", "theatre"]
+        },
+        {
+          "id": "moliere-tartuffe",
+          "title": "Tartuffe",
+          "author": "Molière",
+          "period": "early_modern",
+          "year": 1664,
+          "languages": {
+            "fr": { "source": "wikisource" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2027 }
+          },
+          "tags": ["comedy", "hypocrisy", "religion", "satire", "french classicism"]
+        },
+        {
+          "id": "ibsen-hedda-gabler",
+          "title": "Hedda Gabler",
+          "author": "Henrik Ibsen",
+          "period": "modern",
+          "year": 1890,
+          "languages": {
+            "no": { "source": "gutenberg" },
+            "en": { "source": "gutenberg", "gutenberg_id": 4093 },
+            "fr": { "source": "wikisource" },
+            "de": { "source": "gutenberg" }
+          },
+          "tags": ["realism", "feminism", "bourgeois society", "freedom", "drama"]
+        }
+      ]
+    },
+    "science_classics": {
+      "name": "Scientific Foundations",
+      "documents": [
+        {
+          "id": "euclid-elements",
+          "title": "Elements",
+          "author": "Euclid",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Στοιχεῖα" },
+            "en": { "source": "gutenberg", "gutenberg_id": 21076 }
+          },
+          "tags": ["geometry", "mathematics", "axioms", "proof", "number theory"]
+        },
+        {
+          "id": "copernicus-revolutions",
+          "title": "On the Revolutions of the Celestial Spheres",
+          "author": "Nicolaus Copernicus",
+          "period": "early_modern",
+          "year": 1543,
+          "languages": {
+            "la": { "source": "archive", "title": "De revolutionibus orbium coelestium" },
+            "en": { "source": "archive" }
+          },
+          "tags": ["heliocentrism", "astronomy", "scientific revolution", "cosmology"]
+        },
+        {
+          "id": "galileo-dialogues",
+          "title": "Dialogue Concerning the Two Chief World Systems",
+          "author": "Galileo Galilei",
+          "period": "early_modern",
+          "year": 1632,
+          "languages": {
+            "it": { "source": "archive", "title": "Dialogo sopra i due massimi sistemi del mondo" },
+            "en": { "source": "archive" }
+          },
+          "tags": ["heliocentrism", "inquisition", "mechanics", "scientific method"]
+        },
+        {
+          "id": "newton-principia",
+          "title": "Principia Mathematica",
+          "author": "Isaac Newton",
+          "period": "early_modern",
+          "year": 1687,
+          "languages": {
+            "la": { "source": "archive", "title": "Philosophiæ Naturalis Principia Mathematica" },
+            "en": { "source": "gutenberg", "gutenberg_id": 28233 }
+          },
+          "tags": ["gravity", "mechanics", "calculus", "laws of motion", "scientific revolution"]
+        },
+        {
+          "id": "darwin-origin-species",
+          "title": "On the Origin of Species",
+          "author": "Charles Darwin",
+          "period": "modern",
+          "year": 1859,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 1228 },
+            "fr": { "source": "wikisource", "title": "De l'origine des espèces" },
+            "de": { "source": "gutenberg", "title": "Die Entstehung der Arten" }
+          },
+          "tags": ["evolution", "natural selection", "biology", "adaptation", "species"]
+        },
+        {
+          "id": "darwin-descent-man",
+          "title": "The Descent of Man",
+          "author": "Charles Darwin",
+          "period": "modern",
+          "year": 1871,
+          "languages": {
+            "en": { "source": "gutenberg", "gutenberg_id": 2300 }
+          },
+          "tags": ["evolution", "human origins", "sexual selection", "anthropology"]
+        },
+        {
+          "id": "freud-interpretation-dreams",
+          "title": "The Interpretation of Dreams",
+          "author": "Sigmund Freud",
+          "period": "modern",
+          "year": 1899,
+          "languages": {
+            "de": { "source": "archive", "title": "Die Traumdeutung" },
+            "en": { "source": "archive" },
+            "fr": { "source": "archive", "title": "L'Interprétation des rêves" }
+          },
+          "tags": ["psychoanalysis", "unconscious", "dream symbolism", "wish fulfillment"]
+        }
+      ]
+    },
+    "history_classical": {
+      "name": "Classical Historiography",
+      "documents": [
+        {
+          "id": "herodotus-histories",
+          "title": "The Histories",
+          "author": "Herodotus",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἱστορίαι" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2456 },
+            "fr": { "source": "wikisource", "title": "Histoires" }
+          },
+          "tags": ["ancient history", "persian wars", "ethnography", "inquiry", "father of history"]
+        },
+        {
+          "id": "thucydides-peloponnesian",
+          "title": "History of the Peloponnesian War",
+          "author": "Thucydides",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus" },
+            "en": { "source": "gutenberg", "gutenberg_id": 7142 },
+            "fr": { "source": "wikisource", "title": "La Guerre du Péloponnèse" }
+          },
+          "tags": ["ancient history", "athens", "sparta", "war", "realism", "power politics"]
+        },
+        {
+          "id": "caesar-gallic-wars",
+          "title": "The Gallic Wars",
+          "author": "Julius Caesar",
+          "period": "classical",
+          "languages": {
+            "la": { "source": "perseus", "title": "Commentarii de Bello Gallico" },
+            "en": { "source": "gutenberg", "gutenberg_id": 10657 },
+            "fr": { "source": "wikisource", "title": "La Guerre des Gaules" }
+          },
+          "tags": ["roman history", "gaul", "military", "autobiography", "conquest"]
+        },
+        {
+          "id": "tacitus-annals",
+          "title": "Annals",
+          "author": "Tacitus",
+          "period": "classical",
+          "languages": {
+            "la": { "source": "perseus", "title": "Annales" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2395 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["roman empire", "emperors", "tyranny", "historiography", "latin prose"]
+        },
+        {
+          "id": "plutarch-parallel-lives",
+          "title": "Parallel Lives",
+          "author": "Plutarch",
+          "period": "classical",
+          "languages": {
+            "grc": { "source": "perseus", "title": "Βίοι Παράλληλοι" },
+            "en": { "source": "gutenberg", "gutenberg_id": 674 },
+            "fr": { "source": "wikisource", "title": "Vies parallèles" }
+          },
+          "tags": ["biography", "greek and roman heroes", "moral philosophy", "comparative"]
+        },
+        {
+          "id": "sun-tzu-art-of-war",
+          "title": "The Art of War",
+          "author": "Sun Tzu",
+          "period": "classical",
+          "languages": {
+            "zh": { "source": "ctext", "title": "孫子兵法" },
+            "en": { "source": "gutenberg", "gutenberg_id": 132 },
+            "fr": { "source": "wikisource", "title": "L'Art de la guerre" }
+          },
+          "tags": ["strategy", "military", "chinese classics", "deception", "leadership"]
+        }
+      ]
+    },
+    "sacred_texts": {
+      "name": "Sacred & Foundational Texts",
+      "documents": [
+        {
+          "id": "tao-te-ching",
+          "title": "Tao Te Ching",
+          "author": "Laozi",
+          "period": "classical",
+          "languages": {
+            "zh": { "source": "ctext", "title": "道德經" },
+            "en": { "source": "gutenberg", "gutenberg_id": 216 },
+            "fr": { "source": "wikisource", "title": "Tao Te King" },
+            "de": { "source": "gutenberg" }
+          },
+          "tags": ["taoism", "wu wei", "nature", "simplicity", "chinese philosophy"]
+        },
+        {
+          "id": "analects-confucius",
+          "title": "The Analects",
+          "author": "Confucius",
+          "period": "classical",
+          "languages": {
+            "zh": { "source": "ctext", "title": "論語" },
+            "en": { "source": "gutenberg", "gutenberg_id": 4094 },
+            "fr": { "source": "wikisource", "title": "Entretiens de Confucius" }
+          },
+          "tags": ["confucianism", "virtue", "rites", "humaneness", "chinese philosophy"]
+        },
+        {
+          "id": "bhagavad-gita",
+          "title": "Bhagavad Gita",
+          "author": "Vyasa",
+          "period": "classical",
+          "languages": {
+            "sa": { "source": "archive", "title": "भगवद्गीता" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2388 },
+            "fr": { "source": "wikisource", "title": "Bhagavad-Gîtâ" }
+          },
+          "tags": ["hinduism", "duty", "yoga", "dharma", "moksha", "vedanta"]
+        },
+        {
+          "id": "dhammapada",
+          "title": "Dhammapada",
+          "author": "Buddha",
+          "period": "classical",
+          "languages": {
+            "pi": { "source": "archive", "title": "Dhammapada" },
+            "en": { "source": "gutenberg", "gutenberg_id": 2017 },
+            "fr": { "source": "wikisource" }
+          },
+          "tags": ["buddhism", "ethics", "mind", "karma", "suffering", "pali canon"]
+        },
+        {
+          "id": "augustine-confessions",
+          "title": "Confessions",
+          "author": "Augustine of Hippo",
+          "period": "classical",
+          "year": 401,
+          "languages": {
+            "la": { "source": "gutenberg", "title": "Confessiones" },
+            "en": { "source": "gutenberg", "gutenberg_id": 3296 },
+            "fr": { "source": "wikisource", "title": "Confessions" }
+          },
+          "tags": ["christianity", "autobiography", "theology", "neoplatonism", "conversion"]
+        },
+        {
+          "id": "kempis-imitation-christ",
+          "title": "The Imitation of Christ",
+          "author": "Thomas à Kempis",
+          "period": "medieval",
+          "year": 1418,
+          "languages": {
+            "la": { "source": "gutenberg", "title": "De Imitatione Christi" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1653 },
+            "fr": { "source": "wikisource", "title": "L'Imitation de Jésus-Christ" }
+          },
+          "tags": ["christianity", "mysticism", "devotion", "humility", "medieval spirituality"]
+        },
+        {
+          "id": "ibn-khaldun-muqaddimah",
+          "title": "The Muqaddimah",
+          "author": "Ibn Khaldun",
+          "period": "medieval",
+          "year": 1377,
+          "languages": {
+            "ar": { "source": "archive", "title": "مقدمة ابن خلدون" },
+            "en": { "source": "archive" },
+            "fr": { "source": "archive", "title": "Discours sur l'histoire universelle" }
+          },
+          "tags": ["history", "sociology", "islamic philosophy", "asabiyyah", "cyclical theory"]
+        }
+      ]
     }
   },
   "stats": {
-    "total_documents": 85,
+    "total_documents": 143,
     "categories": {
       "eu_law": 28,
       "international_law": 14,
@@ -996,9 +1544,15 @@
       "uk_law": 5,
       "business_governance": 12,
       "economics": 5,
-      "philosophy": 6,
-      "foundations": 9
+      "philosophy_core": 6,
+      "philosophy_continental": 9,
+      "literature_epic": 7,
+      "literature_drama": 6,
+      "science_classics": 7,
+      "history_classical": 6,
+      "sacred_texts": 7,
+      "legal_foundations": 3
     },
-    "languages": ["en", "fr", "de", "es", "it", "pt", "nl", "pl", "ru", "ar", "zh", "grc", "la", "he"]
+    "languages": ["en", "fr", "de", "es", "it", "pt", "nl", "pl", "ru", "ar", "zh", "grc", "la", "he", "sa", "pi", "no", "akk"]
   }
 }

@@ -130,11 +130,13 @@ function updateNetwork() {
     // Stop old simulation
     if (simulation) simulation.stop();
 
-    // Fix root position
+    // Fix root position (pin to center, set initial x/y too so it doesn't jump)
     data.nodes.forEach(n => {
         if (n.id === "root") {
             n.fx = width / 2;
             n.fy = height / 2;
+            n.x = width / 2;
+            n.y = height / 2;
         }
     });
 
@@ -247,20 +249,20 @@ function updateNetwork() {
     });
 
     function dragstart(e) {
-        if (e.subject.fixed) return;
+        if (e.subject.id === "root") return;
         if (!e.active) simulation.alphaTarget(0.1).restart();
         e.subject.fx = e.subject.x;
         e.subject.fy = e.subject.y;
     }
 
     function dragging(e) {
-        if (e.subject.fixed) return;
+        if (e.subject.id === "root") return;
         e.subject.fx = Math.max(padding, Math.min(width - padding, e.x));
         e.subject.fy = Math.max(padding, Math.min(height - padding, e.y));
     }
 
     function dragend(e) {
-        if (e.subject.fixed) return;
+        if (e.subject.id === "root") return;
         if (!e.active) simulation.alphaTarget(0);
         e.subject.fx = null;
         e.subject.fy = null;

@@ -626,59 +626,79 @@ function toggleLanguage(lang) {
 }
 window.toggleLanguage = toggleLanguage;
 
+function getSourceUrl(source, langInfo, lang, book) {
+    const title = encodeURIComponent(langInfo.title || book.title);
+    const sourceUrls = {
+        gutenberg: langInfo.gutenberg_id
+            ? `https://www.gutenberg.org/ebooks/${langInfo.gutenberg_id}`
+            : `https://www.gutenberg.org/ebooks/search/?query=${title}`,
+        eurlex: book.celex
+            ? `https://eur-lex.europa.eu/legal-content/${lang.toUpperCase()}/TXT/?uri=CELEX:${book.celex}`
+            : `https://eur-lex.europa.eu`,
+        wikisource: `https://${lang === 'grc' ? 'el' : lang}.wikisource.org/wiki/Special:Search?search=${title}`,
+        perseus: `https://www.perseus.tufts.edu/hopper/search?q=${title}`,
+        archive: `https://archive.org/search?query=${title}`,
+        ctext: `https://ctext.org/search.pl?if=gb&search=${title}`,
+        un: `https://www.un.org/en/search/index.html?q=${title}`,
+        uncitral: `https://uncitral.un.org`,
+        wto: `https://docs.wto.org`,
+        sec: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=10-K`,
+        echr: `https://hudoc.echr.coe.int`,
+        icj: `https://www.icj-cij.org`,
+        avalon: `https://avalon.law.yale.edu`,
+        bis: `https://www.bis.org/basel_framework/`,
+        'legislation.gov.uk': `https://www.legislation.gov.uk`,
+        'ifrs.org': `https://www.ifrs.org/issued-standards/`,
+        'fsb-tcfd.org': `https://www.fsb-tcfd.org/recommendations/`,
+        worldbank: `https://icsid.worldbank.org`,
+        'latin-library': `https://thelatinlibrary.com`,
+        'constitution.org': `https://constitution.org`,
+        'frc.org.uk': `https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/`
+    };
+    return sourceUrls[source] || null;
+}
+
+function renderCorpusLinks(langs, book) {
+    return langs.map(lang => {
+        const langInfo = book.languages[lang] || {};
+        const url = getSourceUrl(langInfo.source, langInfo, lang, book);
+        const title = escapeHtml(langInfo.title || book.title);
+        const sourceName = langInfo.source || 'unknown';
+        return `
+            <div class="corpus-lang-row">
+                <span class="corpus-lang-label">${LANG_NAMES[lang] || lang.toUpperCase()}</span>
+                <span class="corpus-lang-title">${title}</span>
+                ${url
+                    ? `<a href="${url}" target="_blank" class="corpus-source-link">${sourceName} ↗</a>`
+                    : `<span class="corpus-source-label">${sourceName}</span>`}
+            </div>
+        `;
+    }).join('');
+}
+
 async function renderBookContent(query = null) {
     const contentDiv = document.getElementById('book-content');
     const book = bookViewState.book;
 
     if (!book) return;
 
-    // For corpus documents, show language-specific content
+    // For corpus documents, show source links per language
     if (book.isCorpus && book.languages) {
-        const langs = bookViewState.selectedLangs;
-
-        if (bookViewState.viewMode === 'parallel' && langs.length > 1) {
-            // Parallel view
-            contentDiv.className = `book-content parallel-view ${langs.length === 3 ? 'three-col' : ''}`;
-            contentDiv.innerHTML = langs.map(lang => {
-                const langInfo = book.languages[lang] || {};
-                const title = langInfo.title || book.title;
-                return `
-                    <div class="text-column" data-lang="${lang}">
-                        <div class="text-column-header">
-                            <span class="lang-label">${LANG_NAMES[lang] || lang}</span>
-                            <span class="lang-title">${escapeHtml(title)}</span>
-                        </div>
-                        <div class="text-body">
-                            <div class="placeholder-text">
-                                [${LANG_NAMES[lang] || lang} text from ${langInfo.source || 'source'}]
-                                <br><br>
-                                Full text will be loaded when corpus is populated.
-                                <br><br>
-                                Source: ${langInfo.source || 'unknown'}
-                                ${langInfo.gutenberg_id ? `<br>Gutenberg ID: ${langInfo.gutenberg_id}` : ''}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        } else {
-            // Single view
-            const lang = langs[0] || 'en';
-            const langInfo = book.languages[lang] || {};
-            contentDiv.className = 'book-content single-view';
-            contentDiv.innerHTML = `
-                <div class="text-body">
-                    <div class="placeholder-text">
-                        <strong>${LANG_NAMES[lang] || lang}</strong>: ${langInfo.title || book.title}
-                        <br><br>
-                        [Full text will be loaded when corpus is populated]
-                        <br><br>
-                        Source: ${langInfo.source || 'unknown'}
-                        ${langInfo.gutenberg_id ? `<br>Gutenberg ID: ${langInfo.gutenberg_id}` : ''}
-                    </div>
+        const allLangs = Object.keys(book.languages);
+        const yearStr = book.period ? ` · ${book.period}${book.year ? ' (' + book.year + ')' : ''}` : '';
+        contentDiv.className = 'book-content single-view';
+        contentDiv.innerHTML = `
+            <div class="corpus-links-view">
+                <p class="corpus-note">
+                    ${escapeHtml(book.title)}${yearStr}<br>
+                    Text not yet stored locally — read it at the source:
+                </p>
+                <div class="corpus-lang-list">
+                    ${renderCorpusLinks(allLangs, book)}
                 </div>
-            `;
-        }
+                ${book.tags?.length ? `<div class="corpus-tags">${book.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+            </div>
+        `;
     } else if (book.isPdf && book.pdfData) {
         // PDF - render with PDF.js
         contentDiv.classList.add('hidden');

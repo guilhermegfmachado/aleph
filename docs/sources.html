@@ -79,7 +79,7 @@
         /* Network Container */
         #network-container {
             width: 100%;
-            min-height: 650px;
+            min-height: 500px;
             background: var(--bg);
             border: 1px solid var(--border);
             margin-bottom: 2rem;
@@ -103,12 +103,35 @@
             display: none;
         }
 
+        /* Fullscreen exit button */
+        .fullscreen-exit {
+            display: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+            padding: 0.5rem 0.75rem;
+            font-family: inherit;
+            font-size: 0.85rem;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .fullscreen-exit:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        #network-container.fullscreen .fullscreen-exit {
+            display: block;
+        }
+
         /* Responsive network */
         @media (min-width: 1200px) {
-            #network-container { min-height: 750px; }
+            #network-container { min-height: 600px; }
         }
         @media (min-width: 1600px) {
-            #network-container { min-height: 850px; }
+            #network-container { min-height: 700px; }
         }
 
         /* Sidebar Panel */
@@ -527,7 +550,9 @@
             </div>
 
             <!-- Network View (default) -->
-            <div id="network-container"></div>
+            <div id="network-container">
+                <button class="fullscreen-exit" onclick="toggleFullscreen()">✕ quitter</button>
+            </div>
 
             <!-- List View -->
             <div id="list-container" class="hidden">

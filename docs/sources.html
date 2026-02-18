@@ -34,7 +34,7 @@
             background: var(--bg);
             border: 1px solid var(--border);
             color: var(--text);
-            width: 200px;
+            width: 140px;
         }
         .search-input:focus {
             outline: none;
@@ -514,11 +514,9 @@
                 <div class="controls-left">
                     <input type="text" id="search-input" class="search-input" placeholder="rechercher..." oninput="filterResources(this.value)">
                     <button class="ctrl-btn" onclick="randomResource()" title="Découverte aléatoire">ξ</button>
-                    <select id="lang-filter" class="ctrl-btn" onchange="filterByLang(this.value)" title="Filtrer par langue">
-                        <option value="all">🌐</option>
-                        <option value="fr">FR</option>
-                        <option value="en">EN</option>
-                    </select>
+                    <button class="ctrl-btn lang-btn active" id="lang-btn-all" onclick="setLangFilter('all', this)">all</button>
+                    <button class="ctrl-btn lang-btn" id="lang-btn-fr" onclick="setLangFilter('fr', this)">fr</button>
+                    <button class="ctrl-btn lang-btn" id="lang-btn-en" onclick="setLangFilter('en', this)">en</button>
                 </div>
                 <div class="controls-right">
                     <button class="ctrl-btn" onclick="toggleFullscreen()" title="Plein écran">⛶</button>
@@ -1526,6 +1524,12 @@
             if (url.includes('.de') || url.includes('.at')) return 'de';
             if (url.includes('.jp') || url.includes('.co.jp')) return 'jp';
             return 'en'; // default
+        }
+
+        function setLangFilter(lang, btn) {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterByLang(lang);
         }
 
         function filterByLang(lang) {

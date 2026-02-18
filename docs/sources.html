@@ -215,6 +215,43 @@
             color: var(--accent);
         }
 
+        /* Mobile improvements */
+        @media (max-width: 600px) {
+            .view-controls {
+                gap: 0.25rem;
+            }
+            .controls-left, .controls-right {
+                gap: 0.25rem;
+            }
+            .search-input {
+                width: 120px;
+                padding: 0.4rem 0.5rem;
+            }
+            .ctrl-btn {
+                padding: 0.5rem;
+                min-width: 36px;
+                min-height: 36px;
+            }
+            #network-container {
+                min-height: 400px;
+                touch-action: pan-x pan-y;
+            }
+            .sidebar-panel {
+                width: 85vw;
+                right: -90vw;
+            }
+            .resource {
+                padding: 1rem;
+            }
+            .resource-name {
+                font-size: 1rem;
+            }
+            .fav-btn {
+                font-size: 1.2rem;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+
         /* Tree Navigation */
         .sources-tree {
             display: flex;
@@ -477,6 +514,11 @@
                 <div class="controls-left">
                     <input type="text" id="search-input" class="search-input" placeholder="rechercher..." oninput="filterResources(this.value)">
                     <button class="ctrl-btn" onclick="randomResource()" title="Découverte aléatoire">ξ</button>
+                    <select id="lang-filter" class="ctrl-btn" onchange="filterByLang(this.value)" title="Filtrer par langue">
+                        <option value="all">🌐</option>
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                    </select>
                 </div>
                 <div class="controls-right">
                     <button class="ctrl-btn" onclick="toggleFullscreen()" title="Plein écran">⛶</button>
@@ -1464,12 +1506,47 @@
 
         // ===== RANDOM =====
         function randomResource() {
-            const allLinks = Array.from(document.querySelectorAll('.resource-name a'));
+            const allLinks = Array.from(document.querySelectorAll('.resource:not([style*="display: none"]) .resource-name a'));
             if (allLinks.length > 0) {
                 const link = allLinks[Math.floor(Math.random() * allLinks.length)];
                 trackVisit(link.textContent, link.href);
                 window.open(link.href, '_blank');
             }
+        }
+
+        // ===== LANGUAGE FILTER =====
+        const frenchSites = ['gallica', 'bnf.fr', 'legifrance', 'persee', 'cairn', 'openedition', 'revues.org', 'vie-publique', 'senat.fr', 'assemblee-nationale', 'gouvernement.fr', 'service-public', 'insee', 'culture.gouv', 'education.gouv', 'sncf', 'ratp', 'merci-merci', 'selency', 'vinted.fr', 'france'];
+        const englishSites = ['gutenberg', 'archive.org', 'perseus', 'sacred-texts', 'jstor', 'stanford', 'mit.edu', 'yale', 'harvard', 'oxford', 'cambridge', 'cornell', 'wikipedia.org', 'wikisource', '.gov', '.uk', 'github', 'hathitrust', 'google', 'loc.gov', 'sec.gov', 'congress.gov'];
+
+        function detectLang(url) {
+            url = url.toLowerCase();
+            if (frenchSites.some(s => url.includes(s))) return 'fr';
+            if (englishSites.some(s => url.includes(s))) return 'en';
+            if (url.includes('.fr')) return 'fr';
+            if (url.includes('.de') || url.includes('.at')) return 'de';
+            if (url.includes('.jp') || url.includes('.co.jp')) return 'jp';
+            return 'en'; // default
+        }
+
+        function filterByLang(lang) {
+            const resources = document.querySelectorAll('.resource');
+            resources.forEach(resource => {
+                const link = resource.querySelector('.resource-name a');
+                if (!link) return;
+                const resourceLang = detectLang(link.href);
+                if (lang === 'all') {
+                    resource.style.display = '';
+                } else if (lang === 'fr') {
+                    resource.style.display = resourceLang === 'fr' ? '' : 'none';
+                } else if (lang === 'en') {
+                    resource.style.display = (resourceLang === 'en' || resourceLang === 'de' || resourceLang === 'jp') ? '' : 'none';
+                }
+            });
+            // Update section visibility
+            document.querySelectorAll('.source-section').forEach(section => {
+                const visibleResources = section.querySelectorAll('.resource:not([style*="display: none"])');
+                section.style.display = visibleResources.length > 0 ? '' : 'none';
+            });
         }
 
         // ===== KEYBOARD =====

@@ -121,10 +121,10 @@ function updateNetwork() {
     };
 
     const sizes = {
-        root: 45,
-        category: 35,
-        section: 25,
-        resource: 14
+        root: 32,
+        category: 24,
+        section: 18,
+        resource: 12
     };
 
     // Stop old simulation
@@ -143,17 +143,17 @@ function updateNetwork() {
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(d => {
-                if (d.target.group === "resource") return 80;
-                if (d.target.group === "section") return 120;
-                return 150;
+                if (d.target.group === "resource") return 55;
+                if (d.target.group === "section") return 100;
+                return 130;
             })
-            .strength(0.3))
+            .strength(d => d.target.group === "resource" ? 0.9 : 0.4))
         .force("charge", d3.forceManyBody()
-            .strength(d => d.group === "resource" ? -50 : -300))
-        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.02))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 15))
-        .alphaDecay(0.002)
-        .velocityDecay(0.85);
+            .strength(d => d.group === "resource" ? -20 : -200))
+        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.01))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 10))
+        .alphaDecay(0.005)
+        .velocityDecay(0.75);
 
     // Clear and redraw
     g.selectAll("*").remove();
@@ -199,10 +199,10 @@ function updateNetwork() {
         .attr("x", d => sizes[d.group] + 5)
         .attr("y", 4)
         .attr("font-size", d => {
-            if (d.group === "root") return "24px";
-            if (d.group === "category") return "14px";
-            if (d.group === "section") return "12px";
-            return "10px";
+            if (d.group === "root") return "20px";
+            if (d.group === "category") return "13px";
+            if (d.group === "section") return "11px";
+            return "9px";
         })
         .attr("font-weight", d => (d.group === "root" || d.group === "category") ? "600" : "normal")
         .attr("fill", d => {

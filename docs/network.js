@@ -1,24 +1,23 @@
 // Network visualization for sources
-// Collapsible tree - click to expand/collapse
+// Collapsible tree — root → category → section → subtopic → resource
 
-// All nodes and their relationships
 const allNodes = [
-    { id: "root", label: "א", group: "root", fixed: true },
-    { id: "archive", label: "L'Archive", group: "category", parent: "root" },
-    { id: "atelier", label: "L'Atelier", group: "category", parent: "root" },
-    { id: "enquete", label: "L'Enquête", group: "category", parent: "root" },
-    { id: "reverie", label: "La Rêverie", group: "category", parent: "root" },
-    { id: "textes", label: "Textes", group: "section", parent: "archive" },
-    { id: "langues", label: "Langues", group: "section", parent: "archive" },
-    { id: "metiers", label: "Métiers", group: "section", parent: "atelier" },
-    { id: "design", label: "Design", group: "section", parent: "atelier" },
-    { id: "transport", label: "Transport", group: "section", parent: "atelier" },
+    { id: "root",       label: "א",          group: "root",     fixed: true },
+    { id: "archive",    label: "L'Archive",  group: "category", parent: "root" },
+    { id: "atelier",    label: "L'Atelier",  group: "category", parent: "root" },
+    { id: "enquete",    label: "L'Enquête",  group: "category", parent: "root" },
+    { id: "reverie",    label: "La Rêverie", group: "category", parent: "root" },
+    { id: "textes",     label: "Textes",     group: "section",  parent: "archive" },
+    { id: "langues",    label: "Langues",    group: "section",  parent: "archive" },
+    { id: "metiers",    label: "Métiers",    group: "section",  parent: "atelier" },
+    { id: "design",     label: "Design",     group: "section",  parent: "atelier" },
+    { id: "transport",  label: "Transport",  group: "section",  parent: "atelier" },
     { id: "informatique", label: "Informatique", group: "section", parent: "enquete" },
-    { id: "economie", label: "Économie", group: "section", parent: "enquete" },
-    { id: "droit", label: "Droit", group: "section", parent: "enquete" },
-    { id: "arts", label: "Arts", group: "section", parent: "reverie" },
-    { id: "musique", label: "Musique", group: "section", parent: "reverie" },
-    { id: "humanites", label: "Humanités", group: "section", parent: "reverie" },
+    { id: "economie",   label: "Économie",   group: "section",  parent: "enquete" },
+    { id: "droit",      label: "Droit",      group: "section",  parent: "enquete" },
+    { id: "arts",       label: "Arts",       group: "section",  parent: "reverie" },
+    { id: "musique",    label: "Musique",    group: "section",  parent: "reverie" },
+    { id: "humanites",  label: "Humanités",  group: "section",  parent: "reverie" },
 ];
 
 // Pre-defined angles for the 4 categories so they spread into 4 quadrants
@@ -32,8 +31,8 @@ const categoryAngles = {
 // Position cache — preserves node positions across expand/collapse
 const nodePositions = {};
 
-// Track expanded nodes - start with nothing expanded (only root shows)
 let expandedNodes = new Set();
+let subtopicNodes = [];
 let resourceNodes = [];
 let simulation = null;
 let svg = null;
@@ -42,26 +41,68 @@ let width = 0;
 let height = 0;
 
 function extractResources() {
+    subtopicNodes = [];
     resourceNodes = [];
+
     document.querySelectorAll('.source-section').forEach(section => {
         const sectionId = section.id;
         if (!sectionId) return;
-        let i = 0;
-        section.querySelectorAll('.resource').forEach(res => {
-            const link = res.querySelector('.resource-name a');
-            if (link && i < 8) {
+
+        const content = section.querySelector('.content');
+        if (!content) return;
+
+        const h3s = content.querySelectorAll('h3');
+
+        if (h3s.length > 0) {
+            // Section has subtopics: H3 → resources
+            let stIdx = 0;
+            let currentStId = null;
+
+            Array.from(content.children).forEach(child => {
+                if (child.tagName === 'H3') {
+                    const label = child.textContent.trim();
+                    currentStId = `${sectionId}_st${stIdx++}`;
+                    subtopicNodes.push({
+                        id: currentStId,
+                        label: label.length > 20 ? label.slice(0, 18) + '…' : label,
+                        fullLabel: label,
+                        group: 'subtopic',
+                        parent: sectionId
+                    });
+                } else if (child.classList?.contains('resources') && currentStId) {
+                    child.querySelectorAll('.resource').forEach(res => {
+                        const link = res.querySelector('.resource-name a');
+                        if (!link) return;
+                        const text = link.textContent.trim();
+                        const rIdx = resourceNodes.filter(r => r.parent === currentStId).length;
+                        resourceNodes.push({
+                            id: `${currentStId}_r${rIdx}`,
+                            label: text.length > 18 ? text.slice(0, 16) + '…' : text,
+                            fullLabel: text,
+                            group: 'resource',
+                            parent: currentStId,
+                            url: link.href
+                        });
+                    });
+                }
+            });
+        } else {
+            // No H3s: resources hang directly off the section
+            let i = 0;
+            content.querySelectorAll('.resource').forEach(res => {
+                const link = res.querySelector('.resource-name a');
+                if (!link) return;
                 const text = link.textContent.trim();
                 resourceNodes.push({
-                    id: `${sectionId}_r${i}`,
+                    id: `${sectionId}_r${i++}`,
                     label: text.length > 18 ? text.slice(0, 16) + '…' : text,
                     fullLabel: text,
-                    group: "resource",
+                    group: 'resource',
                     parent: sectionId,
                     url: link.href
                 });
-                i++;
-            }
-        });
+            });
+        }
     });
 }
 
@@ -70,12 +111,11 @@ function getVisibleData() {
     const links = [];
     const visibleIds = new Set();
 
-    // Always show root
-    const root = allNodes.find(n => n.id === "root");
-    nodes.push({ ...root });
+    // Root always visible
+    nodes.push({ ...allNodes.find(n => n.id === "root") });
     visibleIds.add("root");
 
-    // Show children of expanded nodes
+    // Category and section nodes (children of expanded parents)
     allNodes.forEach(node => {
         if (node.parent && expandedNodes.has(node.parent)) {
             nodes.push({ ...node });
@@ -84,7 +124,16 @@ function getVisibleData() {
         }
     });
 
-    // Show resources for expanded sections
+    // Subtopic nodes (children of expanded sections)
+    subtopicNodes.forEach(node => {
+        if (expandedNodes.has(node.parent)) {
+            nodes.push({ ...node });
+            visibleIds.add(node.id);
+            links.push({ source: node.parent, target: node.id });
+        }
+    });
+
+    // Resource nodes (children of expanded subtopics or sections)
     resourceNodes.forEach(node => {
         if (expandedNodes.has(node.parent)) {
             nodes.push({ ...node });
@@ -101,10 +150,9 @@ function initNetwork(containerId) {
     if (!container || typeof d3 === 'undefined') return;
 
     extractResources();
-    // Clear position cache on full reinit so nodes spread fresh
     Object.keys(nodePositions).forEach(k => delete nodePositions[k]);
 
-    width = container.clientWidth;
+    width  = container.clientWidth;
     height = Math.max(650, window.innerHeight - 200);
     container.innerHTML = '';
 
@@ -116,7 +164,7 @@ function initNetwork(containerId) {
     g = svg.append("g");
 
     svg.call(d3.zoom()
-        .scaleExtent([0.3, 3])
+        .scaleExtent([0.2, 4])
         .on("zoom", e => g.attr("transform", e.transform)));
 
     updateNetwork();
@@ -127,24 +175,24 @@ function updateNetwork() {
     const isDark = document.body.classList.contains('dark-mode');
 
     const colors = {
-        root: isDark ? "#c4a060" : "#6b4a04",
+        root:     isDark ? "#c4a060" : "#6b4a04",
         category: isDark ? "#a08050" : "#8b6914",
-        section: isDark ? "#8b7040" : "#a08050",
-        resource: isDark ? "#706030" : "#c4a060"
+        section:  isDark ? "#8b7040" : "#a08050",
+        subtopic: isDark ? "#756535" : "#b09060",
+        resource: isDark ? "#606030" : "#c8b080"
     };
 
     const sizes = {
-        root: 32,
+        root:     32,
         category: 24,
-        section: 18,
-        resource: 12
+        section:  18,
+        subtopic: 13,
+        resource: 8
     };
 
-    // Stop old simulation
     if (simulation) simulation.stop();
 
-    // Seed positions: root pinned at center; existing nodes restored from cache;
-    // new category nodes placed at preset angles; new others spawned near parent.
+    // Seed positions
     data.nodes.forEach(n => {
         if (n.id === "root") {
             n.fx = width / 2;
@@ -158,46 +206,59 @@ function updateNetwork() {
             n.y = nodePositions[n.id].y;
         } else if (n.group === "category" && categoryAngles[n.id] !== undefined) {
             const angle = categoryAngles[n.id];
-            // Start close to root so physics organically pushes them outward
             n.x = width  / 2 + Math.cos(angle) * 35;
             n.y = height / 2 + Math.sin(angle) * 35;
         } else {
-            // Spawn near parent
             const parent = data.nodes.find(p => p.id === n.parent);
             const px = parent?.x ?? width  / 2;
             const py = parent?.y ?? height / 2;
-            n.x = px + (Math.random() - 0.5) * 60;
-            n.y = py + (Math.random() - 0.5) * 60;
+            n.x = px + (Math.random() - 0.5) * 50;
+            n.y = py + (Math.random() - 0.5) * 50;
         }
     });
 
-    // Create simulation (original physics)
     simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(d => {
-                if (d.target.group === "resource") return 55;
-                if (d.target.group === "section") return 100;
+                if (d.target.group === "resource") return 45;
+                if (d.target.group === "subtopic") return 70;
+                if (d.target.group === "section")  return 100;
                 return 130;
             })
-            .strength(d => d.target.group === "resource" ? 0.9 : 0.4))
+            .strength(d => {
+                if (d.target.group === "resource") return 0.9;
+                if (d.target.group === "subtopic") return 0.7;
+                return 0.4;
+            }))
         .force("charge", d3.forceManyBody()
-            .strength(d => d.group === "resource" ? -20 : -200))
+            .strength(d => {
+                if (d.group === "resource") return -15;
+                if (d.group === "subtopic") return -60;
+                return -200;
+            }))
         .force("center", d3.forceCenter(width / 2, height / 2).strength(0.01))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 10))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 6))
         .alphaDecay(0.005)
         .velocityDecay(0.75);
 
-    // Clear and redraw
     g.selectAll("*").remove();
 
     const link = g.append("g")
         .selectAll("line")
         .data(data.links)
         .join("line")
-        .attr("stroke", d => d.target.group === "resource" ? "#ddd" : "#bbb")
+        .attr("stroke", d => {
+            if (d.target.group === "resource") return "#ddd";
+            if (d.target.group === "subtopic")  return "#ccc";
+            return "#bbb";
+        })
         .attr("stroke-opacity", 0.5)
-        .attr("stroke-width", d => d.target.group === "resource" ? 0.5 : 1);
+        .attr("stroke-width", d => {
+            if (d.target.group === "resource") return 0.5;
+            if (d.target.group === "subtopic")  return 0.75;
+            return 1;
+        });
 
     const node = g.append("g")
         .selectAll("g")
@@ -206,45 +267,45 @@ function updateNetwork() {
         .style("cursor", "pointer")
         .call(d3.drag()
             .on("start", dragstart)
-            .on("drag", dragging)
-            .on("end", dragend));
+            .on("drag",  dragging)
+            .on("end",   dragend));
 
-    // Circle for each node
     node.append("circle")
         .attr("r", d => sizes[d.group])
         .attr("fill", d => colors[d.group])
         .attr("stroke", d => expandedNodes.has(d.id) ? "#fff" : "none")
         .attr("stroke-width", 2);
 
-    // Expand indicator for expandable nodes
+    // Expand indicator
     node.filter(d => hasChildren(d.id) && !expandedNodes.has(d.id))
         .append("text")
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
         .attr("fill", "#fff")
-        .attr("font-size", d => d.group === "category" ? "12px" : "10px")
+        .attr("font-size", d => d.group === "category" ? "12px" : "9px")
         .attr("font-weight", "bold")
         .text("+");
 
     // Labels
     node.append("text")
         .text(d => d.label)
-        .attr("x", d => sizes[d.group] + 5)
-        .attr("y", 4)
+        .attr("x", d => sizes[d.group] + 4)
+        .attr("y", "0.35em")
         .attr("font-size", d => {
-            if (d.group === "root") return "20px";
+            if (d.group === "root")     return "20px";
             if (d.group === "category") return "13px";
-            if (d.group === "section") return "11px";
-            return "9px";
+            if (d.group === "section")  return "11px";
+            if (d.group === "subtopic") return "9px";
+            return "8px";
         })
         .attr("font-weight", d => (d.group === "root" || d.group === "category") ? "600" : "normal")
         .attr("fill", d => {
-            if (isDark) return d.group === "resource" ? "#888" : "#d0d0d0";
-            return d.group === "resource" ? "#666" : "#2a2a2a";
+            if (isDark) return d.group === "resource" ? "#777" : d.group === "subtopic" ? "#999" : "#d0d0d0";
+            return d.group === "resource" ? "#777" : d.group === "subtopic" ? "#666" : "#2a2a2a";
         })
         .attr("font-family", "'IBM Plex Mono', monospace");
 
-    // Click handler
+    // Click
     node.on("click", (e, d) => {
         e.stopPropagation();
         if (d.group === "resource" && d.url) {
@@ -256,12 +317,11 @@ function updateNetwork() {
         }
     });
 
-    // Tooltip for resources
-    node.filter(d => d.group === "resource")
+    // Tooltip
+    node.filter(d => d.group === "resource" || d.group === "subtopic")
         .append("title")
         .text(d => d.fullLabel);
 
-    // Tick
     const padding = 30;
     simulation.on("tick", () => {
         data.nodes.forEach(d => {
@@ -269,7 +329,6 @@ function updateNetwork() {
                 d.x = Math.max(padding, Math.min(width - padding, d.x));
                 d.y = Math.max(padding, Math.min(height - padding, d.y));
             }
-            // Cache position for next update
             nodePositions[d.id] = { x: d.x, y: d.y };
         });
 
@@ -303,14 +362,14 @@ function updateNetwork() {
 }
 
 function hasChildren(nodeId) {
-    if (allNodes.some(n => n.parent === nodeId)) return true;
+    if (allNodes.some(n => n.parent === nodeId))     return true;
+    if (subtopicNodes.some(n => n.parent === nodeId)) return true;
     if (resourceNodes.some(n => n.parent === nodeId)) return true;
     return false;
 }
 
 function toggleNode(nodeId) {
     if (expandedNodes.has(nodeId)) {
-        // Collapse: remove this node and all descendants
         expandedNodes.delete(nodeId);
         collapseDescendants(nodeId);
     } else {
@@ -324,12 +383,16 @@ function collapseDescendants(nodeId) {
         expandedNodes.delete(child.id);
         collapseDescendants(child.id);
     });
+    subtopicNodes.filter(n => n.parent === nodeId).forEach(child => {
+        expandedNodes.delete(child.id);
+        collapseDescendants(child.id);
+    });
 }
 
 function scrollToSection(sectionId) {
     const network = document.getElementById("network-container");
-    const list = document.getElementById("list-container");
-    const btn = document.getElementById("view-toggle-btn");
+    const list    = document.getElementById("list-container");
+    const btn     = document.getElementById("view-toggle-btn");
 
     if (network && !network.classList.contains("hidden")) {
         network.classList.add("hidden");
@@ -346,8 +409,8 @@ function scrollToSection(sectionId) {
 
 function toggleNetworkView() {
     const network = document.getElementById("network-container");
-    const list = document.getElementById("list-container");
-    const btn = document.getElementById("view-toggle-btn");
+    const list    = document.getElementById("list-container");
+    const btn     = document.getElementById("view-toggle-btn");
 
     if (network.classList.contains("hidden")) {
         network.classList.remove("hidden");
@@ -361,7 +424,6 @@ function toggleNetworkView() {
     }
 }
 
-// Initialize
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => initNetwork("network-container"));
 } else {

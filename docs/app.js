@@ -100,9 +100,15 @@ async function loadLibrary() {
             const corpusBooks = [];
             if (data.corpus) {
                 for (const [catKey, category] of Object.entries(data.corpus)) {
-                    const type = catKey.startsWith('legal') ? 'legal'
-                        : catKey.startsWith('business') ? 'business'
-                        : 'philosophy';
+                    const type = catKey.startsWith('legal')       ? 'droit'
+                        : catKey.startsWith('business_economics') ? 'économie'
+                        : catKey.startsWith('business')           ? 'gestion'
+                        : catKey.startsWith('philosophy')         ? 'philosophie'
+                        : catKey.startsWith('literature')         ? 'littérature'
+                        : catKey.startsWith('science')            ? 'sciences'
+                        : catKey.startsWith('history')            ? 'histoire'
+                        : catKey.startsWith('sacred')             ? 'textes sacrés'
+                        : 'autre';
                     (category.documents || []).forEach(doc => {
                         const langs = Object.keys(doc.languages || {});
                         const yearStr = doc.year ? ` (${doc.year})` : '';
@@ -172,11 +178,12 @@ function updateStats() {
 
 function populateFilters() {
     const all = getAllBooks();
+    // Types in defined order
+    const types = TYPE_ORDER.filter(t => all.some(b => b.type === t));
     const filters = {
-        'author-filter': [...new Set(all.map(b => b.author).filter(Boolean))].sort(),
-        'source-filter': [...new Set(all.map(b => b.source).filter(Boolean))].sort(),
-        'type-filter': [...new Set(all.map(b => b.type).filter(Boolean))].sort(),
-        'period-filter': [...new Set(all.map(b => b.period).filter(Boolean))].sort()
+        'type-filter':   types,
+        'period-filter': [...new Set(all.map(b => b.period).filter(Boolean))].sort(),
+        'author-filter': [...new Set(all.map(b => b.author).filter(Boolean))].sort()
     };
 
     for (const [id, values] of Object.entries(filters)) {
@@ -312,7 +319,7 @@ function initBrowse() {
         renderStats();
         renderList();
 
-        ['author-filter', 'source-filter', 'type-filter', 'period-filter', 'sort-filter', 'view-filter'].forEach(id => {
+        ['author-filter', 'type-filter', 'period-filter', 'sort-filter', 'view-filter'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.addEventListener('change', () => { browsePage = 1; renderList(); });
         });
@@ -322,22 +329,7 @@ function initBrowse() {
 function renderStats() {
     const all = getAllBooks();
     const totalBooks = document.getElementById('total-books');
-    const totalSources = document.getElementById('total-sources');
-    const breakdown = document.getElementById('stats-breakdown');
-
     if (totalBooks) totalBooks.textContent = all.length;
-
-    const sources = {};
-    all.forEach(b => sources[b.source] = (sources[b.source] || 0) + 1);
-
-    if (totalSources) totalSources.textContent = Object.keys(sources).length;
-
-    if (breakdown) {
-        breakdown.innerHTML = Object.entries(sources)
-            .sort((a, b) => b[1] - a[1])
-            .map(([s, n]) => `<span class="stat-item" onclick="filterBySource('${s}')">${s}: ${n}</span>`)
-            .join('');
-    }
 }
 
 function filterBySource(source) {
@@ -346,68 +338,113 @@ function filterBySource(source) {
 }
 window.filterBySource = filterBySource;
 
+// Type display order and labels for grouped view
+const TYPE_ORDER = ['droit', 'économie', 'gestion', 'philosophie', 'littérature', 'sciences', 'histoire', 'textes sacrés', 'autre'];
+
 function renderList() {
     const listDiv = document.getElementById('book-list');
     const pagDiv = document.getElementById('pagination');
     if (!listDiv) return;
 
     const authorF = document.getElementById('author-filter')?.value || '';
-    const sourceF = document.getElementById('source-filter')?.value || '';
     const typeF = document.getElementById('type-filter')?.value || '';
     const periodF = document.getElementById('period-filter')?.value || '';
-    const sortBy = document.getElementById('sort-filter')?.value || 'title';
+    const sortBy = document.getElementById('sort-filter')?.value || 'type';
     const compact = document.getElementById('view-filter')?.value === 'compact';
 
     let books = getAllBooks();
     if (authorF) books = books.filter(b => b.author === authorF);
-    if (sourceF) books = books.filter(b => b.source === sourceF);
-    if (typeF) books = books.filter(b => b.type === typeF);
+    if (typeF)   books = books.filter(b => b.type === typeF);
     if (periodF) books = books.filter(b => b.period === periodF);
-    books.sort((a, b) => (a[sortBy] || '').localeCompare(b[sortBy] || ''));
 
-    const total = Math.ceil(books.length / perPage);
-    const page = books.slice((browsePage - 1) * perPage, browsePage * perPage);
-
-    if (page.length === 0) {
+    if (books.length === 0) {
         listDiv.innerHTML = '<div class="no-books">no texts found</div>';
         if (pagDiv) pagDiv.innerHTML = '';
         return;
     }
 
-    if (compact) {
-        listDiv.innerHTML = `
-            <table class="book-table">
-                <thead><tr><th>Title</th><th>Author</th><th>Source</th></tr></thead>
-                <tbody>
-                    ${page.map(b => `
+    // When sorting by type (default) and no type filter: show grouped view
+    const showGrouped = sortBy === 'type' && !typeF;
+
+    if (showGrouped) {
+        const grouped = {};
+        books.forEach(b => {
+            const g = b.type || 'autre';
+            if (!grouped[g]) grouped[g] = [];
+            grouped[g].push(b);
+        });
+        TYPE_ORDER.forEach(t => grouped[t]?.sort((a, b) => (a.title || '').localeCompare(b.title || '')));
+
+        if (compact) {
+            listDiv.innerHTML = TYPE_ORDER
+                .filter(t => grouped[t]?.length)
+                .map(t => `
+                    <div class="browse-group">
+                        <h3 class="browse-group-header">${t} <span class="browse-group-count">${grouped[t].length}</span></h3>
+                        <table class="book-table">
+                            <tbody>${grouped[t].map(b => `
+                                <tr>
+                                    <td><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></td>
+                                    <td>${escapeHtml(b.author)}</td>
+                                    <td>${escapeHtml(b.period || '')}</td>
+                                </tr>`).join('')}
+                            </tbody>
+                        </table>
+                    </div>`).join('');
+        } else {
+            listDiv.innerHTML = TYPE_ORDER
+                .filter(t => grouped[t]?.length)
+                .map(t => `
+                    <div class="browse-group">
+                        <h3 class="browse-group-header">${t} <span class="browse-group-count">${grouped[t].length}</span></h3>
+                        ${grouped[t].map(b => `
+                            <div class="book-card">
+                                <div class="book-meta-row">
+                                    <a href="${getBookLink(b)}" class="book-title">${escapeHtml(b.title)}</a>
+                                    ${b.author ? `<span class="book-author">${escapeHtml(b.author)}</span>` : ''}
+                                    ${b.period ? `<span class="book-period">${escapeHtml(b.period)}</span>` : ''}
+                                </div>
+                            </div>`).join('')}
+                    </div>`).join('');
+        }
+        if (pagDiv) pagDiv.innerHTML = `<span class="current">${books.length} textes</span>`;
+    } else {
+        // Flat sorted + paginated view
+        books.sort((a, b) => (a[sortBy] || '').localeCompare(b[sortBy] || ''));
+        const total = Math.ceil(books.length / perPage);
+        const page = books.slice((browsePage - 1) * perPage, browsePage * perPage);
+
+        if (compact) {
+            listDiv.innerHTML = `
+                <table class="book-table">
+                    <thead><tr><th>Titre</th><th>Auteur</th><th>Période</th></tr></thead>
+                    <tbody>${page.map(b => `
                         <tr>
                             <td><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></td>
                             <td>${escapeHtml(b.author)}</td>
-                            <td>${b.source}</td>
-                        </tr>
-                    `).join('')}
-                </tbody>
-            </table>
-        `;
-    } else {
-        listDiv.innerHTML = page.map(b => `
-            <div class="book-card">
-                <h3><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></h3>
-                <div class="book-meta">${escapeHtml(b.author)} <span class="source">[${b.source}]</span></div>
-                ${b.tags?.length ? `<div class="book-tags">${b.tags.slice(0, 4).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
-                <div class="book-snippet">${escapeHtml((b.snippet || '').slice(0, 150))}...</div>
-            </div>
-        `).join('');
-    }
+                            <td>${escapeHtml(b.period || '')}</td>
+                        </tr>`).join('')}
+                    </tbody>
+                </table>`;
+        } else {
+            listDiv.innerHTML = page.map(b => `
+                <div class="book-card">
+                    <div class="book-meta-row">
+                        <a href="${getBookLink(b)}" class="book-title">${escapeHtml(b.title)}</a>
+                        ${b.author ? `<span class="book-author">${escapeHtml(b.author)}</span>` : ''}
+                        ${b.period ? `<span class="book-period">${escapeHtml(b.period)}</span>` : ''}
+                    </div>
+                </div>`).join('');
+        }
 
-    if (pagDiv && total > 1) {
-        pagDiv.innerHTML = `
-            ${browsePage > 1 ? `<a href="#" onclick="gotoPage(${browsePage - 1}); return false;">prev</a>` : ''}
-            <span class="current">page ${browsePage} of ${total}</span>
-            ${browsePage < total ? `<a href="#" onclick="gotoPage(${browsePage + 1}); return false;">next</a>` : ''}
-        `;
-    } else if (pagDiv) {
-        pagDiv.innerHTML = `<span class="current">${books.length} texts</span>`;
+        if (pagDiv && total > 1) {
+            pagDiv.innerHTML = `
+                ${browsePage > 1 ? `<a href="#" onclick="gotoPage(${browsePage - 1}); return false;">← prev</a>` : ''}
+                <span class="current">page ${browsePage} / ${total}</span>
+                ${browsePage < total ? `<a href="#" onclick="gotoPage(${browsePage + 1}); return false;">next →</a>` : ''}`;
+        } else if (pagDiv) {
+            pagDiv.innerHTML = `<span class="current">${books.length} textes</span>`;
+        }
     }
 }
 

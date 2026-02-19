@@ -238,7 +238,7 @@ function updateNetwork() {
                 return -200;
             }))
         .force("center", d3.forceCenter(width / 2, height / 2).strength(0.01))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 6))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 15).strength(0.8))
         .alphaDecay(0.005)
         .velocityDecay(0.75);
 

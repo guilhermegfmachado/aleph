@@ -67,6 +67,7 @@ async function loadUserBookText(bookId) {
 
 async function loadLibrary() {
     if (library.loaded) return;
+    library.loaded = true;  // Set immediately to prevent race condition
 
     // Load shared library (published via GitHub)
     try {
@@ -144,7 +145,6 @@ async function loadLibrary() {
     } catch (e) {}
 
     await loadUserBooks();
-    library.loaded = true;
     updateStats();
     populateFilters();
 }

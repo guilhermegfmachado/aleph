@@ -17,6 +17,7 @@
                 <a href="browse.html" class="active">browse</a>
                 <a href="sources.html">sources</a>
                 <a href="upload.html">add</a>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">*</button>
             </nav>
         </header>
 
@@ -40,6 +41,10 @@
                 </select>
                 <select id="source-filter">
                     <option value="">all sources</option>
+                </select>
+                <select id="fav-filter">
+                    <option value="">all texts</option>
+                    <option value="favorites">favorites only</option>
                 </select>
                 <select id="sort-filter">
                     <option value="title">sort: title</option>

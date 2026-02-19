@@ -407,6 +407,23 @@ function scrollToSection(sectionId) {
     }
 }
 
+function resetNetwork() {
+    // Clear expanded nodes and position cache
+    expandedNodes.clear();
+    Object.keys(nodePositions).forEach(k => delete nodePositions[k]);
+
+    // Reset zoom
+    if (svg && g) {
+        svg.transition().duration(500).call(
+            d3.zoom().transform,
+            d3.zoomIdentity.translate(width / 2, height / 2).scale(1)
+        );
+    }
+
+    // Re-render network from initial state
+    updateNetwork();
+}
+
 function toggleNetworkView() {
     const network = document.getElementById("network-container");
     const list    = document.getElementById("list-container");

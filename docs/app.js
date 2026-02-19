@@ -13,6 +13,80 @@ const library = {
     graph: null
 };
 
+// Favorites & Reading Progress (localStorage)
+const userPrefs = {
+    favorites: JSON.parse(localStorage.getItem('aleph_favorites') || '[]'),
+    readingProgress: JSON.parse(localStorage.getItem('aleph_progress') || '{}'),
+    darkMode: localStorage.getItem('aleph_dark') === 'true'
+};
+
+function saveFavorites() {
+    localStorage.setItem('aleph_favorites', JSON.stringify(userPrefs.favorites));
+}
+
+function saveProgress() {
+    localStorage.setItem('aleph_progress', JSON.stringify(userPrefs.readingProgress));
+}
+
+function isFavorite(bookId) {
+    return userPrefs.favorites.includes(String(bookId));
+}
+
+function toggleFavorite(bookId) {
+    const id = String(bookId);
+    const idx = userPrefs.favorites.indexOf(id);
+    if (idx > -1) {
+        userPrefs.favorites.splice(idx, 1);
+    } else {
+        userPrefs.favorites.push(id);
+    }
+    saveFavorites();
+    return isFavorite(id);
+}
+window.toggleFavorite = toggleFavorite;
+
+function setReadingProgress(bookId, progress) {
+    userPrefs.readingProgress[String(bookId)] = progress;
+    saveProgress();
+}
+
+function getReadingProgress(bookId) {
+    return userPrefs.readingProgress[String(bookId)] || 0;
+}
+
+// Dark mode
+function setDarkMode(enabled) {
+    userPrefs.darkMode = enabled;
+    localStorage.setItem('aleph_dark', enabled);
+    document.body.classList.toggle('light-mode', !enabled);
+}
+
+function initDarkMode() {
+    // Default to dark, check if user has set light
+    if (localStorage.getItem('aleph_dark') === 'false') {
+        document.body.classList.add('light-mode');
+    }
+    updateThemeButton();
+}
+
+function toggleTheme() {
+    const isLight = document.body.classList.toggle('light-mode');
+    localStorage.setItem('aleph_dark', !isLight);
+    userPrefs.darkMode = !isLight;
+    updateThemeButton();
+}
+window.toggleTheme = toggleTheme;
+
+function updateThemeButton() {
+    const btn = document.querySelector('.theme-toggle');
+    if (btn) {
+        btn.textContent = document.body.classList.contains('light-mode') ? '●' : '○';
+    }
+}
+
+// Initialize dark mode immediately
+initDarkMode();
+
 // IndexedDB
 async function openDB() {
     if (db) return db;
@@ -319,7 +393,7 @@ function initBrowse() {
         renderStats();
         renderList();
 
-        ['author-filter', 'source-filter', 'type-filter', 'period-filter', 'sort-filter', 'view-filter'].forEach(id => {
+        ['author-filter', 'source-filter', 'type-filter', 'period-filter', 'fav-filter', 'sort-filter', 'view-filter'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.addEventListener('change', () => { browsePage = 1; renderList(); });
         });
@@ -365,6 +439,7 @@ function renderList() {
     const sourceF = document.getElementById('source-filter')?.value || '';
     const typeF   = document.getElementById('type-filter')?.value || '';
     const periodF = document.getElementById('period-filter')?.value || '';
+    const favF    = document.getElementById('fav-filter')?.value || '';
     const sortBy  = document.getElementById('sort-filter')?.value || 'title';
     const compact = document.getElementById('view-filter')?.value === 'compact';
 
@@ -373,6 +448,7 @@ function renderList() {
     if (sourceF) books = books.filter(b => b.source === sourceF);
     if (typeF)   books = books.filter(b => b.type === typeF);
     if (periodF) books = books.filter(b => b.period === periodF);
+    if (favF === 'favorites') books = books.filter(b => isFavorite(b.id));
     books.sort((a, b) => (a[sortBy] || '').localeCompare(b[sortBy] || ''));
 
     const total = Math.ceil(books.length / perPage);
@@ -402,7 +478,10 @@ function renderList() {
     } else {
         listDiv.innerHTML = page.map(b => `
             <div class="book-card">
-                <h3><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></h3>
+                <div class="book-card-header">
+                    <h3><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></h3>
+                    <button class="fav-btn ${isFavorite(b.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavBtn(this, '${b.id}')" title="Add to favorites">*</button>
+                </div>
                 <div class="book-meta">${escapeHtml(b.author)} <span class="source">[${b.source}]</span></div>
                 ${b.tags?.length ? `<div class="book-tags">${b.tags.slice(0, 4).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
                 <div class="book-snippet">${escapeHtml((b.snippet || '').slice(0, 150))}${b.snippet?.length > 150 ? '...' : ''}</div>
@@ -427,6 +506,12 @@ function gotoPage(p) {
     window.scrollTo(0, 0);
 }
 window.gotoPage = gotoPage;
+
+function toggleFavBtn(btn, bookId) {
+    const isNowFav = toggleFavorite(bookId);
+    btn.classList.toggle('active', isNowFav);
+}
+window.toggleFavBtn = toggleFavBtn;
 
 // Get related books using graph or shared tags
 function getRelatedBooks(book) {
@@ -739,8 +824,31 @@ async function renderBookContent(query = null) {
             setTimeout(() => {
                 document.getElementById('first-match')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 100);
+        } else {
+            // Restore reading progress
+            const savedProgress = getReadingProgress(book.id);
+            if (savedProgress > 0) {
+                setTimeout(() => {
+                    window.scrollTo(0, savedProgress);
+                }, 100);
+            }
         }
+
+        // Track reading progress on scroll
+        initReadingProgressTracker(book.id);
     }
+}
+
+let progressDebounce = null;
+function initReadingProgressTracker(bookId) {
+    window.removeEventListener('scroll', window._progressHandler);
+    window._progressHandler = () => {
+        clearTimeout(progressDebounce);
+        progressDebounce = setTimeout(() => {
+            setReadingProgress(bookId, window.scrollY);
+        }, 500);
+    };
+    window.addEventListener('scroll', window._progressHandler);
 }
 
 // PDF Viewer

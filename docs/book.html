@@ -78,10 +78,16 @@
                 <a href="browse.html">browse</a>
                 <a href="sources.html">sources</a>
                 <a href="upload.html">add</a>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">*</button>
             </nav>
         </header>
 
         <main class="book-view">
+            <div class="book-nav" id="book-nav">
+                <a href="javascript:history.back()" class="back-link">back</a>
+                <span class="nav-sep">/</span>
+                <a href="browse.html" class="browse-link">browse</a>
+            </div>
             <div class="book-header" id="book-header">
                 <div class="book-meta">
                     <h2 id="book-title">...</h2>

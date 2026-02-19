@@ -1582,19 +1582,16 @@
         let recentlyVisited = JSON.parse(localStorage.getItem('aleph-recent') || '[]');
 
         // ===== DARK MODE =====
-        // Initialize on load - dark is default
-        (function initDarkMode() {
-            if (localStorage.getItem('aleph_dark') === 'false') {
-                document.body.classList.add('light-mode');
-                const btn = document.getElementById('dark-mode-btn');
-                if (btn) btn.textContent = '●';
+        (function() {
+            if (localStorage.getItem('aleph_dark') === 'true') {
+                document.body.classList.add('dark-mode');
             }
         })();
 
         function toggleDarkMode() {
-            const isLight = document.body.classList.toggle('light-mode');
-            localStorage.setItem('aleph_dark', !isLight);
-            document.getElementById('dark-mode-btn').textContent = isLight ? '●' : '○';
+            const isDark = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('aleph_dark', isDark);
+            document.getElementById('dark-mode-btn').textContent = isDark ? '○' : '●';
             if (typeof updateNetwork === 'function') updateNetwork();
         }
 

@@ -54,25 +54,17 @@ function getReadingProgress(bookId) {
     return userPrefs.readingProgress[String(bookId)] || 0;
 }
 
-// Dark mode
-function setDarkMode(enabled) {
-    userPrefs.darkMode = enabled;
-    localStorage.setItem('aleph_dark', enabled);
-    document.body.classList.toggle('light-mode', !enabled);
-}
-
+// Dark mode toggle
 function initDarkMode() {
-    // Default to dark, check if user has set light
-    if (localStorage.getItem('aleph_dark') === 'false') {
-        document.body.classList.add('light-mode');
+    if (localStorage.getItem('aleph_dark') === 'true') {
+        document.body.classList.add('dark-mode');
     }
     updateThemeButton();
 }
 
 function toggleTheme() {
-    const isLight = document.body.classList.toggle('light-mode');
-    localStorage.setItem('aleph_dark', !isLight);
-    userPrefs.darkMode = !isLight;
+    const isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('aleph_dark', isDark);
     updateThemeButton();
 }
 window.toggleTheme = toggleTheme;
@@ -80,7 +72,7 @@ window.toggleTheme = toggleTheme;
 function updateThemeButton() {
     const btn = document.querySelector('.theme-toggle');
     if (btn) {
-        btn.textContent = document.body.classList.contains('light-mode') ? '●' : '○';
+        btn.textContent = document.body.classList.contains('dark-mode') ? '○' : '●';
     }
 }
 

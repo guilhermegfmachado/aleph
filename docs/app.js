@@ -383,12 +383,26 @@ const perPage = 20;
 function initBrowse() {
     loadLibrary().then(() => {
         renderStats();
+
+        // Apply tag from URL if present
+        const urlTag = new URLSearchParams(location.search).get('tag');
+        if (urlTag) {
+            const tagInput = document.getElementById('tag-search');
+            if (tagInput) tagInput.value = urlTag;
+        }
+
         renderList();
 
         ['author-filter', 'source-filter', 'type-filter', 'period-filter', 'fav-filter', 'sort-filter', 'view-filter'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.addEventListener('change', () => { browsePage = 1; renderList(); });
         });
+
+        const tagInput = document.getElementById('tag-search');
+        if (tagInput) tagInput.addEventListener('input', () => { browsePage = 1; renderList(); });
+
+        const browseSearch = document.getElementById('browse-search');
+        if (browseSearch) browseSearch.addEventListener('input', () => { browsePage = 1; renderList(); });
     });
 }
 
@@ -419,6 +433,12 @@ function filterBySource(source) {
 }
 window.filterBySource = filterBySource;
 
+function filterByTag(tag) {
+    const el = document.getElementById('tag-search');
+    if (el) { el.value = tag; browsePage = 1; renderList(); }
+}
+window.filterByTag = filterByTag;
+
 // Type display order and labels for grouped view
 const TYPE_ORDER = ['droit', 'économie', 'gestion', 'philosophie', 'littérature', 'sciences', 'histoire', 'textes sacrés', 'autre'];
 
@@ -432,6 +452,8 @@ function renderList() {
     const typeF   = document.getElementById('type-filter')?.value || '';
     const periodF = document.getElementById('period-filter')?.value || '';
     const favF    = document.getElementById('fav-filter')?.value || '';
+    const tagF    = (document.getElementById('tag-search')?.value || '').toLowerCase().trim();
+    const textF   = (document.getElementById('browse-search')?.value || '').toLowerCase().trim();
     const sortBy  = document.getElementById('sort-filter')?.value || 'title';
     const compact = document.getElementById('view-filter')?.value === 'compact';
 
@@ -441,6 +463,10 @@ function renderList() {
     if (typeF)   books = books.filter(b => b.type === typeF);
     if (periodF) books = books.filter(b => b.period === periodF);
     if (favF === 'favorites') books = books.filter(b => isFavorite(b.id));
+    if (tagF)    books = books.filter(b => b.tags?.some(t => t.toLowerCase().includes(tagF)));
+    if (textF)   books = books.filter(b =>
+        `${b.title} ${b.author} ${b.snippet || ''}`.toLowerCase().includes(textF)
+    );
     books.sort((a, b) => (a[sortBy] || '').localeCompare(b[sortBy] || ''));
 
     const total = Math.ceil(books.length / perPage);
@@ -475,7 +501,7 @@ function renderList() {
                     <button class="fav-btn ${isFavorite(b.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavBtn(this, '${b.id}')" title="Add to favorites">*</button>
                 </div>
                 <div class="book-meta">${escapeHtml(b.author)} <span class="source">[${b.source}]</span></div>
-                ${b.tags?.length ? `<div class="book-tags">${b.tags.slice(0, 4).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+                ${b.tags?.length ? `<div class="book-tags">${b.tags.slice(0, 4).map(t => `<button class="tag tag-btn" onclick="filterByTag('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('')}</div>` : ''}
                 <div class="book-snippet">${escapeHtml((b.snippet || '').slice(0, 150))}${b.snippet?.length > 150 ? '...' : ''}</div>
             </div>
         `).join('');
@@ -653,11 +679,17 @@ async function initBookView() {
     if (titleEl) titleEl.textContent = book.title;
     if (authorEl) authorEl.textContent = book.author;
     if (tagsEl && book.tags?.length) {
-        tagsEl.innerHTML = book.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
+        tagsEl.innerHTML = book.tags.map(t =>
+            `<a href="browse.html?tag=${encodeURIComponent(t)}" class="tag">${escapeHtml(t)}</a>`
+        ).join('');
     }
 
-    // Setup language controls for multilingual docs
-    if (book.languages && Object.keys(book.languages).length > 1 && langControls) {
+    // Corpus docs: just show external links — hide language selector and view toggle
+    if (book.isCorpus) {
+        if (langControls) langControls.classList.add('hidden');
+        if (viewToggle) viewToggle.classList.add('hidden');
+    // Local multilingual docs: show language selector and view toggle
+    } else if (book.languages && Object.keys(book.languages).length > 1 && langControls) {
         const langs = Object.keys(book.languages);
         langControls.innerHTML = langs.map(l => `
             <button class="lang-btn ${bookViewState.selectedLangs.includes(l) ? 'selected' : ''}"
@@ -668,7 +700,6 @@ async function initBookView() {
         `).join('');
         langControls.classList.remove('hidden');
 
-        // Setup view toggle
         if (viewToggle) {
             viewToggle.querySelectorAll('.view-btn').forEach(btn => {
                 btn.addEventListener('click', () => {

@@ -1,0 +1,12 @@
+{
+  "name": "aleph-scripts",
+  "version": "1.0.0",
+  "description": "Build scripts for Aleph universal catalog",
+  "scripts": {
+    "fetch": "node fetch-texts.js",
+    "index": "node build-search-index.js",
+    "build": "node fetch-texts.js && node build-search-index.js"
+  },
+  "author": "Aleph Project",
+  "license": "MIT"
+}

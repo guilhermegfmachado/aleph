@@ -248,8 +248,7 @@ function populateFilters() {
     const filters = {
         'type-filter':   types,
         'author-filter': [...new Set(all.map(b => b.author).filter(Boolean))].sort(),
-        'source-filter': [...new Set(all.map(b => b.source).filter(Boolean))].sort(),
-        'period-filter': [...new Set(all.map(b => b.period).filter(Boolean))].sort()
+        'source-filter': [...new Set(all.map(b => b.source).filter(Boolean))].sort()
     };
 
     for (const [id, values] of Object.entries(filters)) {
@@ -569,23 +568,12 @@ const perPage = 20;
 function initBrowse() {
     loadLibrary().then(() => {
         renderStats();
-
-        // Apply tag from URL if present
-        const urlTag = new URLSearchParams(location.search).get('tag');
-        if (urlTag) {
-            const tagInput = document.getElementById('tag-search');
-            if (tagInput) tagInput.value = urlTag;
-        }
-
         renderList();
 
-        ['author-filter', 'source-filter', 'type-filter', 'period-filter', 'fav-filter', 'sort-filter', 'view-filter'].forEach(id => {
+        ['author-filter', 'source-filter', 'type-filter', 'fav-filter', 'sort-filter'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.addEventListener('change', () => { browsePage = 1; renderList(); });
         });
-
-        const tagInput = document.getElementById('tag-search');
-        if (tagInput) tagInput.addEventListener('input', () => { browsePage = 1; renderList(); });
 
         const browseSearch = document.getElementById('browse-search');
         if (browseSearch) browseSearch.addEventListener('input', () => { browsePage = 1; renderList(); });
@@ -596,7 +584,6 @@ function renderStats() {
     const all = getAllBooks();
     const totalBooks = document.getElementById('total-books');
     const totalSources = document.getElementById('total-sources');
-    const breakdown = document.getElementById('stats-breakdown');
 
     if (totalBooks) totalBooks.textContent = all.length;
 
@@ -604,13 +591,6 @@ function renderStats() {
     all.forEach(b => sources[b.source] = (sources[b.source] || 0) + 1);
 
     if (totalSources) totalSources.textContent = Object.keys(sources).length;
-
-    if (breakdown) {
-        breakdown.innerHTML = Object.entries(sources)
-            .sort((a, b) => b[1] - a[1])
-            .map(([s, n]) => `<span class="stat-item" onclick="filterBySource('${s}')">${s}: ${n}</span>`)
-            .join('');
-    }
 }
 
 function filterBySource(source) {
@@ -620,7 +600,7 @@ function filterBySource(source) {
 window.filterBySource = filterBySource;
 
 function filterByTag(tag) {
-    const el = document.getElementById('tag-search');
+    const el = document.getElementById('browse-search');
     if (el) { el.value = tag; browsePage = 1; renderList(); }
 }
 window.filterByTag = filterByTag;
@@ -636,20 +616,15 @@ function renderList() {
     const authorF = document.getElementById('author-filter')?.value || '';
     const sourceF = document.getElementById('source-filter')?.value || '';
     const typeF   = document.getElementById('type-filter')?.value || '';
-    const periodF = document.getElementById('period-filter')?.value || '';
     const favF    = document.getElementById('fav-filter')?.value || '';
-    const tagF    = (document.getElementById('tag-search')?.value || '').toLowerCase().trim();
     const textF   = (document.getElementById('browse-search')?.value || '').toLowerCase().trim();
     const sortBy  = document.getElementById('sort-filter')?.value || 'title';
-    const compact = document.getElementById('view-filter')?.value === 'compact';
 
     let books = getAllBooks();
     if (authorF) books = books.filter(b => b.author === authorF);
     if (sourceF) books = books.filter(b => b.source === sourceF);
     if (typeF)   books = books.filter(b => b.type === typeF);
-    if (periodF) books = books.filter(b => b.period === periodF);
     if (favF === 'favorites') books = books.filter(b => isFavorite(b.id));
-    if (tagF)    books = books.filter(b => b.tags?.some(t => t.toLowerCase().includes(tagF)));
     if (textF)   books = books.filter(b =>
         `${b.title} ${b.author} ${b.snippet || ''}`.toLowerCase().includes(textF)
     );
@@ -664,34 +639,17 @@ function renderList() {
         return;
     }
 
-    if (compact) {
-        listDiv.innerHTML = `
-            <table class="book-table">
-                <thead><tr><th>Title</th><th>Author</th><th>Source</th></tr></thead>
-                <tbody>
-                    ${page.map(b => `
-                        <tr>
-                            <td><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></td>
-                            <td>${escapeHtml(b.author)}</td>
-                            <td>${b.source}</td>
-                        </tr>
-                    `).join('')}
-                </tbody>
-            </table>
-        `;
-    } else {
-        listDiv.innerHTML = page.map(b => `
-            <div class="book-card">
-                <div class="book-card-header">
-                    <h3><a href="${getBookLink(b)}">${escapeHtml(b.title)}</a></h3>
-                    <button class="fav-btn ${isFavorite(b.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavBtn(this, '${b.id}')" title="Add to favorites">*</button>
+    listDiv.innerHTML = page.map(b => `
+            <div class="search-result">
+                <div class="search-result-byline">
+                    ${escapeHtml(b.author)} · ${b.type || 'text'} · ${b.source}
+                    <button class="fav-btn ${isFavorite(b.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavBtn(this, '${b.id}')" title="Add to favorites">★</button>
                 </div>
-                <div class="book-meta">${escapeHtml(b.author)} <span class="source">[${b.source}]</span></div>
-                ${b.tags?.length ? `<div class="book-tags">${b.tags.slice(0, 4).map(t => `<button class="tag tag-btn" onclick="filterByTag('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('')}</div>` : ''}
-                <div class="book-snippet">${escapeHtml((b.snippet || '').slice(0, 150))}${b.snippet?.length > 150 ? '...' : ''}</div>
+                <a href="${getBookLink(b)}" class="search-result-title">${escapeHtml(b.title)}</a>
+                ${b.tags?.length ? `<div class="search-result-tags">${b.tags.slice(0, 4).map(t => `<button class="tag tag-btn" onclick="filterByTag('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('')}</div>` : ''}
+                ${b.snippet ? `<div class="search-result-excerpt">${escapeHtml((b.snippet || '').slice(0, 200))}${b.snippet?.length > 200 ? '...' : ''}</div>` : ''}
             </div>
         `).join('');
-    }
 
     if (pagDiv && total > 1) {
         pagDiv.innerHTML = `

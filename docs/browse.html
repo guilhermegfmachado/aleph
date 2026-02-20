@@ -11,59 +11,46 @@
     <div class="container">
         <header>
             <h1>א</h1>
-            <p class="subtitle">universal catalog</p>
+            <p class="subtitle" style="opacity:.7;font-size:.8rem;margin-bottom:.75rem;">Bibliothèque de références personnelle — textes, outils, lieux.</p>
             <nav>
                 <a href="index.html">search</a>
                 <a href="browse.html" class="active">browse</a>
                 <a href="sources.html">sources</a>
                 <a href="upload.html">add</a>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">*</button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light theme">●</button>
             </nav>
         </header>
 
         <main>
             <div class="search-box">
                 <input type="text" id="browse-search" placeholder="search titles, authors, snippets..." autofocus>
-            </div>
-
-            <div class="catalog-stats" id="catalog-stats">
-                <div class="stats-summary">
-                    <span id="total-books">0</span> texts from <span id="total-sources">0</span> sources
+                <div class="search-filters">
+                    <select id="type-filter">
+                        <option value="">all types</option>
+                    </select>
+                    <select id="author-filter">
+                        <option value="">all authors</option>
+                    </select>
+                    <select id="source-filter">
+                        <option value="">all sources</option>
+                    </select>
+                    <select id="fav-filter">
+                        <option value="">all texts</option>
+                        <option value="favorites">★ favorites</option>
+                    </select>
+                    <select id="sort-filter">
+                        <option value="title">sort: title</option>
+                        <option value="author">sort: author</option>
+                        <option value="type">sort: type</option>
+                    </select>
                 </div>
-                <div class="stats-breakdown" id="stats-breakdown"></div>
             </div>
 
-            <div class="browse-filters">
-                <input type="text" id="tag-search" placeholder="filter by tag...">
-                <select id="type-filter">
-                    <option value="">all types</option>
-                </select>
-                <select id="period-filter">
-                    <option value="">all periods</option>
-                </select>
-                <select id="author-filter">
-                    <option value="">all authors</option>
-                </select>
-                <select id="source-filter">
-                    <option value="">all sources</option>
-                </select>
-                <select id="fav-filter">
-                    <option value="">all texts</option>
-                    <option value="favorites">favorites only</option>
-                </select>
-                <select id="sort-filter">
-                    <option value="title">sort: title</option>
-                    <option value="author">sort: author</option>
-                    <option value="type">sort: type</option>
-                    <option value="period">sort: period</option>
-                </select>
-                <select id="view-filter">
-                    <option value="list">list view</option>
-                    <option value="compact">compact</option>
-                </select>
+            <div class="browse-stats" id="catalog-stats">
+                <span id="total-books">0</span> texts from <span id="total-sources">0</span> sources
             </div>
 
-            <div id="book-list" class="books-list">
+            <div id="book-list" class="results">
                 <div class="loading">loading...</div>
             </div>
 

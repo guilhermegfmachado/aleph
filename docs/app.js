@@ -515,8 +515,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Only run on the search page (index.html)
     const input = document.getElementById('search-input');
-    const btn   = document.getElementById('search-btn');
-    if (!input || !btn) return;
+    if (!input) return;
 
     // Load corpus index
     await loadCorpusIndex();
@@ -529,25 +528,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (authorCount) authorCount.textContent = new Set(corpusIndex.map(e => e.author)).size;
     }
 
-    // Populate author dropdown
-    const authorFilter   = document.getElementById('author-filter');
-    const categoryFilter = document.getElementById('category-filter');
-
-    if (authorFilter && corpusIndex) {
-        const authors = [...new Set(corpusIndex.map(e => e.author))].sort();
-        authors.forEach(a => authorFilter.add(new Option(a, a)));
-    }
-
-    // Search handler
+    // Search handler - no filters, just query
     const doSearch = () => {
-        const q    = input.value.trim();
-        const auth = authorFilter?.value   || '';
-        const cat  = categoryFilter?.value || '';
+        const q = input.value.trim();
         if (!q) return;
-        doCorpusSearch(q, auth, cat);
+        doCorpusSearch(q, '', '');
     };
 
-    btn.addEventListener('click', doSearch);
     input.addEventListener('keypress', e => e.key === 'Enter' && doSearch());
 
     // Seed term clicks
@@ -556,7 +543,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             e.preventDefault();
             const q = link.dataset.query;
             input.value = q;
-            doCorpusSearch(q, authorFilter?.value || '', categoryFilter?.value || '');
+            doCorpusSearch(q, '', '');
         });
     });
 });

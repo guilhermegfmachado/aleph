@@ -183,11 +183,11 @@ function updateNetwork() {
     };
 
     const sizes = {
-        root:     32,
-        category: 24,
-        section:  18,
-        subtopic: 13,
-        resource: 8
+        root:     38,
+        category: 28,
+        section:  22,
+        subtopic: 16,
+        resource: 11
     };
 
     if (simulation) simulation.stop();
@@ -238,7 +238,7 @@ function updateNetwork() {
                 return -200;
             }))
         .force("center", d3.forceCenter(width / 2, height / 2).strength(0.01))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 15).strength(0.8))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 20).strength(0.9))
         .alphaDecay(0.005)
         .velocityDecay(0.75);
 
@@ -322,12 +322,13 @@ function updateNetwork() {
         .append("title")
         .text(d => d.fullLabel);
 
-    const padding = 30;
+    const padding = 50;
     simulation.on("tick", () => {
         data.nodes.forEach(d => {
             if (!d.fx) {
-                d.x = Math.max(padding, Math.min(width - padding, d.x));
-                d.y = Math.max(padding, Math.min(height - padding, d.y));
+                const r = sizes[d.group] || 10;
+                d.x = Math.max(r + padding, Math.min(width - r - padding, d.x));
+                d.y = Math.max(r + padding, Math.min(height - r - padding, d.y));
             }
             nodePositions[d.id] = { x: d.x, y: d.y };
         });
@@ -349,8 +350,9 @@ function updateNetwork() {
 
     function dragging(e) {
         if (e.subject.id === "root") return;
-        e.subject.fx = Math.max(padding, Math.min(width - padding, e.x));
-        e.subject.fy = Math.max(padding, Math.min(height - padding, e.y));
+        const r = sizes[e.subject.group] || 10;
+        e.subject.fx = Math.max(r + padding, Math.min(width - r - padding, e.x));
+        e.subject.fy = Math.max(r + padding, Math.min(height - r - padding, e.y));
     }
 
     function dragend(e) {

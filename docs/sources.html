@@ -542,6 +542,70 @@
         .panel-more:hover {
             text-decoration: underline;
         }
+
+        /* Sticky Table of Contents */
+        .sources-toc {
+            position: fixed;
+            left: calc((100vw - 900px) / 2 - 160px);
+            top: 120px;
+            width: 140px;
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .sources-toc {
+                display: block;
+            }
+        }
+        .sources-toc a {
+            display: block;
+            padding: 0.35rem 0;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
+            transition: color 0.15s, border-color 0.15s;
+        }
+        .sources-toc a:hover {
+            color: var(--accent);
+        }
+        .sources-toc a.active {
+            color: var(--accent);
+            border-left-color: var(--accent);
+        }
+
+        /* Tooltip labels for toolbar */
+        .ctrl-btn[data-tooltip] {
+            position: relative;
+        }
+        .ctrl-btn[data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-size: 0.7rem;
+            padding: 0.2rem 0.4rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s;
+            z-index: 10;
+        }
+        .ctrl-btn[data-tooltip]:hover::after {
+            opacity: 1;
+        }
+
+        /* Site description */
+        .site-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -557,18 +621,35 @@
             </nav>
         </header>
 
+        <!-- Sticky Table of Contents -->
+        <nav class="sources-toc" id="sources-toc">
+            <a href="#textes">Textes</a>
+            <a href="#langues">Langues</a>
+            <a href="#arts">Arts</a>
+            <a href="#musique">Musique</a>
+            <a href="#humanites">Humanités</a>
+            <a href="#economie">Économie</a>
+            <a href="#informatique">Informatique</a>
+            <a href="#metiers">Métiers</a>
+            <a href="#design">Design</a>
+            <a href="#transport">Transport</a>
+            <a href="#droit">Droit</a>
+        </nav>
+
         <main>
+            <p class="site-desc">Répertoire de ressources numériques pour la recherche, l'étude et l'exploration : textes anciens, archives, bases de données, outils linguistiques et références spécialisées.</p>
+
             <!-- Controls Bar -->
             <div class="view-controls">
                 <div class="controls-left">
                     <input type="text" id="search-input" class="search-input" placeholder="rechercher..." oninput="filterResources(this.value)">
-                    <button class="ctrl-btn" onclick="randomResource()" title="Découverte aléatoire">ξ</button>
+                    <button class="ctrl-btn" onclick="randomResource()" data-tooltip="aléatoire">ξ</button>
                 </div>
                 <div class="controls-right">
-                    <button class="ctrl-btn" onclick="resetNetwork()" title="Réinitialiser">↺</button>
-                    <button class="ctrl-btn" onclick="toggleFullscreen()" title="Plein écran">⛶</button>
-                    <button class="ctrl-btn" onclick="toggleSidebar()" title="Favoris & Récents">☆</button>
-                    <button id="dark-mode-btn" class="ctrl-btn" onclick="toggleDarkMode()" title="Mode sombre">○</button>
+                    <button class="ctrl-btn" onclick="resetNetwork()" data-tooltip="réinitialiser">↺</button>
+                    <button class="ctrl-btn" onclick="toggleFullscreen()" data-tooltip="plein écran">⛶</button>
+                    <button class="ctrl-btn" onclick="toggleSidebar()" data-tooltip="favoris">☆</button>
+                    <button id="dark-mode-btn" class="ctrl-btn" onclick="toggleDarkMode()" data-tooltip="thème">○</button>
                     <button id="view-toggle-btn" class="view-toggle-btn" onclick="toggleNetworkView()">vue liste</button>
                 </div>
             </div>
@@ -706,12 +787,36 @@
                     </div>
                 </div>
 
-                <h3>Asie de l'Est</h3>
+                <h3>Ressources Philologiques</h3>
                 <div class="resources">
                     <div class="resource">
-                        <div class="resource-name"><a href="https://www.aozora.gr.jp" target="_blank">Aozora Bunko 青空文庫</a></div>
-                        <div class="resource-desc">Littérature japonaise en domaine public : 17 000+ œuvres, de Natsume Sōseki à Akutagawa.</div>
+                        <div class="resource-name"><a href="https://www.tlg.uci.edu" target="_blank">Thesaurus Linguae Graecae (TLG)</a></div>
+                        <div class="resource-desc">Corpus exhaustif de littérature grecque antique : Homère à Byzance. Recherche morphologique, lemmatisation, concordances.</div>
                     </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://logeion.uchicago.edu" target="_blank">Logeion</a></div>
+                        <div class="resource-desc">Interface unifiée pour dictionnaires grec ancien et latin : LSJ, Lewis & Short, Middle Liddell. Recherche instantanée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.papyri.info" target="_blank">Papyri.info</a></div>
+                        <div class="resource-desc">Base de données de papyrus grecs et latins : textes documentaires, éditions critiques, métadonnées archéologiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.trismegistos.org" target="_blank">Trismegistos</a></div>
+                        <div class="resource-desc">Portail d'études papyrologiques : identification de textes, prosopographie, géographie historique de l'Égypte gréco-romaine.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.degruyter.com/database/TLL" target="_blank">Thesaurus Linguae Latinae (TLL)</a></div>
+                        <div class="resource-desc">Dictionnaire encyclopédique du latin : citations exhaustives d'Antiquité à Renaissance, projet séculaire de la Bayerische Akademie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://alpheios.net" target="_blank">Alpheios</a></div>
+                        <div class="resource-desc">Extension de lecture pour textes anciens : analyse morphologique, dictionnaire intégré, support grec, latin, arabe, persan.</div>
+                    </div>
+                </div>
+
+                <h3>Asie de l'Est</h3>
+                <div class="resources">
                     <div class="resource">
                         <div class="resource-name"><a href="https://cbetaonline.dila.edu.tw" target="_blank">CBETA</a></div>
                         <div class="resource-desc">Canon bouddhique chinois numérisé : Tripiṭaka, sutras, commentaires. Recherche plein texte.</div>
@@ -723,6 +828,10 @@
                     <div class="resource">
                         <div class="resource-name"><a href="https://kotobank.jp" target="_blank">Kotobank</a></div>
                         <div class="resource-desc">Portail de dictionnaires et encyclopédies japonais : Daijirin, Britannica Japan, termes spécialisés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.korean.go.kr" target="_blank">국립국어원 (NIKL)</a></div>
+                        <div class="resource-desc">Institut national de la langue coréenne : dictionnaires officiels, corpus, normes orthographiques.</div>
                     </div>
                 </div>
 
@@ -818,6 +927,22 @@
                     </div>
                 </div>
 
+                <h3>Littérature Ibérique & Moderne</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cervantesvirtual.com" target="_blank">Biblioteca Virtual Miguel de Cervantes</a></div>
+                        <div class="resource-desc">Patrimoine hispanique numérisé : Quichotte aux auteurs contemporains. 200 000+ œuvres en castillan, catalan, galicien.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://purl.pt" target="_blank">Biblioteca Nacional Digital (Portugal)</a></div>
+                        <div class="resource-desc">Collections de la BNP : manuscrits médiévaux, incunables, cartographie maritime, périodiques historiques lusophones.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.thelatinlibrary.com" target="_blank">The Latin Library</a></div>
+                        <div class="resource-desc">Textes latins classiques en plein texte : Cicéron, Virgile, Ovide, Sénèque. Format simple, chargement rapide.</div>
+                    </div>
+                </div>
+
                 <h3>Cartographie</h3>
                 <div class="resources">
                     <div class="resource">
@@ -876,6 +1001,42 @@
                         <div class="resource-desc">Langue logique sans ambiguïté syntaxique, basée sur la logique des prédicats. Grammaire formellement définie.</div>
                     </div>
                 </div>
+
+                <h3>Dictionnaires & Étymologie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cnrtl.fr" target="_blank">CNRTL</a></div>
+                        <div class="resource-desc">Centre national de ressources textuelles et lexicales : TLFi, étymologie, synonymes, concordances du français.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.etymonline.com" target="_blank">Online Etymology Dictionary</a></div>
+                        <div class="resource-desc">Histoire des mots anglais : origines proto-indo-européennes, emprunts, évolution sémantique détaillée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.dwds.de" target="_blank">DWDS</a></div>
+                        <div class="resource-desc">Dictionnaire numérique allemand : définitions, étymologie, collocations, corpus diachronique de 100 milliards de mots.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://starlingdb.org" target="_blank">Starling Database</a></div>
+                        <div class="resource-desc">Bases de données de linguistique comparative : reconstructions proto-langues, étymologies de familles (IE, altaïque, sino-tibétain).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dictionnaire.sensagent.com" target="_blank">Sensagent</a></div>
+                        <div class="resource-desc">Dictionnaire multilingue avec synonymes, antonymes, traductions et définitions encyclopédiques intégrées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.lexilogos.com" target="_blank">Lexilogos</a></div>
+                        <div class="resource-desc">Portail de dictionnaires et claviers virtuels pour 200+ langues : ressources linguistiques mondiales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.linguee.com" target="_blank">Linguee</a></div>
+                        <div class="resource-desc">Dictionnaire avec contextes : traductions issues de documents bilingues réels, exemples d'usage authentiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://forvo.com" target="_blank">Forvo</a></div>
+                        <div class="resource-desc">Prononciation de mots par locuteurs natifs : 6+ millions d'enregistrements dans 400+ langues.</div>
+                    </div>
+                </div>
                 </div>
             </details>
 
@@ -927,6 +1088,14 @@
                         <div class="resource-desc">Adaptations de Shakespeare du monde entier : productions vidéo, analyses interculturelles, pédagogie.</div>
                     </div>
                 </div>
+
+                <h3>Iconographie & Recherche</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://warburg.sas.ac.uk" target="_blank">Warburg Institute</a></div>
+                        <div class="resource-desc">Bibliothèque Aby Warburg : iconologie, survie de l'Antiquité, histoire des images. Photothèque et archives uniques.</div>
+                    </div>
+                </div>
                 </div>
             </details>
 
@@ -970,6 +1139,26 @@
                         <div class="resource-desc">Archive de musique expérimentale : noise japonais, musique industrielle, free jazz, electronics obscures.</div>
                     </div>
                 </div>
+
+                <h3>Ethnomusicologie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.loc.gov/collections/alan-lomax-manuscripts" target="_blank">Alan Lomax Archive</a></div>
+                        <div class="resource-desc">Enregistrements de terrain légendaires : blues du Delta, folk appalachien, musiques du monde collectées sur 60 ans.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.folkways.si.edu" target="_blank">Smithsonian Folkways</a></div>
+                        <div class="resource-desc">Label d'archives sonores : musiques traditionnelles, field recordings, spoken word. 60 000+ pistes streamables.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://archives.crem-cnrs.fr" target="_blank">CREM (CNRS)</a></div>
+                        <div class="resource-desc">Centre de recherche en ethnomusicologie : archives sonores de terrain, Asie, Afrique, Océanie, Amériques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://globalmusic.digital" target="_blank">Global Music Archive</a></div>
+                        <div class="resource-desc">Collection numérique de musiques traditionnelles : enregistrements historiques, instruments, contextes rituels.</div>
+                    </div>
+                </div>
                 </div>
             </details>
 
@@ -988,6 +1177,14 @@
                         <div class="resource-name"><a href="https://nosubject.com" target="_blank">No Subject</a></div>
                         <div class="resource-desc">Encyclopédie lacanienne : concepts, séminaires, mathèmes. Aussi : Žižek, Badiou, théorie psychanalytique contemporaine.</div>
                     </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.pep-web.org" target="_blank">PEP-Web</a></div>
+                        <div class="resource-desc">Psychoanalytic Electronic Publishing : archives complètes des revues psychanalytiques majeures depuis 1871.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.freud.org.uk" target="_blank">Freud Museum London</a></div>
+                        <div class="resource-desc">Archives du dernier domicile de Freud : correspondances, photos, bibliothèque, objets de la collection personnelle.</div>
+                    </div>
                 </div>
 
                 <h3>Anthropologie & Ethnographie</h3>
@@ -1003,6 +1200,14 @@
                     <div class="resource">
                         <div class="resource-name"><a href="https://www.prm.ox.ac.uk" target="_blank">Pitt Rivers Museum</a></div>
                         <div class="resource-desc">Collections ethnographiques d'Oxford : 500 000+ objets photographiés avec provenance et contexte culturel.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://journals.openedition.org/terrain" target="_blank">Terrain (OpenEdition)</a></div>
+                        <div class="resource-desc">Revue d'ethnologie européenne en accès libre : articles de recherche, enquêtes de terrain, approches sensibles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.quaibranly.fr/fr/collections" target="_blank">Musée du Quai Branly</a></div>
+                        <div class="resource-desc">Collections des arts et civilisations d'Afrique, Asie, Océanie, Amériques : 300 000+ objets documentés en ligne.</div>
                     </div>
                 </div>
 
@@ -1074,6 +1279,38 @@
                     <div class="resource">
                         <div class="resource-name"><a href="https://www.paradigm.xyz/writing" target="_blank">Paradigm Research</a></div>
                         <div class="resource-desc">Recherche fondamentale sur mécanismes DeFi : AMM, MEV, token design, cryptographie appliquée par top VC crypto.</div>
+                    </div>
+                </div>
+
+                <h3>Crypto — Recherche & Données</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://messari.io" target="_blank">Messari</a></div>
+                        <div class="resource-desc">Recherche crypto institutionnelle : rapports sectoriels, métriques on-chain, profiles de protocoles, screeners.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://glassnode.com" target="_blank">Glassnode</a></div>
+                        <div class="resource-desc">Métriques on-chain avancées : MVRV, SOPR, analyse de holders, flux d'échanges. Standard pour l'analyse Bitcoin.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.theblock.co/data" target="_blank">The Block Data</a></div>
+                        <div class="resource-desc">Dashboards de données crypto : volumes DEX, TVL historique, stablecoins, NFT, funding rounds.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://tokenterminal.com" target="_blank">Token Terminal</a></div>
+                        <div class="resource-desc">Métriques financières pour protocoles : revenus, P/S ratio, fully diluted valuation. Analyse fondamentale crypto.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cryptofees.info" target="_blank">CryptoFees</a></div>
+                        <div class="resource-desc">Frais générés par protocoles : comparaison quotidienne des revenus de Ethereum, Uniswap, Lido, etc.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://etherscan.io" target="_blank">Etherscan</a></div>
+                        <div class="resource-desc">Explorateur Ethereum : transactions, contrats, tokens, gas tracker. Équivalents pour autres EVM chains.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ethereum.org/en/whitepaper" target="_blank">Ethereum Whitepaper</a></div>
+                        <div class="resource-desc">Document fondateur de Vitalik Buterin : smart contracts, EVM, vision originale de la plateforme.</div>
                     </div>
                 </div>
 
@@ -1154,6 +1391,18 @@
                         <div class="resource-name"><a href="https://libgen.is" target="_blank">Library Genesis</a></div>
                         <div class="resource-desc">Bibliothèque d'ombre massive : livres académiques, manuels, fiction, magazines, comics. Miroirs multiples.</div>
                     </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://bellingcat.com" target="_blank">Bellingcat</a></div>
+                        <div class="resource-desc">Collectif d'investigation OSINT : méthodologies, tutoriels, enquêtes géolocalisées, analyse d'images satellites.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://osintframework.com" target="_blank">OSINT Framework</a></div>
+                        <div class="resource-desc">Arborescence d'outils OSINT : réseaux sociaux, domaines, emails, géolocalisation, dark web, métadonnées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://inteltechniques.com" target="_blank">IntelTechniques</a></div>
+                        <div class="resource-desc">Ressources OSINT de Michael Bazzell : outils de recherche, workbooks, podcasts, méthodologies d'investigation.</div>
+                    </div>
                 </div>
 
                 <h3>Culture Hacker</h3>
@@ -1213,6 +1462,22 @@
                     <div class="resource">
                         <div class="resource-name"><a href="https://www.wolframalpha.com" target="_blank">Wolfram Alpha</a></div>
                         <div class="resource-desc">Moteur de calcul symbolique : résolution d'équations, graphiques, données factuelles, conversions.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mathworld.wolfram.com" target="_blank">MathWorld</a></div>
+                        <div class="resource-desc">Encyclopédie mathématique d'Eric Weisstein : 13 000+ entrées détaillées, formules, visualisations interactives.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://terrytao.wordpress.com" target="_blank">Terry Tao's Blog</a></div>
+                        <div class="resource-desc">Blog du Fields Medalist : analyse, combinatoire, notes de cours, problèmes ouverts, expository writing.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mathoverflow.net" target="_blank">MathOverflow</a></div>
+                        <div class="resource-desc">Q&A pour mathématiciens professionnels : questions de recherche, preuves, conjectures, références.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cut-the-knot.org" target="_blank">Cut the Knot</a></div>
+                        <div class="resource-desc">Mathématiques interactives d'Alexander Bogomolny : puzzles, preuves visuelles, géométrie, probabilités.</div>
                     </div>
                 </div>
                 </div>
@@ -1421,6 +1686,26 @@
                         <div class="resource-desc">Marketplace d'instruments vintage et neufs : guitares, pédales, synthétiseurs. Communauté de musiciens.</div>
                     </div>
                 </div>
+
+                <h3>Outils & Recherche</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://fonts.google.com" target="_blank">Google Fonts</a></div>
+                        <div class="resource-desc">Bibliothèque de polices libres : 1 400+ familles typographiques optimisées pour le web. Variable fonts.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://fontsinuse.com" target="_blank">Fonts In Use</a></div>
+                        <div class="resource-desc">Archive de typographie appliquée : identifications, contexte historique, exemples d'usage professionnel.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://designarchives.aiga.org" target="_blank">AIGA Design Archives</a></div>
+                        <div class="resource-desc">Archives du design graphique américain : affiches, identités visuelles, packaging primés depuis 1924.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.are.na" target="_blank">Are.na</a></div>
+                        <div class="resource-desc">Plateforme de curation collaborative : collections visuelles, recherche créative, alternative non-algorithmique.</div>
+                    </div>
+                </div>
                 </div>
             </details>
 
@@ -1492,6 +1777,18 @@
                         <div class="resource-desc">Carte des routes aériennes : visualisez tous les vols directs depuis un aéroport, compagnies disponibles.</div>
                     </div>
                 </div>
+
+                <h3>Ferries & Maritime</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.directferries.com" target="_blank">Direct Ferries</a></div>
+                        <div class="resource-desc">Comparateur de ferries mondial : routes méditerranéennes, baltiques, transmanche. Réservation multi-compagnies.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.marinetraffic.com" target="_blank">MarineTraffic</a></div>
+                        <div class="resource-desc">Suivi AIS des navires en temps réel : cargo, tankers, ferries, yachts. Données historiques et ports.</div>
+                    </div>
+                </div>
                 </div>
             </details>
 
@@ -1545,6 +1842,22 @@
                     <div class="resource">
                         <div class="resource-name"><a href="https://www.law.cornell.edu" target="_blank">Cornell LII</a></div>
                         <div class="resource-desc">Legal Information Institute : U.S. Code, CFR, Constitution annotée, encyclopédie juridique gratuite.</div>
+                    </div>
+                </div>
+
+                <h3>Droit National</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.legifrance.gouv.fr" target="_blank">Légifrance</a></div>
+                        <div class="resource-desc">Droit français officiel : codes, lois, décrets, jurisprudence. Journal officiel et consolidations.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gesetze-im-internet.de" target="_blank">Gesetze im Internet</a></div>
+                        <div class="resource-desc">Lois allemandes fédérales en texte intégral : BGB, StGB, GG. Versions consolidées officielles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.boe.es" target="_blank">BOE España</a></div>
+                        <div class="resource-desc">Boletín Oficial del Estado : législation espagnole, décrets royaux, traités. Base de données consolidée.</div>
                     </div>
                 </div>
                 </div>
@@ -1851,6 +2164,26 @@
                     link.addEventListener('click', () => trackVisit(link.textContent, link.href));
                 }
             });
+
+            // TOC scroll tracking
+            const tocLinks = document.querySelectorAll('.sources-toc a');
+            const sections = document.querySelectorAll('.source-section');
+
+            function updateActiveToc() {
+                let current = '';
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 150) {
+                        current = section.id;
+                    }
+                });
+                tocLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveToc);
+            updateActiveToc();
         })();
     </script>
     </div>

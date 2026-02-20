@@ -4,8 +4,13 @@
   "description": "Build scripts for Aleph universal catalog",
   "scripts": {
     "fetch": "node fetch-texts.js",
+    "fetch-corpus": "node fetch-corpus.js",
     "index": "node build-search-index.js",
-    "build": "node fetch-texts.js && node build-search-index.js"
+    "build": "node fetch-texts.js && node build-search-index.js",
+    "build-corpus": "node fetch-corpus.js"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
   },
   "author": "Aleph Project",
   "license": "MIT"

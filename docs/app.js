@@ -346,32 +346,218 @@ function showResults(results, query) {
     `;
 }
 
-// Init search page
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadLibrary();
+// ── CORPUS SEARCH (index.html) ────────────────────────────────────────────────
 
-    const input = document.getElementById('search-input');
-    const btn = document.getElementById('search-btn');
-    const authorFilter = document.getElementById('author-filter');
+let corpusIndex = null;
+const corpusTextCache = {};
 
-    if (btn && input) {
-        const doSearch = () => {
-            const q = input.value.trim();
-            if (!q) return;
-            const results = search(q, authorFilter?.value || '');
-            showResults(results, q);
-        };
+async function loadCorpusIndex() {
+    if (corpusIndex) return corpusIndex;
+    try {
+        const resp = await fetch('corpus/index.json');
+        if (resp.ok) {
+            corpusIndex = await resp.json();
+            return corpusIndex;
+        }
+    } catch (e) {}
+    return null;
+}
 
-        btn.addEventListener('click', doSearch);
-        input.addEventListener('keypress', e => e.key === 'Enter' && doSearch());
+async function loadCorpusText(entry) {
+    if (!entry.file) return null;
+    if (corpusTextCache[entry.id]) return corpusTextCache[entry.id];
+    try {
+        const resp = await fetch(`corpus/${entry.file}`);
+        if (!resp.ok) return null;
+        const text = await resp.text();
+        corpusTextCache[entry.id] = text;
+        return text;
+    } catch (e) {
+        return null;
+    }
+}
+
+function extractExcerpt(text, keyword) {
+    const lower = text.toLowerCase();
+    const term  = keyword.toLowerCase();
+    const matchIdx = lower.indexOf(term);
+    if (matchIdx === -1) return null;
+
+    // Walk backward to find a sentence start
+    let start = Math.max(0, matchIdx - 300);
+    for (let i = matchIdx - 1; i >= start; i--) {
+        if (('.!?'.includes(text[i])) && i + 1 < text.length && text[i + 1] === ' ') {
+            start = i + 2;
+            break;
+        }
     }
 
+    // Walk forward to capture 3-4 sentences after the match
+    let end = matchIdx + term.length;
+    let dots = 0;
+    while (end < text.length && dots < 3 && (end - start) < 700) {
+        if ('.!?'.includes(text[end])) dots++;
+        end++;
+    }
+
+    let excerpt = text.slice(start, end).replace(/\s+/g, ' ').trim();
+    if (start > 0) excerpt = '\u2026' + excerpt;
+    if (end < text.length) excerpt += '\u2026';
+
+    return escapeHtml(excerpt).replace(
+        new RegExp('(' + escapeRegex(escapeHtml(keyword)) + ')', 'gi'),
+        '<mark>$1</mark>'
+    );
+}
+
+function fmtYear(y) {
+    if (!y) return '';
+    const n = parseInt(y, 10);
+    return n < 0 ? Math.abs(n) + '\u202fBCE' : y;
+}
+
+function renderCorpusResult(r, query) {
+    const e = r.entry;
+    const year = e.year ? ` (${fmtYear(e.year)})` : '';
+    const byline = `${escapeHtml(e.author)}${year} \u00b7 <em>${escapeHtml(e.category)}</em>`;
+
+    if (!e.file && e.url) {
+        return `<div class="search-result">
+            <div class="search-result-byline">${byline}</div>
+            <div class="search-result-title">${escapeHtml(e.title)}</div>
+            <div class="search-result-extern">\u2192 <a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">read at external source \u2197</a> <span class="search-result-note">(reference only \u2014 not stored locally)</span></div>
+        </div>`;
+    }
+
+    const href = `book.html?corpus=${e.id}&q=${encodeURIComponent(query)}`;
+    return `<div class="search-result">
+        <div class="search-result-byline">${byline}</div>
+        <a href="${href}" class="search-result-title">${escapeHtml(e.title)}</a>
+        ${r.excerpt ? `<div class="search-result-excerpt">${r.excerpt}</div>` : ''}
+    </div>`;
+}
+
+function showCorpusResults(results, query, searchingMore = false) {
+    const div = document.getElementById('results');
+    if (!div) return;
+    const welcome = document.getElementById('welcome');
+    if (welcome) welcome.style.display = 'none';
+
+    let html = '';
+    if (searchingMore) {
+        html += `<div class="search-status">searching\u2026</div>`;
+    }
+    if (results.length === 0 && !searchingMore) {
+        html += `<div class="no-results">no results for \u201c${escapeHtml(query)}\u201d</div>`;
+    } else {
+        if (!searchingMore) {
+            html += `<div class="results-header"><h3>${results.length} result${results.length !== 1 ? 's' : ''}</h3></div>`;
+        }
+        html += results.map(r => renderCorpusResult(r, query)).join('');
+    }
+    div.innerHTML = html;
+}
+
+async function doCorpusSearch(query, authorFilter, categoryFilter) {
+    if (!corpusIndex || !query.trim()) return;
+
+    const term = query.toLowerCase();
+    let entries = corpusIndex.filter(e => {
+        if (authorFilter && e.author !== authorFilter) return false;
+        if (categoryFilter && e.category !== categoryFilter) return false;
+        return true;
+    });
+
+    // Reference-only: match title/author only
+    const refResults = entries
+        .filter(e => !e.file && e.url)
+        .filter(e => `${e.title} ${e.author}`.toLowerCase().includes(term))
+        .map(e => ({ entry: e, excerpt: null }));
+
+    const fileEntries = entries.filter(e => e.file);
+    const fileResults = [];
+
+    showCorpusResults(refResults, query, fileEntries.length > 0);
+
+    const BATCH = 6;
+    for (let i = 0; i < fileEntries.length; i += BATCH) {
+        const batch = fileEntries.slice(i, i + BATCH);
+        const hits = await Promise.all(batch.map(async entry => {
+            const text = await loadCorpusText(entry);
+            if (!text) {
+                // No local file yet: fall back to title/author match
+                if (`${entry.title} ${entry.author}`.toLowerCase().includes(term)) {
+                    return { entry, excerpt: null };
+                }
+                return null;
+            }
+            const excerpt = extractExcerpt(text, query);
+            const titleMatch = `${entry.title} ${entry.author}`.toLowerCase().includes(term);
+            if (!excerpt && !titleMatch) return null;
+            return { entry, excerpt };
+        }));
+        for (const h of hits) {
+            if (h) fileResults.push(h);
+        }
+        const remaining = fileEntries.length - i - BATCH;
+        showCorpusResults([...refResults, ...fileResults], query, remaining > 0);
+    }
+
+    showCorpusResults([...refResults, ...fileResults], query, false);
+}
+
+// Init search page
+document.addEventListener('DOMContentLoaded', async () => {
+    // Apply saved dark mode
+    if (localStorage.getItem('aleph_dark') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+    updateThemeButton();
+
+    // Only run on the search page (index.html)
+    const input = document.getElementById('search-input');
+    const btn   = document.getElementById('search-btn');
+    if (!input || !btn) return;
+
+    // Load corpus index
+    await loadCorpusIndex();
+
+    // Populate stats
+    if (corpusIndex) {
+        const bookCount   = document.getElementById('book-count');
+        const authorCount = document.getElementById('author-count');
+        if (bookCount)   bookCount.textContent   = corpusIndex.length;
+        if (authorCount) authorCount.textContent = new Set(corpusIndex.map(e => e.author)).size;
+    }
+
+    // Populate author dropdown
+    const authorFilter   = document.getElementById('author-filter');
+    const categoryFilter = document.getElementById('category-filter');
+
+    if (authorFilter && corpusIndex) {
+        const authors = [...new Set(corpusIndex.map(e => e.author))].sort();
+        authors.forEach(a => authorFilter.add(new Option(a, a)));
+    }
+
+    // Search handler
+    const doSearch = () => {
+        const q    = input.value.trim();
+        const auth = authorFilter?.value   || '';
+        const cat  = categoryFilter?.value || '';
+        if (!q) return;
+        doCorpusSearch(q, auth, cat);
+    };
+
+    btn.addEventListener('click', doSearch);
+    input.addEventListener('keypress', e => e.key === 'Enter' && doSearch());
+
+    // Seed term clicks
     document.querySelectorAll('.quick-search').forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
             const q = link.dataset.query;
-            if (input) input.value = q;
-            showResults(search(q), q);
+            input.value = q;
+            doCorpusSearch(q, authorFilter?.value || '', categoryFilter?.value || '');
         });
     });
 });

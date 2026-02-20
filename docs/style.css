@@ -135,6 +135,10 @@ nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
     flex-wrap: wrap;
 }
 
+.browse-filters-bar {
+    margin-bottom: 1rem;
+}
+
 .search-filters select,
 .browse-filters select,
 .browse-filters input[type="text"] {

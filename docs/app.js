@@ -562,8 +562,6 @@ function initBrowse() {
             if (el) el.addEventListener('change', () => { browsePage = 1; renderList(); });
         });
 
-        const browseSearch = document.getElementById('browse-search');
-        if (browseSearch) browseSearch.addEventListener('input', () => { browsePage = 1; renderList(); });
     });
 }
 
@@ -604,7 +602,6 @@ function renderList() {
     const sourceF = document.getElementById('source-filter')?.value || '';
     const typeF   = document.getElementById('type-filter')?.value || '';
     const favF    = document.getElementById('fav-filter')?.value || '';
-    const textF   = (document.getElementById('browse-search')?.value || '').toLowerCase().trim();
     const sortBy  = document.getElementById('sort-filter')?.value || 'title';
 
     let books = getAllBooks();
@@ -612,9 +609,6 @@ function renderList() {
     if (sourceF) books = books.filter(b => b.source === sourceF);
     if (typeF)   books = books.filter(b => b.type === typeF);
     if (favF === 'favorites') books = books.filter(b => isFavorite(b.id));
-    if (textF)   books = books.filter(b =>
-        `${b.title} ${b.author} ${b.snippet || ''}`.toLowerCase().includes(textF)
-    );
     books.sort((a, b) => (a[sortBy] || '').localeCompare(b[sortBy] || ''));
 
     const total = Math.ceil(books.length / perPage);
@@ -633,7 +627,6 @@ function renderList() {
                     <button class="fav-btn ${isFavorite(b.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavBtn(this, '${b.id}')" title="Add to favorites">★</button>
                 </div>
                 <a href="${getBookLink(b)}" class="search-result-title">${escapeHtml(b.title)}</a>
-                ${b.tags?.length ? `<div class="search-result-tags">${b.tags.slice(0, 4).map(t => `<button class="tag tag-btn" onclick="filterByTag('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('')}</div>` : ''}
                 ${b.snippet ? `<div class="search-result-excerpt">${escapeHtml((b.snippet || '').slice(0, 200))}${b.snippet?.length > 200 ? '...' : ''}</div>` : ''}
             </div>
         `).join('');

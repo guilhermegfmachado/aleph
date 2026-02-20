@@ -543,37 +543,6 @@
             text-decoration: underline;
         }
 
-        /* Sticky Table of Contents */
-        .sources-toc {
-            position: fixed;
-            left: calc((100vw - 900px) / 2 - 160px);
-            top: 120px;
-            width: 140px;
-            display: none;
-        }
-        @media (min-width: 1024px) {
-            .sources-toc {
-                display: block;
-            }
-        }
-        .sources-toc a {
-            display: block;
-            padding: 0.35rem 0;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.8rem;
-            border-left: 2px solid transparent;
-            padding-left: 0.75rem;
-            transition: color 0.15s, border-color 0.15s;
-        }
-        .sources-toc a:hover {
-            color: var(--accent);
-        }
-        .sources-toc a.active {
-            color: var(--accent);
-            border-left-color: var(--accent);
-        }
-
         /* Tooltip labels for toolbar */
         .ctrl-btn[data-tooltip] {
             position: relative;
@@ -621,21 +590,6 @@
                 <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light theme">●</button>
             </nav>
         </header>
-
-        <!-- Sticky Table of Contents -->
-        <nav class="sources-toc" id="sources-toc">
-            <a href="#textes">Textes</a>
-            <a href="#langues">Langues</a>
-            <a href="#arts">Arts</a>
-            <a href="#musique">Musique</a>
-            <a href="#humanites">Humanités</a>
-            <a href="#economie">Économie</a>
-            <a href="#informatique">Informatique</a>
-            <a href="#metiers">Métiers</a>
-            <a href="#design">Design</a>
-            <a href="#transport">Transport</a>
-            <a href="#droit">Droit</a>
-        </nav>
 
         <main>
             <p class="site-desc">Répertoire de ressources numériques pour la recherche, l'étude et l'exploration : textes anciens, archives, bases de données, outils linguistiques et références spécialisées.</p>
@@ -2166,26 +2120,6 @@
                     link.addEventListener('click', () => trackVisit(link.textContent, link.href));
                 }
             });
-
-            // TOC scroll tracking
-            const tocLinks = document.querySelectorAll('.sources-toc a');
-            const sections = document.querySelectorAll('.source-section');
-
-            function updateActiveToc() {
-                let current = '';
-                sections.forEach(section => {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top <= 150) {
-                        current = section.id;
-                    }
-                });
-                tocLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-                });
-            }
-
-            window.addEventListener('scroll', updateActiveToc);
-            updateActiveToc();
         })();
     </script>
     </div>

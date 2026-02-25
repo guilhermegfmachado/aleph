@@ -238,10 +238,11 @@ function updateNetwork() {
                 if (d.group === "subtopic") return -60;
                 return -200;
             }))
-        .force("center", d3.forceCenter(width / 2, height / 2).strength(0.01))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 20).strength(0.9))
-        .alphaDecay(0.005)
-        .velocityDecay(0.75);
+        .force("x", d3.forceX(width / 2).strength(0.05))
+        .force("y", d3.forceY(height / 2).strength(0.05))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 15).strength(0.8))
+        .alphaDecay(0.02)
+        .velocityDecay(0.4);
 
     g.selectAll("*").remove();
 

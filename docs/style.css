@@ -7,14 +7,14 @@
 }
 
 :root {
-    --bg: #fafafa;
-    --bg-light: #f0f0f0;
-    --text: #2a2a2a;
-    --text-bright: #0a0a0a;
-    --text-muted: #555555;
+    --bg: #fcfcfc;
+    --bg-light: #f4f4f4;
+    --text: #2d2d2d;
+    --text-bright: #111111;
+    --text-muted: #606060;
     --accent: #6b4a04;
     --accent-dim: #8b6914;
-    --border: #c0c0c0;
+    --border: #d4d4d4;
     --highlight: #fff3cd;
 }
 
@@ -35,9 +35,12 @@ body {
     font-family: 'IBM Plex Mono', 'Consolas', 'Monaco', monospace;
     background: var(--bg);
     color: var(--text);
-    line-height: 1.6;
+    line-height: 1.7;
     min-height: 100vh;
     font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -266,8 +269,9 @@ a.search-result-title:hover { color: var(--accent); }
 
 .search-result-excerpt {
     font-size: 0.85rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--text);
+    max-width: 65ch;
 }
 
 .search-result-excerpt mark {
@@ -580,9 +584,10 @@ a.search-result-title:hover { color: var(--accent); }
 
 .book-content .text-body {
     font-size: 0.95rem;
-    line-height: 1.8;
+    line-height: 1.85;
     white-space: pre-wrap;
     word-wrap: break-word;
+    max-width: 70ch;
 }
 
 .book-content .highlight {

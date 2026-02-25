@@ -334,6 +334,13 @@
             color: var(--accent);
             background: var(--bg);
         }
+        .tree-links a.active {
+            color: var(--accent);
+            background: var(--bg);
+            border-left: 2px solid var(--accent);
+            margin-left: -1px;
+            font-weight: 500;
+        }
 
         /* Category Groups in List View */
         .category-group {
@@ -432,8 +439,9 @@
         .resource-desc {
             font-size: 0.9rem;
             color: var(--text);
-            line-height: 1.5;
+            line-height: 1.65;
             grid-column: 1 / -1;
+            max-width: 60ch;
         }
         .resource-tags {
             display: flex;
@@ -573,7 +581,8 @@
             color: var(--text-muted);
             font-size: 0.85rem;
             margin-bottom: 1.5rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            max-width: 65ch;
         }
     </style>
 </head>
@@ -2872,6 +2881,35 @@
                 toggleSidebar();
             }
         });
+
+        // ===== SCROLL-AWARE TOC =====
+        (function() {
+            const sections = document.querySelectorAll('.source-section[id]');
+            const treeLinks = document.querySelectorAll('.tree-links a');
+
+            if (sections.length && treeLinks.length && 'IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.id;
+                            treeLinks.forEach(link => {
+                                const href = link.getAttribute('href');
+                                if (href === '#' + id) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    });
+                }, {
+                    rootMargin: '-20% 0px -60% 0px',
+                    threshold: 0
+                });
+
+                sections.forEach(section => observer.observe(section));
+            }
+        })();
 
         // ===== INIT =====
         (function() {

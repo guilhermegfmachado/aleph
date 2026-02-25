@@ -207,8 +207,8 @@ function updateNetwork() {
             n.y = nodePositions[n.id].y;
         } else if (n.group === "category" && categoryAngles[n.id] !== undefined) {
             const angle = categoryAngles[n.id];
-            n.x = width  / 2 + Math.cos(angle) * 35;
-            n.y = height / 2 + Math.sin(angle) * 35;
+            n.x = width  / 2 + Math.cos(angle) * 120;
+            n.y = height / 2 + Math.sin(angle) * 120;
         } else {
             const parent = data.nodes.find(p => p.id === n.parent);
             const px = parent?.x ?? width  / 2;
@@ -234,15 +234,15 @@ function updateNetwork() {
             }))
         .force("charge", d3.forceManyBody()
             .strength(d => {
-                if (d.group === "resource") return -15;
-                if (d.group === "subtopic") return -60;
-                return -200;
+                if (d.group === "resource") return -25;
+                if (d.group === "subtopic") return -80;
+                return -300;
             }))
-        .force("x", d3.forceX(width / 2).strength(0.05))
-        .force("y", d3.forceY(height / 2).strength(0.05))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 15).strength(0.8))
-        .alphaDecay(0.02)
-        .velocityDecay(0.4);
+        .force("x", d3.forceX(width / 2).strength(0.08))
+        .force("y", d3.forceY(height / 2).strength(0.08))
+        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 18).strength(0.9))
+        .alphaDecay(0.015)
+        .velocityDecay(0.35);
 
     g.selectAll("*").remove();
 

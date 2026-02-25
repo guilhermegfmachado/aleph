@@ -100,5 +100,30 @@
   {"id":"mishima-temple-golden-pavilion","author":"Yukio Mishima","title":"The Temple of the Golden Pavilion","language":"en","file":null,"url":"https://archive.org/details/templeof00mish","year":"1956","category":"japanese"},
   {"id":"kawabata-snow-country","author":"Yasunari Kawabata","title":"Snow Country","language":"en","file":null,"url":"https://archive.org/details/snowcountry00kawa","year":"1948","category":"japanese"},
   {"id":"zweig-world-of-yesterday","author":"Stefan Zweig","title":"The World of Yesterday","language":"en","file":"zweig-world-of-yesterday.txt","url":"https://www.gutenberg.org/cache/epub/69399/pg69399.txt","year":"1942","category":"mitteleuropa"},
-  {"id":"schnitzler-dream-story","author":"Arthur Schnitzler","title":"Dream Story","language":"en","file":"schnitzler-dream-story.txt","url":"https://www.gutenberg.org/cache/epub/61209/pg61209.txt","year":"1926","category":"mitteleuropa"}
+  {"id":"schnitzler-dream-story","author":"Arthur Schnitzler","title":"Dream Story","language":"en","file":"schnitzler-dream-story.txt","url":"https://www.gutenberg.org/cache/epub/61209/pg61209.txt","year":"1926","category":"mitteleuropa"},
+
+  {"id":"verlaine-poemes-saturniens","author":"Paul Verlaine","title":"Poèmes Saturniens","language":"fr","file":"verlaine-poemes-saturniens.txt","url":"https://www.gutenberg.org/cache/epub/18313/pg18313.txt","year":"1866","category":"français"},
+  {"id":"verlaine-fetes-galantes","author":"Paul Verlaine","title":"Fêtes Galantes","language":"fr","file":"verlaine-fetes-galantes.txt","url":"https://www.gutenberg.org/cache/epub/18462/pg18462.txt","year":"1869","category":"français"},
+  {"id":"hugo-contemplations","author":"Victor Hugo","title":"Les Contemplations","language":"fr","file":"hugo-contemplations.txt","url":"https://www.gutenberg.org/cache/epub/8775/pg8775.txt","year":"1856","category":"français"},
+  {"id":"balzac-pere-goriot","author":"Honoré de Balzac","title":"Le Père Goriot","language":"fr","file":"balzac-pere-goriot.txt","url":"https://www.gutenberg.org/cache/epub/1237/pg1237.txt","year":"1835","category":"français"},
+  {"id":"maupassant-boule-de-suif","author":"Guy de Maupassant","title":"Boule de Suif","language":"fr","file":"maupassant-boule-de-suif.txt","url":"https://www.gutenberg.org/cache/epub/3090/pg3090.txt","year":"1880","category":"français"},
+  {"id":"proust-swann-fr","author":"Marcel Proust","title":"Du côté de chez Swann","language":"fr","file":"proust-swann-fr.txt","url":"https://www.gutenberg.org/cache/epub/2650/pg2650.txt","year":"1913","category":"français"},
+  {"id":"descartes-discours","author":"René Descartes","title":"Discours de la méthode","language":"fr","file":"descartes-discours.txt","url":"https://www.gutenberg.org/cache/epub/13846/pg13846.txt","year":"1637","category":"français"},
+  {"id":"bergson-matiere-memoire","author":"Henri Bergson","title":"Matière et Mémoire","language":"fr","file":"bergson-matiere-memoire.txt","url":"https://fr.wikisource.org/wiki/Mati%C3%A8re_et_m%C3%A9moire","year":"1896","category":"français"},
+  {"id":"rousseau-contrat-social-fr","author":"Jean-Jacques Rousseau","title":"Du Contrat Social","language":"fr","file":"rousseau-contrat-social-fr.txt","url":"https://www.gutenberg.org/cache/epub/46827/pg46827.txt","year":"1762","category":"français"},
+
+  {"id":"nietzsche-jenseits-de","author":"Friedrich Nietzsche","title":"Jenseits von Gut und Böse","language":"de","file":"nietzsche-jenseits-de.txt","url":"https://www.gutenberg.org/cache/epub/7204/pg7204.txt","year":"1886","category":"allemand"},
+  {"id":"nietzsche-zarathustra-de","author":"Friedrich Nietzsche","title":"Also Sprach Zarathustra","language":"de","file":"nietzsche-zarathustra-de.txt","url":"https://www.gutenberg.org/cache/epub/7205/pg7205.txt","year":"1885","category":"allemand"},
+  {"id":"kafka-process-de","author":"Franz Kafka","title":"Der Process","language":"de","file":"kafka-process-de.txt","url":"https://www.gutenberg.org/cache/epub/7984/pg7984.txt","year":"1925","category":"allemand"},
+  {"id":"kafka-verwandlung-de","author":"Franz Kafka","title":"Die Verwandlung","language":"de","file":"kafka-verwandlung-de.txt","url":"https://de.wikisource.org/wiki/Die_Verwandlung","year":"1915","category":"allemand"},
+  {"id":"goethe-faust-de","author":"Johann Wolfgang von Goethe","title":"Faust — Erster Teil","language":"de","file":"goethe-faust-de.txt","url":"https://www.gutenberg.org/cache/epub/2229/pg2229.txt","year":"1808","category":"allemand"},
+  {"id":"schopenhauer-welt-de","author":"Arthur Schopenhauer","title":"Die Welt als Wille und Vorstellung","language":"de","file":"schopenhauer-welt-de.txt","url":"https://www.gutenberg.org/cache/epub/53903/pg53903.txt","year":"1818","category":"allemand"},
+  {"id":"hegel-phanomenologie-de","author":"G.W.F. Hegel","title":"Phänomenologie des Geistes","language":"de","file":"hegel-phanomenologie-de.txt","url":"https://www.gutenberg.org/cache/epub/6698/pg6698.txt","year":"1807","category":"allemand"},
+
+  {"id":"dante-inferno-it","author":"Dante Alighieri","title":"Inferno","language":"it","file":"dante-inferno-it.txt","url":"https://www.gutenberg.org/cache/epub/1012/pg1012.txt","year":"1320","category":"italien"},
+  {"id":"dante-purgatorio-it","author":"Dante Alighieri","title":"Purgatorio","language":"it","file":"dante-purgatorio-it.txt","url":"https://www.gutenberg.org/cache/epub/1013/pg1013.txt","year":"1320","category":"italien"},
+  {"id":"dante-paradiso-it","author":"Dante Alighieri","title":"Paradiso","language":"it","file":"dante-paradiso-it.txt","url":"https://www.gutenberg.org/cache/epub/1014/pg1014.txt","year":"1320","category":"italien"},
+  {"id":"machiavelli-principe-it","author":"Niccolò Machiavelli","title":"Il Principe","language":"it","file":"machiavelli-principe-it.txt","url":"https://www.gutenberg.org/cache/epub/5827/pg5827.txt","year":"1532","category":"italien"},
+  {"id":"leopardi-canti-it","author":"Giacomo Leopardi","title":"Canti","language":"it","file":"leopardi-canti-it.txt","url":"https://www.gutenberg.org/cache/epub/22667/pg22667.txt","year":"1831","category":"italien"},
+  {"id":"boccaccio-decameron-it","author":"Giovanni Boccaccio","title":"Il Decameron","language":"it","file":"boccaccio-decameron-it.txt","url":"https://it.wikisource.org/wiki/Decameron","year":"1353","category":"italien"}
 ]

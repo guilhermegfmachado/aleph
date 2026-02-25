@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aleph - browse</title>
+    <title>aleph - parcourir</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,42 +13,42 @@
             <h1>א</h1>
             <p class="subtitle" style="opacity:.7;font-size:.8rem;margin-bottom:.75rem;">Bibliothèque de références personnelle — textes, outils, lieux.</p>
             <nav>
-                <a href="index.html">search</a>
-                <a href="browse.html" class="active">browse</a>
+                <a href="index.html">chercher</a>
+                <a href="browse.html" class="active">parcourir</a>
                 <a href="sources.html">sources</a>
-                <a href="upload.html">add</a>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light theme">●</button>
+                <a href="upload.html">ajouter</a>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Basculer thème">●</button>
             </nav>
         </header>
 
         <main>
             <div class="search-filters browse-filters-bar">
                     <select id="type-filter">
-                        <option value="">all types</option>
+                        <option value="">toutes catégories</option>
                     </select>
                     <select id="author-filter">
-                        <option value="">all authors</option>
+                        <option value="">tous les auteurs</option>
                     </select>
                     <select id="source-filter">
-                        <option value="">all sources</option>
+                        <option value="">toutes les sources</option>
                     </select>
                     <select id="fav-filter">
-                        <option value="">all texts</option>
-                        <option value="favorites">★ favorites</option>
+                        <option value="">tous les textes</option>
+                        <option value="favorites">★ favoris</option>
                     </select>
                     <select id="sort-filter">
-                        <option value="title">sort: title</option>
-                        <option value="author">sort: author</option>
-                        <option value="type">sort: type</option>
+                        <option value="title">trier : titre</option>
+                        <option value="author">trier : auteur</option>
+                        <option value="type">trier : catégorie</option>
                     </select>
                 </div>
 
             <div class="browse-stats" id="catalog-stats">
-                <span id="total-books">0</span> texts from <span id="total-sources">0</span> sources
+                <span id="total-books">0</span> textes de <span id="total-sources">0</span> sources
             </div>
 
             <div id="book-list" class="results">
-                <div class="loading">loading...</div>
+                <div class="loading">chargement...</div>
             </div>
 
             <div id="pagination" class="pagination"></div>

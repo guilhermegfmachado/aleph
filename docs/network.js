@@ -12,9 +12,10 @@ const allNodes = [
     { id: "metiers",    label: "Métiers",    group: "section",  parent: "atelier" },
     { id: "design",     label: "Design",     group: "section",  parent: "atelier" },
     { id: "transport",  label: "Transport",  group: "section",  parent: "atelier" },
-    { id: "informatique", label: "Informatique", group: "section", parent: "enquete" },
-    { id: "economie",   label: "Économie",   group: "section",  parent: "enquete" },
-    { id: "droit",      label: "Droit",      group: "section",  parent: "enquete" },
+    { id: "informatique",   label: "Informatique", group: "section", parent: "enquete" },
+    { id: "economie",      label: "Économie",     group: "section", parent: "enquete" },
+    { id: "droit",         label: "Droit",        group: "section", parent: "enquete" },
+    { id: "biotechnologie", label: "Sciences",    group: "section", parent: "enquete" },
     { id: "arts",       label: "Arts",       group: "section",  parent: "reverie" },
     { id: "musique",    label: "Musique",    group: "section",  parent: "reverie" },
     { id: "humanites",  label: "Humanités",  group: "section",  parent: "reverie" },
@@ -286,24 +287,43 @@ function updateNetwork() {
         .attr("font-weight", "bold")
         .text("+");
 
-    // Labels
-    node.append("text")
+    // Labels — only show for root, category, section (not subtopic/resource)
+    node.filter(d => d.group === "root" || d.group === "category" || d.group === "section")
+        .append("text")
         .text(d => d.label)
         .attr("x", d => sizes[d.group] + 4)
         .attr("y", "0.35em")
         .attr("font-size", d => {
             if (d.group === "root")     return "20px";
             if (d.group === "category") return "13px";
-            if (d.group === "section")  return "11px";
-            if (d.group === "subtopic") return "9px";
-            return "8px";
+            return "11px";
         })
-        .attr("font-weight", d => (d.group === "root" || d.group === "category") ? "600" : "normal")
+        .attr("font-weight", d => (d.group === "root" || d.group === "category") ? "600" : "400")
         .attr("fill", d => {
-            if (isDark) return d.group === "resource" ? "#777" : d.group === "subtopic" ? "#999" : "#d0d0d0";
-            return d.group === "resource" ? "#777" : d.group === "subtopic" ? "#666" : "#2a2a2a";
+            if (isDark) return d.group === "section" ? "#bbb" : "#d0d0d0";
+            return d.group === "section" ? "#555" : "#2a2a2a";
         })
         .attr("font-family", "'IBM Plex Mono', monospace");
+
+    // Floating tooltip for subtopic/resource nodes
+    const existingTip = document.getElementById('net-tooltip');
+    if (existingTip) existingTip.remove();
+    const tipEl = document.createElement('div');
+    tipEl.id = 'net-tooltip';
+    tipEl.style.cssText = 'position:absolute;pointer-events:none;opacity:0;background:var(--bg-card,#fff);border:1px solid var(--border,#ddd);padding:3px 8px;font-size:0.72rem;font-family:IBM Plex Mono,monospace;max-width:200px;border-radius:2px;transition:opacity 0.1s;z-index:100';
+    document.getElementById(container).appendChild(tipEl);
+    const tip = d3.select('#net-tooltip');
+
+    node.filter(d => d.group === "subtopic" || d.group === "resource")
+        .on("mouseover.tip", (event, d) => {
+            tip.style("opacity", "1").html(d.fullLabel || d.label);
+        })
+        .on("mousemove.tip", (event) => {
+            const rect = document.getElementById(container).getBoundingClientRect();
+            tip.style("left", (event.clientX - rect.left + 10) + "px")
+               .style("top",  (event.clientY - rect.top  - 28) + "px");
+        })
+        .on("mouseout.tip", () => tip.style("opacity", "0"));
 
     // Click
     node.on("click", (e, d) => {
@@ -316,11 +336,6 @@ function updateNetwork() {
             scrollToSection(d.id);
         }
     });
-
-    // Tooltip
-    node.filter(d => d.group === "resource" || d.group === "subtopic")
-        .append("title")
-        .text(d => d.fullLabel);
 
     const padding = 50;
     simulation.on("tick", () => {

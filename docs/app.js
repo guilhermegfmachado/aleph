@@ -189,7 +189,7 @@ async function loadLibrary() {
                             tags: doc.tags || [],
                             source: category.name,
                             type,
-                            snippet: `${category.name}${yearStr}. Available in: ${langs.join(', ')}.`,
+                            snippet: `${category.name}${yearStr}. Disponible en : ${langs.join(', ')}.`,
                             isCorpus: true
                         });
                     });
@@ -323,12 +323,12 @@ function showResults(results, query) {
     if (!div) return;
 
     if (results.length === 0) {
-        div.innerHTML = `<div class="no-results">no results for "${escapeHtml(query)}"</div>`;
+        div.innerHTML = `<div class="no-results">aucun résultat pour « ${escapeHtml(query)} »</div>`;
         return;
     }
 
     div.innerHTML = `
-        <div class="results-header"><h3>${results.length} results for "${escapeHtml(query)}"</h3></div>
+        <div class="results-header"><h3>${results.length} résultat${results.length !== 1 ? 's' : ''} pour « ${escapeHtml(query)} »</h3></div>
         ${results.map(b => `
             <div class="result-card">
                 <div class="result-header">
@@ -338,7 +338,7 @@ function showResults(results, query) {
                 <div class="result-snippet">${b.highlightedSnippet}</div>
                 <div class="result-meta">
                     <span class="result-source">${b.source}</span>
-                    <a href="${getBookLink(b, query)}" class="read-more">read</a>
+                    <a href="${getBookLink(b, query)}" class="read-more">lire</a>
                 </div>
             </div>
         `).join('')}
@@ -415,16 +415,26 @@ function fmtYear(y) {
     return n < 0 ? Math.abs(n) + '\u202fBCE' : y;
 }
 
+const CAT_FR = {
+    philosophy: 'philosophie', poetry: 'poésie', drama: 'théâtre', prose: 'prose',
+    'non-western': 'non-occidental', portuguese: 'portugais', economics: 'économie',
+    treaty: 'traité', case: 'jurisprudence', constitution: 'constitution',
+    czech: 'tchèque', hungarian: 'hongrois', italian: 'italien', french: 'français',
+    japanese: 'japonais', mitteleuropa: 'mitteleuropa',
+    français: 'français', allemand: 'allemand', italien: 'italien'
+};
+
 function renderCorpusResult(r, query) {
     const e = r.entry;
     const year = e.year ? ` (${fmtYear(e.year)})` : '';
-    const byline = `${escapeHtml(e.author)}${year} \u00b7 <em>${escapeHtml(e.category)}</em>`;
+    const catLabel = CAT_FR[e.category] || e.category;
+    const byline = `${escapeHtml(e.author)}${year} \u00b7 <em>${escapeHtml(catLabel)}</em>`;
 
     if (!e.file && e.url) {
         return `<div class="search-result">
             <div class="search-result-byline">${byline}</div>
             <div class="search-result-title">${escapeHtml(e.title)}</div>
-            <div class="search-result-extern">\u2192 <a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">read at external source \u2197</a> <span class="search-result-note">(reference only \u2014 not stored locally)</span></div>
+            <div class="search-result-extern">\u2192 <a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">lire à la source externe \u2197</a> <span class="search-result-note">(référence uniquement \u2014 non stocké localement)</span></div>
         </div>`;
     }
 
@@ -444,13 +454,13 @@ function showCorpusResults(results, query, searchingMore = false) {
 
     let html = '';
     if (searchingMore) {
-        html += `<div class="search-status">searching\u2026</div>`;
+        html += `<div class="search-status">recherche en cours\u2026</div>`;
     }
     if (results.length === 0 && !searchingMore) {
-        html += `<div class="no-results">no results for \u201c${escapeHtml(query)}\u201d</div>`;
+        html += `<div class="no-results">aucun résultat pour \u00ab\u202f${escapeHtml(query)}\u202f\u00bb</div>`;
     } else {
         if (!searchingMore) {
-            html += `<div class="results-header"><h3>${results.length} result${results.length !== 1 ? 's' : ''}</h3></div>`;
+            html += `<div class="results-header"><h3>${results.length} résultat${results.length !== 1 ? 's' : ''}</h3></div>`;
         }
         html += results.map(r => renderCorpusResult(r, query)).join('');
     }
@@ -1158,7 +1168,7 @@ async function searchPdf(query) {
         goToMatch(0);
     } else {
         resultsDiv.classList.remove('hidden');
-        resultsDiv.innerHTML = `<div class="search-summary">no matches for "${escapeHtml(query)}"</div>`;
+        resultsDiv.innerHTML = `<div class="search-summary">aucun résultat pour « ${escapeHtml(query)} »</div>`;
     }
 }
 

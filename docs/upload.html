@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aleph - add</title>
+    <title>aleph - ajouter</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -15,45 +15,48 @@
             <h1>א</h1>
             <p class="subtitle" style="opacity:.7;font-size:.8rem;margin-bottom:.75rem;">Bibliothèque de références personnelle — textes, outils, lieux.</p>
             <nav>
-                <a href="index.html">search</a>
-                <a href="browse.html">browse</a>
+                <a href="index.html">chercher</a>
+                <a href="browse.html">parcourir</a>
                 <a href="sources.html">sources</a>
-                <a href="upload.html" class="active">add</a>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light theme">●</button>
+                <a href="upload.html" class="active">ajouter</a>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Basculer thème">●</button>
             </nav>
         </header>
 
         <main>
             <div class="upload-section">
-                <h2>expand the library</h2>
+                <h2>enrichir la bibliothèque</h2>
+                <p style="font-size:0.78rem;opacity:0.6;margin-bottom:1.25rem;">Les textes ajoutés ici sont stockés localement dans votre navigateur. Ils ne sont pas partagés.</p>
 
                 <div class="upload-box" id="dropzone">
                     <div class="dropzone-content">
                         <div class="drop-icon">+</div>
-                        <p>drop files here</p>
+                        <p>déposer des fichiers ici</p>
                         <p class="hint">PDF, EPUB, TXT</p>
                         <input type="file" id="file-input" accept=".pdf,.txt,.epub" multiple hidden>
-                        <button class="btn" onclick="document.getElementById('file-input').click()">choose files</button>
+                        <button class="btn" onclick="document.getElementById('file-input').click()">choisir des fichiers</button>
                     </div>
                 </div>
 
+                <p style="font-size:0.72rem;opacity:0.5;margin-top:0.5rem;">La conversion PDF peut être imparfaite. Vérifiez le texte extrait avant d'enregistrer.</p>
+
                 <div id="processing-status" class="processing-status hidden">
-                    <span id="status-text">processing...</span>
+                    <span id="status-text">traitement en cours...</span>
                 </div>
 
                 <div id="upload-queue" class="upload-queue hidden">
-                    <h3><span id="queue-count">0</span> files</h3>
+                    <h3><span id="queue-count">0</span> fichiers</h3>
                     <div id="queue-list"></div>
                 </div>
             </div>
 
             <div class="user-books-section">
                 <div class="section-header">
-                    <h3>your texts <span id="user-book-count">(0)</span></h3>
-                    <button class="btn btn-small" onclick="clearAllBooks()">clear all</button>
+                    <h3>vos textes <span id="user-book-count">(0)</span></h3>
+                    <button class="btn btn-small" onclick="clearAllBooks()">tout effacer</button>
                 </div>
                 <div id="user-books-list" class="user-books-list">
-                    <p class="empty-state">no texts yet</p>
+                    <p class="empty-state">aucun texte pour l'instant</p>
                 </div>
             </div>
         </main>

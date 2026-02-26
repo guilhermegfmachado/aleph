@@ -44,10 +44,10 @@ let _container = null;
 
 // Node radius function based on depth
 function nodeRadius(d) {
-    if (d.depth === 0) return 20;    // centre node (aleph)
-    if (d.depth === 1) return 12;    // category (Archive, Atelier, etc.)
-    if (d.depth === 2) return 7;     // section (h3 labels)
-    return 4;                         // leaf (individual resource)
+    if (d.depth === 0) return 26;    // centre node (aleph)
+    if (d.depth === 1) return 16;    // category (Archive, Atelier, etc.)
+    if (d.depth === 2) return 10;    // section (h3 labels)
+    return 6;                         // leaf (individual resource)
 }
 
 function extractResources() {

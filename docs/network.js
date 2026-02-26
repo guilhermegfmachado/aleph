@@ -312,7 +312,7 @@ function updateNetwork() {
     const tipEl = document.createElement('div');
     tipEl.id = 'net-tooltip';
     tipEl.style.cssText = 'position:absolute;pointer-events:none;opacity:0;background:var(--bg-card,#fff);border:1px solid var(--border,#ddd);padding:3px 8px;font-size:0.72rem;font-family:IBM Plex Mono,monospace;max-width:200px;border-radius:2px;transition:opacity 0.1s;z-index:100';
-    document.getElementById(container).appendChild(tipEl);
+    document.getElementById('network-container').appendChild(tipEl);
     const tip = d3.select('#net-tooltip');
 
     node.filter(d => d.group === "subtopic" || d.group === "resource")
@@ -320,7 +320,7 @@ function updateNetwork() {
             tip.style("opacity", "1").html(d.fullLabel || d.label);
         })
         .on("mousemove.tip", (event) => {
-            const rect = document.getElementById(container).getBoundingClientRect();
+            const rect = document.getElementById('network-container').getBoundingClientRect();
             tip.style("left", (event.clientX - rect.left + 10) + "px")
                .style("top",  (event.clientY - rect.top  - 28) + "px");
         })

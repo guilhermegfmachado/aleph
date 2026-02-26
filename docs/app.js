@@ -547,6 +547,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     input.addEventListener('keypress', e => e.key === 'Enter' && doSearch());
 
+    // Keyboard shortcut: / to focus search
+    document.addEventListener('keydown', e => {
+        if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+            e.preventDefault();
+            input.focus();
+        }
+    });
+
     // Seed term clicks
     document.querySelectorAll('.quick-search').forEach(link => {
         link.addEventListener('click', e => {

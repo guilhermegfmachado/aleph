@@ -1447,3 +1447,73 @@ footer a:hover {
     padding: 2rem;
     color: var(--accent);
 }
+
+/* 404 error page */
+.error-page {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.error-code {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.error-message {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+.error-page a {
+    color: var(--accent);
+}
+
+/* Print stylesheet */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 11pt;
+    }
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    header nav,
+    .theme-toggle,
+    .theme-toggle-fixed,
+    .site-credit,
+    .search-box,
+    .search-filters,
+    .view-controls,
+    .pagination,
+    .upload-section,
+    footer,
+    #network-container {
+        display: none !important;
+    }
+    header h1 {
+        font-size: 18pt;
+        margin-bottom: 0.5rem;
+    }
+    .resource {
+        break-inside: avoid;
+        border-bottom: 1px solid #ccc;
+    }
+    .resource a {
+        color: black;
+        text-decoration: none;
+    }
+    .resource-url {
+        font-size: 9pt;
+        color: #666;
+    }
+    .book-content {
+        font-size: 11pt;
+        line-height: 1.6;
+    }
+    a[href]:after {
+        content: none;
+    }
+}

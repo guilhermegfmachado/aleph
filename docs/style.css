@@ -51,7 +51,7 @@ body {
 
 /* Header */
 header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--border);
 }
@@ -60,7 +60,7 @@ header h1 {
     font-size: 1.5rem;
     font-weight: normal;
     color: var(--accent);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 header h1::before {
@@ -85,25 +85,68 @@ nav a {
     text-decoration: none;
     padding: 0.25rem 0;
     border-bottom: 1px solid transparent;
+    font-size: 0.85rem;
+    margin-right: 1rem;
+}
+
+nav a:last-of-type {
+    margin-right: 0;
 }
 
 nav a:hover { color: var(--text-bright); }
 nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-.theme-toggle {
+/* Corpus counter */
+.corpus-counter {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0.5rem 0 1.5rem;
+    letter-spacing: 0.03em;
+}
+
+/* Fixed theme toggle - bottom right */
+.theme-toggle-fixed {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
     background: none;
     border: 1px solid var(--border);
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-    padding: 0.15rem 0.4rem;
-    line-height: 1;
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0.5;
+    transition: opacity 0.15s, border-color 0.15s;
 }
 
-.theme-toggle:hover {
-    color: var(--accent);
+.theme-toggle-fixed:hover {
+    opacity: 1;
     border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Site credit - bottom left */
+.site-credit {
+    position: fixed;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    opacity: 0.4;
+    transition: opacity 0.15s;
+    z-index: 999;
+}
+
+.site-credit:hover {
+    opacity: 1;
+    color: var(--accent);
 }
 
 /* Search */
@@ -663,8 +706,21 @@ footer {
     padding-top: 1rem;
     border-top: 1px solid var(--border);
     text-align: center;
-    color: #444;
-    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+footer p {
+    padding: 0.5rem 0;
+}
+
+footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent);
 }
 
 /* Upload Page */
@@ -709,20 +765,36 @@ footer {
 
 .dropzone-content { width: 100%; }
 
-.dropzone-content .drop-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent);
-}
-
-.dropzone-content p {
-    margin-bottom: 0.5rem;
-    color: #444;
-}
-
-.dropzone-content p:first-of-type {
-    font-size: 1.1rem;
+.drop-label {
+    font-size: 0.9rem;
     color: var(--text);
+    margin-bottom: 0.25rem;
+}
+
+.drop-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.upload-notice {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.upload-hint {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+.count-badge {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 400;
 }
 
 .btn {

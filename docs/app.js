@@ -70,7 +70,7 @@ function toggleTheme() {
 window.toggleTheme = toggleTheme;
 
 function updateThemeButton() {
-    const btn = document.querySelector('.theme-toggle');
+    const btn = document.querySelector('.theme-toggle-fixed');
     if (btn) {
         btn.textContent = document.body.classList.contains('dark-mode') ? '○' : '●';
     }

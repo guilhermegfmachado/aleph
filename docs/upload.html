@@ -13,32 +13,29 @@
     <div class="container">
         <header>
             <h1>א</h1>
-            <p class="subtitle" style="opacity:.7;font-size:.8rem;margin-bottom:.75rem;">Bibliothèque de références personnelle — textes, outils, lieux.</p>
             <nav>
                 <a href="index.html">chercher</a>
                 <a href="browse.html">parcourir</a>
                 <a href="sources.html">sources</a>
                 <a href="upload.html" class="active">ajouter</a>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Basculer thème">●</button>
             </nav>
         </header>
 
         <main>
             <div class="upload-section">
                 <h2>enrichir la bibliothèque</h2>
-                <p style="font-size:0.78rem;opacity:0.6;margin-bottom:1.25rem;">Les textes ajoutés ici sont stockés localement dans votre navigateur. Ils ne sont pas partagés.</p>
+                <p class="upload-notice">Les textes ajoutés ici sont stockés localement dans votre navigateur. Ils ne sont pas partagés.</p>
 
                 <div class="upload-box" id="dropzone">
                     <div class="dropzone-content">
-                        <div class="drop-icon">+</div>
-                        <p>déposer des fichiers ici</p>
-                        <p class="hint">PDF, EPUB, TXT</p>
+                        <p class="drop-label">déposer des fichiers</p>
+                        <p class="drop-hint">PDF · EPUB · TXT</p>
                         <input type="file" id="file-input" accept=".pdf,.txt,.epub" multiple hidden>
-                        <button class="btn" onclick="document.getElementById('file-input').click()">choisir des fichiers</button>
+                        <button class="btn" onclick="document.getElementById('file-input').click()">choisir</button>
                     </div>
                 </div>
 
-                <p style="font-size:0.72rem;opacity:0.5;margin-top:0.5rem;">La conversion PDF peut être imparfaite. Vérifiez le texte extrait avant d'enregistrer.</p>
+                <p class="upload-hint">La conversion PDF peut être imparfaite. Vérifiez le texte extrait avant d'enregistrer.</p>
 
                 <div id="processing-status" class="processing-status hidden">
                     <span id="status-text">traitement en cours...</span>
@@ -52,8 +49,8 @@
 
             <div class="user-books-section">
                 <div class="section-header">
-                    <h3>vos textes <span id="user-book-count">(0)</span></h3>
-                    <button class="btn btn-small" onclick="clearAllBooks()">tout effacer</button>
+                    <h3>vos textes <span class="count-badge" id="user-book-count">0</span></h3>
+                    <button class="btn btn-small" onclick="clearAllBooks()">effacer tout</button>
                 </div>
                 <div id="user-books-list" class="user-books-list">
                     <p class="empty-state">aucun texte pour l'instant</p>
@@ -62,11 +59,12 @@
         </main>
 
         <footer>
-            <p><a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme de G. F. Machado</a></p>
-            <p>in girum imus nocte et consumimur igni</p>
+            <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
         </footer>
     </div>
 
+    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
+    <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
     <script src="app.js"></script>
     <script src="classifier.js"></script>
     <script src="upload.js"></script>

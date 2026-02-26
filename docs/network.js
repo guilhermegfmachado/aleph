@@ -2,23 +2,23 @@
 // Collapsible tree — root → category → section → subtopic → resource
 
 const allNodes = [
-    { id: "root",       label: "א",          group: "root",     fixed: true },
-    { id: "archive",    label: "L'Archive",  group: "category", parent: "root" },
-    { id: "atelier",    label: "L'Atelier",  group: "category", parent: "root" },
-    { id: "enquete",    label: "L'Enquête",  group: "category", parent: "root" },
-    { id: "reverie",    label: "La Rêverie", group: "category", parent: "root" },
-    { id: "textes",     label: "Textes",     group: "section",  parent: "archive" },
-    { id: "langues",    label: "Langues",    group: "section",  parent: "archive" },
-    { id: "metiers",    label: "Métiers",    group: "section",  parent: "atelier" },
-    { id: "design",     label: "Design",     group: "section",  parent: "atelier" },
-    { id: "transport",  label: "Transport",  group: "section",  parent: "atelier" },
-    { id: "informatique",   label: "Informatique", group: "section", parent: "enquete" },
-    { id: "economie",      label: "Économie",     group: "section", parent: "enquete" },
-    { id: "droit",         label: "Droit",        group: "section", parent: "enquete" },
-    { id: "biotechnologie", label: "Sciences",    group: "section", parent: "enquete" },
-    { id: "arts",       label: "Arts",       group: "section",  parent: "reverie" },
-    { id: "musique",    label: "Musique",    group: "section",  parent: "reverie" },
-    { id: "humanites",  label: "Humanités",  group: "section",  parent: "reverie" },
+    { id: "root",       label: "א",          group: "root",     depth: 0, fixed: true },
+    { id: "archive",    label: "L'Archive",  group: "category", depth: 1, parent: "root" },
+    { id: "atelier",    label: "L'Atelier",  group: "category", depth: 1, parent: "root" },
+    { id: "enquete",    label: "L'Enquête",  group: "category", depth: 1, parent: "root" },
+    { id: "reverie",    label: "La Rêverie", group: "category", depth: 1, parent: "root" },
+    { id: "textes",     label: "Textes",     group: "section",  depth: 2, parent: "archive" },
+    { id: "langues",    label: "Langues",    group: "section",  depth: 2, parent: "archive" },
+    { id: "metiers",    label: "Métiers",    group: "section",  depth: 2, parent: "atelier" },
+    { id: "design",     label: "Design",     group: "section",  depth: 2, parent: "atelier" },
+    { id: "transport",  label: "Transport",  group: "section",  depth: 2, parent: "atelier" },
+    { id: "informatique",   label: "Informatique", group: "section", depth: 2, parent: "enquete" },
+    { id: "economie",      label: "Économie",     group: "section", depth: 2, parent: "enquete" },
+    { id: "droit",         label: "Droit",        group: "section", depth: 2, parent: "enquete" },
+    { id: "biotechnologie", label: "Sciences",    group: "section", depth: 2, parent: "enquete" },
+    { id: "arts",       label: "Arts",       group: "section",  depth: 2, parent: "reverie" },
+    { id: "musique",    label: "Musique",    group: "section",  depth: 2, parent: "reverie" },
+    { id: "humanites",  label: "Humanités",  group: "section",  depth: 2, parent: "reverie" },
 ];
 
 // Pre-defined angles for the 4 categories so they spread into 4 quadrants
@@ -35,11 +35,20 @@ const nodePositions = {};
 let expandedNodes = new Set();
 let subtopicNodes = [];
 let resourceNodes = [];
-let simulation = null;
-let svg = null;
+let _simulation = null;
+let _svg = null;
 let g = null;
-let width = 0;
-let height = 0;
+let _width = 0;
+let _height = 0;
+let _container = null;
+
+// Node radius function based on depth
+function nodeRadius(d) {
+    if (d.depth === 0) return 20;    // centre node (aleph)
+    if (d.depth === 1) return 12;    // category (Archive, Atelier, etc.)
+    if (d.depth === 2) return 7;     // section (h3 labels)
+    return 4;                         // leaf (individual resource)
+}
 
 function extractResources() {
     subtopicNodes = [];
@@ -68,6 +77,7 @@ function extractResources() {
                         label: label.length > 20 ? label.slice(0, 18) + '…' : label,
                         fullLabel: label,
                         group: 'subtopic',
+                        depth: 2,
                         parent: sectionId
                     });
                 } else if (child.classList?.contains('resources') && currentStId) {
@@ -81,6 +91,7 @@ function extractResources() {
                             label: text.length > 18 ? text.slice(0, 16) + '…' : text,
                             fullLabel: text,
                             group: 'resource',
+                            depth: 3,
                             parent: currentStId,
                             url: link.href
                         });
@@ -99,6 +110,7 @@ function extractResources() {
                     label: text.length > 18 ? text.slice(0, 16) + '…' : text,
                     fullLabel: text,
                     group: 'resource',
+                    depth: 3,
                     parent: sectionId,
                     url: link.href
                 });
@@ -150,21 +162,35 @@ function initNetwork(containerId) {
     const container = document.getElementById(containerId);
     if (!container || typeof d3 === 'undefined') return;
 
+    _container = container;
     extractResources();
     Object.keys(nodePositions).forEach(k => delete nodePositions[k]);
 
-    width  = container.clientWidth;
-    height = Math.max(650, window.innerHeight - 200);
+    // Use ResizeObserver to wait for real painted dimensions
+    const ro = new ResizeObserver(entries => {
+        ro.disconnect();
+        const rect = entries[0].contentRect;
+        const w = rect.width || 800;
+        const h = rect.height || 500;
+        _buildNetwork(container, w, h);
+    });
+    ro.observe(container);
+}
+
+function _buildNetwork(container, width, height) {
+    _width = width;
+    _height = Math.max(500, height);
     container.innerHTML = '';
 
-    svg = d3.select(`#${containerId}`)
+    _svg = d3.select(container)
         .append("svg")
-        .attr("width", width)
-        .attr("height", height);
+        .attr("width", _width)
+        .attr("height", _height)
+        .attr("viewBox", `0 0 ${_width} ${_height}`);
 
-    g = svg.append("g");
+    g = _svg.append("g");
 
-    svg.call(d3.zoom()
+    _svg.call(d3.zoom()
         .scaleExtent([0.2, 4])
         .on("zoom", e => g.attr("transform", e.transform)));
 
@@ -172,6 +198,8 @@ function initNetwork(containerId) {
 }
 
 function updateNetwork() {
+    if (!_width || !_height) return;
+
     const data = getVisibleData();
     const isDark = document.body.classList.contains('dark-mode');
 
@@ -183,23 +211,15 @@ function updateNetwork() {
         resource: isDark ? "#606030" : "#c8b080"
     };
 
-    const sizes = {
-        root:     38,
-        category: 28,
-        section:  22,
-        subtopic: 16,
-        resource: 11
-    };
-
-    if (simulation) simulation.stop();
+    if (_simulation) _simulation.stop();
 
     // Seed positions
     data.nodes.forEach(n => {
         if (n.id === "root") {
-            n.fx = width / 2;
-            n.fy = height / 2;
-            n.x  = width / 2;
-            n.y  = height / 2;
+            n.fx = _width / 2;
+            n.fy = _height / 2;
+            n.x  = _width / 2;
+            n.y  = _height / 2;
             return;
         }
         if (nodePositions[n.id]) {
@@ -207,41 +227,34 @@ function updateNetwork() {
             n.y = nodePositions[n.id].y;
         } else if (n.group === "category" && categoryAngles[n.id] !== undefined) {
             const angle = categoryAngles[n.id];
-            n.x = width  / 2 + Math.cos(angle) * 120;
-            n.y = height / 2 + Math.sin(angle) * 120;
+            n.x = _width  / 2 + Math.cos(angle) * 100;
+            n.y = _height / 2 + Math.sin(angle) * 100;
         } else {
             const parent = data.nodes.find(p => p.id === n.parent);
-            const px = parent?.x ?? width  / 2;
-            const py = parent?.y ?? height / 2;
+            const px = parent?.x ?? _width  / 2;
+            const py = parent?.y ?? _height / 2;
             n.x = px + (Math.random() - 0.5) * 50;
             n.y = py + (Math.random() - 0.5) * 50;
         }
     });
 
-    simulation = d3.forceSimulation(data.nodes)
+    // Natural-feeling physics
+    _simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(d => {
-                if (d.target.group === "resource") return 45;
-                if (d.target.group === "subtopic") return 70;
-                if (d.target.group === "section")  return 100;
-                return 130;
+                const sr = nodeRadius(d.source);
+                const tr = nodeRadius(d.target);
+                if (sr >= 13 || tr >= 13) return 100;
+                if (sr >= 8  || tr >= 8)  return 60;
+                return 35;
             })
-            .strength(d => {
-                if (d.target.group === "resource") return 0.9;
-                if (d.target.group === "subtopic") return 0.7;
-                return 0.4;
-            }))
-        .force("charge", d3.forceManyBody()
-            .strength(d => {
-                if (d.group === "resource") return -25;
-                if (d.group === "subtopic") return -80;
-                return -300;
-            }))
-        .force("x", d3.forceX(width / 2).strength(0.08))
-        .force("y", d3.forceY(height / 2).strength(0.08))
-        .force("collision", d3.forceCollide().radius(d => sizes[d.group] + 18).strength(0.9))
-        .alphaDecay(0.015)
+            .strength(0.4))
+        .force("charge", d3.forceManyBody().strength(d => -22 * nodeRadius(d)))
+        .force("collide", d3.forceCollide().radius(d => nodeRadius(d) + 4).iterations(3))
+        .force("x", d3.forceX(_width / 2).strength(0.04))
+        .force("y", d3.forceY(_height / 2).strength(0.04))
+        .alphaDecay(0.012)
         .velocityDecay(0.35);
 
     g.selectAll("*").remove();
@@ -250,15 +263,11 @@ function updateNetwork() {
         .selectAll("line")
         .data(data.links)
         .join("line")
-        .attr("stroke", d => {
-            if (d.target.group === "resource") return "#ddd";
-            if (d.target.group === "subtopic")  return "#ccc";
-            return "#bbb";
-        })
-        .attr("stroke-opacity", 0.5)
+        .attr("stroke", isDark ? "#555" : "#ccc")
+        .attr("stroke-opacity", 0.6)
         .attr("stroke-width", d => {
-            if (d.target.group === "resource") return 0.5;
-            if (d.target.group === "subtopic")  return 0.75;
+            if (d.target.depth >= 3) return 0.5;
+            if (d.target.depth === 2) return 0.75;
             return 1;
         });
 
@@ -273,7 +282,7 @@ function updateNetwork() {
             .on("end",   dragend));
 
     node.append("circle")
-        .attr("r", d => sizes[d.group])
+        .attr("r", d => nodeRadius(d))
         .attr("fill", d => colors[d.group])
         .attr("stroke", d => expandedNodes.has(d.id) ? "#fff" : "none")
         .attr("stroke-width", 2);
@@ -284,47 +293,51 @@ function updateNetwork() {
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
         .attr("fill", "#fff")
-        .attr("font-size", d => d.group === "category" ? "12px" : "9px")
+        .attr("font-size", d => d.depth <= 1 ? "10px" : "7px")
         .attr("font-weight", "bold")
         .text("+");
 
-    // Labels — only show for root, category, section (not subtopic/resource)
-    node.filter(d => d.group === "root" || d.group === "category" || d.group === "section")
-        .append("text")
-        .text(d => d.label)
-        .attr("x", d => sizes[d.group] + 4)
-        .attr("y", "0.35em")
-        .attr("font-size", d => {
-            if (d.group === "root")     return "20px";
-            if (d.group === "category") return "13px";
-            return "11px";
+    // Labels - inline next to nodes
+    const labels = g.append("g").attr("class", "labels")
+        .selectAll("text")
+        .data(data.nodes)
+        .join("text")
+        .attr("class", "node-label")
+        .attr("text-anchor", "start")
+        .attr("dominant-baseline", "central")
+        .attr("dx", d => nodeRadius(d) + 4)
+        .attr("dy", 0)
+        .style("font-size", d => {
+            if (d.depth === 0) return "13px";
+            if (d.depth === 1) return "11px";
+            if (d.depth === 2) return "9px";
+            return "8px";
         })
-        .attr("font-weight", d => (d.group === "root" || d.group === "category") ? "600" : "400")
-        .attr("fill", d => {
-            if (isDark) return d.group === "section" ? "#bbb" : "#d0d0d0";
-            return d.group === "section" ? "#555" : "#2a2a2a";
+        .style("fill", isDark ? "var(--text, #d0d0d0)" : "var(--text, #2d2d2d)")
+        .style("opacity", d => {
+            if (d.depth <= 1) return 1;        // centre and categories always visible
+            if (d.depth === 2) return 0.7;     // sections visible but softer
+            return 0;                           // leaves: hidden by default
         })
-        .attr("font-family", "'IBM Plex Mono', monospace");
+        .style("pointer-events", "none")
+        .style("font-family", "'IBM Plex Mono', monospace")
+        .text(d => d.label);
 
-    // Floating tooltip for subtopic/resource nodes
-    const existingTip = document.getElementById('net-tooltip');
-    if (existingTip) existingTip.remove();
-    const tipEl = document.createElement('div');
-    tipEl.id = 'net-tooltip';
-    tipEl.style.cssText = 'position:absolute;pointer-events:none;opacity:0;background:var(--bg-card,#fff);border:1px solid var(--border,#ddd);padding:3px 8px;font-size:0.72rem;font-family:IBM Plex Mono,monospace;max-width:200px;border-radius:2px;transition:opacity 0.1s;z-index:100';
-    document.getElementById('network-container').appendChild(tipEl);
-    const tip = d3.select('#net-tooltip');
-
-    node.filter(d => d.group === "subtopic" || d.group === "resource")
-        .on("mouseover.tip", (event, d) => {
-            tip.style("opacity", "1").html(d.fullLabel || d.label);
-        })
-        .on("mousemove.tip", (event) => {
-            const rect = document.getElementById('network-container').getBoundingClientRect();
-            tip.style("left", (event.clientX - rect.left + 10) + "px")
-               .style("top",  (event.clientY - rect.top  - 28) + "px");
-        })
-        .on("mouseout.tip", () => tip.style("opacity", "0"));
+    // Show leaf labels on hover
+    node.on("mouseover", (event, d) => {
+        if (d.depth >= 2) {
+            labels.filter(l => l === d)
+                .style("opacity", 1)
+                .style("font-weight", d.depth === 3 ? "400" : "600");
+        }
+    })
+    .on("mouseout", (event, d) => {
+        if (d.depth >= 2) {
+            labels.filter(l => l === d)
+                .style("opacity", d.depth === 2 ? 0.7 : 0)
+                .style("font-weight", "400");
+        }
+    });
 
     // Click
     node.on("click", (e, d) => {
@@ -338,13 +351,13 @@ function updateNetwork() {
         }
     });
 
-    const padding = 50;
-    simulation.on("tick", () => {
+    const padding = 30;
+    _simulation.on("tick", () => {
         data.nodes.forEach(d => {
             if (!d.fx) {
-                const r = sizes[d.group] || 10;
-                d.x = Math.max(r + padding, Math.min(width - r - padding, d.x));
-                d.y = Math.max(r + padding, Math.min(height - r - padding, d.y));
+                const r = nodeRadius(d);
+                d.x = Math.max(r + padding, Math.min(_width - r - padding, d.x));
+                d.y = Math.max(r + padding, Math.min(_height - r - padding, d.y));
             }
             nodePositions[d.id] = { x: d.x, y: d.y };
         });
@@ -355,25 +368,28 @@ function updateNetwork() {
             .attr("y2", d => d.target.y);
 
         node.attr("transform", d => `translate(${d.x},${d.y})`);
+
+        labels.attr("x", d => d.x)
+              .attr("y", d => d.y);
     });
 
     function dragstart(e) {
         if (e.subject.id === "root") return;
-        if (!e.active) simulation.alphaTarget(0.1).restart();
+        if (!e.active) _simulation.alphaTarget(0.1).restart();
         e.subject.fx = e.subject.x;
         e.subject.fy = e.subject.y;
     }
 
     function dragging(e) {
         if (e.subject.id === "root") return;
-        const r = sizes[e.subject.group] || 10;
-        e.subject.fx = Math.max(r + padding, Math.min(width - r - padding, e.x));
-        e.subject.fy = Math.max(r + padding, Math.min(height - r - padding, e.y));
+        const r = nodeRadius(e.subject);
+        e.subject.fx = Math.max(r + padding, Math.min(_width - r - padding, e.x));
+        e.subject.fy = Math.max(r + padding, Math.min(_height - r - padding, e.y));
     }
 
     function dragend(e) {
         if (e.subject.id === "root") return;
-        if (!e.active) simulation.alphaTarget(0);
+        if (!e.active) _simulation.alphaTarget(0);
         e.subject.fx = null;
         e.subject.fy = null;
     }
@@ -431,10 +447,10 @@ function resetNetwork() {
     Object.keys(nodePositions).forEach(k => delete nodePositions[k]);
 
     // Reset zoom
-    if (svg && g) {
-        svg.transition().duration(500).call(
+    if (_svg && g) {
+        _svg.transition().duration(500).call(
             d3.zoom().transform,
-            d3.zoomIdentity.translate(width / 2, height / 2).scale(1)
+            d3.zoomIdentity
         );
     }
 
@@ -458,6 +474,30 @@ function toggleNetworkView() {
         btn.textContent = "vue réseau";
     }
 }
+
+// Handle resize
+let _resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(_resizeTimer);
+    _resizeTimer = setTimeout(() => {
+        if (!_container) return;
+        const w = _container.clientWidth;
+        const h = _container.clientHeight || 500;
+        if (_simulation) {
+            _width = w;
+            _height = h;
+            _simulation
+                .force('x', d3.forceX(w / 2).strength(0.04))
+                .force('y', d3.forceY(h / 2).strength(0.04))
+                .alpha(0.3)
+                .restart();
+        }
+        if (_svg) {
+            _svg.attr('width', w).attr('height', h)
+                .attr('viewBox', `0 0 ${w} ${h}`);
+        }
+    }, 150);
+});
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => initNetwork("network-container"));

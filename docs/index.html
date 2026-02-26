@@ -11,13 +11,11 @@
     <div class="container">
         <header>
             <h1>א</h1>
-            <p class="subtitle" style="opacity:.7;font-size:.8rem;margin-bottom:.75rem;">Bibliothèque de références personnelle — textes, outils, lieux.</p>
             <nav>
                 <a href="index.html" class="active">chercher</a>
                 <a href="browse.html">parcourir</a>
                 <a href="sources.html">sources</a>
                 <a href="upload.html">ajouter</a>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Basculer thème">●</button>
             </nav>
         </header>
 
@@ -28,29 +26,17 @@
 
             <div id="results" class="results">
                 <div class="welcome" id="welcome">
-                    <h2><span id="book-count">0</span> textes de <span id="author-count">0</span> auteurs</h2>
+                    <p class="corpus-counter"><span id="book-count">0</span> textes · <span id="author-count">0</span> auteurs</p>
                     <div class="quick-searches">
-                        <p>essayer :</p>
                         <div class="quick-links">
-                            <a href="#" class="quick-search" data-query="love">amour</a>
-                            <a href="#" class="quick-search" data-query="death">mort</a>
+                            <a href="#" class="quick-search" data-query="mort">mort</a>
                             <a href="#" class="quick-search" data-query="justice">justice</a>
-                            <a href="#" class="quick-search" data-query="virtue">vertu</a>
-                            <a href="#" class="quick-search" data-query="soul">âme</a>
-                            <a href="#" class="quick-search" data-query="fate">destin</a>
-                            <a href="#" class="quick-search" data-query="body">corps</a>
-                            <a href="#" class="quick-search" data-query="god">dieu</a>
-                            <a href="#" class="quick-search" data-query="war">guerre</a>
-                            <a href="#" class="quick-search" data-query="power">pouvoir</a>
-                            <a href="#" class="quick-search" data-query="time">temps</a>
-                            <a href="#" class="quick-search" data-query="will">volonté</a>
-                            <a href="#" class="quick-search" data-query="nature">nature</a>
+                            <a href="#" class="quick-search" data-query="pouvoir">pouvoir</a>
+                            <a href="#" class="quick-search" data-query="temps">temps</a>
                             <a href="#" class="quick-search" data-query="silence">silence</a>
-                            <a href="#" class="quick-search" data-query="contract">contrat</a>
-                            <a href="#" class="quick-search" data-query="sovereignty">souveraineté</a>
-                            <a href="#" class="quick-search" data-query="capital">capital</a>
-                            <a href="#" class="quick-search" data-query="rights">droits</a>
-                            <a href="#" class="quick-search" data-query="trade">commerce</a>
+                            <a href="#" class="quick-search" data-query="âme">âme</a>
+                            <a href="#" class="quick-search" data-query="contrat">contrat</a>
+                            <a href="#" class="quick-search" data-query="guerre">guerre</a>
                         </div>
                     </div>
                 </div>
@@ -58,11 +44,12 @@
         </main>
 
         <footer>
-            <p><a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme de G. F. Machado</a></p>
             <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
         </footer>
     </div>
 
+    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
+    <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
     <script src="app.js"></script>
 </body>
 </html>

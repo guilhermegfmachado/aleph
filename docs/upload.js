@@ -52,7 +52,7 @@ async function deleteBook(id) {
 }
 
 async function clearAllBooks() {
-    if (!confirm('Delete all texts?')) return;
+    if (!confirm('Supprimer tous les textes ?')) return;
     await openUploadDB();
     return new Promise((resolve, reject) => {
         const req = uploadDb.transaction([UPLOAD_STORE_NAME], 'readwrite').objectStore(UPLOAD_STORE_NAME).clear();
@@ -151,20 +151,20 @@ async function processFile(file) {
 
     try {
         if (ext === 'pdf') {
-            if (typeof pdfjsLib === 'undefined') throw new Error('PDF library not loaded');
+            if (typeof pdfjsLib === 'undefined') throw new Error('bibliothèque PDF non chargée');
             result = await extractPdfText(file);
         } else if (ext === 'epub') {
-            if (typeof JSZip === 'undefined') throw new Error('EPUB library not loaded');
+            if (typeof JSZip === 'undefined') throw new Error('bibliothèque EPUB non chargée');
             result = await extractEpubText(file);
         } else {
             result = await extractTxtText(file);
         }
     } catch (e) {
         console.error('Extraction error:', e);
-        throw new Error('extraction failed: ' + e.message);
+        throw new Error('extraction échouée : ' + e.message);
     }
 
-    if (!result.text || result.text.length < 50) throw new Error('too short or empty');
+    if (!result.text || result.text.length < 50) throw new Error('texte trop court ou vide');
 
     // Normalize text for consistent formatting
     const normalizedText = normalizeText(result.text);
@@ -212,7 +212,7 @@ async function processFiles(files) {
         item.className = 'queue-item';
         item.innerHTML = `<span class="filename">${escapeHtml(file.name)}</span><span class="status">...</span>`;
         queueList.appendChild(item);
-        statusText.textContent = `${ok + fail + 1} of ${files.length}`;
+        statusText.textContent = `${ok + fail + 1} sur ${files.length}`;
 
         try {
             await saveBook(await processFile(file));
@@ -226,7 +226,7 @@ async function processFiles(files) {
         }
     }
 
-    statusText.textContent = `done: ${ok} added` + (fail ? `, ${fail} failed` : '');
+    statusText.textContent = `terminé : ${ok} ajouté${ok > 1 ? 's' : ''}` + (fail ? `, ${fail} échoué${fail > 1 ? 's' : ''}` : '');
     await renderUserBooks();
     if (ok > 0) await autoPublish();
 
@@ -242,10 +242,10 @@ async function renderUserBooks() {
     if (!list) return;
 
     const books = await getUserBooks();
-    if (count) count.textContent = `(${books.length})`;
+    if (count) count.textContent = books.length;
 
     if (!books.length) {
-        list.innerHTML = '<p class="empty-state">no texts yet</p>';
+        list.innerHTML = '<p class="empty-state">aucun texte pour l\'instant</p>';
         return;
     }
 
@@ -262,7 +262,7 @@ async function renderUserBooks() {
 }
 
 async function confirmDeleteBook(id) {
-    if (confirm('Delete this text?')) {
+    if (confirm('Supprimer ce texte ?')) {
         await deleteBook(id);
         await renderUserBooks();
     }
@@ -279,7 +279,7 @@ function getGitHubSettings() {
 function saveGitHubToken() {
     localStorage.setItem('github_token', document.getElementById('github-token').value.trim());
     localStorage.setItem('github_repo', document.getElementById('github-repo').value.trim());
-    alert('Saved');
+    alert('Enregistré');
 }
 
 function loadGitHubSettings() {
@@ -300,7 +300,7 @@ async function publishToGitHub(silent = false) {
     const s = getGitHubSettings();
     if (!s.token || !s.repo) {
         if (!silent) {
-            if (hint) hint.textContent = 'configure settings below first';
+            if (hint) hint.textContent = 'configurez les paramètres ci-dessous';
             document.querySelector('.github-settings').open = true;
         }
         return;
@@ -308,7 +308,7 @@ async function publishToGitHub(silent = false) {
 
     const books = await getUserBooks();
     if (!books.length) {
-        if (!silent) alert('No texts to publish');
+        if (!silent) alert('Aucun texte à publier');
         return;
     }
 
@@ -330,7 +330,7 @@ async function publishToGitHub(silent = false) {
     const path = 'docs/data/shared-library.json';
 
     try {
-        if (!silent && hint) hint.textContent = 'publishing...';
+        if (!silent && hint) hint.textContent = 'publication en cours...';
 
         let sha = null;
         try {
@@ -353,8 +353,8 @@ async function publishToGitHub(silent = false) {
 
         if (hint) { hint.textContent = `published ${books.length} texts`; hint.style.color = '#4a4'; }
     } catch (e) {
-        if (!silent) alert('Publish failed: ' + e.message);
-        if (hint) hint.textContent = 'publish failed';
+        if (!silent) alert('Publication échouée : ' + e.message);
+        if (hint) hint.textContent = 'publication échouée';
     }
 }
 

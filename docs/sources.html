@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,24 +19,24 @@
         }
         .controls-left {
             display: flex;
-            gap: 0.5rem;
-            height: 34px;
+            gap: 0.35rem;
+            height: 30px;
             align-items: stretch;
         }
         .controls-right {
             display: flex;
-            gap: 0.5rem;
-            height: 34px;
+            gap: 0.35rem;
+            height: 30px;
             align-items: stretch;
         }
         .search-input {
-            padding: 0 0.75rem;
+            padding: 0 0.6rem;
             font-family: inherit;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             background: var(--bg);
             border: 1px solid var(--border);
             color: var(--text);
-            width: 130px;
+            width: 120px;
             box-sizing: border-box;
         }
         .search-input:focus {
@@ -50,12 +50,12 @@
         .ctrl-btn {
             padding: 0;
             font-family: inherit;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             background: var(--bg-light);
             border: 1px solid var(--border);
             color: var(--text);
             cursor: pointer;
-            width: 34px;
+            width: 30px;
             box-sizing: border-box;
             display: inline-flex;
             align-items: center;
@@ -71,9 +71,9 @@
             border-color: var(--accent);
         }
         .view-toggle-btn {
-            padding: 0 0.75rem;
+            padding: 0 0.6rem;
             font-family: inherit;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             background: var(--bg-light);
             border: 1px solid var(--border);
             color: var(--text);
@@ -363,10 +363,10 @@
             border: 1px solid var(--border);
         }
         .source-section summary {
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 500;
             color: var(--accent);
-            padding: 1rem 1.25rem;
+            padding: 0.75rem 1rem;
             background: var(--bg-light);
             cursor: pointer;
             list-style: none;
@@ -397,33 +397,42 @@
             margin: 0;
         }
         .source-section h3 {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--text-bright);
-            margin: 1.5rem 0 0.75rem;
-            padding-bottom: 0.5rem;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin: 2rem 0 0.5rem;
+            padding-bottom: 0.3rem;
             border-bottom: 1px solid var(--border);
         }
         .source-section h3:first-child {
             margin-top: 0;
         }
 
-        /* Resource Cards - Better than tables */
+        /* Resource Cards - List style */
         .resources {
             display: grid;
-            gap: 0.75rem;
+            gap: 0;
         }
         .resource {
             display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 0.5rem;
-            padding: 0.75rem;
-            background: var(--bg);
-            border: 1px solid var(--border);
+            grid-template-columns: 1fr;
+            gap: 0.25rem;
+            padding: 0.6rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border);
             align-items: start;
         }
+        .resource:last-child {
+            border-bottom: none;
+        }
         .resource:hover {
-            border-color: var(--accent);
+            background: transparent;
+        }
+        .resource:hover .resource-name a {
+            color: var(--accent);
         }
         .resource-name {
             font-weight: 500;
@@ -590,18 +599,15 @@
     <div class="container">
         <header>
             <h1>א</h1>
-            <p class="subtitle" style="opacity:.7;font-size:.8rem;margin-bottom:.75rem;">Bibliothèque de références personnelle — textes, outils, lieux.</p>
             <nav>
-                <a href="index.html">search</a>
-                <a href="browse.html">browse</a>
+                <a href="index.html">chercher</a>
+                <a href="browse.html">parcourir</a>
                 <a href="sources.html" class="active">sources</a>
-                <a href="upload.html">add</a>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light theme">●</button>
+                <a href="upload.html">ajouter</a>
             </nav>
         </header>
 
         <main>
-            <p class="site-desc">Répertoire de ressources numériques pour la recherche, l'étude et l'exploration : textes anciens, archives, bases de données, outils linguistiques et références spécialisées.</p>
 
             <!-- Controls Bar -->
             <div class="view-controls">
@@ -2968,5 +2974,7 @@
         })();
     </script>
     </div>
+    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
+    <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
 </body>
 </html>

@@ -11,40 +11,38 @@
     <div class="container">
         <header>
             <h1>א</h1>
-            <p class="subtitle" style="opacity:.7;font-size:.8rem;margin-bottom:.75rem;">Bibliothèque de références personnelle — textes, outils, lieux.</p>
             <nav>
                 <a href="index.html">chercher</a>
                 <a href="browse.html" class="active">parcourir</a>
                 <a href="sources.html">sources</a>
                 <a href="upload.html">ajouter</a>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Basculer thème">●</button>
             </nav>
         </header>
 
         <main>
             <div class="search-filters browse-filters-bar">
-                    <select id="type-filter">
-                        <option value="">toutes catégories</option>
-                    </select>
-                    <select id="author-filter">
-                        <option value="">tous les auteurs</option>
-                    </select>
-                    <select id="source-filter">
-                        <option value="">toutes les sources</option>
-                    </select>
-                    <select id="fav-filter">
-                        <option value="">tous les textes</option>
-                        <option value="favorites">★ favoris</option>
-                    </select>
-                    <select id="sort-filter">
-                        <option value="title">trier : titre</option>
-                        <option value="author">trier : auteur</option>
-                        <option value="type">trier : catégorie</option>
-                    </select>
-                </div>
+                <select id="type-filter">
+                    <option value="">tous les types</option>
+                </select>
+                <select id="author-filter">
+                    <option value="">tous les auteurs</option>
+                </select>
+                <select id="source-filter">
+                    <option value="">toutes les sources</option>
+                </select>
+                <select id="fav-filter">
+                    <option value="">tous les textes</option>
+                    <option value="favorites">★ favoris</option>
+                </select>
+                <select id="sort-filter">
+                    <option value="title">trier : titre</option>
+                    <option value="author">trier : auteur</option>
+                    <option value="type">trier : type</option>
+                </select>
+            </div>
 
             <div class="browse-stats" id="catalog-stats">
-                <span id="total-books">0</span> textes de <span id="total-sources">0</span> sources
+                <span id="total-books">0</span> textes · <span id="total-sources">0</span> sources
             </div>
 
             <div id="book-list" class="results">
@@ -55,11 +53,12 @@
         </main>
 
         <footer>
-            <p><a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme de G. F. Machado</a></p>
-            <p id="sources-footer"></p>
+            <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
         </footer>
     </div>
 
+    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
+    <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
     <script src="app.js"></script>
     <script>initBrowse();</script>
 </body>

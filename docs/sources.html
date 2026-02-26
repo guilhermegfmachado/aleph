@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aleph - sources</title>
-    <meta name="description" content="Sources et ressources de la bibliothèque aleph — archives, outils, lieux.">
-    <meta property="og:title" content="aleph - sources">
-    <meta property="og:description" content="Sources et ressources de la bibliothèque aleph — archives, outils, lieux.">
+    <title>aleph — sources et références numériques</title>
+    <meta name="description" content="Répertoire de ressources numériques pour la recherche : bibliothèques nationales, archives, bases de données académiques.">
+    <meta name="author" content="Guilherme de G. F. Machado">
+    <meta property="og:title" content="aleph — sources et références numériques">
+    <meta property="og:description" content="Répertoire de ressources numériques pour la recherche : bibliothèques nationales, archives, bases de données académiques.">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://guilhermegfmachado.github.io/claude-projects/sources.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://d3js.org">
     <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         /* Controls Bar */
         .view-controls {
@@ -606,7 +610,7 @@
             <nav>
                 <a href="index.html">chercher</a>
                 <a href="browse.html">parcourir</a>
-                <a href="sources.html" class="active">sources</a>
+                <a href="sources.html" class="active" aria-current="page">sources</a>
                 <a href="upload.html">ajouter</a>
             </nav>
         </header>
@@ -2980,5 +2984,20 @@
     </div>
     <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
     <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Add resource counts to section summaries
+        document.querySelectorAll('details.source-section').forEach(section => {
+            const count = section.querySelectorAll('.resource').length;
+            const h2 = section.querySelector('summary h2');
+            if (h2 && count > 0) {
+                h2.insertAdjacentHTML('beforeend',
+                    `<span style="font-size:0.7rem;color:var(--text-muted);font-weight:400;margin-left:0.5rem;opacity:0.7;">${count}</span>`
+                );
+            }
+        });
+    });
+    </script>
 </body>
 </html>

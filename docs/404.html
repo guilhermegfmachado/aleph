@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - aleph</title>
+    <title>aleph — 404</title>
     <meta name="description" content="Page introuvable.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
@@ -11,31 +11,20 @@
 <body>
     <div class="container">
         <header>
-            <h1>א</h1>
+            <h1><a href="index.html" style="text-decoration:none;color:inherit;">א</a></h1>
             <nav>
                 <a href="index.html">chercher</a>
                 <a href="browse.html">parcourir</a>
                 <a href="sources.html">sources</a>
-                <a href="upload.html">ajouter</a>
             </nav>
         </header>
-
-        <main>
-            <div class="error-page">
-                <p class="error-code">404</p>
-                <p class="error-message">page introuvable</p>
-                <p><a href="index.html">retour à l'accueil</a></p>
-            </div>
+        <main style="text-align:center;padding:4rem 0;">
+            <p style="font-size:2rem;margin-bottom:1rem;color:var(--text-muted);">404</p>
+            <p style="color:var(--text-muted);margin-bottom:2rem;">page introuvable</p>
+            <a href="index.html">retour à la bibliothèque</a>
         </main>
-
-        <footer>
-            <p><a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme de G. F. Machado</a></p>
-            <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
-        </footer>
+        <footer><p>in girum imus nocte et consumimur igni</p></footer>
     </div>
-
-    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
-    <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
     <script src="app.js"></script>
 </body>
 </html>

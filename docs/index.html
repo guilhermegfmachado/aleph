@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aleph</title>
-    <meta name="description" content="Bibliothèque de références personnelle — textes, outils, lieux.">
-    <meta property="og:title" content="aleph">
-    <meta property="og:description" content="Bibliothèque de références personnelle — textes, outils, lieux.">
+    <title>aleph — bibliothèque numérique personnelle</title>
+    <meta name="description" content="Bibliothèque numérique personnelle : recherche plein texte dans un corpus de philosophie, littérature, droit et sciences.">
+    <meta name="author" content="Guilherme de G. F. Machado">
+    <meta property="og:title" content="aleph — bibliothèque numérique personnelle">
+    <meta property="og:description" content="Recherche plein texte dans un corpus de philosophie, littérature, droit et sciences.">
+    <meta property="og:url" content="https://guilhermegfmachado.github.io/claude-projects/">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <link rel="canonical" href="https://guilhermegfmachado.github.io/claude-projects/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preload" href="corpus/index.json" as="fetch" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "aleph",
+        "url": "https://guilhermegfmachado.github.io/claude-projects/",
+        "description": "Bibliothèque numérique personnelle — philosophie, littérature, droit, sciences.",
+        "inLanguage": "fr",
+        "author": {
+            "@type": "Person",
+            "name": "Guilherme de G. F. Machado",
+            "url": "https://guilhermegfmachado.github.io/work/"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://guilhermegfmachado.github.io/claude-projects/index.html?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>א</h1>
             <nav>
-                <a href="index.html" class="active">chercher</a>
+                <a href="index.html" class="active" aria-current="page">chercher</a>
                 <a href="browse.html">parcourir</a>
                 <a href="sources.html">sources</a>
                 <a href="upload.html">ajouter</a>
@@ -25,7 +55,7 @@
 
         <main>
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="chercher titres, auteurs, ou tout mot dans le texte..." autofocus>
+                <input type="search" id="search-input" placeholder="chercher titres, auteurs, ou tout mot dans le texte..." autofocus>
             </div>
 
             <div id="results" class="results">

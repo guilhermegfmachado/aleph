@@ -530,6 +530,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load corpus index
     await loadCorpusIndex();
 
+    // URL-based search state
+    function updateURL(query) {
+        const url = new URL(window.location);
+        query ? url.searchParams.set('q', query) : url.searchParams.delete('q');
+        window.history.replaceState({}, '', url);
+    }
+
+    // Read ?q= on load
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlQuery = urlParams.get('q');
+    if (urlQuery) {
+        input.value = urlQuery;
+        doCorpusSearch(urlQuery, '', '');
+    }
+
     // Populate stats
     if (corpusIndex) {
         const bookCount   = document.getElementById('book-count');
@@ -542,16 +557,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     const doSearch = () => {
         const q = input.value.trim();
         if (!q) return;
+        updateURL(q);
         doCorpusSearch(q, '', '');
     };
 
     input.addEventListener('keypress', e => e.key === 'Enter' && doSearch());
 
-    // Keyboard shortcut: / to focus search
+    // Keyboard shortcuts: / to focus search, Escape to blur
     document.addEventListener('keydown', e => {
-        if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        if (e.key === '/' && document.activeElement !== input) {
             e.preventDefault();
             input.focus();
+        }
+        if (e.key === 'Escape' && document.activeElement === input) {
+            input.blur();
         }
     });
 
@@ -561,6 +580,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             e.preventDefault();
             const q = link.dataset.query;
             input.value = q;
+            updateURL(q);
             doCorpusSearch(q, '', '');
         });
     });
@@ -951,7 +971,7 @@ async function renderBookContent(query = null) {
             <div class="corpus-links-view">
                 <p class="corpus-note">
                     ${escapeHtml(book.title)}${yearStr}<br>
-                    Text not yet stored locally — read it at the source:
+                    Texte non stocké localement — lire à la source :
                 </p>
                 <div class="corpus-lang-list">
                     ${renderCorpusLinks(allLangs, book)}
@@ -1166,7 +1186,7 @@ async function searchPdf(query) {
     if (pdfSearchState.matches.length > 0) {
         resultsDiv.classList.remove('hidden');
         resultsDiv.innerHTML = `
-            <div class="search-summary">${pdfSearchState.matches.length} matches for "${escapeHtml(query)}"</div>
+            <div class="search-summary">${pdfSearchState.matches.length} correspondance${pdfSearchState.matches.length !== 1 ? 's' : ''} pour « ${escapeHtml(query)} »</div>
             <div class="match-list">
                 ${pdfSearchState.matches.map((m, i) => `
                     <button class="pdf-match-btn" onclick="goToMatch(${i})">p.${m.page}</button>
@@ -1311,7 +1331,7 @@ function showTranslatePopup(text) {
 
     popup.classList.remove('hidden');
     originalDiv.textContent = text.length > 100 ? text.slice(0, 100) + '...' : text;
-    resultDiv.textContent = 'translating...';
+    resultDiv.textContent = 'traduction en cours...';
     resultDiv.className = 'translate-result loading';
 
     translateText(text, translateState.targetLang);
@@ -1345,7 +1365,7 @@ async function translateText(text, targetLang) {
             throw new Error(data.responseDetails || 'failed');
         }
     } catch (e) {
-        resultDiv.textContent = 'error: ' + e.message;
+        resultDiv.textContent = 'erreur : ' + e.message;
         resultDiv.className = 'translate-result error';
     }
 }

@@ -51,16 +51,20 @@ function buildIndex(docs) {
     };
 
     for (const doc of docs) {
+        // Skip documents with missing content
+        const content = doc.content || '';
+        if (!content) continue;
+
         index.meta.totalDocs++;
         index.docs[doc.id] = {
             title: doc.title,
             author: doc.author,
-            snippet: doc.content.slice(0, 300).replace(/\s+/g, ' '),
-            charCount: doc.content.length
+            snippet: content.slice(0, 300).replace(/\s+/g, ' '),
+            charCount: content.length
         };
 
         // Tokenize and count
-        const tokens = tokenize(doc.content);
+        const tokens = tokenize(content);
         const termFreq = {};
 
         for (let i = 0; i < tokens.length; i++) {
@@ -182,18 +186,43 @@ async function main() {
     for (const file of textFiles) {
         try {
             const textData = JSON.parse(fs.readFileSync(path.join(TEXTS_DIR, file), 'utf8'));
-            const baseId = textData.id.replace(/_[a-z]{2}$/, '');  // Remove lang suffix
+            const baseId = (textData.id || file.replace('.json', '')).replace(/_[a-z]{2}$/, '');
             const meta = docMeta[baseId] || {};
 
-            docs.push({
-                id: textData.id,
-                title: meta.title || textData.id,
-                author: meta.author || '',
-                content: textData.content,
-                tags: meta.tags || []
-            });
+            // Handle new format with languages nested
+            if (textData.languages && typeof textData.languages === 'object') {
+                for (const [lang, langData] of Object.entries(textData.languages)) {
+                    if (!langData.content || typeof langData.content !== 'string') {
+                        console.log(`  Skipping ${textData.id}_${lang}: no content found`);
+                        continue;
+                    }
 
-            console.log(`  Loaded: ${textData.id} (${textData.char_count} chars)`);
+                    docs.push({
+                        id: `${textData.id}_${lang}`,
+                        title: langData.title || meta.title || textData.title || textData.id,
+                        author: textData.author || meta.author || '',
+                        content: langData.content,
+                        tags: meta.tags || []
+                    });
+
+                    console.log(`  Loaded: ${textData.id}_${lang} (${langData.content.length} chars)`);
+                }
+            }
+            // Handle old format with content at top level
+            else if (textData.content && typeof textData.content === 'string') {
+                docs.push({
+                    id: textData.id || file.replace('.json', ''),
+                    title: meta.title || textData.id || file.replace('.json', ''),
+                    author: meta.author || '',
+                    content: textData.content,
+                    tags: meta.tags || []
+                });
+
+                console.log(`  Loaded: ${textData.id || file} (${textData.char_count || textData.content.length} chars)`);
+            }
+            else {
+                console.log(`  Skipping ${file}: no content found`);
+            }
         } catch (err) {
             console.log(`  Error loading ${file}: ${err.message}`);
         }

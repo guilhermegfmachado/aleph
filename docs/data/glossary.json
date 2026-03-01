@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.0",
     "lastUpdated": "2026-02-28",
-    "languages": ["de", "fr", "it", "pt", "en", "ja", "zh", "el", "la"]
+    "languages": ["de", "fr", "it", "ja", "zh", "el", "la"]
   },
   "terms": [
     {
@@ -227,93 +227,6 @@
       "related": ["Trasformismo", "Conservatorismo"],
       "usage": "The Risorgimento is often criticized as an exercise in gattopardismo.",
       "sources": ["Lampedusa - Il Gattopardo"]
-    },
-    {
-      "id": "saudade",
-      "term": "Saudade",
-      "lang": "pt",
-      "pronunciation": "/sawˈdadʒi/",
-      "partOfSpeech": "noun",
-      "definition": "A deep emotional state of melancholic longing for something or someone absent; a bittersweet yearning for what was or might have been.",
-      "etymology": "Possibly from Latin 'solitate' (solitude) or Celtic 'saudade'",
-      "category": ["philosophy", "literature", "psychology"],
-      "related": ["Nostalgia", "Melancolia"],
-      "usage": "Saudade pervades Portuguese fado and Brazilian música popular.",
-      "sources": ["Fernando Pessoa - Livro do Desassossego"]
-    },
-    {
-      "id": "sebastianismo",
-      "term": "Sebastianismo",
-      "lang": "pt",
-      "pronunciation": "/sebɐʃtiɐˈnizmu/",
-      "partOfSpeech": "noun",
-      "definition": "Messianic belief in the return of King Sebastian and the restoration of Portuguese greatness; by extension, any nostalgic hope for a savior or golden age.",
-      "etymology": "From King Sebastian I of Portugal, who disappeared at the Battle of Alcácer Quibir (1578)",
-      "category": ["history", "religion", "politics"],
-      "related": ["Messianismo", "Milenarismo", "Quinto Império"],
-      "usage": "Portuguese sebastianismo influenced Brazilian popular religion and politics."
-    },
-    {
-      "id": "quinto-imperio",
-      "term": "Quinto Império",
-      "lang": "pt",
-      "pronunciation": "/ˈkĩtu ĩˈpɛɾju/",
-      "partOfSpeech": "noun",
-      "definition": "The Fifth Empire; a prophetic concept of a future Portuguese spiritual empire, elaborated by Padre António Vieira and Fernando Pessoa.",
-      "etymology": "From the biblical interpretation of Daniel's vision of four empires",
-      "category": ["philosophy", "religion", "literature"],
-      "related": ["Sebastianismo", "Messianismo"],
-      "usage": "Pessoa reimagined the Quinto Império as a cultural and spiritual mission.",
-      "sources": ["Padre António Vieira - História do Futuro", "Fernando Pessoa - Mensagem"]
-    },
-    {
-      "id": "manifest-destiny",
-      "term": "Manifest Destiny",
-      "lang": "en",
-      "pronunciation": "/ˈmænɪfest ˈdestəni/",
-      "partOfSpeech": "noun",
-      "definition": "The 19th-century doctrine that American expansion across the continent was inevitable and divinely ordained.",
-      "etymology": "Coined by journalist John L. O'Sullivan in 1845",
-      "category": ["history", "politics", "ideology"],
-      "related": ["American Exceptionalism", "Frontier Thesis"],
-      "usage": "Manifest Destiny justified territorial expansion and displacement of indigenous peoples."
-    },
-    {
-      "id": "american-exceptionalism",
-      "term": "American Exceptionalism",
-      "lang": "en",
-      "pronunciation": "/əˈmerɪkən ɪkˈsepʃənəlɪzəm/",
-      "partOfSpeech": "noun",
-      "definition": "The belief that the United States is qualitatively different from other nations due to its founding principles, history, and mission in the world.",
-      "etymology": "Popularized by Tocqueville and later political discourse",
-      "category": ["politics", "history", "ideology"],
-      "related": ["Manifest Destiny", "City upon a Hill"],
-      "usage": "American exceptionalism shapes both domestic policy debates and foreign relations.",
-      "sources": ["Tocqueville - De la démocratie en Amérique"]
-    },
-    {
-      "id": "stiff-upper-lip",
-      "term": "Stiff upper lip",
-      "lang": "en",
-      "pronunciation": "/stɪf ˈʌpər lɪp/",
-      "partOfSpeech": "noun",
-      "definition": "The British ideal of stoic emotional restraint in the face of adversity; repressing displays of emotion to maintain dignity.",
-      "etymology": "19th-century British expression, possibly from physiognomy",
-      "category": ["culture", "psychology", "history"],
-      "related": ["Stoicism", "British Reserve"],
-      "usage": "The stiff upper lip became associated with British imperial identity and public school education."
-    },
-    {
-      "id": "splendid-isolation",
-      "term": "Splendid Isolation",
-      "lang": "en",
-      "pronunciation": "/ˈsplendɪd aɪsəˈleɪʃən/",
-      "partOfSpeech": "noun",
-      "definition": "British foreign policy of avoiding permanent alliances with European powers in the late 19th century, relying on naval supremacy.",
-      "etymology": "Phrase popularized in 1896, though the policy predates it",
-      "category": ["history", "politics", "geopolitics"],
-      "related": ["Balance of Power", "Pax Britannica"],
-      "usage": "Splendid isolation ended with the entente cordiale and the approach of World War I."
     },
     {
       "id": "mono-no-aware",

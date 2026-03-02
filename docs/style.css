@@ -1439,6 +1439,15 @@ footer a:hover {
     }
     .translate-text { max-height: 60px; }
     .translate-result { max-height: 100px; }
+
+    /* Glossary mobile */
+    .filter-row { flex-direction: column; gap: 0.75rem; }
+    .lang-filters { justify-content: flex-start; }
+    .category-filter select { width: 100%; }
+    .term-header { flex-direction: column; gap: 0.25rem; }
+    .quote-footer { flex-direction: column; gap: 0.25rem; }
+    .quote-lang { margin-left: 0; }
+    .form-row { flex-direction: column; gap: 0.75rem; }
 }
 
 /* PDF loading indicator */
@@ -1469,6 +1478,431 @@ footer a:hover {
     color: var(--accent);
 }
 
+/* Glossaire page styles */
+.glossary-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover {
+    color: var(--text);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.glossary-controls {
+    margin-bottom: 1rem;
+}
+
+.glossary-controls .search-box {
+    margin-bottom: 0.75rem;
+}
+
+.glossary-controls .search-box input {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.glossary-controls .search-box input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.filter-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.lang-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.lang-btn {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    border-color: var(--accent-dim);
+    color: var(--text);
+}
+
+.lang-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+}
+
+.category-filter select {
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    color: var(--text);
+    min-width: 160px;
+}
+
+.category-filter select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.glossary-stats {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.glossary-view.hidden {
+    display: none;
+}
+
+/* Term cards */
+.terms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.term-card {
+    padding: 1.25rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+}
+
+.term-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+.term-word {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin: 0;
+}
+
+.term-lang {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.term-pronunciation {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.term-definition {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.term-etymology,
+.term-usage,
+.term-related,
+.term-sources {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.term-etymology em,
+.term-usage em,
+.term-related em,
+.term-sources em {
+    color: var(--text);
+}
+
+.term-categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+
+.category-tag {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.related-term {
+    color: var(--accent);
+}
+
+/* Quote cards */
+.quotes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.quote-card {
+    padding: 1.25rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+}
+
+.quote-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.quote-translation {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border);
+}
+
+.quote-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: baseline;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.quote-author {
+    color: var(--text-bright);
+    font-style: normal;
+}
+
+.quote-source {
+    color: var(--text-muted);
+}
+
+.quote-source::before {
+    content: "— ";
+}
+
+.quote-year {
+    color: var(--text-muted);
+}
+
+.quote-lang {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-left: auto;
+}
+
+.quote-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.quote-tags .tag {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.15rem 0.4rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.quote-notes {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+}
+
+.no-results {
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Add entry section */
+.add-entry-section {
+    margin-top: 2rem;
+    border: 1px solid var(--border);
+}
+
+.add-entry-section summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    background: var(--bg-light);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.add-entry-section summary:hover {
+    color: var(--text);
+}
+
+.add-entry-content {
+    padding: 1rem;
+}
+
+.entry-type-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1rem;
+}
+
+.entry-type-btn {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.entry-type-btn:first-child {
+    border-right: none;
+}
+
+.entry-type-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+}
+
+.entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.entry-form.hidden {
+    display: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.entry-form .btn {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background: var(--accent);
+    border: none;
+    color: var(--bg);
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.entry-form .btn:hover {
+    background: var(--accent-dim);
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    background: var(--text-bright);
+    color: var(--bg);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
 /* Print stylesheet */
 @media print {
     body {
@@ -1489,6 +1923,9 @@ footer a:hover {
     .view-controls,
     .pagination,
     .upload-section,
+    .glossary-tabs,
+    .glossary-controls,
+    .add-entry-section,
     footer,
     #network-container {
         display: none !important;

@@ -351,7 +351,7 @@ async function publishToGitHub(silent = false) {
 
         if (!res.ok) throw new Error((await res.json()).message || 'Failed');
 
-        if (hint) { hint.textContent = `published ${books.length} texts`; hint.style.color = '#4a4'; }
+        if (hint) { hint.textContent = `${books.length} texte(s) publié(s)`; hint.style.color = '#4a4'; }
     } catch (e) {
         if (!silent) alert('Publication échouée : ' + e.message);
         if (hint) hint.textContent = 'publication échouée';

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.0",
-    "lastUpdated": "2026-02-28"
+    "version": "1.1",
+    "lastUpdated": "2026-03-07"
   },
   "quotes": [
     {
@@ -363,6 +363,278 @@
       "tags": ["freedom", "solidarity", "Cold War"],
       "linkedTerms": ["american-exceptionalism"],
       "notes": "Expressing solidarity with West Berlin during the Cold War."
+    },
+    {
+      "id": "q031",
+      "text": "Der Mensch kann tun was er will; er kann aber nicht wollen was er will.",
+      "translation": "Man can do what he wills but he cannot will what he wills.",
+      "author": "Arthur Schopenhauer",
+      "source": "Über die Freiheit des menschlichen Willens",
+      "year": 1839,
+      "lang": "de",
+      "tags": ["will", "freedom", "determinism"],
+      "linkedTerms": ["weltanschauung"],
+      "notes": "Schopenhauer's formulation of the problem of free will."
+    },
+    {
+      "id": "q032",
+      "text": "Anxiety is the dizziness of freedom.",
+      "author": "Søren Kierkegaard",
+      "source": "The Concept of Anxiety",
+      "year": 1844,
+      "lang": "en",
+      "tags": ["anxiety", "freedom", "existentialism"],
+      "linkedTerms": ["angst"],
+      "notes": "Kierkegaard's analysis of anxiety as fundamental to human existence."
+    },
+    {
+      "id": "q033",
+      "text": "Der Mensch ist nur da ganz Mensch, wo er spielt.",
+      "translation": "Man is only fully human when he plays.",
+      "author": "Friedrich Schiller",
+      "source": "Über die ästhetische Erziehung des Menschen",
+      "year": 1795,
+      "lang": "de",
+      "tags": ["play", "aesthetics", "humanity"],
+      "linkedTerms": ["bildung"],
+      "notes": "From Schiller's Letters on the Aesthetic Education of Man."
+    },
+    {
+      "id": "q034",
+      "text": "Slave morality from the outset says No to what is 'outside,' what is 'different,' what is 'not itself.'",
+      "author": "Friedrich Nietzsche",
+      "source": "On the Genealogy of Morality",
+      "year": 1887,
+      "lang": "en",
+      "tags": ["morality", "resentment", "values"],
+      "linkedTerms": ["ressentiment"],
+      "notes": "Nietzsche's analysis of the reactive nature of slave morality."
+    },
+    {
+      "id": "q035",
+      "text": "Ennui est entré dans les âmes comme une pluie dans le foin.",
+      "translation": "Ennui has entered souls like rain into hay.",
+      "author": "Gustave Flaubert",
+      "source": "Correspondance",
+      "lang": "fr",
+      "tags": ["boredom", "modernity", "soul"],
+      "linkedTerms": ["ennui"],
+      "notes": "From Flaubert's correspondence."
+    },
+    {
+      "id": "q036",
+      "text": "The crowd is his element, as the air is that of birds and water of fishes.",
+      "author": "Charles Baudelaire",
+      "source": "The Painter of Modern Life",
+      "year": 1863,
+      "lang": "en",
+      "tags": ["crowd", "modernity", "observation"],
+      "linkedTerms": ["flaneur"],
+      "notes": "Baudelaire's description of the flâneur's habitat."
+    },
+    {
+      "id": "q037",
+      "text": "ὕβρις φυτεύει τύραννον.",
+      "translation": "Hubris plants the tyrant.",
+      "author": "Sophocles",
+      "source": "Oedipus Rex",
+      "year": -430,
+      "lang": "el",
+      "tags": ["hubris", "tyranny", "fate"],
+      "linkedTerms": ["hubris"],
+      "notes": "From the choral ode, line 872."
+    },
+    {
+      "id": "q038",
+      "text": "Tragedy is an imitation of an action that is serious, complete, and of a certain magnitude.",
+      "author": "Aristotle",
+      "source": "Poetics",
+      "year": -330,
+      "lang": "en",
+      "tags": ["tragedy", "imitation", "action"],
+      "linkedTerms": ["catharsis"],
+      "notes": "Aristotle's definition of tragedy."
+    },
+    {
+      "id": "q039",
+      "text": "War is a violent teacher.",
+      "author": "Thucydides",
+      "source": "History of the Peloponnesian War, III.82",
+      "year": -400,
+      "lang": "en",
+      "tags": ["war", "violence", "learning"],
+      "linkedTerms": ["stasis"],
+      "notes": "From Thucydides' analysis of civil strife in Corcyra."
+    },
+    {
+      "id": "q040",
+      "text": "In the tea-room it is left for each guest in imagination to complete the total effect in relation to himself.",
+      "author": "Kakuzo Okakura",
+      "source": "The Book of Tea",
+      "year": 1906,
+      "lang": "en",
+      "tags": ["tea", "aesthetics", "incompleteness"],
+      "linkedTerms": ["wabi-sabi"],
+      "notes": "Okakura's explanation of aesthetic incompleteness."
+    },
+    {
+      "id": "q041",
+      "text": "物の哀れを知る — to know the pathos of things.",
+      "author": "Motoori Norinaga",
+      "source": "Genji Monogatari Tama no Ogushi",
+      "year": 1796,
+      "lang": "ja",
+      "tags": ["pathos", "beauty", "impermanence"],
+      "linkedTerms": ["mono-no-aware"],
+      "notes": "Norinaga's formulation of the central Japanese aesthetic concept."
+    },
+    {
+      "id": "q042",
+      "text": "Tu regere imperio populos, Romane, memento.",
+      "translation": "Remember, Roman, to rule the peoples with your power.",
+      "author": "Virgil",
+      "source": "Aeneid, VI.851",
+      "year": -19,
+      "lang": "la",
+      "tags": ["empire", "Rome", "power"],
+      "linkedTerms": ["imperium"],
+      "notes": "Anchises' prophecy of Rome's destiny."
+    },
+    {
+      "id": "q043",
+      "text": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est.",
+      "translation": "All things, Lucilius, are not ours; only time is our own.",
+      "author": "Seneca",
+      "source": "Epistulae Morales I.1",
+      "lang": "la",
+      "tags": ["time", "mortality", "ownership"],
+      "linkedTerms": ["memento-mori"],
+      "notes": "Opening of Seneca's letters to Lucilius."
+    },
+    {
+      "id": "q044",
+      "text": "When an opponent declares, 'I will not come over to your side,' I calmly say, 'Your child belongs to us already.'",
+      "author": "Adolf Hitler",
+      "source": "Speech at Nuremberg",
+      "year": 1935,
+      "lang": "en",
+      "tags": ["totalitarianism", "youth", "indoctrination"],
+      "linkedTerms": ["gleichschaltung"],
+      "notes": "On the Nazi project of total coordination."
+    },
+    {
+      "id": "q045",
+      "text": "Wie Siegfried von dem hinterhältigen Speerwurf des grimmen Hagen getroffen, so stürzte unsere ermattete Front.",
+      "translation": "As Siegfried was struck by the treacherous spear-throw of the grim Hagen, so collapsed our exhausted front.",
+      "author": "Paul von Hindenburg",
+      "source": "Testimony before the Reichstag commission",
+      "year": 1919,
+      "lang": "de",
+      "tags": ["stab-in-the-back", "myth", "betrayal"],
+      "linkedTerms": ["dolchstosslegende"],
+      "notes": "Hindenburg's testimony that crystallized the stab-in-the-back myth."
+    },
+    {
+      "id": "q046",
+      "text": "Le terroir, c'est la mémoire de la terre.",
+      "translation": "Terroir is the memory of the earth.",
+      "author": "French viticulture tradition",
+      "source": "Traditional saying",
+      "lang": "fr",
+      "tags": ["terroir", "land", "memory"],
+      "linkedTerms": ["terroir"],
+      "notes": "Attributed saying in French viticulture."
+    },
+    {
+      "id": "q047",
+      "text": "Noblesse oblige, ou : qui trop s'excuse, s'accuse.",
+      "translation": "Nobility obliges, or: who excuses himself too much, accuses himself.",
+      "author": "Gaston de Lévis",
+      "source": "Maximes et réflexions morales",
+      "year": 1808,
+      "lang": "fr",
+      "tags": ["nobility", "obligation", "conduct"],
+      "linkedTerms": ["noblesse-oblige"],
+      "notes": "The origin of the phrase 'noblesse oblige.'"
+    },
+    {
+      "id": "q048",
+      "text": "Ex nihilo nihil fit.",
+      "translation": "Nothing comes from nothing.",
+      "author": "Lucretius",
+      "source": "De rerum natura",
+      "year": -50,
+      "lang": "la",
+      "tags": ["creation", "nothing", "causation"],
+      "linkedTerms": ["ex-nihilo"],
+      "notes": "The Epicurean principle against creation from nothing."
+    },
+    {
+      "id": "q049",
+      "text": "Dixitque Deus: Fiat lux. Et facta est lux.",
+      "translation": "And God said: Let there be light. And there was light.",
+      "author": "Vulgate",
+      "source": "Genesis 1:3",
+      "lang": "la",
+      "tags": ["creation", "light", "divine speech"],
+      "linkedTerms": ["fiat-lux"],
+      "notes": "The first divine speech act in the Bible."
+    },
+    {
+      "id": "q050",
+      "text": "ἦθος ἀνθρώπωι δαίμων.",
+      "translation": "Character is fate for man.",
+      "author": "Heraclitus",
+      "source": "Fragment 119",
+      "year": -500,
+      "lang": "el",
+      "tags": ["character", "fate", "daimon"],
+      "linkedTerms": ["daimon"],
+      "notes": "Heraclitus' famous fragment on character and destiny."
+    },
+    {
+      "id": "q051",
+      "text": "El duende no llega si no ve la posibilidad de la muerte.",
+      "translation": "The duende does not come if it does not see the possibility of death.",
+      "author": "Federico García Lorca",
+      "source": "Juego y teoría del duende",
+      "year": 1933,
+      "lang": "es",
+      "tags": ["duende", "death", "art"],
+      "linkedTerms": ["duende"],
+      "notes": "From Lorca's lecture on the dark spirit of art."
+    },
+    {
+      "id": "q052",
+      "text": "Caminante, son tus huellas el camino y nada más.",
+      "translation": "Wanderer, your footsteps are the path and nothing more.",
+      "author": "Antonio Machado",
+      "source": "Proverbios y cantares",
+      "lang": "es",
+      "tags": ["path", "walking", "solitude"],
+      "linkedTerms": ["soledad"],
+      "notes": "From Machado's Proverbs and Songs."
+    },
+    {
+      "id": "q053",
+      "text": "No single word in English renders all the shades of toska.",
+      "author": "Vladimir Nabokov",
+      "lang": "en",
+      "tags": ["toska", "translation", "longing"],
+      "linkedTerms": ["toska"],
+      "notes": "Nabokov's definition of toska's untranslatability."
+    },
+    {
+      "id": "q054",
+      "text": "Saudade: um bem que se padece e um mal de que se goza.",
+      "translation": "Saudade: a good that one suffers and an ill that one enjoys.",
+      "author": "D. Francisco Manuel de Melo",
+      "source": "Obras Métricas",
+      "year": 1665,
+      "lang": "pt",
+      "tags": ["saudade", "longing", "paradox"],
+      "linkedTerms": ["saudade"],
+      "notes": "Classic Portuguese definition of saudade."
     }
   ]
 }

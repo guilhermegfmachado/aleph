@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.0",
-    "lastUpdated": "2026-02-28",
-    "languages": ["de", "fr", "it", "ja", "zh", "el", "la"]
+    "version": "1.1",
+    "lastUpdated": "2026-03-07",
+    "languages": ["de", "fr", "it", "ja", "zh", "el", "el-anc", "la", "es", "ru", "ar", "pt", "he"]
   },
   "terms": [
     {
@@ -603,6 +603,398 @@
       "related": ["Musikdrama", "Synthese"],
       "usage": "Wagner conceived his operas as Gesamtkunstwerke that would transform society.",
       "sources": ["Wagner - Das Kunstwerk der Zukunft"]
+    },
+    {
+      "id": "terroir",
+      "term": "Terroir",
+      "lang": "fr",
+      "definition": "The taste of a place. Originally wine: the specific combination of soil, climate, slope, and microclimate that makes a Burgundy untranslatable. Extended to cheese, bread, language, character — the claim that place is not background but ingredient. Against globalisation's axiom that the particular can always be reproduced elsewhere.",
+      "etymology": "From terre (earth, land). First used in viticulture; generalised in the 20th century.",
+      "category": ["aesthetics", "philosophy"],
+      "related": ["depaysement", "flaneur"]
+    },
+    {
+      "id": "bricolage",
+      "term": "Bricolage",
+      "lang": "fr",
+      "definition": "Making do with what is at hand. Lévi-Strauss's concept in The Savage Mind: the bricoleur solves problems using whatever materials are available, unlike the engineer who acquires the right tool for the job. Mythological thought is bricolage — assembling meaning from inherited fragments. Punk is bricolage. All translation is bricolage.",
+      "etymology": "From bricoler — to tinker, to do odd jobs. The bricoleur is the odd-job man of thought.",
+      "category": ["philosophy", "aesthetics"],
+      "related": ["esprit-escalier"]
+    },
+    {
+      "id": "anomie",
+      "term": "Anomie",
+      "lang": "fr",
+      "definition": "Normlessness. Durkheim's concept: the condition when social norms have broken down and individuals lose their sense of moral orientation. Not simply lawlessness but the absence of shared standards for evaluating behaviour. Durkheim found it in suicide statistics — rising anomie correlates with rising self-destruction. It is the pathology of freedom without structure.",
+      "etymology": "From Greek a- (without) + nomos (law, norm). Durkheim introduced the sociological sense in Le Suicide (1897).",
+      "category": ["philosophy", "politics"],
+      "related": ["ressentiment", "gesellschaft"]
+    },
+    {
+      "id": "simulacre",
+      "term": "Simulacre",
+      "lang": "fr",
+      "definition": "The copy without an original. Baudrillard's concept: in hyperreality, representations no longer refer to a reality they represent — they constitute their own reality. The map precedes the territory. Disneyland exists to make the rest of America seem real. The Gulf War did not take place — not because it didn't happen but because the media event and the military event had become indistinguishable.",
+      "etymology": "From Latin simulacrum (likeness, image). Plato's cave is the original problem; Baudrillard is its postmodern solution.",
+      "category": ["philosophy", "aesthetics"],
+      "related": ["flaneur", "kitsch"]
+    },
+    {
+      "id": "mise-en-abyme",
+      "term": "Mise en abyme",
+      "lang": "fr",
+      "definition": "The infinite mirror. Heraldic term for a shield bearing a smaller image of itself — extended by André Gide to literature: the work that contains a representation of itself within itself. Hamlet's play-within-a-play. Las Meninas. The footnote that comments on its own footnote. The device that makes the frame visible.",
+      "etymology": "From the heraldic expression for placing a figure 'in the abyss' of a shield — i.e., at its centre.",
+      "category": ["aesthetics", "language"],
+      "related": ["simulacre"]
+    },
+    {
+      "id": "bouleversement",
+      "term": "Bouleversement",
+      "lang": "fr",
+      "definition": "Upheaval, overturning. A word that does more than 'revolution' — it carries the physical sensation of being turned upside down. The bouleversement is not only political but affective: a complete disorientation of the known order. French history is structured by them; the word has the weight of recurrence.",
+      "etymology": "From bouleverser — to overturn, from boule (ball) + verser (to pour, to turn).",
+      "category": ["politics", "psychology"],
+      "related": ["terreur", "thermidorien"]
+    },
+    {
+      "id": "laicite",
+      "term": "Laïcité",
+      "lang": "fr",
+      "definition": "The French doctrine of strict separation between religious institutions and the public sphere — more demanding than the Anglo-American concept of secularism. Not merely tolerance but the positive exclusion of religion from public life and state institutions. The 1905 law. The headscarf debates. A specifically French resolution of the Enlightenment's demand for universalism over particular identity.",
+      "etymology": "From laïc (layman, non-clerical), from Greek laos (people). The opposite is clérical.",
+      "category": ["politics", "law"],
+      "related": ["ancien-regime", "raison-detat"]
+    },
+    {
+      "id": "fachwerkhaus",
+      "term": "Fachwerkhaus",
+      "lang": "de",
+      "definition": "Half-timbered house. The building type where the structural skeleton is exposed — timber frame visible, spaces filled with wattle or plaster. A technology of honesty: the structure is the ornament. Ruskin would have approved. The aesthetic that refuses to hide how a thing is made.",
+      "etymology": "Fachwerk (framework, from Fach — panel + Werk — work) + Haus (house).",
+      "category": ["aesthetics"],
+      "related": ["sachlichkeit", "bildung"]
+    },
+    {
+      "id": "torschlusspanik",
+      "term": "Torschlusspanik",
+      "lang": "de",
+      "definition": "Gate-closing panic. The anxiety that time is running out — that a gate is closing and you will be left outside. Used especially for the fear of missed life milestones: marriage, children, career achievement. The medievally-literal German encodes an entire psychology of foreclosure.",
+      "etymology": "Tor (gate) + Schluss (closing) + Panik (panic). The closing gate of a walled city before nightfall.",
+      "category": ["psychology"],
+      "related": ["angst", "weltschmerz"]
+    },
+    {
+      "id": "fernweh",
+      "term": "Fernweh",
+      "lang": "de",
+      "definition": "Far-pain. The longing for distant places — the opposite of Heimweh (homesickness). Where Heimweh aches for what you have left, Fernweh aches for places you have never been. The traveller's disease. The world is always more interesting elsewhere.",
+      "etymology": "Fern (far, distant) + Weh (pain, ache). Structurally parallel to Heimweh.",
+      "category": ["psychology", "aesthetics"],
+      "related": ["weltschmerz", "wanderlust"]
+    },
+    {
+      "id": "wanderlust",
+      "term": "Wanderlust",
+      "lang": "de",
+      "definition": "The compulsion to travel. More than curiosity — an ache, a drive that cannot be satisfied by staying still. The Romantic walker who must keep moving to feel alive. Borrowed wholesale into English because English has no equivalent for the compulsive dimension: wandering as psychological necessity.",
+      "etymology": "wandern (to hike, to travel) + Lust (desire, pleasure). The German Romantic walking tradition.",
+      "category": ["psychology"],
+      "related": ["fernweh", "flaneur"]
+    },
+    {
+      "id": "weltverbesserer",
+      "term": "Weltverbesserer",
+      "lang": "de",
+      "definition": "World-improver. The person who believes the world can and should be made better — used ironically in German for the naive idealist, more often than not. The word's ironic register is the key: German political culture is suspicious of abstract meliorism. Compare to the untranslated English faith in 'change-makers.'",
+      "etymology": "Welt (world) + verbessern (to improve) + -er (agent suffix).",
+      "category": ["politics", "psychology"],
+      "related": ["uebermensch", "weltschmerz"]
+    },
+    {
+      "id": "innere-emigration",
+      "term": "Innere Emigration",
+      "lang": "de",
+      "definition": "Inner emigration. The practice of German writers and intellectuals who remained in Germany during the Nazi period but withdrew into private, coded, or historical subjects — neither actively collaborating nor actively resisting. Contested after 1945: was it complicity or survival? Thomas Mann attacked it from exile; Ernst Jünger embodied it from within.",
+      "etymology": "Coined to describe those who 'emigrated inward' rather than leaving the country.",
+      "category": ["politics", "aesthetics"],
+      "related": ["gleichschaltung", "vergangenheitsbewaeltigung"]
+    },
+    {
+      "id": "urkatastrophe",
+      "term": "Urkatastrophe",
+      "lang": "de",
+      "definition": "Primal catastrophe. Diplomat George Kennan's term for the First World War as the originary disaster of the twentieth century — the event from which all subsequent catastrophes (fascism, Stalinism, WWII, Cold War) derived. The word is German because German political thought needed a single term for the inaugural wound.",
+      "etymology": "Ur- (primal, original, archaic) + Katastrophe (catastrophe). The Ur- prefix appears in Urtext, Urform.",
+      "category": ["politics", "war"],
+      "related": ["dolchstosslegende", "weltpolitik", "stunde-null"]
+    },
+    {
+      "id": "mitschuld",
+      "term": "Mitschuld",
+      "lang": "de",
+      "definition": "Co-guilt, shared guilt. The complicity of bystanders — those who did not perpetrate crimes but whose silence, indifference, or passive participation enabled them. Jaspers's moral guilt is the philosophical elaboration. Mitschuld is the guilt of the person who looked away, who did not ask, who accepted.",
+      "etymology": "Mit- (with, co-) + Schuld (guilt). The co- prefix is precise: not full guilt but shared implication.",
+      "category": ["philosophy", "politics"],
+      "related": ["schuldfrage", "kollektivschuld"]
+    },
+    {
+      "id": "lacuna",
+      "term": "Lacuna",
+      "lang": "la",
+      "definition": "Gap, hole, pit. In textual scholarship: a missing or illegible portion of a manuscript. Extended: any gap in knowledge, argument, or record. The lacuna is not simply absence but absence with a shape — you can see where something was. Scholarship is largely the study of lacunae.",
+      "etymology": "From lacus (lake, pit). The medical term for a small cavity derives from the same root.",
+      "category": ["language", "philosophy"],
+      "related": ["logos"]
+    },
+    {
+      "id": "ex-nihilo",
+      "term": "Ex nihilo",
+      "lang": "la",
+      "definition": "Out of nothing. The theological claim that God created the world from nothing — not from pre-existing matter. The philosophical problem: nothing cannot be the cause of something. Artistic creation ex nihilo is the Romantic fantasy of the artist as god; all actual creation is bricolage.",
+      "etymology": "Ex (out of) + nihilo (ablative of nihil, nothing). 'Nihilism' derives from nihil.",
+      "category": ["philosophy", "aesthetics"],
+      "related": ["bricolage"]
+    },
+    {
+      "id": "terminus-ante-quem",
+      "term": "Terminus ante quem / post quem",
+      "lang": "la",
+      "definition": "The limit before which / after which. Scholarly tools for dating: the terminus post quem is the earliest possible date (the thing cannot be earlier than X); the terminus ante quem is the latest possible date (it cannot be later than Y). Between the two termini lies the possible. All historical knowledge is framed by termini.",
+      "etymology": "Terminus (boundary, end point) + ante (before) / post (after) + quem (accusative of qui, which).",
+      "category": ["language", "philosophy"],
+      "related": ["lacuna"]
+    },
+    {
+      "id": "sic",
+      "term": "Sic",
+      "lang": "la",
+      "definition": "Thus, so. The parenthetical that says: I know this looks wrong, but I am quoting accurately — the error belongs to the original. [sic] is the scholar's most precise gesture of distancing. It does not correct; it marks the boundary between the editor's responsibility and the text's. Every [sic] contains a judgment.",
+      "etymology": "Latin adverb sic (so, thus). Often written in brackets: [sic].",
+      "category": ["language"],
+      "related": ["lacuna"]
+    },
+    {
+      "id": "fiat-lux",
+      "term": "Fiat lux",
+      "lang": "la",
+      "definition": "Let there be light. Genesis 1:3 in the Vulgate. The performative utterance that creates by naming — language as causation, not description. Austin's speech act theory is its secular elaboration. Universities adopted it as motto (Columbia, UC system) because scholarship claimed the same creative-illuminating power.",
+      "etymology": "Fiat (third person singular present subjunctive of fieri: let it be, let there be) + lux (light).",
+      "category": ["philosophy", "aesthetics"],
+      "related": ["logos", "ex-nihilo"]
+    },
+    {
+      "id": "damnatio-memoriae",
+      "term": "Damnatio memoriae",
+      "lang": "la",
+      "definition": "Condemnation of memory. The Roman practice of erasing a person from the historical record — removing inscriptions, melting statues, burning documents — as if they had never existed. A punishment beyond death. Soviet airbrushing, Twitter deplatforming, colonial statue-removal: all are damnatio memoriae, though only the Roman original was legally codified.",
+      "etymology": "Damnatio (condemnation, from damnare) + memoriae (genitive of memoria, memory).",
+      "category": ["politics", "law"],
+      "related": ["imperium", "res-publica"]
+    },
+    {
+      "id": "aporia",
+      "term": "Aporia",
+      "lang": "el-anc",
+      "definition": "Impasse, perplexity. The state of not knowing — the productive confusion at the end of a Socratic dialogue when all positions have been shown to be untenable and the interlocutor admits they do not know what they thought they knew. Plato's early dialogues end in aporia. It is not failure but clearing: the space where genuine inquiry begins.",
+      "etymology": "A- (without) + poros (passage, path). The aporia is the place where the road runs out.",
+      "category": ["philosophy"],
+      "related": ["logos", "eudaimonia"]
+    },
+    {
+      "id": "phronesis",
+      "term": "Phronesis",
+      "native": "Φρόνησις",
+      "lang": "el-anc",
+      "definition": "Practical wisdom. Aristotle's intellectual virtue specific to action: the ability to deliberate well about what to do in particular circumstances, given the ends of a good human life. Not rule-following but judgment — the capacity to perceive what the situation requires. It cannot be taught by lecture; it is formed by practice and experience.",
+      "etymology": "From phronein (to think, to be minded). Related to phren (mind, diaphragm — the Greeks located thought in the chest).",
+      "category": ["philosophy"],
+      "related": ["arete", "eudaimonia", "sophrosyne"]
+    },
+    {
+      "id": "theoria",
+      "term": "Theoria",
+      "native": "Θεωρία",
+      "lang": "el-anc",
+      "definition": "Contemplation, beholding. The activity of pure intellectual vision — disinterested inquiry into what is, for its own sake. Aristotle's highest life. The Greek word was also used for the official delegations sent to consult oracles and attend festivals — the word for metaphysical contemplation and civic embassy is the same. Theory and public life were not yet separated.",
+      "etymology": "From theōros (spectator) + -ia. Theōros is from thea (sight, view) + horan (to see).",
+      "category": ["philosophy"],
+      "related": ["logos", "phronesis", "aporia"]
+    },
+    {
+      "id": "aletheia",
+      "term": "Aletheia",
+      "native": "Ἀλήθεια",
+      "lang": "el-anc",
+      "definition": "Truth as unconcealment. Not correctness (a statement matching a fact) but disclosure — the showing-forth of what was hidden. Heidegger's reading: truth is not a property of propositions but an event of unconcealment. The river shows what was always there. The etymology matters: a-letheia, the un-forgotten.",
+      "etymology": "A- (un-) + lethe (forgetting, concealment). Lethe is the river of forgetfulness in Hades.",
+      "category": ["philosophy"],
+      "related": ["logos", "aporia", "theoria"]
+    },
+    {
+      "id": "mimesis",
+      "term": "Mimesis",
+      "native": "Μίμησις",
+      "lang": "el-anc",
+      "definition": "Imitation, representation. The founding concept of Western aesthetics — art as the imitation of nature or action. Plato distrusted it: the painter imitates appearances which are themselves imitations of Forms. Aristotle rehabilitated it: through mimesis, tragedy achieves catharsis. The entire debate about whether art represents or creates reality turns on this word.",
+      "etymology": "From mimeisthai (to imitate). The mime, mimic, and mnemonic share the root.",
+      "category": ["aesthetics", "philosophy"],
+      "related": ["catharsis", "theoria", "simulacre"]
+    },
+    {
+      "id": "parresia",
+      "term": "Parresia",
+      "native": "Παρρησία",
+      "lang": "el-anc",
+      "definition": "Fearless speech. The obligation to speak truth to power, regardless of risk. Foucault's concept in his late lectures: the parrhesiastes (truth-teller) must be in a position of danger — speaking down to equals costs nothing. The Socratic obligation. The whistleblower's burden. A mode of speech that requires courage as its precondition.",
+      "etymology": "Pan- (all) + rhesis (speech). Complete speech — holding nothing back.",
+      "category": ["politics", "philosophy"],
+      "related": ["logos", "ethos", "aporia"]
+    },
+    {
+      "id": "daimon",
+      "term": "Daimōn",
+      "native": "Δαίμων",
+      "lang": "el-anc",
+      "definition": "The inner voice. Not a demon (the Christian word is a corruption of this) but an intermediary spirit — the voice that tells Socrates not to do certain things, never what to do. The daimon is the individual's attendant spirit, sometimes genius, sometimes divine warning. Heidegger paraphrased Heraclitus: ēthos anthrōpōi daimōn — character is fate.",
+      "etymology": "Perhaps from daiomai (to divide, to distribute) — the daimon distributes one's portion.",
+      "category": ["philosophy", "psychology"],
+      "related": ["phronesis", "eudaimonia"]
+    },
+    {
+      "id": "duende",
+      "term": "Duende",
+      "lang": "es",
+      "definition": "The dark spirit of art. Lorca's concept: the mysterious force that animates great flamenco, bull-fighting, and poetry — not inspiration, not charm, but a kind of wound, a nearness to death. The duende cannot be summoned by technique alone; it comes only when the artist is at the edge. 'All that has dark sounds has duende.' It is the aesthetic force that confronts the problem of death rather than decorating it.",
+      "etymology": "From Spanish folk tradition: a goblin or spirit who inhabits a house. Lorca theorised it in Juego y teoría del duende (1933).",
+      "category": ["aesthetics", "psychology"],
+      "related": ["catharsis", "wabi-sabi", "yugen"]
+    },
+    {
+      "id": "soledad",
+      "term": "Soledad",
+      "lang": "es",
+      "definition": "Solitude that aches. Not simply aloneness — soledad is inhabited, productive, sorrowful. The solitude of the flamenco singer, the desert mystic, the exile. Machado (Antonio): 'caminante, son tus huellas el camino y nada más.' The concept is embedded in Spanish Romanticism and the Generation of '98's diagnosis of Spain's historical isolation.",
+      "etymology": "From Latin solitudo (solitude). The suffix -edad intensifies into a condition, not merely a state.",
+      "category": ["psychology", "aesthetics"],
+      "related": ["duende", "weltschmerz", "ennui"]
+    },
+    {
+      "id": "querencia",
+      "term": "Querencia",
+      "lang": "es",
+      "definition": "The place where one feels most oneself. From bullfighting: the spot in the ring where the bull returns for safety — from which it fights with most authority and confidence. Extended: the space, place, or activity from which a person draws their deepest sense of self. Not nostalgia but a present-tense orientation.",
+      "etymology": "From querer (to love, to want). The querencia is the loved place.",
+      "category": ["psychology", "aesthetics"],
+      "related": ["duende", "soledad"]
+    },
+    {
+      "id": "intelligentsia",
+      "term": "Intelligentsia",
+      "native": "Интеллигенция",
+      "lang": "ru",
+      "definition": "The educated class with a conscience. The Russian term names not merely the educated but those who feel a moral obligation toward social transformation — the class that reads, debates, and believes it owes something to the people. Its defining tension: educated enough to see the problems, marginal enough to be unable to fix them. The word migrated westward as a general term but has never shed its Russian political charge.",
+      "etymology": "From Latin intelligentia (understanding). The Russian intelligentsia was theorised by Boborkykin in the 1860s.",
+      "category": ["politics", "philosophy"],
+      "related": ["bildung", "gesellschaft"]
+    },
+    {
+      "id": "toska",
+      "term": "Toska",
+      "native": "Тоска",
+      "lang": "ru",
+      "definition": "Anguished longing with nowhere to go. Nabokov: 'No single word in English renders all the shades of toska. At its deepest and most painful, it is a sensation of great spiritual anguish, often without any specific cause. At less morbid levels it is a dull ache of the soul, a longing with nothing to long for.' Toska is Weltschmerz without the idealism — pure ache.",
+      "etymology": "Old Slavic. Related to tesnota (tightness, constriction) — the sensation of being pressed.",
+      "category": ["psychology", "aesthetics"],
+      "related": ["weltschmerz", "ennui", "soledad"]
+    },
+    {
+      "id": "sobornost",
+      "term": "Sobornost",
+      "native": "Соборность",
+      "lang": "ru",
+      "definition": "Communal unity. The Slavophile concept of a specifically Russian form of collective life — organic, spiritual, consensual, rooted in the Orthodox Church community (sobor = council, cathedral). Against Western individualism and rationalism. The concept was recovered by Soviet ideology (in secularised form) and by 20th-century Russian nationalism. The permanent Russian alternative to liberal individualism.",
+      "etymology": "From sobor (assembly, council, cathedral). The Slavophiles developed it in the 1840s.",
+      "category": ["philosophy", "politics"],
+      "related": ["gemeinschaft", "volksgeist"]
+    },
+    {
+      "id": "asabiyya",
+      "term": "ʿAsabiyya",
+      "native": "عصبية",
+      "lang": "ar",
+      "definition": "Group solidarity, social cohesion. Ibn Khaldun's central concept in the Muqaddima (1377): the bond of loyalty and solidarity that gives a people — especially a tribe or dynasty — its capacity for conquest and political survival. ʿAsabiyya rises in the desert, is corrupted by urban luxury, declines, and the cycle begins again. The first sociological theory of history.",
+      "etymology": "From ʿasaba (to bind). The bond is simultaneously kinship, loyalty, and collective identity.",
+      "category": ["politics", "philosophy"],
+      "related": ["gemeinschaft", "volksgeist", "gesellschaft"]
+    },
+    {
+      "id": "fitna",
+      "term": "Fitna",
+      "native": "فتنة",
+      "lang": "ar",
+      "definition": "Civil strife, temptation, chaos. The most feared concept in Islamic political thought: the internal conflict that destroys the community. The early Muslim civil wars were fitna; so was the seduction to apostasy. The word unifies political disorder and spiritual temptation — both are forms of the same dissolution. Against fitna, even an unjust ruler was preferable to chaos.",
+      "etymology": "From fatana (to try, to tempt, to afflict). The root covers trial, sedition, and enchantment.",
+      "category": ["politics", "philosophy"],
+      "related": ["stasis", "demos", "asabiyya"]
+    },
+    {
+      "id": "ijtihad",
+      "term": "Ijtihad",
+      "native": "اجتهاد",
+      "lang": "ar",
+      "definition": "Independent legal reasoning. The process by which a qualified jurist derives a ruling from first principles (Quran, Hadith, analogy, consensus) rather than following established precedent. The door of ijtihad was said to have 'closed' around the 10th century — a claim disputed ever since. Islamic modernism is largely the argument that the door must be reopened.",
+      "etymology": "From jahada (to strive). Jihad shares the root — both are forms of strenuous effort.",
+      "category": ["law", "philosophy"],
+      "related": ["logos", "mos-maiorum"]
+    },
+    {
+      "id": "saudade",
+      "term": "Saudade",
+      "lang": "pt",
+      "definition": "Longing for what is absent and may not return. Neither nostalgia (which knows its object) nor ennui (which lacks an object) but the specific ache of the absent that was loved — a person, a country, a time, a possibility. The word is contested as uniquely Portuguese: it appears in Galician-Portuguese lyric poetry of the 13th century. Fado is its musical form. Manuel de Melo (1635): 'um bem que se padece.'",
+      "etymology": "Disputed: possibly from Latin solitudo (solitude) or salvus (safe, whole). The Galician-Portuguese troubadours used soidade.",
+      "category": ["psychology", "aesthetics"],
+      "related": ["toska", "weltschmerz", "soledad", "mono-no-aware"]
+    },
+    {
+      "id": "desenrascanco",
+      "term": "Desenrascanço",
+      "lang": "pt",
+      "definition": "The art of getting out of a tight spot through improvisation and creative resourcefulness. The specifically Portuguese capacity to solve problems with insufficient means and no plan — not mere muddling through but an almost aesthetic commitment to last-minute improvisation. Related to the Brazilian jeitinho but less focused on social manipulation, more on practical ingenuity.",
+      "etymology": "From desenrascar — to un-trap, to disentangle (des- + enrascar, to get caught in a trap). The suffix -anço makes it an art or practice.",
+      "category": ["philosophy", "aesthetics"],
+      "related": ["bricolage"]
+    },
+    {
+      "id": "fadista",
+      "term": "Fadista",
+      "lang": "pt",
+      "definition": "One who lives by and through fado. Not simply a singer but a person whose character is shaped by the music's melancholic fatalism — the sense that one's fate (fado) is inescapable and beautiful. The Alfama fadistas of Lisbon carried a specific social type: poverty, dignity, defiant grief.",
+      "etymology": "From fado (fate, destiny) + -ista. Fado derives from Latin fatum.",
+      "category": ["aesthetics", "psychology"],
+      "related": ["saudade", "duende"]
+    },
+    {
+      "id": "tikkun-olam",
+      "term": "Tikkun olam",
+      "native": "תיקון עולם",
+      "lang": "he",
+      "definition": "Repair of the world. Kabbalistic concept: the material world is broken — sparks of the divine light are scattered, trapped in shells (kelipot). Human action — ethical, ritual, mystical — gathers and restores the sparks. In modern liberal Judaism, secularised as the obligation to social justice. The two meanings (mystical cosmology and political ethics) are both active simultaneously.",
+      "etymology": "Tikkun (repair, correction) + olam (world, eternity). The phrase appears in the Aleinu prayer.",
+      "category": ["philosophy", "politics"],
+      "related": ["dike", "phronesis"]
+    },
+    {
+      "id": "churban",
+      "term": "Churban",
+      "native": "חורבן",
+      "lang": "he",
+      "definition": "Destruction, catastrophe. Originally the destruction of the First Temple (586 BCE) and Second Temple (70 CE). Extended to the Holocaust — many Eastern European Jews initially called it the Churban rather than Shoah. The word carries the theology of destruction as rupture in the covenant, followed by mourning, and the possibility of return. A word that names not just destruction but its specific structure: the destruction of what was sacred.",
+      "etymology": "From the root ח-ר-ב (ḥ-r-b), meaning desolation, ruin. The same root as ḥorev (sword).",
+      "category": ["politics", "philosophy"],
+      "related": ["stunde-null", "vergangenheitsbewaeltigung"]
     }
   ]
 }

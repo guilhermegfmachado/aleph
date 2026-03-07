@@ -14,14 +14,20 @@ const glossaire = {
 // Language display names
 const LANG_NAMES = {
     de: 'Deutsch',
-    fr: 'Francais',
+    fr: 'Français',
     it: 'Italiano',
-    pt: 'Portugues',
+    pt: 'Português',
     en: 'English',
     ja: '日本語',
     zh: '中文',
     el: 'Ελληνικά',
-    la: 'Latina'
+    'el-anc': 'Ελληνικά (Classical)',
+    'el-mod': 'Ελληνικά (Modern)',
+    la: 'Latina',
+    es: 'Español',
+    ru: 'Русский',
+    ar: 'العربية',
+    he: 'עברית'
 };
 
 // Dark mode

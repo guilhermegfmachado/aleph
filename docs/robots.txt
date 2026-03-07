@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://guilhermegfmachado.github.io/claude-projects/sitemap.xml
+Sitemap: https://guilhermegfmachado.github.io/aleph/sitemap.xml

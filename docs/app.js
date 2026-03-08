@@ -79,19 +79,6 @@ function updateThemeButton() {
 // Initialize dark mode immediately
 initDarkMode();
 
-// Ball toggle for landing page
-function initBallToggle() {
-    const ball = document.getElementById('main-ball');
-    const categories = document.getElementById('ball-categories');
-    if (ball && categories) {
-        ball.addEventListener('click', () => {
-            ball.classList.toggle('open');
-            categories.classList.toggle('open');
-        });
-    }
-}
-document.addEventListener('DOMContentLoaded', initBallToggle);
-
 // IndexedDB
 async function openDB() {
     if (db) return db;

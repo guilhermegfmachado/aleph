@@ -268,57 +268,58 @@ nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
     margin-bottom: 0;
 }
 
-/* Ball Categories - Expanding from ball */
-.ball-categories {
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.category-card {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin: 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.4s ease;
-}
-
-.ball-categories.open {
-    max-height: 100px;
-    opacity: 1;
-    margin: 1.5rem 0 2rem;
-}
-
-.ball-category {
-    font-size: 0.9rem;
-    color: var(--text-muted);
+    padding: 1.5rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--bg-light);
     text-decoration: none;
-    letter-spacing: 0.03em;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid transparent;
-    transition: color 0.2s, border-color 0.2s;
+    color: var(--text);
+    transition: all 0.2s ease;
+    min-height: 100px;
 }
 
-.ball-category:hover {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
-}
-
-.main-ball.open {
-    transform: scale(0.9);
+.category-card:hover {
     border-color: var(--accent);
+    background: var(--bg);
+    transform: translateY(-2px);
 }
 
-.main-ball.open .ball-symbol {
-    opacity: 0.6;
+.category-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+.category-card:hover .category-icon {
+    opacity: 1;
+}
+
+.category-name {
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.category-card:hover .category-name {
+    color: var(--text-bright);
 }
 
 @media (max-width: 600px) {
-    .ball-categories {
-        flex-wrap: wrap;
-        gap: 1rem 1.5rem;
-        justify-content: center;
-    }
-
-    .ball-categories.open {
-        max-height: 150px;
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .main-ball {
@@ -328,10 +329,6 @@ nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
     .ball-symbol {
         font-size: 2.5rem;
-    }
-
-    .ball-category {
-        font-size: 0.85rem;
     }
 }
 

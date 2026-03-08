@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aleph — sources</title>
+    <title>aleph — références</title>
     <meta name="description" content="Répertoire de ressources numériques pour la recherche : bibliothèques nationales, archives, bases de données académiques.">
     <meta name="author" content="Guilherme de G. F. Machado">
     <meta property="og:title" content="aleph — sources et références numériques">
@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#0a0a0a">
     <link rel="preconnect" href="https://d3js.org">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
     <style>
         /* Controls Bar */
         .view-controls {
@@ -118,8 +119,12 @@
         #network-container.hidden {
             display: none;
         }
-        #list-container.hidden {
+        #sources-list.hidden {
             display: none;
+        }
+        .node-label {
+            font-family: inherit;
+            user-select: none;
         }
 
         /* Fullscreen exit button */
@@ -611,6 +616,7 @@
                 <a href="index.html">chercher</a>
                 <a href="browse.html">parcourir</a>
                 <a href="glossaire.html">glossaire</a>
+                <a href="sources.html" class="active" aria-current="page">références</a>
             </nav>
         </header>
 
@@ -627,17 +633,16 @@
                     <button class="ctrl-btn" onclick="toggleFullscreen()" data-tooltip="plein écran">⛶</button>
                     <button class="ctrl-btn" onclick="toggleSidebar()" data-tooltip="favoris">☆</button>
                     <button id="dark-mode-btn" class="ctrl-btn" onclick="toggleDarkMode()" data-tooltip="thème">○</button>
-                    <button id="view-toggle-btn" class="view-toggle-btn" onclick="toggleNetworkView()">vue liste</button>
+                    <button class="view-toggle-btn" onclick="setView('list')">liste</button>
+                    <button class="view-toggle-btn" onclick="setView('network')">réseau</button>
                 </div>
             </div>
 
-            <!-- Network View (default) -->
-            <div id="network-container">
-                <button class="fullscreen-exit" onclick="toggleFullscreen()">✕ quitter</button>
-            </div>
+            <!-- Network View -->
+            <div id="network-container" style="width:100%;height:500px;display:none;"></div>
 
             <!-- List View -->
-            <div id="list-container" class="hidden">
+            <div id="sources-list">
 
             <!-- TEXTES & ARCHIVES -->
             <details id="textes" class="source-section" open>
@@ -2646,7 +2651,7 @@
                 </div>
                 </div>
             </details>
-            </div><!-- end list-container -->
+            </div><!-- end sources-list -->
 
         </main>
 
@@ -2671,9 +2676,7 @@
             <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
         </footer>
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="app.js"></script>
-    <script src="network.js"></script>
     <script>
         // ===== STORAGE =====
         let favorites = JSON.parse(localStorage.getItem('aleph-favorites') || '[]');
@@ -2790,13 +2793,11 @@
         // ===== SEARCH =====
         function filterResources(query) {
             query = query.toLowerCase().trim();
-            const listContainer = document.getElementById('list-container');
+            const listContainer = document.getElementById('sources-list');
             const networkContainer = document.getElementById('network-container');
 
-            if (query.length > 0 && !networkContainer.classList.contains('hidden')) {
-                networkContainer.classList.add('hidden');
-                listContainer.classList.remove('hidden');
-                document.getElementById('view-toggle-btn').textContent = 'vue réseau';
+            if (query.length > 0 && networkContainer.style.display !== 'none') {
+                setView('list');
             }
 
             document.querySelectorAll('.source-section').forEach(section => {
@@ -2930,7 +2931,7 @@
             }
 
             // Group list sections under category headers (matching the network view)
-            const listContainer = document.getElementById('list-container');
+            const listContainer = document.getElementById('sources-list');
             if (listContainer) {
                 const categories = [
                     { label: "L'Archive",  sections: ['textes', 'langues'] },
@@ -2997,5 +2998,111 @@
         });
     });
     </script>
+<script>
+let _sim = null, _svg = null, _built = false;
+
+function nodeRadius(d) {
+  if (d.depth === 0) return 20;
+  if (d.depth === 1) return 12;
+  if (d.depth === 2) return 7;
+  return 4;
+}
+
+function buildGraph() {
+  const nodes = [], links = [];
+  let id = 0;
+  const root = { id: id++, name: 'aleph', depth: 0 };
+  nodes.push(root);
+  document.querySelectorAll('details.source-section').forEach(sec => {
+    const cat = { id: id++, name: sec.querySelector('summary').textContent.trim(), depth: 1 };
+    nodes.push(cat); links.push({ source: root.id, target: cat.id });
+    sec.querySelectorAll('h3').forEach(h3 => {
+      const sub = { id: id++, name: h3.textContent.trim(), depth: 2 };
+      nodes.push(sub); links.push({ source: cat.id, target: sub.id });
+      let el = h3.nextElementSibling;
+      while (el && el.tagName !== 'H3') {
+        const a = el.querySelector('a');
+        if (a) { const leaf = { id: id++, name: a.textContent.trim(), depth: 3 }; nodes.push(leaf); links.push({ source: sub.id, target: leaf.id }); }
+        el = el.nextElementSibling;
+      }
+    });
+  });
+  return { nodes, links };
+}
+
+function initNetwork() {
+  const container = document.getElementById('network-container');
+  if (!container) return;
+  const ro = new ResizeObserver(entries => {
+    ro.disconnect();
+    const { width: w, height: h } = entries[0].contentRect;
+    _buildNet(container, w || 800, h || 500);
+    _built = true;
+  });
+  ro.observe(container);
+}
+
+function _buildNet(container, w, h) {
+  container.innerHTML = '';
+  const { nodes, links } = buildGraph();
+  const svg = d3.select(container).append('svg').attr('width', w).attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
+  _svg = svg;
+  const g = svg.append('g');
+  svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', e => g.attr('transform', e.transform)));
+  _sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d => d.id).distance(d => { const r = nodeRadius(d.source); return r >= 13 ? 100 : r >= 8 ? 60 : 35; }).strength(0.4))
+    .force('charge', d3.forceManyBody().strength(d => -22 * nodeRadius(d)))
+    .force('collide', d3.forceCollide().radius(d => nodeRadius(d) + 4).iterations(3))
+    .force('x', d3.forceX(w / 2).strength(0.04))
+    .force('y', d3.forceY(h / 2).strength(0.04))
+    .alphaDecay(0.012).velocityDecay(0.35);
+  const line = g.append('g').selectAll('line').data(links).join('line')
+    .style('stroke', 'var(--border)').style('stroke-width', 0.8).style('stroke-opacity', 0.6);
+  const circle = g.append('g').selectAll('circle').data(nodes).join('circle')
+    .attr('r', d => nodeRadius(d))
+    .style('fill', d => d.depth === 0 ? 'var(--accent)' : d.depth === 1 ? 'var(--text)' : d.depth === 2 ? '#777' : 'var(--border)')
+    .style('fill-opacity', d => d.depth === 3 ? 0.5 : 1)
+    .call(d3.drag()
+      .on('start', (e, d) => { if (!e.active) _sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on('drag',  (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on('end',   (e, d) => { if (!e.active) _sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+  const text = g.append('g').selectAll('text').data(nodes).join('text')
+    .attr('dx', d => nodeRadius(d) + 4).attr('dy', '0.35em')
+    .style('font-size', d => d.depth === 0 ? '13px' : d.depth === 1 ? '11px' : d.depth === 2 ? '9px' : '8px')
+    .style('fill', 'var(--text)').style('opacity', d => d.depth <= 1 ? 1 : d.depth === 2 ? 0.7 : 0)
+    .style('pointer-events', 'none').text(d => d.name);
+  circle.on('mouseover', (e, d) => { if (d.depth >= 2) text.filter(l => l === d).style('opacity', 1); })
+        .on('mouseout',  (e, d) => { if (d.depth >= 2) text.filter(l => l === d).style('opacity', d.depth === 2 ? 0.7 : 0); });
+  _sim.on('tick', () => {
+    line.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    circle.attr('cx', d => d.x).attr('cy', d => d.y);
+    text.attr('x', d => d.x).attr('y', d => d.y);
+  });
+}
+
+function setView(v) {
+  const list = document.getElementById('sources-list');
+  const net  = document.getElementById('network-container');
+  if (v === 'network') {
+    if (list) list.style.display = 'none';
+    if (net)  net.style.display  = 'block';
+    if (!_built) initNetwork();
+  } else {
+    if (list) list.style.display = 'block';
+    if (net)  net.style.display  = 'none';
+  }
+}
+
+let _rt;
+window.addEventListener('resize', () => {
+  clearTimeout(_rt);
+  _rt = setTimeout(() => {
+    const c = document.getElementById('network-container');
+    if (!c || c.style.display === 'none') return;
+    if (_sim) _sim.force('x', d3.forceX(c.clientWidth / 2).strength(0.04)).force('y', d3.forceY(c.clientHeight / 2).strength(0.04)).alpha(0.3).restart();
+    if (_svg) _svg.attr('width', c.clientWidth).attr('height', c.clientHeight).attr('viewBox', `0 0 ${c.clientWidth} ${c.clientHeight}`);
+  }, 150);
+});
+</script>
 </body>
 </html>

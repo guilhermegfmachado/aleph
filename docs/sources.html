@@ -3008,7 +3008,7 @@ function buildGraph() {
       let el = h3.nextElementSibling;
       while (el && el.tagName !== 'H3') {
         const a = el.querySelector('a');
-        if (a) { const leaf = { id: id++, name: a.textContent.trim(), depth: 3 }; nodes.push(leaf); links.push({ source: sub.id, target: leaf.id }); }
+        if (a) { const leaf = { id: id++, name: a.textContent.trim(), depth: 3, url: a.href }; nodes.push(leaf); links.push({ source: sub.id, target: leaf.id }); }
         el = el.nextElementSibling;
       }
     });
@@ -3058,7 +3058,9 @@ function _buildNet(container, w, h) {
     .style('fill', 'var(--text)').style('opacity', d => d.depth <= 1 ? 1 : d.depth === 2 ? 0.7 : 0)
     .style('pointer-events', 'none').text(d => d.name);
   circle.on('mouseover', (e, d) => { if (d.depth >= 2) text.filter(l => l === d).style('opacity', 1); })
-        .on('mouseout',  (e, d) => { if (d.depth >= 2) text.filter(l => l === d).style('opacity', d.depth === 2 ? 0.7 : 0); });
+        .on('mouseout',  (e, d) => { if (d.depth >= 2) text.filter(l => l === d).style('opacity', d.depth === 2 ? 0.7 : 0); })
+        .on('click', (e, d) => { if (d.url) window.open(d.url, '_blank'); })
+        .style('cursor', d => d.url ? 'pointer' : 'default');
   _sim.on('tick', () => {
     line.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
     circle.attr('cx', d => d.x).attr('cy', d => d.y);

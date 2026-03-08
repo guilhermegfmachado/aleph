@@ -37,6 +37,7 @@ let subtopicNodes = [];
 let resourceNodes = [];
 let _simulation = null;
 let _svg = null;
+let _zoom = null;
 let g = null;
 let _width = 0;
 let _height = 0;
@@ -190,9 +191,10 @@ function _buildNetwork(container, width, height) {
 
     g = _svg.append("g");
 
-    _svg.call(d3.zoom()
+    _zoom = d3.zoom()
         .scaleExtent([0.2, 4])
-        .on("zoom", e => g.attr("transform", e.transform)));
+        .on("zoom", e => g.attr("transform", e.transform));
+    _svg.call(_zoom);
 
     updateNetwork();
 }
@@ -447,9 +449,9 @@ function resetNetwork() {
     Object.keys(nodePositions).forEach(k => delete nodePositions[k]);
 
     // Reset zoom
-    if (_svg && g) {
+    if (_svg && _zoom) {
         _svg.transition().duration(500).call(
-            d3.zoom().transform,
+            _zoom.transform,
             d3.zoomIdentity
         );
     }

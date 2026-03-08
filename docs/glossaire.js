@@ -22,12 +22,17 @@ const LANG_NAMES = {
     zh: '中文',
     el: 'Ελληνικά',
     'el-anc': 'Ελληνικά (Classical)',
-    'el-mod': 'Ελληνικά (Modern)',
+    'el-mod': 'Ελληνικά (Modern/Junta)',
     la: 'Latina',
     es: 'Español',
     ru: 'Русский',
     ar: 'العربية',
-    he: 'עברית'
+    he: 'עברית',
+    fa: 'فارسی',
+    sa: 'संस्कृत',
+    tr: 'Türkçe',
+    ml: 'മലയാളം',
+    ta: 'தமிழ்'
 };
 
 // Dark mode

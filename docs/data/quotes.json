@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.1",
-    "lastUpdated": "2026-03-07"
+    "version": "1.2",
+    "lastUpdated": "2026-03-08"
   },
   "quotes": [
     {
@@ -635,6 +635,385 @@
       "tags": ["saudade", "longing", "paradox"],
       "linkedTerms": ["saudade"],
       "notes": "Classic Portuguese definition of saudade."
+    },
+    {
+      "id": "q055",
+      "text": "Saudade é isso: ter na memória o que nunca existiu.",
+      "translation": "Saudade is this: to have in memory what never existed.",
+      "author": "Fernando Pessoa",
+      "lang": "pt",
+      "tags": ["saudade", "memory", "absence"],
+      "linkedTerms": ["saudade"]
+    },
+    {
+      "id": "q056",
+      "text": "چو خورشید تابان میان هوا / نشسته برو فرّه کاوه برپا",
+      "translation": "Like the shining sun in the midst of the sky / The farr of Kaveh sat upon him.",
+      "author": "Ferdowsi",
+      "source": "Shahnameh",
+      "year": 1010,
+      "lang": "fa",
+      "tags": ["farr", "sovereignty", "glory"],
+      "linkedTerms": ["farr"]
+    },
+    {
+      "id": "q057",
+      "text": "دل هر ذره‌ای که بشکافی / آفتابیش در میان بینی",
+      "translation": "Split open the heart of any atom / And you will find a sun within.",
+      "author": "Rumi",
+      "source": "Divan-e Shams",
+      "year": 1260,
+      "lang": "fa",
+      "tags": ["heart", "mysticism", "illumination"],
+      "linkedTerms": ["del"]
+    },
+    {
+      "id": "q058",
+      "text": "أنا من أهوى ومن أهوى أنا / نحن روحان حللنا بدنا",
+      "translation": "I am He whom I love, and He whom I love is I / We are two spirits dwelling in one body.",
+      "author": "al-Hallaj",
+      "source": "Diwan",
+      "year": 922,
+      "lang": "ar",
+      "tags": ["fana", "unity", "mysticism"],
+      "linkedTerms": ["fana"]
+    },
+    {
+      "id": "q059",
+      "text": "Hüzün, İstanbullulara, şehrin kendisine keder veren güzelliğini anlatır.",
+      "translation": "Hüzün tells Istanbulites of the beauty that gives the city itself its grief.",
+      "author": "Orhan Pamuk",
+      "source": "Istanbul: Memories and the City",
+      "year": 2003,
+      "lang": "tr",
+      "tags": ["huzun", "melancholy", "Istanbul"],
+      "linkedTerms": ["huzun"]
+    },
+    {
+      "id": "q060",
+      "text": "श्रेयान् स्वधर्मो विगुणः परधर्मात् स्वनुष्ठितात्",
+      "translation": "Better is one's own dharma, though imperfectly performed, than the dharma of another well performed.",
+      "author": "Bhagavad Gita",
+      "source": "Chapter III, verse 35",
+      "year": -200,
+      "lang": "sa",
+      "tags": ["dharma", "duty", "self"],
+      "linkedTerms": ["dharma"]
+    },
+    {
+      "id": "q061",
+      "text": "लोकसंग्रहमेवापि सम्पश्यन्कर्तुमर्हसि",
+      "translation": "Even for the sake of holding the world together, you should act.",
+      "author": "Bhagavad Gita",
+      "source": "Chapter III, verse 20",
+      "year": -200,
+      "lang": "sa",
+      "tags": ["loka-samgraha", "action", "duty"],
+      "linkedTerms": ["loka-samgraha"]
+    },
+    {
+      "id": "q062",
+      "text": "為學日益，為道日損。損之又損，以至於無為。",
+      "translation": "In the pursuit of learning, every day something is acquired. In the pursuit of Tao, every day something is dropped. Less and less is done until non-action is achieved.",
+      "author": "Laozi",
+      "source": "Daodejing, Chapter 48",
+      "year": -500,
+      "lang": "zh",
+      "tags": ["wu-wei", "tao", "non-action"],
+      "linkedTerms": ["wu-wei-dao"]
+    },
+    {
+      "id": "q063",
+      "text": "克己復禮為仁。",
+      "translation": "To subdue oneself and return to ritual propriety is humaneness.",
+      "author": "Confucius",
+      "source": "Analects, XII.1",
+      "year": -500,
+      "lang": "zh",
+      "tags": ["li", "ren", "self-cultivation"],
+      "linkedTerms": ["li-ritual"]
+    },
+    {
+      "id": "q064",
+      "text": "君子和而不同，小人同而不和。",
+      "translation": "The exemplary person harmonises but does not conform; the petty person conforms but does not harmonise.",
+      "author": "Confucius",
+      "source": "Analects, XIII.23",
+      "year": -500,
+      "lang": "zh",
+      "tags": ["junzi", "harmony", "virtue"],
+      "linkedTerms": ["junzi"]
+    },
+    {
+      "id": "q065",
+      "text": "Ἐν ἀρχῇ ἦν ὁ Λόγος.",
+      "translation": "In the beginning was the Word.",
+      "author": "Gospel of John",
+      "source": "John 1:1",
+      "year": 100,
+      "lang": "el-anc",
+      "tags": ["logos", "origin", "word"],
+      "linkedTerms": ["logos"]
+    },
+    {
+      "id": "q066",
+      "text": "The simulacrum is never that which conceals the truth — it is the truth which conceals that there is none.",
+      "author": "Jean Baudrillard",
+      "source": "Simulacra and Simulation",
+      "year": 1981,
+      "lang": "en",
+      "tags": ["simulacrum", "truth", "hyperreality"],
+      "linkedTerms": ["simulacre"]
+    },
+    {
+      "id": "q067",
+      "text": "The slave revolt in morality begins when ressentiment itself becomes creative and gives birth to values.",
+      "author": "Friedrich Nietzsche",
+      "source": "On the Genealogy of Morality, I.10",
+      "year": 1887,
+      "lang": "en",
+      "tags": ["ressentiment", "morality", "values"],
+      "linkedTerms": ["ressentiment"]
+    },
+    {
+      "id": "q068",
+      "text": "The city is Gesellschaft in a state of nature.",
+      "author": "Ferdinand Tönnies",
+      "source": "Gemeinschaft und Gesellschaft",
+      "year": 1887,
+      "lang": "en",
+      "tags": ["gesellschaft", "city", "society"],
+      "linkedTerms": ["gesellschaft"]
+    },
+    {
+      "id": "q069",
+      "text": "Coming to terms with the past does not resolve anything, because it cannot make what happened undone.",
+      "author": "Theodor W. Adorno",
+      "source": "The Meaning of Working Through the Past",
+      "year": 1959,
+      "lang": "en",
+      "tags": ["vergangenheitsbewaeltigung", "past", "memory"],
+      "linkedTerms": ["vergangenheitsbewaeltigung"]
+    },
+    {
+      "id": "q070",
+      "text": "Happiness is the activity of the soul in accordance with virtue.",
+      "author": "Aristotle",
+      "source": "Nicomachean Ethics, I.7",
+      "year": -330,
+      "lang": "en",
+      "tags": ["eudaimonia", "virtue", "happiness"],
+      "linkedTerms": ["eudaimonia"]
+    },
+    {
+      "id": "q071",
+      "text": "It is the mark of an educated person to look for precision in each class of things just so far as the nature of the subject admits.",
+      "author": "Aristotle",
+      "source": "Nicomachean Ethics, I.3",
+      "year": -330,
+      "lang": "en",
+      "tags": ["phronesis", "wisdom", "precision"],
+      "linkedTerms": ["phronesis"]
+    },
+    {
+      "id": "q072",
+      "text": "Was ist die Wahrheit? Ein bewegliches Heer von Metaphern.",
+      "translation": "What is truth? A mobile army of metaphors.",
+      "author": "Friedrich Nietzsche",
+      "source": "On Truth and Lies in a Nonmoral Sense",
+      "year": 1873,
+      "lang": "de",
+      "tags": ["aletheia", "truth", "metaphor"],
+      "linkedTerms": ["aletheia"]
+    },
+    {
+      "id": "q073",
+      "text": "Tragedy is an imitation of an action that is serious, complete, and of a certain magnitude — through pity and fear effecting the proper purgation of these emotions.",
+      "author": "Aristotle",
+      "source": "Poetics, VI",
+      "year": -330,
+      "lang": "en",
+      "tags": ["catharsis", "tragedy", "emotion"],
+      "linkedTerms": ["catharsis"]
+    },
+    {
+      "id": "q074",
+      "text": "The poet and the historian differ not by writing in verse or in prose. The true difference is that one relates what has happened, the other what may happen.",
+      "author": "Aristotle",
+      "source": "Poetics, IX",
+      "year": -330,
+      "lang": "en",
+      "tags": ["mimesis", "poetry", "history"],
+      "linkedTerms": ["mimesis"]
+    },
+    {
+      "id": "q075",
+      "text": "What is not said is often more important than what is.",
+      "author": "E.J. Kenney",
+      "source": "The Classical Text",
+      "year": 1974,
+      "lang": "en",
+      "tags": ["lacuna", "silence", "text"],
+      "linkedTerms": ["lacuna"]
+    },
+    {
+      "id": "q076",
+      "text": "The Senate decreed that his name should be erased from all public and private records.",
+      "author": "Suetonius",
+      "source": "Lives of the Twelve Caesars, Domitian 23",
+      "year": 121,
+      "lang": "en",
+      "tags": ["damnatio-memoriae", "memory", "erasure"],
+      "linkedTerms": ["damnatio-memoriae"]
+    },
+    {
+      "id": "q077",
+      "text": "I have measured out my life with coffee spoons.",
+      "author": "T.S. Eliot",
+      "source": "The Love Song of J. Alfred Prufrock",
+      "year": 1915,
+      "lang": "en",
+      "tags": ["ennui", "tedium", "modernity"],
+      "linkedTerms": ["ennui"]
+    },
+    {
+      "id": "q078",
+      "text": "When mores are sufficient, laws are unnecessary; when mores are insufficient, laws are unenforceable.",
+      "author": "Émile Durkheim",
+      "lang": "en",
+      "tags": ["anomie", "law", "society"],
+      "linkedTerms": ["anomie"]
+    },
+    {
+      "id": "q079",
+      "text": "Res publica res populi.",
+      "translation": "The commonwealth is the affair of the people.",
+      "author": "Cicero",
+      "source": "De Re Publica, I.39",
+      "year": -51,
+      "lang": "la",
+      "tags": ["res-publica", "people", "commonwealth"],
+      "linkedTerms": ["res-publica"]
+    },
+    {
+      "id": "q080",
+      "text": "Recede in te ipse quantum potes; cum his versare qui te meliorem acturi sunt.",
+      "translation": "Withdraw into yourself as much as you can; associate with those who will make you better.",
+      "author": "Seneca",
+      "source": "Epistulae Morales, VII.8",
+      "lang": "la",
+      "tags": ["otium", "retreat", "virtue"],
+      "linkedTerms": ["otium"]
+    },
+    {
+      "id": "q081",
+      "text": "Oderint dum metuant.",
+      "translation": "Let them hate, so long as they fear.",
+      "author": "Accius",
+      "source": "Atreus (quoted by Suetonius, Caligula 30)",
+      "year": -140,
+      "lang": "la",
+      "tags": ["gravitas", "fear", "power"],
+      "linkedTerms": ["gravitas"]
+    },
+    {
+      "id": "q082",
+      "text": "In the tea-room, the vacuum is all-powerful. He who had made himself master of the art of emptiness reigns supreme.",
+      "author": "Kakuzo Okakura",
+      "source": "The Book of Tea",
+      "year": 1906,
+      "lang": "en",
+      "tags": ["ma", "emptiness", "aesthetics"],
+      "linkedTerms": ["ma"]
+    },
+    {
+      "id": "q083",
+      "text": "散る花びら / あわれと見れば / 風もなし",
+      "translation": "Falling petals — / when I see them as pathos / there is no wind.",
+      "author": "Matsuo Bashō",
+      "lang": "ja",
+      "tags": ["mono-no-aware", "pathos", "impermanence"],
+      "linkedTerms": ["mono-no-aware"]
+    },
+    {
+      "id": "q084",
+      "text": "To watch the sun sink behind a flower-clad hill. To wander on and on in a huge forest with no thought of return.",
+      "author": "Zeami Motokiyo",
+      "lang": "en",
+      "tags": ["yugen", "beauty", "mystery"],
+      "linkedTerms": ["yugen"],
+      "notes": "Zeami's description of the sources of yūgen."
+    },
+    {
+      "id": "q085",
+      "text": "δίκη δ᾽ ἐν μὲν τοῖς φαύλοις ἀπόλλυται, ἐν δὲ τοῖς δικαίοις αὔξεται.",
+      "translation": "Justice perishes among the base, but flourishes among the just.",
+      "author": "Hesiod",
+      "source": "Works and Days",
+      "year": -700,
+      "lang": "el-anc",
+      "tags": ["dike", "justice", "virtue"],
+      "linkedTerms": ["dike"]
+    },
+    {
+      "id": "q086",
+      "text": "The function of the parrhesiastes is to tell the truth, even if it is dangerous for him to do so.",
+      "author": "Michel Foucault",
+      "source": "Fearless Speech",
+      "year": 1983,
+      "lang": "en",
+      "tags": ["parresia", "truth", "courage"],
+      "linkedTerms": ["parresia"]
+    },
+    {
+      "id": "q087",
+      "text": "No man can surpass his own time, for the spirit of his time is also his own spirit.",
+      "author": "G.W.F. Hegel",
+      "source": "Lectures on the History of Philosophy",
+      "lang": "en",
+      "tags": ["zeitgeist", "spirit", "history"],
+      "linkedTerms": ["zeitgeist"]
+    },
+    {
+      "id": "q088",
+      "text": "Vi el Aleph, desde todos los puntos, vi en el Aleph la tierra, y en la tierra otra vez el Aleph.",
+      "translation": "I saw the Aleph from every point, I saw in the Aleph the earth, and in the earth again the Aleph.",
+      "author": "Jorge Luis Borges",
+      "source": "El Aleph",
+      "year": 1945,
+      "lang": "es",
+      "tags": ["aleph", "infinity", "vision"],
+      "linkedTerms": ["aleph-borges"]
+    },
+    {
+      "id": "q089",
+      "text": "La Biblioteca es una esfera cuyo centro cabal es cualquier hexágono, cuya circunferencia es inaccesible.",
+      "translation": "The Library is a sphere whose exact center is any one of its hexagons and whose circumference is inaccessible.",
+      "author": "Jorge Luis Borges",
+      "source": "La Biblioteca de Babel",
+      "year": 1941,
+      "lang": "es",
+      "tags": ["library", "infinity", "knowledge"],
+      "linkedTerms": ["biblioteca-babel"]
+    },
+    {
+      "id": "q090",
+      "text": "Deus melius scitur nesciendo.",
+      "translation": "God is better known by not knowing.",
+      "author": "Augustine of Hippo",
+      "lang": "la",
+      "tags": ["via-negativa", "unknowing", "God"],
+      "linkedTerms": ["via-negativa"]
+    },
+    {
+      "id": "q091",
+      "text": "Each mortal thing does one thing and the same: / Deals out that being indoors each one dwells.",
+      "author": "Gerard Manley Hopkins",
+      "source": "As Kingfishers Catch Fire",
+      "year": 1877,
+      "lang": "en",
+      "tags": ["haecceitas", "inscape", "individuality"],
+      "linkedTerms": ["haecceitas"]
     }
   ]
 }

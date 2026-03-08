@@ -222,6 +222,116 @@ nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
     background: var(--accent);
 }
 
+/* Landing Hero with Main Ball */
+.landing-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 1.5rem;
+}
+
+.main-ball {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--bg-light), var(--bg));
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.main-ball:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.ball-symbol {
+    font-size: 3rem;
+    color: var(--accent);
+    font-weight: normal;
+    line-height: 1;
+}
+
+.landing-search {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.landing-search #search-input {
+    margin-bottom: 0;
+}
+
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--bg-light);
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s ease;
+    min-height: 100px;
+}
+
+.category-card:hover {
+    border-color: var(--accent);
+    background: var(--bg);
+    transform: translateY(-2px);
+}
+
+.category-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+.category-card:hover .category-icon {
+    opacity: 1;
+}
+
+.category-name {
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.category-card:hover .category-name {
+    color: var(--text-bright);
+}
+
+@media (max-width: 600px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-ball {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ball-symbol {
+        font-size: 2.5rem;
+    }
+}
+
 /* Welcome */
 .welcome {
     border: 1px solid var(--border);

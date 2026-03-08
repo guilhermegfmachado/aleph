@@ -645,7 +645,7 @@
             <div id="sources-list">
 
             <!-- TEXTES & ARCHIVES -->
-            <details id="textes" class="source-section" open>
+            <details id="textes" class="source-section">
                 <summary><h2>Textes</h2></summary>
                 <div class="content">
 
@@ -2984,20 +2984,6 @@
     </div>
     <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
     <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Add resource counts to section summaries
-        document.querySelectorAll('details.source-section').forEach(section => {
-            const count = section.querySelectorAll('.resource').length;
-            const h2 = section.querySelector('summary h2');
-            if (h2 && count > 0) {
-                h2.insertAdjacentHTML('beforeend',
-                    `<span style="font-size:0.7rem;color:var(--text-muted);font-weight:400;margin-left:0.5rem;opacity:0.7;">${count}</span>`
-                );
-            }
-        });
-    });
-    </script>
 <script>
 let _sim = null, _svg = null, _built = false;
 

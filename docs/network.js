@@ -164,6 +164,7 @@ function initNetwork(containerId) {
     if (!container || typeof d3 === 'undefined') return;
 
     _container = container;
+    expandedNodes.clear(); // Start collapsed - only root visible
     extractResources();
     Object.keys(nodePositions).forEach(k => delete nodePositions[k]);
 

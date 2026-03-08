@@ -279,6 +279,7 @@ function updateNetwork() {
         .join("g")
         .style("cursor", "pointer")
         .call(d3.drag()
+            .clickDistance(5)
             .on("start", dragstart)
             .on("drag",  dragging)
             .on("end",   dragend));

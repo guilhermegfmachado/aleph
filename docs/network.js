@@ -462,6 +462,18 @@ function resetNetwork() {
     updateNetwork();
 }
 
+function zoomIn() {
+    if (_svg && _zoom) {
+        _svg.transition().duration(300).call(_zoom.scaleBy, 1.3);
+    }
+}
+
+function zoomOut() {
+    if (_svg && _zoom) {
+        _svg.transition().duration(300).call(_zoom.scaleBy, 0.7);
+    }
+}
+
 function toggleNetworkView() {
     const network = document.getElementById("network-container");
     const list    = document.getElementById("list-container");

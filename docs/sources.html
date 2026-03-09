@@ -504,10 +504,12 @@
         /* Mobile - tree navigation */
         @media (max-width: 768px) {
             .sources-tree {
-                display: none;
+                flex-direction: column;
+                padding: 0.75rem;
             }
             .tree-category {
                 max-width: none;
+                min-width: auto;
             }
         }
         @media (max-width: 600px) {

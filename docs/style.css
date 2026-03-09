@@ -2026,15 +2026,21 @@ html, body {
 
 /* I1. א glyph size & I2. Nav centering */
 @media (max-width: 768px) {
-    .landing-hero h1, .aleph-glyph, [class*="glyph"], .main-ball .ball-symbol {
-        font-size: clamp(4rem, 20vw, 8rem);
-    }
-
     nav {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 4px;
+    }
+
+    .landing-hero {
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-ball {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -2355,9 +2361,9 @@ html, body {
     }
 }
 
-/* S5. TOC / sticky sidebar — hide on mobile */
+/* S5. TOC / sticky sidebar — hide on mobile (keep sources-tree visible) */
 @media (max-width: 768px) {
-    .toc, .sidebar:not(.sidebar-panel), [class*="toc"]:not([class*="tooltip"]), .sources-tree {
+    .toc, .sidebar:not(.sidebar-panel), [class*="toc"]:not([class*="tooltip"]) {
         display: none;
     }
 

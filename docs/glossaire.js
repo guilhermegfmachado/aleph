@@ -32,7 +32,9 @@ const LANG_NAMES = {
     sa: 'संस्कृत',
     tr: 'Türkçe',
     ml: 'മലയാളം',
-    ta: 'தமிழ்'
+    ta: 'தமிழ்',
+    zu: 'Zulu / Bantu',
+    sw: 'Swahili'
 };
 
 // Dark mode

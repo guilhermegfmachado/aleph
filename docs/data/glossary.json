@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.2",
     "lastUpdated": "2026-03-08",
-    "languages": ["de", "fr", "it", "ja", "zh", "el", "el-anc", "el-mod", "la", "es", "ru", "ar", "pt", "he", "fa", "sa", "tr", "ml", "ta"]
+    "languages": ["de", "fr", "it", "ja", "zh", "el", "el-anc", "el-mod", "la", "es", "ru", "ar", "pt", "he", "fa", "sa", "tr", "ml", "ta", "zu", "sw"]
   },
   "terms": [
     {
@@ -1385,6 +1385,564 @@
       "etymology": "Wiederholung (repetition) + Zwang (compulsion). Introduced in Jenseits des Lustprinzips, 1920.",
       "category": ["psychology"],
       "related": ["nachtraglichkeit", "agieren", "fort-da"]
+    },
+    {
+      "id": "differance",
+      "term": "Différance",
+      "native": "différance",
+      "lang": "fr",
+      "domain": ["philosophy", "language"],
+      "period": ["20c"],
+      "definition": "Derrida's neologism — neither différence (difference) nor différance as an existing word, but a coinage that is visually distinct and aurally identical to différence in French. It cannot be heard, only read. The concept names the double movement by which meaning is produced: signs differ from one another (spatial difference) and defer their meaning indefinitely (temporal deferral). There is no moment when the sign reaches its referent, no presence behind the signifier. The unpronounceable word performs its own argument.",
+      "etymology": "Derrida's portmanteau: différer (to differ) + différer (to defer) + the -ance suffix. Introduced in a 1968 lecture.",
+      "related": ["logos", "pharmakon", "simulacre"],
+      "quotes": [
+        { "text": "La différance n'est pas, n'existe pas, n'est pas un étant-présent.", "source": "Jacques Derrida, La Différance, 1968" }
+      ]
+    },
+    {
+      "id": "epistemē",
+      "term": "Épistémè",
+      "native": "épistémè",
+      "lang": "fr",
+      "domain": ["philosophy", "politics"],
+      "period": ["20c"],
+      "definition": "The unconscious knowledge structure of an epoch — deeper than ideology, prior to conscious thought. Foucault's concept in The Order of Things: each historical period rests on a configuration of knowledge that determines what counts as a true statement, what questions can be asked, what it is possible to think. The epistemic ruptures between periods are not developments but discontinuities: the Classical episteme (resemblance) gives way to the modern episteme (representation) not by progress but by a seismic shift in the ground of knowledge.",
+      "etymology": "From Greek epistēmē (knowledge, science). Foucault repurposed the classical term for his archaeological method.",
+      "related": ["zeitgeist", "weltbild", "weltanschauung"],
+      "quotes": [
+        { "text": "In any given culture and at any given moment, there is always only one episteme that defines the conditions of possibility of all knowledge.", "source": "Michel Foucault, The Order of Things, 1966" }
+      ]
+    },
+    {
+      "id": "dispositif",
+      "term": "Dispositif",
+      "native": "dispositif",
+      "lang": "fr",
+      "domain": ["philosophy", "politics"],
+      "period": ["20c"],
+      "definition": "The apparatus — a network of discourses, institutions, architectures, laws, and practices that together capture, orient, and govern living beings. Foucault's concept, systematised by Agamben: the dispositif is not merely a tool but an assemblage that produces subjects. The prison, the school, the hospital, the confessional are all dispositifs. Agamben: any dispositif implies a process of subjectification — it makes a subject out of a living being, and the subject is always already captured.",
+      "etymology": "French: device, mechanism, apparatus. Foucault introduced it in an interview in 1977.",
+      "related": ["epistemē", "gleichschaltung", "plenitudo-potestatis"]
+    },
+    {
+      "id": "habitus",
+      "term": "Habitus",
+      "native": "habitus",
+      "lang": "fr",
+      "domain": ["philosophy", "politics"],
+      "period": ["20c"],
+      "definition": "The durable, transposable dispositions through which social position is inscribed in the body. Bourdieu's central concept: the habitus is not a conscious strategy but a practical sense — a feel for the game — that generates appropriate actions without deliberate calculation. It is how class reproduces itself below the threshold of ideology: through posture, speech rhythm, taste, the way one holds a fork. The child of the bourgeoisie does not decide to be confident; confidence is inscribed as a disposition before reflection begins.",
+      "etymology": "Latin habitus (condition, state, from habere: to have, to hold). Aristotle's hexis in Latin translation. Bourdieu recovered it from scholastic philosophy.",
+      "related": ["bildung", "gemeinschaft", "mos-maiorum"],
+      "quotes": [
+        { "text": "The habitus is necessity internalised and converted into a disposition that generates meaningful practices.", "source": "Pierre Bourdieu, The Logic of Practice, 1980" }
+      ]
+    },
+    {
+      "id": "champ",
+      "term": "Champ",
+      "native": "champ",
+      "lang": "fr",
+      "domain": ["philosophy", "politics"],
+      "period": ["20c"],
+      "definition": "The field — Bourdieu's concept of the structured space of social positions within a domain (the literary field, the academic field, the political field). Each field has its own capital, its own rules, its own logic of competition. To enter a field is to accept its doxa — the unquestioned beliefs that structure the game. The literary field's capital is symbolic recognition; the economic field's is money. The concepts of field and habitus together explain why individuals reproduce social structures without being commanded to.",
+      "etymology": "French: field, domain. Physics metaphor: a force field that exerts pressures on all who enter it.",
+      "related": ["habitus", "gesellschaft"]
+    },
+    {
+      "id": "ecriture",
+      "term": "Écriture",
+      "native": "écriture",
+      "lang": "fr",
+      "domain": ["philosophy", "language"],
+      "period": ["20c"],
+      "definition": "Writing as the condition of language — prior to speech, not derived from it. Against the Western tradition that privileges speech (presence, voice, breath) over writing (absence, trace, dead letter): Derrida's archi-écriture is the structure of difference and deferral that makes all language, spoken or written, possible. Barthes's earlier sense: writing as a social and ideological commitment — the writer's choice of tone, form, and register situates them politically before content does.",
+      "etymology": "French: writing, handwriting, script. Derrida's technical sense introduced in Of Grammatology, 1967.",
+      "related": ["differance", "logos", "pharmakon"],
+      "quotes": [
+        { "text": "Writing is not a sign of a sign, an indirect image of a vocal intention.", "source": "Jacques Derrida, Of Grammatology, 1967" }
+      ]
+    },
+    {
+      "id": "interpellation",
+      "term": "Interpellation",
+      "native": "interpellation",
+      "lang": "fr",
+      "domain": ["philosophy", "politics"],
+      "period": ["20c"],
+      "definition": "The hailing that constitutes the subject. Althusser's concept in Ideology and Ideological State Apparatuses: ideology operates not by forcing beliefs but by calling individuals into subject-positions. When the policeman shouts \"Hey, you!\" and someone turns around, they have recognised themselves as the addressed subject and thereby become one. The individual becomes a subject by accepting the call — ideology is the unconscious structure through which we live our imaginary relationship to real conditions.",
+      "etymology": "French: to call out to, to question. Political sense: to call a minister to account before parliament.",
+      "related": ["habitus", "dispositif", "gleichschaltung"],
+      "quotes": [
+        { "text": "All ideology hails or interpellates concrete individuals as concrete subjects.", "source": "Louis Althusser, Lenin and Philosophy, 1970" }
+      ]
+    },
+    {
+      "id": "doxa",
+      "term": "Doxa",
+      "native": "δόξα / doxa",
+      "lang": "fr",
+      "domain": ["philosophy", "politics"],
+      "period": ["ancient-greece", "20c"],
+      "definition": "Received opinion — the unquestioned beliefs that structure a field or a society. In Plato, doxa is mere opinion, opposed to episteme (true knowledge). In Bourdieu, the doxa of a field is what goes without saying — the presuppositions so basic they are never questioned. The political operation of doxa: making contingent arrangements appear natural. The critical task: converting doxa into opinion (recognisable as a position) — which is already half of ideology critique.",
+      "etymology": "Greek: opinion, glory, seeming. From dokein (to seem, to think). Bourdieu recovered it for sociology.",
+      "related": ["habitus", "champ", "epistemē"]
+    },
+    {
+      "id": "ausnahmezustand",
+      "term": "Ausnahmezustand",
+      "native": "Ausnahmezustand",
+      "lang": "de",
+      "domain": ["politics", "law"],
+      "period": ["20c"],
+      "definition": "State of exception. Carl Schmitt's concept in Political Theology (1922): \"Sovereign is he who decides on the exception.\" The sovereign is defined not by normal governance but by the power to suspend the legal order in emergency — and thereby reveal that the legal order depends on a pre-legal decision. Agamben extended it: the state of exception has become the permanent paradigm of government in modernity. Guantánamo, emergency powers, indefinite detention — the exception has become the rule.",
+      "etymology": "Ausnahme (exception) + Zustand (state, condition). Political Theology: Vier Kapitel zur Lehre von der Souveränität, 1922.",
+      "related": ["staatsraison", "plenitudo-potestatis", "nomos"],
+      "quotes": [
+        { "text": "Souverän ist, wer über den Ausnahmezustand entscheidet.", "source": "Carl Schmitt, Politische Theologie, 1922" }
+      ]
+    },
+    {
+      "id": "nomos",
+      "term": "Nomos",
+      "native": "Νόμος / Nomos",
+      "lang": "de",
+      "domain": ["politics", "law"],
+      "period": ["ancient-greece", "20c"],
+      "definition": "The originary act of land-seizure that founds all law. Schmitt's concept in The Nomos of the Earth: before there can be law there must be a taking (Nahme) — the violent appropriation of land that establishes the spatial order within which norms become possible. International law rests on the jus publicum Europaeum — the European states' agreement about how to divide the rest of the world. In classical Greek, nomos meant both law and pasture — the distribution that is also a habitation.",
+      "etymology": "Greek nomos (law, custom, pasture). Schmitt's concept of Ur-Nahme (originary seizure) is deliberately etymological.",
+      "related": ["ausnahmezustand", "imperium", "res-publica"]
+    },
+    {
+      "id": "katechon",
+      "term": "Katechon",
+      "native": "κατέχον",
+      "lang": "de",
+      "domain": ["politics", "philosophy"],
+      "period": ["medieval", "20c"],
+      "definition": "The restrainer — the force that holds back the end of the world. Paul's 2 Thessalonians 2:6-7: \"you know what is restraining him now.\" Schmitt applied it to political theology: the Holy Roman Empire as the katechon, the force that prevented the unleashing of the Antichrist. The concept names the conservative function of any empire or institution: its legitimacy rests not on justice but on restraint — the prevention of something worse. Every status quo power claims to be a katechon.",
+      "etymology": "Greek: present participle of katechein (to hold back, to restrain). From kata (down, against) + echein (to have, to hold).",
+      "related": ["ausnahmezustand", "translatio-imperii", "plenitudo-potestatis"]
+    },
+    {
+      "id": "dezisionismus",
+      "term": "Dezisionismus",
+      "native": "Dezisionismus",
+      "lang": "de",
+      "domain": ["politics", "philosophy"],
+      "period": ["20c"],
+      "definition": "Decisionism — the doctrine that the ultimate ground of political order is not reason, norm, or value but a pure decision. Schmitt's position: the legal order is not self-grounding; it rests on a primordial act of will that cannot be derived from anything else. The decision precedes the norm. This is both a political critique (liberalism's pretence of normative self-sufficiency) and a vulnerability (it makes power the ultimate reality). Weber's polytheism of values and Nietzsche's will to power are its philosophical relatives.",
+      "etymology": "From Latin decisio (decision, cutting through). Schmitt's term for the primacy of the will over the norm.",
+      "related": ["ausnahmezustand", "realpolitik", "weltanschauung"]
+    },
+    {
+      "id": "jetztzeit",
+      "term": "Jetztzeit",
+      "native": "Jetztzeit",
+      "lang": "de",
+      "domain": ["philosophy", "politics"],
+      "period": ["20c"],
+      "definition": "Now-time. Benjamin's concept in the Theses on the Philosophy of History: revolutionary time is not the homogeneous empty time of progress but a present moment charged with the entire past — a moment where now and the past flash together in a constellation. Jetztzeit is the moment the oppressed can seize: \"every second of time was the strait gate through which the Messiah might enter.\" Against historicism's narrative of progress, Benjamin posits the revolutionary interruption of now.",
+      "etymology": "Jetzt (now) + Zeit (time). Benjamin opposes it to the homogeneous Zeit of historicism.",
+      "related": ["dialektik", "aufhebung", "fortschritt"],
+      "quotes": [
+        { "text": "Jede Sekunde war die kleine Pforte, durch die der Messias treten konnte.", "source": "Walter Benjamin, Theses on the Philosophy of History, XVIII, 1940" }
+      ]
+    },
+    {
+      "id": "fortschritt",
+      "term": "Fortschritt",
+      "native": "Fortschritt",
+      "lang": "de",
+      "domain": ["philosophy", "politics"],
+      "period": ["19c", "20c"],
+      "definition": "Progress — as critique. Benjamin's angel of history (after Klee's Angelus Novus): the angel faces the past, sees the wreckage piling up, and is blown backward into the future by the storm of progress. The storm is what we call progress. The concept inverts the Enlightenment narrative: progress is not accumulation but catastrophe seen from the perspective of the defeated. The idea of progress depends on the idea that time moves forward and that forward is better — both of which Benjamin contests.",
+      "etymology": "Fort (forward, away) + Schritt (step). The most ordinary German word for progress; Benjamin makes it monstrous.",
+      "related": ["jetztzeit", "dialektik", "sonderweg"],
+      "quotes": [
+        { "text": "Der Engel der Geschichte... sieht eine einzige Katastrophe, die unablässig Trümmer auf Trümmer häuft.", "source": "Walter Benjamin, Theses on the Philosophy of History, IX, 1940" }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "term": "Ursprung",
+      "native": "Ursprung",
+      "lang": "de",
+      "domain": ["philosophy"],
+      "period": ["20c"],
+      "definition": "Origin — but not beginning. Benjamin's concept in the Epistemo-Critical Prologue to The Origin of German Tragic Drama: Ursprung is not the first moment of a development but a vortex that draws materials toward it from before and after, constituting itself through what it gathers. Origin is not a historical fact but a category — the movement of restoration and incompleteness. Every origin contains within itself the structure of the incomplete: the originary phenomenon emerges, sinks back, re-emerges.",
+      "etymology": "Ur- (primal, original) + Sprung (leap, jump). Literally: primal leap. The word conceals a violence that Ursprung conventionally suppresses.",
+      "related": ["jetztzeit", "dialektik", "aufhebung"],
+      "quotes": [
+        { "text": "Ursprung ist das Ziel.", "source": "Karl Kraus (epigraph to Benjamin's Arcades Project)" }
+      ]
+    },
+    {
+      "id": "aura",
+      "term": "Aura",
+      "native": "Aura",
+      "lang": "de",
+      "domain": ["aesthetics", "philosophy"],
+      "period": ["20c"],
+      "definition": "The here and now of an artwork — its unique existence at the place where it happens to be, the history inscribed in its material presence. Benjamin's concept in The Work of Art in the Age of Mechanical Reproduction: technical reproduction destroys the aura by detaching the reproduced object from the domain of tradition. The painting in a museum has aura; its postcard does not. The concept is simultaneously a loss (of ritual, of uniqueness) and a liberation (the politicisation of art freed from its cultic function).",
+      "etymology": "Greek and Latin: breath, breeze, the barely perceptible emanation from an object.",
+      "related": ["gesamtkunstwerk", "mimesis", "jetztzeit"],
+      "quotes": [
+        { "text": "Was im Zeitalter der technischen Reproduzierbarkeit verkümmert, ist die Aura des Kunstwerks.", "source": "Walter Benjamin, Das Kunstwerk im Zeitalter seiner technischen Reproduzierbarkeit, 1935" }
+      ]
+    },
+    {
+      "id": "dialektisches-bild",
+      "term": "Dialektisches Bild",
+      "native": "dialektisches Bild",
+      "lang": "de",
+      "domain": ["philosophy", "aesthetics"],
+      "period": ["20c"],
+      "definition": "Dialectical image. Benjamin's concept in the Arcades Project: the image where the Then (das Gewesene) and the Now (das Jetzt) flash together in a constellation. Not a temporal sequence (this caused that) but a spatial figure — a now charged with a particular past that only this present can read. The dialectical image is what historical knowledge looks like when it is political: the moment when the oppressed recognise their situation in the past and the past speaks to the present.",
+      "etymology": "Dialectical (Hegelian) + Bild (image, picture). Benjamin's term for the non-narrative structure of historical understanding.",
+      "related": ["jetztzeit", "aura", "ursprung"],
+      "quotes": [
+        { "text": "Bild ist dasjenige, worin das Gewesene mit dem Jetzt blitzhaft zu einer Konstellation zusammentritt.", "source": "Walter Benjamin, Arcades Project, N2a,3" }
+      ]
+    },
+    {
+      "id": "egemonia",
+      "term": "Egemonia",
+      "native": "egemonia",
+      "lang": "it",
+      "domain": ["politics", "philosophy"],
+      "period": ["20c"],
+      "definition": "Hegemony — consent manufactured into domination. Gramsci's Prison Notebooks concept: the ruling class does not maintain power through force alone but through cultural leadership — making its worldview appear as common sense, natural, inevitable. Hegemony is the achievement of consent from the dominated. Counter-hegemony requires a \"war of position\" — the slow construction of alternative institutions, values, and intellectual leadership before any seizure of power. The concept transformed how the left thought about culture and ideology.",
+      "etymology": "From Greek hēgemonia (leadership, dominance). Gramsci distinguished it from domination (direct coercion).",
+      "related": ["habitus", "interpellation", "dispositif"],
+      "quotes": [
+        { "text": "The State is the entire complex of practical and theoretical activities with which the ruling class not only justifies and maintains its dominance, but manages to win the active consent of those over whom it rules.", "source": "Antonio Gramsci, Prison Notebooks" }
+      ]
+    },
+    {
+      "id": "rivoluzione-passiva",
+      "term": "Rivoluzione passiva",
+      "native": "rivoluzione passiva",
+      "lang": "it",
+      "domain": ["politics"],
+      "period": ["20c"],
+      "definition": "Passive revolution — transformation without rupture. Gramsci's concept for political change managed from above to prevent change from below: the ruling class that incorporates enough of the revolutionary programme to defuse the revolutionary pressure. The Risorgimento was a passive revolution: national unification without the agrarian revolution that would have required the peasantry. Fascism was a passive revolution. Every managed reform that co-opts the radical demand while neutralising the radical movement is a rivoluzione passiva.",
+      "etymology": "Gramsci's term, derived from Cuoco's analysis of the failed Neapolitan revolution of 1799.",
+      "related": ["egemonia", "trasformismo", "thermidorien"]
+    },
+    {
+      "id": "feticismo",
+      "term": "Feticismo della merce",
+      "native": "feticismo della merce",
+      "lang": "it",
+      "domain": ["philosophy", "economics"],
+      "period": ["19c", "20c"],
+      "definition": "Commodity fetishism. Marx's concept in Capital, Chapter 1: the commodity appears to have a value that belongs to it, as if it were a natural property, when in fact value is crystallised human labour — social relations between people taking on the form of relations between things. The table stands on its head and dances. The fetish attributes to an object powers that belong to human activity. The concept is both an analysis of capitalism and a theory of ideology: the systemic illusion that cannot be dissolved by mere demystification because it is produced materially.",
+      "etymology": "Fetish from Portuguese feitiço (charm, enchantment). Marx borrowed the anthropological concept to describe capitalism's own magic.",
+      "related": ["simulacre", "entfremdung", "habitus"],
+      "quotes": [
+        { "text": "A commodity appears at first sight an extremely obvious, trivial thing. But its analysis brings out that it is a very strange thing, abounding in metaphysical subtleties and theological niceties.", "source": "Karl Marx, Capital, Volume I, Chapter 1, 1867" }
+      ]
+    },
+    {
+      "id": "urakkumulation",
+      "term": "Ursprüngliche Akkumulation",
+      "native": "ursprüngliche Akkumulation",
+      "lang": "de",
+      "domain": ["philosophy", "economics"],
+      "period": ["19c", "20c"],
+      "definition": "Primitive accumulation — the originary violence that created capitalism. Marx's concept in Capital, Part VIII: the \"so-called primitive accumulation\" is not the peaceful saving that classical economics posits as capitalism's foundation, but the systematic dispossession that created the conditions for wage labour: the enclosures (peasants driven from common land), the slave trade, the colonial plunder. The idyllic past of capital is written in blood. Silvia Federici extended it: the witch hunts were part of primitive accumulation — the enclosure of the female body.",
+      "etymology": "Ursprünglich (original, primordial) + Akkumulation. Marx called it \"so-called\" to signal his critique of the classical economists' myth.",
+      "related": ["nomos", "entfremdung", "feticismo"],
+      "quotes": [
+        { "text": "Das Kapital kommt mit Blut und Schmutz aus allen Poren, von Kopf bis Zehen.", "source": "Karl Marx, Das Kapital, Bd. I, Kap. 24, 1867" }
+      ]
+    },
+    {
+      "id": "ostranenie",
+      "term": "Ostranenie",
+      "native": "остранение",
+      "lang": "ru",
+      "domain": ["aesthetics", "language"],
+      "period": ["20c"],
+      "definition": "Defamiliarisation — making the habitual strange. Shklovsky's concept in Art as Technique (1917): the purpose of art is to restore the sensation of life, to make us feel things rather than merely recognise them. Habit kills perception; art kills habit. Tolstoy describes a flogging as if seeing it for the first time, without the softening of familiarity. Brecht's Verfremdungseffekt is its theatrical version: the actor who reminds the audience they are watching a play, preventing the comfortable identification that produces passive consumption.",
+      "etymology": "From stranny (strange, odd) + the prefix o- (making something). Shklovsky coined it in the manifesto Iskusstvo kak priyom.",
+      "related": ["mimesis", "aura", "vergangenheitsbewaeltigung"],
+      "quotes": [
+        { "text": "Цель искусства — дать ощущение вещи как видение, а не как узнавание.", "source": "Viktor Shklovsky, Art as Technique, 1917" }
+      ]
+    },
+    {
+      "id": "byt",
+      "term": "Byt",
+      "native": "быт",
+      "lang": "ru",
+      "domain": ["aesthetics", "politics"],
+      "period": ["20c"],
+      "definition": "The everyday — the material texture of ordinary life. The Russian avant-garde's great enemy and great project: the Constructivists, Productivists, and LEF group wanted to transform byt — to revolutionise not just politics but the chairs, the teapots, the daily rituals of existence. The revolution would be incomplete until the logic of the old world was removed from the domestic sphere. Byt absorbed the revolution; the revolution failed to transform byt. The concept later became central to the Situationist International's concept of \"everyday life.\"",
+      "etymology": "Russian: way of life, daily routine, the everyday. From byt' (to be).",
+      "related": ["habitus", "ostranenie", "gesellschaft"]
+    },
+    {
+      "id": "sobytie",
+      "term": "Sobytie",
+      "native": "событие",
+      "lang": "ru",
+      "domain": ["philosophy"],
+      "period": ["20c"],
+      "definition": "Event — the philosophical category that erupts into and transforms the given situation. The Russian word contains within it the structure of Badiou's concept: so-bytie (co-being, being-together). Bakhtin's concept of the event of being: ethical life cannot be reduced to abstract norms; it is always the unrepeatable event of this encounter, this moment of responsibility. The event is what forces a decision — what divides time into before and after.",
+      "etymology": "Russian: event, occurrence. Literally so-bytie: co-being. The prefix so- (together, co-) adds the communal dimension.",
+      "related": ["jetztzeit", "kairos", "dialektisches-bild"]
+    },
+    {
+      "id": "tovarishch",
+      "term": "Tovarishch",
+      "native": "товарищ",
+      "lang": "ru",
+      "domain": ["politics", "language"],
+      "period": ["20c"],
+      "definition": "Comrade — the word that tried to replace all others. The Bolshevik address that abolished \"mister,\" \"master,\" and all titles of rank: everyone is a comrade. The concept carries the entire project of revolutionary equality in a single word of address. Its failure is also encoded in the word: the moment when \"Comrade Stalin\" became more terrifying than any title of the old regime, the word became its own opposite. The life and death of tovarishch is the history of the Soviet Union compressed into a term of address.",
+      "etymology": "From tovar (goods, trade). A tovarishch was originally a business partner or travelling companion — the revolutionary sense came through the labour movement.",
+      "related": ["gemeinschaft", "sobornist"]
+    },
+    {
+      "id": "poshlost",
+      "term": "Poshlost'",
+      "native": "пошлость",
+      "lang": "ru",
+      "domain": ["aesthetics", "psyche"],
+      "period": ["modern"],
+      "definition": "The specifically Russian category of the vulgarly self-satisfied — kitsch that does not know it is kitsch, banality pleased with itself, the false and the sham presenting themselves as the real and the refined. Nabokov: \"a special kind of smug, philistine vulgarity.\" Not mere bad taste but the complacent enjoyment of second-hand emotions and borrowed ideas, the aesthetic and ethical failure of a person who does not notice their own shallowness. Gogol is the great anatomist of poshlost'.",
+      "etymology": "Old Russian poshlyi: ordinary, common. The word degraded from \"common\" to \"vulgar\" to \"smug-vulgar.\"",
+      "related": ["kitsch", "simulacre", "ressentiment"],
+      "quotes": [
+        { "text": "Poshlost is not only the obviously trashy but mainly the falsely important, the falsely beautiful, the falsely clever, the falsely attractive.", "source": "Vladimir Nabokov, Nikolai Gogol, 1944" }
+      ]
+    },
+    {
+      "id": "ubuntu",
+      "term": "Ubuntu",
+      "native": "Ubuntu",
+      "lang": "zu",
+      "domain": ["philosophy", "politics"],
+      "period": ["modern"],
+      "definition": "I am because we are. The Nguni Bantu concept of personhood as constitutively relational: a person is a person through other persons (umuntu ngumuntu ngabantu). Not the Western individual who then enters into relationships, but a self that is from the beginning inter-subjective. The concept has been both a foundation of post-apartheid South African political philosophy and a target of critique: romanticised by those who would use \"community\" to silence individual dissent. Its political possibilities and limits are both real.",
+      "etymology": "Zulu/Xhosa ubuntu from -ntu (person) with the abstract noun prefix ubu-. Pan-Bantu: variants exist in Swahili (utu), Shona (unhu).",
+      "related": ["gemeinschaft", "sobornist", "loka-samgraha"],
+      "quotes": [
+        { "text": "Umuntu ngumuntu ngabantu.", "source": "Nguni Bantu proverb" }
+      ]
+    },
+    {
+      "id": "negritude",
+      "term": "Négritude",
+      "native": "négritude",
+      "lang": "fr",
+      "domain": ["politics", "aesthetics"],
+      "period": ["20c"],
+      "definition": "The reclamation of African identity and cultural value against assimilation. Aimé Césaire and Léopold Sédar Senghor's concept (1930s): the refusal of the colonial demand to become French, the affirmation of African culture, aesthetics, and history as sources of value rather than deficits to be overcome. The concept's internal tension: Senghor's version risked essentialising African identity; Sartre called it a \"negative moment\" in the dialectic that would be superseded. Fanon criticised it as a bourgeois nationalism that left colonial structures intact.",
+      "etymology": "Négritude: from nègre (the reclaimed slur) + -itude (abstract suffix). The act of reclaiming the insult is constitutive of the concept.",
+      "related": ["volksgeis", "interpellation", "egemonia"],
+      "quotes": [
+        { "text": "Ma négritude n'est pas une pierre, sa surdité ruée contre la clameur du jour.", "source": "Aimé Césaire, Cahier d'un retour au pays natal, 1939" }
+      ]
+    },
+    {
+      "id": "ujamaa",
+      "term": "Ujamaa",
+      "native": "ujamaa",
+      "lang": "sw",
+      "domain": ["politics", "philosophy"],
+      "period": ["20c"],
+      "definition": "Familyhood — Julius Nyerere's concept of African socialism. The Tanzanian ujamaa programme (1967–1977) attempted to build socialism on the basis of traditional African communal life: the extended family as the model for economic organisation, the village as the unit of production. The experiment's failure is as instructive as its ideals: ujamaa villagisation was partly coercive, and the identification of \"traditional\" with \"socialist\" suppressed both indigenous complexity and legitimate critique.",
+      "etymology": "Swahili: familyhood, kinship. From jamaa (family, community), from Arabic jamāʿah (group, congregation).",
+      "related": ["ubuntu", "gemeinschaft", "sobornist"]
+    },
+    {
+      "id": "ekphrasis",
+      "term": "Ekphrasis",
+      "native": "ἔκφρασις",
+      "lang": "el-anc",
+      "domain": ["aesthetics", "language"],
+      "period": ["ancient-greece", "modern"],
+      "definition": "The verbal description of a visual work — language competing with image. Homer's description of Achilles' shield is the paradigm: the poem makes you see what cannot be seen, generates a world from words alone. The technique is both ancient exercise and modernist obsession: Keats's Ode on a Grecian Urn, Auden's Musée des Beaux Arts. Ekphrasis raises the question that haunts all representation: can language capture what only image can show, can image capture what only language can say?",
+      "etymology": "Greek: ek (out) + phrazein (to speak, to express). A complete, vivid description.",
+      "related": ["mimesis", "enargeia", "logos"],
+      "quotes": [
+        { "text": "On it he made the earth and sky and sea, the weariless sun, the moon at the full, and all the signs that crown the heavens.", "source": "Homer, Iliad, XVIII (on the Shield of Achilles)" }
+      ]
+    },
+    {
+      "id": "enargeia",
+      "term": "Enargeia",
+      "native": "ἐνάργεια",
+      "lang": "el-anc",
+      "domain": ["aesthetics", "language"],
+      "period": ["ancient-greece"],
+      "definition": "Vivid bringing-before-the-eyes — making the absent present through speech. The rhetorical ideal of vividness: the description so precise that the listener sees the scene as if present. Quintilian: evidentia, the quality of making absent things apparent. Distinct from simple clarity: enargeia is the force that makes language cross the threshold from statement to experience. Benjamin's dialectical image and Barthes's punctum are its modern descendants.",
+      "etymology": "Greek: en (in) + argos (shining, bright). The word that is also at the root of \"energy.\"",
+      "related": ["ekphrasis", "mimesis", "aura"]
+    },
+    {
+      "id": "traduttore-traditore",
+      "term": "Traduttore traditore",
+      "native": "traduttore traditore",
+      "lang": "it",
+      "domain": ["language", "aesthetics"],
+      "period": ["modern"],
+      "definition": "Translator traitor. The Italian pun that names the fundamental problem of translation: to translate is necessarily to betray — every choice to preserve one element (rhythm, meaning, tone, syntax) sacrifices another. The pun only works in Italian; its untranslatability is its argument. But the concept is more complex than simple loss: Borges argued that translations can improve on originals, that the Quixote is better in translation than in Cervantes. Every translator negotiates their treachery differently.",
+      "etymology": "Italian: traduttore (translator) / traditore (traitor). The two words share the Latin root tradere (to hand over, to betray).",
+      "related": ["ecriture", "logos", "pharmakon"],
+      "quotes": [
+        { "text": "The original is unfaithful to the translation.", "source": "Jorge Luis Borges, on Henley's translation of Beckford" }
+      ]
+    },
+    {
+      "id": "belles-infideles",
+      "term": "Belles infidèles",
+      "native": "belles infidèles",
+      "lang": "fr",
+      "domain": ["language", "aesthetics"],
+      "period": ["17c", "18c"],
+      "definition": "Beautiful but unfaithful. The French 17th–18th century tradition of translation that adapted source texts to French taste — elegant, fluent, idiomatic — at the cost of the original's foreignness. Opposed to the German Romantic tradition (Schleiermacher, Hölderlin) that sought to let the foreign remain foreign, to bring the reader to the text rather than the text to the reader. The tension between domestication (belles infidèles) and foreignisation defines all translation ethics.",
+      "etymology": "The phrase attributed to Gilles Ménage (17th c.) of Nicolas Perrot d'Ablancourt's translations of ancient authors.",
+      "related": ["traduttore-traditore", "ecriture"]
+    },
+    {
+      "id": "ubertragung",
+      "term": "Übertragung",
+      "native": "Übertragung",
+      "lang": "de",
+      "domain": ["language", "psyche"],
+      "period": ["19c", "20c"],
+      "definition": "Translation and transference — the same word. Schleiermacher introduced the term for translation; Freud used it for the patient's displacement of earlier emotional attachments onto the analyst. The coincidence is not accidental: both translation and transference involve the transfer of something — meaning, affect — across a gap, with inevitable distortion. What arrives is not what departed. Derrida's essay \"Des Tours de Babel\" makes the connection explicit: translation is always a form of transference, never a transparent passage.",
+      "etymology": "Über (over, across) + tragen (to carry). The double meaning is native to the German word.",
+      "related": ["traduttore-traditore", "nachtraglichkeit", "differance"]
+    },
+    {
+      "id": "mushin",
+      "term": "Mushin",
+      "native": "無心",
+      "lang": "ja",
+      "domain": ["philosophy", "aesthetics"],
+      "period": ["medieval-japan", "modern"],
+      "definition": "No-mind — the state of action without deliberate thought. The Zen ideal of the master swordsman, calligrapher, or archer: the practitioner who has internalised technique so completely that self-conscious deliberation drops away, and action flows without the interference of ego. Mushin is not mindlessness but a higher order of attentiveness — what Csikszentmihalyi calls flow, but in a Zen frame: the dissolution of the boundary between actor and action.",
+      "etymology": "Mu (無: nothing, non-) + shin (心: mind, heart). Also written mushin no shin — no-mind mind.",
+      "related": ["wu-wei", "ma", "phronesis"]
+    },
+    {
+      "id": "giri",
+      "term": "Giri",
+      "native": "義理",
+      "lang": "ja",
+      "domain": ["philosophy", "politics"],
+      "period": ["edo", "modern"],
+      "definition": "Obligation — specifically the social duty owed to others by virtue of relationship and gift. The tension between giri (social obligation) and ninjō (human feeling, personal emotion) is the structural conflict of Edo literature and Kabuki tragedy: the character who must do what is right by their social obligations even when every human feeling cries against it. The concept identifies the domain where social structure and personal desire most painfully conflict — Japan's version of the tragic.",
+      "etymology": "Gi (義: righteousness, duty) + ri (理: reason, principle). The characters point to duty grounded in reason rather than mere custom.",
+      "related": ["dharma", "pietas", "mono-no-aware"]
+    },
+    {
+      "id": "makoto",
+      "term": "Makoto",
+      "native": "誠",
+      "lang": "ja",
+      "domain": ["philosophy"],
+      "period": ["heian", "medieval-japan", "modern"],
+      "definition": "Sincerity, truthfulness — the Shinto ethical ideal. Not mere honesty but the complete alignment of inner state and outer expression, word and deed. Motoori Norinaga connected it to mono no aware: the sincere person is the one who can feel the pathos of things, who is not armoured against reality by convention or calculation. In Japanese aesthetics, sincerity is the ground from which genuine art grows — the poet who writes without makoto produces only technique.",
+      "etymology": "Made of the character for word (言) and becoming/completion (成): words that become true, speech that fulfils itself.",
+      "related": ["mono-no-aware", "aletheia", "ethos"]
+    },
+    {
+      "id": "satori",
+      "term": "Satori",
+      "native": "悟り",
+      "lang": "ja",
+      "domain": ["philosophy"],
+      "period": ["medieval-japan", "modern"],
+      "definition": "Enlightenment — the sudden, irreversible recognition of one's original nature. The specifically Zen kind: not gradual progress toward a goal but an abrupt breakthrough (kenshō) that cannot be prepared for by accumulation. The koan is the instrument: an impossible question (what is the sound of one hand clapping?) that frustrates discursive reason until the mind breaks through to a different mode of knowing. Satori cannot be described to those who have not experienced it — and descriptions of it are obstacles to those who have not.",
+      "etymology": "Japanese: from satoru (to understand, to be enlightened). The character 悟 combines mind/heart (心) with the phonetic component.",
+      "related": ["aporia", "mushin", "aletheia"]
+    },
+    {
+      "id": "ikigai",
+      "term": "Ikigai",
+      "native": "生き甲斐",
+      "lang": "ja",
+      "domain": ["philosophy", "psyche"],
+      "period": ["modern"],
+      "definition": "The reason for getting up in the morning. The convergence of what you love, what you are good at, what the world needs, and what you can be paid for — the point where these four circles overlap is ikigai. The Western popularisation has somewhat flattened it: the Japanese concept is less a diagram of fulfilment than a recognition that purpose is always found in relation — to others, to one's community, to the world — not through pure self-expression.",
+      "etymology": "Iki (生き: life) + gai (甲斐: worth, result, benefit). The suffix -gai transforms a noun into that which gives it value.",
+      "related": ["eudaimonia", "loka-samgraha", "arete"]
+    },
+    {
+      "id": "theoria-spectacle",
+      "term": "Theōria (spectacle)",
+      "native": "θεωρία",
+      "lang": "el-anc",
+      "domain": ["philosophy", "theatre"],
+      "period": ["ancient-greece"],
+      "definition": "The official delegation sent from a city to consult an oracle, witness a festival, or observe foreign customs — the same word as theoretical contemplation. The theōros was simultaneously a spectator and an ambassador: seeing on behalf of others, reporting back what was witnessed. This doubles the etymology of theory: knowing by seeing, seeing on behalf of a community. Nightingale's Spectacles of Truth argues that the philosophical concept of theōria was constructed against this civic practice of spectating.",
+      "etymology": "Theōros (spectator, official delegate) + -ia. From thea (sight) + horan (to see). Also the root of theatre (theatron: place for seeing).",
+      "related": ["theoria", "logos", "ekphrasis"]
+    },
+    {
+      "id": "tyche",
+      "term": "Tychē",
+      "native": "Τύχη",
+      "lang": "el-anc",
+      "domain": ["philosophy", "politics"],
+      "period": ["ancient-greece", "hellenistic"],
+      "definition": "Fortune, chance — the force that operates beyond human calculation and divine plan. In Thucydides, tychē is the residual that strategy cannot account for. In Hellenistic thought, she becomes a goddess — the Fortune that cannot be anticipated, the arbitrary power of circumstance. Machiavelli's fortuna is her Roman descendant. The question of how much of human affairs belongs to virtù (human agency) and how much to fortuna is the permanent question of political realism.",
+      "etymology": "Greek: from tynchanein (to happen to, to chance upon). Personified as a goddess with a wheel and a cornucopia.",
+      "related": ["kairos", "nemesis", "hamartia"]
+    },
+    {
+      "id": "agon",
+      "term": "Agōn",
+      "native": "Ἀγών",
+      "lang": "el-anc",
+      "domain": ["philosophy", "theatre", "politics"],
+      "period": ["ancient-greece"],
+      "definition": "Struggle, contest — the principle of organised conflict that the Greeks considered essential to excellence. The Olympic Games, the tragic festival, the law court, the philosophical dialogue: all are agōnes. Nietzsche's Homer's Contest argues that Greek culture was built on the agonistic impulse — the excellence-generating rivalry that required worthy opponents. Without the agōn, culture does not simply become peaceful; it becomes mediocre.",
+      "etymology": "Greek: contest, struggle. Root of agony, protagonist, antagonist.",
+      "related": ["arete", "eudaimonia", "hubris"]
+    },
+    {
+      "id": "vanitas",
+      "term": "Vanitas vanitatum",
+      "native": "vanitas vanitatum",
+      "lang": "la",
+      "domain": ["philosophy", "aesthetics"],
+      "period": ["roman", "medieval"],
+      "definition": "Vanity of vanities — the Preacher's formula that is also the best four-word theory of history. The Hebrew hevel (breath, vapour): everything is as insubstantial as breath. The Vulgate's vanitas captures the Latin sense of emptiness and vain show. The vanitas painting (skull, guttering candle, rotting fruit) is its visual theology: the beautiful things of the world exist, but they pass. Not nihilism — the Preacher asks what remains: the fear of God. But the formula survives detached from its conclusion.",
+      "etymology": "Latin vanitas (emptiness, worthlessness) + vanitatum (genitive plural). Ecclesiastes 1:2 in Jerome's Vulgate.",
+      "related": ["memento-mori", "acedia", "weltschmerz"],
+      "quotes": [
+        { "text": "Vanitas vanitatum, dixit Ecclesiastes, vanitas vanitatum et omnia vanitas.", "source": "Ecclesiastes 1:2, Vulgata" }
+      ]
+    },
+    {
+      "id": "fiat-iustitia",
+      "term": "Fiat iustitia ruat caelum",
+      "native": "fiat iustitia ruat caelum",
+      "lang": "la",
+      "domain": ["law", "philosophy"],
+      "period": ["roman", "modern"],
+      "definition": "Let justice be done though the heavens fall. The principle that makes law something other than politics: the claim that justice must be done regardless of consequences, that the calculation of outcomes cannot override the obligation to act rightly. Both the formula and its critique have been active ever since: Kant endorsed it; Mill opposed it. The phrase identifies the fault line between deontological and consequentialist ethics, and between the rule of law and reason of state.",
+      "etymology": "Fiat (let it be done) + iustitia (justice) + ruat (let it fall) + caelum (heaven). Attributed to Ferdinand I, Holy Roman Emperor; popularised by Kant.",
+      "related": ["dike", "staatsraison", "res-publica"]
+    },
+    {
+      "id": "dum-spiro-spero",
+      "term": "Dum spiro, spero",
+      "native": "dum spiro, spero",
+      "lang": "la",
+      "domain": ["philosophy"],
+      "period": ["roman"],
+      "definition": "While I breathe, I hope. Cicero's formula — the minimum philosophical position, the basis below which no further reduction is possible. Not optimism (which requires evidence) but something prior: the bare orientation toward the future that is inseparable from continued existence. Agamben: it is also the formula of biopolitics — the reduction of political life to bare life, mere breathing, survives as the last claim to significance.",
+      "etymology": "Dum (while) + spiro (I breathe, from spirare) + spero (I hope, from sperare). The alliteration is the argument: breath and hope share a root.",
+      "related": ["angst", "acedia", "toska"]
     }
   ]
 }

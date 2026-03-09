@@ -340,7 +340,7 @@ function renderTerms() {
             ${term.related && term.related.length > 0 ? `
                 <div class="term-related">
                     <em>Voir aussi :</em>
-                    <div class="entry-links">${term.related.map(r => `<span class="link-chip" onclick="searchTerm('${escapeHtml(r)}')">${escapeHtml(r)}</span>`).join('')}</div>
+                    <div class="entry-links">${term.related.map(r => `<span class="link-chip" onclick="searchTerm('${escapeJs(r)}')">${escapeHtml(r)}</span>`).join('')}</div>
                 </div>
             ` : ''}
             ${term.sources && term.sources.length > 0 ? `
@@ -486,6 +486,12 @@ function escapeHtml(str) {
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+}
+
+// Utility: escape for JavaScript string in onclick attribute
+function escapeJs(str) {
+    if (!str) return '';
+    return str.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"');
 }
 
 // Utility: debounce

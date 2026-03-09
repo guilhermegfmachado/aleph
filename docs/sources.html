@@ -262,7 +262,45 @@
             color: var(--accent);
         }
 
-        /* Mobile improvements */
+        /* Mobile improvements - 768px breakpoint */
+        @media (max-width: 768px) {
+            .view-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .controls-left, .controls-right {
+                width: 100%;
+                height: auto;
+                justify-content: space-between;
+            }
+            .search-input {
+                flex: 1;
+                width: auto;
+                min-height: 44px;
+                font-size: 1rem;
+            }
+            .ctrl-btn {
+                min-width: 44px;
+                min-height: 44px;
+            }
+            .view-toggle-btn {
+                flex: 1;
+                min-height: 44px;
+                justify-content: center;
+            }
+            #network-container {
+                display: none !important;
+            }
+            .sidebar-panel {
+                width: 100%;
+                right: -100%;
+            }
+            .sidebar-panel.open {
+                right: 0;
+            }
+        }
+
+        /* Mobile improvements - 600px breakpoint */
         @media (max-width: 600px) {
             .view-controls {
                 gap: 0.25rem;
@@ -270,25 +308,8 @@
             .controls-left, .controls-right {
                 gap: 0.25rem;
             }
-            .search-input {
-                width: 120px;
-                padding: 0.4rem 0.5rem;
-            }
-            .ctrl-btn {
-                padding: 0.5rem;
-                min-width: 36px;
-                min-height: 36px;
-            }
-            #network-container {
-                min-height: 400px;
-                touch-action: pan-x pan-y;
-            }
-            .sidebar-panel {
-                width: 85vw;
-                right: -90vw;
-            }
             .resource {
-                padding: 1rem;
+                padding: 1rem 0;
             }
             .resource-name {
                 font-size: 1rem;
@@ -480,10 +501,10 @@
             color: var(--text);
         }
 
-        /* Mobile */
+        /* Mobile - tree navigation */
         @media (max-width: 768px) {
             .sources-tree {
-                flex-direction: column;
+                display: none;
             }
             .tree-category {
                 max-width: none;
@@ -3702,6 +3723,29 @@ function updateNetwork() {
 function setView(v) {
   const list = document.getElementById('sources-list');
   const net  = document.getElementById('network-container');
+
+  // S2. D3 network — disable on mobile
+  if (v === 'network' && window.innerWidth <= 768) {
+    // Show message instead of network on mobile
+    let msg = document.getElementById('network-mobile-msg');
+    if (!msg) {
+      msg = document.createElement('p');
+      msg.id = 'network-mobile-msg';
+      msg.textContent = 'réseau disponible sur grand écran';
+      if (net && net.parentNode) {
+        net.parentNode.insertBefore(msg, net);
+      }
+    }
+    msg.style.display = 'block';
+    if (list) list.style.display = 'none';
+    if (net)  net.style.display  = 'none';
+    return;
+  }
+
+  // Hide mobile message when switching views or on desktop
+  const existingMsg = document.getElementById('network-mobile-msg');
+  if (existingMsg) existingMsg.style.display = 'none';
+
   if (v === 'network') {
     if (list) list.style.display = 'none';
     if (net)  net.style.display  = 'block';

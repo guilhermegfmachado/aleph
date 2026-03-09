@@ -3712,6 +3712,14 @@ function setView(v) {
   }
 }
 
+// Check URL for view parameter on load
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('view') === 'network') {
+    setView('network');
+  }
+})();
+
 let _rt;
 window.addEventListener('resize', () => {
   clearTimeout(_rt);

@@ -210,7 +210,7 @@ function renderCategoryFilter() {
     const sortedCategories = Array.from(categories).sort();
 
     select.innerHTML = `
-        <option value="">toutes categories</option>
+        <option value="">toutes catégories</option>
         ${sortedCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
     `;
 }
@@ -313,7 +313,7 @@ function renderTerms() {
     const terms = getFilteredTerms();
 
     if (terms.length === 0) {
-        container.innerHTML = '<p class="no-results">Aucun terme trouve.</p>';
+        container.innerHTML = '<p class="no-results">Aucun terme trouvé.</p>';
         return;
     }
 
@@ -328,8 +328,8 @@ function renderTerms() {
             </header>
             ${term.pronunciation ? `<div class="term-pronunciation">${escapeHtml(term.pronunciation)}</div>` : ''}
             <p class="term-definition">${escapeHtml(term.definition)}</p>
-            ${term.etymology ? `<p class="term-etymology"><em>Etymologie:</em> ${escapeHtml(term.etymology)}</p>` : ''}
-            ${term.usage ? `<p class="term-usage"><em>Usage:</em> ${escapeHtml(term.usage)}</p>` : ''}
+            ${term.etymology ? `<p class="term-etymology"><em>Étymologie :</em> ${escapeHtml(term.etymology)}</p>` : ''}
+            ${term.usage ? `<p class="term-usage"><em>Usage :</em> ${escapeHtml(term.usage)}</p>` : ''}
             ${term.category ? `
                 <div class="term-categories">
                     ${(Array.isArray(term.category) ? term.category : [term.category]).map(c =>
@@ -339,12 +339,13 @@ function renderTerms() {
             ` : ''}
             ${term.related && term.related.length > 0 ? `
                 <div class="term-related">
-                    <em>Voir aussi:</em> ${term.related.map(r => `<span class="related-term">${escapeHtml(r)}</span>`).join(', ')}
+                    <em>Voir aussi :</em>
+                    <div class="entry-links">${term.related.map(r => `<span class="link-chip" onclick="searchTerm('${escapeHtml(r)}')">${escapeHtml(r)}</span>`).join('')}</div>
                 </div>
             ` : ''}
             ${term.sources && term.sources.length > 0 ? `
                 <div class="term-sources">
-                    <em>Sources:</em> ${term.sources.map(s => escapeHtml(s)).join('; ')}
+                    <em>Sources :</em> ${term.sources.map(s => escapeHtml(s)).join(' ; ')}
                 </div>
             ` : ''}
         </article>
@@ -359,7 +360,7 @@ function renderQuotes() {
     const quotes = getFilteredQuotes();
 
     if (quotes.length === 0) {
-        container.innerHTML = '<p class="no-results">Aucune citation trouvee.</p>';
+        container.innerHTML = '<p class="no-results">Aucune citation trouvée.</p>';
         return;
     }
 
@@ -428,7 +429,7 @@ function handleAddTerm(e) {
     render();
 
     // Show confirmation
-    showNotification('Terme ajoute');
+    showNotification('Terme ajouté');
 }
 
 // Handle add quote form
@@ -468,7 +469,7 @@ function handleAddQuote(e) {
     render();
 
     // Show confirmation
-    showNotification('Citation ajoutee');
+    showNotification('Citation ajoutée');
 }
 
 // Utility: format year (handle BCE)
@@ -513,8 +514,21 @@ function showNotification(message) {
     }, 2000);
 }
 
-// Make toggleLang available globally
+// Search for a specific term (used by link-chips)
+function searchTerm(term) {
+    const searchInput = document.getElementById('glossary-search');
+    if (searchInput) {
+        searchInput.value = term;
+        glossaire.searchQuery = term.toLowerCase();
+        render();
+        // Scroll to top of results
+        document.getElementById('terms-view')?.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Make toggleLang and searchTerm available globally
 window.toggleLang = toggleLang;
+window.searchTerm = searchTerm;
 
 // Initialize when DOM ready
 document.addEventListener('DOMContentLoaded', init);

@@ -1785,6 +1785,34 @@ footer a:hover {
     color: var(--accent);
 }
 
+.link-chip {
+    display: inline-block;
+    cursor: pointer;
+    padding: 2px 8px;
+    margin: 2px 3px 2px 0;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 0.85em;
+    font-family: inherit;
+    color: var(--text);
+    background: transparent;
+    transition: background 0.15s, color 0.15s;
+    user-select: none;
+}
+
+.link-chip:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+.entry-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+}
+
 /* Quote cards */
 .quotes-list {
     display: flex;

@@ -12,61 +12,57 @@
     <link rel="canonical" href="https://guilhermegfmachado.github.io/aleph/browse.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#070809">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="index.html">א</a></h1>
-            <nav>
-                <a href="index.html">chercher</a>
-                <a href="browse.html" class="active" aria-current="page">parcourir</a>
-                <a href="glossaire.html">glossaire</a>
-                <a href="sources.html">références</a>
-            </nav>
-        </header>
+    <nav>
+        <a href="index.html" class="nav-logo">א</a>
+        <ul class="nav-links">
+            <li><a href="index.html">chercher</a></li>
+            <li><a href="browse.html" class="active">parcourir</a></li>
+            <li><a href="glossaire.html">glossaire</a></li>
+            <li><a href="sources.html">références</a></li>
+        </ul>
+    </nav>
 
-        <main>
-            <div class="search-filters browse-filters-bar">
-                <select id="type-filter">
-                    <option value="">tous les types</option>
-                </select>
-                <select id="author-filter">
-                    <option value="">tous les auteurs</option>
-                </select>
-                <select id="source-filter">
-                    <option value="">toutes les sources</option>
-                </select>
-                <select id="fav-filter">
-                    <option value="">tous les textes</option>
-                    <option value="favorites">★ favoris</option>
-                </select>
-                <select id="sort-filter">
-                    <option value="title">trier : titre</option>
-                    <option value="author">trier : auteur</option>
-                    <option value="type">trier : type</option>
-                </select>
-            </div>
+    <main class="browse-page">
+        <div class="browse-header">
+            <h1 class="browse-title">Parcourir <em>la bibliothèque</em></h1>
+            <div class="browse-count" id="browseCount"><span id="total-books">0</span> textes · <span id="total-sources">0</span> sources</div>
+        </div>
 
-            <div class="browse-stats" id="catalog-stats">
-                <span id="total-books">0</span> textes · <span id="total-sources">0</span> sources
-            </div>
+        <div class="browse-filters">
+            <select id="type-filter" class="filter-select">
+                <option value="">tous les types</option>
+            </select>
+            <select id="author-filter" class="filter-select">
+                <option value="">tous les auteurs</option>
+            </select>
+            <select id="source-filter" class="filter-select">
+                <option value="">toutes les sources</option>
+            </select>
+            <select id="fav-filter" class="filter-select">
+                <option value="">tous les textes</option>
+                <option value="favorites">favoris</option>
+            </select>
+            <select id="sort-filter" class="filter-select">
+                <option value="title">trier : titre</option>
+                <option value="author">trier : auteur</option>
+                <option value="type">trier : type</option>
+            </select>
+        </div>
 
-            <div id="book-list" class="results">
-                <div class="loading">chargement...</div>
-            </div>
+        <div id="book-list" class="browse-list">
+            <div class="loading">chargement...</div>
+        </div>
 
-            <div id="pagination" class="pagination"></div>
-        </main>
-
-        <footer>
-            <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
-        </footer>
-    </div>
+        <div id="pagination" class="pagination"></div>
+    </main>
 
     <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
-    <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
     <script src="app.js"></script>
     <script>initBrowse();</script>
 </body>

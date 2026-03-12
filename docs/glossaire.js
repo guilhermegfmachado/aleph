@@ -37,31 +37,8 @@ const LANG_NAMES = {
     sw: 'Swahili'
 };
 
-// Dark mode
-function initDarkMode() {
-    if (localStorage.getItem('aleph_dark') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
-    updateThemeButton();
-}
-
-function toggleTheme() {
-    const isDark = document.body.classList.toggle('dark-mode');
-    localStorage.setItem('aleph_dark', isDark);
-    updateThemeButton();
-}
-window.toggleTheme = toggleTheme;
-
-function updateThemeButton() {
-    const btn = document.querySelector('.theme-toggle-fixed');
-    if (btn) {
-        btn.textContent = document.body.classList.contains('dark-mode') ? '○' : '●';
-    }
-}
-
 // Initialize
 async function init() {
-    initDarkMode();
     await loadData();
     setupEventListeners();
     renderLanguageFilters();

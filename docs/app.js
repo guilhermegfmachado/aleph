@@ -16,8 +16,7 @@ const library = {
 // Favorites & Reading Progress (localStorage)
 const userPrefs = {
     favorites: JSON.parse(localStorage.getItem('aleph_favorites') || '[]'),
-    readingProgress: JSON.parse(localStorage.getItem('aleph_progress') || '{}'),
-    darkMode: localStorage.getItem('aleph_dark') === 'true'
+    readingProgress: JSON.parse(localStorage.getItem('aleph_progress') || '{}')
 };
 
 function saveFavorites() {
@@ -54,30 +53,6 @@ function getReadingProgress(bookId) {
     return userPrefs.readingProgress[String(bookId)] || 0;
 }
 
-// Dark mode toggle
-function initDarkMode() {
-    if (localStorage.getItem('aleph_dark') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
-    updateThemeButton();
-}
-
-function toggleTheme() {
-    const isDark = document.body.classList.toggle('dark-mode');
-    localStorage.setItem('aleph_dark', isDark);
-    updateThemeButton();
-}
-window.toggleTheme = toggleTheme;
-
-function updateThemeButton() {
-    const btn = document.querySelector('.theme-toggle-fixed');
-    if (btn) {
-        btn.textContent = document.body.classList.contains('dark-mode') ? '○' : '●';
-    }
-}
-
-// Initialize dark mode immediately
-initDarkMode();
 
 // IndexedDB
 async function openDB() {
@@ -517,12 +492,6 @@ async function doCorpusSearch(query, authorFilter, categoryFilter) {
 
 // Init search page
 document.addEventListener('DOMContentLoaded', async () => {
-    // Apply saved dark mode
-    if (localStorage.getItem('aleph_dark') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
-    updateThemeButton();
-
     // Only run on the search page (index.html)
     const input = document.getElementById('search-input');
     if (!input) return;

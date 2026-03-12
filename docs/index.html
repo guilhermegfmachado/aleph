@@ -14,8 +14,10 @@
     <link rel="canonical" href="https://guilhermegfmachado.github.io/aleph/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#070809">
     <link rel="preload" href="corpus/index.json" as="fetch" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
     {
@@ -42,38 +44,40 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>א</h1>
-            <nav>
-                <a href="index.html" class="active" aria-current="page">chercher</a>
-                <a href="browse.html">parcourir</a>
-                <a href="glossaire.html">glossaire</a>
-                <a href="sources.html">références</a>
-            </nav>
-        </header>
+    <nav>
+        <a href="index.html" class="nav-logo">א</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">chercher</a></li>
+            <li><a href="browse.html">parcourir</a></li>
+            <li><a href="glossaire.html">glossaire</a></li>
+            <li><a href="sources.html">références</a></li>
+        </ul>
+    </nav>
 
-        <main>
-            <div class="landing-hero">
-                <a href="sources.html?view=network" class="main-ball" id="main-ball">
-                    <span class="ball-symbol">א</span>
-                </a>
-                <div class="search-box landing-search">
-                    <input type="search" id="search-input" placeholder="chercher titres, auteurs, ou tout mot dans le texte..." autofocus>
-                </div>
-            </div>
+    <main class="home-main">
+        <div class="home-glyph">א</div>
 
-            <div id="results" class="results">
-            </div>
-        </main>
+        <div class="home-search-wrap">
+            <input
+                type="text"
+                class="home-search"
+                id="search-input"
+                placeholder="chercher titres, auteurs, ou tout terme..."
+                autocomplete="off"
+            >
+            <div class="home-search-results" id="searchResults"></div>
+        </div>
 
-        <footer>
-            <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
-        </footer>
-    </div>
+        <p class="home-palindrome">in girum imus nocte et consumimur igni</p>
+    </main>
 
-    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
-    <button class="theme-toggle-fixed" onclick="toggleTheme()" title="thème" aria-label="Toggle theme">●</button>
+    <div id="results" class="results"></div>
+
+    <footer class="home-footer">
+        <a href="https://guilhermegfmachado.github.io/work/" class="footer-link">gmfm</a>
+        <span class="footer-dot">●</span>
+    </footer>
+
     <script src="app.js"></script>
 </body>
 </html>

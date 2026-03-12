@@ -2066,39 +2066,6 @@
       "related": ["inc", "llc"]
     },
     {
-      "id": "10-k",
-      "term": "10-K",
-      "native": "Form 10-K",
-      "lang": "en",
-      "domain": ["law", "commerce"],
-      "period": ["modern"],
-      "definition": "Annual report required by SEC for US public companies. Comprehensive overview of financial condition: audited financial statements, MD&A (management discussion), risk factors, executive compensation. Filed within 60-90 days after fiscal year end.",
-      "etymology": "SEC form designation.",
-      "related": ["10-q", "8-k", "sec-edgar"]
-    },
-    {
-      "id": "10-q",
-      "term": "10-Q",
-      "native": "Form 10-Q",
-      "lang": "en",
-      "domain": ["law", "commerce"],
-      "period": ["modern"],
-      "definition": "Quarterly report required by SEC for US public companies. Unaudited financial statements, MD&A updates. Filed within 40-45 days after each of first three fiscal quarters.",
-      "etymology": "SEC form designation — Q for quarterly.",
-      "related": ["10-k", "8-k"]
-    },
-    {
-      "id": "8-k",
-      "term": "8-K",
-      "native": "Form 8-K",
-      "lang": "en",
-      "domain": ["law", "commerce"],
-      "period": ["modern"],
-      "definition": "Current report for material events at US public companies. Must be filed within 4 business days of triggering event: acquisitions, departures of officers, amendments to articles, bankruptcy, delisting. The mechanism for real-time disclosure.",
-      "etymology": "SEC form designation.",
-      "related": ["10-k", "10-q"]
-    },
-    {
       "id": "vie-structure",
       "term": "VIE Structure",
       "native": "Variable Interest Entity",

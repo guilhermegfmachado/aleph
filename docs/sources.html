@@ -57,7 +57,10 @@
 
             <!-- Network View -->
             <div id="network-container" style="width:100%;height:500px;display:none;"></div>
-            <p class="network-mobile-msg" style="display:none;">réseau disponible sur grand écran</p>
+            <div class="network-mobile-msg">
+                <span>réseau disponible sur grand écran</span>
+                <button onclick="setView('list')">fermer</button>
+            </div>
 
             <!-- List View -->
             <div id="sources-list">
@@ -2859,6 +2862,13 @@
                     link.addEventListener('click', () => trackVisit(link.textContent, link.href));
                 }
             });
+
+            // H3 subsection collapse/expand
+            document.querySelectorAll('.source-section .content h3').forEach(h3 => {
+                h3.addEventListener('click', () => {
+                    h3.classList.toggle('collapsed');
+                });
+            });
         })();
     </script>
     </div>
@@ -3107,17 +3117,18 @@ function setView(v) {
   if (v === 'network') {
     const isMobile = window.innerWidth <= 900;
     if (isMobile) {
-      if (msg)  { msg.style.display = 'flex'; msg.style.flexDirection = 'column'; msg.style.alignItems = 'center'; msg.style.gap = '0.5rem'; }
-      if (list) list.style.display = 'none';
+      // Show message as overlay, keep list visible behind it
+      if (msg) msg.classList.add('show');
+      if (list) list.style.display = 'block';
       if (net)  net.style.display  = 'none';
       return;
     }
-    if (msg)  msg.style.display = 'none';
+    if (msg) msg.classList.remove('show');
     if (list) list.style.display = 'none';
     if (net)  net.style.display  = 'block';
     if (!_built) initNetwork();
   } else {
-    if (msg)  msg.style.display = 'none';
+    if (msg) msg.classList.remove('show');
     if (list) list.style.display = 'block';
     if (net)  net.style.display  = 'none';
   }
@@ -3143,29 +3154,7 @@ window.addEventListener('resize', () => {
   }, 150);
 });
 
-// ── Theme toggle ──────────────────────────────────────────────
-(function() {
-    function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('aleph-theme', theme);
-        var btn = document.getElementById('themeToggle');
-        if (btn) btn.innerHTML = theme === 'dark' ? '&#9681;' : '&#9680;';
-    }
-
-    var saved = localStorage.getItem('aleph-theme') || 'dark';
-    applyTheme(saved);
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var btn = document.getElementById('themeToggle');
-        if (btn) {
-            btn.innerHTML = (localStorage.getItem('aleph-theme') || 'dark') === 'dark' ? '&#9681;' : '&#9680;';
-            btn.addEventListener('click', function() {
-                var current = document.documentElement.getAttribute('data-theme') || 'dark';
-                applyTheme(current === 'dark' ? 'light' : 'dark');
-            });
-        }
-    });
-})();
+// Theme toggle is handled by app.js
 </script>
 </body>
 </html>

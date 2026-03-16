@@ -297,7 +297,9 @@ nav {
   cursor: pointer; transition: background 0.07s;
   display: grid; grid-template-columns: 1fr auto;
   gap: 0.25rem 1rem; align-items: start;
+  border-bottom: 1px solid var(--border);
 }
+.browse-card:last-child { border-bottom: none; }
 .browse-card:hover { background: rgba(201,168,76,0.03); }
 
 .bc-meta {
@@ -307,26 +309,34 @@ nav {
 }
 
 .bc-title {
-  font-family: var(--serif); font-size: 1.05rem;
+  font-family: var(--serif); font-size: 1.1rem;
   font-weight: 400; color: var(--bright); line-height: 1.25;
   grid-column: 1;
 }
 
+.bc-title a {
+  color: var(--bright);
+  text-decoration: none;
+}
+.bc-title a:hover { color: var(--accent); }
+
 .bc-author {
   font-size: 0.68rem; color: var(--text); grid-column: 1;
   margin-top: 0.2rem;
+  font-style: italic;
 }
 
 .bc-detail {
-  font-size: 0.63rem; color: var(--text); line-height: 1.6;
+  font-size: 0.6rem; color: var(--dim); line-height: 1.6;
   grid-column: 1; margin-top: 0.35rem;
 }
 
 .bc-star {
   grid-column: 2; grid-row: 1 / 4; align-self: center;
-  font-size: 0.7rem; color: var(--dim); cursor: pointer;
+  font-size: 1rem; color: var(--dim); cursor: pointer;
   transition: color 0.1s;
   background: none; border: none;
+  font-family: inherit;
 }
 .bc-star.starred, .bc-star:hover { color: var(--accent); }
 
@@ -629,6 +639,49 @@ nav {
   margin-bottom: 0;
 }
 
+.source-section summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.source-section summary::-webkit-details-marker { display: none; }
+
+.source-section summary h2 {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 0;
+  display: inline-block;
+  transition: color 0.12s;
+}
+.source-section summary:hover h2 { color: var(--bright); }
+.source-section[open] summary h2 { color: var(--accent); }
+
+.source-section .content {
+  padding: 1rem 0 1.5rem;
+}
+
+.source-section .content h3 {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 1.5rem 0 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: color 0.12s;
+}
+.source-section .content h3:first-child { margin-top: 0; }
+.source-section .content h3:hover { color: var(--bright); }
+.source-section .content h3.collapsed + .resources { display: none; }
+
 .source-section-head {
   display: flex; align-items: center; gap: 1rem;
   padding: 0.9rem 0; border-bottom: 1px solid var(--border);
@@ -717,20 +770,7 @@ nav {
   color: var(--dim); text-align: center; white-space: nowrap;
 }
 
-/* On mobile - hide network, show message */
-@media (max-width: 768px) {
-  .network-container { display: none; }
-  .network-mobile-msg {
-    margin-top: 1.5rem; padding: 1rem;
-    border: 1px solid var(--border);
-    font-size: 0.65rem; color: var(--dim);
-    text-align: center; letter-spacing: 0.06em;
-    display: block;
-  }
-}
-@media (min-width: 769px) {
-  .network-mobile-msg { display: none; }
-}
+/* Note: network-mobile-msg is controlled via JS with .show class */
 
 /* ===========================================
    MOBILE GLOBAL FIXES
@@ -1015,4 +1055,172 @@ nav {
 /* Glossary view */
 .glossary-view {
   /* Container for terms/quotes view */
+}
+
+/* ===========================================
+   SIDEBAR / FAVORIS PANEL (sources.html)
+   =========================================== */
+.sidebar-panel {
+  position: fixed;
+  top: 48px;
+  right: 0;
+  width: 320px;
+  max-width: 90vw;
+  height: calc(100vh - 48px);
+  background: var(--bg2);
+  border-left: 1px solid var(--border);
+  z-index: 150;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-panel.open {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg2);
+}
+
+.sidebar-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--bright);
+}
+
+.sidebar-close {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--dim);
+  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.12s, border-color 0.12s;
+}
+.sidebar-close:hover {
+  color: var(--bright);
+  border-color: var(--bright);
+}
+
+.sidebar-section {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-section:last-child { border-bottom: none; }
+
+.sidebar-section h4 {
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 0 0 0.8rem;
+  font-weight: 400;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-item:last-child { border-bottom: none; }
+
+.sidebar-item a {
+  font-size: 0.7rem;
+  color: var(--text);
+  text-decoration: none;
+  flex: 1;
+  transition: color 0.12s;
+}
+.sidebar-item a:hover { color: var(--accent); }
+
+.sidebar-item .remove-btn {
+  background: none;
+  border: none;
+  color: var(--dim);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0 0.3rem;
+  transition: color 0.12s;
+}
+.sidebar-item .remove-btn:hover { color: var(--accent); }
+
+.sidebar-empty {
+  font-size: 0.65rem;
+  color: var(--dim);
+  font-style: italic;
+}
+
+.sidebar-export {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  transition: color 0.12s, border-color 0.12s;
+}
+.sidebar-export:hover {
+  color: var(--bright);
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* ===========================================
+   MOBILE NETWORK MESSAGE OVERLAY
+   =========================================== */
+.network-mobile-msg {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  z-index: 100;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.network-mobile-msg.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.network-mobile-msg button {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: color 0.12s, border-color 0.12s;
+}
+.network-mobile-msg button:hover {
+  color: var(--bright);
+  border-color: rgba(255,255,255,0.15);
 }

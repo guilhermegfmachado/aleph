@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(function(){var t=localStorage.getItem('aleph-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
     <title>aleph — références</title>
     <meta name="description" content="Répertoire de ressources numériques pour la recherche : bibliothèques nationales, archives, bases de données académiques.">
     <meta name="author" content="Guilherme de G. F. Machado">
@@ -14,7 +15,8 @@
     <link rel="apple-touch-icon" href="favicon.svg">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 </head>
@@ -27,6 +29,7 @@
             <li><a href="glossaire.html">glossaire</a></li>
             <li><a href="sources.html" class="active">références</a></li>
         </ul>
+        <button class="nav-theme-btn" id="themeToggle" aria-label="basculer thème" title="thème clair / sombre">&#9681;</button>
     </nav>
 
     <div class="sources-page">
@@ -3094,22 +3097,27 @@ function setView(v) {
   const net  = document.getElementById('network-container');
   const msg  = document.querySelector('.network-mobile-msg');
 
-  // D3 network — disable on mobile
-  if (v === 'network' && window.innerWidth <= 768) {
-    if (msg)  msg.style.display = 'block';
-    if (list) list.style.display = 'none';
-    if (net)  net.style.display  = 'none';
-    return;
-  }
-
-  // Hide mobile message when switching views or on desktop
-  if (msg) msg.style.display = 'none';
+  // Update toggle button states
+  document.querySelectorAll('.view-toggle-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === v ||
+      (v === 'list' && btn.textContent.includes('liste')) ||
+      (v === 'network' && btn.textContent.includes('réseau')));
+  });
 
   if (v === 'network') {
+    const isMobile = window.innerWidth <= 900;
+    if (isMobile) {
+      if (msg)  { msg.style.display = 'flex'; msg.style.flexDirection = 'column'; msg.style.alignItems = 'center'; msg.style.gap = '0.5rem'; }
+      if (list) list.style.display = 'none';
+      if (net)  net.style.display  = 'none';
+      return;
+    }
+    if (msg)  msg.style.display = 'none';
     if (list) list.style.display = 'none';
     if (net)  net.style.display  = 'block';
     if (!_built) initNetwork();
   } else {
+    if (msg)  msg.style.display = 'none';
     if (list) list.style.display = 'block';
     if (net)  net.style.display  = 'none';
   }
@@ -3134,6 +3142,30 @@ window.addEventListener('resize', () => {
     if (_svg) _svg.attr('width', _w).attr('height', _h).attr('viewBox', `0 0 ${_w} ${_h}`);
   }, 150);
 });
+
+// ── Theme toggle ──────────────────────────────────────────────
+(function() {
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('aleph-theme', theme);
+        var btn = document.getElementById('themeToggle');
+        if (btn) btn.innerHTML = theme === 'dark' ? '&#9681;' : '&#9680;';
+    }
+
+    var saved = localStorage.getItem('aleph-theme') || 'dark';
+    applyTheme(saved);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('themeToggle');
+        if (btn) {
+            btn.innerHTML = (localStorage.getItem('aleph-theme') || 'dark') === 'dark' ? '&#9681;' : '&#9680;';
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme') || 'dark';
+                applyTheme(current === 'dark' ? 'light' : 'dark');
+            });
+        }
+    });
+})();
 </script>
 </body>
 </html>

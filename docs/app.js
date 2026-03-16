@@ -1382,3 +1382,28 @@ function detectLanguage(text) {
 document.addEventListener('DOMContentLoaded', () => {
     initTranslation();
 });
+
+// ── Theme toggle ──────────────────────────────────────────────
+(function() {
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('aleph-theme', theme);
+        var btn = document.getElementById('themeToggle');
+        if (btn) btn.innerHTML = theme === 'dark' ? '&#9681;' : '&#9680;';
+    }
+
+    // Apply on load (in case anti-flash script ran before btn existed)
+    var saved = localStorage.getItem('aleph-theme') || 'dark';
+    applyTheme(saved);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('themeToggle');
+        if (btn) {
+            btn.innerHTML = (localStorage.getItem('aleph-theme') || 'dark') === 'dark' ? '&#9681;' : '&#9680;';
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme') || 'dark';
+                applyTheme(current === 'dark' ? 'light' : 'dark');
+            });
+        }
+    });
+})();

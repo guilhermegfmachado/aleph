@@ -49,23 +49,37 @@ async function init() {
 
 // Load glossary and quotes data
 async function loadData() {
+    const statsEl = document.querySelector('.glossaire-stats');
     try {
         const [glossaryRes, quotesRes] = await Promise.all([
             fetch('data/glossary.json'),
             fetch('data/quotes.json')
         ]);
 
+        if (!glossaryRes.ok) throw new Error(`glossary.json: ${glossaryRes.status}`);
+        if (!quotesRes.ok)   throw new Error(`quotes.json: ${quotesRes.status}`);
+
         const glossaryData = await glossaryRes.json();
-        const quotesData = await quotesRes.json();
+        const quotesData   = await quotesRes.json();
 
-        glossaire.terms = glossaryData.terms || [];
-        glossaire.quotes = quotesData.quotes || [];
+        glossaire.terms  = glossaryData.terms  || [];
+        glossaire.quotes = quotesData.quotes   || [];
 
-        // Merge user-added entries
-        glossaire.terms = [...glossaire.terms, ...glossaire.userTerms];
+        // Merge user-added entries from localStorage
+        glossaire.terms  = [...glossaire.terms,  ...glossaire.userTerms];
         glossaire.quotes = [...glossaire.quotes, ...glossaire.userQuotes];
+
     } catch (err) {
         console.error('Failed to load glossary data:', err);
+        // Show error in UI rather than silent failure
+        if (statsEl) {
+            statsEl.innerHTML = `<span style="color:var(--accent);opacity:0.6;font-size:0.6rem;letter-spacing:0.1em">
+                erreur de chargement — ${err.message}
+            </span>`;
+        }
+        // Fallback: use only user-added entries
+        glossaire.terms  = [...glossaire.userTerms];
+        glossaire.quotes = [...glossaire.userQuotes];
     }
 }
 
@@ -515,3 +529,28 @@ window.searchTerm = searchTerm;
 
 // Initialize when DOM ready
 document.addEventListener('DOMContentLoaded', init);
+
+// ── Theme toggle ──────────────────────────────────────────────
+(function() {
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('aleph-theme', theme);
+        var btn = document.getElementById('themeToggle');
+        if (btn) btn.innerHTML = theme === 'dark' ? '&#9681;' : '&#9680;';
+    }
+
+    // Apply on load (in case anti-flash script ran before btn existed)
+    var saved = localStorage.getItem('aleph-theme') || 'dark';
+    applyTheme(saved);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('themeToggle');
+        if (btn) {
+            btn.innerHTML = (localStorage.getItem('aleph-theme') || 'dark') === 'dark' ? '&#9681;' : '&#9680;';
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme') || 'dark';
+                applyTheme(current === 'dark' ? 'light' : 'dark');
+            });
+        }
+    });
+})();

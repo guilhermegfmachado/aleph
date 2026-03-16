@@ -1,6 +1,4 @@
-/* aleph - V8 Dark Theme */
-
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&display=swap');
+/* aleph - V8 Dark/Light Theme */
 
 :root {
   --bg:      #070809;
@@ -11,8 +9,20 @@
   --bright:  #edeae4;
   --dim:     #424240;
   --accent:  #c9a84c;
-  --mono:    'Geist Mono', monospace;
+  --mono:    'Geist Mono', 'Courier New', monospace;
   --serif:   'Instrument Serif', Georgia, serif;
+  --sans:    'Inter', system-ui, sans-serif;
+}
+
+:root[data-theme="light"] {
+  --bg:      #f5f2ec;
+  --bg2:     #ede9e0;
+  --bg3:     #e4e0d6;
+  --border:  rgba(0,0,0,0.09);
+  --text:    #5a5650;
+  --bright:  #1a1916;
+  --dim:     #9a9690;
+  --accent:  #7a5c18;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,14 +32,15 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--mono);
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: 14px;
   line-height: 1.7;
   overflow-x: hidden;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 48px;
+  transition: background 0.2s, color 0.2s;
 }
 
 /* Subtle grain overlay on all pages */
@@ -86,6 +97,24 @@ nav {
   color: var(--bright);
   background: rgba(255,255,255,0.025);
 }
+
+.nav-theme-btn {
+  height: 48px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-left: 1px solid var(--border);
+  color: var(--dim);
+  cursor: pointer;
+  font-size: 1rem;
+  flex-shrink: 0;
+  transition: color 0.12s;
+  margin-left: auto;
+}
+.nav-theme-btn:hover { color: var(--bright); }
 
 /* ===========================================
    HOMEPAGE (index.html)
@@ -158,6 +187,28 @@ nav {
 .sri-meta {
   font-size: 0.58rem; letter-spacing: 0.08em;
   color: var(--dim); margin-top: 0.15rem;
+}
+
+.home-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--text);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  font-style: italic;
+  margin-top: -1rem;
+  opacity: 0.7;
+}
+
+.home-desc {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--dim);
+  text-align: center;
+  max-width: 340px;
+  line-height: 1.8;
+  margin-top: -0.5rem;
 }
 
 .home-palindrome {

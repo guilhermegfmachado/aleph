@@ -1,14 +1,19 @@
-// glossaire.js - Glossary and Quotes viewer
+// glossaire.js - Complete rewrite
 
 const glossaire = {
     terms: [],
     quotes: [],
-    userTerms: JSON.parse(localStorage.getItem('aleph_user_terms') || '[]'),
-    userQuotes: JSON.parse(localStorage.getItem('aleph_user_quotes') || '[]'),
-    currentView: 'terms',
-    activeLangs: new Set(),
+    userTerms: [],
+    userQuotes: [],
+    activeLang: null,
     searchQuery: '',
     selectedCategory: ''
+};
+
+// Data feeds
+const FEEDS = {
+    glossary: 'data/glossary.json',
+    quotes: 'data/quotes.json'
 };
 
 // Language display names
@@ -22,7 +27,7 @@ const LANG_NAMES = {
     zh: '中文',
     el: 'Ελληνικά',
     'el-anc': 'Ελληνικά (Classical)',
-    'el-mod': 'Ελληνικά (Modern/Junta)',
+    'el-mod': 'Ελληνικά (Modern)',
     la: 'Latina',
     es: 'Español',
     ru: 'Русский',
@@ -37,209 +42,140 @@ const LANG_NAMES = {
     sw: 'Swahili'
 };
 
-// Initialize
+// ============ INIT ============
 async function init() {
+    glossaire.userTerms  = JSON.parse(localStorage.getItem('aleph_user_terms')  || '[]');
+    glossaire.userQuotes = JSON.parse(localStorage.getItem('aleph_user_quotes') || '[]');
     await loadData();
-    setupEventListeners();
-    renderLanguageFilters();
-    renderCategoryFilter();
+    buildLangPills();
+    buildCatFilter();
+    renderTerms();
     updateStats();
-    render();
 
-    // Check for URL search parameter and apply it
-    const urlParams = new URLSearchParams(window.location.search);
-    const q = urlParams.get('q');
-    if (q) {
-        const searchInput = document.getElementById('glossary-search');
-        if (searchInput) {
-            searchInput.value = q;
-            glossaire.searchQuery = q.toLowerCase();
-            render();
-        }
-    }
+    // Setup event listeners
+    setupSearch();
+    setupModal();
+    setupAddEntryForm();
+    setupUrlParams();
 }
+document.addEventListener('DOMContentLoaded', init);
 
-// Load glossary and quotes data
+// ============ DATA LOADING ============
 async function loadData() {
-    const statsEl = document.querySelector('.glossaire-stats');
     try {
         const [glossaryRes, quotesRes] = await Promise.all([
-            fetch('data/glossary.json'),
-            fetch('data/quotes.json')
+            fetch(FEEDS.glossary),
+            fetch(FEEDS.quotes)
         ]);
 
-        if (!glossaryRes.ok) throw new Error(`glossary.json: ${glossaryRes.status}`);
-        if (!quotesRes.ok)   throw new Error(`quotes.json: ${quotesRes.status}`);
+        if (glossaryRes.ok) {
+            const glossaryData = await glossaryRes.json();
+            glossaire.terms = glossaryData.terms || [];
+        }
 
-        const glossaryData = await glossaryRes.json();
-        const quotesData   = await quotesRes.json();
+        if (quotesRes.ok) {
+            const quotesData = await quotesRes.json();
+            glossaire.quotes = quotesData.quotes || [];
+        }
 
-        glossaire.terms  = glossaryData.terms  || [];
-        glossaire.quotes = quotesData.quotes   || [];
-
-        // Merge user-added entries from localStorage
-        glossaire.terms  = [...glossaire.terms,  ...glossaire.userTerms];
+        // Merge user-added entries
+        glossaire.terms = [...glossaire.terms, ...glossaire.userTerms];
         glossaire.quotes = [...glossaire.quotes, ...glossaire.userQuotes];
 
     } catch (err) {
         console.error('Failed to load glossary data:', err);
-        // Show error in UI rather than silent failure
-        if (statsEl) {
-            statsEl.innerHTML = `<span style="color:var(--accent);opacity:0.6;font-size:0.6rem;letter-spacing:0.1em">
-                erreur de chargement — ${err.message}
-            </span>`;
-        }
-        // Fallback: use only user-added entries
-        glossaire.terms  = [...glossaire.userTerms];
+        glossaire.terms = [...glossaire.userTerms];
         glossaire.quotes = [...glossaire.userQuotes];
     }
 }
 
-// Event listeners
-function setupEventListeners() {
-    // Tab switching
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const view = btn.dataset.view;
-            setView(view);
-        });
-    });
-
-    // Search
-    const searchInput = document.getElementById('glossary-search');
-    if (searchInput) {
-        searchInput.addEventListener('input', debounce(e => {
-            glossaire.searchQuery = e.target.value.toLowerCase();
-            render();
-        }, 200));
-    }
-
-    // Category filter
-    const categorySelect = document.getElementById('category-select');
-    if (categorySelect) {
-        categorySelect.addEventListener('change', e => {
-            glossaire.selectedCategory = e.target.value;
-            render();
-        });
-    }
-
-    // Entry type toggle (add form)
-    document.querySelectorAll('.entry-type-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.entry-type-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const type = btn.dataset.type;
-            document.getElementById('add-term-form').classList.toggle('hidden', type !== 'term');
-            document.getElementById('add-quote-form').classList.toggle('hidden', type !== 'quote');
-        });
-    });
-
-    // Add term form
-    const termForm = document.getElementById('add-term-form');
-    if (termForm) {
-        termForm.addEventListener('submit', handleAddTerm);
-    }
-
-    // Add quote form
-    const quoteForm = document.getElementById('add-quote-form');
-    if (quoteForm) {
-        quoteForm.addEventListener('submit', handleAddQuote);
-    }
-}
-
-// Set view (terms or quotes)
-function setView(view) {
-    glossaire.currentView = view;
-
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.view === view);
-    });
-
-    document.getElementById('terms-view').classList.toggle('hidden', view !== 'terms');
-    document.getElementById('quotes-view').classList.toggle('hidden', view !== 'quotes');
-
-    render();
-}
-
-// Language filter handling
-function toggleLang(lang) {
-    if (glossaire.activeLangs.has(lang)) {
-        glossaire.activeLangs.delete(lang);
-    } else {
-        glossaire.activeLangs.add(lang);
-    }
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', glossaire.activeLangs.has(btn.dataset.lang));
-    });
-
-    render();
-}
-
-// Render language filter buttons
-function renderLanguageFilters() {
-    const container = document.getElementById('lang-filters');
+// ============ LANG PILLS ============
+function buildLangPills() {
+    const container = document.getElementById('langPills');
     if (!container) return;
 
-    // Get all unique languages from terms and quotes
+    // Get unique languages from loaded data
     const langs = new Set();
-    glossaire.terms.forEach(t => langs.add(t.lang));
-    glossaire.quotes.forEach(q => langs.add(q.lang));
+    glossaire.terms.forEach(t => { if (t.lang) langs.add(t.lang); });
+    glossaire.quotes.forEach(q => { if (q.lang) langs.add(q.lang); });
 
-    // Sort by language code
     const sortedLangs = Array.from(langs).sort();
+    container.innerHTML = '';
 
-    container.innerHTML = sortedLangs.map(lang => `
-        <button class="lang-btn" data-lang="${lang}" onclick="toggleLang('${lang}')">
-            ${LANG_NAMES[lang] || lang}
-        </button>
-    `).join('');
+    sortedLangs.forEach(lang => {
+        const pill = document.createElement('button');
+        pill.className = 'lang-pill';
+        pill.dataset.lang = lang;
+        pill.textContent = LANG_NAMES[lang] || lang;
+        pill.addEventListener('click', () => handleLangPillClick(lang, pill));
+        container.appendChild(pill);
+    });
 }
 
-// Render category filter dropdown
-function renderCategoryFilter() {
-    const select = document.getElementById('category-select');
+function handleLangPillClick(lang, pill) {
+    if (glossaire.activeLang === lang) {
+        // Clicking active pill deselects it (shows all)
+        glossaire.activeLang = null;
+        pill.classList.remove('active');
+    } else {
+        // Deactivate all, activate this one
+        document.querySelectorAll('.lang-pill').forEach(p => p.classList.remove('active'));
+        glossaire.activeLang = lang;
+        pill.classList.add('active');
+    }
+    renderTerms();
+    updateStats();
+}
+
+// ============ CATEGORY FILTER ============
+function buildCatFilter() {
+    const select = document.getElementById('catFilter');
     if (!select) return;
 
-    // Get all unique categories from terms
+    // Get unique categories
     const categories = new Set();
     glossaire.terms.forEach(t => {
         if (t.category) {
-            (Array.isArray(t.category) ? t.category : [t.category]).forEach(c => categories.add(c));
+            const cats = Array.isArray(t.category) ? t.category : [t.category];
+            cats.forEach(c => categories.add(c));
         }
     });
 
-    const sortedCategories = Array.from(categories).sort();
+    const sortedCats = Array.from(categories).sort();
 
-    select.innerHTML = `
-        <option value="">toutes catégories</option>
-        ${sortedCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
-    `;
+    select.innerHTML = '<option value="">toutes catégories</option>';
+    sortedCats.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat;
+        opt.textContent = cat;
+        select.appendChild(opt);
+    });
+
+    select.addEventListener('change', () => {
+        glossaire.selectedCategory = select.value;
+        renderTerms();
+        updateStats();
+    });
 }
 
-// Update stats display
-function updateStats() {
-    const termCount = document.getElementById('term-count');
-    const quoteCount = document.getElementById('quote-count');
-    const langCount = document.getElementById('lang-count');
+// ============ SEARCH ============
+function setupSearch() {
+    const searchInput = document.getElementById('glossSearch');
+    if (!searchInput) return;
 
-    if (termCount) termCount.textContent = glossaire.terms.length;
-    if (quoteCount) quoteCount.textContent = glossaire.quotes.length;
-
-    if (langCount) {
-        const langs = new Set();
-        glossaire.terms.forEach(t => langs.add(t.lang));
-        glossaire.quotes.forEach(q => langs.add(q.lang));
-        langCount.textContent = langs.size;
-    }
+    // Live filter on every keystroke using input event
+    searchInput.addEventListener('input', (e) => {
+        glossaire.searchQuery = e.target.value.toLowerCase().trim();
+        renderTerms();
+        updateStats();
+    });
 }
 
-// Filter terms
+// ============ FILTERING ============
 function getFilteredTerms() {
     return glossaire.terms.filter(term => {
         // Language filter
-        if (glossaire.activeLangs.size > 0 && !glossaire.activeLangs.has(term.lang)) {
+        if (glossaire.activeLang && term.lang !== glossaire.activeLang) {
             return false;
         }
 
@@ -251,15 +187,15 @@ function getFilteredTerms() {
             }
         }
 
-        // Search filter
+        // Search filter - filter against term, native, gloss (definition), etymology
         if (glossaire.searchQuery) {
             const query = glossaire.searchQuery;
             const searchable = [
                 term.term,
-                term.definition,
-                term.etymology,
-                term.usage,
-                ...(term.related || [])
+                term.native,
+                term.definition,  // gloss
+                term.gloss,
+                term.etymology
             ].filter(Boolean).join(' ').toLowerCase();
 
             if (!searchable.includes(query)) {
@@ -271,149 +207,239 @@ function getFilteredTerms() {
     });
 }
 
-// Filter quotes
-function getFilteredQuotes() {
-    return glossaire.quotes.filter(quote => {
-        // Language filter
-        if (glossaire.activeLangs.size > 0 && !glossaire.activeLangs.has(quote.lang)) {
-            return false;
-        }
-
-        // Search filter
-        if (glossaire.searchQuery) {
-            const query = glossaire.searchQuery;
-            const searchable = [
-                quote.text,
-                quote.translation,
-                quote.author,
-                quote.source,
-                ...(quote.tags || [])
-            ].filter(Boolean).join(' ').toLowerCase();
-
-            if (!searchable.includes(query)) {
-                return false;
-            }
-        }
-
-        return true;
-    });
-}
-
-// Render main view
-function render() {
-    if (glossaire.currentView === 'terms') {
-        renderTerms();
-    } else {
-        renderQuotes();
-    }
-}
-
-// Render terms list
+// ============ RENDER TERMS ============
 function renderTerms() {
-    const container = document.getElementById('terms-list');
+    const container = document.getElementById('termsList');
     if (!container) return;
 
     const terms = getFilteredTerms();
+    terms.sort((a, b) => (a.term || '').localeCompare(b.term || ''));
 
     if (terms.length === 0) {
         container.innerHTML = '<p class="no-results">Aucun terme trouvé.</p>';
         return;
     }
 
-    // Sort by term alphabetically
-    terms.sort((a, b) => a.term.localeCompare(b.term));
+    container.innerHTML = '';
+    terms.forEach(term => {
+        const row = document.createElement('div');
+        row.className = 'term-row';
+        row.dataset.id = term.id;
 
-    container.innerHTML = terms.map(term => `
-        <article class="term-card">
-            <header class="term-header">
-                <h3 class="term-word">${escapeHtml(term.term)}</h3>
-                <span class="term-lang">${LANG_NAMES[term.lang] || term.lang}</span>
-            </header>
-            ${term.pronunciation ? `<div class="term-pronunciation">${escapeHtml(term.pronunciation)}</div>` : ''}
-            <p class="term-definition">${escapeHtml(term.definition)}</p>
-            ${term.etymology ? `<p class="term-etymology"><em>Étymologie :</em> ${escapeHtml(term.etymology)}</p>` : ''}
-            ${term.usage ? `<p class="term-usage"><em>Usage :</em> ${escapeHtml(term.usage)}</p>` : ''}
-            ${term.category ? `
-                <div class="term-categories">
-                    ${(Array.isArray(term.category) ? term.category : [term.category]).map(c =>
-                        `<span class="category-tag">${escapeHtml(c)}</span>`
-                    ).join('')}
-                </div>
-            ` : ''}
-            ${term.related && term.related.length > 0 ? `
-                <div class="term-related">
-                    <em>Voir aussi :</em>
-                    <div class="entry-links">${term.related.map(r => `<span class="link-chip" onclick="searchTerm('${escapeJs(r)}')">${escapeHtml(r)}</span>`).join('')}</div>
-                </div>
-            ` : ''}
-            ${term.sources && term.sources.length > 0 ? `
-                <div class="term-sources">
-                    <em>Sources :</em> ${term.sources.map(s => escapeHtml(s)).join(' ; ')}
-                </div>
-            ` : ''}
-        </article>
-    `).join('');
+        row.innerHTML = `
+            <span class="term-word">${escapeHtml(term.term)}</span>
+            <span class="term-lang">${LANG_NAMES[term.lang] || term.lang || ''}</span>
+            <span class="term-def">${escapeHtml(truncate(term.definition || term.gloss || '', 80))}</span>
+        `;
+
+        row.addEventListener('click', () => openModal(term));
+        container.appendChild(row);
+    });
 }
 
-// Render quotes list
-function renderQuotes() {
-    const container = document.getElementById('quotes-list');
-    if (!container) return;
+// ============ STATS ============
+function updateStats() {
+    const termCountEl = document.getElementById('term-count');
+    const quoteCountEl = document.getElementById('quote-count');
+    const langCountEl = document.getElementById('lang-count');
 
-    const quotes = getFilteredQuotes();
+    // Show count of VISIBLE terms, not total
+    const visibleTerms = getFilteredTerms();
 
-    if (quotes.length === 0) {
-        container.innerHTML = '<p class="no-results">Aucune citation trouvée.</p>';
-        return;
+    if (termCountEl) termCountEl.textContent = visibleTerms.length;
+    if (quoteCountEl) quoteCountEl.textContent = glossaire.quotes.length;
+
+    if (langCountEl) {
+        const langs = new Set();
+        glossaire.terms.forEach(t => { if (t.lang) langs.add(t.lang); });
+        glossaire.quotes.forEach(q => { if (q.lang) langs.add(q.lang); });
+        langCountEl.textContent = langs.size;
+    }
+}
+
+// ============ MODAL ============
+function setupModal() {
+    const overlay = document.getElementById('modalOverlay');
+    if (!overlay) return;
+
+    // Close button
+    const closeBtn = overlay.querySelector('.modal-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
     }
 
-    // Sort by author, then year
-    quotes.sort((a, b) => {
-        const authorCmp = (a.author || '').localeCompare(b.author || '');
-        if (authorCmp !== 0) return authorCmp;
-        return (a.year || 0) - (b.year || 0);
+    // Click on overlay background closes modal
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeModal();
+        }
     });
 
-    container.innerHTML = quotes.map(quote => `
-        <article class="quote-card">
-            <blockquote class="quote-text">${escapeHtml(quote.text)}</blockquote>
-            ${quote.translation ? `<p class="quote-translation">${escapeHtml(quote.translation)}</p>` : ''}
-            <footer class="quote-footer">
-                <cite class="quote-author">${escapeHtml(quote.author)}</cite>
-                ${quote.source ? `<span class="quote-source">${escapeHtml(quote.source)}</span>` : ''}
-                ${quote.year ? `<span class="quote-year">(${formatYear(quote.year)})</span>` : ''}
-                <span class="quote-lang">${LANG_NAMES[quote.lang] || quote.lang}</span>
-            </footer>
-            ${quote.tags && quote.tags.length > 0 ? `
-                <div class="quote-tags">
-                    ${quote.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}
-                </div>
-            ` : ''}
-            ${quote.notes ? `<p class="quote-notes"><em>${escapeHtml(quote.notes)}</em></p>` : ''}
-        </article>
-    `).join('');
+    // Escape key closes modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
 }
 
-// Handle add term form
+function openModal(term) {
+    const overlay = document.getElementById('modalOverlay');
+    if (!overlay) return;
+
+    // Populate modal fields
+    setModalField('modalTerm', term.term);
+    setModalField('modalNative', term.native || term.pronunciation || '');
+    setModalField('modalLang', LANG_NAMES[term.lang] || term.lang || '');
+    setModalField('modalEtymology', term.etymology || '');
+    setModalField('modalDomain', formatCategories(term.category));
+    setModalField('modalPeriod', term.period || '');
+    setModalField('modalGloss', term.definition || term.gloss || '');
+
+    // Show/hide labels based on content
+    toggleLabelVisibility('modalEtymologyLabel', 'modalEtymology');
+    toggleLabelVisibility('modalDomainLabel', 'modalDomain');
+    toggleLabelVisibility('modalPeriodLabel', 'modalPeriod');
+
+    // Voir aussi links (clickable)
+    const relatedContainer = document.getElementById('modalRelated');
+    const relatedLabel = document.getElementById('modalRelatedLabel');
+    if (relatedContainer) {
+        if (term.related && term.related.length > 0) {
+            relatedContainer.innerHTML = '';
+            term.related.forEach(relatedTerm => {
+                const link = document.createElement('span');
+                link.className = 'related-link';
+                link.textContent = relatedTerm;
+                link.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openRelatedEntry(relatedTerm);
+                });
+                relatedContainer.appendChild(link);
+            });
+            relatedContainer.style.display = '';
+            if (relatedLabel) relatedLabel.style.display = '';
+        } else {
+            relatedContainer.innerHTML = '';
+            relatedContainer.style.display = 'none';
+            if (relatedLabel) relatedLabel.style.display = 'none';
+        }
+    }
+
+    // Quotes section
+    const quotesContainer = document.getElementById('modalQuotes');
+    if (quotesContainer) {
+        const termQuotes = glossaire.quotes.filter(q =>
+            q.relatedTerm === term.id ||
+            q.relatedTerm === term.term ||
+            (q.tags && q.tags.includes(term.term))
+        );
+        if (termQuotes.length > 0) {
+            quotesContainer.innerHTML = '<div class="modal-field-label">citations</div>' +
+                termQuotes.map(q => `
+                    <blockquote class="modal-quote">
+                        ${escapeHtml(q.text)}
+                        <footer>— ${escapeHtml(q.author || '')}</footer>
+                    </blockquote>
+                `).join('');
+            quotesContainer.style.display = '';
+        } else {
+            quotesContainer.innerHTML = '';
+            quotesContainer.style.display = 'none';
+        }
+    }
+
+    // Show modal
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const overlay = document.getElementById('modalOverlay');
+    if (overlay) {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function openRelatedEntry(termName) {
+    // Find the term by name or id
+    const term = glossaire.terms.find(t =>
+        t.term === termName ||
+        t.id === termName ||
+        (t.term && t.term.toLowerCase() === termName.toLowerCase())
+    );
+    if (term) {
+        openModal(term);
+    }
+}
+
+function setModalField(id, value) {
+    const el = document.getElementById(id);
+    if (el) {
+        el.textContent = value || '';
+        el.style.display = value ? '' : 'none';
+    }
+}
+
+function toggleLabelVisibility(labelId, valueId) {
+    const label = document.getElementById(labelId);
+    const value = document.getElementById(valueId);
+    if (label && value) {
+        label.style.display = value.textContent ? '' : 'none';
+    }
+}
+
+function formatCategories(category) {
+    if (!category) return '';
+    const cats = Array.isArray(category) ? category : [category];
+    return cats.join(', ');
+}
+
+// ============ ADD ENTRY FORM ============
+function setupAddEntryForm() {
+    const toggleBtn = document.getElementById('addToggle');
+    const formSection = document.getElementById('addEntrySection');
+    const termForm = document.getElementById('addTermForm');
+
+    if (toggleBtn && formSection) {
+        toggleBtn.addEventListener('click', () => {
+            formSection.classList.toggle('collapsed');
+            const isCollapsed = formSection.classList.contains('collapsed');
+            toggleBtn.textContent = isCollapsed ? 'ajouter une entrée' : 'masquer le formulaire';
+        });
+    }
+
+    if (termForm) {
+        termForm.addEventListener('submit', handleAddTerm);
+    }
+}
+
 function handleAddTerm(e) {
     e.preventDefault();
 
+    const form = e.target;
     const term = {
         id: 'user_' + Date.now(),
-        term: document.getElementById('term-word').value.trim(),
-        lang: document.getElementById('term-lang').value,
-        pronunciation: document.getElementById('term-pronunciation').value.trim() || undefined,
-        definition: document.getElementById('term-definition').value.trim(),
-        etymology: document.getElementById('term-etymology').value.trim() || undefined,
-        category: document.getElementById('term-categories').value.trim()
-            ? document.getElementById('term-categories').value.split(',').map(c => c.trim())
+        term: form.querySelector('#termWord')?.value.trim() || '',
+        lang: form.querySelector('#termLang')?.value || '',
+        native: form.querySelector('#termNative')?.value.trim() || undefined,
+        definition: form.querySelector('#termDefinition')?.value.trim() || '',
+        etymology: form.querySelector('#termEtymology')?.value.trim() || undefined,
+        category: form.querySelector('#termCategory')?.value.trim()
+            ? form.querySelector('#termCategory').value.split(',').map(c => c.trim())
             : undefined,
-        usage: document.getElementById('term-usage').value.trim() || undefined,
-        sources: document.getElementById('term-sources').value.trim()
-            ? [document.getElementById('term-sources').value.trim()]
+        period: form.querySelector('#termPeriod')?.value.trim() || undefined,
+        related: form.querySelector('#termRelated')?.value.trim()
+            ? form.querySelector('#termRelated').value.split(',').map(r => r.trim())
             : undefined,
         userAdded: true
     };
+
+    if (!term.term || !term.definition) {
+        alert('Veuillez remplir les champs obligatoires.');
+        return;
+    }
 
     // Add to arrays
     glossaire.userTerms.push(term);
@@ -423,67 +449,44 @@ function handleAddTerm(e) {
     localStorage.setItem('aleph_user_terms', JSON.stringify(glossaire.userTerms));
 
     // Reset form
-    e.target.reset();
+    form.reset();
 
-    // Update display
-    renderCategoryFilter();
-    renderLanguageFilters();
+    // Re-render immediately without page reload
+    buildLangPills();
+    buildCatFilter();
+    renderTerms();
     updateStats();
-    render();
 
-    // Show confirmation
     showNotification('Terme ajouté');
 }
 
-// Handle add quote form
-function handleAddQuote(e) {
-    e.preventDefault();
+// ============ URL PARAMS ============
+function setupUrlParams() {
+    const urlParams = new URLSearchParams(window.location.search);
 
-    const quote = {
-        id: 'user_' + Date.now(),
-        text: document.getElementById('quote-text').value.trim(),
-        translation: document.getElementById('quote-translation').value.trim() || undefined,
-        author: document.getElementById('quote-author').value.trim(),
-        lang: document.getElementById('quote-lang').value,
-        source: document.getElementById('quote-source').value.trim() || undefined,
-        year: document.getElementById('quote-year').value
-            ? parseInt(document.getElementById('quote-year').value, 10)
-            : undefined,
-        tags: document.getElementById('quote-tags').value.trim()
-            ? document.getElementById('quote-tags').value.split(',').map(t => t.trim())
-            : undefined,
-        notes: document.getElementById('quote-notes').value.trim() || undefined,
-        userAdded: true
-    };
-
-    // Add to arrays
-    glossaire.userQuotes.push(quote);
-    glossaire.quotes.push(quote);
-
-    // Save to localStorage
-    localStorage.setItem('aleph_user_quotes', JSON.stringify(glossaire.userQuotes));
-
-    // Reset form
-    e.target.reset();
-
-    // Update display
-    renderLanguageFilters();
-    updateStats();
-    render();
-
-    // Show confirmation
-    showNotification('Citation ajoutée');
-}
-
-// Utility: format year (handle BCE)
-function formatYear(year) {
-    if (year < 0) {
-        return Math.abs(year) + ' av. J.-C.';
+    // Check for ?q= parameter
+    const q = urlParams.get('q');
+    if (q) {
+        const searchInput = document.getElementById('glossSearch');
+        if (searchInput) {
+            searchInput.value = q;
+            glossaire.searchQuery = q.toLowerCase().trim();
+            renderTerms();
+            updateStats();
+        }
     }
-    return year.toString();
+
+    // Check for ?id= parameter and open that entry's modal
+    const id = urlParams.get('id');
+    if (id) {
+        const term = glossaire.terms.find(t => t.id === id);
+        if (term) {
+            openModal(term);
+        }
+    }
 }
 
-// Utility: escape HTML
+// ============ UTILITIES ============
 function escapeHtml(str) {
     if (!str) return '';
     const div = document.createElement('div');
@@ -491,22 +494,12 @@ function escapeHtml(str) {
     return div.innerHTML;
 }
 
-// Utility: escape for JavaScript string in onclick attribute
-function escapeJs(str) {
+function truncate(str, maxLen) {
     if (!str) return '';
-    return str.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"');
+    if (str.length <= maxLen) return str;
+    return str.substring(0, maxLen) + '…';
 }
 
-// Utility: debounce
-function debounce(fn, delay) {
-    let timeout;
-    return function(...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => fn.apply(this, args), delay);
-    };
-}
-
-// Utility: show notification
 function showNotification(message) {
     const existing = document.querySelector('.notification');
     if (existing) existing.remove();
@@ -522,24 +515,3 @@ function showNotification(message) {
         setTimeout(() => notif.remove(), 300);
     }, 2000);
 }
-
-// Search for a specific term (used by link-chips)
-function searchTerm(term) {
-    const searchInput = document.getElementById('glossary-search');
-    if (searchInput) {
-        searchInput.value = term;
-        glossaire.searchQuery = term.toLowerCase();
-        render();
-        // Scroll to top of results
-        document.getElementById('terms-view')?.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-// Make toggleLang and searchTerm available globally
-window.toggleLang = toggleLang;
-window.searchTerm = searchTerm;
-
-// Initialize when DOM ready
-document.addEventListener('DOMContentLoaded', init);
-
-// Theme toggle is handled by app.js

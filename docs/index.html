@@ -59,8 +59,8 @@
 
     <main class="home-main">
         <div class="home-glyph">א</div>
-        <p class="home-subtitle">catalogue litteraire universel</p>
-        <p class="home-desc">indexer et croiser les textes par theme, tradition et siecle</p>
+        <p class="home-subtitle">catalogue littéraire universel</p>
+        <p class="home-desc">indexer et croiser les textes par thème, tradition et siècle</p>
 
         <div class="home-search-wrap">
             <input
@@ -69,6 +69,7 @@
                 id="search-input"
                 placeholder="chercher titres, auteurs, ou tout terme..."
                 autocomplete="off"
+                onkeydown="if(event.key==='Enter'&&this.value.trim()){window.location.href='glossaire.html?q='+encodeURIComponent(this.value.trim());}"
             >
             <div class="home-search-results" id="searchResults"></div>
         </div>

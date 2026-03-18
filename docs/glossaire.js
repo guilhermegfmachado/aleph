@@ -45,6 +45,18 @@ async function init() {
     renderCategoryFilter();
     updateStats();
     render();
+
+    // Check for URL search parameter and apply it
+    const urlParams = new URLSearchParams(window.location.search);
+    const q = urlParams.get('q');
+    if (q) {
+        const searchInput = document.getElementById('glossary-search');
+        if (searchInput) {
+            searchInput.value = q;
+            glossaire.searchQuery = q.toLowerCase();
+            render();
+        }
+    }
 }
 
 // Load glossary and quotes data

@@ -1,122 +1,262 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aleph — glossaire</title>
-    <meta name="description" content="Glossaire multilingue de termes historiques, littéraires, politiques et philosophiques.">
-    <meta name="author" content="Guilherme de G. F. Machado">
-    <meta property="og:title" content="glossaire — aleph">
-    <meta property="og:description" content="Glossaire multilingue de termes historiques, littéraires, politiques et philosophiques.">
-    <meta property="og:url" content="https://guilhermegfmachado.github.io/aleph/glossaire.html">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://guilhermegfmachado.github.io/aleph/glossaire.html">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <meta name="theme-color" content="#070809">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){
+      var t=localStorage.getItem('aleph-theme')||'dark';
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>glossaire · aleph</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23c9a84c'>א</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root, :root[data-theme="dark"] {
+      --bg: #070809; --bg2: #0c0d0f; --bg3: #111214;
+      --border: rgba(255,255,255,0.07);
+      --text: #8a8880; --bright: #edeae4; --dim: #424240;
+      --accent: #c9a84c;
+      --sans: 'Inter', system-ui, sans-serif;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --mono: 'Geist Mono', monospace;
+    }
+    :root[data-theme="light"] {
+      --bg: #f5f2ec; --bg2: #ede9e0; --bg3: #e4e0d6;
+      --border: rgba(0,0,0,0.09);
+      --text: #5a5650; --bright: #1a1916; --dim: #9a9690;
+      --accent: #7a5c18;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--sans); font-size: 14px; line-height: 1.7;
+      overflow-x: hidden; min-height: 100vh;
+      transition: background 0.2s, color 0.2s;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::after {
+      content: ''; position: fixed; inset: 0;
+      pointer-events: none; z-index: 9999; opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; height: 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.5rem;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: var(--serif); font-size: 1.3rem; color: var(--accent);
+      text-decoration: none;
+    }
+    .nav-right { display: flex; align-items: center; }
+    .nav-right a, .nav-right button {
+      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em;
+      color: var(--dim); text-decoration: none;
+      background: none; border: none; cursor: pointer;
+      padding: 0 1rem;
+    }
+    .nav-right a:hover, .nav-right button:hover { color: var(--bright); }
+    #themeToggle { font-size: 0.85rem; }
+
+    /* PAGE */
+    .page {
+      max-width: 800px; margin: 0 auto;
+      padding: 7rem 1.5rem 6rem;
+    }
+
+    /* HEADER */
+    .gloss-header { margin-bottom: 2.5rem; }
+    .gloss-title {
+      font-family: var(--serif); font-size: clamp(1.8rem, 5vw, 2.6rem);
+      color: var(--bright); font-weight: 400; margin-bottom: 0.4rem;
+    }
+    .gloss-title em { font-style: italic; }
+    .gloss-stats {
+      font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em;
+      color: var(--dim);
+    }
+
+    /* SEARCH + FILTERS */
+    .gloss-controls { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
+    #glossSearch {
+      width: 100%; background: var(--bg2); border: 1px solid var(--border);
+      color: var(--bright); font-family: var(--mono); font-size: 0.82rem;
+      padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s;
+    }
+    #glossSearch::placeholder { color: var(--dim); }
+    #glossSearch:focus { border-color: rgba(201,168,76,0.4); }
+
+    .lang-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .lang-pill {
+      font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em;
+      padding: 0.25rem 0.65rem; border: 1px solid var(--border);
+      color: var(--dim); background: none; cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .lang-pill:hover { color: var(--bright); border-color: var(--dim); }
+    .lang-pill.active { color: var(--accent); border-color: var(--accent); }
+
+    .cat-select {
+      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.06em;
+      background: var(--bg2); border: 1px solid var(--border);
+      color: var(--dim); padding: 0.3rem 0.6rem; outline: none; cursor: pointer;
+    }
+    .cat-select:focus { border-color: rgba(201,168,76,0.4); }
+
+    /* TERMS LIST */
+    #termsList {
+      display: flex; flex-direction: column;
+      border-top: 1px solid var(--border);
+    }
+
+    /* TERM CARD — always expanded */
+    .term-card {
+      border-bottom: 1px solid var(--border);
+      padding: 1.8rem 0;
+    }
+    .term-card:target { scroll-margin-top: 72px; }
+
+    .tc-name {
+      font-family: var(--serif); font-size: 1.5rem;
+      color: var(--bright); font-weight: 400; line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+    .tc-native {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1rem; color: var(--text); margin-bottom: 0.5rem;
+    }
+    .tc-lang {
+      font-family: var(--mono); font-size: 0.55rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.9rem;
+      display: inline-block;
+    }
+    .tc-definition {
+      font-family: var(--sans); font-size: 0.82rem;
+      color: var(--text); line-height: 1.85; margin-bottom: 0.8rem;
+    }
+    .tc-etym {
+      font-size: 0.8rem; margin-bottom: 0.8rem;
+      display: flex; gap: 0.4rem; align-items: baseline; flex-wrap: wrap;
+    }
+    .tc-etym-label {
+      font-family: var(--mono); font-size: 0.55rem; color: var(--dim);
+      flex-shrink: 0;
+    }
+    .tc-etym-text {
+      font-family: var(--sans); font-style: italic; color: var(--text);
+      font-size: 0.8rem;
+    }
+    .tc-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.7rem; }
+    .tc-tag {
+      font-family: var(--mono); font-size: 0.55rem; color: var(--dim);
+      border: 1px solid var(--border); padding: 0.15rem 0.5rem;
+    }
+    .tc-related { font-size: 0.78rem; display: flex; gap: 0.4rem; align-items: baseline; flex-wrap: wrap; }
+    .tc-related-label {
+      font-family: var(--mono); font-size: 0.55rem; color: var(--dim); flex-shrink: 0;
+    }
+    .tc-related-link {
+      font-family: var(--mono); font-size: 0.6rem; color: var(--accent);
+      text-decoration: none; opacity: 0.8;
+    }
+    .tc-related-link:hover { opacity: 1; }
+
+    /* NO RESULTS */
+    .no-results {
+      font-family: var(--mono); font-size: 0.65rem; color: var(--dim);
+      padding: 3rem 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border); padding: 1rem 1.5rem;
+      margin-top: 4rem; display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .footer-left { font-family: var(--mono); font-size: 0.58rem; color: var(--dim); }
+    .footer-right { display: flex; gap: 1rem; }
+    .footer-right a {
+      font-family: var(--mono); font-size: 0.58rem; color: var(--dim);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .footer-right a:hover { color: var(--bright); }
+
+    @media (max-width: 600px) {
+      .page { padding: 6rem 1.2rem 4rem; }
+      .nav-right a, .nav-right button { font-size: 0.55rem; padding: 0 0.6rem; }
+      .tc-name { font-size: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">א</a>
-        <ul class="nav-links">
-            <li><a href="index.html">chercher</a></li>
-            <li><a href="browse.html">parcourir</a></li>
-            <li><a href="glossaire.html" class="active">glossaire</a></li>
-            <li><a href="sources.html">références</a></li>
-        </ul>
-        <button class="nav-theme-btn" id="themeToggle" aria-label="basculer thème" title="thème clair / sombre">&#9681;</button>
-    </nav>
 
-    <main class="glossaire-page">
-        <div class="glossaire-header">
-            <h1 class="glossaire-title">Glossaire <em>multilingue</em></h1>
-            <div class="glossaire-stats">
-                <span id="term-count">0</span> termes · <span id="quote-count">0</span> citations · <span id="lang-count">0</span> langues
-            </div>
-        </div>
+  <nav>
+    <a class="nav-logo" href="../index.html">aleph</a>
+    <div class="nav-right">
+      <a href="index.html">← archive</a>
+      <a href="../index.html">accueil</a>
+      <button id="themeToggle">◑</button>
+    </div>
+  </nav>
 
-        <!-- Search -->
-        <input type="search" id="glossSearch" class="glossaire-search" placeholder="chercher un terme...">
-
-        <!-- Language pills (populated by JS) -->
-        <div class="lang-pills-row" id="langPills"></div>
-
-        <!-- Category filter (populated by JS) -->
-        <div class="category-filter">
-            <select id="catFilter" class="cat-select"></select>
-        </div>
-
-        <!-- Terms List -->
-        <div id="termsList" class="terms-list"></div>
-
-        <!-- Add Entry Section -->
-        <div id="addEntrySection" class="add-entry-section collapsed">
-            <button type="button" id="addToggle" class="add-toggle-btn">ajouter une entrée</button>
-            <form id="addTermForm" class="entry-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="termWord">terme *</label>
-                        <input type="text" id="termWord" required placeholder="Vermassung">
-                    </div>
-                    <div class="form-group">
-                        <label for="termLang">langue *</label>
-                        <select id="termLang" required></select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="termNative">écriture native</label>
-                    <input type="text" id="termNative" placeholder="native script / prononciation">
-                </div>
-                <div class="form-group">
-                    <label for="termDefinition">définition *</label>
-                    <textarea id="termDefinition" required rows="3" placeholder="Mass-ification; the process by which..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="termEtymology">étymologie</label>
-                    <input type="text" id="termEtymology" placeholder="From German 'Masse' (mass) + '-ung'">
-                </div>
-                <div class="form-group">
-                    <label for="termCategory">domaine (séparés par virgule)</label>
-                    <input type="text" id="termCategory" placeholder="philosophy, sociology">
-                </div>
-                <div class="form-group">
-                    <label for="termPeriod">période</label>
-                    <input type="text" id="termPeriod" placeholder="20th century">
-                </div>
-                <div class="form-group">
-                    <label for="termRelated">voir aussi (séparés par virgule)</label>
-                    <input type="text" id="termRelated" placeholder="Entfremdung, Gleichschaltung">
-                </div>
-                <button type="submit" class="btn">ajouter terme</button>
-            </form>
-        </div>
-    </main>
-
-    <!-- Entry Modal -->
-    <div class="entry-modal-overlay" id="modalOverlay">
-        <div class="entry-modal">
-            <button class="modal-close">fermer</button>
-            <div class="modal-lang" id="modalLang"></div>
-            <div class="modal-term" id="modalTerm"></div>
-            <div class="modal-native" id="modalNative"></div>
-            <div class="modal-field-label" id="modalDomainLabel">domaine</div>
-            <div class="modal-field-val" id="modalDomain"></div>
-            <div class="modal-field-label" id="modalPeriodLabel">période</div>
-            <div class="modal-field-val" id="modalPeriod"></div>
-            <div class="modal-field-label" id="modalEtymologyLabel">étymologie</div>
-            <div class="modal-field-val" id="modalEtymology"></div>
-            <div class="modal-gloss" id="modalGloss"></div>
-            <div class="modal-field-label" id="modalRelatedLabel">voir aussi</div>
-            <div class="modal-links" id="modalRelated"></div>
-            <div class="modal-quotes" id="modalQuotes"></div>
-        </div>
+  <main class="page">
+    <div class="gloss-header">
+      <h1 class="gloss-title">Glossaire <em>multilingue</em></h1>
+      <div class="gloss-stats">
+        <span id="term-count">0</span> termes · <span id="quote-count">0</span> citations · <span id="lang-count">0</span> langues
+      </div>
     </div>
 
-    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
-    <script src="app.js"></script>
-    <script src="glossaire.js"></script>
+    <div class="gloss-controls">
+      <input type="search" id="glossSearch" placeholder="chercher un terme…">
+      <div class="lang-pills" id="langPills"></div>
+      <div>
+        <select id="catFilter" class="cat-select"></select>
+      </div>
+    </div>
+
+    <div id="termsList"></div>
+  </main>
+
+  <footer>
+    <span class="footer-left">aleph · catalogue littéraire universel</span>
+    <div class="footer-right">
+      <a href="https://guilhermegfmachado.github.io/work" target="_blank" rel="noopener">gmfm ↗</a>
+      <a href="https://guilhermegfmachado.github.io/huozi" target="_blank" rel="noopener">活字 ↗</a>
+      <a href="index.html">archive</a>
+    </div>
+  </footer>
+
+  <script src="glossaire.js"></script>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('aleph-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('themeToggle');
+        if (!btn) return;
+        btn.textContent = (localStorage.getItem('aleph-theme') || 'dark') === 'dark' ? '\u25d1' : '\u25d0';
+        btn.addEventListener('click', function() {
+          var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('aleph-theme', next);
+          btn.textContent = next === 'dark' ? '\u25d1' : '\u25d0';
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>

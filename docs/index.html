@@ -10,6 +10,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>aleph · catalogue littéraire universel</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23c9a84c'>א</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -59,9 +60,7 @@
       font-family: var(--serif); font-size: 1.3rem; color: var(--accent);
       text-decoration: none;
     }
-    .nav-right {
-      display: flex; align-items: center; gap: 0;
-    }
+    .nav-right { display: flex; align-items: center; }
     .nav-right a, .nav-right button {
       font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em;
       color: var(--dim); text-decoration: none;
@@ -80,8 +79,7 @@
     .hero-glyph {
       font-family: var(--serif);
       font-size: clamp(5rem, 18vw, 8rem);
-      color: var(--accent);
-      line-height: 1;
+      color: var(--accent); line-height: 1;
       animation: breathing 8s ease-in-out infinite;
     }
     @keyframes breathing {
@@ -98,22 +96,22 @@
       color: var(--dim); letter-spacing: 0.1em; text-align: center;
     }
     .search-wrap { max-width: 560px; width: 100%; }
-    #searchInput {
+    #search-input {
       width: 100%; display: block; margin: 0 auto;
       background: var(--bg2); border: 1px solid var(--border);
       color: var(--bright); font-family: var(--mono); font-size: 0.85rem;
       padding: 0.9rem 1.2rem; outline: none;
       transition: border-color 0.2s;
     }
-    #searchInput::placeholder { color: var(--dim); }
-    #searchInput:focus { border-color: rgba(201,168,76,0.4); }
+    #search-input::placeholder { color: var(--dim); }
+    #search-input:focus { border-color: rgba(201,168,76,0.4); }
 
-    /* RESULTS */
-    #results {
+    /* RESULTS — hidden until search runs */
+    #results-section { display: none; }
+    #results-section.visible { display: block; }
+    .results-inner {
       max-width: 720px; margin: 0 auto; padding: 0 1.5rem 6rem;
-      opacity: 0; transition: opacity 0.3s; pointer-events: none;
     }
-    #results.visible { opacity: 1; pointer-events: auto; }
     .results-header {
       font-family: var(--mono); font-size: 0.58rem; text-transform: uppercase;
       letter-spacing: 0.1em; color: var(--dim); margin-bottom: 1.5rem;
@@ -145,13 +143,15 @@
       max-height: 0; overflow: hidden;
       transition: max-height 0.4s ease;
       font-size: 0.82rem; line-height: 1.85; color: var(--text);
-      margin-top: 0;
     }
     .card-full.expanded { max-height: 600px; margin-top: 0.8rem; }
 
     /* NO RESULTS */
     .no-results { padding: 2rem 0; background: var(--bg); }
-    .no-results p { font-family: var(--mono); font-size: 0.65rem; color: var(--dim); margin-bottom: 1rem; }
+    .no-results p {
+      font-family: var(--mono); font-size: 0.65rem;
+      color: var(--dim); margin-bottom: 1rem;
+    }
     .suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .suggestion-chip {
       border: 1px solid var(--border); font-family: var(--mono); font-size: 0.6rem;
@@ -184,9 +184,7 @@
       margin-top: 4rem; display: flex; align-items: center;
       justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
     }
-    .footer-left {
-      font-family: var(--mono); font-size: 0.58rem; color: var(--dim);
-    }
+    .footer-left { font-family: var(--mono); font-size: 0.58rem; color: var(--dim); }
     .footer-right { display: flex; gap: 1rem; }
     .footer-right a {
       font-family: var(--mono); font-size: 0.58rem; color: var(--dim);
@@ -199,7 +197,7 @@
       .hero { padding: 4rem 1.2rem; }
       .search-wrap { width: 100%; }
       .nav-right a, .nav-right button { font-size: 0.55rem; padding: 0 0.6rem; }
-      .result-card { padding: 1rem 1rem; }
+      .result-card { padding: 1rem; }
     }
   </style>
 </head>
@@ -208,7 +206,7 @@
   <nav>
     <a class="nav-logo" href="index.html">aleph</a>
     <div class="nav-right">
-      <a href="archive/browse.html">archive ↗</a>
+      <a href="archive/index.html">archive ↗</a>
       <a href="#">about</a>
       <button id="themeToggle">◑</button>
     </div>
@@ -221,7 +219,7 @@
     <div class="search-wrap">
       <input
         type="text"
-        id="searchInput"
+        id="search-input"
         placeholder="the sublime · amor fati · negative capability · 無為"
         autocomplete="off"
         spellcheck="false"
@@ -229,32 +227,37 @@
     </div>
   </section>
 
-  <section id="results">
-    <p class="results-header" id="resultsHeader"></p>
-    <div class="results-cards" id="resultsCards"></div>
-    <div class="ai-synthesis">
-      <p class="ai-label">CONNEXIONS · synthèse par IA</p>
-      <div class="ai-placeholder" id="aiPlaceholder">
-        <span class="ai-icon">◈</span>
-        <span class="ai-text">synthèse disponible prochainement</span>
+  <section id="results-section">
+    <div class="results-inner">
+      <p class="results-header" id="resultsHeader"></p>
+      <div class="results-cards" id="resultsCards"></div>
+      <div class="ai-synthesis">
+        <p class="ai-label">CONNEXIONS · synthèse par IA</p>
+        <div class="ai-placeholder">
+          <span class="ai-icon">◈</span>
+          <span class="ai-text">synthèse disponible prochainement</span>
+        </div>
+        <!-- ── AI SYNTHESIS ──────────────────────────────────────────
+             TODO: call Anthropic API here when ready
+             Input: query string + top 3 passages from results array
+             Output: replace placeholder with synthesis paragraph
+             Model: claude-sonnet-4-20250514, max_tokens 500
+             Prompt: literary scholar synthesis in French, cite sources
+             See: https://docs.anthropic.com/en/api/messages
+             ────────────────────────────────────────────────────────── -->
       </div>
-      <!-- ── AI SYNTHESIS ──────────────────────────────────────────
-           TODO: call Anthropic API here when ready
-           Input: query string + top 3 passages from results array
-           Output: replace placeholder with synthesis paragraph
-           Model: claude-sonnet-4-20250514, max_tokens 500
-           Prompt: literary scholar synthesis in French, cite sources
-           See: https://docs.anthropic.com/en/api/messages
-           ────────────────────────────────────────────────────────── -->
     </div>
   </section>
+
+  <!-- Debug info (hidden, inspect via DevTools) -->
+  <div id="debug-info" style="display:none"></div>
 
   <footer>
     <span class="footer-left">aleph · catalogue littéraire universel</span>
     <div class="footer-right">
       <a href="https://guilhermegfmachado.github.io/work" target="_blank" rel="noopener">gmfm ↗</a>
       <a href="https://guilhermegfmachado.github.io/huozi" target="_blank" rel="noopener">活字 ↗</a>
-      <a href="archive/browse.html">archive ↗</a>
+      <a href="archive/index.html">archive ↗</a>
     </div>
   </footer>
 
@@ -262,8 +265,8 @@
     // ── DATA ─────────────────────────────────────────────────────
     var manifestData = null;
     var searchData = null;
-    var manifestEntries = [];
-    var searchEntries = [];
+    var manifestEntries = [];  // flat [{id, title, author, year, tags, lang, category}]
+    var searchEntries = [];    // flat [{id, title, author, snippet, year, tags, lang}]
 
     var TRADITION_FLAGS = {
       'greek': '🏛', 'latin': '🏛', 'roman': '🏛',
@@ -276,27 +279,35 @@
     };
 
     function getFlag(entry) {
-      var combined = ((entry.tags || []).join(' ') + ' ' + (entry.author || '') + ' ' + (entry.category || '')).toLowerCase();
+      var combined = (
+        (entry.tags || []).join(' ') + ' ' +
+        (entry.author || '') + ' ' +
+        (entry.category || '')
+      ).toLowerCase();
       for (var key in TRADITION_FLAGS) {
         if (combined.indexOf(key) !== -1) return TRADITION_FLAGS[key];
       }
-      var lang = entry.lang || '';
       var langMap = { zh: '🀄', ja: '⛩', ar: '🌙', de: '🇩🇪', fr: '🇫🇷', pt: '🇵🇹', ru: '🇷🇺' };
-      return langMap[lang] || '';
+      return langMap[entry.lang || ''] || '';
     }
 
     function flattenManifest(manifest) {
       var entries = [];
-      var corpus = manifest.corpus;
+      var corpus = manifest.corpus || {};
       for (var cat in corpus) {
         var docs = corpus[cat].documents || [];
         for (var i = 0; i < docs.length; i++) {
           var doc = docs[i];
           var langs = Object.keys(doc.languages || {});
           entries.push({
-            id: doc.id, title: doc.title || '',
-            author: doc.author || '', year: doc.year || '',
-            tags: doc.tags || [], lang: langs[0] || 'en', category: cat
+            id: doc.id || '',
+            title: doc.title || '',
+            author: doc.author || '',
+            year: doc.year || '',
+            tags: doc.tags || [],
+            lang: langs[0] || 'en',
+            category: cat,
+            snippet: ''
           });
         }
       }
@@ -310,22 +321,33 @@
         var doc = docs[id];
         var parts = id.split('_');
         entries.push({
-          id: id, title: doc.title || '', author: doc.author || '',
-          snippet: doc.snippet || '', year: doc.year || '',
-          tags: doc.tags || [], lang: parts[parts.length - 1] || 'en'
+          id: id,
+          title: doc.title || '',
+          author: doc.author || '',
+          snippet: doc.snippet || '',
+          year: doc.year || '',
+          tags: doc.tags || [],
+          lang: parts[parts.length - 1] || 'en'
         });
       }
       return entries;
     }
 
+    // Load corpus-manifest
     fetch('data/corpus-manifest.json')
       .then(function(r) { return r.json(); })
       .then(function(data) {
         manifestData = data;
         manifestEntries = flattenManifest(data);
+        // Problem 4: debug logging
+        console.log('manifest keys:', Object.keys(data));
+        console.log('manifest sample:', JSON.stringify(data).slice(0, 500));
+        var dbg = document.getElementById('debug-info');
+        if (dbg) dbg.setAttribute('data-manifest', JSON.stringify(data).slice(0, 500));
       })
-      .catch(function() {});
+      .catch(function(e) { console.warn('manifest load failed:', e); });
 
+    // Load search-index with 4s timeout fallback
     var searchTimeout = new Promise(function(_, reject) {
       setTimeout(function() { reject(new Error('timeout')); }, 4000);
     });
@@ -336,142 +358,178 @@
       .then(function(data) {
         searchData = data;
         searchEntries = flattenSearchDocs(data);
+        // Problem 4: debug logging
+        console.log('search-index sample:', JSON.stringify(data).slice(0, 500));
+        var dbg = document.getElementById('debug-info');
+        if (dbg) dbg.setAttribute('data-search', JSON.stringify(data).slice(0, 500));
       })
-      .catch(function() {});
+      .catch(function(e) { console.log('search-index not loaded (fallback to manifest):', e.message); });
 
-    // ── SEARCH ───────────────────────────────────────────────────
-    function runSearch(query) {
-      query = query.trim();
-      if (!query) return;
-      var tokens = query.toLowerCase().split(/\s+/).filter(function(t) { return t.length > 2; });
-      if (tokens.length === 0) return;
+    // ── SEARCH (Problem 1 — fixed logic) ─────────────────────────
+    function search(rawQuery) {
+      var query = rawQuery.trim().toLowerCase();
+      if (!query) return [];
 
+      // Use all tokens without length filter — "the sublime" must match as phrase
+      var tokens = query.split(/\s+/).filter(Boolean);
+
+      // Use flattened searchEntries if loaded, else manifestEntries
       var entries = searchEntries.length > 0 ? searchEntries : manifestEntries;
-      var scored = [];
+      if (!entries.length) return [];
+
+      var results = [];
 
       for (var i = 0; i < entries.length; i++) {
         var entry = entries[i];
-        var titleL = (entry.title || '').toLowerCase();
-        var contentL = ((entry.snippet || '') + ' ' + (entry.tags || []).join(' ')).toLowerCase();
+        var title   = (entry.title  || '').toLowerCase();
+        var content = (entry.snippet || '').toLowerCase();
+        var tags    = (entry.tags || []).join(' ').toLowerCase();
+        var author  = (entry.author || '').toLowerCase();
+        var all     = title + ' ' + content + ' ' + tags + ' ' + author;
+
         var score = 0;
+
+        // Exact phrase match (highest value)
+        if (all.indexOf(query) !== -1)   score += 20;
+        if (title.indexOf(query) !== -1) score += 15;
+
+        // Individual token matches
         for (var j = 0; j < tokens.length; j++) {
-          if (titleL.indexOf(tokens[j]) !== -1) score += 3;
-          if (contentL.indexOf(tokens[j]) !== -1) score += 1;
+          var t = tokens[j];
+          if (title.indexOf(t)   !== -1) score += 5;
+          if (content.indexOf(t) !== -1) score += 2;
+          if (tags.indexOf(t)    !== -1) score += 3;
+          if (author.indexOf(t)  !== -1) score += 4;
         }
-        if (score > 0) scored.push({ entry: entry, score: score });
+
+        if (score === 0) continue;
+
+        // Extract excerpt around first token match
+        var excerpt = '';
+        var rawContent = entry.snippet || '';
+        var contentLower = rawContent.toLowerCase();
+        var matchPos = contentLower.indexOf(tokens[0]);
+        if (matchPos > -1) {
+          var start = Math.max(0, matchPos - 80);
+          var end   = Math.min(rawContent.length, matchPos + 200);
+          excerpt = rawContent.slice(start, end);
+          if (start > 0) excerpt = '\u2026' + excerpt;
+          if (end < rawContent.length) excerpt += '\u2026';
+        } else if (rawContent) {
+          excerpt = rawContent.slice(0, 250) + '\u2026';
+        }
+
+        // Highlight tokens in excerpt
+        var highlighted = escapeHtml(excerpt);
+        for (var k = 0; k < tokens.length; k++) {
+          if (tokens[k].length < 2) continue;
+          var re = new RegExp('(' + tokens[k].replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+          highlighted = highlighted.replace(re, '<mark>$1</mark>');
+        }
+
+        results.push({ entry: entry, score: score, excerpt: highlighted });
       }
 
-      scored.sort(function(a, b) { return b.score - a.score; });
-      var results = scored.slice(0, 5);
-      renderResults(query, tokens, results);
+      results.sort(function(a, b) { return b.score - a.score; });
+      return results.slice(0, 7);
     }
 
-    function getExcerpt(entry, tokens) {
-      var content = entry.snippet || (entry.tags || []).join(' · ') || entry.title || '';
-      if (!content) return '';
-      var lower = content.toLowerCase();
-      var firstPos = content.length;
-      for (var i = 0; i < tokens.length; i++) {
-        var idx = lower.indexOf(tokens[i]);
-        if (idx !== -1 && idx < firstPos) firstPos = idx;
-      }
-      var start = Math.max(0, firstPos - 80);
-      var end = Math.min(content.length, start + 200);
-      var excerpt = content.slice(start, end);
-      if (start > 0) excerpt = '\u2026' + excerpt;
-      if (end < content.length) excerpt += '\u2026';
-      return excerpt;
-    }
-
+    // ── HELPERS ──────────────────────────────────────────────────
     function escapeHtml(str) {
       return String(str)
         .replace(/&/g, '&amp;').replace(/</g, '&lt;')
         .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
-    function highlightTokens(text, tokens) {
-      var result = text;
-      for (var i = 0; i < tokens.length; i++) {
-        var re = new RegExp('(' + tokens[i].replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-        result = result.replace(re, '<mark>$1</mark>');
-      }
-      return result;
-    }
-
     function getTraditionCount(results) {
       var seen = {};
       for (var i = 0; i < results.length; i++) {
-        seen[results[i].entry.category || results[i].entry.lang || 'unknown'] = true;
+        var e = results[i].entry;
+        seen[e.category || e.lang || 'unknown'] = true;
       }
       return Object.keys(seen).length;
     }
 
     // ── RENDER ───────────────────────────────────────────────────
-    var resultsEl = document.getElementById('results');
-    var headerEl = document.getElementById('resultsHeader');
-    var cardsEl = document.getElementById('resultsCards');
+    var resultsSection = document.getElementById('results-section');
+    var headerEl       = document.getElementById('resultsHeader');
+    var cardsEl        = document.getElementById('resultsCards');
 
-    function renderResults(query, tokens, results) {
-      resultsEl.classList.add('visible');
+    function renderResults(query, results) {
+      // Problem 2: show results section
+      resultsSection.classList.add('visible');
       cardsEl.innerHTML = '';
 
       if (results.length === 0) {
-        headerEl.textContent = '0 passages · ' + query;
+        headerEl.textContent = '0 passages \u00b7 ' + query;
         var noRes = document.createElement('div');
         noRes.className = 'no-results';
-        noRes.innerHTML = '<p>aucun r\u00e9sultat \u2014 essayez\u00a0:</p><div class="suggestions">' +
+        noRes.innerHTML =
+          '<p>aucun r\u00e9sultat \u2014 essayez\u00a0:</p>' +
+          '<div class="suggestions">' +
           ['\u006d\u00e9lancolie', 'the sublime', '\u7121\u70BA', 'amor fati'].map(function(s) {
             return '<button class="suggestion-chip">' + escapeHtml(s) + '</button>';
           }).join('') + '</div>';
         noRes.querySelectorAll('.suggestion-chip').forEach(function(btn) {
           btn.addEventListener('click', function() {
-            document.getElementById('searchInput').value = btn.textContent;
+            document.getElementById('search-input').value = btn.textContent;
             runSearch(btn.textContent);
           });
         });
         cardsEl.appendChild(noRes);
-        return;
+      } else {
+        headerEl.textContent =
+          results.length + ' passages \u00b7 ' +
+          getTraditionCount(results) + ' traditions \u00b7 ' + query;
+
+        results.forEach(function(r) {
+          var entry = r.entry;
+          var flag  = getFlag(entry);
+          var metaParts = [];
+          if (flag) metaParts.push(flag);
+          if (entry.title)  metaParts.push(entry.title.toUpperCase());
+          if (entry.author) metaParts.push(entry.author);
+          if (entry.year)   metaParts.push(String(entry.year));
+          if (entry.lang)   metaParts.push(entry.lang.toUpperCase());
+
+          var fullText = escapeHtml(entry.snippet || '');
+          var card = document.createElement('div');
+          card.className = 'result-card';
+          card.innerHTML =
+            '<div class="card-meta">' + escapeHtml(metaParts.join(' \u00b7 ')) + '</div>' +
+            '<div class="card-excerpt">' + (r.excerpt || '') + '</div>' +
+            (fullText
+              ? '<button class="card-expand">\u2192 voir le texte complet</button>' +
+                '<div class="card-full">' + fullText + '</div>'
+              : '');
+
+          if (fullText) {
+            var btn  = card.querySelector('.card-expand');
+            var full = card.querySelector('.card-full');
+            var open = false;
+            btn.addEventListener('click', function() {
+              open = !open;
+              full.classList.toggle('expanded', open);
+              btn.textContent = open ? '\u2191 r\u00e9duire' : '\u2192 voir le texte complet';
+            });
+          }
+
+          cardsEl.appendChild(card);
+        });
       }
 
-      headerEl.textContent = results.length + ' passages \u00b7 ' + getTraditionCount(results) + ' traditions \u00b7 ' + query;
-
-      results.forEach(function(r) {
-        var entry = r.entry;
-        var flag = getFlag(entry);
-        var metaParts = [];
-        if (flag) metaParts.push(flag);
-        if (entry.title) metaParts.push(entry.title.toUpperCase());
-        if (entry.author) metaParts.push(entry.author);
-        if (entry.year) metaParts.push(String(entry.year));
-        if (entry.lang) metaParts.push(entry.lang.toUpperCase());
-
-        var excerpt = getExcerpt(entry, tokens);
-        var highlighted = excerpt ? highlightTokens(escapeHtml(excerpt), tokens) : '';
-        var fullText = escapeHtml(entry.snippet || '');
-
-        var card = document.createElement('div');
-        card.className = 'result-card';
-        card.innerHTML =
-          '<div class="card-meta">' + escapeHtml(metaParts.join(' \u00b7 ')) + '</div>' +
-          '<div class="card-excerpt">' + highlighted + '</div>' +
-          (fullText ? '<button class="card-expand">\u2192 voir le texte complet</button><div class="card-full">' + fullText + '</div>' : '');
-
-        if (fullText) {
-          var btn = card.querySelector('.card-expand');
-          var full = card.querySelector('.card-full');
-          var open = false;
-          btn.addEventListener('click', function() {
-            open = !open;
-            full.classList.toggle('expanded', open);
-            btn.textContent = open ? '\u2191 r\u00e9duire' : '\u2192 voir le texte complet';
-          });
-        }
-
-        cardsEl.appendChild(card);
-      });
+      // Problem 3: auto scroll to results
+      resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    function runSearch(query) {
+      query = (query || '').trim();
+      if (!query) return;
+      var results = search(query);
+      renderResults(query, results);
+    }
+
+    document.getElementById('search-input').addEventListener('keydown', function(e) {
       if (e.key === 'Enter') runSearch(this.value);
     });
 
@@ -482,7 +540,7 @@
       document.addEventListener('DOMContentLoaded', function() {
         var btn = document.getElementById('themeToggle');
         if (!btn) return;
-        btn.textContent = (localStorage.getItem('aleph-theme')||'dark') === 'dark' ? '\u25d1' : '\u25d0';
+        btn.textContent = (localStorage.getItem('aleph-theme') || 'dark') === 'dark' ? '\u25d1' : '\u25d0';
         btn.addEventListener('click', function() {
           var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
           document.documentElement.setAttribute('data-theme', next);

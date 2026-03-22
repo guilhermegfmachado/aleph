@@ -1,6 +1,106 @@
 {
-  "timestamp": "2026-03-15T01:26:41.163Z",
+  "timestamp": "2026-03-22T01:20:27.781Z",
   "success": [
+    "eu-teu_en",
+    "eu-teu_fr",
+    "eu-teu_de",
+    "eu-teu_es",
+    "eu-teu_it",
+    "eu-teu_nl",
+    "eu-teu_pt",
+    "eu-teu_pl",
+    "eu-tfeu_en",
+    "eu-tfeu_fr",
+    "eu-tfeu_de",
+    "eu-tfeu_es",
+    "eu-tfeu_it",
+    "eu-tfeu_nl",
+    "eu-tfeu_pt",
+    "eu-tfeu_pl",
+    "eu-charter-fundamental_en",
+    "eu-charter-fundamental_fr",
+    "eu-charter-fundamental_de",
+    "eu-charter-fundamental_es",
+    "eu-charter-fundamental_it",
+    "gdpr_en",
+    "gdpr_fr",
+    "gdpr_de",
+    "gdpr_es",
+    "gdpr_it",
+    "gdpr_pt",
+    "gdpr_nl",
+    "gdpr_pl",
+    "eu-ai-act_en",
+    "eu-ai-act_fr",
+    "eu-ai-act_de",
+    "eu-dsa_en",
+    "eu-dsa_fr",
+    "eu-dsa_de",
+    "eu-dma_en",
+    "eu-dma_fr",
+    "eu-dma_de",
+    "eu-data-act_en",
+    "eu-data-act_fr",
+    "eu-data-act_de",
+    "eu-data-governance_en",
+    "eu-data-governance_fr",
+    "eu-data-governance_de",
+    "eu-mifid2_en",
+    "eu-mifid2_fr",
+    "eu-mifid2_de",
+    "eu-mifir_en",
+    "eu-mifir_fr",
+    "eu-mifir_de",
+    "eu-emir_en",
+    "eu-emir_fr",
+    "eu-emir_de",
+    "eu-mar_en",
+    "eu-mar_fr",
+    "eu-mar_de",
+    "eu-ucits_en",
+    "eu-ucits_fr",
+    "eu-ucits_de",
+    "eu-aifmd_en",
+    "eu-aifmd_fr",
+    "eu-aifmd_de",
+    "eu-psd2_en",
+    "eu-psd2_fr",
+    "eu-psd2_de",
+    "eu-mica_en",
+    "eu-mica_fr",
+    "eu-mica_de",
+    "eu-dora_en",
+    "eu-dora_fr",
+    "eu-dora_de",
+    "eu-csrd_en",
+    "eu-csrd_fr",
+    "eu-csrd_de",
+    "eu-csddd_en",
+    "eu-csddd_fr",
+    "eu-csddd_de",
+    "eu-taxonomy_en",
+    "eu-taxonomy_fr",
+    "eu-taxonomy_de",
+    "eu-sfdr_en",
+    "eu-sfdr_fr",
+    "eu-sfdr_de",
+    "eu-shareholder-rights_en",
+    "eu-shareholder-rights_fr",
+    "eu-shareholder-rights_de",
+    "eu-amld6_en",
+    "eu-amld6_fr",
+    "eu-amld6_de",
+    "eu-amlr_en",
+    "eu-amlr_fr",
+    "eu-amlr_de"
+  ],
+  "failed": [
+    {
+      "id": "euclid-elements_en",
+      "error": "Could not fetch Gutenberg ID 21076"
+    }
+  ],
+  "skipped": [
     "smith-wealth-nations_en",
     "ricardo-political-economy_en",
     "mill-political-economy_en",
@@ -48,380 +148,5 @@
     "dhammapada_en",
     "augustine-confessions_en",
     "kempis-imitation-christ_en"
-  ],
-  "failed": [
-    {
-      "id": "eu-teu_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-teu_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-teu_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-teu_es",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-teu_it",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-teu_nl",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-teu_pt",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-teu_pl",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/PL/TXT/HTML/?uri=CELEX:12012M/TXT"
-    },
-    {
-      "id": "eu-tfeu_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-tfeu_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-tfeu_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-tfeu_es",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-tfeu_it",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-tfeu_nl",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-tfeu_pt",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-tfeu_pl",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/PL/TXT/HTML/?uri=CELEX:12012E/TXT"
-    },
-    {
-      "id": "eu-charter-fundamental_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:12012P/TXT"
-    },
-    {
-      "id": "eu-charter-fundamental_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:12012P/TXT"
-    },
-    {
-      "id": "eu-charter-fundamental_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:12012P/TXT"
-    },
-    {
-      "id": "eu-charter-fundamental_es",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:12012P/TXT"
-    },
-    {
-      "id": "eu-charter-fundamental_it",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:12012P/TXT"
-    },
-    {
-      "id": "gdpr_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "gdpr_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "gdpr_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "gdpr_es",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "gdpr_it",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "gdpr_pt",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "gdpr_nl",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "gdpr_pl",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/PL/TXT/HTML/?uri=CELEX:32016R0679"
-    },
-    {
-      "id": "eu-ai-act_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689"
-    },
-    {
-      "id": "eu-ai-act_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32024R1689"
-    },
-    {
-      "id": "eu-ai-act_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32024R1689"
-    },
-    {
-      "id": "eu-dsa_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2065"
-    },
-    {
-      "id": "eu-dsa_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32022R2065"
-    },
-    {
-      "id": "eu-dsa_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32022R2065"
-    },
-    {
-      "id": "eu-dma_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R1925"
-    },
-    {
-      "id": "eu-dma_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32022R1925"
-    },
-    {
-      "id": "eu-dma_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32022R1925"
-    },
-    {
-      "id": "eu-data-act_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R2854"
-    },
-    {
-      "id": "eu-data-act_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32023R2854"
-    },
-    {
-      "id": "eu-data-act_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32023R2854"
-    },
-    {
-      "id": "eu-data-governance_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R0868"
-    },
-    {
-      "id": "eu-data-governance_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32022R0868"
-    },
-    {
-      "id": "eu-data-governance_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32022R0868"
-    },
-    {
-      "id": "eu-mifid2_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0065"
-    },
-    {
-      "id": "eu-mifid2_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32014L0065"
-    },
-    {
-      "id": "eu-mifid2_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32014L0065"
-    },
-    {
-      "id": "eu-mifir_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014R0600"
-    },
-    {
-      "id": "eu-mifir_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32014R0600"
-    },
-    {
-      "id": "eu-mifir_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32014R0600"
-    },
-    {
-      "id": "eu-emir_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32012R0648"
-    },
-    {
-      "id": "eu-emir_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32012R0648"
-    },
-    {
-      "id": "eu-emir_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32012R0648"
-    },
-    {
-      "id": "eu-mar_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014R0596"
-    },
-    {
-      "id": "eu-mar_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32014R0596"
-    },
-    {
-      "id": "eu-mar_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32014R0596"
-    },
-    {
-      "id": "eu-ucits_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009L0065"
-    },
-    {
-      "id": "eu-ucits_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32009L0065"
-    },
-    {
-      "id": "eu-ucits_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32009L0065"
-    },
-    {
-      "id": "eu-aifmd_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32011L0061"
-    },
-    {
-      "id": "eu-aifmd_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32011L0061"
-    },
-    {
-      "id": "eu-aifmd_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32011L0061"
-    },
-    {
-      "id": "eu-psd2_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32015L2366"
-    },
-    {
-      "id": "eu-psd2_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32015L2366"
-    },
-    {
-      "id": "eu-psd2_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32015L2366"
-    },
-    {
-      "id": "eu-mica_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R1114"
-    },
-    {
-      "id": "eu-mica_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32023R1114"
-    },
-    {
-      "id": "eu-mica_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32023R1114"
-    },
-    {
-      "id": "eu-dora_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2554"
-    },
-    {
-      "id": "eu-dora_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32022R2554"
-    },
-    {
-      "id": "eu-dora_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32022R2554"
-    },
-    {
-      "id": "eu-csrd_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022L2464"
-    },
-    {
-      "id": "eu-csrd_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32022L2464"
-    },
-    {
-      "id": "eu-csrd_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32022L2464"
-    },
-    {
-      "id": "eu-csddd_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024L1760"
-    },
-    {
-      "id": "eu-csddd_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32024L1760"
-    },
-    {
-      "id": "eu-csddd_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32024L1760"
-    },
-    {
-      "id": "eu-taxonomy_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32020R0852"
-    },
-    {
-      "id": "eu-taxonomy_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32020R0852"
-    },
-    {
-      "id": "eu-taxonomy_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32020R0852"
-    },
-    {
-      "id": "eu-sfdr_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R2088"
-    },
-    {
-      "id": "eu-sfdr_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32019R2088"
-    },
-    {
-      "id": "eu-sfdr_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32019R2088"
-    },
-    {
-      "id": "eu-shareholder-rights_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017L0828"
-    },
-    {
-      "id": "eu-shareholder-rights_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32017L0828"
-    },
-    {
-      "id": "eu-shareholder-rights_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32017L0828"
-    },
-    {
-      "id": "eu-amld6_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018L1673"
-    },
-    {
-      "id": "eu-amld6_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32018L1673"
-    },
-    {
-      "id": "eu-amld6_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32018L1673"
-    },
-    {
-      "id": "eu-amlr_en",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1624"
-    },
-    {
-      "id": "eu-amlr_fr",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32024R1624"
-    },
-    {
-      "id": "eu-amlr_de",
-      "error": "EUR-Lex fetch failed: HTTP 202 for https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32024R1624"
-    },
-    {
-      "id": "euclid-elements_en",
-      "error": "Could not fetch Gutenberg ID 21076"
-    }
-  ],
-  "skipped": []
+  ]
 }

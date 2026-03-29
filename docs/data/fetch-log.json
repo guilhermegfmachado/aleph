@@ -1,6 +1,13 @@
 {
-  "timestamp": "2026-03-22T01:20:27.781Z",
-  "success": [
+  "timestamp": "2026-03-29T01:25:56.219Z",
+  "success": [],
+  "failed": [
+    {
+      "id": "euclid-elements_en",
+      "error": "Could not fetch Gutenberg ID 21076"
+    }
+  ],
+  "skipped": [
     "eu-teu_en",
     "eu-teu_fr",
     "eu-teu_de",
@@ -92,15 +99,7 @@
     "eu-amld6_de",
     "eu-amlr_en",
     "eu-amlr_fr",
-    "eu-amlr_de"
-  ],
-  "failed": [
-    {
-      "id": "euclid-elements_en",
-      "error": "Could not fetch Gutenberg ID 21076"
-    }
-  ],
-  "skipped": [
+    "eu-amlr_de",
     "smith-wealth-nations_en",
     "ricardo-political-economy_en",
     "mill-political-economy_en",

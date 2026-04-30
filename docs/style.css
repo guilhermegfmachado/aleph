@@ -68,7 +68,10 @@ nav {
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  transition: background 0.2s;
 }
+
+:root[data-theme="light"] nav { background: rgba(245,242,236,0.92); }
 
 .nav-logo {
   font-family: var(--serif);

@@ -1,0 +1,2594 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script>
+    (function(){
+      var t=localStorage.getItem('aleph-theme')||'dark';
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aleph — références</title>
+    <meta name="description" content="Répertoire de ressources numériques pour la recherche : bibliothèques nationales, archives, bases de données académiques.">
+    <meta name="author" content="Guilherme de G. F. Machado">
+    <meta property="og:title" content="aleph — sources et références numériques">
+    <meta property="og:description" content="Répertoire de ressources numériques pour la recherche : bibliothèques nationales, archives, bases de données académiques.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://guilhermegfmachado.github.io/aleph/sources.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">א</a>
+        <ul class="nav-links">
+            <li><a href="index.html">chercher</a></li>
+            <li><a href="archive/browse.html">parcourir</a></li>
+            <li><a href="archive/glossaire.html">glossaire</a></li>
+            <li><a href="sources.html" class="active">références</a></li>
+        </ul>
+        <button class="nav-theme-btn" id="themeToggle" aria-label="basculer thème" title="thème clair / sombre">◑</button>
+    </nav>
+
+    <div class="sources-page">
+        <div class="sources-header">
+            <h1 class="sources-title">Références <em>numériques</em></h1>
+            <div class="sources-stats" id="sourcesStats"></div>
+        </div>
+
+        <main>
+            <!-- Controls Bar -->
+            <div class="view-controls">
+                <div class="controls-left">
+                    <input type="text" id="sourcesSearch" class="search-input" placeholder="rechercher...">
+                </div>
+                <div class="controls-right">
+                    <button class="view-toggle-btn" id="favToggleBtn">favoris</button>
+                    <button class="view-toggle-btn active" id="viewListBtn">liste</button>
+                    <button class="view-toggle-btn" id="viewNetworkBtn">réseau</button>
+                </div>
+            </div>
+
+            <!-- Favorites Panel -->
+            <div id="favoritesPanel" class="favorites-panel">
+                <div class="panel-header">
+                    <span class="panel-title">Favoris</span>
+                </div>
+                <div id="favoritesList" class="panel-list"></div>
+            </div>
+
+            <!-- Network View -->
+            <div id="networkContainer" class="network-container"></div>
+            <div class="network-mobile-msg">
+                <span>réseau disponible sur grand écran</span>
+            </div>
+
+            <!-- List View -->
+            <div id="sourcesList">
+
+            <!-- TEXTES & ARCHIVES -->
+            <details id="textes" class="source-section" open>
+                <summary><h2>Textes</h2></summary>
+                <div class="content">
+
+                <h3>Textes Classiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gutenberg.org" target="_blank">Project Gutenberg</a></div>
+                        <div class="resource-desc">Plus de 70 000 livres en domaine public, gratuits en ePub et texte brut. Le pionnier des bibliothèques numériques depuis 1971.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://archive.org" target="_blank">Internet Archive</a></div>
+                        <div class="resource-desc">Bibliothèque numérique massive avec emprunt gratuit, Wayback Machine pour sites archivés, et 30+ millions de textes numérisés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://openlibrary.org" target="_blank">Open Library</a></div>
+                        <div class="resource-desc">Catalogue de livres avec métadonnées, emprunt numérique via Internet Archive, Open Library ID pour chaque œuvre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.perseus.tufts.edu" target="_blank">Perseus Digital Library</a></div>
+                        <div class="resource-desc">Textes grecs et latins avec morphologie interactive, traductions parallèles et outils philologiques pour études classiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ryanfb.xyz/loebolus/" target="_blank">Loebulus</a></div>
+                        <div class="resource-desc">Collection complète des Loeb Classical Library en PDF - textes grecs/latins avec traduction anglaise en regard.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sacred-texts.com" target="_blank">Sacred Texts</a></div>
+                        <div class="resource-desc">Archive de textes religieux, philosophiques et mythologiques de toutes traditions : Védas, Coran, Bible, grimoires, folklore.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ctext.org" target="_blank">Chinese Text Project</a></div>
+                        <div class="resource-desc">Base de données de textes chinois pré-modernes avec dictionnaire intégré. Confucius, Laozi, Zhuangzi et 30 000+ textes classiques.</div>
+                    </div>
+                </div>
+
+                <h3>Bibliothèques Nationales</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://gallica.bnf.fr" target="_blank">Gallica (BnF)</a></div>
+                        <div class="resource-desc">Bibliothèque numérique française avec 10+ millions de documents : manuscrits médiévaux, estampes, cartes, journaux historiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.hathitrust.org" target="_blank">HathiTrust</a></div>
+                        <div class="resource-desc">17+ millions de volumes numérisés par bibliothèques universitaires américaines. Accès complet aux ouvrages en domaine public.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.europeana.eu" target="_blank">Europeana</a></div>
+                        <div class="resource-desc">Portail unifié de 50+ millions d'objets culturels européens : art, livres, musique, archives de 4 000+ institutions.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dl.ndl.go.jp" target="_blank">国立国会図書館 (NDL)</a></div>
+                        <div class="resource-desc">Bibliothèque nationale du Japon numérisée : livres rares, ukiyo-e, cartes Edo, manuscrits bouddhistes.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.digitale-sammlungen.de" target="_blank">Bayerische Staatsbibliothek</a></div>
+                        <div class="resource-desc">Collections bavaroises numérisées : incunables, manuscrits enluminés, musique ancienne, cartes historiques germaniques.</div>
+                    </div>
+                </div>
+
+                <h3>Manuscrits & Médiévistique</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://sourcebooks.fordham.edu" target="_blank">Fordham Sourcebooks</a></div>
+                        <div class="resource-desc">Sources primaires pour histoire ancienne, médiévale et moderne. Textes traduits et contextualisés pour recherche académique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.e-codices.ch" target="_blank">e-codices</a></div>
+                        <div class="resource-desc">Manuscrits médiévaux suisses en haute résolution : codex de Saint-Gall, chartes carolingiennes, psautiers enluminés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://digital.bodleian.ox.ac.uk" target="_blank">Digital Bodleian</a></div>
+                        <div class="resource-desc">Trésors d'Oxford numérisés : First Folio de Shakespeare, Magna Carta, manuscrits anglo-saxons, papyrus grecs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://digi.vatlib.it" target="_blank">Digital Vatican Library</a></div>
+                        <div class="resource-desc">Manuscrits vaticans : codex Vaticanus, Virgile romain, palimpsestes, archives papales et incunables italiens.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://idp.bl.uk" target="_blank">International Dunhuang Project</a></div>
+                        <div class="resource-desc">Manuscrits de la Route de la Soie : sutras bouddhistes, documents sogdiens, textiles et peintures de Dunhuang.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature & Poésie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://joyceproject.com" target="_blank">Joyce Project</a></div>
+                        <div class="resource-desc">Annotations exhaustives d'Ulysses : chaque allusion, référence dublinoise et jeu de mots expliqué ligne par ligne.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dante.princeton.edu/pdp/" target="_blank">Princeton Dante Project</a></div>
+                        <div class="resource-desc">Divine Comédie avec commentaires historiques, traductions multiples et concordances pour chaque tercet.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://writing.upenn.edu/pennsound/" target="_blank">PennSound</a></div>
+                        <div class="resource-desc">Archive audio de poésie : 5 000+ enregistrements de poètes lisant leurs œuvres. Ginsberg, Pound, Ashbery, Hejinian.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://eclipsearchive.org" target="_blank">Eclipse Archive</a></div>
+                        <div class="resource-desc">Revues de poésie d'avant-garde numérisées : L=A=N=G=U=A=G=E, This, Roof, et presses expérimentales 1970-2000.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="http://russianpoetry.yale.edu" target="_blank">Russian Poetry Yale</a></div>
+                        <div class="resource-desc">Archive de poésie russe de l'Âge d'Argent à nos jours : textes originaux, traductions anglaises, enregistrements audio.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ubu.com" target="_blank">UbuWeb</a></div>
+                        <div class="resource-desc">Archive massive d'avant-garde : poésie concrète, films expérimentaux, musique électroacoustique, art conceptuel.</div>
+                    </div>
+                </div>
+
+                <h3>Recherche Académique</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://plato.stanford.edu" target="_blank">Stanford Encyclopedia of Philosophy</a></div>
+                        <div class="resource-desc">Encyclopédie philosophique peer-reviewed : articles de référence par experts, bibliographies exhaustives, mise à jour constante.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://arxiv.org" target="_blank">arXiv</a></div>
+                        <div class="resource-desc">Preprints en physique, mathématiques, informatique et sciences quantitatives. Accès libre avant publication dans journaux.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://philpapers.org" target="_blank">PhilPapers</a></div>
+                        <div class="resource-desc">Index complet de la philosophie académique : 2.5+ millions d'entrées, bibliographies thématiques, catégorisation fine.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://scholar.google.com" target="_blank">Google Scholar</a></div>
+                        <div class="resource-desc">Moteur de recherche académique : articles, citations, jurisprudence, brevets. Index de citation et profils d'auteurs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://monoskop.org" target="_blank">Monoskop</a></div>
+                        <div class="resource-desc">Wiki collaboratif sur art médiatique, théorie critique, philosophie continentale. PDFs rares et documentation alternative.</div>
+                    </div>
+                </div>
+
+                <h3>Ressources Philologiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.tlg.uci.edu" target="_blank">Thesaurus Linguae Graecae (TLG)</a></div>
+                        <div class="resource-desc">Corpus exhaustif de littérature grecque antique : Homère à Byzance. Recherche morphologique, lemmatisation, concordances.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://logeion.uchicago.edu" target="_blank">Logeion</a></div>
+                        <div class="resource-desc">Interface unifiée pour dictionnaires grec ancien et latin : LSJ, Lewis & Short, Middle Liddell. Recherche instantanée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.papyri.info" target="_blank">Papyri.info</a></div>
+                        <div class="resource-desc">Base de données de papyrus grecs et latins : textes documentaires, éditions critiques, métadonnées archéologiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.trismegistos.org" target="_blank">Trismegistos</a></div>
+                        <div class="resource-desc">Portail d'études papyrologiques : identification de textes, prosopographie, géographie historique de l'Égypte gréco-romaine.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.degruyter.com/database/TLL" target="_blank">Thesaurus Linguae Latinae (TLL)</a></div>
+                        <div class="resource-desc">Dictionnaire encyclopédique du latin : citations exhaustives d'Antiquité à Renaissance, projet séculaire de la Bayerische Akademie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.encyclopediaofgreeklaw.gr" target="_blank">Encyclopaedia of Greek Law</a></div>
+                        <div class="resource-desc">Références juridiques de la Grèce antique : législation, procédures judiciaires, institutions politiques athéniennes et hellénistiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://alpheios.net" target="_blank">Alpheios</a></div>
+                        <div class="resource-desc">Extension de lecture pour textes anciens : analyse morphologique, dictionnaire intégré, support grec, latin, arabe, persan.</div>
+                    </div>
+                </div>
+
+                <h3>Asie de l'Est</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cbetaonline.dila.edu.tw" target="_blank">CBETA</a></div>
+                        <div class="resource-desc">Canon bouddhique chinois numérisé : Tripiṭaka, sutras, commentaires. Recherche plein texte.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.dpm.org.cn" target="_blank">Musée du Palais 故宫</a></div>
+                        <div class="resource-desc">Collections de la Cité Interdite numérisées : peintures, calligraphies, porcelaines, jades impériaux.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://kotobank.jp" target="_blank">Kotobank</a></div>
+                        <div class="resource-desc">Portail de dictionnaires et encyclopédies japonais : Daijirin, Britannica Japan, termes spécialisés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.korean.go.kr" target="_blank">국립국어원 (NIKL)</a></div>
+                        <div class="resource-desc">Institut national de la langue coréenne : dictionnaires officiels, corpus, normes orthographiques.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Japonaise</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.aozora.gr.jp" target="_blank">Aozora Bunko 青空文庫</a></div>
+                        <div class="resource-desc">Gutenberg japonais : 17 000+ œuvres en domaine public. Sōseki, Akutagawa, Mishima, Tanizaki — textes intégraux en kanji.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dl.ndl.go.jp" target="_blank">NDL Digital 国立国会図書館</a></div>
+                        <div class="resource-desc">Bibliothèque nationale numérique : livres rares Meiji-Taishō, manuscrits, journaux, gravures ukiyo-e et cartes historiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nichibunken.ac.jp" target="_blank">NICHIBUNKEN 国際日本文化研究センター</a></div>
+                        <div class="resource-desc">Centre international d'études japonaises : archives de recherche, images historiques, base de données de littérature classique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ninjal.ac.jp" target="_blank">NINJAL 国立国語研究所</a></div>
+                        <div class="resource-desc">Institut national de linguistique japonaise : corpus de langue classique et contemporaine, dictionnaires historiques.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Allemande</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.deutschestextarchiv.de" target="_blank">Deutsches Textarchiv</a></div>
+                        <div class="resource-desc">Textes allemands historiques du 16e au 19e siècle en plein texte : Goethe, Schiller, Kant, Luther. Annotations linguistiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.zeno.org" target="_blank">Zeno.org</a></div>
+                        <div class="resource-desc">Bibliothèque numérique germanophone : littérature, philosophie, histoire. Textes intégraux consultables, focus germanistique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://gutenberg.spiegel.de" target="_blank">Projekt Gutenberg-DE</a></div>
+                        <div class="resource-desc">Gutenberg allemand : milliers d'œuvres en domaine public en langue allemande. Présentation soignée, lecture en ligne.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://de.wikisource.org" target="_blank">Wikisource DE</a></div>
+                        <div class="resource-desc">Textes sources allemands libres : Nietzsche, Hegel, Kafka, journaux historiques. Transcriptions collaboratives.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Tchèque</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ndk.cz" target="_blank">Národní digitální knihovna</a></div>
+                        <div class="resource-desc">Bibliothèque nationale numérique tchèque : périodiques historiques, livres anciens, manuscrits. Recherche plein texte en tchèque.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ucl.cas.cz" target="_blank">Ústav pro českou literaturu</a></div>
+                        <div class="resource-desc">Institut de littérature tchèque (Académie des sciences) : bibliographies, dictionnaires, histoire littéraire de Bohème.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cs.wikisource.org" target="_blank">Wikizdroje</a></div>
+                        <div class="resource-desc">Wikisource tchèque : Čapek, Neruda, Mácha, Hašek en texte intégral. Textes classiques de la littérature nationale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.manuscriptorium.com" target="_blank">Manuscriptorium</a></div>
+                        <div class="resource-desc">Manuscrits médiévaux d'Europe centrale numérisés : codex bohémiens, chartes, enluminures. Coopération bibliothèques tchèques.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Polonaise</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://polona.pl" target="_blank">Polona</a></div>
+                        <div class="resource-desc">Bibliothèque nationale polonaise numérique : 5+ millions d'objets, manuscrits, affiches, partitions. Interface remarquable.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://wolnelektury.pl" target="_blank">Wolne Lektury</a></div>
+                        <div class="resource-desc">Gutenberg polonais : textes scolaires et classiques en domaine public. Mickiewicz, Słowacki, Prus, Sienkiewicz.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://rcin.org.pl" target="_blank">RCIN</a></div>
+                        <div class="resource-desc">Collections numériques de recherche polonaises (PAN) : archives scientifiques, publications de l'Académie des sciences.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Hongroise</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mek.oszk.hu" target="_blank">Magyar Elektronikus Könyvtár</a></div>
+                        <div class="resource-desc">Bibliothèque électronique hongroise : Petőfi, Arany, Ady, Babits. Littérature nationale intégrale en domaine public.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://arcanum.hu" target="_blank">Arcanum</a></div>
+                        <div class="resource-desc">Archives numérisées hongroises : journaux historiques, encyclopédies, cartes. Moteur de recherche plein texte OCR.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://hu.wikisource.org" target="_blank">Wikiforrás</a></div>
+                        <div class="resource-desc">Wikisource hongroise : textes sources libres en hongrois. Classiques littéraires et documents historiques.</div>
+                    </div>
+                </div>
+
+                <h3>Littérature Ibérique & Moderne</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cervantesvirtual.com" target="_blank">Biblioteca Virtual Miguel de Cervantes</a></div>
+                        <div class="resource-desc">Patrimoine hispanique numérisé : Quichotte aux auteurs contemporains. 200 000+ œuvres en castillan, catalan, galicien.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://purl.pt" target="_blank">Biblioteca Nacional Digital (Portugal)</a></div>
+                        <div class="resource-desc">Collections de la BNP : manuscrits médiévaux, incunables, cartographie maritime, périodiques historiques lusophones.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.thelatinlibrary.com" target="_blank">The Latin Library</a></div>
+                        <div class="resource-desc">Textes latins classiques en plein texte : Cicéron, Virgile, Ovide, Sénèque. Format simple, chargement rapide.</div>
+                    </div>
+                </div>
+
+                <h3>Cartographie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://maps.vlasenko.net" target="_blank">Soviet Military Maps</a></div>
+                        <div class="resource-desc">Cartes topographiques soviétiques 1:50000 du monde entier : détail exceptionnel, usage militaire original.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.davidrumsey.com" target="_blank">David Rumsey Map Collection</a></div>
+                        <div class="resource-desc">150 000+ cartes historiques en haute résolution : atlas anciens, cartes maritimes, plans de villes.</div>
+                    </div>
+                </div>
+
+                <h3>Musées — Antiquité & Archéologie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.smb.museum/en/museums-institutions/pergamonmuseum/home/" target="_blank">Pergamon Museum Digital</a></div>
+                        <div class="resource-desc">Collections berlinoises numérisées : autel de Pergame, porte d'Ishtar, marché de Milet. Base de données SMB avec 700 000+ objets.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mann-napoli.it" target="_blank">Museo Archeologico Nazionale di Napoli</a></div>
+                        <div class="resource-desc">Meilleure collection Pompéi/Herculanum au monde : fresques, mosaïques, bronzes, cabinet secret. Indispensable pour l'art romain.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.museoetrusco.it" target="_blank">Villa Giulia — Museo Nazionale Etrusco</a></div>
+                        <div class="resource-desc">Collection étrusque de référence : sarcophages, bronzes de Palestrina, orfèvrerie. Civilisation entre Grèce et Rome.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.thebritishmuseum.org/collection" target="_blank">British Museum Collection Online</a></div>
+                        <div class="resource-desc">4+ millions d'objets en ligne, haute résolution, téléchargement libre. Meilleure base de données muséale au monde pour la recherche.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.musee-moyenage.fr" target="_blank">Musée de Cluny</a></div>
+                        <div class="resource-desc">Art médiéval parisien : tapisseries de la Dame à la Licorne, vitraux, sculptures romanes, bains gallo-romains.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.mac.doha.org" target="_blank">Museum of Islamic Art Doha</a></div>
+                        <div class="resource-desc">Collection islamique de référence : céramiques abbasides, textiles mamelouks, manuscrits enluminés, métallurgie iranienne.</div>
+                    </div>
+                </div>
+
+                <h3>Musées — Asie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://webarchives.tnm.jp/imgsearch/" target="_blank">Tokyo National Museum — E-Museum</a></div>
+                        <div class="resource-desc">Base de données TNM : 120 000+ objets interrogeables par période, matériau, technique. Référence absolue pour l'art japonais.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.npm.gov.tw/en/" target="_blank">National Palace Museum Taipei</a></div>
+                        <div class="resource-desc">Collections impériales chinoises : jades néolithiques, bronzes Shang, calligraphies Song, porcelaines Ming. 697 000 pièces en ligne.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://asia.si.edu/collections-area/south-asian-art/" target="_blank">Freer Gallery — Smithsonian</a></div>
+                        <div class="resource-desc">Art asiatique : manuscrits persans enluminés, peintures mogholes, art bouddhique du Gandhara. Base de données open access.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://collections.lacma.org" target="_blank">LACMA Collections</a></div>
+                        <div class="resource-desc">Art sud et sud-est asiatique exceptionnellement riche en ligne : sculpture khmère, arts de l'Inde, arts islamiques d'Iran.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.agakhanmuseum.org/collection" target="_blank">Aga Khan Museum</a></div>
+                        <div class="resource-desc">Art islamique de l'Espagne à l'Inde : astrolabes, céramiques lusterware, enluminures Shahnameh, arts du livre persan.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.kunstkamera.ru/en/" target="_blank">Kunstkamera St. Petersburg</a></div>
+                        <div class="resource-desc">Musée d'ethnographie de Pierre le Grand : collections Sibérie, Amérique du Nord, Océanie, Extrême-Orient. Rarissimes.</div>
+                    </div>
+                </div>
+
+                <h3>Musées — Europe Centrale & Orientale</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.hnm.hu/en/" target="_blank">Hungarian National Museum</a></div>
+                        <div class="resource-desc">Histoire hongroise des origines à 1990 : trésor de la couronne, art médiéval, collections de la Grande Plaine. Textes online.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nm.cz/en" target="_blank">Národní muzeum Praha</a></div>
+                        <div class="resource-desc">Musée national tchèque : minéralogie, zoologie, archéologie bohémienne, collections slaves. Base de données numérique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mnw.art.pl/en/" target="_blank">Muzeum Narodowe Warszawa</a></div>
+                        <div class="resource-desc">Art polonais médiéval à contemporain, antiquités méditerranéennes, Fayoum, Nubie. Collection de référence en Europe centrale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.soanesmuseum.org" target="_blank">Sir John Soane's Museum</a></div>
+                        <div class="resource-desc">Londres : cabinet de curiosités architectural du néoclassicisme. Sarcophage de Seti I, Hogarth original, maquettes antiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.rjm-cologne.de/en/" target="_blank">Rautenstrauch-Joest-Museum</a></div>
+                        <div class="resource-desc">Cologne : l'un des meilleurs musées d'ethnologie mondiale. Collections Océanie, Afrique, Amériques, Asie. Approche critique exemplaire.</div>
+                    </div>
+                </div>
+
+                <h3>Musées — Estampes & Dessin</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.rijksmuseum.nl/en/rijksstudio" target="_blank">Rijksmuseum — Rijksstudio</a></div>
+                        <div class="resource-desc">700 000+ œuvres en haute résolution, téléchargement libre sans restriction. Rembrandt, Vermeer, Hals, estampes japonaises, Delft.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mandragore.bnf.fr" target="_blank">Mandragore — BnF</a></div>
+                        <div class="resource-desc">Base de données d'enluminures de la BnF : 130 000+ images de manuscrits médiévaux. Recherche iconographique fine.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.metmuseum.org/art/collection" target="_blank">The Met Collection</a></div>
+                        <div class="resource-desc">490 000+ œuvres open access. Particulièrement fort en arts islamiques, égyptiens, instruments de musique anciens, armes et armures.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nga.gov/collection.html" target="_blank">National Gallery of Art — Open Access</a></div>
+                        <div class="resource-desc">Washington : 56 000+ œuvres téléchargeables librement. Estampes allemandes, dessins de la Renaissance, photographies historiques.</div>
+                    </div>
+                </div>
+
+                <h3>Bibliothèques — Manuscrits Spécialisés</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mss.bmlonline.it" target="_blank">Biblioteca Medicea Laurenziana</a></div>
+                        <div class="resource-desc">Florence : manuscrits grecs et latins de Médicis numérisés. Virgile du 5e siècle, codex Amiatinus, Plutarque autographe.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://bdh.bne.es" target="_blank">Biblioteca Digital Hispánica</a></div>
+                        <div class="resource-desc">Bibliothèque nationale espagnole numérique : manuscrits arabes d'Espagne, atlas de la Salle, cartes nautiques, incunables ibériques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://digital.onb.ac.at" target="_blank">Österreichische Nationalbibliothek Digital</a></div>
+                        <div class="resource-desc">Vienne : papyrus grecs, manuscrits musicaux, atlas de Mercator, collection de portraits habsbourgeois.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nli.org.il/en/digitalnli/" target="_blank">National Library of Israel Digital</a></div>
+                        <div class="resource-desc">Judaïca et manuscrits du Moyen-Orient : Talmud enluminé, cartes ottomanes, fonds Kafka, archives Sholem Aleichem.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.qdl.qa/en" target="_blank">Qatar Digital Library</a></div>
+                        <div class="resource-desc">Archives ottomanes et arabes en partenariat British Library : cartes du Golfe, correspondances, manuscrits scientifiques arabes.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cudl.lib.cam.ac.uk" target="_blank">Cambridge Digital Library</a></div>
+                        <div class="resource-desc">Newton manuscrits, Darwin carnets, Geniza du Caire, manuscrits bouddhiques. Haute résolution, transcriptions.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://digi.ub.uni-heidelberg.de" target="_blank">Heidelberg University Library</a></div>
+                        <div class="resource-desc">Manuscrits enluminés rhénans, Codex Manesse, cartes de Ptolémée, chroniques médiévales allemandes en haute résolution.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://beinecke.library.yale.edu/collections/digital-collections" target="_blank">Beinecke Rare Books — Yale</a></div>
+                        <div class="resource-desc">Manuscrit Voynich, première Bible de Gutenberg, archives Langston Hughes, papyrus grecs, cartes Renaissance.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.kb.nl/en/themes/collections-online" target="_blank">Koninklijke Bibliotheek Netherlands</a></div>
+                        <div class="resource-desc">Bibliothèque nationale néerlandaise : atlas factice, atlas Van der Hem, incunables, journaux historiques néerlandais.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://shamela.ws" target="_blank">Al-Maktaba al-Shamela</a></div>
+                        <div class="resource-desc">Bibliothèque islamique en arabe : 15 000+ livres de fiqh, hadith, tafsir, kalam. Corpus islamique classique complet et interrogeable.</div>
+                    </div>
+                </div>
+
+                <h3>Référence — Encyclopédies Spécialisées</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://iranicaonline.org" target="_blank">Encyclopaedia Iranica</a></div>
+                        <div class="resource-desc">Référence absolue pour la civilisation iranienne et persane : histoire, littérature, religion, art, langues. Accès libre, peer-reviewed.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://referenceworks.brillonline.com/browse/encyclopaedia-of-islam-3" target="_blank">Encyclopaedia of Islam (Brill)</a></div>
+                        <div class="resource-desc">Standard académique mondial pour l'islam : 3e édition en cours. Payant mais accessible via bibliothèques universitaires.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.jewishvirtuallibrary.org" target="_blank">Jewish Virtual Library</a></div>
+                        <div class="resource-desc">Encyclopédie juive en ligne : histoire, textes religieux, biographies, Shoah, État d'Israël. Accès libre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.oxfordbibliographies.com" target="_blank">Oxford Bibliographies</a></div>
+                        <div class="resource-desc">Bibliographies académiques annotées par domaine. Payant mais standard de référence pour la recherche universitaire.</div>
+                    </div>
+                </div>
+
+                <h3>Référence — Géographie Historique</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://pleiades.stoa.org" target="_blank">Pleiades</a></div>
+                        <div class="resource-desc">Gazetteer du monde antique : chaque lieu mentionné dans les sources anciennes géolocalisé. Référence pour l'histoire et l'archéologie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://orbis.stanford.edu" target="_blank">ORBIS — Stanford</a></div>
+                        <div class="resource-desc">Simulateur du réseau de transport romain : calcule temps de voyage, coûts, routes optimales dans l'Empire. Outil extraordinaire.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.oldmapsonline.org" target="_blank">Old Maps Online</a></div>
+                        <div class="resource-desc">Moteur de recherche pour cartes historiques de toutes les collections mondiales. Recherche par lieu et période.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://whgazetteer.org" target="_blank">World Historical Gazetteer</a></div>
+                        <div class="resource-desc">Noms de lieux historiques géoréférencés à travers le temps. Projet Pitt pour l'histoire mondiale comparée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://regesta-imperii.de/en/" target="_blank">Regesta Imperii</a></div>
+                        <div class="resource-desc">Régestes des empereurs et papes médiévaux : 200 000+ documents résumés, base pour l'histoire du Saint-Empire.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- LANGUES -->
+            <details id="langues" class="source-section">
+                <summary><h2>Langues</h2></summary>
+                <div class="content">
+
+                <h3>Bases de Données Linguistiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://glottolog.org" target="_blank">Glottolog</a></div>
+                        <div class="resource-desc">Classification de toutes les langues connues : 8 000+ langues, familles, dialectes, avec bibliographies et données géographiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://wals.info" target="_blank">WALS</a></div>
+                        <div class="resource-desc">World Atlas of Language Structures : 2 600+ langues cartographiées par traits typologiques (ordre des mots, phonèmes, etc.).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://phoible.org" target="_blank">PHOIBLE</a></div>
+                        <div class="resource-desc">Inventaires phonémiques de 3 000+ langues : systèmes de consonnes/voyelles, tons, structures syllabiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.omniglot.com" target="_blank">Omniglot</a></div>
+                        <div class="resource-desc">Encyclopédie des systèmes d'écriture : alphabets, syllabaires, logogrammes, écritures construites et langues des signes.</div>
+                    </div>
+                </div>
+
+                <h3>Langues Construites & Ésotériques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://esolangs.org" target="_blank">Esolang Wiki</a></div>
+                        <div class="resource-desc">Langages de programmation ésotériques : Brainfuck (8 commandes), Whitespace (espaces uniquement), Malbolge (délibérément difficile).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://conlang.org" target="_blank">Language Creation Society</a></div>
+                        <div class="resource-desc">Communauté de créateurs de langues : ressources pour construire grammaires, phonologies et lexiques cohérents.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://tokipona.org" target="_blank">Toki Pona</a></div>
+                        <div class="resource-desc">Langue minimaliste de 120 mots basée sur la simplicité philosophique. Apprentissage en quelques jours.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://lojban.org" target="_blank">Lojban</a></div>
+                        <div class="resource-desc">Langue logique sans ambiguïté syntaxique, basée sur la logique des prédicats. Grammaire formellement définie.</div>
+                    </div>
+                </div>
+
+                <h3>Dictionnaires & Étymologie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cnrtl.fr" target="_blank">CNRTL</a></div>
+                        <div class="resource-desc">Centre national de ressources textuelles et lexicales : TLFi, étymologie, synonymes, concordances du français.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.etymonline.com" target="_blank">Online Etymology Dictionary</a></div>
+                        <div class="resource-desc">Histoire des mots anglais : origines proto-indo-européennes, emprunts, évolution sémantique détaillée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.dwds.de" target="_blank">DWDS</a></div>
+                        <div class="resource-desc">Dictionnaire numérique allemand : définitions, étymologie, collocations, corpus diachronique de 100 milliards de mots.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://starlingdb.org" target="_blank">Starling Database</a></div>
+                        <div class="resource-desc">Bases de données de linguistique comparative : reconstructions proto-langues, étymologies de familles (IE, altaïque, sino-tibétain).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dictionnaire.sensagent.com" target="_blank">Sensagent</a></div>
+                        <div class="resource-desc">Dictionnaire multilingue avec synonymes, antonymes, traductions et définitions encyclopédiques intégrées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.lexilogos.com" target="_blank">Lexilogos</a></div>
+                        <div class="resource-desc">Portail de dictionnaires et claviers virtuels pour 200+ langues : ressources linguistiques mondiales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.linguee.com" target="_blank">Linguee</a></div>
+                        <div class="resource-desc">Dictionnaire avec contextes : traductions issues de documents bilingues réels, exemples d'usage authentiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://forvo.com" target="_blank">Forvo</a></div>
+                        <div class="resource-desc">Prononciation de mots par locuteurs natifs : 6+ millions d'enregistrements dans 400+ langues.</div>
+                    </div>
+                </div>
+
+                <h3>Dictionnaires Nationaux</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cnrtl.fr" target="_blank">CNRTL — Centre National de Ressources Textuelles</a></div>
+                        <div class="resource-desc">Référence française : TLFi (Trésor de la Langue Française), étymologies, synonymes, morphologie. Corpus littéraires interrogeables.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.rae.es" target="_blank">Real Academia Española — DRAE</a></div>
+                        <div class="resource-desc">Dictionnaire de référence de la langue espagnole. Avec DPD (doutes linguistiques) et corpus CREA/CORPES en ligne.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dicionario.priberam.org" target="_blank">Priberam</a></div>
+                        <div class="resource-desc">Dictionnaire de référence du portugais contemporain. Ortographe post-accord, registres, synonymes, conjugaisons.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.duden.de" target="_blank">Duden</a></div>
+                        <div class="resource-desc">Autorité normative de la langue allemande : orthographe, grammaire, étymologies, néologismes. Référence depuis 1880.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.treccani.it/vocabolario/" target="_blank">Treccani — Vocabolario</a></div>
+                        <div class="resource-desc">Dictionnaire italien de référence avec encyclopédie intégrée. Étymologies latines, synonymes, corpus littéraire.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.vandale.nl" target="_blank">Van Dale</a></div>
+                        <div class="resource-desc">Dictionnaire néerlandais de référence. Groot Woordenboek van de Nederlandse Taal — standard académique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.saob.se" target="_blank">SAOB — Svenska Akademiens Ordbok</a></div>
+                        <div class="resource-desc">Dictionnaire historique du suédois sur 37 volumes numérisés. Étymologies, citations littéraires depuis le 16e siècle.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ordnet.dk/ddo" target="_blank">Den Danske Ordbog</a></div>
+                        <div class="resource-desc">Dictionnaire du danois contemporain : définitions, exemples, étymologies, corpus de 250 millions de mots.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://sjp.pwn.pl" target="_blank">Słownik Języka Polskiego PWN</a></div>
+                        <div class="resource-desc">Dictionnaire polonais de référence : définitions, étymologies, collocations, règles orthographiques.</div>
+                    </div>
+                </div>
+
+                <h3>Langues en Danger & Documentation</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://elar.soas.ac.uk" target="_blank">ELAR — Endangered Languages Archive</a></div>
+                        <div class="resource-desc">Archive de langues en danger : enregistrements, transcriptions, dictionnaires pour 400+ langues. SOAS University of London.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ethnologue.com" target="_blank">Ethnologue</a></div>
+                        <div class="resource-desc">Catalogue mondial des langues : 7 000+ langues classifiées, nombre de locuteurs, statut de vitalité, familles génétiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://asjp.clld.org" target="_blank">ASJP — Automated Similarity Judgment</a></div>
+                        <div class="resource-desc">Listes Swadesh pour 6 000+ langues : outil pour la classification et la datation des divergences linguistiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://clics.clld.org" target="_blank">CLICS — Cross-Linguistic Colexifications</a></div>
+                        <div class="resource-desc">Réseau de colexifications translinguistiques : quelles langues utilisent le même mot pour deux concepts. Sémantique cognitive.</div>
+                    </div>
+                </div>
+
+                <h3>Corpus & Linguistique Computationnelle</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sketchengine.eu" target="_blank">Sketch Engine</a></div>
+                        <div class="resource-desc">Corpus linguistiques en 90+ langues : collocations, fréquences, concordances, profils de mots. Standard de la lexicographie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://corpora.uni-leipzig.de" target="_blank">Leipzig Corpora Collection</a></div>
+                        <div class="resource-desc">Corpus de fréquences pour 250+ langues : co-occurrences, voisins contextuels, données comparatives interlinguistiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.clarin.eu/resource-families/written-corpora" target="_blank">CLARIN — European Language Resources</a></div>
+                        <div class="resource-desc">Infrastructure européenne pour ressources linguistiques : corpus nationaux, lexiques, outils NLP pour 20+ langues européennes.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://universaldependencies.org" target="_blank">Universal Dependencies</a></div>
+                        <div class="resource-desc">Treebanks annotés pour 100+ langues avec schéma unifié. Référence pour la linguistique computationnelle comparative.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- ARTS VISUELS & SCÉNIQUES -->
+            <details id="arts" class="source-section">
+                <summary><h2>Arts</h2></summary>
+                <div class="content">
+
+                <h3>Collections Muséales</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.metmuseum.org/art/collection" target="_blank">Metropolitan Museum (Open Access)</a></div>
+                        <div class="resource-desc">470 000+ œuvres en haute résolution sous licence CC0 : art égyptien, armures, peintures européennes, art asiatique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.rijksmuseum.nl/en/rijksstudio" target="_blank">Rijksmuseum</a></div>
+                        <div class="resource-desc">Maîtres hollandais en résolution maximale : Rembrandt, Vermeer, Frans Hals. Téléchargement libre pour tout usage.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://collections.louvre.fr" target="_blank">Collections du Louvre</a></div>
+                        <div class="resource-desc">480 000 œuvres documentées : antiquités orientales, peintures italiennes, objets d'art, sculptures grecques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.wga.hu" target="_blank">Web Gallery of Art</a></div>
+                        <div class="resource-desc">Peinture et sculpture européennes 1000-1850 avec biographies d'artistes et commentaires iconographiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ukiyo-e.org" target="_blank">Ukiyo-e.org</a></div>
+                        <div class="resource-desc">Estampes japonaises avec recherche par similarité visuelle : Hokusai, Hiroshige, Utamaro et milliers d'autres.</div>
+                    </div>
+                </div>
+
+                <h3>Art Contemporain & Théâtre</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.e-flux.com" target="_blank">e-flux</a></div>
+                        <div class="resource-desc">Actualité de l'art contemporain, essais critiques, annonces d'expositions mondiales et journal théorique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://rhizome.org/art/artbase" target="_blank">Rhizome ArtBase</a></div>
+                        <div class="resource-desc">Archive de net art et art numérique depuis 1999 : œuvres préservées, émulateurs, documentation de projets disparus.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://grotowski.net" target="_blank">Grotowski Institute</a></div>
+                        <div class="resource-desc">Archives du théâtre pauvre et laboratoire de Jerzy Grotowski : entraînement de l'acteur, parathéâtre, Art as Vehicle.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://globalshakespeares.mit.edu" target="_blank">Global Shakespeares</a></div>
+                        <div class="resource-desc">Adaptations de Shakespeare du monde entier : productions vidéo, analyses interculturelles, pédagogie.</div>
+                    </div>
+                </div>
+
+                <h3>Iconographie & Recherche</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://warburg.sas.ac.uk" target="_blank">Warburg Institute</a></div>
+                        <div class="resource-desc">Bibliothèque Aby Warburg : iconologie, survie de l'Antiquité, histoire des images. Photothèque et archives uniques.</div>
+                    </div>
+                </div>
+
+                <h3>Bases de Données — Art & Images</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.wikiart.org" target="_blank">WikiArt</a></div>
+                        <div class="resource-desc">250 000+ œuvres d'art en haute résolution, classées par mouvement, période, technique. Symbolisme, Art Nouveau, expressionnisme.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://artsandculture.google.com" target="_blank">Google Arts & Culture</a></div>
+                        <div class="resource-desc">Visites virtuelles de 2 000+ musées, gigapixel d'œuvres majeures, comparaisons stylistiques, expériences immersives.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.artsy.net" target="_blank">Artsy</a></div>
+                        <div class="resource-desc">Base de données d'art contemporain et moderne : 1 million d'œuvres, galeries mondiales, ventes aux enchères, tendances.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://commons.wikimedia.org/wiki/Category:Art" target="_blank">Wikimedia Commons — Art</a></div>
+                        <div class="resource-desc">80+ millions de fichiers libres de droits : peintures, sculptures, photographies, diagrammes scientifiques. Téléchargement libre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.invaluable.com" target="_blank">Invaluable</a></div>
+                        <div class="resource-desc">Base de données de résultats de ventes aux enchères : prix, estimations, provenance. Référence pour la valeur marchande des œuvres.</div>
+                    </div>
+                </div>
+
+                <h3>Architecture</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://library.columbia.edu/libraries/avery.html" target="_blank">Avery Index — Columbia</a></div>
+                        <div class="resource-desc">Index de référence pour l'architecture : 700 000+ articles de revues spécialisées depuis 1934. Standard académique mondial.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.archdaily.com" target="_blank">ArchDaily</a></div>
+                        <div class="resource-desc">Archive de l'architecture contemporaine mondiale : projets documentés, interviews, détails techniques, plans disponibles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.greatbuildings.com" target="_blank">Great Buildings</a></div>
+                        <div class="resource-desc">3D models, plans, sections, photos et textes pour 750 bâtiments historiques. De Stonehenge à Gehry.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://archnet.org" target="_blank">Archnet</a></div>
+                        <div class="resource-desc">Architecture islamique mondiale : mosquées, madrasas, mausolées, villes historiques. Documentation exhaustive, plans, photos.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.docomomo.com" target="_blank">Docomomo International</a></div>
+                        <div class="resource-desc">Documentation et conservation du mouvement moderne : répertoire des bâtiments modernistes menacés ou protégés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.e-architect.com" target="_blank">e-architect</a></div>
+                        <div class="resource-desc">Architecture contemporaine par pays et ville : concours, projets non construits, réalisations récentes documentées.</div>
+                    </div>
+                </div>
+
+                <h3>Photographie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.magnumphotos.com/arts-culture/" target="_blank">Magnum Photos</a></div>
+                        <div class="resource-desc">Archive de photojournalisme et photographie documentaire : Cartier-Bresson, Capa, Erwitt. Standard de la photographie humaniste.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.loc.gov/pictures/" target="_blank">Library of Congress Prints & Photos</a></div>
+                        <div class="resource-desc">16+ millions d'images : FSA Depression-era, HABS architecturales, affiches WPA, photographies de guerre américaines.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://lens.blogs.nytimes.com" target="_blank">NYT Lens</a></div>
+                        <div class="resource-desc">Blog photo du New York Times : reportages, portfolios de photographes, réflexions sur l'éthique documentaire.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.icp.org/browse/archive" target="_blank">ICP Archive — New York</a></div>
+                        <div class="resource-desc">International Center of Photography : archive de photojournalisme, expositions, collection permanente en ligne.</div>
+                    </div>
+                </div>
+
+                <h3>Film & Cinéma</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www2.bfi.org.uk/films-tv-people" target="_blank">BFI — British Film Institute</a></div>
+                        <div class="resource-desc">Base de données cinéma britannique et internationale, archives Sight & Sound, classements historiques, ressources critiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.criterion.com/shop/browse/list?q=" target="_blank">Criterion Collection</a></div>
+                        <div class="resource-desc">Canon du cinéma mondial : essais critiques, suppléments, contexte historique pour films de Bergman, Kurosawa, Godard, Tati.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mubi.com/notebook" target="_blank">MUBI Notebook</a></div>
+                        <div class="resource-desc">Revue de cinéma critique : essais approfondis, rétrospectives, entretiens avec cinéastes. Niveau universitaire.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://sensesofcinema.com" target="_blank">Senses of Cinema</a></div>
+                        <div class="resource-desc">Revue académique de cinéma : études de réalisateurs, analyses de films, histoire du cinéma mondial. Accès libre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.screenonline.org.uk" target="_blank">BFI Screenonline</a></div>
+                        <div class="resource-desc">Histoire du cinéma et télévision britanniques : extrait de films, biographies, contextes historiques depuis les années 1890.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- MUSIQUE -->
+            <details id="musique" class="source-section">
+                <summary><h2>Musique</h2></summary>
+                <div class="content">
+
+                <h3>Bases de Données & Découverte</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://rateyourmusic.com" target="_blank">Rate Your Music</a></div>
+                        <div class="resource-desc">Base de données musicale communautaire : genres détaillés, listes thématiques, charts par année/pays, discussions éclairées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.discogs.com" target="_blank">Discogs</a></div>
+                        <div class="resource-desc">Discographies complètes avec crédits de production, variations de pressages, marketplace pour vinyles et CDs rares.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://everynoise.com" target="_blank">Every Noise at Once</a></div>
+                        <div class="resource-desc">Carte algorithmique de 6 000+ genres musicaux avec échantillons : explorez des micro-genres obscurs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://radiooooo.com" target="_blank">Radiooooo</a></div>
+                        <div class="resource-desc">Machine à voyager dans le temps musical : sélectionnez décennie et pays pour découvrir la musique locale de l'époque.</div>
+                    </div>
+                </div>
+
+                <h3>Archives & Partitions</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://imslp.org" target="_blank">IMSLP</a></div>
+                        <div class="resource-desc">Bibliothèque Petrucci : 200 000+ partitions en domaine public, de Bach à Debussy, avec enregistrements libres.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://awesometapes.com" target="_blank">Awesome Tapes From Africa</a></div>
+                        <div class="resource-desc">Cassettes africaines rares numérisées : musique éthiopienne, highlife ghanéen, soukous congolais, raï algérien.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mutant-sounds.blogspot.com" target="_blank">Mutant Sounds</a></div>
+                        <div class="resource-desc">Archive de musique expérimentale : noise japonais, musique industrielle, free jazz, electronics obscures.</div>
+                    </div>
+                </div>
+
+                <h3>Ethnomusicologie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.loc.gov/collections/alan-lomax-manuscripts" target="_blank">Alan Lomax Archive</a></div>
+                        <div class="resource-desc">Enregistrements de terrain légendaires : blues du Delta, folk appalachien, musiques du monde collectées sur 60 ans.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.folkways.si.edu" target="_blank">Smithsonian Folkways</a></div>
+                        <div class="resource-desc">Label d'archives sonores : musiques traditionnelles, field recordings, spoken word. 60 000+ pistes streamables.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://archives.crem-cnrs.fr" target="_blank">CREM (CNRS)</a></div>
+                        <div class="resource-desc">Centre de recherche en ethnomusicologie : archives sonores de terrain, Asie, Afrique, Océanie, Amériques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://globalmusic.digital" target="_blank">Global Music Archive</a></div>
+                        <div class="resource-desc">Collection numérique de musiques traditionnelles : enregistrements historiques, instruments, contextes rituels.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.thegramophonedb.com" target="_blank">The Gramophone DB</a></div>
+                        <div class="resource-desc">Base de données de 78 tours historiques : enregistrements pré-1950 du monde entier, acoustiques et électriques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.musicbrainz.org" target="_blank">MusicBrainz</a></div>
+                        <div class="resource-desc">Base de données collaborative : artistes, albums, relations, identifiants. Backbone de l'écosystème de métadonnées musicales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.rilm.org" target="_blank">RILM Abstracts</a></div>
+                        <div class="resource-desc">Index de la littérature musicologique mondiale : 900 000+ entrées, toutes disciplines. Standard pour la recherche en musicologie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cantusdatabase.org" target="_blank">Cantus Database</a></div>
+                        <div class="resource-desc">Chant grégorien indexé : 500 000+ mélodies de manuscrits médiévaux, mode, office, provenance géographique.</div>
+                    </div>
+                </div>
+
+                <h3>Théorie Musicale & Analyse</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.music-theory.net" target="_blank">Music Theory Online</a></div>
+                        <div class="resource-desc">Revue académique de théorie musicale : analyses schenckeriennes, néo-riemanniennes, ethnomusicologie théorique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dmitri.mycpanel.princeton.edu" target="_blank">Dmitri Tymoczko — Princeton</a></div>
+                        <div class="resource-desc">Géométrie des espaces d'accords, visualisations théorie musicale, A Geometry of Music en ligne. Approche mathématique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.counterpointhacks.com" target="_blank">Open Music Theory</a></div>
+                        <div class="resource-desc">Manuel open source de théorie musicale : contrepoint, harmonie tonale, analyse post-tonale. Niveau universitaire.</div>
+                    </div>
+                </div>
+
+                <h3>Partitions & Archives Supplémentaires</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.loc.gov/collections/national-jukebox/" target="_blank">National Jukebox — Library of Congress</a></div>
+                        <div class="resource-desc">400 000+ enregistrements historiques américains : jazz, blues, country, classique, 1900-1950. Accès libre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.europeana.eu/en/collections/topic/62-music" target="_blank">Europeana Music</a></div>
+                        <div class="resource-desc">Patrimoine musical européen numérisé : partitions, enregistrements historiques, instruments, iconographie musicale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.virtualmusiclibrary.info" target="_blank">Virtual Music Library</a></div>
+                        <div class="resource-desc">Portail vers collections de partitions numériques mondiales : agrégateur de ressources musicologiques libres.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- HUMANITÉS -->
+            <details id="humanites" class="source-section">
+                <summary><h2>Humanités</h2></summary>
+                <div class="content">
+
+                <h3>Psychologie & Psychanalyse</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://psychclassics.yorku.ca" target="_blank">Classics in History of Psychology</a></div>
+                        <div class="resource-desc">Textes fondateurs : Freud, Jung, Piaget, Skinner, William James. Documents originaux numérisés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://nosubject.com" target="_blank">No Subject</a></div>
+                        <div class="resource-desc">Encyclopédie lacanienne : concepts, séminaires, mathèmes. Aussi : Žižek, Badiou, théorie psychanalytique contemporaine.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.pep-web.org" target="_blank">PEP-Web</a></div>
+                        <div class="resource-desc">Psychoanalytic Electronic Publishing : archives complètes des revues psychanalytiques majeures depuis 1871.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.freud.org.uk" target="_blank">Freud Museum London</a></div>
+                        <div class="resource-desc">Archives du dernier domicile de Freud : correspondances, photos, bibliothèque, objets de la collection personnelle.</div>
+                    </div>
+                </div>
+
+                <h3>Anthropologie & Ethnographie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ehrafworldcultures.yale.edu" target="_blank">eHRAF World Cultures</a></div>
+                        <div class="resource-desc">Base ethnographique de Yale : données comparatives sur 400+ cultures, indexées par sujet pour recherche cross-culturelle.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://d-place.org" target="_blank">D-PLACE</a></div>
+                        <div class="resource-desc">Database of Places, Language, Culture and Environment : variables culturelles de 1 400+ sociétés pour analyses statistiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.prm.ox.ac.uk" target="_blank">Pitt Rivers Museum</a></div>
+                        <div class="resource-desc">Collections ethnographiques d'Oxford : 500 000+ objets photographiés avec provenance et contexte culturel.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://journals.openedition.org/terrain" target="_blank">Terrain (OpenEdition)</a></div>
+                        <div class="resource-desc">Revue d'ethnologie européenne en accès libre : articles de recherche, enquêtes de terrain, approches sensibles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.quaibranly.fr/fr/collections" target="_blank">Musée du Quai Branly</a></div>
+                        <div class="resource-desc">Collections des arts et civilisations d'Afrique, Asie, Océanie, Amériques : 300 000+ objets documentés en ligne.</div>
+                    </div>
+                </div>
+
+                <h3>Archives Politiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.marxists.org" target="_blank">Marxists Internet Archive</a></div>
+                        <div class="resource-desc">Œuvres complètes de penseurs marxistes : Marx, Lénine, Luxemburg, Gramsci, Lukács, Althusser, et centaines d'autres.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://research.calvin.edu/german-propaganda-archive/" target="_blank">German Propaganda Archive</a></div>
+                        <div class="resource-desc">Matériaux de propagande nazie et DDR traduits : affiches, discours, manuels scolaires, films pour analyse historique.</div>
+                    </div>
+                </div>
+
+                <h3>Cours Universitaires</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ocw.mit.edu" target="_blank">MIT OpenCourseWare</a></div>
+                        <div class="resource-desc">2 500+ cours MIT gratuits : vidéos, notes, examens. Ingénierie, sciences, économie, humanités.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://oyc.yale.edu" target="_blank">Yale Open Courses</a></div>
+                        <div class="resource-desc">Cours filmés de Yale : philosophie, histoire, psychologie. Qualité de production cinématographique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.coursera.org" target="_blank">Coursera</a></div>
+                        <div class="resource-desc">Plateforme de cours universitaires : Stanford, Princeton, etc. Audit gratuit, certificats payants.</div>
+                    </div>
+                </div>
+
+                <h3>Histoire — Bases de Données</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.jstor.org" target="_blank">JSTOR</a></div>
+                        <div class="resource-desc">Archive de revues académiques : 12+ millions d'articles en sciences humaines. Accès partiel libre (100 articles/mois).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cambridge.org/core" target="_blank">Cambridge Core</a></div>
+                        <div class="resource-desc">Revues et livres Cambridge University Press : sciences humaines, sciences sociales, droit. Contenu partiel libre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.persee.fr" target="_blank">Persée</a></div>
+                        <div class="resource-desc">Revues françaises de sciences humaines numérisées : 800+ titres en accès libre, de 1860 à aujourd'hui.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.openedition.org" target="_blank">OpenEdition</a></div>
+                        <div class="resource-desc">Portail de sciences humaines en open access : Revues.org, Hypotheses (carnets), Calenda (agenda), OpenEdition Books.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://doaj.org" target="_blank">DOAJ — Directory of Open Access Journals</a></div>
+                        <div class="resource-desc">Répertoire de 20 000+ revues scientifiques en accès libre : sciences humaines, sciences sociales, sciences exactes.</div>
+                    </div>
+                </div>
+
+                <h3>Philosophie & Religion</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.iep.utm.edu" target="_blank">Internet Encyclopedia of Philosophy</a></div>
+                        <div class="resource-desc">Encyclopédie philosophique peer-reviewed gratuite : articles détaillés sur philosophes, courants, concepts. Alternative au SEP.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.newadvent.org/cathen/" target="_blank">Catholic Encyclopedia</a></div>
+                        <div class="resource-desc">Encyclopédie catholique de 1917 numérisée : théologie scolastique, histoire de l'Église, biographies de saints, liturgie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sefaria.org" target="_blank">Sefaria</a></div>
+                        <div class="resource-desc">Bibliothèque de textes juifs : Torah, Talmud, Midrash, Kabbale, codes. Texte hébreu avec traductions, commentaires liés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gatewaystobabylon.com" target="_blank">Gateways to Babylon</a></div>
+                        <div class="resource-desc">Mythologie et religion mésopotamiennes : textes cunéiformes traduits, cosmogonies sumériennes, rituels assyriens.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.tertullian.org" target="_blank">Tertullian Project</a></div>
+                        <div class="resource-desc">Pères de l'Église en ligne : Tertullien, Origène, Cyrille, textes patristiques grecs et latins avec traductions.</div>
+                    </div>
+                </div>
+
+                <h3>Anthropologie & Ethnographie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://hraf.yale.edu" target="_blank">Human Relations Area Files — Yale</a></div>
+                        <div class="resource-desc">eHRAF : base de données ethnographiques transculturelles. 400+ cultures documentées pour comparaison anthropologique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.d-maps.com" target="_blank">D-Maps</a></div>
+                        <div class="resource-desc">Cartes vectorielles libres pour tous pays, régions, continents. Format SVG, EPS, PDF pour usage académique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ajol.info" target="_blank">AJOL — African Journals Online</a></div>
+                        <div class="resource-desc">Revues africaines en accès libre : sciences humaines, sociales et exactes. 500+ titres de 35 pays africains.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dloc.com" target="_blank">Digital Library of the Caribbean</a></div>
+                        <div class="resource-desc">Archives caribéennes numérisées : journaux historiques, cartes, photographies, documents officiels des Caraïbes.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- ÉCONOMIE -->
+            <details id="economie" class="source-section">
+                <summary><h2>Économie</h2></summary>
+                <div class="content">
+
+                <h3>Données Économiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://fred.stlouisfed.org" target="_blank">FRED</a></div>
+                        <div class="resource-desc">800 000+ séries économiques de la Fed : PIB, inflation, emploi, taux. API gratuite pour intégration.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ourworldindata.org" target="_blank">Our World in Data</a></div>
+                        <div class="resource-desc">Visualisations de données mondiales sur longue durée : développement, santé, énergie, environnement. Open source.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nber.org/papers" target="_blank">NBER Working Papers</a></div>
+                        <div class="resource-desc">Recherche économique de pointe : 30 000+ papers pré-publication par économistes de Harvard, MIT, Stanford.</div>
+                    </div>
+                </div>
+
+                <h3>Crypto & DeFi (Avancé)</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://defillama.com" target="_blank">DeFi Llama</a></div>
+                        <div class="resource-desc">TVL (Total Value Locked) de tous protocoles DeFi, yields, bridges. Dashboard essentiel pour analyser la finance décentralisée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dune.com" target="_blank">Dune Analytics</a></div>
+                        <div class="resource-desc">Requêtes SQL sur blockchains : créez dashboards personnalisés, analysez transactions, MEV, comportements on-chain.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://rekt.news" target="_blank">Rekt News</a></div>
+                        <div class="resource-desc">Post-mortems de hacks crypto : analyses techniques d'exploits, leaderboard des plus gros vols, leçons de sécurité.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.paradigm.xyz/writing" target="_blank">Paradigm Research</a></div>
+                        <div class="resource-desc">Recherche fondamentale sur mécanismes DeFi : AMM, MEV, token design, cryptographie appliquée par top VC crypto.</div>
+                    </div>
+                </div>
+
+                <h3>Crypto — Recherche & Données</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://messari.io" target="_blank">Messari</a></div>
+                        <div class="resource-desc">Recherche crypto institutionnelle : rapports sectoriels, métriques on-chain, profiles de protocoles, screeners.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://glassnode.com" target="_blank">Glassnode</a></div>
+                        <div class="resource-desc">Métriques on-chain avancées : MVRV, SOPR, analyse de holders, flux d'échanges. Standard pour l'analyse Bitcoin.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.theblock.co/data" target="_blank">The Block Data</a></div>
+                        <div class="resource-desc">Dashboards de données crypto : volumes DEX, TVL historique, stablecoins, NFT, funding rounds.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://tokenterminal.com" target="_blank">Token Terminal</a></div>
+                        <div class="resource-desc">Métriques financières pour protocoles : revenus, P/S ratio, fully diluted valuation. Analyse fondamentale crypto.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cryptofees.info" target="_blank">CryptoFees</a></div>
+                        <div class="resource-desc">Frais générés par protocoles : comparaison quotidienne des revenus de Ethereum, Uniswap, Lido, etc.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://etherscan.io" target="_blank">Etherscan</a></div>
+                        <div class="resource-desc">Explorateur Ethereum : transactions, contrats, tokens, gas tracker. Équivalents pour autres EVM chains.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ethereum.org/en/whitepaper" target="_blank">Ethereum Whitepaper</a></div>
+                        <div class="resource-desc">Document fondateur de Vitalik Buterin : smart contracts, EVM, vision originale de la plateforme.</div>
+                    </div>
+                </div>
+
+                <h3>Commodités & Trading Houses</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.glencore.com" target="_blank">Glencore</a></div>
+                        <div class="resource-desc">Plus grand négociant de matières premières : métaux, charbon, pétrole. Rapports annuels sur marchés globaux des commodités.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.trafigura.com" target="_blank">Trafigura</a></div>
+                        <div class="resource-desc">Trading house basé à Genève/Singapour : pétrole, métaux, publications sur logistique et marchés émergents.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.vitol.com" target="_blank">Vitol</a></div>
+                        <div class="resource-desc">Premier négociant pétrolier mondial : analyses de marché énergétique, transition vers LNG et renouvelables.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.argusmedia.com" target="_blank">Argus Media</a></div>
+                        <div class="resource-desc">Prix de référence des commodités : indices pétroliers, métaux, agriculture. Benchmarks utilisés dans contrats mondiaux.</div>
+                    </div>
+                </div>
+
+                <h3>VC & Private Equity</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.crunchbase.com" target="_blank">Crunchbase</a></div>
+                        <div class="resource-desc">Base de données startups : levées de fonds, investisseurs, acquisitions, profils de fondateurs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dealroom.co" target="_blank">Dealroom</a></div>
+                        <div class="resource-desc">Écosystèmes startup européens : données sur ventures, valorisations, rapports par secteur et géographie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://review.firstround.com" target="_blank">First Round Review</a></div>
+                        <div class="resource-desc">Conseils opérationnels de First Round Capital : interviews de fondateurs, tactiques de scaling, management.</div>
+                    </div>
+                </div>
+
+                <h3>Données Macroéconomiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ourworldindata.org" target="_blank">Our World in Data</a></div>
+                        <div class="resource-desc">Visualisations de données mondiales : pauvreté, santé, énergie, éducation. Sources primaires liées, méthodologie transparente.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://data.worldbank.org" target="_blank">World Bank Open Data</a></div>
+                        <div class="resource-desc">Indicateurs de développement mondial : PIB, démographie, santé, éducation pour 200+ pays depuis 1960. API disponible.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://stats.oecd.org" target="_blank">OECD.Stat</a></div>
+                        <div class="resource-desc">Statistiques des pays membres OCDE : commerce, fiscalité, éducation, santé, environnement. Comparaisons internationales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
+                        <div class="resource-desc">Statistiques officielles de l'Union Européenne : comptes nationaux, commerce extérieur, marché du travail, prix.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.imf.org/en/Data" target="_blank">IMF Data</a></div>
+                        <div class="resource-desc">FMI : World Economic Outlook, balance des paiements, positions de réserves, dette publique mondiale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://data.un.org" target="_blank">UN Data</a></div>
+                        <div class="resource-desc">Portail statistique des Nations Unies : agrégateur de 60+ bases de données d'agences ONU (FAO, ILO, WHO, UNESCO).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bis.org/statistics/" target="_blank">BIS Statistics</a></div>
+                        <div class="resource-desc">Banque des Règlements Internationaux : statistiques bancaires mondiales, marchés dérivés, dette internationale.</div>
+                    </div>
+                </div>
+
+                <h3>Finance & Marchés</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ssrn.com" target="_blank">SSRN</a></div>
+                        <div class="resource-desc">Preprints en économie, finance, droit, sciences sociales. Première archive de working papers en finance mondiale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nber.org/papers" target="_blank">NBER Working Papers</a></div>
+                        <div class="resource-desc">Bureau National de Recherche Économique : working papers des économistes académiques les plus influents des États-Unis.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.repec.org" target="_blank">RePEc</a></div>
+                        <div class="resource-desc">Research Papers in Economics : 4+ millions de documents économiques, working papers, articles de revues. Agrégateur mondial.</div>
+                    </div>
+                </div>
+
+                <h3>Commerce International & Développement</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://comtrade.un.org" target="_blank">UN Comtrade</a></div>
+                        <div class="resource-desc">Base de données du commerce mondial : flux d'importations/exportations par pays et produit depuis 1962. Standard pour l'économie internationale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://wits.worldbank.org" target="_blank">WITS — World Bank</a></div>
+                        <div class="resource-desc">Données tarifaires et commerciales mondiales : droits de douane, accords préférentiels, analyse des politiques commerciales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.wto.org/english/res_e/statis_e/statis_e.htm" target="_blank">WTO Statistics</a></div>
+                        <div class="resource-desc">Statistiques du commerce mondial de l'OMC : flux, tarifs, différends commerciaux, profils par pays membre.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- INFORMATIQUE & OSINT -->
+            <details id="informatique" class="source-section">
+                <summary><h2>Informatique</h2></summary>
+                <div class="content">
+
+                <h3>OSINT & Investigation</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://web.archive.org" target="_blank">Wayback Machine</a></div>
+                        <div class="resource-desc">Archive du web depuis 1996 : retrouvez pages supprimées, sites disparus et versions historiques de n'importe quel URL.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://opencorporates.com" target="_blank">OpenCorporates</a></div>
+                        <div class="resource-desc">Base de données de 200+ millions d'entreprises mondiales : registres, dirigeants, structures, filiales et connexions.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.northdata.com" target="_blank">North Data</a></div>
+                        <div class="resource-desc">Entreprises allemandes et européennes avec graphes de relations : réseaux de dirigeants, historique des mandats, connexions.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.shodan.io" target="_blank">Shodan</a></div>
+                        <div class="resource-desc">Moteur de recherche pour appareils connectés : serveurs exposés, caméras, systèmes industriels, IoT vulnérables.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://tineye.com" target="_blank">TinEye</a></div>
+                        <div class="resource-desc">Recherche inversée d'images : retrouvez l'origine d'une photo, ses modifications et toutes ses apparitions sur le web.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://wikileaks.org" target="_blank">WikiLeaks</a></div>
+                        <div class="resource-desc">Publications de documents classifiés et fuites : câbles diplomatiques, archives de surveillance, révélations d'intérêt public.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://sci-hub.se" target="_blank">Sci-Hub</a></div>
+                        <div class="resource-desc">Accès aux articles scientifiques derrière paywall : 85+ millions de papers académiques, recherche par DOI.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://libgen.is" target="_blank">Library Genesis</a></div>
+                        <div class="resource-desc">Bibliothèque d'ombre massive : livres académiques, manuels, fiction, magazines, comics. Miroirs multiples.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://bellingcat.com" target="_blank">Bellingcat</a></div>
+                        <div class="resource-desc">Collectif d'investigation OSINT : méthodologies, tutoriels, enquêtes géolocalisées, analyse d'images satellites.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://osintframework.com" target="_blank">OSINT Framework</a></div>
+                        <div class="resource-desc">Arborescence d'outils OSINT : réseaux sociaux, domaines, emails, géolocalisation, dark web, métadonnées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://inteltechniques.com" target="_blank">IntelTechniques</a></div>
+                        <div class="resource-desc">Ressources OSINT de Michael Bazzell : outils de recherche, workbooks, podcasts, méthodologies d'investigation.</div>
+                    </div>
+                </div>
+
+                <h3>Culture Hacker</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://news.ycombinator.com" target="_blank">Hacker News</a></div>
+                        <div class="resource-desc">Forum de Y Combinator : tech, startups, programmation. Discussions de qualité, communauté de fondateurs et ingénieurs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://lobste.rs" target="_blank">Lobsters</a></div>
+                        <div class="resource-desc">Alternative invite-only à HN : plus technique, moins startup. Focus sur programmation, systèmes, sécurité.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://gwern.net" target="_blank">Gwern.net</a></div>
+                        <div class="resource-desc">Essais de recherche personnelle : ML/IA, statistiques, crypto, culture internet. Analyses quantitatives rigoureuses.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://bellard.org" target="_blank">Fabrice Bellard</a></div>
+                        <div class="resource-desc">Créateur de QEMU, FFmpeg, TinyCC. Démos techniques impressionnantes : JSLinux, QuickJS, records de calcul de Pi.</div>
+                    </div>
+                </div>
+
+                <h3>Deep Technical</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://godbolt.org" target="_blank">Compiler Explorer</a></div>
+                        <div class="resource-desc">Visualisez l'assembleur généré par compilateurs : comparez GCC/Clang/MSVC, optimisations, architectures CPU.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://craftinginterpreters.com" target="_blank">Crafting Interpreters</a></div>
+                        <div class="resource-desc">Livre gratuit sur implémentation de langages : construisez deux interpréteurs complets, bytecode VM incluse.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="http://lambda-the-ultimate.org" target="_blank">Lambda the Ultimate</a></div>
+                        <div class="resource-desc">Blog communautaire sur théorie des langages de programmation : papers académiques, PL research, sémantique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nayuki.io" target="_blank">Project Nayuki</a></div>
+                        <div class="resource-desc">Implémentations propres d'algorithmes : compression, cryptographie, mathématiques. Code exemplaire et explications.</div>
+                    </div>
+                </div>
+
+                <h3>Mathématiques & Théorie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ncatlab.org" target="_blank">nLab</a></div>
+                        <div class="resource-desc">Wiki de théorie des catégories et mathématiques supérieures : ∞-catégories, HoTT, physique mathématique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://stacks.math.columbia.edu" target="_blank">Stacks Project</a></div>
+                        <div class="resource-desc">Traité open-source de géométrie algébrique : 7 000+ pages, schémas, faisceaux, cohomologie. Collaboratif.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://oeis.org" target="_blank">OEIS</a></div>
+                        <div class="resource-desc">Encyclopédie des suites d'entiers : 360 000+ suites avec formules, références, code. Outil essentiel en combinatoire.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.wolframalpha.com" target="_blank">Wolfram Alpha</a></div>
+                        <div class="resource-desc">Moteur de calcul symbolique : résolution d'équations, graphiques, données factuelles, conversions.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mathworld.wolfram.com" target="_blank">MathWorld</a></div>
+                        <div class="resource-desc">Encyclopédie mathématique d'Eric Weisstein : 13 000+ entrées détaillées, formules, visualisations interactives.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://terrytao.wordpress.com" target="_blank">Terry Tao's Blog</a></div>
+                        <div class="resource-desc">Blog du Fields Medalist : analyse, combinatoire, notes de cours, problèmes ouverts, expository writing.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mathoverflow.net" target="_blank">MathOverflow</a></div>
+                        <div class="resource-desc">Q&A pour mathématiciens professionnels : questions de recherche, preuves, conjectures, références.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cut-the-knot.org" target="_blank">Cut the Knot</a></div>
+                        <div class="resource-desc">Mathématiques interactives d'Alexander Bogomolny : puzzles, preuves visuelles, géométrie, probabilités.</div>
+                    </div>
+                </div>
+
+                <h3>Cryptographie & Sécurité</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://csrc.nist.gov" target="_blank">NIST CSRC</a></div>
+                        <div class="resource-desc">Standards cryptographiques américains : FIPS, publications spéciales, algorithmes approuvés. Référence pour la sécurité informatique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://eprint.iacr.org" target="_blank">IACR ePrint</a></div>
+                        <div class="resource-desc">Archive de recherche en cryptologie : preprints des meilleurs chercheurs, protocoles, preuves de sécurité.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.schneier.com" target="_blank">Schneier on Security</a></div>
+                        <div class="resource-desc">Bruce Schneier : analyse de sécurité, cryptographie appliquée, politiques de surveillance. Référence depuis 25 ans.</div>
+                    </div>
+                </div>
+
+                <h3>Mathématiques — Références</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dlmf.nist.gov" target="_blank">NIST DLMF</a></div>
+                        <div class="resource-desc">Digital Library of Mathematical Functions : fonctions spéciales, formules, propriétés asymptotiques. Successeur des Tables d'Abramowitz.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://proof.ethz.ch" target="_blank">ProofWiki</a></div>
+                        <div class="resource-desc">Encyclopédie de preuves mathématiques formelles : théorèmes avec démonstrations étape par étape, définitions, corollaires.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- MÉTIERS & ARTISANAT -->
+            <details id="metiers" class="source-section">
+                <summary><h2>Métiers</h2></summary>
+                <div class="content">
+
+                <h3>Construction & Menuiserie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.finewoodworking.com" target="_blank">Fine Woodworking</a></div>
+                        <div class="resource-desc">Magazine de référence : techniques de menuiserie fine, assemblages traditionnels, finitions, projets de mobilier.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://lostartpress.com" target="_blank">Lost Art Press</a></div>
+                        <div class="resource-desc">Éditeur de livres sur woodworking traditionnel : établis, outils à main, ébénisterie 18e-19e siècle.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://buildingscience.com" target="_blank">Building Science Corporation</a></div>
+                        <div class="resource-desc">Science du bâtiment : gestion de l'humidité, enveloppe thermique, ventilation. Ressources techniques avancées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.wood-database.com" target="_blank">Wood Database</a></div>
+                        <div class="resource-desc">Encyclopédie des essences de bois : propriétés mécaniques, travaillabilité, identification, toxicité.</div>
+                    </div>
+                </div>
+
+                <h3>Forge & Métallurgie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.iforgeiron.com" target="_blank">IForgeIron</a></div>
+                        <div class="resource-desc">Forum de forgerons : techniques de forge, construction de forges, projets pour débutants et avancés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://abana.org" target="_blank">ABANA</a></div>
+                        <div class="resource-desc">Artist-Blacksmiths' Association : ressources, conférences, annuaire de forgerons, préservation des techniques.</div>
+                    </div>
+                </div>
+
+                <h3>Agriculture & Permaculture</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://attra.ncat.org" target="_blank">ATTRA</a></div>
+                        <div class="resource-desc">Centre d'information sur agriculture durable : guides techniques, rotations, agroforesterie, élevage extensif.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.permaculturenews.org" target="_blank">Permaculture News</a></div>
+                        <div class="resource-desc">Actualités et techniques de permaculture : design, food forests, water harvesting, régénération des sols.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- DESIGN & OBJETS -->
+            <details id="design" class="source-section">
+                <summary><h2>Design</h2></summary>
+                <div class="content">
+
+                <h3>Design Japonais</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.muji.com" target="_blank">MUJI</a></div>
+                        <div class="resource-desc">Design minimaliste japonais : mobilier, vêtements, papeterie. Philosophie "sans marque" et fonctionnalité pure.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.beams.co.jp" target="_blank">BEAMS</a></div>
+                        <div class="resource-desc">Select shop japonais influent : mode, lifestyle, collaborations avec artisans. Curation pointue depuis 1976.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bungu-do.com" target="_blank">Tokyo Bungu</a></div>
+                        <div class="resource-desc">Papeterie japonaise de qualité : stylos, carnets, instruments d'écriture. Marques comme Pilot, Sailor, Midori.</div>
+                    </div>
+                </div>
+
+                <h3>Design Européen</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.vitra.com" target="_blank">Vitra</a></div>
+                        <div class="resource-desc">Mobilier design suisse : classiques de Eames, Panton, Prouvé. Musée du design et archive.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.manufactum.de" target="_blank">Manufactum</a></div>
+                        <div class="resource-desc">Produits durables allemands : outils, cuisine, jardin. "Les bonnes choses" - qualité artisanale traditionnelle.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.merci-merci.com" target="_blank">Merci Paris</a></div>
+                        <div class="resource-desc">Concept store parisien : mode, déco, librairie. Curation éclectique, profits reversés à Madagascar.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.labour-and-wait.co.uk" target="_blank">Labour and Wait</a></div>
+                        <div class="resource-desc">Londres : objets utilitaires intemporels. Brosserie, quincaillerie, textile. Design fonctionnel durable.</div>
+                    </div>
+                </div>
+
+                <h3>Vintage & Seconde Main</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.1stdibs.com" target="_blank">1stDibs</a></div>
+                        <div class="resource-desc">Antiquités et design vintage haut de gamme : mobilier 20e siècle, bijoux, art. Marchands vérifiés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.pamono.com" target="_blank">Pamono</a></div>
+                        <div class="resource-desc">Design vintage européen : mobilier mid-century, éclairage, objets de collection. Focus designer.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.selency.com" target="_blank">Selency</a></div>
+                        <div class="resource-desc">Brocante en ligne française : meubles vintage, déco, luminaires. Prix accessibles, vendeurs particuliers.</div>
+                    </div>
+                </div>
+
+                <h3>Vêtements Vintage — Lisbonne</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.aoutrafacedualua.com" target="_blank">A Outra Face da Lua</a></div>
+                        <div class="resource-desc">Institution du vintage lisbonnite près de l'Intendente : robes années 50-70, tapisseries, disques. Dense, dense, dense.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.humana-portugal.org" target="_blank">Humana Portugal</a></div>
+                        <div class="resource-desc">Réseau de friperies solidaires à Lisbonne : tarifs accessibles, rotation de stock rapide. ONG international.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.kindastore.pt" target="_blank">Kinda Store</a></div>
+                        <div class="resource-desc">Vintage et seconde main sélectionné à Lisbonne : pièces curatées, mix décennies 80-00.</div>
+                    </div>
+                </div>
+
+                <h3>Vêtements Vintage — Paris</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://espacekiliwatch.fr" target="_blank">Kiliwatch</a></div>
+                        <div class="resource-desc">Institution parisienne du Sentier depuis 1991 : vintage américain, workwear, denim. Références militaires et sportswear.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.freepstar.com" target="_blank">Free'P'Star</a></div>
+                        <div class="resource-desc">Vintage accessible au Marais et Châtelet : prix raisonnables, bon turnover. Idéal pour trouver des basiques rétro.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.episode.eu" target="_blank">Episode</a></div>
+                        <div class="resource-desc">Chaîne vintage européenne avec grande surface à Paris : sélection volumineuse, bon rapport qualité/prix.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.thanxgod.com" target="_blank">Thanx God I'm A VIP</a></div>
+                        <div class="resource-desc">Vintage designer haut de gamme au Marais : Chanel, Dior, Saint Laurent. Pièces collector et rare finds.</div>
+                    </div>
+                </div>
+
+                <h3>Vêtements Vintage — Berlin</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.humana-second-hand.de" target="_blank">Humana Berlin</a></div>
+                        <div class="resource-desc">Chaîne emblématique berlinoise : plusieurs grandes surfaces (Mitte, Prenzlauer Berg, Friedrichshain). Prix fixes, volume immense.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://garagecompany.de" target="_blank">Garage</a></div>
+                        <div class="resource-desc">Institution de Wilmersdorf depuis les années 80 : vintage au kilo, grandes quantités. Vente au poids le week-end.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.prachtmaedchen.de" target="_blank">Prachtmädchen</a></div>
+                        <div class="resource-desc">Vintage féminin curaté à Prenzlauer Berg : robes imprimées, manteaux de laine, accessoires. Sélection soignée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.kleidermarkt.de" target="_blank">Kleidermarkt</a></div>
+                        <div class="resource-desc">Marchés vintage itinérants à Berlin et dans toute l'Allemagne. Calendrier des foires, vente de particuliers.</div>
+                    </div>
+                </div>
+
+                <h3>Vélos & Instruments</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.condorcycles.com" target="_blank">Condor Cycles</a></div>
+                        <div class="resource-desc">Vélos sur mesure britanniques depuis 1948 : cadres acier faits main, géométrie personnalisée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cicli-corsa.com" target="_blank">Cicli Corsa</a></div>
+                        <div class="resource-desc">Vélos italiens artisanaux : Colnago, De Rosa, Cinelli. Composants vintage, roues artisanales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.thomann.de" target="_blank">Thomann</a></div>
+                        <div class="resource-desc">Plus grand magasin d'instruments en Europe : guitares, synthés, studio, prix compétitifs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://reverb.com" target="_blank">Reverb</a></div>
+                        <div class="resource-desc">Marketplace d'instruments vintage et neufs : guitares, pédales, synthétiseurs. Communauté de musiciens.</div>
+                    </div>
+                </div>
+
+                <h3>Outils & Recherche</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://fonts.google.com" target="_blank">Google Fonts</a></div>
+                        <div class="resource-desc">Bibliothèque de polices libres : 1 400+ familles typographiques optimisées pour le web. Variable fonts.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://fontsinuse.com" target="_blank">Fonts In Use</a></div>
+                        <div class="resource-desc">Archive de typographie appliquée : identifications, contexte historique, exemples d'usage professionnel.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://designarchives.aiga.org" target="_blank">AIGA Design Archives</a></div>
+                        <div class="resource-desc">Archives du design graphique américain : affiches, identités visuelles, packaging primés depuis 1924.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.are.na" target="_blank">Are.na</a></div>
+                        <div class="resource-desc">Plateforme de curation collaborative : collections visuelles, recherche créative, alternative non-algorithmique.</div>
+                    </div>
+                </div>
+
+                <h3>Histoire du Design & Typographie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.typewolf.com" target="_blank">Typewolf</a></div>
+                        <div class="resource-desc">Typographie web : sites en vedette, recommandations de pairings, ressources sur les fontes. Référence pour le design éditorial.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ilovetypography.com" target="_blank">I Love Typography</a></div>
+                        <div class="resource-desc">Histoire de la typographie, anatomie des caractères, design de fontes, calligraphie. Approche académique et esthétique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.designmuseum.org/collection" target="_blank">Design Museum London</a></div>
+                        <div class="resource-desc">Collection numérique du Design Museum : objets industriels, graphisme, mode, architecture. Contexte historique et critique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bauhaus-archiv.de/en/collection/" target="_blank">Bauhaus-Archiv Berlin</a></div>
+                        <div class="resource-desc">Archives numérisées du Bauhaus : œuvres de Klee, Kandinsky, Moholy-Nagy, typographie, design industriel 1919-1933.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.moma.org/collection/" target="_blank">MoMA Collection</a></div>
+                        <div class="resource-desc">Design et arts visuels modernes : affiche, produit industriel, architecture, graphisme. Base de données interrogeable.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- TRANSPORT -->
+            <details id="transport" class="source-section">
+                <summary><h2>Transport</h2></summary>
+                <div class="content">
+
+                <h3>Trains</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.seat61.com" target="_blank">Seat61</a></div>
+                        <div class="resource-desc">Guide du voyage en train : itinéraires mondiaux, réservations, conseils pratiques. Alternative à l'avion.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.interrail.eu" target="_blank">Interrail</a></div>
+                        <div class="resource-desc">Pass ferroviaires européens : planification d'itinéraires, réservations de trains de nuit, tarifs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sncf-connect.com" target="_blank">SNCF Connect</a></div>
+                        <div class="resource-desc">Trains français : TGV, Intercités, TER. Réservations, cartes de réduction, abonnements.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bahn.de" target="_blank">Deutsche Bahn</a></div>
+                        <div class="resource-desc">Trains allemands et européens : ICE, IC, connections internationales. Planificateur d'itinéraires.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.oebb.at" target="_blank">ÖBB</a></div>
+                        <div class="resource-desc">Chemins de fer autrichiens : Railjet, Nightjet trains de nuit vers toute l'Europe. Sparschiene offres.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.renfe.com" target="_blank">RENFE</a></div>
+                        <div class="resource-desc">Trains espagnols : AVE haute vitesse, Cercanías, connections vers Portugal et France.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cp.pt" target="_blank">CP Portugal</a></div>
+                        <div class="resource-desc">Chemins de fer portugais : Alfa Pendular, Intercidades, réseau urbain de Lisbonne et Porto.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.jrpass.com" target="_blank">Japan Rail Pass</a></div>
+                        <div class="resource-desc">Pass JR pour touristes : Shinkansen illimité, trains régionaux, information sur le réseau japonais.</div>
+                    </div>
+                </div>
+
+                <h3>Avions</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.google.com/flights" target="_blank">Google Flights</a></div>
+                        <div class="resource-desc">Comparateur de vols : calendrier des prix, exploration de destinations, alertes de prix.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.skyscanner.com" target="_blank">Skyscanner</a></div>
+                        <div class="resource-desc">Méta-moteur de recherche vols : "mois entier" et "partout" pour trouver les meilleures offres.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ryanair.com" target="_blank">Ryanair</a></div>
+                        <div class="resource-desc">Low-cost européen majeur : vols pas chers, réseau dense en Europe, bagages en supplément.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.easyjet.com" target="_blank">EasyJet</a></div>
+                        <div class="resource-desc">Low-cost britannique : réseau européen, tarifs flexibles, hubs à Gatwick, Genève, Paris.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.flytap.com" target="_blank">TAP Air Portugal</a></div>
+                        <div class="resource-desc">Compagnie portugaise : hub Lisbonne, connexions Brésil et Afrique, stopover gratuit au Portugal.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.flightconnections.com" target="_blank">FlightConnections</a></div>
+                        <div class="resource-desc">Carte des routes aériennes : visualisez tous les vols directs depuis un aéroport, compagnies disponibles.</div>
+                    </div>
+                </div>
+
+                <h3>Ferries & Maritime</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.directferries.com" target="_blank">Direct Ferries</a></div>
+                        <div class="resource-desc">Comparateur de ferries mondial : routes méditerranéennes, baltiques, transmanche. Réservation multi-compagnies.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.marinetraffic.com" target="_blank">MarineTraffic</a></div>
+                        <div class="resource-desc">Suivi AIS des navires en temps réel : cargo, tankers, ferries, yachts. Données historiques et ports.</div>
+                    </div>
+                </div>
+
+                <h3>Aviation — Réglementation & Recherche</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ntrs.nasa.gov" target="_blank">NASA Technical Reports Server</a></div>
+                        <div class="resource-desc">800 000+ rapports techniques NASA : aérodynamique, propulsion, structures, missions spatiales. Accès libre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.faa.gov/regulations_policies/" target="_blank">FAA Regulations</a></div>
+                        <div class="resource-desc">Réglementation aéronautique américaine : FARs, AIM, circulaires consultatifs. Standard international pour l'aviation civile.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.icao.int/publications/" target="_blank">OACI Publications</a></div>
+                        <div class="resource-desc">Standards et pratiques recommandées de l'aviation civile internationale : annexes à la Convention de Chicago.</div>
+                    </div>
+                </div>
+
+                <h3>Maritime — Réglementation & Histoire</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.imo.org/en/KnowledgeCentre/" target="_blank">IMO Knowledge Centre</a></div>
+                        <div class="resource-desc">Organisation Maritime Internationale : conventions SOLAS, MARPOL, STCW. Réglementation maritime internationale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nmm.ac.uk/collections/" target="_blank">National Maritime Museum Greenwich</a></div>
+                        <div class="resource-desc">Collections maritimes britanniques : instruments de navigation, cartes, journaux de bord, portraits d'amiraux.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- DROIT -->
+            <details id="droit" class="source-section">
+                <summary><h2>Droit</h2></summary>
+                <div class="content">
+
+                <h3>International</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://documents.un.org" target="_blank">Documents ONU</a></div>
+                        <div class="resource-desc">Résolutions, rapports, procès-verbaux de l'ONU. Système de référence : A/RES/XX/YY pour résolutions de l'AG.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.icj-cij.org" target="_blank">Cour Internationale de Justice</a></div>
+                        <div class="resource-desc">Arrêts et avis consultatifs de la CIJ. Jurisprudence internationale, différends entre États.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://docs.wto.org" target="_blank">Documents OMC</a></div>
+                        <div class="resource-desc">Accords commerciaux, décisions du panel de règlement des différends, rapports des organes de l'OMC.</div>
+                    </div>
+                </div>
+
+                <h3>Europe</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://eur-lex.europa.eu" target="_blank">EUR-Lex</a></div>
+                        <div class="resource-desc">Droit européen : règlements, directives, décisions. Format CELEX : 32016R0679 pour GDPR.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://curia.europa.eu" target="_blank">CURIA</a></div>
+                        <div class="resource-desc">Jurisprudence de la CJUE : arrêts, conclusions des avocats généraux. Citation ECLI.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://hudoc.echr.coe.int" target="_blank">HUDOC</a></div>
+                        <div class="resource-desc">Base de données de la CEDH : jurisprudence des droits de l'homme, décisions et arrêts.</div>
+                    </div>
+                </div>
+
+                <h3>États-Unis</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.congress.gov" target="_blank">Congress.gov</a></div>
+                        <div class="resource-desc">Législation américaine : bills, Public Laws, U.S. Code. Suivi du processus législatif.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sec.gov/edgar" target="_blank">SEC EDGAR</a></div>
+                        <div class="resource-desc">Filings des sociétés cotées US : 10-K (annuel), 10-Q (trimestriel), 8-K (événements), S-1 (IPO).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.law.cornell.edu" target="_blank">Cornell LII</a></div>
+                        <div class="resource-desc">Legal Information Institute : U.S. Code, CFR, Constitution annotée, encyclopédie juridique gratuite.</div>
+                    </div>
+                </div>
+
+                <h3>Droit National</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.legifrance.gouv.fr" target="_blank">Légifrance</a></div>
+                        <div class="resource-desc">Droit français officiel : codes, lois, décrets, jurisprudence. Journal officiel et consolidations.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gesetze-im-internet.de" target="_blank">Gesetze im Internet</a></div>
+                        <div class="resource-desc">Lois allemandes fédérales en texte intégral : BGB, StGB, GG. Versions consolidées officielles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.boe.es" target="_blank">BOE España</a></div>
+                        <div class="resource-desc">Boletín Oficial del Estado : législation espagnole, décrets royaux, traités. Base de données consolidée.</div>
+                    </div>
+                </div>
+
+                <h3>Bases Juridiques Nationales — Suppléments</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.dre.pt" target="_blank">DRE — Diário da República Electrónico</a></div>
+                        <div class="resource-desc">Journal officiel portugais numérique : législation, jurisprudence, diplomas legais depuis 1910. Recherche plein texte.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bailii.org" target="_blank">BAILII — British & Irish Legal</a></div>
+                        <div class="resource-desc">Jurisprudence britannique et irlandaise : House of Lords, Court of Appeal, High Court depuis 1996. Accès libre.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://worldlii.org" target="_blank">WorldLII</a></div>
+                        <div class="resource-desc">World Legal Information Institute : jurisprudence de 120+ juridictions mondiales. Portail de droit comparé.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bger.ch/ext/eurospider/live/fr/php/aza/http/index.php" target="_blank">Tribunal Fédéral Suisse</a></div>
+                        <div class="resource-desc">Jurisprudence du Tribunal fédéral depuis 1954 : arrêts en allemand, français, italien. Droit civil comparé.</div>
+                    </div>
+                </div>
+
+                <h3>Droit Européen — Suppléments</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.venice.coe.int/webforms/documents/" target="_blank">Commission de Venise</a></div>
+                        <div class="resource-desc">Avis constitutionnels du Conseil de l'Europe : référence pour le constitutionnalisme démocratique, État de droit, droits fondamentaux.</div>
+                    </div>
+                </div>
+
+                <h3>Droit International — Suppléments</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://icc-cpi.int" target="_blank">CPI — Cour Pénale Internationale</a></div>
+                        <div class="resource-desc">Jurisprudence de la CPI : affaires en cours, jugements, statut de Rome annoté, documentation sur le droit pénal international.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://legal.un.org" target="_blank">UN Treaty Collection</a></div>
+                        <div class="resource-desc">Traités multilatéraux déposés auprès du Secrétaire Général : textes, signatures, ratifications, réserves.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.itlos.org/en/main/cases/list-of-cases/" target="_blank">TIDM — Tribunal International du Droit de la Mer</a></div>
+                        <div class="resource-desc">Jurisprudence maritime internationale : affaires UNCLOS, délimitations, pêche, protection de l'environnement marin.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://jusmundi.com" target="_blank">Jus Mundi</a></div>
+                        <div class="resource-desc">Moteur de recherche en droit international public et arbitrage d'investissement : 300 000+ documents multilingues.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.worldcourts.com" target="_blank">WorldCourts</a></div>
+                        <div class="resource-desc">Miroir de jurisprudence internationale : CIJ, CPJI, tribunaux pénaux ad hoc en HTML navigable.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://icsid.worldbank.org/cases" target="_blank">ICSID — Centre International de Règlement</a></div>
+                        <div class="resource-desc">Arbitrage investissement-État : affaires CIRDI, sentences arbitrales, accords bilatéraux d'investissement.</div>
+                    </div>
+                </div>
+
+                <h3>Droit Constitutionnel Comparé</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.constituteproject.org" target="_blank">Constitute Project</a></div>
+                        <div class="resource-desc">Constitutions du monde entier en anglais : 200+ textes constitutionnels, recherche thématique par clause et droit garanti.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.concourts.net" target="_blank">CODICES — Commission de Venise</a></div>
+                        <div class="resource-desc">Base de données de jurisprudence constitutionnelle mondiale : cours constitutionnelles de 100+ pays classées par thème.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://globalex.law.nyu.edu" target="_blank">GlobaLex — NYU</a></div>
+                        <div class="resource-desc">Guides de recherche juridique par pays : sources primaires, doctrine, institutions pour 100+ systèmes juridiques.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- SCIENCES & BIOTECHNOLOGIE -->
+            <details id="biotechnologie" class="source-section">
+                <summary><h2>Sciences</h2></summary>
+                <div class="content">
+
+                <h3>Bases de Données Biologiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">PubMed NCBI</a></div>
+                        <div class="resource-desc">35+ millions de citations biomédicales. Standard mondial pour la littérature en sciences de la vie.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.uniprot.org" target="_blank">UniProt</a></div>
+                        <div class="resource-desc">Base de données des protéines : séquences, fonctions, structure, annotations. Swiss-Prot et TrEMBL.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.rcsb.org" target="_blank">Protein Data Bank</a></div>
+                        <div class="resource-desc">Structures 3D de protéines, acides nucléiques, complexes. 200 000+ structures déposées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ensembl.org" target="_blank">Ensembl</a></div>
+                        <div class="resource-desc">Navigateur de génomes : annotations pour vertébrés, comparaison interspécifique, variants.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank">GenBank NCBI</a></div>
+                        <div class="resource-desc">Base de données de séquences génétiques : 10+ milliards de nucléotides annotés.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://omim.org" target="_blank">OMIM</a></div>
+                        <div class="resource-desc">Online Mendelian Inheritance in Man : catalogue des maladies génétiques humaines.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.biorxiv.org" target="_blank">BioRxiv</a></div>
+                        <div class="resource-desc">Preprints en biologie : génomique, biologie moléculaire, évolution. Avant publication.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.cochranelibrary.com" target="_blank">Cochrane Library</a></div>
+                        <div class="resource-desc">Revues systématiques de la littérature médicale. Standard de la médecine fondée sur les preuves.</div>
+                    </div>
+                </div>
+
+                <h3>Chimie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://pubchem.ncbi.nlm.nih.gov" target="_blank">PubChem</a></div>
+                        <div class="resource-desc">100+ millions de structures chimiques : bioessais, propriétés, données toxicologiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.chemspider.com" target="_blank">ChemSpider</a></div>
+                        <div class="resource-desc">100+ millions de structures : propriétés, spectres, sources bibliographiques. Royal Society of Chemistry.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://sdbs.db.aist.go.jp" target="_blank">SDBS — Spectral Database</a></div>
+                        <div class="resource-desc">Base de données spectrales pour composés organiques : NMR, IR, MS. Référence analytique japonaise.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://webbook.nist.gov/chemistry/" target="_blank">NIST Chemistry WebBook</a></div>
+                        <div class="resource-desc">Données thermodynamiques et spectroscopiques pour 80 000+ composés. Standard du NIST.</div>
+                    </div>
+                </div>
+
+                <h3>Physique & Astrophysique</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ui.adsabs.harvard.edu" target="_blank">NASA ADS</a></div>
+                        <div class="resource-desc">15+ millions de références astrophysiques : preprints arXiv, accès libre à la majorité des articles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://simbad.u-strasbg.fr" target="_blank">SIMBAD</a></div>
+                        <div class="resource-desc">Base de données d'objets astronomiques : étoiles, galaxies, nébuleuses. Observatoire de Strasbourg.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://exoplanetarchive.ipac.caltech.edu" target="_blank">NASA Exoplanet Archive</a></div>
+                        <div class="resource-desc">Catalogue des exoplanètes confirmées : données de transit, vitesse radiale, caractéristiques stellaires.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gw-openscience.org" target="_blank">LIGO Open Science</a></div>
+                        <div class="resource-desc">Données de détection d'ondes gravitationnelles. Archives publiques des interféromètres LIGO/Virgo.</div>
+                    </div>
+                </div>
+
+                <h3>Sciences de la Terre</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.usgs.gov" target="_blank">USGS</a></div>
+                        <div class="resource-desc">US Geological Survey : catalogue de séismes, cartes géologiques, données topographiques mondiales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ncei.noaa.gov" target="_blank">NOAA Data</a></div>
+                        <div class="resource-desc">Données climatiques et océanographiques : températures historiques, ouragans, bathymétrie mondiale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.pangaea.de" target="_blank">PANGAEA</a></div>
+                        <div class="resource-desc">Bibliothèque de données en sciences de la Terre et de l'environnement : 430 000+ datasets.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://climate.copernicus.eu" target="_blank">Copernicus Climate Change Service</a></div>
+                        <div class="resource-desc">Service européen de surveillance du climat : ERA5, projections, indices climatiques.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ipcc.ch/reports/" target="_blank">IPCC Reports</a></div>
+                        <div class="resource-desc">Rapports du GIEC en accès libre : AR6, rapports spéciaux, données sous-jacentes.</div>
+                    </div>
+                </div>
+
+                <h3>Médecine & Épidémiologie</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.who.int/data/gho" target="_blank">WHO Global Health Observatory</a></div>
+                        <div class="resource-desc">Indicateurs sanitaires mondiaux : mortalité, maladies, systèmes de santé. 1 000+ indicateurs.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.healthdata.org/gbd" target="_blank">IHME — Global Burden of Disease</a></div>
+                        <div class="resource-desc">Charge mondiale des maladies et traumatismes par pays et année. Référence épidémiologique.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a></div>
+                        <div class="resource-desc">450 000+ essais cliniques enregistrés : protocoles, résultats, phases. Référence mondiale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://wonder.cdc.gov" target="_blank">CDC Wonder</a></div>
+                        <div class="resource-desc">Données de santé publique américaines : mortalité, natalité, maladies, environnement.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- OSINT & RECHERCHE -->
+            <details id="osint" class="source-section">
+                <summary><h2>OSINT & Recherche</h2></summary>
+                <div class="content">
+
+                <h3>Archives Web</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://web.archive.org" target="_blank">Wayback Machine</a></div>
+                        <div class="resource-desc">Instantanés historiques de pages web, contenu supprimé, évolution de sites depuis 1996.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://archive.is" target="_blank">Archive.today</a></div>
+                        <div class="resource-desc">Capture de pages web instantanée, contournement de paywalls, préservation de contenu.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://cachedview.com" target="_blank">CachedView</a></div>
+                        <div class="resource-desc">Agrégateur de caches : Google, Coral, Wayback Machine en une recherche.</div>
+                    </div>
+                </div>
+
+                <h3>Analyse d'Images</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://tineye.com" target="_blank">TinEye</a></div>
+                        <div class="resource-desc">Recherche d'images inversée, identification de l'origine, détection de modifications.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://images.google.com" target="_blank">Google Images</a></div>
+                        <div class="resource-desc">Recherche inversée, images similaires, identification de sujets.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://yandex.com/images/" target="_blank">Yandex Images</a></div>
+                        <div class="resource-desc">Recherche inversée performante pour visages et reconnaissance faciale.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://fotoforensics.com" target="_blank">FotoForensics</a></div>
+                        <div class="resource-desc">Analyse forensique d'images : ELA, métadonnées EXIF, détection de manipulation.</div>
+                    </div>
+                </div>
+
+                <h3>Personnes & Entreprises</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://opencorporates.com" target="_blank">OpenCorporates</a></div>
+                        <div class="resource-desc">200+ millions d'entreprises mondiales, registres officiels agrégés, données de dirigeants.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gleif.org" target="_blank">GLEIF</a></div>
+                        <div class="resource-desc">Recherche LEI (Legal Entity Identifier), identification d'entités légales internationales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://linkedin.com" target="_blank">LinkedIn</a></div>
+                        <div class="resource-desc">Profils professionnels, organigrammes d'entreprises, parcours de carrière.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://lookup.icann.org" target="_blank">ICANN WHOIS</a></div>
+                        <div class="resource-desc">Propriété de domaines, informations de registrar, historique DNS.</div>
+                    </div>
+                </div>
+
+                <h3>Recherche Technique</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.shodan.io" target="_blank">Shodan</a></div>
+                        <div class="resource-desc">Moteur de recherche IoT : appareils exposés, ports ouverts, services vulnérables.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://search.censys.io" target="_blank">Censys</a></div>
+                        <div class="resource-desc">Scan internet global, certificats TLS, infrastructure réseau exposée.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://hunter.io" target="_blank">Hunter.io</a></div>
+                        <div class="resource-desc">Recherche d'emails par domaine, vérification d'adresses, patterns d'entreprise.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://haveibeenpwned.com" target="_blank">Have I Been Pwned</a></div>
+                        <div class="resource-desc">Vérification de fuites de données, compromission d'emails et mots de passe.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- ORGANISATIONS INTERNATIONALES -->
+            <details id="organisations" class="source-section">
+                <summary><h2>Organisations Internationales</h2></summary>
+                <div class="content">
+
+                <h3>Nations Unies</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://documents.un.org" target="_blank">Documents ONU</a></div>
+                        <div class="resource-desc">Résolutions (A/RES/xx/xx), rapports, procès-verbaux de l'Assemblée générale et du Conseil de sécurité.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://treaties.un.org" target="_blank">Traités ONU</a></div>
+                        <div class="resource-desc">Collection des traités internationaux, états de signature et ratification, réserves.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.icj-cij.org" target="_blank">Cour Internationale de Justice</a></div>
+                        <div class="resource-desc">Affaires contentieuses, avis consultatifs, jurisprudence depuis 1946.</div>
+                    </div>
+                </div>
+
+                <h3>Commerce & Finance</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://docs.wto.org" target="_blank">OMC Documents</a></div>
+                        <div class="resource-desc">Accords commerciaux, différends, rapports de panels, GATT/GATS/TRIPS.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.imf.org/en/Publications" target="_blank">FMI Publications</a></div>
+                        <div class="resource-desc">Rapports économiques, consultations Article IV, perspectives économiques mondiales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://data.worldbank.org" target="_blank">Banque Mondiale Data</a></div>
+                        <div class="resource-desc">Indicateurs de développement, statistiques par pays, données économiques mondiales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bis.org" target="_blank">BRI - Banque des Règlements Internationaux</a></div>
+                        <div class="resource-desc">Standards Bâle III/IV, régulation bancaire, statistiques monétaires internationales.</div>
+                    </div>
+                </div>
+
+                <h3>Propriété Intellectuelle & Commerce</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.wipo.int" target="_blank">OMPI</a></div>
+                        <div class="resource-desc">Traités de propriété intellectuelle, système PCT, Protocole de Madrid, recherche brevets.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.oecd.org" target="_blank">OCDE</a></div>
+                        <div class="resource-desc">Recherche politique, BEPS (prix de transfert), études économiques par pays.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://iccwbo.org" target="_blank">CCI - Chambre de Commerce Internationale</a></div>
+                        <div class="resource-desc">Incoterms, règles d'arbitrage, UCP 600 (crédits documentaires).</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- DROIT RÉGIONAL -->
+            <details id="droit-regional" class="source-section">
+                <summary><h2>Droit Régional</h2></summary>
+                <div class="content">
+
+                <h3>Union Européenne</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://eur-lex.europa.eu" target="_blank">EUR-Lex</a></div>
+                        <div class="resource-desc">Droit de l'UE : références CELEX, Journal Officiel, règlements, directives, jurisprudence.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://curia.europa.eu" target="_blank">CURIA</a></div>
+                        <div class="resource-desc">Jurisprudence CJUE et Tribunal, identifiants ECLI, conclusions des avocats généraux.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://hudoc.echr.coe.int" target="_blank">HUDOC - CEDH</a></div>
+                        <div class="resource-desc">Jurisprudence de la Cour européenne des droits de l'homme, violations par article.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.eba.europa.eu" target="_blank">ABE - Autorité Bancaire Européenne</a></div>
+                        <div class="resource-desc">Régulation bancaire, CRD/CRR, stress tests, guidelines prudentielles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.esma.europa.eu" target="_blank">ESMA</a></div>
+                        <div class="resource-desc">Régulation des marchés financiers : MiFID II, UCITS, AIFMD, prospectus.</div>
+                    </div>
+                </div>
+
+                <h3>Royaume-Uni</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.legislation.gov.uk" target="_blank">Legislation.gov.uk</a></div>
+                        <div class="resource-desc">Acts of Parliament, Statutory Instruments, numéros de chapitre officiels.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House</a></div>
+                        <div class="resource-desc">Recherche d'entreprises UK, filings, directors, comptes annuels.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://register.fca.org.uk" target="_blank">FCA Register</a></div>
+                        <div class="resource-desc">Entreprises autorisées par la Financial Conduct Authority, permissions réglementaires.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bailii.org" target="_blank">BAILII</a></div>
+                        <div class="resource-desc">Jurisprudence britannique et irlandaise, citations neutres [2024] UKSC 1.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.nationalarchives.gov.uk" target="_blank">National Archives UK</a></div>
+                        <div class="resource-desc">Documents historiques britanniques, archives gouvernementales.</div>
+                    </div>
+                </div>
+
+                <h3>États-Unis</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.congress.gov" target="_blank">Congress.gov</a></div>
+                        <div class="resource-desc">Projets de loi, Public Laws, United States Code, historique législatif.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.govinfo.gov" target="_blank">GovInfo</a></div>
+                        <div class="resource-desc">Federal Register, Code of Federal Regulations (CFR), statuts fédéraux.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sec.gov/edgar" target="_blank">SEC EDGAR</a></div>
+                        <div class="resource-desc">Filings boursiers : 10-K, 10-Q, 8-K, S-1, proxy statements, CIK identifiers.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://pacer.uscourts.gov" target="_blank">PACER</a></div>
+                        <div class="resource-desc">Dossiers des tribunaux fédéraux, actes de procédure, calendriers.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.courtlistener.com" target="_blank">CourtListener</a></div>
+                        <div class="resource-desc">Jurisprudence américaine gratuite, projet RECAP, opinions de cours fédérales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.law.cornell.edu" target="_blank">Cornell LII</a></div>
+                        <div class="resource-desc">Encyclopédie juridique, USC, CFR, Wex legal dictionary.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.justia.com" target="_blank">Justia</a></div>
+                        <div class="resource-desc">Jurisprudence gratuite, statuts par État, annotations légales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://avalon.law.yale.edu" target="_blank">Yale Avalon Project</a></div>
+                        <div class="resource-desc">Documents juridiques historiques américains et internationaux.</div>
+                    </div>
+                </div>
+
+                <h3>France</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.legifrance.gouv.fr" target="_blank">Légifrance</a></div>
+                        <div class="resource-desc">Codes, lois, JORF, décrets, jurisprudence française officielle.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.courdecassation.fr" target="_blank">Cour de cassation</a></div>
+                        <div class="resource-desc">Jurisprudence civile et pénale, pourvois, doctrine.</div>
+                    </div>
+                </div>
+
+                <h3>Allemagne</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gesetze-im-internet.de" target="_blank">Gesetze im Internet</a></div>
+                        <div class="resource-desc">Législation fédérale allemande : BGB, HGB, AktG, GmbHG.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bundesanzeiger.de" target="_blank">Bundesanzeiger</a></div>
+                        <div class="resource-desc">Journal officiel allemand, publications d'entreprises, comptes annuels.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bundesverfassungsgericht.de" target="_blank">Bundesverfassungsgericht</a></div>
+                        <div class="resource-desc">Cour constitutionnelle fédérale, décisions fondamentales.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- ASIE-PACIFIQUE -->
+            <details id="asie-pacifique" class="source-section">
+                <summary><h2>Asie-Pacifique</h2></summary>
+                <div class="content">
+
+                <h3>Chine</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.gsxt.gov.cn" target="_blank">国家企业信用信息公示系统 (GSXT)</a></div>
+                        <div class="resource-desc">Registre national des entreprises chinoises, informations de crédit, dirigeants.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="http://www.cninfo.com.cn" target="_blank">巨潮资讯 (CNINFO)</a></div>
+                        <div class="resource-desc">Filings des sociétés cotées chinoises, rapports annuels, annonces.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.pkulaw.com" target="_blank">北大法宝 (PKULaw)</a></div>
+                        <div class="resource-desc">Base de données juridique chinoise, législation, jurisprudence.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://wenshu.court.gov.cn" target="_blank">中国裁判文书网</a></div>
+                        <div class="resource-desc">Jugements des tribunaux chinois, jurisprudence civile/pénale/administrative.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="http://www.csrc.gov.cn" target="_blank">证监会 (CSRC)</a></div>
+                        <div class="resource-desc">Commission de régulation des valeurs mobilières, régulation boursière.</div>
+                    </div>
+                </div>
+
+                <h3>Japon</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://elaws.e-gov.go.jp" target="_blank">e-Gov法令検索</a></div>
+                        <div class="resource-desc">Législation japonaise officielle, codes et règlements.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://disclosure.edinet-fsa.go.jp" target="_blank">EDINET</a></div>
+                        <div class="resource-desc">Filings des sociétés cotées japonaises, rapports annuels.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.courts.go.jp" target="_blank">裁判所 (Courts Japan)</a></div>
+                        <div class="resource-desc">Système judiciaire japonais, jurisprudence, procédures.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.jpx.co.jp" target="_blank">JPX (Japan Exchange)</a></div>
+                        <div class="resource-desc">Bourse de Tokyo, règles de cotation, données de marché.</div>
+                    </div>
+                </div>
+
+                <h3>Corée du Sud</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.law.go.kr" target="_blank">법제처 (Korean Law)</a></div>
+                        <div class="resource-desc">Législation coréenne officielle, traductions anglaises disponibles.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dart.fss.or.kr" target="_blank">DART (전자공시)</a></div>
+                        <div class="resource-desc">Système de divulgation électronique, filings des sociétés coréennes.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="http://www.krx.co.kr" target="_blank">KRX</a></div>
+                        <div class="resource-desc">Korea Exchange : KOSPI, KOSDAQ, données de marché.</div>
+                    </div>
+                </div>
+
+                <h3>Singapour</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://sso.agc.gov.sg" target="_blank">Singapore Statutes Online</a></div>
+                        <div class="resource-desc">Législation de Singapour, Acts et subsidiary legislation.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.bizfile.gov.sg" target="_blank">ACRA BizFile</a></div>
+                        <div class="resource-desc">Registre des entreprises de Singapour, UEN, filings.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.mas.gov.sg" target="_blank">MAS</a></div>
+                        <div class="resource-desc">Monetary Authority of Singapore, régulation financière, VCC framework.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sgx.com" target="_blank">SGX</a></div>
+                        <div class="resource-desc">Singapore Exchange, règles de cotation, données de marché.</div>
+                    </div>
+                </div>
+
+                <h3>Hong Kong</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.elegislation.gov.hk" target="_blank">HK e-Legislation</a></div>
+                        <div class="resource-desc">Ordonnances de Hong Kong, numéros de chapitre (Cap.).</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.icris.cr.gov.hk" target="_blank">ICRIS</a></div>
+                        <div class="resource-desc">Registre des entreprises de Hong Kong, recherche CR.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.hkex.com.hk" target="_blank">HKEX</a></div>
+                        <div class="resource-desc">Hong Kong Exchange, Main Board, GEM, règles de cotation.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sfc.hk" target="_blank">SFC</a></div>
+                        <div class="resource-desc">Securities and Futures Commission, régulation des marchés HK.</div>
+                    </div>
+                </div>
+
+                <h3>Autres Juridictions Asiatiques</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ahu.go.id" target="_blank">Indonésie - AHU</a></div>
+                        <div class="resource-desc">Registre des entreprises indonésiennes (PT). Régulateur : OJK.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.ssm.com.my" target="_blank">Malaisie - SSM</a></div>
+                        <div class="resource-desc">Companies Commission of Malaysia, Berhad, Sdn Bhd.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.dbd.go.th" target="_blank">Thaïlande - DBD</a></div>
+                        <div class="resource-desc">Department of Business Development, registre des entreprises thaïlandaises.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://dangkykinhdoanh.gov.vn" target="_blank">Vietnam - Registre</a></div>
+                        <div class="resource-desc">Registre des entreprises vietnamiennes, TNHH, Cổ phần.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sec.gov.ph" target="_blank">Philippines - SEC</a></div>
+                        <div class="resource-desc">Securities and Exchange Commission, Corporation registry.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.mca.gov.in" target="_blank">Inde - MCA21</a></div>
+                        <div class="resource-desc">Ministry of Corporate Affairs, registre CIN, Pvt Ltd, Ltd.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- MOYEN-ORIENT & GOLFE -->
+            <details id="moyen-orient" class="source-section">
+                <summary><h2>Moyen-Orient & Golfe</h2></summary>
+                <div class="content">
+
+                <h3>Émirats Arabes Unis</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.economy.gov.ae" target="_blank">UAE Ministry of Economy</a></div>
+                        <div class="resource-desc">Licences fédérales, régulation commerciale aux EAU.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.difc.ae" target="_blank">DIFC</a></div>
+                        <div class="resource-desc">Dubai International Financial Centre, régulateur DFSA, common law.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.adgm.com" target="_blank">ADGM</a></div>
+                        <div class="resource-desc">Abu Dhabi Global Market, régulateur FSRA, centre financier.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.dmcc.ae" target="_blank">DMCC</a></div>
+                        <div class="resource-desc">Dubai Multi Commodities Centre, zone franche, licences commerciales.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.dubaided.gov.ae" target="_blank">DED Dubai</a></div>
+                        <div class="resource-desc">Department of Economic Development, licences mainland Dubai.</div>
+                    </div>
+                </div>
+
+                <h3>Arabie Saoudite</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.saudiexchange.sa" target="_blank">Tadawul</a></div>
+                        <div class="resource-desc">Bourse saoudienne, filings des sociétés cotées.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce (Saudi)</a></div>
+                        <div class="resource-desc">Registre commercial saoudien, régulation des entreprises.</div>
+                    </div>
+                </div>
+
+                <h3>Qatar & Bahreïn</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.qe.com.qa" target="_blank">Qatar Stock Exchange</a></div>
+                        <div class="resource-desc">Bourse du Qatar, sociétés cotées, données de marché.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://www.sijilat.bh" target="_blank">Bahrain Sijilat</a></div>
+                        <div class="resource-desc">Registre des entreprises de Bahreïn, commercial registry.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            <!-- CRYPTO & BLOCKCHAIN -->
+            <details id="crypto" class="source-section">
+                <summary><h2>Crypto & Blockchain</h2></summary>
+                <div class="content">
+
+                <h3>Whitepapers Fondateurs</h3>
+                <div class="resources">
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Bitcoin Whitepaper</a></div>
+                        <div class="resource-desc">Satoshi Nakamoto, 2008. Peer-to-peer electronic cash system, blockchain, proof-of-work.</div>
+                    </div>
+                    <div class="resource">
+                        <div class="resource-name"><a href="https://ethereum.org/en/whitepaper/" target="_blank">Ethereum Whitepaper</a></div>
+                        <div class="resource-desc">Vitalik Buterin, 2013. Smart contracts, decentralized applications, EVM.</div>
+                    </div>
+                </div>
+                </div>
+            </details>
+
+            </div><!-- end sources-list -->
+
+        </main>
+
+        <footer>
+            <p class="latin-phrase">in girum imus nocte et consumimur igni</p>
+        </footer>
+
+    <script>
+    (function(){
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('themeToggle');
+        if (!btn) return;
+        var theme = localStorage.getItem('aleph-theme') || 'dark';
+        btn.textContent = theme === 'dark' ? '◑' : '◐';
+        btn.addEventListener('click', function() {
+          var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('aleph-theme', next);
+          btn.textContent = next === 'dark' ? '◑' : '◐';
+        });
+      });
+    })();
+    </script>
+    <script src="sources.js"></script>
+    </div>
+    <a class="site-credit" href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener">gmfm</a>
+</body>
+</html>

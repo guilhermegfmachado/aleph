@@ -10,10 +10,10 @@ const glossaire = {
     selectedCategory: ''
 };
 
-// Data feeds
+// Data feeds (paths relative to docs/archive/, served from docs/)
 const FEEDS = {
-    glossary: 'data/glossary.json',
-    quotes: 'data/quotes.json'
+    glossary: '../data/glossary.json',
+    quotes: '../data/quotes.json'
 };
 
 // Language display names
@@ -54,7 +54,6 @@ async function init() {
 
     // Setup event listeners
     setupSearch();
-    setupModal();
     setupAddEntryForm();
     setupUrlParams();
 }
@@ -227,15 +226,92 @@ function renderTerms() {
         row.dataset.id = term.id;
 
         row.innerHTML = `
-            <span class="term-word">${escapeHtml(term.term)}</span>
-            <span class="term-lang">${LANG_NAMES[term.lang] || term.lang || ''}</span>
-            <span class="term-def">${escapeHtml(truncate(term.definition || term.gloss || '', 80))}</span>
+            <span class="term-lang-tag">${escapeHtml(LANG_NAMES[term.lang] || term.lang || '')}</span>
+            <span class="term-word-name">${escapeHtml(term.term)}</span>
+            <span class="term-def-preview">${escapeHtml(truncate(term.definition || term.gloss || '', 80))}</span>
         `;
 
-        row.addEventListener('click', () => openModal(term));
+        const expanded = document.createElement('div');
+        expanded.className = 'term-expanded';
+        expanded.innerHTML = renderExpandedContent(term);
+
+        row.addEventListener('click', () => toggleTermRow(row, expanded));
         container.appendChild(row);
+        container.appendChild(expanded);
     });
 }
+
+function toggleTermRow(row, expanded) {
+    const isOpen = row.classList.contains('expanded');
+    document.querySelectorAll('.term-row.expanded').forEach(r => {
+        r.classList.remove('expanded');
+        const exp = r.nextElementSibling;
+        if (exp && exp.classList.contains('term-expanded')) exp.classList.remove('open');
+    });
+    if (!isOpen) {
+        row.classList.add('expanded');
+        expanded.classList.add('open');
+    }
+}
+
+function renderExpandedContent(term) {
+    const native = term.native || term.pronunciation || '';
+    const definition = term.definition || term.gloss || '';
+    const etymology = term.etymology || '';
+    const domain = formatCategories(term.category);
+    const period = term.period || '';
+
+    const fields = [];
+    if (native) fields.push(`<div class="te-native">${escapeHtml(native)}</div>`);
+    if (definition) fields.push(`<div class="te-gloss">${escapeHtml(definition)}</div>`);
+
+    const facts = [];
+    if (etymology) facts.push(`<div class="te-fact"><span class="te-label">étymologie</span><span class="te-val">${escapeHtml(etymology)}</span></div>`);
+    if (domain)    facts.push(`<div class="te-fact"><span class="te-label">domaine</span><span class="te-val">${escapeHtml(domain)}</span></div>`);
+    if (period)    facts.push(`<div class="te-fact"><span class="te-label">période</span><span class="te-val">${escapeHtml(period)}</span></div>`);
+    if (facts.length) fields.push(`<div class="te-facts">${facts.join('')}</div>`);
+
+    if (term.related && term.related.length > 0) {
+        const links = term.related.map(r =>
+            `<a class="te-related-link" href="#" data-related="${escapeHtml(r)}">${escapeHtml(r)}</a>`
+        ).join('');
+        fields.push(`<div class="te-related"><span class="te-label">voir aussi</span><span class="te-val">${links}</span></div>`);
+    }
+
+    const termQuotes = glossaire.quotes.filter(q =>
+        q.relatedTerm === term.id ||
+        q.relatedTerm === term.term ||
+        (q.tags && q.tags.includes(term.term))
+    );
+    if (termQuotes.length > 0) {
+        const quotesHtml = termQuotes.map(q => `
+            <blockquote class="te-quote">${escapeHtml(q.text)}<footer>— ${escapeHtml(q.author || '')}</footer></blockquote>
+        `).join('');
+        fields.push(`<div class="te-quotes"><span class="te-label">citations</span>${quotesHtml}</div>`);
+    }
+
+    return fields.join('');
+}
+
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('.te-related-link');
+    if (!link) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const name = link.dataset.related;
+    const target = glossaire.terms.find(t =>
+        t.term === name ||
+        t.id === name ||
+        (t.term && t.term.toLowerCase() === name.toLowerCase())
+    );
+    if (!target) return;
+    const row = document.querySelector(`.term-row[data-id="${CSS.escape(String(target.id))}"]`);
+    if (row) {
+        const exp = row.nextElementSibling;
+        if (!row.classList.contains('expanded')) toggleTermRow(row, exp);
+        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+});
 
 // ============ STATS ============
 function updateStats() {
@@ -254,139 +330,6 @@ function updateStats() {
         glossaire.terms.forEach(t => { if (t.lang) langs.add(t.lang); });
         glossaire.quotes.forEach(q => { if (q.lang) langs.add(q.lang); });
         langCountEl.textContent = langs.size;
-    }
-}
-
-// ============ MODAL ============
-function setupModal() {
-    const overlay = document.getElementById('modalOverlay');
-    if (!overlay) return;
-
-    // Close button
-    const closeBtn = overlay.querySelector('.modal-close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeModal);
-    }
-
-    // Click on overlay background closes modal
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            closeModal();
-        }
-    });
-
-    // Escape key closes modal
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeModal();
-        }
-    });
-}
-
-function openModal(term) {
-    const overlay = document.getElementById('modalOverlay');
-    if (!overlay) return;
-
-    // Populate modal fields
-    setModalField('modalTerm', term.term);
-    setModalField('modalNative', term.native || term.pronunciation || '');
-    setModalField('modalLang', LANG_NAMES[term.lang] || term.lang || '');
-    setModalField('modalEtymology', term.etymology || '');
-    setModalField('modalDomain', formatCategories(term.category));
-    setModalField('modalPeriod', term.period || '');
-    setModalField('modalGloss', term.definition || term.gloss || '');
-
-    // Show/hide labels based on content
-    toggleLabelVisibility('modalEtymologyLabel', 'modalEtymology');
-    toggleLabelVisibility('modalDomainLabel', 'modalDomain');
-    toggleLabelVisibility('modalPeriodLabel', 'modalPeriod');
-
-    // Voir aussi links (clickable)
-    const relatedContainer = document.getElementById('modalRelated');
-    const relatedLabel = document.getElementById('modalRelatedLabel');
-    if (relatedContainer) {
-        if (term.related && term.related.length > 0) {
-            relatedContainer.innerHTML = '';
-            term.related.forEach(relatedTerm => {
-                const link = document.createElement('span');
-                link.className = 'related-link';
-                link.textContent = relatedTerm;
-                link.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    openRelatedEntry(relatedTerm);
-                });
-                relatedContainer.appendChild(link);
-            });
-            relatedContainer.style.display = '';
-            if (relatedLabel) relatedLabel.style.display = '';
-        } else {
-            relatedContainer.innerHTML = '';
-            relatedContainer.style.display = 'none';
-            if (relatedLabel) relatedLabel.style.display = 'none';
-        }
-    }
-
-    // Quotes section
-    const quotesContainer = document.getElementById('modalQuotes');
-    if (quotesContainer) {
-        const termQuotes = glossaire.quotes.filter(q =>
-            q.relatedTerm === term.id ||
-            q.relatedTerm === term.term ||
-            (q.tags && q.tags.includes(term.term))
-        );
-        if (termQuotes.length > 0) {
-            quotesContainer.innerHTML = '<div class="modal-field-label">citations</div>' +
-                termQuotes.map(q => `
-                    <blockquote class="modal-quote">
-                        ${escapeHtml(q.text)}
-                        <footer>— ${escapeHtml(q.author || '')}</footer>
-                    </blockquote>
-                `).join('');
-            quotesContainer.style.display = '';
-        } else {
-            quotesContainer.innerHTML = '';
-            quotesContainer.style.display = 'none';
-        }
-    }
-
-    // Show modal
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    const overlay = document.getElementById('modalOverlay');
-    if (overlay) {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-}
-
-function openRelatedEntry(termName) {
-    // Find the term by name or id
-    const term = glossaire.terms.find(t =>
-        t.term === termName ||
-        t.id === termName ||
-        (t.term && t.term.toLowerCase() === termName.toLowerCase())
-    );
-    if (term) {
-        openModal(term);
-    }
-}
-
-function setModalField(id, value) {
-    const el = document.getElementById(id);
-    if (el) {
-        el.textContent = value || '';
-        el.style.display = value ? '' : 'none';
-    }
-}
-
-function toggleLabelVisibility(labelId, valueId) {
-    const label = document.getElementById(labelId);
-    const value = document.getElementById(valueId);
-    if (label && value) {
-        label.style.display = value.textContent ? '' : 'none';
     }
 }
 
@@ -476,12 +419,14 @@ function setupUrlParams() {
         }
     }
 
-    // Check for ?id= parameter and open that entry's modal
+    // Check for ?id= parameter and expand that entry inline
     const id = urlParams.get('id');
     if (id) {
-        const term = glossaire.terms.find(t => t.id === id);
-        if (term) {
-            openModal(term);
+        const row = document.querySelector(`.term-row[data-id="${CSS.escape(id)}"]`);
+        if (row) {
+            const exp = row.nextElementSibling;
+            if (exp && !row.classList.contains('expanded')) toggleTermRow(row, exp);
+            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
 }

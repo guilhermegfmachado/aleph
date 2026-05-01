@@ -12,11 +12,19 @@ function initTheme() {
     document.documentElement.setAttribute('data-theme', stored);
 }
 
+function updateThemeBtnSymbol() {
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    const theme = document.documentElement.getAttribute('data-theme');
+    btn.textContent = theme === 'light' ? '◐' : '◑';
+}
+
 function toggleTheme() {
     const current = document.documentElement.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('aleph-theme', next);
+    updateThemeBtnSymbol();
 }
 
 function setupThemeToggle() {
@@ -24,6 +32,7 @@ function setupThemeToggle() {
     if (btn) {
         btn.addEventListener('click', toggleTheme);
     }
+    updateThemeBtnSymbol();
 }
 
 // ============================================================
@@ -58,8 +67,8 @@ let glossaryData = null;
 async function loadSearchIndex() {
     try {
         const [indexRes, glossaryRes] = await Promise.all([
-            fetch('corpus/index.json'),
-            fetch('data/glossary.json')
+            fetch('../corpus/index.json'),
+            fetch('../data/glossary.json')
         ]);
 
         if (indexRes.ok) {
@@ -273,7 +282,7 @@ window.toggleFavorite = toggleFavorite;
 
 async function loadCorpusManifest() {
     try {
-        const resp = await fetch('data/corpus-manifest.json');
+        const resp = await fetch('../data/corpus-manifest.json');
         if (!resp.ok) return;
 
         browseState.corpus = await resp.json();
@@ -312,29 +321,101 @@ async function loadCorpusManifest() {
     }
 }
 
+function populateCustomDropdown(el, options, selectedValue, onChange) {
+    if (!el) return;
+    const trigger = el.querySelector('.cd-trigger');
+    const menu = el.querySelector('.cd-menu');
+    const label = el.querySelector('.cd-label');
+    if (!trigger || !menu || !label) return;
+
+    menu.innerHTML = '';
+    options.forEach(opt => {
+        const li = document.createElement('li');
+        li.className = 'cd-item';
+        li.dataset.value = opt.value;
+        li.textContent = opt.label;
+        if (opt.value === selectedValue) li.classList.add('selected');
+        li.addEventListener('click', () => {
+            label.textContent = opt.label;
+            el.dataset.value = opt.value;
+            menu.querySelectorAll('.cd-item').forEach(i => i.classList.remove('selected'));
+            li.classList.add('selected');
+            menu.hidden = true;
+            trigger.classList.remove('open');
+            if (onChange) onChange(opt.value);
+        });
+        menu.appendChild(li);
+    });
+
+    if (!trigger.dataset.cdBound) {
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = !menu.hidden;
+            document.querySelectorAll('.custom-dropdown .cd-menu').forEach(m => { m.hidden = true; });
+            document.querySelectorAll('.custom-dropdown .cd-trigger').forEach(t => t.classList.remove('open'));
+            menu.hidden = isOpen;
+            trigger.classList.toggle('open', !isOpen);
+        });
+        trigger.dataset.cdBound = '1';
+    }
+}
+
+function setupCustomDropdownsOutsideClick() {
+    if (window.__cdOutsideBound) return;
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.custom-dropdown')) return;
+        document.querySelectorAll('.custom-dropdown .cd-menu').forEach(m => { m.hidden = true; });
+        document.querySelectorAll('.custom-dropdown .cd-trigger').forEach(t => t.classList.remove('open'));
+    });
+    window.__cdOutsideBound = true;
+}
+
 function populateBrowseFilters() {
     const books = browseState.books;
 
-    // Types/domains
     const types = [...new Set(books.map(b => b.domain).filter(Boolean))].sort();
-    const typeSelect = document.getElementById('type-filter');
-    if (typeSelect) {
-        types.forEach(t => typeSelect.add(new Option(t, t)));
-    }
+    populateCustomDropdown(
+        document.getElementById('type-filter'),
+        [{ value: '', label: 'tous les types' }, ...types.map(t => ({ value: t, label: t }))],
+        '',
+        (val) => { browseState.filters.type = val; browseState.page = 1; renderBrowseList(); }
+    );
 
-    // Authors
     const authors = [...new Set(books.map(b => b.author).filter(Boolean))].sort();
-    const authorSelect = document.getElementById('author-filter');
-    if (authorSelect) {
-        authors.forEach(a => authorSelect.add(new Option(a, a)));
-    }
+    populateCustomDropdown(
+        document.getElementById('author-filter'),
+        [{ value: '', label: 'tous les auteurs' }, ...authors.map(a => ({ value: a, label: a }))],
+        '',
+        (val) => { browseState.filters.author = val; browseState.page = 1; renderBrowseList(); }
+    );
 
-    // Sources
     const sources = [...new Set(books.map(b => b.source).filter(Boolean))].sort();
-    const sourceSelect = document.getElementById('source-filter');
-    if (sourceSelect) {
-        sources.forEach(s => sourceSelect.add(new Option(s, s)));
-    }
+    populateCustomDropdown(
+        document.getElementById('source-filter'),
+        [{ value: '', label: 'toutes les sources' }, ...sources.map(s => ({ value: s, label: s }))],
+        '',
+        (val) => { browseState.filters.source = val; browseState.page = 1; renderBrowseList(); }
+    );
+
+    populateCustomDropdown(
+        document.getElementById('fav-filter'),
+        [{ value: '', label: 'tous les textes' }, { value: 'favorites', label: 'favoris' }],
+        '',
+        (val) => { browseState.filters.favorites = val; browseState.page = 1; renderBrowseList(); }
+    );
+
+    populateCustomDropdown(
+        document.getElementById('sort-filter'),
+        [
+            { value: 'title', label: 'trier : titre' },
+            { value: 'author', label: 'trier : auteur' },
+            { value: 'domain', label: 'trier : type' }
+        ],
+        'title',
+        (val) => { browseState.sortBy = val; renderBrowseList(); }
+    );
+
+    setupCustomDropdownsOutsideClick();
 }
 
 function getFilteredBooks() {
@@ -392,19 +473,21 @@ function renderBrowseList() {
     }
 
     listDiv.innerHTML = page.map(b => {
-        const yearStr = b.year ? ` (${formatYear(b.year)})` : '';
-        const href = `book.html?corpus=${b.corpusId}`;
+        const yearStr = b.year ? formatYear(b.year) : '';
+        const href = `../book.html?corpus=${b.corpusId}`;
+        const metaParts = [b.domain, b.source].filter(Boolean).map(escapeHtml).join(' · ');
+        const authorLine = [b.author, yearStr].filter(Boolean).map(escapeHtml).join(', ');
+        const starred = isFavorite(b.id);
         return `
-            <div class="search-result">
-                <div class="search-result-byline">
-                    ${escapeHtml(b.author)}${yearStr} · ${escapeHtml(b.domain)} · ${escapeHtml(b.source)}
-                    <button class="fav-btn ${isFavorite(b.id) ? 'active' : ''}"
-                            onclick="event.stopPropagation(); toggleFavBtn(this, '${b.id}')"
-                            title="favoris">favori</button>
-                </div>
-                <a href="${href}" class="search-result-title">${escapeHtml(b.title)}</a>
-                ${b.language ? `<div class="search-result-meta">${escapeHtml(b.language)}</div>` : ''}
-            </div>
+            <article class="browse-card" data-id="${escapeHtml(String(b.id))}">
+                <div class="bc-meta">${metaParts}</div>
+                <div class="bc-title"><a href="${href}">${escapeHtml(b.title)}</a></div>
+                ${authorLine ? `<div class="bc-author">${authorLine}</div>` : ''}
+                ${b.language ? `<div class="bc-detail">${escapeHtml(b.language)}</div>` : ''}
+                <button class="bc-star ${starred ? 'starred' : ''}"
+                        onclick="event.stopPropagation(); toggleFavBtn(this, '${escapeHtml(String(b.id))}')"
+                        title="favoris" aria-label="favori">${starred ? '★' : '☆'}</button>
+            </article>
         `;
     }).join('');
 
@@ -429,7 +512,8 @@ window.gotoPage = gotoPage;
 
 function toggleFavBtn(btn, bookId) {
     const isNowFav = toggleFavorite(bookId);
-    btn.classList.toggle('active', isNowFav);
+    btn.classList.toggle('starred', isNowFav);
+    btn.textContent = isNowFav ? '★' : '☆';
 }
 window.toggleFavBtn = toggleFavBtn;
 
@@ -437,22 +521,6 @@ async function initBrowse() {
     await loadCorpusManifest();
     populateBrowseFilters();
     renderBrowseList();
-
-    // Setup filter listeners
-    ['type-filter', 'author-filter', 'source-filter', 'fav-filter', 'sort-filter'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.addEventListener('change', () => {
-                if (id === 'type-filter') browseState.filters.type = el.value;
-                if (id === 'author-filter') browseState.filters.author = el.value;
-                if (id === 'source-filter') browseState.filters.source = el.value;
-                if (id === 'fav-filter') browseState.filters.favorites = el.value;
-                if (id === 'sort-filter') browseState.sortBy = el.value;
-                browseState.page = 1;
-                renderBrowseList();
-            });
-        }
-    });
 }
 window.initBrowse = initBrowse;
 

@@ -1,498 +1,286 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script>
+    <script>
     (function(){
-      var t=localStorage.getItem('aleph-theme')||'dark';
-      document.documentElement.setAttribute('data-theme',t);
+        var t = localStorage.getItem('aleph-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
     })();
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>aleph · catalogue littéraire universel</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root, :root[data-theme="dark"] {
-      --bg: #070809; --bg2: #0c0d0f; --bg3: #111214;
-      --border: rgba(255,255,255,0.07);
-      --text: #8a8880; --bright: #edeae4; --dim: #424240;
-      --accent: #c9a84c;
-      --sans: 'Inter', system-ui, sans-serif;
-      --serif: 'Instrument Serif', Georgia, serif;
-      --mono: 'Geist Mono', monospace;
-    }
-    :root[data-theme="light"] {
-      --bg: #f5f2ec; --bg2: #ede9e0; --bg3: #e4e0d6;
-      --border: rgba(0,0,0,0.09);
-      --text: #5a5650; --bright: #1a1916; --dim: #9a9690;
-      --accent: #7a5c18;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg); color: var(--text);
-      font-family: var(--sans); font-size: 14px; line-height: 1.7;
-      overflow-x: hidden; min-height: 100vh;
-      transition: background 0.2s, color 0.2s;
-      -webkit-font-smoothing: antialiased;
-    }
-    body::after {
-      content: ''; position: fixed; inset: 0;
-      pointer-events: none; z-index: 9999; opacity: 0.02;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 180px;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; height: 48px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 1.5rem;
-      background: color-mix(in srgb, var(--bg) 92%, transparent);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-      z-index: 100;
-    }
-    .nav-logo {
-      font-family: var(--serif); font-size: 1.3rem; color: var(--accent);
-      text-decoration: none;
-    }
-    .nav-right {
-      display: flex; align-items: center; gap: 0;
-    }
-    .nav-right a, .nav-right button {
-      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em;
-      color: var(--dim); text-decoration: none;
-      background: none; border: none; cursor: pointer;
-      padding: 0 1rem;
-    }
-    .nav-right a:hover, .nav-right button:hover { color: var(--bright); }
-    #themeToggle { font-size: 0.85rem; }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh; display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 1.5rem; padding: 5rem 1.5rem;
-    }
-    .hero-glyph {
-      font-family: var(--serif);
-      font-size: clamp(5rem, 18vw, 8rem);
-      color: var(--accent);
-      line-height: 1;
-      animation: breathing 8s ease-in-out infinite;
-    }
-    @keyframes breathing {
-      0%, 100% { opacity: 0.85; }
-      50% { opacity: 0.45; }
-    }
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(1.4rem, 4vw, 2rem);
-      color: var(--bright); font-weight: 400; text-align: center;
-    }
-    .hero-sub {
-      font-family: var(--mono); font-size: 0.65rem;
-      color: var(--dim); letter-spacing: 0.1em; text-align: center;
-    }
-    .search-wrap { max-width: 560px; width: 100%; }
-    #searchInput {
-      width: 100%; display: block; margin: 0 auto;
-      background: var(--bg2); border: 1px solid var(--border);
-      color: var(--bright); font-family: var(--mono); font-size: 0.85rem;
-      padding: 0.9rem 1.2rem; outline: none;
-      transition: border-color 0.2s;
-    }
-    #searchInput::placeholder { color: var(--dim); }
-    #searchInput:focus { border-color: rgba(201,168,76,0.4); }
-
-    /* RESULTS */
-    #results {
-      max-width: 720px; margin: 0 auto; padding: 0 1.5rem 6rem;
-      opacity: 0; transition: opacity 0.3s; pointer-events: none;
-    }
-    #results.visible { opacity: 1; pointer-events: auto; }
-    .results-header {
-      font-family: var(--mono); font-size: 0.58rem; text-transform: uppercase;
-      letter-spacing: 0.1em; color: var(--dim); margin-bottom: 1.5rem;
-    }
-    .results-cards { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-    .result-card {
-      background: var(--bg); padding: 1.2rem 1.4rem; cursor: default;
-      transition: background 0.15s;
-    }
-    .result-card:hover { background: rgba(201,168,76,0.02); }
-    .card-meta {
-      font-family: var(--mono); font-size: 0.53rem; text-transform: uppercase;
-      letter-spacing: 0.1em; color: var(--accent); opacity: 0.8;
-      margin-bottom: 0.5rem;
-    }
-    .card-excerpt {
-      color: var(--text); font-size: 0.82rem; line-height: 1.85;
-      margin-bottom: 0.6rem;
-    }
-    .card-excerpt mark {
-      background: rgba(201,168,76,0.18); color: var(--bright); padding: 0 2px;
-    }
-    .card-expand {
-      font-family: var(--mono); font-size: 0.6rem; color: var(--dim);
-      cursor: pointer; border: none; background: none; padding: 0;
-    }
-    .card-expand:hover { color: var(--bright); }
-    .card-full {
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.4s ease;
-      font-size: 0.82rem; line-height: 1.85; color: var(--text);
-      margin-top: 0;
-    }
-    .card-full.expanded { max-height: 600px; margin-top: 0.8rem; }
-
-    /* NO RESULTS */
-    .no-results { padding: 2rem 0; background: var(--bg); }
-    .no-results p { font-family: var(--mono); font-size: 0.65rem; color: var(--dim); margin-bottom: 1rem; }
-    .suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .suggestion-chip {
-      border: 1px solid var(--border); font-family: var(--mono); font-size: 0.6rem;
-      padding: 0.3rem 0.7rem; color: var(--dim); cursor: pointer;
-      background: none; transition: color 0.15s, border-color 0.15s;
-    }
-    .suggestion-chip:hover { color: var(--bright); border-color: var(--dim); }
-
-    /* AI SYNTHESIS */
-    .ai-synthesis {
-      border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1.5rem;
-    }
-    .ai-label {
-      font-family: var(--mono); font-size: 0.55rem; text-transform: uppercase;
-      letter-spacing: 0.16em; color: var(--dim); margin-bottom: 1rem;
-    }
-    .ai-placeholder {
-      opacity: 0.35; display: flex; flex-direction: column;
-      align-items: flex-start; gap: 0.5rem;
-    }
-    .ai-icon { color: var(--accent); font-size: 1.2rem; }
-    .ai-text {
-      font-family: var(--serif); font-style: italic; font-size: 0.85rem;
-      color: var(--text);
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border); padding: 1rem 1.5rem;
-      margin-top: 4rem; display: flex; align-items: center;
-      justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
-    }
-    .footer-left {
-      font-family: var(--mono); font-size: 0.58rem; color: var(--dim);
-    }
-    .footer-right { display: flex; gap: 1rem; }
-    .footer-right a {
-      font-family: var(--mono); font-size: 0.58rem; color: var(--dim);
-      text-decoration: none; transition: color 0.15s;
-    }
-    .footer-right a:hover { color: var(--bright); }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .hero { padding: 4rem 1.2rem; }
-      .search-wrap { width: 100%; }
-      .nav-right a, .nav-right button { font-size: 0.55rem; padding: 0 0.6rem; }
-      .result-card { padding: 1rem 1rem; }
-    }
-  </style>
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aleph — catalogue littéraire universel</title>
+    <meta name="description" content="Index de littérature du domaine public à travers toutes les traditions — grec, sanskrit, japonais, hébreu, latin, et plus.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HEADER
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <header class="site-header">
+        <a href="#home" class="logo">
+            <span class="logo-glyph">א</span>
+            <span class="logo-text">Aleph</span>
+        </a>
 
-  <nav>
-    <a class="nav-logo" href="index.html">aleph</a>
-    <div class="nav-right">
-      <a href="sources.html">références</a>
-      <a href="archive/browse.html">archive ↗</a>
-      <button id="themeToggle">◑</button>
+        <nav class="main-nav">
+            <a href="#home" data-page="home">chercher</a>
+            <a href="#browse" data-page="browse">parcourir</a>
+            <a href="#glossary" data-page="glossary">glossaire</a>
+            <a href="#sources" data-page="sources">références</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="search-trigger" id="searchTrigger">
+                <span>ξ</span>
+                <span>chercher</span>
+                <span class="shortcut">⌘K</span>
+            </button>
+            <button class="theme-toggle" id="themeToggle" title="Changer de thème">◑</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ═══════════════════════════════════════════════════════════════════
+             HOME PAGE
+             ═══════════════════════════════════════════════════════════════════ -->
+        <section id="home" class="page active">
+            <div class="home-hero">
+                <div class="home-hero-text">
+                    <div class="home-meta">
+                        <span class="label">N° 0001</span>
+                        <span class="separator label">●</span>
+                        <span class="label">Printemps MMXXVI</span>
+                        <span class="separator label">●</span>
+                        <span class="label">Tirage illimité</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <em>Trouver</em> l'idée à travers <em>toutes</em> les traditions<span class="accent-dot">.</span>
+                    </h1>
+                    <p class="tagline">
+                        Chaque langue découpe le monde différemment. Voici les mots qui refusent le passage.
+                    </p>
+                </div>
+
+                <article class="featured-card" id="featuredCard">
+                    <header class="featured-card-header">
+                        <span class="featured-card-code">AL.0001</span>
+                        <span class="featured-card-lang">DE</span>
+                    </header>
+                    <h2 class="featured-card-title">Le Gai Savoir</h2>
+                    <p class="featured-card-author">Friedrich Nietzsche</p>
+                    <div class="featured-card-meta">
+                        <span>1882</span>
+                        <span>·</span>
+                        <span>philosophie</span>
+                    </div>
+                </article>
+            </div>
+
+            <section class="constellation-section">
+                <header class="constellation-header">
+                    <h2 class="section-title">Constellation des concepts</h2>
+                    <span class="label">Connexions</span>
+                </header>
+                <div class="constellation-grid" id="constellationGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <section class="recent-section">
+                <header class="recent-header">
+                    <h2 class="section-title">Ajouts récents</h2>
+                    <span class="label">Index</span>
+                </header>
+                <table class="recent-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Titre</th>
+                            <th>Auteur</th>
+                            <th>Langue</th>
+                            <th>Année</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentTableBody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             BROWSE PAGE
+             ═══════════════════════════════════════════════════════════════════ -->
+        <section id="browse" class="page">
+            <div class="browse-layout">
+                <aside class="browse-sidebar">
+                    <div class="filter-section">
+                        <h3 class="filter-section-title">Langue</h3>
+                        <div class="filter-pills" id="langFilters">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 class="filter-section-title">Type</h3>
+                        <div class="filter-list" id="typeFilters">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="browse-main">
+                    <div class="browse-toolbar">
+                        <span class="browse-count">
+                            <strong id="browseCount">0</strong> / <span id="browseTotal">0</span> textes
+                        </span>
+                        <div class="browse-controls">
+                            <span class="label">Tri :</span>
+                            <select class="sort-select" id="sortSelect">
+                                <option value="year">année</option>
+                                <option value="title">titre</option>
+                                <option value="author">auteur</option>
+                            </select>
+                            <div class="view-toggles">
+                                <button class="view-toggle active" data-view="grid" title="Grille">▦</button>
+                                <button class="view-toggle" data-view="list" title="Liste">≡</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="books-grid" id="booksGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             GLOSSARY PAGE
+             ═══════════════════════════════════════════════════════════════════ -->
+        <section id="glossary" class="page">
+            <div class="glossary-layout">
+                <div class="glossary-main">
+                    <header class="glossary-header">
+                        <span class="label label-accent">Glossarium</span>
+                        <span class="label">●</span>
+                        <span class="label"><span id="termCount">0</span> termes</span>
+                        <span class="label">●</span>
+                        <span class="label"><span id="langCount">0</span> langues</span>
+                        <h1 class="page-title">intraduisibles<span class="accent-dot">.</span></h1>
+                        <p class="glossary-subtitle">
+                            Chaque langue découpe le monde différemment. Voici les mots qui refusent le passage.
+                        </p>
+                    </header>
+
+                    <div class="glossary-controls">
+                        <input type="text" class="glossary-search" id="glossarySearch" placeholder="rechercher un terme...">
+                        <div class="category-pills" id="categoryPills">
+                            <button class="category-pill active" data-category="all">all</button>
+                        </div>
+                    </div>
+
+                    <div class="glossary-list" id="glossaryList">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <aside class="glossary-specimen" id="glossarySpecimen">
+                    <div class="specimen-index" id="specimenIndex">
+                        <!-- A-Z populated by JS -->
+                    </div>
+                    <span class="specimen-label">Fiche</span>
+                    <h2 class="specimen-term" id="specimenTerm">—</h2>
+                    <div class="specimen-meta" id="specimenMeta">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div class="specimen-related" id="specimenRelated">
+                        <h3 class="specimen-related-title">Voir aussi</h3>
+                        <div class="specimen-related-list" id="specimenRelatedList">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             SOURCES PAGE
+             ═══════════════════════════════════════════════════════════════════ -->
+        <section id="sources" class="page">
+            <div class="sources-layout">
+                <aside class="sources-sidebar">
+                    <h2 class="sources-toc-title">Sommaire</h2>
+                    <nav class="sources-toc" id="sourcesToc">
+                        <!-- Populated by JS -->
+                    </nav>
+                </aside>
+
+                <div class="sources-main">
+                    <header class="sources-header">
+                        <span class="label label-accent">Références</span>
+                        <span class="label">●</span>
+                        <span class="label"><span id="sourceCount">0</span> sources</span>
+                        <span class="label">●</span>
+                        <span class="label"><span id="categoryCount">0</span> catégories</span>
+                        <h1 class="page-title">Sur les épaules des géants<span class="accent-dot">.</span></h1>
+                        <p class="sources-tagline">
+                            Aleph ne possède rien : il indexe. Toutes les sources qui rendent ce projet possible — bibliothèques, archives, instituts.
+                        </p>
+                        <div class="sources-view-toggle">
+                            <button class="sources-view-btn active" data-view="bibliographie">bibliographie</button>
+                            <button class="sources-view-btn" data-view="vignettes">vignettes</button>
+                        </div>
+                    </header>
+
+                    <div id="sourcesSections">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <aside class="sources-colophon">
+                    <h2 class="colophon-title">Colophon</h2>
+                    <div class="colophon-content">
+                        <p><strong>Composé en</strong> EB Garamond et JetBrains Mono. Encre sur papier numérique.</p>
+                        <p><strong>Conçu par</strong> GMFM, printemps 2025.</p>
+                        <p><strong>Licence</strong> Tous les textes indexés sont du domaine public. Le code source est MIT.</p>
+                        <p><strong>Dernière mise à jour</strong> Mai 2026</p>
+                        <p><strong>Contact</strong> aleph@gmfm.dev</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         COMMAND PALETTE
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="command-palette-overlay" id="commandPalette">
+        <div class="command-palette">
+            <input type="text" class="command-palette-input" id="commandInput" placeholder="Chercher textes et termes...">
+            <div class="command-palette-results" id="commandResults">
+                <!-- Populated by JS -->
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <section class="hero">
-    <div class="hero-glyph">א</div>
-    <h1>find the idea across every tradition</h1>
-    <p class="hero-sub">search across 10,000+ texts · concepts · traditions · centuries</p>
-    <div class="search-wrap">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="the sublime · amor fati · negative capability · 無為"
-        autocomplete="off"
-        spellcheck="false"
-      >
-    </div>
-  </section>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://github.com/guilhermegfmachado/aleph" target="_blank">G + H/S/B/L · Naviguer</a>
+            <a href="#" id="openPaletteFooter">/ · Chercher</a>
+            <a href="#" id="toggleFavoritesFooter">★ <span id="favCount">0</span> · Favoris</a>
+        </div>
+        <span class="footer-tagline">Aleph · Catalogue littéraire universel · Trouver l'idée à travers toutes les traditions</span>
+    </footer>
 
-  <section id="results">
-    <p class="results-header" id="resultsHeader"></p>
-    <div class="results-cards" id="resultsCards"></div>
-    <div class="ai-synthesis">
-      <p class="ai-label">CONNEXIONS · synthèse par IA</p>
-      <div class="ai-placeholder" id="aiPlaceholder">
-        <span class="ai-icon">◈</span>
-        <span class="ai-text">synthèse disponible prochainement</span>
-      </div>
-      <!-- ── AI SYNTHESIS ──────────────────────────────────────────
-           TODO: call Anthropic API here when ready
-           Input: query string + top 3 passages from results array
-           Output: replace placeholder with synthesis paragraph
-           Model: claude-sonnet-4-20250514, max_tokens 500
-           Prompt: literary scholar synthesis in French, cite sources
-           See: https://docs.anthropic.com/en/api/messages
-           ────────────────────────────────────────────────────────── -->
-    </div>
-  </section>
-
-  <footer>
-    <span class="footer-left">aleph · catalogue littéraire universel</span>
-    <div class="footer-right">
-      <a href="sources.html">références</a>
-      <a href="https://guilhermegfmachado.github.io/work" target="_blank" rel="noopener">gmfm ↗</a>
-      <a href="https://guilhermegfmachado.github.io/huozi" target="_blank" rel="noopener">活字 ↗</a>
-      <a href="archive/browse.html">archive ↗</a>
-    </div>
-  </footer>
-
-  <script>
-    // ── DATA ─────────────────────────────────────────────────────
-    var manifestData = null;
-    var searchData = null;
-    var manifestEntries = [];
-    var searchEntries = [];
-
-    var TRADITION_FLAGS = {
-      'greek': '🏛', 'latin': '🏛', 'roman': '🏛',
-      'chinese': '🀄', 'confucius': '🀄', 'taoist': '🀄', 'buddhist': '☸',
-      'indian': '🕉', 'hindu': '🕉', 'japanese': '⛩',
-      'french': '🇫🇷', 'german': '🇩🇪', 'english': '🇬🇧',
-      'portuguese': '🇵🇹', 'persian': '🇮🇷', 'arabic': '🌙',
-      'russian': '🇷🇺', 'danish': '🇩🇰', 'norwegian': '🇳🇴',
-      'eu': '🇪🇺', 'international': '🌐', 'american': '🇺🇸'
-    };
-
-    function getFlag(entry) {
-      var combined = ((entry.tags || []).join(' ') + ' ' + (entry.author || '') + ' ' + (entry.category || '')).toLowerCase();
-      for (var key in TRADITION_FLAGS) {
-        if (combined.indexOf(key) !== -1) return TRADITION_FLAGS[key];
-      }
-      var lang = entry.lang || '';
-      var langMap = { zh: '🀄', ja: '⛩', ar: '🌙', de: '🇩🇪', fr: '🇫🇷', pt: '🇵🇹', ru: '🇷🇺' };
-      return langMap[lang] || '';
-    }
-
-    function flattenManifest(manifest) {
-      var entries = [];
-      var corpus = manifest.corpus;
-      for (var cat in corpus) {
-        var docs = corpus[cat].documents || [];
-        for (var i = 0; i < docs.length; i++) {
-          var doc = docs[i];
-          var langs = Object.keys(doc.languages || {});
-          entries.push({
-            id: doc.id, title: doc.title || '',
-            author: doc.author || '', year: doc.year || '',
-            tags: doc.tags || [], lang: langs[0] || 'en', category: cat
-          });
-        }
-      }
-      return entries;
-    }
-
-    function flattenSearchDocs(idx) {
-      var entries = [];
-      var docs = idx.docs || {};
-      for (var id in docs) {
-        var doc = docs[id];
-        var parts = id.split('_');
-        entries.push({
-          id: id, title: doc.title || '', author: doc.author || '',
-          snippet: doc.snippet || '', year: doc.year || '',
-          tags: doc.tags || [], lang: parts[parts.length - 1] || 'en'
-        });
-      }
-      return entries;
-    }
-
-    fetch('data/corpus-manifest.json')
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        manifestData = data;
-        manifestEntries = flattenManifest(data);
-      })
-      .catch(function() {});
-
-    var searchTimeout = new Promise(function(_, reject) {
-      setTimeout(function() { reject(new Error('timeout')); }, 4000);
-    });
-    Promise.race([
-      fetch('data/search-index.json').then(function(r) { return r.json(); }),
-      searchTimeout
-    ])
-      .then(function(data) {
-        searchData = data;
-        searchEntries = flattenSearchDocs(data);
-      })
-      .catch(function() {});
-
-    // ── SEARCH ───────────────────────────────────────────────────
-    function runSearch(query) {
-      query = query.trim();
-      if (!query) return;
-      var tokens = query.toLowerCase().split(/\s+/).filter(function(t) { return t.length > 2; });
-      if (tokens.length === 0) return;
-
-      var entries = searchEntries.length > 0 ? searchEntries : manifestEntries;
-      var scored = [];
-
-      for (var i = 0; i < entries.length; i++) {
-        var entry = entries[i];
-        var titleL = (entry.title || '').toLowerCase();
-        var contentL = ((entry.snippet || '') + ' ' + (entry.tags || []).join(' ')).toLowerCase();
-        var score = 0;
-        for (var j = 0; j < tokens.length; j++) {
-          if (titleL.indexOf(tokens[j]) !== -1) score += 3;
-          if (contentL.indexOf(tokens[j]) !== -1) score += 1;
-        }
-        if (score > 0) scored.push({ entry: entry, score: score });
-      }
-
-      scored.sort(function(a, b) { return b.score - a.score; });
-      var results = scored.slice(0, 5);
-      renderResults(query, tokens, results);
-    }
-
-    function getExcerpt(entry, tokens) {
-      var content = entry.snippet || (entry.tags || []).join(' · ') || entry.title || '';
-      if (!content) return '';
-      var lower = content.toLowerCase();
-      var firstPos = content.length;
-      for (var i = 0; i < tokens.length; i++) {
-        var idx = lower.indexOf(tokens[i]);
-        if (idx !== -1 && idx < firstPos) firstPos = idx;
-      }
-      var start = Math.max(0, firstPos - 80);
-      var end = Math.min(content.length, start + 200);
-      var excerpt = content.slice(start, end);
-      if (start > 0) excerpt = '\u2026' + excerpt;
-      if (end < content.length) excerpt += '\u2026';
-      return excerpt;
-    }
-
-    function escapeHtml(str) {
-      return String(str)
-        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }
-
-    function highlightTokens(text, tokens) {
-      var result = text;
-      for (var i = 0; i < tokens.length; i++) {
-        var re = new RegExp('(' + tokens[i].replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-        result = result.replace(re, '<mark>$1</mark>');
-      }
-      return result;
-    }
-
-    function getTraditionCount(results) {
-      var seen = {};
-      for (var i = 0; i < results.length; i++) {
-        seen[results[i].entry.category || results[i].entry.lang || 'unknown'] = true;
-      }
-      return Object.keys(seen).length;
-    }
-
-    // ── RENDER ───────────────────────────────────────────────────
-    var resultsEl = document.getElementById('results');
-    var headerEl = document.getElementById('resultsHeader');
-    var cardsEl = document.getElementById('resultsCards');
-
-    function renderResults(query, tokens, results) {
-      resultsEl.classList.add('visible');
-      cardsEl.innerHTML = '';
-
-      if (results.length === 0) {
-        headerEl.textContent = '0 passages · ' + query;
-        var noRes = document.createElement('div');
-        noRes.className = 'no-results';
-        noRes.innerHTML = '<p>aucun r\u00e9sultat \u2014 essayez\u00a0:</p><div class="suggestions">' +
-          ['\u006d\u00e9lancolie', 'the sublime', '\u7121\u70BA', 'amor fati'].map(function(s) {
-            return '<button class="suggestion-chip">' + escapeHtml(s) + '</button>';
-          }).join('') + '</div>';
-        noRes.querySelectorAll('.suggestion-chip').forEach(function(btn) {
-          btn.addEventListener('click', function() {
-            document.getElementById('searchInput').value = btn.textContent;
-            runSearch(btn.textContent);
-          });
-        });
-        cardsEl.appendChild(noRes);
-        return;
-      }
-
-      headerEl.textContent = results.length + ' passages \u00b7 ' + getTraditionCount(results) + ' traditions \u00b7 ' + query;
-
-      results.forEach(function(r) {
-        var entry = r.entry;
-        var flag = getFlag(entry);
-        var metaParts = [];
-        if (flag) metaParts.push(flag);
-        if (entry.title) metaParts.push(entry.title.toUpperCase());
-        if (entry.author) metaParts.push(entry.author);
-        if (entry.year) metaParts.push(String(entry.year));
-        if (entry.lang) metaParts.push(entry.lang.toUpperCase());
-
-        var excerpt = getExcerpt(entry, tokens);
-        var highlighted = excerpt ? highlightTokens(escapeHtml(excerpt), tokens) : '';
-        var fullText = escapeHtml(entry.snippet || '');
-
-        var card = document.createElement('div');
-        card.className = 'result-card';
-        card.innerHTML =
-          '<div class="card-meta">' + escapeHtml(metaParts.join(' \u00b7 ')) + '</div>' +
-          '<div class="card-excerpt">' + highlighted + '</div>' +
-          (fullText ? '<button class="card-expand">\u2192 voir le texte complet</button><div class="card-full">' + fullText + '</div>' : '');
-
-        if (fullText) {
-          var btn = card.querySelector('.card-expand');
-          var full = card.querySelector('.card-full');
-          var open = false;
-          btn.addEventListener('click', function() {
-            open = !open;
-            full.classList.toggle('expanded', open);
-            btn.textContent = open ? '\u2191 r\u00e9duire' : '\u2192 voir le texte complet';
-          });
-        }
-
-        cardsEl.appendChild(card);
-      });
-    }
-
-    document.getElementById('searchInput').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') runSearch(this.value);
-    });
-
-    // ── THEME TOGGLE ─────────────────────────────────────────────
-    (function() {
-      var saved = localStorage.getItem('aleph-theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', saved);
-      document.addEventListener('DOMContentLoaded', function() {
-        var btn = document.getElementById('themeToggle');
-        if (!btn) return;
-        btn.textContent = (localStorage.getItem('aleph-theme')||'dark') === 'dark' ? '\u25d1' : '\u25d0';
-        btn.addEventListener('click', function() {
-          var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', next);
-          localStorage.setItem('aleph-theme', next);
-          btn.textContent = next === 'dark' ? '\u25d1' : '\u25d0';
-        });
-      });
-    })();
-  </script>
-
+    <script src="app.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <script>
     (function(){
-      var t=localStorage.getItem('aleph-theme')||'dark';
-      document.documentElement.setAttribute('data-theme',t);
+        var t = localStorage.getItem('aleph-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
     })();
     </script>
     <meta charset="UTF-8">
@@ -12,26 +12,39 @@
     <title>aleph — 404</title>
     <meta name="description" content="Page introuvable.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .notfound { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 1.5rem; }
+        .notfound-code { font-family: var(--mono); font-size: 4rem; color: var(--ink-3); letter-spacing: 0.05em; margin-bottom: 1rem; }
+        .notfound-title { font-family: var(--serif); font-size: 2rem; color: var(--ink); margin-bottom: 0.5rem; }
+        .notfound-text { color: var(--ink-2); margin-bottom: 2rem; font-style: italic; }
+        .notfound-link { font-family: var(--mono); font-size: 0.85rem; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+        .notfound-link:hover { opacity: 0.7; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="index.html" style="text-decoration:none;color:inherit;">א</a></h1>
-            <nav>
-                <a href="index.html">chercher</a>
-                <a href="browse.html">parcourir</a>
-                <a href="glossaire.html">glossaire</a>
-                <a href="sources.html">références</a>
-            </nav>
-        </header>
-        <main style="text-align:center;padding:4rem 0;">
-            <p style="font-size:2rem;margin-bottom:1rem;color:var(--text-muted);">404</p>
-            <p style="color:var(--text-muted);margin-bottom:2rem;">page introuvable</p>
-            <a href="index.html">retour à la bibliothèque</a>
-        </main>
-        <footer><p>in girum imus nocte et consumimur igni</p></footer>
-    </div>
-    <script src="app.js"></script>
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <span class="logo-glyph">א</span>
+            <span class="logo-text">Aleph</span>
+        </a>
+        <nav class="main-nav">
+            <a href="index.html#home">chercher</a>
+            <a href="index.html#browse">parcourir</a>
+            <a href="index.html#glossary">glossaire</a>
+            <a href="index.html#sources">références</a>
+        </nav>
+    </header>
+    <main>
+        <div class="notfound">
+            <div class="notfound-code">404</div>
+            <h1 class="notfound-title">Page introuvable</h1>
+            <p class="notfound-text">in girum imus nocte et consumimur igni</p>
+            <a href="index.html" class="notfound-link">← retour à la bibliothèque</a>
+        </div>
+    </main>
 </body>
 </html>

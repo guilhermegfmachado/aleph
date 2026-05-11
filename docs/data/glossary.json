@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 330
+    "count": 411
   },
   "terms": [
     {
@@ -5828,6 +5828,692 @@
         "Saudade",
         "Toska"
       ]
+    },
+    {
+      "id": "qualia",
+      "term": "Qualia",
+      "lang": "la",
+      "definition": "The subjective, conscious experience of perception — the redness of red, the painfulness of pain. What it is like to experience something. Philosophy of mind's hardest problem: how do neural firings become felt experience? Nagel's bat, Jackson's Mary, Chalmers' zombie all circle this irreducible first-person fact.",
+      "etymology": "Latin plural of quale (of what kind), from qualis",
+      "category": ["philosophy", "neuroscience"],
+      "related": ["Dasein"]
+    },
+    {
+      "id": "umwelt",
+      "term": "Umwelt",
+      "lang": "de",
+      "pronunciation": "OOM-velt",
+      "definition": "The perceptual world of an organism — the slice of reality accessible to its senses and relevant to its survival. A tick's Umwelt is warmth, butyric acid, and hair. A bat's is echolocation. Yours is the narrow band of electromagnetic radiation you call visible light. Jakob von Uexküll's concept: every species lives in its own universe.",
+      "etymology": "German: um (around) + Welt (world)",
+      "category": ["biology", "philosophy"],
+      "related": ["Qualia"]
+    },
+    {
+      "id": "apoptosis",
+      "term": "Apoptosis",
+      "lang": "el",
+      "pronunciation": "ay-pop-TOH-sis",
+      "definition": "Programmed cell death — the cell's elegant suicide for the good of the organism. Distinct from necrosis (traumatic death). Your body kills 50-70 billion cells daily. Without apoptosis: cancer. Too much: neurodegeneration. The word was coined to echo the Greek for leaves falling from trees.",
+      "etymology": "Greek: apo (away) + ptosis (falling)",
+      "category": ["biology", "medicine"]
+    },
+    {
+      "id": "autophagy",
+      "term": "Autophagy",
+      "lang": "el",
+      "pronunciation": "aw-TOFF-uh-jee",
+      "definition": "Cellular self-eating — the recycling system where cells digest their own damaged components. Essential for survival during starvation, for clearing protein aggregates, for longevity. Yoshinori Ohsumi won the 2016 Nobel for working out the machinery. Fasting activates it. Dysfunction causes Parkinson's, Alzheimer's, cancer.",
+      "etymology": "Greek: auto (self) + phagein (to eat)",
+      "category": ["biology", "medicine"]
+    },
+    {
+      "id": "phenotype",
+      "term": "Phenotype",
+      "lang": "el",
+      "definition": "The observable characteristics of an organism — the expression of genotype filtered through environment, development, and chance. Your height, your eye color, your susceptibility to addiction. Dawkins extended it: beaver dams are part of beaver phenotype. Genes reach beyond the body.",
+      "etymology": "Greek: phainein (to show) + typos (type)",
+      "category": ["biology", "genetics"]
+    },
+    {
+      "id": "epistasis",
+      "term": "Epistasis",
+      "lang": "el",
+      "definition": "When the effect of one gene depends on the presence of other genes — genetic interactions that break the simple one-gene-one-trait model. Explains why identical mutations have different effects in different genetic backgrounds. The genome is a network, not a list.",
+      "etymology": "Greek: epi (upon) + stasis (standing)",
+      "category": ["biology", "genetics"]
+    },
+    {
+      "id": "pleiotropy",
+      "term": "Pleiotropy",
+      "lang": "el",
+      "definition": "When a single gene affects multiple, seemingly unrelated traits. The sickle cell gene: one copy protects against malaria, two copies cause anemia. Evolution cannot optimize traits independently because genes are tangled together.",
+      "etymology": "Greek: pleion (more) + tropos (way, turn)",
+      "category": ["biology", "genetics"]
+    },
+    {
+      "id": "homeostasis",
+      "term": "Homeostasis",
+      "lang": "el",
+      "definition": "The tendency of living systems to maintain stable internal conditions — temperature, pH, glucose, everything. Claude Bernard's milieu intérieur. Walter Cannon's wisdom of the body. Not equilibrium but dynamic stability: constant adjustment to stay the same.",
+      "etymology": "Greek: homoios (similar) + stasis (standing still)",
+      "category": ["biology", "systems"]
+    },
+    {
+      "id": "quorum-sensing",
+      "term": "Quorum Sensing",
+      "lang": "en",
+      "definition": "Bacterial communication — microbes release signaling molecules and respond when concentration crosses a threshold, indicating sufficient population density. Collective behavior emerging from individual cells counting their neighbors. Biofilms, bioluminescence, virulence: all coordinated this way. Bacteria vote.",
+      "category": ["biology", "systems"]
+    },
+    {
+      "id": "turing-complete",
+      "term": "Turing Complete",
+      "lang": "en",
+      "definition": "A system capable of simulating any Turing machine — able to compute anything computable, given enough time and memory. Your laptop, JavaScript, Conway's Game of Life, PowerPoint, even Magic: The Gathering. The threshold beyond which all computers are equivalent in power, differing only in speed.",
+      "category": ["computer science", "mathematics"]
+    },
+    {
+      "id": "halting-problem",
+      "term": "Halting Problem",
+      "lang": "en",
+      "definition": "The impossibility of writing a program that determines whether any arbitrary program will halt or run forever. Proved undecidable by Turing in 1936. The first and most fundamental limit of computation. You cannot, in general, predict what programs will do without running them.",
+      "category": ["computer science", "mathematics"]
+    },
+    {
+      "id": "np-complete",
+      "term": "NP-Complete",
+      "lang": "en",
+      "definition": "The class of problems where solutions are easy to verify but (probably) hard to find. If you solve one efficiently, you solve them all. Traveling salesman, satisfiability, scheduling — thousands of practical problems reduce to each other. P=NP? remains open; most believe P≠NP.",
+      "category": ["computer science", "mathematics"]
+    },
+    {
+      "id": "technical-debt",
+      "term": "Technical Debt",
+      "lang": "en",
+      "definition": "The future cost of taking shortcuts now — the interest you pay on expedient code. Coined by Ward Cunningham. Like financial debt: sometimes worth taking, always must be serviced. Unmaintained code accrues debt. Refactoring pays it down. Bankruptcy is the rewrite.",
+      "category": ["computer science", "software"]
+    },
+    {
+      "id": "yak-shaving",
+      "term": "Yak Shaving",
+      "lang": "en",
+      "definition": "The chain of prerequisites that leads you far from your original task. You wanted to deploy, but first you need to update the config, but first you need to fix the script, but first you need to install a library, but first... now you're shaving a yak. Named by Carlin Vieri at MIT.",
+      "category": ["computer science", "culture"]
+    },
+    {
+      "id": "rubber-duck-debugging",
+      "term": "Rubber Duck Debugging",
+      "lang": "en",
+      "definition": "Explaining code line by line to an inanimate object (traditionally a rubber duck) to find bugs. The act of articulation forces clarity. Works because talking is slower than thinking and exposes assumptions. Any patient listener works; the duck need not understand.",
+      "category": ["computer science", "psychology"]
+    },
+    {
+      "id": "cargo-cult-programming",
+      "term": "Cargo Cult Programming",
+      "lang": "en",
+      "definition": "Copying code without understanding why it works — ritual imitation without comprehension. Named after Pacific island cargo cults that built mock airstrips hoping planes would return. Stack Overflow syndrome: copy, paste, pray. Works until it doesn't.",
+      "category": ["computer science", "culture"]
+    },
+    {
+      "id": "chiaroscuro",
+      "term": "Chiaroscuro",
+      "lang": "it",
+      "pronunciation": "kyah-roh-SKOO-roh",
+      "definition": "The dramatic contrast of light and shadow in visual art — used to create volume, depth, and psychological intensity. Caravaggio's specialty. Leonardo theorized it. Rembrandt mastered it. Film noir inherited it. The technique of making darkness visible.",
+      "etymology": "Italian: chiaro (clear, light) + oscuro (dark)",
+      "category": ["art", "technique"]
+    },
+    {
+      "id": "sfumato",
+      "term": "Sfumato",
+      "lang": "it",
+      "pronunciation": "sfoo-MAH-toh",
+      "definition": "The technique of softening outlines and transitions — Leonardo's smoky, hazy effect where edges dissolve into atmosphere. The Mona Lisa's smile exists in sfumato: look directly and it vanishes; look away and it appears. Ambiguity as method.",
+      "etymology": "Italian: sfumare (to evaporate, to shade off)",
+      "category": ["art", "technique"]
+    },
+    {
+      "id": "pentimento",
+      "term": "Pentimento",
+      "lang": "it",
+      "pronunciation": "pen-tee-MEN-toh",
+      "definition": "When earlier painting shows through later layers — the artist's visible change of mind. X-rays reveal hidden compositions beneath finished works. Lillian Hellman's memoir borrowed the term: the past showing through the present. Evidence of revision, of second thoughts.",
+      "etymology": "Italian: pentirsi (to repent)",
+      "category": ["art", "technique"]
+    },
+    {
+      "id": "impasto",
+      "term": "Impasto",
+      "lang": "it",
+      "pronunciation": "im-PAH-stoh",
+      "definition": "Thick, textured application of paint — built up in sculptural layers so brushstrokes and knife marks remain visible. Van Gogh's swirling skies. Rembrandt's jewels. The paint itself becomes subject, not just medium.",
+      "etymology": "Italian: impastare (to knead, to paste)",
+      "category": ["art", "technique"]
+    },
+    {
+      "id": "trompe-loeil",
+      "term": "Trompe-l'œil",
+      "lang": "fr",
+      "pronunciation": "tromp-LOY",
+      "definition": "Art that deceives the eye into seeing three dimensions in two — painted flies you try to swat, open windows that are walls, architectural spaces that don't exist. From Zeuxis painting grapes birds tried to eat. Illusion as virtuosity.",
+      "etymology": "French: tromper (to deceive) + l'œil (the eye)",
+      "category": ["art", "technique"]
+    },
+    {
+      "id": "sprezzatura",
+      "term": "Sprezzatura",
+      "lang": "it",
+      "pronunciation": "spret-tsah-TOO-rah",
+      "definition": "Studied carelessness — the art of making the difficult look effortless. Castiglione's ideal courtier hides all effort, displays nonchalance, suggests natural grace. The deliberate concealment of art by art. Cool.",
+      "etymology": "Italian: sprezzare (to despise, to disdain)",
+      "category": ["aesthetics", "culture"],
+      "related": ["Iki"]
+    },
+    {
+      "id": "memento-mori",
+      "term": "Memento Mori",
+      "lang": "la",
+      "definition": "Remember that you will die. Skulls in paintings, hourglasses, wilting flowers — artistic reminders of mortality. Roman generals had slaves whisper it during triumphs. Stoic exercise. Not morbid but clarifying: death makes life urgent.",
+      "etymology": "Latin: memento (remember) + mori (to die)",
+      "category": ["philosophy", "art"]
+    },
+    {
+      "id": "vanitas",
+      "term": "Vanitas",
+      "lang": "la",
+      "definition": "Vanity of vanities — the art genre depicting transience and the futility of earthly pleasures. Skulls, bubbles, smoke, rotting fruit, extinguished candles. Dutch Golden Age specialty. Ecclesiastes made visual: all is vanity.",
+      "etymology": "Latin: vanitas (emptiness, futility)",
+      "category": ["art", "philosophy"],
+      "related": ["Memento Mori"]
+    },
+    {
+      "id": "carpe-diem",
+      "term": "Carpe Diem",
+      "lang": "la",
+      "definition": "Seize the day. Horace's advice: pluck the moment like fruit before it rots. Not YOLO hedonism but Epicurean prudence — enjoy today because tomorrow is uncertain. The positive twin of memento mori.",
+      "etymology": "Latin: carpere (to pluck, seize) + diem (day)",
+      "category": ["philosophy", "literature"]
+    },
+    {
+      "id": "amor-fati",
+      "term": "Amor Fati",
+      "lang": "la",
+      "definition": "Love of fate — not just accepting what happens but embracing it as necessary and good. Nietzsche's formula for greatness: to want nothing different, not forward, not backward, not in all eternity. Stoic acceptance transformed into affirmation.",
+      "etymology": "Latin: amor (love) + fati (of fate)",
+      "category": ["philosophy"],
+      "related": ["Carpe Diem"]
+    },
+    {
+      "id": "tabula-rasa",
+      "term": "Tabula Rasa",
+      "lang": "la",
+      "definition": "Blank slate — the empiricist thesis that the mind begins empty, all knowledge coming from experience. Locke's attack on innate ideas. Behaviorism's assumption. Now known to be false: we're born with evolved cognitive machinery. But the phrase persists.",
+      "etymology": "Latin: tabula (tablet) + rasa (scraped clean)",
+      "category": ["philosophy", "psychology"]
+    },
+    {
+      "id": "cogito-ergo-sum",
+      "term": "Cogito Ergo Sum",
+      "lang": "la",
+      "definition": "I think, therefore I am. Descartes' foundation after doubting everything — the one certainty that survives universal skepticism. Even if a demon deceives you about reality, you must exist to be deceived. The birth of modern philosophy, for better and worse.",
+      "etymology": "Latin: cogito (I think) + ergo (therefore) + sum (I am)",
+      "category": ["philosophy"]
+    },
+    {
+      "id": "ex-nihilo",
+      "term": "Ex Nihilo",
+      "lang": "la",
+      "definition": "Out of nothing — creation without preexisting material. The theological doctrine that God created the universe from absolute nothingness, not from primordial chaos. Also: Lear's 'nothing will come of nothing.' The opposite of conservation laws.",
+      "etymology": "Latin: ex (out of) + nihilo (nothing)",
+      "category": ["philosophy", "theology"]
+    },
+    {
+      "id": "sui-generis",
+      "term": "Sui Generis",
+      "lang": "la",
+      "definition": "Of its own kind — unique, in a class by itself, defying categorization. Used when something doesn't fit existing taxonomy. Often a lazy placeholder for 'I don't know how to explain this.'",
+      "etymology": "Latin: sui (of itself) + generis (of kind)",
+      "category": ["philosophy", "law"]
+    },
+    {
+      "id": "ad-hominem",
+      "term": "Ad Hominem",
+      "lang": "la",
+      "definition": "To the person — attacking the arguer instead of the argument. A fallacy when used to dismiss claims, but sometimes legitimate: credibility matters, and hypocrites can be called out. The fallacy is thinking 'bad person' implies 'wrong argument.'",
+      "etymology": "Latin: ad (to) + hominem (person)",
+      "category": ["logic", "rhetoric"]
+    },
+    {
+      "id": "reductio-ad-absurdum",
+      "term": "Reductio ad Absurdum",
+      "lang": "la",
+      "definition": "Reduction to absurdity — disproving a proposition by showing it leads to ridiculous or contradictory conclusions. Euclid's method for proving infinity of primes. Socratic irony's structure. If your premises lead to nonsense, your premises are wrong.",
+      "etymology": "Latin: reductio (reduction) + ad (to) + absurdum (absurdity)",
+      "category": ["logic", "mathematics"]
+    },
+    {
+      "id": "modus-ponens",
+      "term": "Modus Ponens",
+      "lang": "la",
+      "definition": "The way of affirming — the fundamental rule of inference: if P implies Q, and P is true, then Q is true. If it rains, the ground gets wet; it's raining; therefore the ground is wet. The workhorse of deductive logic.",
+      "etymology": "Latin: modus (way, method) + ponens (placing, affirming)",
+      "category": ["logic", "mathematics"]
+    },
+    {
+      "id": "modus-tollens",
+      "term": "Modus Tollens",
+      "lang": "la",
+      "definition": "The way of denying — if P implies Q, and Q is false, then P is false. If it rained, the ground would be wet; the ground is dry; therefore it didn't rain. Falsification's logical structure. Popper's criterion of science.",
+      "etymology": "Latin: modus (way) + tollens (removing, denying)",
+      "category": ["logic", "mathematics"]
+    },
+    {
+      "id": "a-priori",
+      "term": "A Priori",
+      "lang": "la",
+      "definition": "From what comes before — knowledge independent of experience. Mathematics, logic, 'all bachelors are unmarried.' Kant's synthetic a priori (space, time, causality) or Quine's denial that the distinction holds. Before you look, you already know.",
+      "etymology": "Latin: a (from) + priori (what is before)",
+      "category": ["philosophy", "epistemology"]
+    },
+    {
+      "id": "a-posteriori",
+      "term": "A Posteriori",
+      "lang": "la",
+      "definition": "From what comes after — knowledge derived from experience. 'Water boils at 100°C,' 'the cat is on the mat.' Empirical knowledge that requires observation. You have to look to know.",
+      "etymology": "Latin: a (from) + posteriori (what is after)",
+      "category": ["philosophy", "epistemology"],
+      "related": ["A Priori"]
+    },
+    {
+      "id": "qed",
+      "term": "Q.E.D.",
+      "lang": "la",
+      "definition": "Quod erat demonstrandum — that which was to be demonstrated. The triumphant conclusion of a proof, signaling the argument is complete. Euclid's mic drop. Now often replaced by a square (∎) or nothing at all.",
+      "etymology": "Latin: quod (which) + erat (was) + demonstrandum (to be demonstrated)",
+      "category": ["mathematics", "logic"]
+    },
+    {
+      "id": "hubris",
+      "term": "Hubris",
+      "lang": "el",
+      "pronunciation": "HYOO-bris",
+      "definition": "Overweening pride that invites divine punishment — the arrogance of mortals who forget their place. Greek tragedy's engine. Icarus flying too high. Oedipus solving every riddle. In modern usage: any excessive confidence. The Greeks knew pride precedes destruction.",
+      "etymology": "Greek: hybris (insolence, outrage)",
+      "category": ["philosophy", "literature"],
+      "related": ["Nemesis"]
+    },
+    {
+      "id": "nemesis",
+      "term": "Nemesis",
+      "lang": "el",
+      "definition": "The goddess of divine retribution — the force that punishes hubris and restores balance. Your nemesis is not just your enemy but your fate, the inevitable consequence of your overreach. Justice personified as destruction.",
+      "etymology": "Greek: nemein (to allot, to distribute what is due)",
+      "category": ["philosophy", "mythology"],
+      "related": ["Hubris"]
+    },
+    {
+      "id": "kairos",
+      "term": "Kairos",
+      "lang": "el",
+      "pronunciation": "KY-ros",
+      "definition": "The opportune moment — time as quality rather than quantity. Not chronos (sequential time) but the right time, the critical instant when action matters. Rhetoric's sense of timing. Surgery's decisive cut. Comedy's beat before the punchline.",
+      "etymology": "Greek: kairos (right moment, opportunity)",
+      "category": ["philosophy", "rhetoric"]
+    },
+    {
+      "id": "eudaimonia",
+      "term": "Eudaimonia",
+      "lang": "el",
+      "pronunciation": "yoo-dy-MOH-nee-ah",
+      "definition": "Human flourishing — not happiness but the good life, the actualization of human potential. Aristotle's highest good: activity of soul in accordance with virtue. Not how you feel but how you live. Mistranslated as 'happiness' but closer to 'thriving.'",
+      "etymology": "Greek: eu (good) + daimon (spirit, divine power)",
+      "category": ["philosophy", "ethics"],
+      "related": ["Arete"]
+    },
+    {
+      "id": "arete",
+      "term": "Areté",
+      "lang": "el",
+      "pronunciation": "ah-reh-TAY",
+      "definition": "Excellence, virtue — being the best at what you are. A knife's areté is sharpness; a horse's is speed; a human's is rational activity done well. Not moral virtue alone but functional excellence. To fulfill your nature superbly.",
+      "etymology": "Greek: from aristos (best)",
+      "category": ["philosophy", "ethics"],
+      "related": ["Eudaimonia"]
+    },
+    {
+      "id": "phronesis",
+      "term": "Phronesis",
+      "lang": "el",
+      "pronunciation": "FROH-nee-sis",
+      "definition": "Practical wisdom — the ability to discern the right action in particular circumstances. Not theoretical knowledge but situational judgment. Aristotle's master virtue: you can't be virtuous without it. Acquired through experience, not taught from books.",
+      "etymology": "Greek: phronein (to think, to have understanding)",
+      "category": ["philosophy", "ethics"]
+    },
+    {
+      "id": "logos",
+      "term": "Logos",
+      "lang": "el",
+      "pronunciation": "LOH-gos",
+      "definition": "Word, reason, rational principle — the ordering force of the cosmos. Heraclitus' universal law. The Stoics' divine reason. John's Gospel: 'In the beginning was the Logos.' Root of every '-ology.' The structure that makes reality intelligible.",
+      "etymology": "Greek: legein (to speak, to gather)",
+      "category": ["philosophy", "theology"]
+    },
+    {
+      "id": "telos",
+      "term": "Telos",
+      "lang": "el",
+      "pronunciation": "TEH-los",
+      "definition": "End, purpose, goal — the final cause that explains why something exists. An acorn's telos is to become an oak. A knife's telos is to cut. Aristotle's question: what is the human telos? Modernity rejected teleology; we're still dealing with the consequences.",
+      "etymology": "Greek: telos (end, completion)",
+      "category": ["philosophy", "biology"]
+    },
+    {
+      "id": "techne",
+      "term": "Techne",
+      "lang": "el",
+      "pronunciation": "TEK-nay",
+      "definition": "Craft, art, skilled making — knowledge embodied in production. Distinct from episteme (theoretical knowledge) and phronesis (practical wisdom). The carpenter's know-how. Root of 'technology' but originally broader: medicine, rhetoric, and shipbuilding were all techne.",
+      "etymology": "Greek: techne (art, craft, skill)",
+      "category": ["philosophy", "art"]
+    },
+    {
+      "id": "catharsis",
+      "term": "Catharsis",
+      "lang": "el",
+      "pronunciation": "kah-THAR-sis",
+      "definition": "Purification, cleansing — Aristotle's explanation of tragedy's effect: through pity and fear, we purge those emotions. Medical metaphor: drama as therapy. Or intellectual clarification: understanding brings relief. The meaning is still debated; the word stuck.",
+      "etymology": "Greek: kathairein (to cleanse)",
+      "category": ["art", "psychology"],
+      "related": ["Mimesis"]
+    },
+    {
+      "id": "mimesis",
+      "term": "Mimesis",
+      "lang": "el",
+      "pronunciation": "mih-MEE-sis",
+      "definition": "Imitation, representation — art's relation to reality. Plato condemned it: copies of copies, twice removed from truth. Aristotle redeemed it: we learn through imitation, and tragedy improves on life. The oldest and most persistent theory of what art does.",
+      "etymology": "Greek: mimeisthai (to imitate)",
+      "category": ["art", "philosophy"],
+      "related": ["Catharsis"]
+    },
+    {
+      "id": "hamartia",
+      "term": "Hamartia",
+      "lang": "el",
+      "pronunciation": "hah-mar-TEE-ah",
+      "definition": "The fatal flaw — or more accurately, the tragic error. Aristotle's term for the hero's mistake that triggers catastrophe. Not a moral failing but a misjudgment. Oedipus' hamartia isn't pride but investigation. The translation as 'flaw' misleads.",
+      "etymology": "Greek: hamartanein (to miss the mark, to err)",
+      "category": ["literature", "philosophy"]
+    },
+    {
+      "id": "anagnorisis",
+      "term": "Anagnorisis",
+      "lang": "el",
+      "pronunciation": "an-ag-NOR-ih-sis",
+      "definition": "Recognition — the moment in tragedy when the hero discovers the truth. Oedipus learning who he is. The reversal from ignorance to knowledge that triggers catastrophe or salvation. Aristotle considered it tragedy's most powerful device.",
+      "etymology": "Greek: anagnorizein (to recognize)",
+      "category": ["literature", "art"],
+      "related": ["Peripeteia"]
+    },
+    {
+      "id": "peripeteia",
+      "term": "Peripeteia",
+      "lang": "el",
+      "pronunciation": "per-ih-peh-TY-ah",
+      "definition": "Reversal of fortune — the turning point where everything changes. Best when combined with anagnorisis: the recognition causes the reversal. The moment the messenger arrives. Plot structure's pivot.",
+      "etymology": "Greek: peri (around) + piptein (to fall)",
+      "category": ["literature", "art"],
+      "related": ["Anagnorisis"]
+    },
+    {
+      "id": "in-medias-res",
+      "term": "In Medias Res",
+      "lang": "la",
+      "definition": "Into the middle of things — beginning a narrative at a crucial point rather than at the beginning. Homer's technique: the Iliad opens in the war's tenth year. Flashbacks fill in context. The reader is dropped into action, hooked before understanding.",
+      "etymology": "Latin: in (into) + medias (middle) + res (things)",
+      "category": ["literature", "technique"]
+    },
+    {
+      "id": "deus-ex-machina",
+      "term": "Deus Ex Machina",
+      "lang": "la",
+      "definition": "God from the machine — an unexpected power or event that solves an unsolvable problem. Named for Greek theater's crane that lowered gods onto stage. Now pejorative: a sign the writer couldn't resolve the plot. Convenient but unsatisfying.",
+      "etymology": "Latin: deus (god) + ex (from) + machina (machine)",
+      "category": ["literature", "art"]
+    },
+    {
+      "id": "mise-en-abyme",
+      "term": "Mise en Abyme",
+      "lang": "fr",
+      "pronunciation": "meez-on-ah-BEEM",
+      "definition": "Placed into abyss — a story within a story, an image containing itself. The Droste effect. Hamlet's play within the play. Velázquez painting himself painting. Infinite regress as artistic device. Self-reference that reveals the nature of representation.",
+      "etymology": "French: mise (putting) + en (in) + abyme (abyss)",
+      "category": ["art", "literature"]
+    },
+    {
+      "id": "recursion",
+      "term": "Recursion",
+      "lang": "en",
+      "definition": "A function that calls itself — the computational technique where a procedure is defined in terms of itself. Factorial: n! = n × (n-1)!. Elegant but dangerous: without base case, infinite loop. Hofstadter's strange loops. To understand recursion, first understand recursion.",
+      "category": ["computer science", "mathematics"],
+      "related": ["Mise en Abyme"]
+    },
+    {
+      "id": "quine",
+      "term": "Quine",
+      "lang": "en",
+      "definition": "A program that outputs its own source code — self-replication in minimal form. Named for logician Willard Van Orman Quine. The computational equivalent of 'this sentence.' Possible in any Turing-complete language. A proof that programs can describe themselves.",
+      "category": ["computer science", "logic"]
+    },
+    {
+      "id": "bikeshedding",
+      "term": "Bikeshedding",
+      "lang": "en",
+      "definition": "Giving disproportionate attention to trivial matters — named by Poul-Henning Kamp after Parkinson's example: a committee approves a nuclear reactor quickly but debates the bike shed for hours. We argue about what we understand. Also known as the law of triviality.",
+      "category": ["computer science", "psychology"]
+    },
+    {
+      "id": "heisenbug",
+      "term": "Heisenbug",
+      "lang": "en",
+      "definition": "A bug that disappears or changes when you try to observe it — named for Heisenberg's uncertainty principle. Adding print statements changes timing. Running in debugger changes memory layout. The act of measurement disturbs the system.",
+      "category": ["computer science"],
+      "related": ["Bohrbug"]
+    },
+    {
+      "id": "bohrbug",
+      "term": "Bohrbug",
+      "lang": "en",
+      "definition": "A bug that is consistent and reproducible — named as contrast to Heisenbug, after Bohr's deterministic atomic model. It manifests reliably under the same conditions. The good kind of bug: you can study it, trap it, fix it.",
+      "category": ["computer science"],
+      "related": ["Heisenbug"]
+    },
+    {
+      "id": "stringly-typed",
+      "term": "Stringly Typed",
+      "lang": "en",
+      "definition": "Code that overuses strings where specific types would be safer — a pun on 'strongly typed.' Passing 'true' instead of true, user IDs as strings instead of typed wrappers, JSON everywhere. Convenient until runtime explodes. The type system can't help you.",
+      "category": ["computer science", "software"]
+    },
+    {
+      "id": "shoshin",
+      "term": "初心 (Shoshin)",
+      "lang": "ja",
+      "pronunciation": "SHOH-shin",
+      "definition": "Beginner's mind — the Zen concept of approaching subjects with openness, eagerness, and lack of preconception, even at advanced levels. Suzuki Roshi: 'In the beginner's mind there are many possibilities, in the expert's mind there are few.' Unknowing as method.",
+      "category": ["philosophy", "Buddhism"]
+    },
+    {
+      "id": "kintsugi",
+      "term": "金継ぎ (Kintsugi)",
+      "lang": "ja",
+      "pronunciation": "kin-TSOO-gee",
+      "definition": "Golden joinery — the Japanese art of repairing broken pottery with gold, making the cracks part of the design rather than disguising them. Damage becomes history. Imperfection becomes beauty. Related to wabi-sabi: the flaw is the feature.",
+      "etymology": "Japanese: kin (gold) + tsugi (joinery)",
+      "category": ["art", "philosophy"],
+      "related": ["Wabi-sabi"]
+    },
+    {
+      "id": "tsundoku",
+      "term": "積ん読 (Tsundoku)",
+      "lang": "ja",
+      "pronunciation": "tsun-DOH-koo",
+      "definition": "Acquiring books and letting them pile up unread. The stack grows; time doesn't. Not hoarding but aspiration: each book is a future self who will read it. A word for the gap between intention and execution.",
+      "etymology": "Japanese: tsunde-oku (pile up and leave) + doku (reading)",
+      "category": ["culture", "psychology"]
+    },
+    {
+      "id": "jugaad",
+      "term": "जुगाड़ (Jugaad)",
+      "lang": "hi",
+      "pronunciation": "joo-GAAD",
+      "definition": "Frugal innovation, improvised solution, making do with what you have. Indian ingenuity under constraint. A truck engine powering irrigation. A mobile phone as flashlight, calculator, and alarm. Necessity as mother of invention. Sometimes admired, sometimes a symptom of infrastructure failure.",
+      "category": ["culture", "innovation"]
+    },
+    {
+      "id": "lagom",
+      "term": "Lagom",
+      "lang": "sv",
+      "pronunciation": "LAH-gom",
+      "definition": "Just enough, in balance, not too much and not too little — the Swedish virtue of moderation. Not mediocrity but optimization. Goldilocks as national character. Applies to portion sizes, work-life balance, social behavior. Enough is exactly right.",
+      "etymology": "Swedish: possibly from 'laget om' (around the team, a fair share)",
+      "category": ["culture", "philosophy"]
+    },
+    {
+      "id": "fika",
+      "term": "Fika",
+      "lang": "sv",
+      "pronunciation": "FEE-ka",
+      "definition": "The Swedish coffee break — but more: a social institution, a pause for connection. Coffee and pastry with friends or colleagues. Not about caffeine but about slowing down. Productivity through doing nothing together.",
+      "category": ["culture", "food"]
+    },
+    {
+      "id": "gezelligheid",
+      "term": "Gezelligheid",
+      "lang": "nl",
+      "pronunciation": "khuh-ZEL-likh-hyte",
+      "definition": "Coziness, conviviality, belonging — the Dutch art of warm togetherness. Friends around a table, candlelight, unhurried conversation. Related to Danish hygge but more social, more about company than comfort. Atmosphere you create together.",
+      "category": ["culture", "emotion"]
+    },
+    {
+      "id": "hysteresis",
+      "term": "Hysteresis",
+      "lang": "el",
+      "pronunciation": "his-ter-EE-sis",
+      "definition": "The dependence of output on history of input — systems that remember their past states. A thermostat that turns on at 68° but off at 72°. Unemployment that persists after recession ends. Magnetization that lags the field. Path dependence made physical.",
+      "etymology": "Greek: hysterein (to come late)",
+      "category": ["physics", "systems"]
+    },
+    {
+      "id": "eigenvalue",
+      "term": "Eigenvalue",
+      "lang": "de",
+      "pronunciation": "EYE-gen-val-yoo",
+      "definition": "Own value — the scalar by which a linear transformation stretches its eigenvector. The special directions that don't rotate, only scale. Principal components in data. Resonant frequencies of systems. Quantum observables. The math is dry; the applications are everywhere.",
+      "etymology": "German: eigen (own, characteristic) + English value",
+      "category": ["mathematics", "physics"]
+    },
+    {
+      "id": "ansatz",
+      "term": "Ansatz",
+      "lang": "de",
+      "pronunciation": "AHN-zahts",
+      "definition": "An educated guess at a solution's form — the starting assumption in mathematical physics before rigorous derivation. 'Assume a spherical cow.' The trial function you substitute and adjust. Not random but informed by physical intuition. Science as structured guessing.",
+      "etymology": "German: ansetzen (to set, to begin)",
+      "category": ["physics", "mathematics"]
+    },
+    {
+      "id": "gedankenexperiment",
+      "term": "Gedankenexperiment",
+      "lang": "de",
+      "pronunciation": "geh-DANK-en-ex-peri-ment",
+      "definition": "Thought experiment — reasoning about hypothetical scenarios to clarify principles. Einstein chasing a light beam. Schrödinger's cat. Maxwell's demon. The trolley problem. Experimentation without apparatus. Physics, philosophy, and ethics all use them.",
+      "etymology": "German: Gedanke (thought) + Experiment (experiment)",
+      "category": ["philosophy", "physics"]
+    },
+    {
+      "id": "sprachgefuhl",
+      "term": "Sprachgefühl",
+      "lang": "de",
+      "pronunciation": "SHPRAHKH-geh-fool",
+      "definition": "Language feeling — the intuitive sense of what sounds right in a language. Native speakers know when grammar is wrong even if they can't explain why. The linguistic ear. What grammar rules try and fail to fully capture.",
+      "etymology": "German: Sprache (language) + Gefühl (feeling)",
+      "category": ["linguistics", "psychology"]
+    },
+    {
+      "id": "fingerspitzengefuhl",
+      "term": "Fingerspitzengefühl",
+      "lang": "de",
+      "pronunciation": "FING-er-shpit-sen-geh-fool",
+      "definition": "Fingertip feeling — intuitive sensitivity, the ability to handle delicate situations with tact. Diplomacy's touch. A surgeon's hands. Knowing exactly how much pressure to apply. Expertise that can't be taught, only developed.",
+      "etymology": "German: Fingerspitzen (fingertips) + Gefühl (feeling)",
+      "category": ["psychology", "skill"]
+    },
+    {
+      "id": "torschlusspanik",
+      "term": "Torschlusspanik",
+      "lang": "de",
+      "pronunciation": "TOR-shloos-pah-nik",
+      "definition": "Gate-closing panic — the fear that time is running out, opportunities are passing. The anxiety as life's doors close. Having children before it's too late. Changing careers at forty. The ticking biological or social clock.",
+      "etymology": "German: Tor (gate) + Schluss (closing) + Panik (panic)",
+      "category": ["psychology", "emotion"]
+    },
+    {
+      "id": "waldeinsamkeit",
+      "term": "Waldeinsamkeit",
+      "lang": "de",
+      "pronunciation": "VALD-ine-zahm-kite",
+      "definition": "Forest solitude — the feeling of being alone in the woods. Romantic German longing for nature. The sublime isolation of trees. Not loneliness but contemplative solitude. Thoreau tried to translate it; Americans still have no equivalent.",
+      "etymology": "German: Wald (forest) + Einsamkeit (solitude)",
+      "category": ["nature", "emotion"]
+    },
+    {
+      "id": "entrainment",
+      "term": "Entrainment",
+      "lang": "en",
+      "definition": "The synchronization of rhythms — when oscillators couple and lock phase. Pendulum clocks on the same wall. Fireflies flashing together. Menstrual cycles in dormitories (maybe). Circadian rhythms to light. Physics explaining why we fall into step.",
+      "category": ["physics", "biology"]
+    },
+    {
+      "id": "emergence",
+      "term": "Emergence",
+      "lang": "en",
+      "definition": "Properties arising from complexity that aren't predictable from components — the whole becoming more than the sum of parts. Wetness from H2O molecules. Consciousness from neurons. Markets from traders. Either profound or confused, depending on who you ask.",
+      "category": ["philosophy", "systems"]
+    },
+    {
+      "id": "satisficing",
+      "term": "Satisficing",
+      "lang": "en",
+      "definition": "Choosing an option that's good enough rather than optimal — Herbert Simon's portmanteau of satisfy and suffice. Bounded rationality: we can't maximize, so we accept the first acceptable choice. Not laziness but realistic. Often better than exhaustive search.",
+      "category": ["psychology", "economics"]
+    },
+    {
+      "id": "akrasia",
+      "term": "Akrasia",
+      "lang": "el",
+      "pronunciation": "ah-KRAH-see-ah",
+      "definition": "Weakness of will — acting against your better judgment. You know you shouldn't, you do it anyway. Plato thought it impossible (no one does wrong knowingly). Aristotle disagreed: passion overwhelms reason. The puzzle persists: how can you freely choose what you know is bad?",
+      "etymology": "Greek: a- (without) + kratos (power, rule)",
+      "category": ["philosophy", "psychology"]
+    },
+    {
+      "id": "aporia",
+      "term": "Aporia",
+      "lang": "el",
+      "pronunciation": "ah-por-EE-ah",
+      "definition": "Impasse, puzzle, perplexity — the state of not knowing where to go. Socratic dialogues end in aporia: the question is sharpened, not answered. Derrida's deconstructive moment. Sometimes the point is to be stuck, to realize the problem is harder than you thought.",
+      "etymology": "Greek: a- (without) + poros (passage, way)",
+      "category": ["philosophy", "rhetoric"]
+    },
+    {
+      "id": "apeiron",
+      "term": "Apeiron",
+      "lang": "el",
+      "pronunciation": "ah-PAY-ron",
+      "definition": "The boundless, the infinite — Anaximander's primordial principle from which everything arises and to which everything returns. Not water or fire but the unlimited itself. The first abstract concept in Western philosophy.",
+      "etymology": "Greek: a- (without) + peras (limit, end)",
+      "category": ["philosophy", "physics"]
     }
   ]
 }

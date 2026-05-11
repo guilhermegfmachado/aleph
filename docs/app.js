@@ -103,6 +103,8 @@ function processCorpus() {
     state.books = [];
     let codeNum = 1;
 
+    const sources = state.corpus.sources || {};
+
     for (const [catKey, category] of Object.entries(state.corpus.corpus)) {
         const type = catKey.includes('legal') ? 'droit'
             : catKey.includes('philosophy') ? 'philosophie'
@@ -113,6 +115,17 @@ function processCorpus() {
 
         (category.documents || []).forEach(doc => {
             const langs = Object.keys(doc.languages || {});
+            const firstLang = langs[0] || 'en';
+            const langData = doc.languages?.[firstLang] || {};
+
+            // Generate URL based on source
+            let url = doc.url || null;
+            if (!url && doc.celex) {
+                url = `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${doc.celex}`;
+            } else if (!url && langData.source && sources[langData.source]) {
+                url = sources[langData.source];
+            }
+
             state.books.push({
                 id: doc.id,
                 code: `AL.${String(codeNum++).padStart(4, '0')}`,
@@ -120,10 +133,11 @@ function processCorpus() {
                 author: doc.author || 'Anonyme',
                 year: doc.year || null,
                 type: type,
-                lang: langs[0] || 'en',
+                lang: firstLang,
                 langs: langs,
                 tags: doc.tags || [],
-                source: category.name
+                source: category.name,
+                url: url
             });
         });
     }
@@ -510,15 +524,15 @@ function renderBooksGrid() {
     if (totalEl) totalEl.textContent = state.books.length;
 
     grid.innerHTML = books.map(b => `
-        <article class="book-card" data-id="${b.id}">
+        <a href="${b.url || '#'}" target="_blank" rel="noopener" class="book-card${b.url ? '' : ' no-link'}" data-id="${b.id}">
             <div class="book-cover" data-lang="${b.lang}">
                 <span class="book-cover-code">${escapeHtml(b.code)}</span>
                 <span class="book-cover-lang">${(LANG_NAMES[b.lang] || b.lang).substring(0, 2).toUpperCase()}</span>
             </div>
             <h3 class="book-title">${escapeHtml(b.title)}</h3>
             <p class="book-author">${escapeHtml(b.author)}</p>
-            <p class="book-meta">${b.year || '—'} · ${b.source || ''}</p>
-        </article>
+            <p class="book-meta">${b.year || '—'}</p>
+        </a>
     `).join('');
 }
 

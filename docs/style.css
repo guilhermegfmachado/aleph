@@ -1519,6 +1519,34 @@ details.sources-section[open] > summary::after {
   .recent-table td {
     padding: 0.5rem;
   }
+
+  .network-container {
+    height: 400px;
+  }
+}
+
+/* Touch-friendly network */
+@media (pointer: coarse) {
+  .network-container {
+    touch-action: none;
+  }
+
+  .network-hint {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    color: var(--ink-3);
+    text-align: center;
+    padding: 0.5rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+@media (pointer: fine) {
+  .network-hint {
+    display: none;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────

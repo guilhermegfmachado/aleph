@@ -941,10 +941,12 @@ function getVisibleNetworkData() {
 }
 
 function nodeRadius(d) {
-    if (d.depth === 0) return 28;
-    if (d.depth === 1) return 14;
-    if (d.depth === 2) return 9;
-    return 5;
+    const isTouch = window.matchMedia('(pointer: coarse)').matches;
+    const scale = isTouch ? 1.5 : 1;
+    if (d.depth === 0) return 28 * scale;
+    if (d.depth === 1) return 14 * scale;
+    if (d.depth === 2) return 9 * scale;
+    return 5 * scale;
 }
 
 function hasNetworkChildren(nodeId) {

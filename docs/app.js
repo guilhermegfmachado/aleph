@@ -647,10 +647,13 @@ function renderGlossaryList() {
         const pron = t.pronunciation ? `/${t.pronunciation}/` : '';
         const etymology = t.etymology ? `<div class="entry-etymology"><strong>Étymologie:</strong> ${escapeHtml(t.etymology)}</div>` : '';
         const usage = t.usage ? `<div class="entry-usage"><strong>Exemple:</strong> <em>${escapeHtml(t.usage)}</em></div>` : '';
-        const related = t.related && t.related.length ? `
+        const validRelated = (t.related || []).filter(r =>
+            state.terms.some(term => term.term.toLowerCase() === r.toLowerCase() || term.id === r.toLowerCase())
+        );
+        const related = validRelated.length ? `
             <div class="entry-related">
                 <strong>Voir aussi:</strong>
-                ${t.related.map(r => `<a href="#" onclick="selectGlossaryTermByName('${escapeHtml(r)}'); return false;">${escapeHtml(r)}</a>`).join(', ')}
+                ${validRelated.map(r => `<a href="#" onclick="selectGlossaryTermByName('${escapeHtml(r)}'); return false;">${escapeHtml(r)}</a>`).join(', ')}
             </div>
         ` : '';
 

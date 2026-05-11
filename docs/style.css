@@ -1407,6 +1407,26 @@ details.sources-section[open] > summary::after {
   color: var(--ink-3);
 }
 
+.footer-tagline a {
+  color: var(--ink-2);
+  border-bottom: 1px dotted var(--ink-3);
+  transition: color 0.15s;
+}
+
+.footer-tagline a:hover {
+  color: var(--accent);
+}
+
+.sources-colophon-inline a {
+  color: var(--ink);
+  border-bottom: 1px dotted var(--ink-3);
+  transition: color 0.15s;
+}
+
+.sources-colophon-inline a:hover {
+  color: var(--accent);
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    RESPONSIVE
    ───────────────────────────────────────────────────────────────────────────── */

@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 244
+    "count": 284
   },
   "terms": [
     {
@@ -253,6 +253,21 @@
       ]
     },
     {
+      "id": "apericena",
+      "term": "Apericena",
+      "lang": "it",
+      "pronunciation": "ah-peh-ree-CHEH-nah",
+      "partOfSpeech": "noun",
+      "definition": "An aperitivo that becomes dinner; extended pre-dinner drinks with enough snacks to skip the meal.",
+      "category": [
+        "food",
+        "social"
+      ],
+      "related": [
+        "Gezelligheid"
+      ]
+    },
+    {
       "id": "apophenia",
       "term": "Apophenia",
       "native": "Apophenie",
@@ -332,6 +347,34 @@
           "text": "Souverän ist, wer über den Ausnahmezustand entscheidet.",
           "source": "Carl Schmitt, Politische Theologie, 1922"
         }
+      ]
+    },
+    {
+      "id": "backpfeifengesicht",
+      "term": "Backpfeifengesicht",
+      "lang": "de",
+      "pronunciation": "BAHK-pfy-fen-geh-zikht",
+      "partOfSpeech": "noun",
+      "definition": "A face in need of a slap; someone whose appearance invites a punch. German precision in describing the punchable.",
+      "category": [
+        "humor",
+        "character"
+      ],
+      "related": []
+    },
+    {
+      "id": "bella-figura",
+      "term": "Bella figura",
+      "lang": "it",
+      "pronunciation": "BEL-lah fee-GOO-rah",
+      "partOfSpeech": "noun",
+      "definition": "Beautiful figure; the art of making a good impression. Appearance, style, and dignity combined.",
+      "category": [
+        "culture",
+        "social"
+      ],
+      "related": [
+        "Sprezzatura"
       ]
     },
     {
@@ -566,6 +609,22 @@
       ]
     },
     {
+      "id": "cianalas",
+      "term": "Cianalas",
+      "lang": "gd",
+      "pronunciation": "KEE-an-al-as",
+      "partOfSpeech": "noun",
+      "definition": "Homesickness mixed with longing for the past; the Gaelic sense of exile from both place and time.",
+      "category": [
+        "emotion",
+        "exile"
+      ],
+      "related": [
+        "Hiraeth",
+        "Sehnsucht"
+      ]
+    },
+    {
       "id": "cogito-ergo-sum",
       "term": "Cogito, ergo sum",
       "lang": "la",
@@ -781,6 +840,19 @@
           "source": "Walter Benjamin, Arcades Project, N2a,3"
         }
       ]
+    },
+    {
+      "id": "dietrologia",
+      "term": "Dietrologia",
+      "lang": "it",
+      "pronunciation": "dee-eh-troh-loh-JEE-ah",
+      "partOfSpeech": "noun",
+      "definition": "The study of what lies behind; the Italian art of finding hidden motives and conspiracies behind every event.",
+      "category": [
+        "culture",
+        "psychology"
+      ],
+      "related": []
     },
     {
       "id": "difc",
@@ -1208,6 +1280,38 @@
       ]
     },
     {
+      "id": "fika",
+      "term": "Fika",
+      "lang": "sv",
+      "pronunciation": "FEE-kah",
+      "partOfSpeech": "noun/verb",
+      "definition": "The Swedish coffee break elevated to cultural institution; taking time to slow down with coffee and pastry.",
+      "category": [
+        "culture",
+        "leisure"
+      ],
+      "related": [
+        "Hygge",
+        "Keyif"
+      ]
+    },
+    {
+      "id": "fingerspitzengefuhl",
+      "term": "Fingerspitzengefühl",
+      "lang": "de",
+      "pronunciation": "FING-er-shpit-sen-geh-fool",
+      "partOfSpeech": "noun",
+      "definition": "Fingertip feeling; instinctive sensitivity and tact. The ability to handle delicate situations with subtlety.",
+      "category": [
+        "character",
+        "social"
+      ],
+      "related": [
+        "Nunchi",
+        "Tact"
+      ]
+    },
+    {
       "id": "fitna",
       "term": "Fitna",
       "native": "فتنة",
@@ -1338,6 +1442,22 @@
       ]
     },
     {
+      "id": "gemutlichkeit",
+      "term": "Gemütlichkeit",
+      "lang": "de",
+      "pronunciation": "geh-MOOT-likh-kite",
+      "partOfSpeech": "noun",
+      "definition": "A state of warmth, friendliness, and good cheer; cozy belonging. The feeling of a good Gasthaus with old friends.",
+      "category": [
+        "well-being",
+        "social"
+      ],
+      "related": [
+        "Hygge",
+        "Gezelligheid"
+      ]
+    },
+    {
       "id": "gesamtkunstwerk",
       "term": "Gesamtkunstwerk",
       "lang": "de",
@@ -1436,6 +1556,39 @@
       ]
     },
     {
+      "id": "gurbet",
+      "term": "Gurbet",
+      "lang": "tr",
+      "pronunciation": "goor-BET",
+      "partOfSpeech": "noun",
+      "definition": "Being in a foreign land; the state of exile or living away from home. Both the place and the feeling of displacement.",
+      "etymology": "From Arabic ghurba",
+      "category": [
+        "exile",
+        "emotion"
+      ],
+      "related": [
+        "Fernweh",
+        "Hiraeth"
+      ]
+    },
+    {
+      "id": "gonul",
+      "term": "Gönül",
+      "lang": "tr",
+      "pronunciation": "guh-NOOL",
+      "partOfSpeech": "noun",
+      "definition": "The heart as seat of emotion and desire; deeper than kalp (physical heart). Where love, longing, and spiritual feeling reside.",
+      "category": [
+        "emotion",
+        "spirituality"
+      ],
+      "related": [
+        "Kokoro",
+        "Thumos"
+      ]
+    },
+    {
       "id": "habitus",
       "term": "Habitus",
       "native": "habitus",
@@ -1474,6 +1627,69 @@
       "related": [
         "aletheia",
         "logos"
+      ]
+    },
+    {
+      "id": "handschuhschneeballwerfer",
+      "term": "Handschuhschneeballwerfer",
+      "lang": "de",
+      "pronunciation": "HANT-shoo-shnay-bahl-vair-fer",
+      "partOfSpeech": "noun",
+      "definition": "Someone who wears gloves to throw snowballs; a coward who criticizes from safety.",
+      "category": [
+        "character",
+        "criticism"
+      ],
+      "related": []
+    },
+    {
+      "id": "hasret",
+      "term": "Hasret",
+      "lang": "tr",
+      "pronunciation": "hahs-RET",
+      "partOfSpeech": "noun",
+      "definition": "Deep longing for someone or something absent; an ache of separation that is almost physical. The Turkish heart's way of keeping love alive across distance.",
+      "category": [
+        "emotion",
+        "love"
+      ],
+      "related": [
+        "Sehnsucht",
+        "Tęsknota",
+        "Hiraeth"
+      ]
+    },
+    {
+      "id": "heimat",
+      "term": "Heimat",
+      "lang": "de",
+      "pronunciation": "HY-maht",
+      "partOfSpeech": "noun",
+      "definition": "Homeland in the deepest sense; not just birthplace but the landscape, culture, and community that shape one's identity. Where the soul feels at home.",
+      "category": [
+        "place",
+        "identity"
+      ],
+      "related": [
+        "Furusato",
+        "Hiraeth"
+      ]
+    },
+    {
+      "id": "hiraeth",
+      "term": "Hiraeth",
+      "lang": "cy",
+      "pronunciation": "HEER-eyeth",
+      "partOfSpeech": "noun",
+      "definition": "A deep longing for home, especially a home you cannot return to or that never was. The Welsh ache for the lost homeland of the soul.",
+      "category": [
+        "emotion",
+        "place"
+      ],
+      "related": [
+        "Sehnsucht",
+        "Toska",
+        "Tęsknota"
       ]
     },
     {
@@ -1734,6 +1950,21 @@
       ]
     },
     {
+      "id": "kalsarikannit",
+      "term": "Kalsarikännit",
+      "lang": "fi",
+      "pronunciation": "KAL-sah-ree-kahn-nit",
+      "partOfSpeech": "noun",
+      "definition": "Drinking at home alone in your underwear with no intention of going out. Finnish honest self-care.",
+      "category": [
+        "leisure",
+        "humor"
+      ],
+      "related": [
+        "Hygge"
+      ]
+    },
+    {
       "id": "katechon",
       "term": "Katechon",
       "native": "κατέχον",
@@ -1768,6 +1999,22 @@
         "fana",
         "via-negativa",
         "aporia"
+      ]
+    },
+    {
+      "id": "keyif",
+      "term": "Keyif",
+      "lang": "tr",
+      "pronunciation": "kay-YEEF",
+      "partOfSpeech": "noun",
+      "definition": "A state of blissful relaxation; the pleasure of doing nothing in particular while enjoying tea, conversation, or simply being. Turkish dolce far niente.",
+      "category": [
+        "leisure",
+        "well-being"
+      ],
+      "related": [
+        "Dolce far niente",
+        "Hygge"
       ]
     },
     {
@@ -2008,6 +2255,21 @@
       ]
     },
     {
+      "id": "litost",
+      "term": "Lítost",
+      "lang": "cs",
+      "pronunciation": "LEE-tost",
+      "partOfSpeech": "noun",
+      "definition": "A state of torment created by the sudden sight of one's own misery. Kundera's untranslatable Czech concept.",
+      "category": [
+        "emotion"
+      ],
+      "related": [
+        "Toska",
+        "Żal"
+      ]
+    },
+    {
       "id": "li-ritual",
       "term": "Lǐ",
       "native": "禮",
@@ -2022,6 +2284,21 @@
         "mos-maiorum",
         "adab",
         "bildung"
+      ]
+    },
+    {
+      "id": "magari",
+      "term": "Magari",
+      "lang": "it",
+      "pronunciation": "mah-GAH-ree",
+      "partOfSpeech": "exclamation",
+      "definition": "'If only' or 'I wish'; expresses longing, hope, or acceptance. The Italian shrug of optimistic resignation.",
+      "category": [
+        "language",
+        "emotion"
+      ],
+      "related": [
+        "Shōganai"
       ]
     },
     {
@@ -2101,6 +2378,21 @@
       ],
       "related": [
         "Ataraxia"
+      ]
+    },
+    {
+      "id": "merak-tr",
+      "term": "Merak",
+      "lang": "tr",
+      "pronunciation": "meh-RAHK",
+      "partOfSpeech": "noun",
+      "definition": "Passionate interest or curiosity; also worry or concern for someone. The Turkish word captures both the light of fascination and the weight of caring.",
+      "category": [
+        "emotion",
+        "curiosity"
+      ],
+      "related": [
+        "Meraki"
       ]
     },
     {
@@ -2449,6 +2741,19 @@
       ]
     },
     {
+      "id": "porca-miseria",
+      "term": "Porca miseria",
+      "lang": "it",
+      "pronunciation": "POR-kah mee-ZEH-ree-ah",
+      "partOfSpeech": "exclamation",
+      "definition": "Pig misery! A versatile Italian expletive expressing frustration, disbelief, or reluctant admiration.",
+      "category": [
+        "language",
+        "emotion"
+      ],
+      "related": []
+    },
+    {
       "id": "poshlost",
       "term": "Poshlost'",
       "native": "пошлость",
@@ -2736,6 +3041,19 @@
       "usage": "Nietzsche analyzed Schadenfreude as a manifestation of ressentiment."
     },
     {
+      "id": "schnapsidee",
+      "term": "Schnapsidee",
+      "lang": "de",
+      "pronunciation": "SHNAHPS-ee-day",
+      "partOfSpeech": "noun",
+      "definition": "A schnapps idea; a plan conceived while drunk that seems brilliant but is foolish.",
+      "category": [
+        "humor",
+        "ideas"
+      ],
+      "related": []
+    },
+    {
       "id": "sic",
       "term": "Sic",
       "lang": "la",
@@ -2761,6 +3079,36 @@
       "related": [
         "flaneur",
         "kitsch"
+      ]
+    },
+    {
+      "id": "sisu",
+      "term": "Sisu",
+      "lang": "fi",
+      "pronunciation": "SEE-soo",
+      "partOfSpeech": "noun",
+      "definition": "Extraordinary determination and courage in adversity; Finnish grit. The strength to keep going when all seems lost.",
+      "category": [
+        "character"
+      ],
+      "related": [
+        "Gaman",
+        "Inat"
+      ]
+    },
+    {
+      "id": "sitzfleisch",
+      "term": "Sitzfleisch",
+      "lang": "de",
+      "pronunciation": "ZITS-flysh",
+      "partOfSpeech": "noun",
+      "definition": "Sitting flesh; the ability to sit through tedious tasks with endurance. Buttocks as metaphor for patience.",
+      "category": [
+        "character",
+        "work"
+      ],
+      "related": [
+        "Gaman"
       ]
     },
     {
@@ -2834,6 +3182,22 @@
       "usage": "Castiglione advocated sprezzatura as essential to the perfect courtier.",
       "sources": [
         "Castiglione - Il Libro del Cortegiano"
+      ]
+    },
+    {
+      "id": "struggimento",
+      "term": "Struggimento",
+      "lang": "it",
+      "pronunciation": "stroo-jee-MEN-toh",
+      "partOfSpeech": "noun",
+      "definition": "The sensation of melting or being consumed by emotion, especially longing. An almost physical dissolution of self.",
+      "category": [
+        "emotion",
+        "love"
+      ],
+      "related": [
+        "Sehnsucht",
+        "Hasret"
       ]
     },
     {
@@ -3559,6 +3923,21 @@
       ]
     },
     {
+      "id": "yakamoz",
+      "term": "Yakamoz",
+      "lang": "tr",
+      "pronunciation": "yah-kah-MOZ",
+      "partOfSpeech": "noun",
+      "definition": "The reflection of moonlight on water; the shimmering path the moon makes on the sea at night.",
+      "category": [
+        "nature",
+        "aesthetics"
+      ],
+      "related": [
+        "Komorebi"
+      ]
+    },
+    {
       "id": "zeitgeist",
       "term": "Zeitgeist",
       "lang": "de",
@@ -3808,6 +4187,19 @@
       ]
     },
     {
+      "id": "kamaki",
+      "term": "Καμάκι (Kamaki)",
+      "lang": "el",
+      "pronunciation": "kah-MAH-kee",
+      "partOfSpeech": "noun",
+      "definition": "Harpoon; Greek slang for men who pursue tourists romantically. A summer coastal phenomenon.",
+      "category": [
+        "culture",
+        "humor"
+      ],
+      "related": []
+    },
+    {
       "id": "kleos",
       "term": "Κλέος (Kléos)",
       "lang": "el",
@@ -3828,6 +4220,21 @@
       "usage": "Achilles chose a short life with kleos over a long life in obscurity.",
       "sources": [
         "Homer - Iliad"
+      ]
+    },
+    {
+      "id": "levendia",
+      "term": "Λεβεντιά (Levendia)",
+      "lang": "el",
+      "pronunciation": "leh-ven-dee-AH",
+      "partOfSpeech": "noun",
+      "definition": "Bravery, gallantry, and manly virtue; courage with style and honor.",
+      "category": [
+        "character"
+      ],
+      "related": [
+        "Filotimo",
+        "Thumos"
       ]
     },
     {
@@ -3864,6 +4271,54 @@
       "related": [
         "Sprezzatura",
         "Kaizen"
+      ]
+    },
+    {
+      "id": "xenitia",
+      "term": "Ξενιτιά (Xenitia)",
+      "lang": "el",
+      "pronunciation": "kseh-nee-tee-AH",
+      "partOfSpeech": "noun",
+      "definition": "The state of being in a foreign land; the Greek experience of emigration and the longing it creates.",
+      "category": [
+        "exile",
+        "emotion"
+      ],
+      "related": [
+        "Gurbet",
+        "Hiraeth"
+      ]
+    },
+    {
+      "id": "parea",
+      "term": "Παρέα (Parea)",
+      "lang": "el",
+      "pronunciation": "pah-REH-ah",
+      "partOfSpeech": "noun",
+      "definition": "A group of friends who gather regularly to share life; the essential Greek social unit beyond family.",
+      "category": [
+        "social",
+        "culture"
+      ],
+      "related": [
+        "Gezelligheid",
+        "Gemütlichkeit"
+      ]
+    },
+    {
+      "id": "parakmi",
+      "term": "Παρακμή (Parakmi)",
+      "lang": "el",
+      "pronunciation": "pah-rahk-MEE",
+      "partOfSpeech": "noun",
+      "definition": "Decline, decadence; the melancholy awareness of past glory fading.",
+      "category": [
+        "time",
+        "culture"
+      ],
+      "related": [
+        "Mono no aware",
+        "Hüzün"
       ]
     },
     {
@@ -3937,6 +4392,35 @@
       "usage": "Philotimo encompasses personal honor and obligation to family and community."
     },
     {
+      "id": "avos",
+      "term": "Авось (Avos')",
+      "lang": "ru",
+      "pronunciation": "ah-VOHS",
+      "partOfSpeech": "particle",
+      "definition": "'Maybe it'll work out'; blind trust in fate. Reckless optimism without planning.",
+      "category": [
+        "culture",
+        "philosophy"
+      ],
+      "related": [
+        "Shōganai"
+      ]
+    },
+    {
+      "id": "bytie",
+      "term": "Бытие (Bytie)",
+      "lang": "ru",
+      "pronunciation": "bih-tee-YEH",
+      "partOfSpeech": "noun",
+      "definition": "Being, existence in the philosophical sense; the Russian word for the totality of existence.",
+      "category": [
+        "philosophy"
+      ],
+      "related": [
+        "Dasein"
+      ]
+    },
+    {
       "id": "inat",
       "term": "Инат (Inat)",
       "lang": "bg",
@@ -3966,6 +4450,21 @@
       "related": [
         "Lagom",
         "Sophrosyne"
+      ]
+    },
+    {
+      "id": "nadryv",
+      "term": "Надрыв (Nadryv)",
+      "lang": "ru",
+      "pronunciation": "nahd-RIHV",
+      "partOfSpeech": "noun",
+      "definition": "A spiritual strain pushed to breaking point; the Dostoevskian state of intense feeling that tears the soul.",
+      "category": [
+        "emotion",
+        "literature"
+      ],
+      "related": [
+        "Toska"
       ]
     },
     {
@@ -4075,6 +4574,22 @@
       ]
     },
     {
+      "id": "omotenashi",
+      "term": "おもてなし (Omotenashi)",
+      "lang": "ja",
+      "pronunciation": "oh-moh-teh-nah-shee",
+      "partOfSpeech": "noun",
+      "definition": "Selfless hospitality; anticipating guests' needs without expecting anything in return. Service as an art form.",
+      "category": [
+        "culture",
+        "ethics"
+      ],
+      "related": [
+        "Philoxenia",
+        "Caritas"
+      ]
+    },
+    {
       "id": "shoganai",
       "term": "しょうがない (Shōganai)",
       "lang": "ja",
@@ -4089,6 +4604,19 @@
         "Amor fati",
         "Wu wei"
       ]
+    },
+    {
+      "id": "mottainai",
+      "term": "もったいない (Mottainai)",
+      "lang": "ja",
+      "pronunciation": "moht-tai-nai",
+      "partOfSpeech": "expression",
+      "definition": "What a waste! The sense that wasting anything—food, time, potential—is a shame. A Japanese environmental ethic.",
+      "category": [
+        "ethics",
+        "sustainability"
+      ],
+      "related": []
     },
     {
       "id": "wabi-sabi",
@@ -4127,6 +4655,22 @@
       "related": [
         "kabushiki-kaisha",
         "llc"
+      ]
+    },
+    {
+      "id": "aware",
+      "term": "哀れ (Aware)",
+      "lang": "ja",
+      "pronunciation": "ah-wah-reh",
+      "partOfSpeech": "noun",
+      "definition": "The bittersweet awareness of impermanence; a gentle sadness at the passing of things. The root of mono no aware.",
+      "category": [
+        "aesthetics",
+        "emotion"
+      ],
+      "related": [
+        "Mono no aware",
+        "Mujo"
       ]
     },
     {
@@ -4171,6 +4715,22 @@
         "De"
       ],
       "usage": "The concept of tianming legitimized dynastic transitions throughout Chinese history."
+    },
+    {
+      "id": "kokoro",
+      "term": "心 (Kokoro)",
+      "lang": "ja",
+      "pronunciation": "koh-koh-roh",
+      "partOfSpeech": "noun",
+      "definition": "Heart, mind, and spirit as one; the seat of emotion and consciousness. Where feeling and thinking are not separate.",
+      "category": [
+        "philosophy",
+        "emotion"
+      ],
+      "related": [
+        "Gönül",
+        "Thumos"
+      ]
     },
     {
       "id": "natsukashii",
@@ -4219,6 +4779,22 @@
       "related": [
         "Meraki",
         "Ikigai"
+      ]
+    },
+    {
+      "id": "furusato",
+      "term": "故郷 (Furusato)",
+      "lang": "ja",
+      "pronunciation": "foo-roo-sah-toh",
+      "partOfSpeech": "noun",
+      "definition": "Hometown; ancestral home. More than geography—the place of origin that shapes identity, often idealized in memory.",
+      "category": [
+        "place",
+        "identity"
+      ],
+      "related": [
+        "Hiraeth",
+        "Heimat"
       ]
     },
     {
@@ -4297,6 +4873,22 @@
       ]
     },
     {
+      "id": "ukiyo",
+      "term": "浮世 (Ukiyo)",
+      "lang": "ja",
+      "pronunciation": "oo-kee-yoh",
+      "partOfSpeech": "noun",
+      "definition": "The floating world; originally Buddhist term for earthly sorrows, later the pleasure quarters and ephemeral urban delights of Edo Japan.",
+      "category": [
+        "culture",
+        "philosophy"
+      ],
+      "related": [
+        "Mono no aware",
+        "Carpe diem"
+      ]
+    },
+    {
       "id": "wu-wei",
       "term": "無為 (Wú wéi)",
       "lang": "zh",
@@ -4360,6 +4952,20 @@
         "Shōganai"
       ],
       "usage": "Finding one's ikigai is associated with longevity and well-being in Japanese culture."
+    },
+    {
+      "id": "majime",
+      "term": "真面目 (Majime)",
+      "lang": "ja",
+      "pronunciation": "mah-jee-meh",
+      "partOfSpeech": "adjective",
+      "definition": "Earnest, serious, diligent; someone who takes responsibilities seriously. A core Japanese virtue.",
+      "category": [
+        "character"
+      ],
+      "related": [
+        "Gaman"
+      ]
     },
     {
       "id": "tsundoku",

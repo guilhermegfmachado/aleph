@@ -685,16 +685,41 @@ function selectGlossaryTerm(id) {
     // Update specimen pane
     const specimenTerm = document.getElementById('specimenTerm');
     const specimenMeta = document.getElementById('specimenMeta');
+    const specimenDefinition = document.getElementById('specimenDefinition');
+    const specimenEtymology = document.getElementById('specimenEtymology');
+    const specimenUsage = document.getElementById('specimenUsage');
+    const specimenRelated = document.getElementById('specimenRelated');
     const specimenRelatedList = document.getElementById('specimenRelatedList');
 
     if (specimenTerm) specimenTerm.textContent = term.term;
 
     if (specimenMeta) {
         const cats = Array.isArray(term.category) ? term.category : [term.category || ''];
+        const pron = term.pronunciation ? `<span class="specimen-pronunciation">/${term.pronunciation}/</span>` : '';
         specimenMeta.innerHTML = `
             <span class="specimen-tag lang">${LANG_NAMES[term.lang] || term.lang}</span>
             ${cats.map(c => `<span class="specimen-tag">${escapeHtml(c)}</span>`).join('')}
+            ${pron}
         `;
+    }
+
+    if (specimenDefinition) {
+        specimenDefinition.textContent = term.definition || '';
+        specimenDefinition.style.display = term.definition ? 'block' : 'none';
+    }
+
+    if (specimenEtymology) {
+        specimenEtymology.innerHTML = term.etymology ? `<strong>Étymologie:</strong> ${escapeHtml(term.etymology)}` : '';
+        specimenEtymology.style.display = term.etymology ? 'block' : 'none';
+    }
+
+    if (specimenUsage) {
+        specimenUsage.innerHTML = term.usage ? `<strong>Exemple:</strong> <em>${escapeHtml(term.usage)}</em>` : '';
+        specimenUsage.style.display = term.usage ? 'block' : 'none';
+    }
+
+    if (specimenRelated) {
+        specimenRelated.style.display = term.related && term.related.length ? 'block' : 'none';
     }
 
     if (specimenRelatedList && term.related) {

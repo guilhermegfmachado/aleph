@@ -962,6 +962,47 @@ main {
   color: var(--ink);
 }
 
+.specimen-pronunciation {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.specimen-definition {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+.specimen-etymology,
+.specimen-usage {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-bottom: 1rem;
+}
+
+.specimen-etymology strong,
+.specimen-usage strong {
+  font-weight: 500;
+  color: var(--ink);
+  display: block;
+  font-size: 0.6875rem;
+  font-family: var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.specimen-usage em {
+  font-style: italic;
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    SOURCES PAGE
    ───────────────────────────────────────────────────────────────────────────── */

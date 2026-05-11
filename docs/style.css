@@ -868,6 +868,7 @@ main {
   background: var(--paper-2);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .specimen-close {

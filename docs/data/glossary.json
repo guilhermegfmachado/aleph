@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 284
+    "count": 330
   },
   "terms": [
     {
@@ -201,6 +201,22 @@
       "sources": [
         "Nietzsche - Ecce Homo",
         "Stoic philosophers"
+      ]
+    },
+    {
+      "id": "an-phan",
+      "term": "An phận",
+      "lang": "vi",
+      "pronunciation": "ahn FUHN",
+      "partOfSpeech": "noun",
+      "definition": "Contentment with one's lot; accepting one's fate with peace rather than striving for more.",
+      "category": [
+        "philosophy",
+        "acceptance"
+      ],
+      "related": [
+        "Shōganai",
+        "Amor fati"
       ]
     },
     {
@@ -994,6 +1010,22 @@
       ]
     },
     {
+      "id": "duyên",
+      "term": "Duyên",
+      "lang": "vi",
+      "pronunciation": "yoo-EN",
+      "partOfSpeech": "noun",
+      "definition": "Fate that brings people together; predestined affinity. Also charm or grace. From Buddhist 'dependent origination.'",
+      "category": [
+        "fate",
+        "relationships"
+      ],
+      "related": [
+        "Karma",
+        "Yuanfen"
+      ]
+    },
+    {
       "id": "ecli",
       "term": "ECLI",
       "native": "European Case Law Identifier",
@@ -1630,6 +1662,22 @@
       ]
     },
     {
+      "id": "hakuna-matata",
+      "term": "Hakuna matata",
+      "lang": "sw",
+      "pronunciation": "hah-KOO-nah mah-TAH-tah",
+      "partOfSpeech": "expression",
+      "definition": "'No worries'; there are no problems. Popularized globally but genuinely captures Swahili equanimity.",
+      "category": [
+        "philosophy",
+        "attitude"
+      ],
+      "related": [
+        "Shōganai",
+        "Sabai"
+      ]
+    },
+    {
       "id": "handschuhschneeballwerfer",
       "term": "Handschuhschneeballwerfer",
       "lang": "de",
@@ -1641,6 +1689,21 @@
         "criticism"
       ],
       "related": []
+    },
+    {
+      "id": "harambee",
+      "term": "Harambee",
+      "lang": "sw",
+      "pronunciation": "hah-rahm-BEH",
+      "partOfSpeech": "noun/exclamation",
+      "definition": "'All pull together'; communal self-help and unity. Kenya's national motto—collective effort for common good.",
+      "category": [
+        "culture",
+        "community"
+      ],
+      "related": [
+        "Ubuntu"
+      ]
     },
     {
       "id": "hasret",
@@ -1817,6 +1880,19 @@
       ]
     },
     {
+      "id": "indaba",
+      "term": "Indaba",
+      "lang": "zu",
+      "pronunciation": "in-DAH-bah",
+      "partOfSpeech": "noun",
+      "definition": "A meeting or conference; important discussion where all voices are heard. Traditional African consensus-building.",
+      "category": [
+        "culture",
+        "governance"
+      ],
+      "related": []
+    },
+    {
       "id": "innere-emigration",
       "term": "Innere Emigration",
       "lang": "de",
@@ -1871,6 +1947,37 @@
           "text": "All ideology hails or interpellates concrete individuals as concrete subjects.",
           "source": "Louis Althusser, Lenin and Philosophy, 1970"
         }
+      ]
+    },
+    {
+      "id": "intlonipho",
+      "term": "Intlonipho",
+      "lang": "xh",
+      "pronunciation": "in-tlon-EE-poh",
+      "partOfSpeech": "noun",
+      "definition": "Respect; deep reverence especially for elders and tradition. Foundation of Xhosa social harmony.",
+      "category": [
+        "ethics",
+        "culture"
+      ],
+      "related": [
+        "Ubuntu",
+        "Pietas"
+      ]
+    },
+    {
+      "id": "isithunzi",
+      "term": "Isithunzi",
+      "lang": "zu",
+      "pronunciation": "ee-see-TOON-zee",
+      "partOfSpeech": "noun",
+      "definition": "Shadow, shade; also dignity, presence, gravitas. The weight of personhood one carries.",
+      "category": [
+        "character",
+        "identity"
+      ],
+      "related": [
+        "Filotimo"
       ]
     },
     {
@@ -2609,6 +2716,22 @@
       ]
     },
     {
+      "id": "ori",
+      "term": "Orí",
+      "lang": "yo",
+      "pronunciation": "oh-REE",
+      "partOfSpeech": "noun",
+      "definition": "Head; also one's personal destiny and inner consciousness. Each person's ori chose their fate before birth.",
+      "category": [
+        "spirituality",
+        "identity"
+      ],
+      "related": [
+        "Karma",
+        "Daimon"
+      ]
+    },
+    {
       "id": "ostranenie",
       "term": "Ostranenie",
       "native": "остранение",
@@ -2738,6 +2861,22 @@
         "auctoritas",
         "imperium",
         "staatsraison"
+      ]
+    },
+    {
+      "id": "pole-pole",
+      "term": "Pole pole",
+      "lang": "sw",
+      "pronunciation": "POH-leh POH-leh",
+      "partOfSpeech": "adverb",
+      "definition": "Slowly, slowly; gently does it. The East African philosophy of patience and taking one's time.",
+      "category": [
+        "philosophy",
+        "time"
+      ],
+      "related": [
+        "Sabai",
+        "Keyif"
       ]
     },
     {
@@ -3020,6 +3159,22 @@
         "aporia",
         "mushin",
         "aletheia"
+      ]
+    },
+    {
+      "id": "sawubona",
+      "term": "Sawubona",
+      "lang": "zu",
+      "pronunciation": "sah-woo-BOH-nah",
+      "partOfSpeech": "greeting",
+      "definition": "'I see you'; the Zulu greeting that acknowledges someone's full presence and humanity. Response: Ngikhona (I am here).",
+      "category": [
+        "culture",
+        "social"
+      ],
+      "related": [
+        "Ubuntu",
+        "Namaste"
       ]
     },
     {
@@ -3358,6 +3513,22 @@
       ]
     },
     {
+      "id": "thuong",
+      "term": "Thương",
+      "lang": "vi",
+      "pronunciation": "too-UHNG",
+      "partOfSpeech": "verb/noun",
+      "definition": "To love with tenderness and pity; affection mixed with compassion. Deeper than yêu (romantic love).",
+      "category": [
+        "emotion",
+        "love"
+      ],
+      "related": [
+        "Karuna",
+        "Agape"
+      ]
+    },
+    {
       "id": "tikkun-olam",
       "term": "Tikkun olam",
       "native": "תיקון עולם",
@@ -3502,6 +3673,19 @@
       "usage": "Depretis institutionalized trasformismo, blurring left-right distinctions."
     },
     {
+      "id": "troi-oi",
+      "term": "Trời ơi",
+      "lang": "vi",
+      "pronunciation": "CHOY uh-ee",
+      "partOfSpeech": "exclamation",
+      "definition": "'Oh heavens!' An all-purpose exclamation of surprise, dismay, or exasperation. The Vietnamese sigh.",
+      "category": [
+        "language",
+        "emotion"
+      ],
+      "related": []
+    },
+    {
       "id": "tyche",
       "term": "Tychē",
       "native": "Τύχη",
@@ -3520,6 +3704,21 @@
         "kairos",
         "nemesis",
         "hamartia"
+      ]
+    },
+    {
+      "id": "tinh-cam",
+      "term": "Tình cảm",
+      "lang": "vi",
+      "pronunciation": "ting KAHM",
+      "partOfSpeech": "noun",
+      "definition": "Deep feelings; affection and emotional bonds between people. The Vietnamese emphasis on heartfelt connection.",
+      "category": [
+        "emotion",
+        "social"
+      ],
+      "related": [
+        "Jeong"
       ]
     },
     {
@@ -3600,6 +3799,22 @@
         "ubuntu",
         "gemeinschaft",
         "sobornist"
+      ]
+    },
+    {
+      "id": "umoya",
+      "term": "Umoya",
+      "lang": "zu",
+      "pronunciation": "oo-MOH-yah",
+      "partOfSpeech": "noun",
+      "definition": "Spirit, breath, wind; the life force and spiritual essence. Similar to prana or pneuma.",
+      "category": [
+        "spirituality"
+      ],
+      "related": [
+        "Prana",
+        "Pneuma",
+        "Qi"
       ]
     },
     {
@@ -3684,6 +3899,22 @@
           "text": "Das Kapital kommt mit Blut und Schmutz aus allen Poren, von Kopf bis Zehen.",
           "source": "Karl Marx, Das Kapital, Bd. I, Kap. 24, 1867"
         }
+      ]
+    },
+    {
+      "id": "ubuntu-sw",
+      "term": "Utu",
+      "lang": "sw",
+      "pronunciation": "OO-too",
+      "partOfSpeech": "noun",
+      "definition": "Humanness; the Swahili concept parallel to Ubuntu. Personhood through relationship with others.",
+      "category": [
+        "philosophy",
+        "ethics"
+      ],
+      "related": [
+        "Ubuntu",
+        "Philoxenia"
       ]
     },
     {
@@ -3957,6 +4188,22 @@
       "usage": "Hegel saw history as the unfolding of the Zeitgeist through successive epochs."
     },
     {
+      "id": "ase",
+      "term": "Àṣẹ",
+      "lang": "yo",
+      "pronunciation": "ah-SHAY",
+      "partOfSpeech": "noun",
+      "definition": "The power to make things happen; divine force of life and creation. The authority to create change.",
+      "category": [
+        "spirituality",
+        "power"
+      ],
+      "related": [
+        "Shakti",
+        "Mana"
+      ]
+    },
+    {
       "id": "ecriture",
       "term": "Écriture",
       "native": "écriture",
@@ -4027,6 +4274,22 @@
           "text": "In any given culture and at any given moment, there is always only one episteme that defines the conditions of possibility of all knowledge.",
           "source": "Michel Foucault, The Order of Things, 1966"
         }
+      ]
+    },
+    {
+      "id": "iwa",
+      "term": "Ìwà",
+      "lang": "yo",
+      "pronunciation": "EE-wah",
+      "partOfSpeech": "noun",
+      "definition": "Character, essence, moral nature. 'Ìwà l'ẹwà' (character is beauty)—the Yoruba belief that good character matters most.",
+      "category": [
+        "ethics",
+        "character"
+      ],
+      "related": [
+        "Arete",
+        "Virtue"
       ]
     },
     {
@@ -4501,6 +4764,22 @@
       ]
     },
     {
+      "id": "ananda",
+      "term": "आनन्द (Ānanda)",
+      "lang": "sa",
+      "pronunciation": "AH-nahn-dah",
+      "partOfSpeech": "noun",
+      "definition": "Bliss; the highest form of happiness. In Vedanta: sat-chit-ananda (being-consciousness-bliss) is the nature of reality.",
+      "category": [
+        "philosophy",
+        "emotion"
+      ],
+      "related": [
+        "Eudaimonia",
+        "Beatitudo"
+      ]
+    },
+    {
       "id": "jugaad",
       "term": "जुगाड़ (Jugaad)",
       "lang": "hi",
@@ -4515,6 +4794,98 @@
       "related": [
         "Desenrascanço",
         "Bricolage"
+      ]
+    },
+    {
+      "id": "tapasya",
+      "term": "तपस्या (Tapasyā)",
+      "lang": "ne",
+      "pronunciation": "tah-PAHS-yah",
+      "partOfSpeech": "noun",
+      "definition": "Ascetic practice; spiritual discipline through austerity. The inner fire of self-transformation.",
+      "category": [
+        "spirituality",
+        "practice"
+      ],
+      "related": [
+        "Tummo",
+        "Askesis"
+      ]
+    },
+    {
+      "id": "dhukha",
+      "term": "दुःख (Dukha)",
+      "lang": "ne",
+      "pronunciation": "DOOK-hah",
+      "partOfSpeech": "noun",
+      "definition": "Suffering, dissatisfaction, unease; the First Noble Truth of Buddhism. Life's inherent unsatisfactoriness.",
+      "category": [
+        "Buddhism",
+        "philosophy"
+      ],
+      "related": [
+        "Sukha",
+        "Angst"
+      ]
+    },
+    {
+      "id": "nazar",
+      "term": "नज़र (Nazar)",
+      "lang": "hi",
+      "pronunciation": "nah-ZAR",
+      "partOfSpeech": "noun",
+      "definition": "The evil eye; also one's gaze or way of seeing. The belief that envy can cause harm through looking.",
+      "category": [
+        "culture",
+        "belief"
+      ],
+      "related": []
+    },
+    {
+      "id": "prana",
+      "term": "प्राण (Prāṇa)",
+      "lang": "sa",
+      "pronunciation": "PRAH-nah",
+      "partOfSpeech": "noun",
+      "definition": "Life force; vital breath that animates all living things. The energy cultivated in yoga and meditation.",
+      "category": [
+        "spirituality",
+        "body"
+      ],
+      "related": [
+        "Qi",
+        "Pneuma"
+      ]
+    },
+    {
+      "id": "bijuli",
+      "term": "बिजुली (Bijulī)",
+      "lang": "ne",
+      "pronunciation": "bee-JOO-lee",
+      "partOfSpeech": "noun",
+      "definition": "Lightning; also electricity. The spark that illuminates and transforms—a metaphor for sudden insight.",
+      "category": [
+        "nature",
+        "metaphor"
+      ],
+      "related": [
+        "Satori"
+      ]
+    },
+    {
+      "id": "maya-sa",
+      "term": "माया (Māyā)",
+      "lang": "sa",
+      "pronunciation": "MAH-yah",
+      "partOfSpeech": "noun",
+      "definition": "Illusion; the veil that makes the one appear as many. Not falsehood but the creative power that manifests the world.",
+      "category": [
+        "philosophy",
+        "metaphysics"
+      ],
+      "related": [
+        "Līlā",
+        "Avidya"
       ]
     },
     {
@@ -4533,6 +4904,344 @@
         "Karuna",
         "Metta",
         "Schadenfreude"
+      ]
+    },
+    {
+      "id": "leela",
+      "term": "लीला (Līlā)",
+      "lang": "hi",
+      "pronunciation": "LEE-lah",
+      "partOfSpeech": "noun",
+      "definition": "Divine play; the universe as God's spontaneous, joyful creative expression. Reality as cosmic game.",
+      "category": [
+        "philosophy",
+        "spirituality"
+      ],
+      "related": [
+        "Maya"
+      ]
+    },
+    {
+      "id": "viraha",
+      "term": "विरह (Viraha)",
+      "lang": "hi",
+      "pronunciation": "vee-RAH-hah",
+      "partOfSpeech": "noun",
+      "definition": "The pain of separation from the beloved; longing that intensifies love through absence. Central theme in Indian poetry.",
+      "category": [
+        "emotion",
+        "love"
+      ],
+      "related": [
+        "Hasret",
+        "Sehnsucht"
+      ]
+    },
+    {
+      "id": "shakti",
+      "term": "शक्ति (Śakti)",
+      "lang": "sa",
+      "pronunciation": "SHAHK-tee",
+      "partOfSpeech": "noun",
+      "definition": "Primordial cosmic energy; the divine feminine creative power. Both goddess and force.",
+      "category": [
+        "spirituality",
+        "philosophy"
+      ],
+      "related": [
+        "Qi",
+        "Élan vital"
+      ]
+    },
+    {
+      "id": "shraddha",
+      "term": "श्रद्धा (Shraddhā)",
+      "lang": "hi",
+      "pronunciation": "SHRAHD-dhah",
+      "partOfSpeech": "noun",
+      "definition": "Faith combined with devotion and reverence; trust that goes beyond mere belief to heartfelt commitment.",
+      "category": [
+        "spirituality",
+        "faith"
+      ],
+      "related": [
+        "Bhakti",
+        "Pietas"
+      ]
+    },
+    {
+      "id": "samsara",
+      "term": "संसार (Saṃsāra)",
+      "lang": "sa",
+      "pronunciation": "sahm-SAH-rah",
+      "partOfSpeech": "noun",
+      "definition": "The cycle of birth, death, and rebirth; worldly existence with its suffering. What liberation frees us from.",
+      "category": [
+        "philosophy",
+        "Buddhism"
+      ],
+      "related": [
+        "Moksha",
+        "Nirvana"
+      ]
+    },
+    {
+      "id": "satya",
+      "term": "सत्य (Satya)",
+      "lang": "sa",
+      "pronunciation": "SAHT-yah",
+      "partOfSpeech": "noun",
+      "definition": "Truth; ultimate reality. Gandhi's satyagraha meant 'holding firmly to truth' as resistance.",
+      "category": [
+        "philosophy",
+        "ethics"
+      ],
+      "related": [
+        "Aletheia",
+        "Dharma"
+      ]
+    },
+    {
+      "id": "seva",
+      "term": "सेवा (Seva)",
+      "lang": "hi",
+      "pronunciation": "SAY-vah",
+      "partOfSpeech": "noun",
+      "definition": "Selfless service; work performed without attachment to results, offered as devotion. Central to Sikh and Hindu traditions.",
+      "category": [
+        "spirituality",
+        "ethics"
+      ],
+      "related": [
+        "Karma yoga",
+        "Ubuntu"
+      ]
+    },
+    {
+      "id": "sthitaprajna",
+      "term": "स्थितप्रज्ञ (Sthitaprajña)",
+      "lang": "sa",
+      "pronunciation": "stee-tah-PRAHJ-nyah",
+      "partOfSpeech": "noun",
+      "definition": "One of steady wisdom; a person established in equanimity, unmoved by success or failure. The Gita's ideal.",
+      "category": [
+        "philosophy",
+        "character"
+      ],
+      "related": [
+        "Ataraxia",
+        "Sophrosyne"
+      ]
+    },
+    {
+      "id": "grà-jàt",
+      "term": "กระจาด (Grà-jàt)",
+      "lang": "th",
+      "pronunciation": "grah-JAHT",
+      "partOfSpeech": "noun",
+      "definition": "The woven basket aesthetic; things imperfect but functional and beautiful in their simplicity.",
+      "category": [
+        "aesthetics"
+      ],
+      "related": [
+        "Wabi-sabi"
+      ]
+    },
+    {
+      "id": "nam-jai",
+      "term": "น้ำใจ (Nam jai)",
+      "lang": "th",
+      "pronunciation": "nahm JAI",
+      "partOfSpeech": "noun",
+      "definition": "Water of the heart; generosity, kindness, and thoughtfulness. The flow of goodwill between people.",
+      "category": [
+        "character",
+        "social"
+      ],
+      "related": [
+        "Caritas",
+        "Ubuntu"
+      ]
+    },
+    {
+      "id": "sanuk",
+      "term": "สนุก (Sanuk)",
+      "lang": "th",
+      "pronunciation": "sah-NOOK",
+      "partOfSpeech": "noun/adjective",
+      "definition": "Fun; the Thai belief that whatever you do should have an element of enjoyment. Life should be sanuk.",
+      "category": [
+        "culture",
+        "well-being"
+      ],
+      "related": [
+        "Joie de vivre",
+        "Keyif"
+      ]
+    },
+    {
+      "id": "sabai",
+      "term": "สบาย (Sabai)",
+      "lang": "th",
+      "pronunciation": "sah-BYE",
+      "partOfSpeech": "adjective",
+      "definition": "Comfortable, relaxed, at ease; physical and mental well-being. Sabai sabai means taking it easy.",
+      "category": [
+        "well-being"
+      ],
+      "related": [
+        "Hygge",
+        "Keyif"
+      ]
+    },
+    {
+      "id": "kreng-jai",
+      "term": "เกรงใจ (Kreng jai)",
+      "lang": "th",
+      "pronunciation": "kreng JAI",
+      "partOfSpeech": "verb/noun",
+      "definition": "Reluctance to impose on others; the considerate restraint of not causing trouble or inconvenience to anyone.",
+      "category": [
+        "social",
+        "ethics"
+      ],
+      "related": [
+        "Nunchi",
+        "Enryo"
+      ]
+    },
+    {
+      "id": "jai-yen",
+      "term": "ใจเย็น (Jai yen)",
+      "lang": "th",
+      "pronunciation": "jai YEN",
+      "partOfSpeech": "adjective",
+      "definition": "Cool heart; staying calm and composed. The opposite of jai rawn (hot heart). Essential Thai virtue.",
+      "category": [
+        "character",
+        "emotion"
+      ],
+      "related": [
+        "Ataraxia",
+        "Sthitaprajña"
+      ]
+    },
+    {
+      "id": "tummo",
+      "term": "གཏུམ་མོ (Tummo)",
+      "lang": "bo",
+      "pronunciation": "TOOM-oh",
+      "partOfSpeech": "noun",
+      "definition": "Inner fire; a meditation practice that generates intense internal heat. Tibetan monks can dry wet sheets on their bodies in freezing cold.",
+      "category": [
+        "Buddhism",
+        "practice"
+      ],
+      "related": []
+    },
+    {
+      "id": "terma",
+      "term": "གཏེར་མ (Terma)",
+      "lang": "bo",
+      "pronunciation": "TER-mah",
+      "partOfSpeech": "noun",
+      "definition": "Hidden treasure; sacred texts or objects concealed by masters to be discovered when the time is right.",
+      "category": [
+        "Buddhism",
+        "tradition"
+      ],
+      "related": []
+    },
+    {
+      "id": "tonglen",
+      "term": "གཏོང་ལེན (Tonglen)",
+      "lang": "bo",
+      "pronunciation": "tong-LEN",
+      "partOfSpeech": "noun",
+      "definition": "Sending and receiving; a meditation practice of breathing in others' suffering and breathing out compassion and relief.",
+      "category": [
+        "Buddhism",
+        "practice"
+      ],
+      "related": [
+        "Karuna",
+        "Metta"
+      ]
+    },
+    {
+      "id": "bardo",
+      "term": "བར་དོ (Bardo)",
+      "lang": "bo",
+      "pronunciation": "BAR-doh",
+      "partOfSpeech": "noun",
+      "definition": "In-between state; the transitional states between death and rebirth, but also any threshold or liminal moment.",
+      "category": [
+        "Buddhism",
+        "death"
+      ],
+      "related": [
+        "Liminal"
+      ]
+    },
+    {
+      "id": "rigpa",
+      "term": "རིག་པ (Rigpa)",
+      "lang": "bo",
+      "pronunciation": "RIG-pah",
+      "partOfSpeech": "noun",
+      "definition": "Pure awareness; the fundamental nature of mind, luminous and empty. The goal of Dzogchen practice.",
+      "category": [
+        "Buddhism",
+        "consciousness"
+      ],
+      "related": [
+        "Satori",
+        "Bodhi"
+      ]
+    },
+    {
+      "id": "tulku",
+      "term": "སྤྲུལ་སྐུ (Tulku)",
+      "lang": "bo",
+      "pronunciation": "TOOL-koo",
+      "partOfSpeech": "noun",
+      "definition": "Emanation body; a recognized reincarnation of a Buddhist master who chooses rebirth to help others.",
+      "category": [
+        "Buddhism",
+        "reincarnation"
+      ],
+      "related": []
+    },
+    {
+      "id": "tizita",
+      "term": "ትዝታ (Tizita)",
+      "lang": "am",
+      "pronunciation": "tiz-EE-tah",
+      "partOfSpeech": "noun",
+      "definition": "Bittersweet memory; a musical mode and feeling of nostalgic longing central to Ethiopian culture.",
+      "category": [
+        "emotion",
+        "music"
+      ],
+      "related": [
+        "Saudade",
+        "Toska",
+        "Natsukashii"
+      ]
+    },
+    {
+      "id": "gursha",
+      "term": "ጉርሻ (Gursha)",
+      "lang": "am",
+      "pronunciation": "GOOR-shah",
+      "partOfSpeech": "noun",
+      "definition": "Hand-feeding someone; the Ethiopian custom of putting food directly into another's mouth as a sign of love and respect.",
+      "category": [
+        "culture",
+        "love"
+      ],
+      "related": [
+        "Philoxenia"
       ]
     },
     {

@@ -1,0 +1,3070 @@
+{
+  "sections": [
+    {
+      "id": "textes",
+      "name": "Textes",
+      "groups": [
+        {
+          "name": "Textes Classiques",
+          "resources": [
+            {
+              "name": "Project Gutenberg",
+              "url": "https://www.gutenberg.org",
+              "desc": "Plus de 70 000 livres en domaine public, gratuits en ePub et texte brut. Le pionnier des bibliothèques numériques depuis 1971."
+            },
+            {
+              "name": "Internet Archive",
+              "url": "https://archive.org",
+              "desc": "Bibliothèque numérique massive avec emprunt gratuit, Wayback Machine pour sites archivés, et 30+ millions de textes numérisés."
+            },
+            {
+              "name": "Open Library",
+              "url": "https://openlibrary.org",
+              "desc": "Catalogue de livres avec métadonnées, emprunt numérique via Internet Archive, Open Library ID pour chaque œuvre."
+            },
+            {
+              "name": "Perseus Digital Library",
+              "url": "https://www.perseus.tufts.edu",
+              "desc": "Textes grecs et latins avec morphologie interactive, traductions parallèles et outils philologiques pour études classiques."
+            },
+            {
+              "name": "Loebulus",
+              "url": "https://ryanfb.xyz/loebolus/",
+              "desc": "Collection complète des Loeb Classical Library en PDF - textes grecs/latins avec traduction anglaise en regard."
+            },
+            {
+              "name": "Sacred Texts",
+              "url": "https://www.sacred-texts.com",
+              "desc": "Archive de textes religieux, philosophiques et mythologiques de toutes traditions : Védas, Coran, Bible, grimoires, folklore."
+            },
+            {
+              "name": "Chinese Text Project",
+              "url": "https://ctext.org",
+              "desc": "Base de données de textes chinois pré-modernes avec dictionnaire intégré. Confucius, Laozi, Zhuangzi et 30 000+ textes classiques."
+            }
+          ]
+        },
+        {
+          "name": "Bibliothèques Nationales",
+          "resources": [
+            {
+              "name": "Gallica (BnF)",
+              "url": "https://gallica.bnf.fr",
+              "desc": "Bibliothèque numérique française avec 10+ millions de documents : manuscrits médiévaux, estampes, cartes, journaux historiques."
+            },
+            {
+              "name": "HathiTrust",
+              "url": "https://www.hathitrust.org",
+              "desc": "17+ millions de volumes numérisés par bibliothèques universitaires américaines. Accès complet aux ouvrages en domaine public."
+            },
+            {
+              "name": "Europeana",
+              "url": "https://www.europeana.eu",
+              "desc": "Portail unifié de 50+ millions d'objets culturels européens : art, livres, musique, archives de 4 000+ institutions."
+            },
+            {
+              "name": "国立国会図書館 (NDL)",
+              "url": "https://dl.ndl.go.jp",
+              "desc": "Bibliothèque nationale du Japon numérisée : livres rares, ukiyo-e, cartes Edo, manuscrits bouddhistes."
+            },
+            {
+              "name": "Bayerische Staatsbibliothek",
+              "url": "https://www.digitale-sammlungen.de",
+              "desc": "Collections bavaroises numérisées : incunables, manuscrits enluminés, musique ancienne, cartes historiques germaniques."
+            }
+          ]
+        },
+        {
+          "name": "Manuscrits & Médiévistique",
+          "resources": [
+            {
+              "name": "Fordham Sourcebooks",
+              "url": "https://sourcebooks.fordham.edu",
+              "desc": "Sources primaires pour histoire ancienne, médiévale et moderne. Textes traduits et contextualisés pour recherche académique."
+            },
+            {
+              "name": "e-codices",
+              "url": "https://www.e-codices.ch",
+              "desc": "Manuscrits médiévaux suisses en haute résolution : codex de Saint-Gall, chartes carolingiennes, psautiers enluminés."
+            },
+            {
+              "name": "Digital Bodleian",
+              "url": "https://digital.bodleian.ox.ac.uk",
+              "desc": "Trésors d'Oxford numérisés : First Folio de Shakespeare, Magna Carta, manuscrits anglo-saxons, papyrus grecs."
+            },
+            {
+              "name": "Digital Vatican Library",
+              "url": "https://digi.vatlib.it",
+              "desc": "Manuscrits vaticans : codex Vaticanus, Virgile romain, palimpsestes, archives papales et incunables italiens."
+            },
+            {
+              "name": "International Dunhuang Project",
+              "url": "https://idp.bl.uk",
+              "desc": "Manuscrits de la Route de la Soie : sutras bouddhistes, documents sogdiens, textiles et peintures de Dunhuang."
+            }
+          ]
+        },
+        {
+          "name": "Littérature & Poésie",
+          "resources": [
+            {
+              "name": "Joyce Project",
+              "url": "https://joyceproject.com",
+              "desc": "Annotations exhaustives d'Ulysses : chaque allusion, référence dublinoise et jeu de mots expliqué ligne par ligne."
+            },
+            {
+              "name": "Princeton Dante Project",
+              "url": "https://dante.princeton.edu/pdp/",
+              "desc": "Divine Comédie avec commentaires historiques, traductions multiples et concordances pour chaque tercet."
+            },
+            {
+              "name": "PennSound",
+              "url": "https://writing.upenn.edu/pennsound/",
+              "desc": "Archive audio de poésie : 5 000+ enregistrements de poètes lisant leurs œuvres. Ginsberg, Pound, Ashbery, Hejinian."
+            },
+            {
+              "name": "Eclipse Archive",
+              "url": "https://eclipsearchive.org",
+              "desc": "Revues de poésie d'avant-garde numérisées : L=A=N=G=U=A=G=E, This, Roof, et presses expérimentales 1970-2000."
+            },
+            {
+              "name": "Russian Poetry Yale",
+              "url": "http://russianpoetry.yale.edu",
+              "desc": "Archive de poésie russe de l'Âge d'Argent à nos jours : textes originaux, traductions anglaises, enregistrements audio."
+            },
+            {
+              "name": "UbuWeb",
+              "url": "https://ubu.com",
+              "desc": "Archive massive d'avant-garde : poésie concrète, films expérimentaux, musique électroacoustique, art conceptuel."
+            }
+          ]
+        },
+        {
+          "name": "Recherche Académique",
+          "resources": [
+            {
+              "name": "Stanford Encyclopedia of Philosophy",
+              "url": "https://plato.stanford.edu",
+              "desc": "Encyclopédie philosophique peer-reviewed : articles de référence par experts, bibliographies exhaustives, mise à jour constante."
+            },
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org",
+              "desc": "Preprints en physique, mathématiques, informatique et sciences quantitatives. Accès libre avant publication dans journaux."
+            },
+            {
+              "name": "PhilPapers",
+              "url": "https://philpapers.org",
+              "desc": "Index complet de la philosophie académique : 2.5+ millions d'entrées, bibliographies thématiques, catégorisation fine."
+            },
+            {
+              "name": "Google Scholar",
+              "url": "https://scholar.google.com",
+              "desc": "Moteur de recherche académique : articles, citations, jurisprudence, brevets. Index de citation et profils d'auteurs."
+            },
+            {
+              "name": "Monoskop",
+              "url": "https://monoskop.org",
+              "desc": "Wiki collaboratif sur art médiatique, théorie critique, philosophie continentale. PDFs rares et documentation alternative."
+            }
+          ]
+        },
+        {
+          "name": "Ressources Philologiques",
+          "resources": [
+            {
+              "name": "Thesaurus Linguae Graecae (TLG)",
+              "url": "https://www.tlg.uci.edu",
+              "desc": "Corpus exhaustif de littérature grecque antique : Homère à Byzance. Recherche morphologique, lemmatisation, concordances."
+            },
+            {
+              "name": "Logeion",
+              "url": "https://logeion.uchicago.edu",
+              "desc": "Interface unifiée pour dictionnaires grec ancien et latin : LSJ, Lewis & Short, Middle Liddell. Recherche instantanée."
+            },
+            {
+              "name": "Papyri.info",
+              "url": "https://www.papyri.info",
+              "desc": "Base de données de papyrus grecs et latins : textes documentaires, éditions critiques, métadonnées archéologiques."
+            },
+            {
+              "name": "Trismegistos",
+              "url": "https://www.trismegistos.org",
+              "desc": "Portail d'études papyrologiques : identification de textes, prosopographie, géographie historique de l'Égypte gréco-romaine."
+            },
+            {
+              "name": "Thesaurus Linguae Latinae (TLL)",
+              "url": "https://www.degruyter.com/database/TLL",
+              "desc": "Dictionnaire encyclopédique du latin : citations exhaustives d'Antiquité à Renaissance, projet séculaire de la Bayerische Akademie."
+            },
+            {
+              "name": "Encyclopaedia of Greek Law",
+              "url": "https://www.encyclopediaofgreeklaw.gr",
+              "desc": "Références juridiques de la Grèce antique : législation, procédures judiciaires, institutions politiques athéniennes et hellénistiques."
+            },
+            {
+              "name": "Alpheios",
+              "url": "https://alpheios.net",
+              "desc": "Extension de lecture pour textes anciens : analyse morphologique, dictionnaire intégré, support grec, latin, arabe, persan."
+            }
+          ]
+        },
+        {
+          "name": "Asie de l'Est",
+          "resources": [
+            {
+              "name": "CBETA",
+              "url": "https://cbetaonline.dila.edu.tw",
+              "desc": "Canon bouddhique chinois numérisé : Tripiṭaka, sutras, commentaires. Recherche plein texte."
+            },
+            {
+              "name": "Musée du Palais 故宫",
+              "url": "https://www.dpm.org.cn",
+              "desc": "Collections de la Cité Interdite numérisées : peintures, calligraphies, porcelaines, jades impériaux."
+            },
+            {
+              "name": "Kotobank",
+              "url": "https://kotobank.jp",
+              "desc": "Portail de dictionnaires et encyclopédies japonais : Daijirin, Britannica Japan, termes spécialisés."
+            },
+            {
+              "name": "국립국어원 (NIKL)",
+              "url": "https://www.korean.go.kr",
+              "desc": "Institut national de la langue coréenne : dictionnaires officiels, corpus, normes orthographiques."
+            }
+          ]
+        },
+        {
+          "name": "Littérature Japonaise",
+          "resources": [
+            {
+              "name": "Aozora Bunko 青空文庫",
+              "url": "https://www.aozora.gr.jp",
+              "desc": "Gutenberg japonais : 17 000+ œuvres en domaine public. Sōseki, Akutagawa, Mishima, Tanizaki — textes intégraux en kanji."
+            },
+            {
+              "name": "NDL Digital 国立国会図書館",
+              "url": "https://dl.ndl.go.jp",
+              "desc": "Bibliothèque nationale numérique : livres rares Meiji-Taishō, manuscrits, journaux, gravures ukiyo-e et cartes historiques."
+            },
+            {
+              "name": "NICHIBUNKEN 国際日本文化研究センター",
+              "url": "https://www.nichibunken.ac.jp",
+              "desc": "Centre international d'études japonaises : archives de recherche, images historiques, base de données de littérature classique."
+            },
+            {
+              "name": "NINJAL 国立国語研究所",
+              "url": "https://www.ninjal.ac.jp",
+              "desc": "Institut national de linguistique japonaise : corpus de langue classique et contemporaine, dictionnaires historiques."
+            }
+          ]
+        },
+        {
+          "name": "Littérature Allemande",
+          "resources": [
+            {
+              "name": "Deutsches Textarchiv",
+              "url": "https://www.deutschestextarchiv.de",
+              "desc": "Textes allemands historiques du 16e au 19e siècle en plein texte : Goethe, Schiller, Kant, Luther. Annotations linguistiques."
+            },
+            {
+              "name": "Zeno.org",
+              "url": "https://www.zeno.org",
+              "desc": "Bibliothèque numérique germanophone : littérature, philosophie, histoire. Textes intégraux consultables, focus germanistique."
+            },
+            {
+              "name": "Projekt Gutenberg-DE",
+              "url": "https://gutenberg.spiegel.de",
+              "desc": "Gutenberg allemand : milliers d'œuvres en domaine public en langue allemande. Présentation soignée, lecture en ligne."
+            },
+            {
+              "name": "Wikisource DE",
+              "url": "https://de.wikisource.org",
+              "desc": "Textes sources allemands libres : Nietzsche, Hegel, Kafka, journaux historiques. Transcriptions collaboratives."
+            }
+          ]
+        },
+        {
+          "name": "Littérature Tchèque",
+          "resources": [
+            {
+              "name": "Národní digitální knihovna",
+              "url": "https://www.ndk.cz",
+              "desc": "Bibliothèque nationale numérique tchèque : périodiques historiques, livres anciens, manuscrits. Recherche plein texte en tchèque."
+            },
+            {
+              "name": "Ústav pro českou literaturu",
+              "url": "https://ucl.cas.cz",
+              "desc": "Institut de littérature tchèque (Académie des sciences) : bibliographies, dictionnaires, histoire littéraire de Bohème."
+            },
+            {
+              "name": "Wikizdroje",
+              "url": "https://cs.wikisource.org",
+              "desc": "Wikisource tchèque : Čapek, Neruda, Mácha, Hašek en texte intégral. Textes classiques de la littérature nationale."
+            },
+            {
+              "name": "Manuscriptorium",
+              "url": "https://www.manuscriptorium.com",
+              "desc": "Manuscrits médiévaux d'Europe centrale numérisés : codex bohémiens, chartes, enluminures. Coopération bibliothèques tchèques."
+            }
+          ]
+        },
+        {
+          "name": "Littérature Polonaise",
+          "resources": [
+            {
+              "name": "Polona",
+              "url": "https://polona.pl",
+              "desc": "Bibliothèque nationale polonaise numérique : 5+ millions d'objets, manuscrits, affiches, partitions. Interface remarquable."
+            },
+            {
+              "name": "Wolne Lektury",
+              "url": "https://wolnelektury.pl",
+              "desc": "Gutenberg polonais : textes scolaires et classiques en domaine public. Mickiewicz, Słowacki, Prus, Sienkiewicz."
+            },
+            {
+              "name": "RCIN",
+              "url": "https://rcin.org.pl",
+              "desc": "Collections numériques de recherche polonaises (PAN) : archives scientifiques, publications de l'Académie des sciences."
+            }
+          ]
+        },
+        {
+          "name": "Littérature Hongroise",
+          "resources": [
+            {
+              "name": "Magyar Elektronikus Könyvtár",
+              "url": "https://mek.oszk.hu",
+              "desc": "Bibliothèque électronique hongroise : Petőfi, Arany, Ady, Babits. Littérature nationale intégrale en domaine public."
+            },
+            {
+              "name": "Arcanum",
+              "url": "https://arcanum.hu",
+              "desc": "Archives numérisées hongroises : journaux historiques, encyclopédies, cartes. Moteur de recherche plein texte OCR."
+            },
+            {
+              "name": "Wikiforrás",
+              "url": "https://hu.wikisource.org",
+              "desc": "Wikisource hongroise : textes sources libres en hongrois. Classiques littéraires et documents historiques."
+            }
+          ]
+        },
+        {
+          "name": "Littérature Ibérique & Moderne",
+          "resources": [
+            {
+              "name": "Biblioteca Virtual Miguel de Cervantes",
+              "url": "https://www.cervantesvirtual.com",
+              "desc": "Patrimoine hispanique numérisé : Quichotte aux auteurs contemporains. 200 000+ œuvres en castillan, catalan, galicien."
+            },
+            {
+              "name": "Biblioteca Nacional Digital (Portugal)",
+              "url": "https://purl.pt",
+              "desc": "Collections de la BNP : manuscrits médiévaux, incunables, cartographie maritime, périodiques historiques lusophones."
+            },
+            {
+              "name": "The Latin Library",
+              "url": "https://www.thelatinlibrary.com",
+              "desc": "Textes latins classiques en plein texte : Cicéron, Virgile, Ovide, Sénèque. Format simple, chargement rapide."
+            }
+          ]
+        },
+        {
+          "name": "Cartographie",
+          "resources": [
+            {
+              "name": "Soviet Military Maps",
+              "url": "https://maps.vlasenko.net",
+              "desc": "Cartes topographiques soviétiques 1:50000 du monde entier : détail exceptionnel, usage militaire original."
+            },
+            {
+              "name": "David Rumsey Map Collection",
+              "url": "https://www.davidrumsey.com",
+              "desc": "150 000+ cartes historiques en haute résolution : atlas anciens, cartes maritimes, plans de villes."
+            }
+          ]
+        },
+        {
+          "name": "Musées — Antiquité & Archéologie",
+          "resources": [
+            {
+              "name": "Pergamon Museum Digital",
+              "url": "https://www.smb.museum/en/museums-institutions/pergamonmuseum/home/",
+              "desc": "Collections berlinoises numérisées : autel de Pergame, porte d'Ishtar, marché de Milet. Base de données SMB avec 700 000+ objets."
+            },
+            {
+              "name": "Museo Archeologico Nazionale di Napoli",
+              "url": "https://mann-napoli.it",
+              "desc": "Meilleure collection Pompéi/Herculanum au monde : fresques, mosaïques, bronzes, cabinet secret. Indispensable pour l'art romain."
+            },
+            {
+              "name": "Villa Giulia — Museo Nazionale Etrusco",
+              "url": "https://www.museoetrusco.it",
+              "desc": "Collection étrusque de référence : sarcophages, bronzes de Palestrina, orfèvrerie. Civilisation entre Grèce et Rome."
+            },
+            {
+              "name": "British Museum Collection Online",
+              "url": "https://www.thebritishmuseum.org/collection",
+              "desc": "4+ millions d'objets en ligne, haute résolution, téléchargement libre. Meilleure base de données muséale au monde pour la recherche."
+            },
+            {
+              "name": "Musée de Cluny",
+              "url": "https://www.musee-moyenage.fr",
+              "desc": "Art médiéval parisien : tapisseries de la Dame à la Licorne, vitraux, sculptures romanes, bains gallo-romains."
+            },
+            {
+              "name": "Museum of Islamic Art Doha",
+              "url": "https://www.mac.doha.org",
+              "desc": "Collection islamique de référence : céramiques abbasides, textiles mamelouks, manuscrits enluminés, métallurgie iranienne."
+            }
+          ]
+        },
+        {
+          "name": "Musées — Asie",
+          "resources": [
+            {
+              "name": "Tokyo National Museum — E-Museum",
+              "url": "https://webarchives.tnm.jp/imgsearch/",
+              "desc": "Base de données TNM : 120 000+ objets interrogeables par période, matériau, technique. Référence absolue pour l'art japonais."
+            },
+            {
+              "name": "National Palace Museum Taipei",
+              "url": "https://www.npm.gov.tw/en/",
+              "desc": "Collections impériales chinoises : jades néolithiques, bronzes Shang, calligraphies Song, porcelaines Ming. 697 000 pièces en ligne."
+            },
+            {
+              "name": "Freer Gallery — Smithsonian",
+              "url": "https://asia.si.edu/collections-area/south-asian-art/",
+              "desc": "Art asiatique : manuscrits persans enluminés, peintures mogholes, art bouddhique du Gandhara. Base de données open access."
+            },
+            {
+              "name": "LACMA Collections",
+              "url": "https://collections.lacma.org",
+              "desc": "Art sud et sud-est asiatique exceptionnellement riche en ligne : sculpture khmère, arts de l'Inde, arts islamiques d'Iran."
+            },
+            {
+              "name": "Aga Khan Museum",
+              "url": "https://www.agakhanmuseum.org/collection",
+              "desc": "Art islamique de l'Espagne à l'Inde : astrolabes, céramiques lusterware, enluminures Shahnameh, arts du livre persan."
+            },
+            {
+              "name": "Kunstkamera St. Petersburg",
+              "url": "https://www.kunstkamera.ru/en/",
+              "desc": "Musée d'ethnographie de Pierre le Grand : collections Sibérie, Amérique du Nord, Océanie, Extrême-Orient. Rarissimes."
+            }
+          ]
+        },
+        {
+          "name": "Musées — Europe Centrale & Orientale",
+          "resources": [
+            {
+              "name": "Hungarian National Museum",
+              "url": "https://www.hnm.hu/en/",
+              "desc": "Histoire hongroise des origines à 1990 : trésor de la couronne, art médiéval, collections de la Grande Plaine. Textes online."
+            },
+            {
+              "name": "Národní muzeum Praha",
+              "url": "https://www.nm.cz/en",
+              "desc": "Musée national tchèque : minéralogie, zoologie, archéologie bohémienne, collections slaves. Base de données numérique."
+            },
+            {
+              "name": "Muzeum Narodowe Warszawa",
+              "url": "https://mnw.art.pl/en/",
+              "desc": "Art polonais médiéval à contemporain, antiquités méditerranéennes, Fayoum, Nubie. Collection de référence en Europe centrale."
+            },
+            {
+              "name": "Sir John Soane's Museum",
+              "url": "https://www.soanesmuseum.org",
+              "desc": "Londres : cabinet de curiosités architectural du néoclassicisme. Sarcophage de Seti I, Hogarth original, maquettes antiques."
+            },
+            {
+              "name": "Rautenstrauch-Joest-Museum",
+              "url": "https://www.rjm-cologne.de/en/",
+              "desc": "Cologne : l'un des meilleurs musées d'ethnologie mondiale. Collections Océanie, Afrique, Amériques, Asie. Approche critique exemplaire."
+            }
+          ]
+        },
+        {
+          "name": "Musées — Estampes & Dessin",
+          "resources": [
+            {
+              "name": "Rijksmuseum — Rijksstudio",
+              "url": "https://www.rijksmuseum.nl/en/rijksstudio",
+              "desc": "700 000+ œuvres en haute résolution, téléchargement libre sans restriction. Rembrandt, Vermeer, Hals, estampes japonaises, Delft."
+            },
+            {
+              "name": "Mandragore — BnF",
+              "url": "https://mandragore.bnf.fr",
+              "desc": "Base de données d'enluminures de la BnF : 130 000+ images de manuscrits médiévaux. Recherche iconographique fine."
+            },
+            {
+              "name": "The Met Collection",
+              "url": "https://www.metmuseum.org/art/collection",
+              "desc": "490 000+ œuvres open access. Particulièrement fort en arts islamiques, égyptiens, instruments de musique anciens, armes et armures."
+            },
+            {
+              "name": "National Gallery of Art — Open Access",
+              "url": "https://www.nga.gov/collection.html",
+              "desc": "Washington : 56 000+ œuvres téléchargeables librement. Estampes allemandes, dessins de la Renaissance, photographies historiques."
+            }
+          ]
+        },
+        {
+          "name": "Bibliothèques — Manuscrits Spécialisés",
+          "resources": [
+            {
+              "name": "Biblioteca Medicea Laurenziana",
+              "url": "https://mss.bmlonline.it",
+              "desc": "Florence : manuscrits grecs et latins de Médicis numérisés. Virgile du 5e siècle, codex Amiatinus, Plutarque autographe."
+            },
+            {
+              "name": "Biblioteca Digital Hispánica",
+              "url": "https://bdh.bne.es",
+              "desc": "Bibliothèque nationale espagnole numérique : manuscrits arabes d'Espagne, atlas de la Salle, cartes nautiques, incunables ibériques."
+            },
+            {
+              "name": "Österreichische Nationalbibliothek Digital",
+              "url": "https://digital.onb.ac.at",
+              "desc": "Vienne : papyrus grecs, manuscrits musicaux, atlas de Mercator, collection de portraits habsbourgeois."
+            },
+            {
+              "name": "National Library of Israel Digital",
+              "url": "https://www.nli.org.il/en/digitalnli/",
+              "desc": "Judaïca et manuscrits du Moyen-Orient : Talmud enluminé, cartes ottomanes, fonds Kafka, archives Sholem Aleichem."
+            },
+            {
+              "name": "Qatar Digital Library",
+              "url": "https://www.qdl.qa/en",
+              "desc": "Archives ottomanes et arabes en partenariat British Library : cartes du Golfe, correspondances, manuscrits scientifiques arabes."
+            },
+            {
+              "name": "Cambridge Digital Library",
+              "url": "https://cudl.lib.cam.ac.uk",
+              "desc": "Newton manuscrits, Darwin carnets, Geniza du Caire, manuscrits bouddhiques. Haute résolution, transcriptions."
+            },
+            {
+              "name": "Heidelberg University Library",
+              "url": "https://digi.ub.uni-heidelberg.de",
+              "desc": "Manuscrits enluminés rhénans, Codex Manesse, cartes de Ptolémée, chroniques médiévales allemandes en haute résolution."
+            },
+            {
+              "name": "Beinecke Rare Books — Yale",
+              "url": "https://beinecke.library.yale.edu/collections/digital-collections",
+              "desc": "Manuscrit Voynich, première Bible de Gutenberg, archives Langston Hughes, papyrus grecs, cartes Renaissance."
+            },
+            {
+              "name": "Koninklijke Bibliotheek Netherlands",
+              "url": "https://www.kb.nl/en/themes/collections-online",
+              "desc": "Bibliothèque nationale néerlandaise : atlas factice, atlas Van der Hem, incunables, journaux historiques néerlandais."
+            },
+            {
+              "name": "Al-Maktaba al-Shamela",
+              "url": "https://shamela.ws",
+              "desc": "Bibliothèque islamique en arabe : 15 000+ livres de fiqh, hadith, tafsir, kalam. Corpus islamique classique complet et interrogeable."
+            }
+          ]
+        },
+        {
+          "name": "Référence — Encyclopédies Spécialisées",
+          "resources": [
+            {
+              "name": "Encyclopaedia Iranica",
+              "url": "https://iranicaonline.org",
+              "desc": "Référence absolue pour la civilisation iranienne et persane : histoire, littérature, religion, art, langues. Accès libre, peer-reviewed."
+            },
+            {
+              "name": "Encyclopaedia of Islam (Brill)",
+              "url": "https://referenceworks.brillonline.com/browse/encyclopaedia-of-islam-3",
+              "desc": "Standard académique mondial pour l'islam : 3e édition en cours. Payant mais accessible via bibliothèques universitaires."
+            },
+            {
+              "name": "Jewish Virtual Library",
+              "url": "https://www.jewishvirtuallibrary.org",
+              "desc": "Encyclopédie juive en ligne : histoire, textes religieux, biographies, Shoah, État d'Israël. Accès libre."
+            },
+            {
+              "name": "Oxford Bibliographies",
+              "url": "https://www.oxfordbibliographies.com",
+              "desc": "Bibliographies académiques annotées par domaine. Payant mais standard de référence pour la recherche universitaire."
+            }
+          ]
+        },
+        {
+          "name": "Référence — Géographie Historique",
+          "resources": [
+            {
+              "name": "Pleiades",
+              "url": "https://pleiades.stoa.org",
+              "desc": "Gazetteer du monde antique : chaque lieu mentionné dans les sources anciennes géolocalisé. Référence pour l'histoire et l'archéologie."
+            },
+            {
+              "name": "ORBIS — Stanford",
+              "url": "https://orbis.stanford.edu",
+              "desc": "Simulateur du réseau de transport romain : calcule temps de voyage, coûts, routes optimales dans l'Empire. Outil extraordinaire."
+            },
+            {
+              "name": "Old Maps Online",
+              "url": "https://www.oldmapsonline.org",
+              "desc": "Moteur de recherche pour cartes historiques de toutes les collections mondiales. Recherche par lieu et période."
+            },
+            {
+              "name": "World Historical Gazetteer",
+              "url": "https://whgazetteer.org",
+              "desc": "Noms de lieux historiques géoréférencés à travers le temps. Projet Pitt pour l'histoire mondiale comparée."
+            },
+            {
+              "name": "Regesta Imperii",
+              "url": "https://regesta-imperii.de/en/",
+              "desc": "Régestes des empereurs et papes médiévaux : 200 000+ documents résumés, base pour l'histoire du Saint-Empire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "langues",
+      "name": "Langues",
+      "groups": [
+        {
+          "name": "Bases de Données Linguistiques",
+          "resources": [
+            {
+              "name": "Glottolog",
+              "url": "https://glottolog.org",
+              "desc": "Classification de toutes les langues connues : 8 000+ langues, familles, dialectes, avec bibliographies et données géographiques."
+            },
+            {
+              "name": "WALS",
+              "url": "https://wals.info",
+              "desc": "World Atlas of Language Structures : 2 600+ langues cartographiées par traits typologiques (ordre des mots, phonèmes, etc.)."
+            },
+            {
+              "name": "PHOIBLE",
+              "url": "https://phoible.org",
+              "desc": "Inventaires phonémiques de 3 000+ langues : systèmes de consonnes/voyelles, tons, structures syllabiques."
+            },
+            {
+              "name": "Omniglot",
+              "url": "https://www.omniglot.com",
+              "desc": "Encyclopédie des systèmes d'écriture : alphabets, syllabaires, logogrammes, écritures construites et langues des signes."
+            }
+          ]
+        },
+        {
+          "name": "Langues Construites & Ésotériques",
+          "resources": [
+            {
+              "name": "Esolang Wiki",
+              "url": "https://esolangs.org",
+              "desc": "Langages de programmation ésotériques : Brainfuck (8 commandes), Whitespace (espaces uniquement), Malbolge (délibérément difficile)."
+            },
+            {
+              "name": "Language Creation Society",
+              "url": "https://conlang.org",
+              "desc": "Communauté de créateurs de langues : ressources pour construire grammaires, phonologies et lexiques cohérents."
+            },
+            {
+              "name": "Toki Pona",
+              "url": "https://tokipona.org",
+              "desc": "Langue minimaliste de 120 mots basée sur la simplicité philosophique. Apprentissage en quelques jours."
+            },
+            {
+              "name": "Lojban",
+              "url": "https://lojban.org",
+              "desc": "Langue logique sans ambiguïté syntaxique, basée sur la logique des prédicats. Grammaire formellement définie."
+            }
+          ]
+        },
+        {
+          "name": "Dictionnaires & Étymologie",
+          "resources": [
+            {
+              "name": "CNRTL",
+              "url": "https://www.cnrtl.fr",
+              "desc": "Centre national de ressources textuelles et lexicales : TLFi, étymologie, synonymes, concordances du français."
+            },
+            {
+              "name": "Online Etymology Dictionary",
+              "url": "https://www.etymonline.com",
+              "desc": "Histoire des mots anglais : origines proto-indo-européennes, emprunts, évolution sémantique détaillée."
+            },
+            {
+              "name": "DWDS",
+              "url": "https://www.dwds.de",
+              "desc": "Dictionnaire numérique allemand : définitions, étymologie, collocations, corpus diachronique de 100 milliards de mots."
+            },
+            {
+              "name": "Starling Database",
+              "url": "https://starlingdb.org",
+              "desc": "Bases de données de linguistique comparative : reconstructions proto-langues, étymologies de familles (IE, altaïque, sino-tibétain)."
+            },
+            {
+              "name": "Sensagent",
+              "url": "https://dictionnaire.sensagent.com",
+              "desc": "Dictionnaire multilingue avec synonymes, antonymes, traductions et définitions encyclopédiques intégrées."
+            },
+            {
+              "name": "Lexilogos",
+              "url": "https://www.lexilogos.com",
+              "desc": "Portail de dictionnaires et claviers virtuels pour 200+ langues : ressources linguistiques mondiales."
+            },
+            {
+              "name": "Linguee",
+              "url": "https://www.linguee.com",
+              "desc": "Dictionnaire avec contextes : traductions issues de documents bilingues réels, exemples d'usage authentiques."
+            },
+            {
+              "name": "Forvo",
+              "url": "https://forvo.com",
+              "desc": "Prononciation de mots par locuteurs natifs : 6+ millions d'enregistrements dans 400+ langues."
+            }
+          ]
+        },
+        {
+          "name": "Dictionnaires Nationaux",
+          "resources": [
+            {
+              "name": "CNRTL — Centre National de Ressources Textuelles",
+              "url": "https://www.cnrtl.fr",
+              "desc": "Référence française : TLFi (Trésor de la Langue Française), étymologies, synonymes, morphologie. Corpus littéraires interrogeables."
+            },
+            {
+              "name": "Real Academia Española — DRAE",
+              "url": "https://www.rae.es",
+              "desc": "Dictionnaire de référence de la langue espagnole. Avec DPD (doutes linguistiques) et corpus CREA/CORPES en ligne."
+            },
+            {
+              "name": "Priberam",
+              "url": "https://dicionario.priberam.org",
+              "desc": "Dictionnaire de référence du portugais contemporain. Ortographe post-accord, registres, synonymes, conjugaisons."
+            },
+            {
+              "name": "Duden",
+              "url": "https://www.duden.de",
+              "desc": "Autorité normative de la langue allemande : orthographe, grammaire, étymologies, néologismes. Référence depuis 1880."
+            },
+            {
+              "name": "Treccani — Vocabolario",
+              "url": "https://www.treccani.it/vocabolario/",
+              "desc": "Dictionnaire italien de référence avec encyclopédie intégrée. Étymologies latines, synonymes, corpus littéraire."
+            },
+            {
+              "name": "Van Dale",
+              "url": "https://www.vandale.nl",
+              "desc": "Dictionnaire néerlandais de référence. Groot Woordenboek van de Nederlandse Taal — standard académique."
+            },
+            {
+              "name": "SAOB — Svenska Akademiens Ordbok",
+              "url": "https://www.saob.se",
+              "desc": "Dictionnaire historique du suédois sur 37 volumes numérisés. Étymologies, citations littéraires depuis le 16e siècle."
+            },
+            {
+              "name": "Den Danske Ordbog",
+              "url": "https://ordnet.dk/ddo",
+              "desc": "Dictionnaire du danois contemporain : définitions, exemples, étymologies, corpus de 250 millions de mots."
+            },
+            {
+              "name": "Słownik Języka Polskiego PWN",
+              "url": "https://sjp.pwn.pl",
+              "desc": "Dictionnaire polonais de référence : définitions, étymologies, collocations, règles orthographiques."
+            }
+          ]
+        },
+        {
+          "name": "Langues en Danger & Documentation",
+          "resources": [
+            {
+              "name": "ELAR — Endangered Languages Archive",
+              "url": "https://elar.soas.ac.uk",
+              "desc": "Archive de langues en danger : enregistrements, transcriptions, dictionnaires pour 400+ langues. SOAS University of London."
+            },
+            {
+              "name": "Ethnologue",
+              "url": "https://www.ethnologue.com",
+              "desc": "Catalogue mondial des langues : 7 000+ langues classifiées, nombre de locuteurs, statut de vitalité, familles génétiques."
+            },
+            {
+              "name": "ASJP — Automated Similarity Judgment",
+              "url": "https://asjp.clld.org",
+              "desc": "Listes Swadesh pour 6 000+ langues : outil pour la classification et la datation des divergences linguistiques."
+            },
+            {
+              "name": "CLICS — Cross-Linguistic Colexifications",
+              "url": "https://clics.clld.org",
+              "desc": "Réseau de colexifications translinguistiques : quelles langues utilisent le même mot pour deux concepts. Sémantique cognitive."
+            }
+          ]
+        },
+        {
+          "name": "Corpus & Linguistique Computationnelle",
+          "resources": [
+            {
+              "name": "Sketch Engine",
+              "url": "https://www.sketchengine.eu",
+              "desc": "Corpus linguistiques en 90+ langues : collocations, fréquences, concordances, profils de mots. Standard de la lexicographie."
+            },
+            {
+              "name": "Leipzig Corpora Collection",
+              "url": "https://corpora.uni-leipzig.de",
+              "desc": "Corpus de fréquences pour 250+ langues : co-occurrences, voisins contextuels, données comparatives interlinguistiques."
+            },
+            {
+              "name": "CLARIN — European Language Resources",
+              "url": "https://www.clarin.eu/resource-families/written-corpora",
+              "desc": "Infrastructure européenne pour ressources linguistiques : corpus nationaux, lexiques, outils NLP pour 20+ langues européennes."
+            },
+            {
+              "name": "Universal Dependencies",
+              "url": "https://universaldependencies.org",
+              "desc": "Treebanks annotés pour 100+ langues avec schéma unifié. Référence pour la linguistique computationnelle comparative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arts",
+      "name": "Arts",
+      "groups": [
+        {
+          "name": "Collections Muséales",
+          "resources": [
+            {
+              "name": "Metropolitan Museum (Open Access)",
+              "url": "https://www.metmuseum.org/art/collection",
+              "desc": "470 000+ œuvres en haute résolution sous licence CC0 : art égyptien, armures, peintures européennes, art asiatique."
+            },
+            {
+              "name": "Rijksmuseum",
+              "url": "https://www.rijksmuseum.nl/en/rijksstudio",
+              "desc": "Maîtres hollandais en résolution maximale : Rembrandt, Vermeer, Frans Hals. Téléchargement libre pour tout usage."
+            },
+            {
+              "name": "Collections du Louvre",
+              "url": "https://collections.louvre.fr",
+              "desc": "480 000 œuvres documentées : antiquités orientales, peintures italiennes, objets d'art, sculptures grecques."
+            },
+            {
+              "name": "Web Gallery of Art",
+              "url": "https://www.wga.hu",
+              "desc": "Peinture et sculpture européennes 1000-1850 avec biographies d'artistes et commentaires iconographiques."
+            },
+            {
+              "name": "Ukiyo-e.org",
+              "url": "https://ukiyo-e.org",
+              "desc": "Estampes japonaises avec recherche par similarité visuelle : Hokusai, Hiroshige, Utamaro et milliers d'autres."
+            }
+          ]
+        },
+        {
+          "name": "Art Contemporain & Théâtre",
+          "resources": [
+            {
+              "name": "e-flux",
+              "url": "https://www.e-flux.com",
+              "desc": "Actualité de l'art contemporain, essais critiques, annonces d'expositions mondiales et journal théorique."
+            },
+            {
+              "name": "Rhizome ArtBase",
+              "url": "https://rhizome.org/art/artbase",
+              "desc": "Archive de net art et art numérique depuis 1999 : œuvres préservées, émulateurs, documentation de projets disparus."
+            },
+            {
+              "name": "Grotowski Institute",
+              "url": "https://grotowski.net",
+              "desc": "Archives du théâtre pauvre et laboratoire de Jerzy Grotowski : entraînement de l'acteur, parathéâtre, Art as Vehicle."
+            },
+            {
+              "name": "Global Shakespeares",
+              "url": "https://globalshakespeares.mit.edu",
+              "desc": "Adaptations de Shakespeare du monde entier : productions vidéo, analyses interculturelles, pédagogie."
+            }
+          ]
+        },
+        {
+          "name": "Iconographie & Recherche",
+          "resources": [
+            {
+              "name": "Warburg Institute",
+              "url": "https://warburg.sas.ac.uk",
+              "desc": "Bibliothèque Aby Warburg : iconologie, survie de l'Antiquité, histoire des images. Photothèque et archives uniques."
+            }
+          ]
+        },
+        {
+          "name": "Bases de Données — Art & Images",
+          "resources": [
+            {
+              "name": "WikiArt",
+              "url": "https://www.wikiart.org",
+              "desc": "250 000+ œuvres d'art en haute résolution, classées par mouvement, période, technique. Symbolisme, Art Nouveau, expressionnisme."
+            },
+            {
+              "name": "Google Arts & Culture",
+              "url": "https://artsandculture.google.com",
+              "desc": "Visites virtuelles de 2 000+ musées, gigapixel d'œuvres majeures, comparaisons stylistiques, expériences immersives."
+            },
+            {
+              "name": "Artsy",
+              "url": "https://www.artsy.net",
+              "desc": "Base de données d'art contemporain et moderne : 1 million d'œuvres, galeries mondiales, ventes aux enchères, tendances."
+            },
+            {
+              "name": "Wikimedia Commons — Art",
+              "url": "https://commons.wikimedia.org/wiki/Category:Art",
+              "desc": "80+ millions de fichiers libres de droits : peintures, sculptures, photographies, diagrammes scientifiques. Téléchargement libre."
+            },
+            {
+              "name": "Invaluable",
+              "url": "https://www.invaluable.com",
+              "desc": "Base de données de résultats de ventes aux enchères : prix, estimations, provenance. Référence pour la valeur marchande des œuvres."
+            }
+          ]
+        },
+        {
+          "name": "Architecture",
+          "resources": [
+            {
+              "name": "Avery Index — Columbia",
+              "url": "https://library.columbia.edu/libraries/avery.html",
+              "desc": "Index de référence pour l'architecture : 700 000+ articles de revues spécialisées depuis 1934. Standard académique mondial."
+            },
+            {
+              "name": "ArchDaily",
+              "url": "https://www.archdaily.com",
+              "desc": "Archive de l'architecture contemporaine mondiale : projets documentés, interviews, détails techniques, plans disponibles."
+            },
+            {
+              "name": "Great Buildings",
+              "url": "https://www.greatbuildings.com",
+              "desc": "3D models, plans, sections, photos et textes pour 750 bâtiments historiques. De Stonehenge à Gehry."
+            },
+            {
+              "name": "Archnet",
+              "url": "https://archnet.org",
+              "desc": "Architecture islamique mondiale : mosquées, madrasas, mausolées, villes historiques. Documentation exhaustive, plans, photos."
+            },
+            {
+              "name": "Docomomo International",
+              "url": "https://www.docomomo.com",
+              "desc": "Documentation et conservation du mouvement moderne : répertoire des bâtiments modernistes menacés ou protégés."
+            },
+            {
+              "name": "e-architect",
+              "url": "https://www.e-architect.com",
+              "desc": "Architecture contemporaine par pays et ville : concours, projets non construits, réalisations récentes documentées."
+            }
+          ]
+        },
+        {
+          "name": "Photographie",
+          "resources": [
+            {
+              "name": "Magnum Photos",
+              "url": "https://www.magnumphotos.com/arts-culture/",
+              "desc": "Archive de photojournalisme et photographie documentaire : Cartier-Bresson, Capa, Erwitt. Standard de la photographie humaniste."
+            },
+            {
+              "name": "Library of Congress Prints & Photos",
+              "url": "https://www.loc.gov/pictures/",
+              "desc": "16+ millions d'images : FSA Depression-era, HABS architecturales, affiches WPA, photographies de guerre américaines."
+            },
+            {
+              "name": "NYT Lens",
+              "url": "https://lens.blogs.nytimes.com",
+              "desc": "Blog photo du New York Times : reportages, portfolios de photographes, réflexions sur l'éthique documentaire."
+            },
+            {
+              "name": "ICP Archive — New York",
+              "url": "https://www.icp.org/browse/archive",
+              "desc": "International Center of Photography : archive de photojournalisme, expositions, collection permanente en ligne."
+            }
+          ]
+        },
+        {
+          "name": "Film & Cinéma",
+          "resources": [
+            {
+              "name": "BFI — British Film Institute",
+              "url": "https://www2.bfi.org.uk/films-tv-people",
+              "desc": "Base de données cinéma britannique et internationale, archives Sight & Sound, classements historiques, ressources critiques."
+            },
+            {
+              "name": "Criterion Collection",
+              "url": "https://www.criterion.com/shop/browse/list?q=",
+              "desc": "Canon du cinéma mondial : essais critiques, suppléments, contexte historique pour films de Bergman, Kurosawa, Godard, Tati."
+            },
+            {
+              "name": "MUBI Notebook",
+              "url": "https://mubi.com/notebook",
+              "desc": "Revue de cinéma critique : essais approfondis, rétrospectives, entretiens avec cinéastes. Niveau universitaire."
+            },
+            {
+              "name": "Senses of Cinema",
+              "url": "https://sensesofcinema.com",
+              "desc": "Revue académique de cinéma : études de réalisateurs, analyses de films, histoire du cinéma mondial. Accès libre."
+            },
+            {
+              "name": "BFI Screenonline",
+              "url": "https://www.screenonline.org.uk",
+              "desc": "Histoire du cinéma et télévision britanniques : extrait de films, biographies, contextes historiques depuis les années 1890."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "musique",
+      "name": "Musique",
+      "groups": [
+        {
+          "name": "Bases de Données & Découverte",
+          "resources": [
+            {
+              "name": "Rate Your Music",
+              "url": "https://rateyourmusic.com",
+              "desc": "Base de données musicale communautaire : genres détaillés, listes thématiques, charts par année/pays, discussions éclairées."
+            },
+            {
+              "name": "Discogs",
+              "url": "https://www.discogs.com",
+              "desc": "Discographies complètes avec crédits de production, variations de pressages, marketplace pour vinyles et CDs rares."
+            },
+            {
+              "name": "Every Noise at Once",
+              "url": "https://everynoise.com",
+              "desc": "Carte algorithmique de 6 000+ genres musicaux avec échantillons : explorez des micro-genres obscurs."
+            },
+            {
+              "name": "Radiooooo",
+              "url": "https://radiooooo.com",
+              "desc": "Machine à voyager dans le temps musical : sélectionnez décennie et pays pour découvrir la musique locale de l'époque."
+            }
+          ]
+        },
+        {
+          "name": "Archives & Partitions",
+          "resources": [
+            {
+              "name": "IMSLP",
+              "url": "https://imslp.org",
+              "desc": "Bibliothèque Petrucci : 200 000+ partitions en domaine public, de Bach à Debussy, avec enregistrements libres."
+            },
+            {
+              "name": "Awesome Tapes From Africa",
+              "url": "https://awesometapes.com",
+              "desc": "Cassettes africaines rares numérisées : musique éthiopienne, highlife ghanéen, soukous congolais, raï algérien."
+            },
+            {
+              "name": "Mutant Sounds",
+              "url": "https://mutant-sounds.blogspot.com",
+              "desc": "Archive de musique expérimentale : noise japonais, musique industrielle, free jazz, electronics obscures."
+            }
+          ]
+        },
+        {
+          "name": "Ethnomusicologie",
+          "resources": [
+            {
+              "name": "Alan Lomax Archive",
+              "url": "https://www.loc.gov/collections/alan-lomax-manuscripts",
+              "desc": "Enregistrements de terrain légendaires : blues du Delta, folk appalachien, musiques du monde collectées sur 60 ans."
+            },
+            {
+              "name": "Smithsonian Folkways",
+              "url": "https://www.folkways.si.edu",
+              "desc": "Label d'archives sonores : musiques traditionnelles, field recordings, spoken word. 60 000+ pistes streamables."
+            },
+            {
+              "name": "CREM (CNRS)",
+              "url": "https://archives.crem-cnrs.fr",
+              "desc": "Centre de recherche en ethnomusicologie : archives sonores de terrain, Asie, Afrique, Océanie, Amériques."
+            },
+            {
+              "name": "Global Music Archive",
+              "url": "https://globalmusic.digital",
+              "desc": "Collection numérique de musiques traditionnelles : enregistrements historiques, instruments, contextes rituels."
+            },
+            {
+              "name": "The Gramophone DB",
+              "url": "https://www.thegramophonedb.com",
+              "desc": "Base de données de 78 tours historiques : enregistrements pré-1950 du monde entier, acoustiques et électriques."
+            },
+            {
+              "name": "MusicBrainz",
+              "url": "https://www.musicbrainz.org",
+              "desc": "Base de données collaborative : artistes, albums, relations, identifiants. Backbone de l'écosystème de métadonnées musicales."
+            },
+            {
+              "name": "RILM Abstracts",
+              "url": "https://www.rilm.org",
+              "desc": "Index de la littérature musicologique mondiale : 900 000+ entrées, toutes disciplines. Standard pour la recherche en musicologie."
+            },
+            {
+              "name": "Cantus Database",
+              "url": "https://cantusdatabase.org",
+              "desc": "Chant grégorien indexé : 500 000+ mélodies de manuscrits médiévaux, mode, office, provenance géographique."
+            }
+          ]
+        },
+        {
+          "name": "Théorie Musicale & Analyse",
+          "resources": [
+            {
+              "name": "Music Theory Online",
+              "url": "https://www.music-theory.net",
+              "desc": "Revue académique de théorie musicale : analyses schenckeriennes, néo-riemanniennes, ethnomusicologie théorique."
+            },
+            {
+              "name": "Dmitri Tymoczko — Princeton",
+              "url": "https://dmitri.mycpanel.princeton.edu",
+              "desc": "Géométrie des espaces d'accords, visualisations théorie musicale, A Geometry of Music en ligne. Approche mathématique."
+            },
+            {
+              "name": "Open Music Theory",
+              "url": "https://www.counterpointhacks.com",
+              "desc": "Manuel open source de théorie musicale : contrepoint, harmonie tonale, analyse post-tonale. Niveau universitaire."
+            }
+          ]
+        },
+        {
+          "name": "Partitions & Archives Supplémentaires",
+          "resources": [
+            {
+              "name": "National Jukebox — Library of Congress",
+              "url": "https://www.loc.gov/collections/national-jukebox/",
+              "desc": "400 000+ enregistrements historiques américains : jazz, blues, country, classique, 1900-1950. Accès libre."
+            },
+            {
+              "name": "Europeana Music",
+              "url": "https://www.europeana.eu/en/collections/topic/62-music",
+              "desc": "Patrimoine musical européen numérisé : partitions, enregistrements historiques, instruments, iconographie musicale."
+            },
+            {
+              "name": "Virtual Music Library",
+              "url": "https://www.virtualmusiclibrary.info",
+              "desc": "Portail vers collections de partitions numériques mondiales : agrégateur de ressources musicologiques libres."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "humanites",
+      "name": "Humanités",
+      "groups": [
+        {
+          "name": "Psychologie & Psychanalyse",
+          "resources": [
+            {
+              "name": "Classics in History of Psychology",
+              "url": "https://psychclassics.yorku.ca",
+              "desc": "Textes fondateurs : Freud, Jung, Piaget, Skinner, William James. Documents originaux numérisés."
+            },
+            {
+              "name": "No Subject",
+              "url": "https://nosubject.com",
+              "desc": "Encyclopédie lacanienne : concepts, séminaires, mathèmes. Aussi : Žižek, Badiou, théorie psychanalytique contemporaine."
+            },
+            {
+              "name": "PEP-Web",
+              "url": "https://www.pep-web.org",
+              "desc": "Psychoanalytic Electronic Publishing : archives complètes des revues psychanalytiques majeures depuis 1871."
+            },
+            {
+              "name": "Freud Museum London",
+              "url": "https://www.freud.org.uk",
+              "desc": "Archives du dernier domicile de Freud : correspondances, photos, bibliothèque, objets de la collection personnelle."
+            }
+          ]
+        },
+        {
+          "name": "Anthropologie & Ethnographie",
+          "resources": [
+            {
+              "name": "eHRAF World Cultures",
+              "url": "https://ehrafworldcultures.yale.edu",
+              "desc": "Base ethnographique de Yale : données comparatives sur 400+ cultures, indexées par sujet pour recherche cross-culturelle."
+            },
+            {
+              "name": "D-PLACE",
+              "url": "https://d-place.org",
+              "desc": "Database of Places, Language, Culture and Environment : variables culturelles de 1 400+ sociétés pour analyses statistiques."
+            },
+            {
+              "name": "Pitt Rivers Museum",
+              "url": "https://www.prm.ox.ac.uk",
+              "desc": "Collections ethnographiques d'Oxford : 500 000+ objets photographiés avec provenance et contexte culturel."
+            },
+            {
+              "name": "Terrain (OpenEdition)",
+              "url": "https://journals.openedition.org/terrain",
+              "desc": "Revue d'ethnologie européenne en accès libre : articles de recherche, enquêtes de terrain, approches sensibles."
+            },
+            {
+              "name": "Musée du Quai Branly",
+              "url": "https://www.quaibranly.fr/fr/collections",
+              "desc": "Collections des arts et civilisations d'Afrique, Asie, Océanie, Amériques : 300 000+ objets documentés en ligne."
+            }
+          ]
+        },
+        {
+          "name": "Archives Politiques",
+          "resources": [
+            {
+              "name": "Marxists Internet Archive",
+              "url": "https://www.marxists.org",
+              "desc": "Œuvres complètes de penseurs marxistes : Marx, Lénine, Luxemburg, Gramsci, Lukács, Althusser, et centaines d'autres."
+            },
+            {
+              "name": "German Propaganda Archive",
+              "url": "https://research.calvin.edu/german-propaganda-archive/",
+              "desc": "Matériaux de propagande nazie et DDR traduits : affiches, discours, manuels scolaires, films pour analyse historique."
+            }
+          ]
+        },
+        {
+          "name": "Cours Universitaires",
+          "resources": [
+            {
+              "name": "MIT OpenCourseWare",
+              "url": "https://ocw.mit.edu",
+              "desc": "2 500+ cours MIT gratuits : vidéos, notes, examens. Ingénierie, sciences, économie, humanités."
+            },
+            {
+              "name": "Yale Open Courses",
+              "url": "https://oyc.yale.edu",
+              "desc": "Cours filmés de Yale : philosophie, histoire, psychologie. Qualité de production cinématographique."
+            },
+            {
+              "name": "Coursera",
+              "url": "https://www.coursera.org",
+              "desc": "Plateforme de cours universitaires : Stanford, Princeton, etc. Audit gratuit, certificats payants."
+            }
+          ]
+        },
+        {
+          "name": "Histoire — Bases de Données",
+          "resources": [
+            {
+              "name": "JSTOR",
+              "url": "https://www.jstor.org",
+              "desc": "Archive de revues académiques : 12+ millions d'articles en sciences humaines. Accès partiel libre (100 articles/mois)."
+            },
+            {
+              "name": "Cambridge Core",
+              "url": "https://www.cambridge.org/core",
+              "desc": "Revues et livres Cambridge University Press : sciences humaines, sciences sociales, droit. Contenu partiel libre."
+            },
+            {
+              "name": "Persée",
+              "url": "https://www.persee.fr",
+              "desc": "Revues françaises de sciences humaines numérisées : 800+ titres en accès libre, de 1860 à aujourd'hui."
+            },
+            {
+              "name": "OpenEdition",
+              "url": "https://www.openedition.org",
+              "desc": "Portail de sciences humaines en open access : Revues.org, Hypotheses (carnets), Calenda (agenda), OpenEdition Books."
+            },
+            {
+              "name": "DOAJ — Directory of Open Access Journals",
+              "url": "https://doaj.org",
+              "desc": "Répertoire de 20 000+ revues scientifiques en accès libre : sciences humaines, sciences sociales, sciences exactes."
+            }
+          ]
+        },
+        {
+          "name": "Philosophie & Religion",
+          "resources": [
+            {
+              "name": "Internet Encyclopedia of Philosophy",
+              "url": "https://www.iep.utm.edu",
+              "desc": "Encyclopédie philosophique peer-reviewed gratuite : articles détaillés sur philosophes, courants, concepts. Alternative au SEP."
+            },
+            {
+              "name": "Catholic Encyclopedia",
+              "url": "https://www.newadvent.org/cathen/",
+              "desc": "Encyclopédie catholique de 1917 numérisée : théologie scolastique, histoire de l'Église, biographies de saints, liturgie."
+            },
+            {
+              "name": "Sefaria",
+              "url": "https://www.sefaria.org",
+              "desc": "Bibliothèque de textes juifs : Torah, Talmud, Midrash, Kabbale, codes. Texte hébreu avec traductions, commentaires liés."
+            },
+            {
+              "name": "Gateways to Babylon",
+              "url": "https://www.gatewaystobabylon.com",
+              "desc": "Mythologie et religion mésopotamiennes : textes cunéiformes traduits, cosmogonies sumériennes, rituels assyriens."
+            },
+            {
+              "name": "Tertullian Project",
+              "url": "https://www.tertullian.org",
+              "desc": "Pères de l'Église en ligne : Tertullien, Origène, Cyrille, textes patristiques grecs et latins avec traductions."
+            }
+          ]
+        },
+        {
+          "name": "Anthropologie & Ethnographie",
+          "resources": [
+            {
+              "name": "Human Relations Area Files — Yale",
+              "url": "https://hraf.yale.edu",
+              "desc": "eHRAF : base de données ethnographiques transculturelles. 400+ cultures documentées pour comparaison anthropologique."
+            },
+            {
+              "name": "D-Maps",
+              "url": "https://www.d-maps.com",
+              "desc": "Cartes vectorielles libres pour tous pays, régions, continents. Format SVG, EPS, PDF pour usage académique."
+            },
+            {
+              "name": "AJOL — African Journals Online",
+              "url": "https://ajol.info",
+              "desc": "Revues africaines en accès libre : sciences humaines, sociales et exactes. 500+ titres de 35 pays africains."
+            },
+            {
+              "name": "Digital Library of the Caribbean",
+              "url": "https://dloc.com",
+              "desc": "Archives caribéennes numérisées : journaux historiques, cartes, photographies, documents officiels des Caraïbes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "economie",
+      "name": "Économie",
+      "groups": [
+        {
+          "name": "Données Économiques",
+          "resources": [
+            {
+              "name": "FRED",
+              "url": "https://fred.stlouisfed.org",
+              "desc": "800 000+ séries économiques de la Fed : PIB, inflation, emploi, taux. API gratuite pour intégration."
+            },
+            {
+              "name": "Our World in Data",
+              "url": "https://ourworldindata.org",
+              "desc": "Visualisations de données mondiales sur longue durée : développement, santé, énergie, environnement. Open source."
+            },
+            {
+              "name": "NBER Working Papers",
+              "url": "https://www.nber.org/papers",
+              "desc": "Recherche économique de pointe : 30 000+ papers pré-publication par économistes de Harvard, MIT, Stanford."
+            }
+          ]
+        },
+        {
+          "name": "Crypto & DeFi (Avancé)",
+          "resources": [
+            {
+              "name": "DeFi Llama",
+              "url": "https://defillama.com",
+              "desc": "TVL (Total Value Locked) de tous protocoles DeFi, yields, bridges. Dashboard essentiel pour analyser la finance décentralisée."
+            },
+            {
+              "name": "Dune Analytics",
+              "url": "https://dune.com",
+              "desc": "Requêtes SQL sur blockchains : créez dashboards personnalisés, analysez transactions, MEV, comportements on-chain."
+            },
+            {
+              "name": "Rekt News",
+              "url": "https://rekt.news",
+              "desc": "Post-mortems de hacks crypto : analyses techniques d'exploits, leaderboard des plus gros vols, leçons de sécurité."
+            },
+            {
+              "name": "Paradigm Research",
+              "url": "https://www.paradigm.xyz/writing",
+              "desc": "Recherche fondamentale sur mécanismes DeFi : AMM, MEV, token design, cryptographie appliquée par top VC crypto."
+            }
+          ]
+        },
+        {
+          "name": "Crypto — Recherche & Données",
+          "resources": [
+            {
+              "name": "Messari",
+              "url": "https://messari.io",
+              "desc": "Recherche crypto institutionnelle : rapports sectoriels, métriques on-chain, profiles de protocoles, screeners."
+            },
+            {
+              "name": "Glassnode",
+              "url": "https://glassnode.com",
+              "desc": "Métriques on-chain avancées : MVRV, SOPR, analyse de holders, flux d'échanges. Standard pour l'analyse Bitcoin."
+            },
+            {
+              "name": "The Block Data",
+              "url": "https://www.theblock.co/data",
+              "desc": "Dashboards de données crypto : volumes DEX, TVL historique, stablecoins, NFT, funding rounds."
+            },
+            {
+              "name": "Token Terminal",
+              "url": "https://tokenterminal.com",
+              "desc": "Métriques financières pour protocoles : revenus, P/S ratio, fully diluted valuation. Analyse fondamentale crypto."
+            },
+            {
+              "name": "CryptoFees",
+              "url": "https://cryptofees.info",
+              "desc": "Frais générés par protocoles : comparaison quotidienne des revenus de Ethereum, Uniswap, Lido, etc."
+            },
+            {
+              "name": "Etherscan",
+              "url": "https://etherscan.io",
+              "desc": "Explorateur Ethereum : transactions, contrats, tokens, gas tracker. Équivalents pour autres EVM chains."
+            },
+            {
+              "name": "Ethereum Whitepaper",
+              "url": "https://ethereum.org/en/whitepaper",
+              "desc": "Document fondateur de Vitalik Buterin : smart contracts, EVM, vision originale de la plateforme."
+            }
+          ]
+        },
+        {
+          "name": "Commodités & Trading Houses",
+          "resources": [
+            {
+              "name": "Glencore",
+              "url": "https://www.glencore.com",
+              "desc": "Plus grand négociant de matières premières : métaux, charbon, pétrole. Rapports annuels sur marchés globaux des commodités."
+            },
+            {
+              "name": "Trafigura",
+              "url": "https://www.trafigura.com",
+              "desc": "Trading house basé à Genève/Singapour : pétrole, métaux, publications sur logistique et marchés émergents."
+            },
+            {
+              "name": "Vitol",
+              "url": "https://www.vitol.com",
+              "desc": "Premier négociant pétrolier mondial : analyses de marché énergétique, transition vers LNG et renouvelables."
+            },
+            {
+              "name": "Argus Media",
+              "url": "https://www.argusmedia.com",
+              "desc": "Prix de référence des commodités : indices pétroliers, métaux, agriculture. Benchmarks utilisés dans contrats mondiaux."
+            }
+          ]
+        },
+        {
+          "name": "VC & Private Equity",
+          "resources": [
+            {
+              "name": "Crunchbase",
+              "url": "https://www.crunchbase.com",
+              "desc": "Base de données startups : levées de fonds, investisseurs, acquisitions, profils de fondateurs."
+            },
+            {
+              "name": "Dealroom",
+              "url": "https://dealroom.co",
+              "desc": "Écosystèmes startup européens : données sur ventures, valorisations, rapports par secteur et géographie."
+            },
+            {
+              "name": "First Round Review",
+              "url": "https://review.firstround.com",
+              "desc": "Conseils opérationnels de First Round Capital : interviews de fondateurs, tactiques de scaling, management."
+            }
+          ]
+        },
+        {
+          "name": "Données Macroéconomiques",
+          "resources": [
+            {
+              "name": "Our World in Data",
+              "url": "https://ourworldindata.org",
+              "desc": "Visualisations de données mondiales : pauvreté, santé, énergie, éducation. Sources primaires liées, méthodologie transparente."
+            },
+            {
+              "name": "World Bank Open Data",
+              "url": "https://data.worldbank.org",
+              "desc": "Indicateurs de développement mondial : PIB, démographie, santé, éducation pour 200+ pays depuis 1960. API disponible."
+            },
+            {
+              "name": "OECD.Stat",
+              "url": "https://stats.oecd.org",
+              "desc": "Statistiques des pays membres OCDE : commerce, fiscalité, éducation, santé, environnement. Comparaisons internationales."
+            },
+            {
+              "name": "Eurostat",
+              "url": "https://ec.europa.eu/eurostat",
+              "desc": "Statistiques officielles de l'Union Européenne : comptes nationaux, commerce extérieur, marché du travail, prix."
+            },
+            {
+              "name": "IMF Data",
+              "url": "https://www.imf.org/en/Data",
+              "desc": "FMI : World Economic Outlook, balance des paiements, positions de réserves, dette publique mondiale."
+            },
+            {
+              "name": "UN Data",
+              "url": "https://data.un.org",
+              "desc": "Portail statistique des Nations Unies : agrégateur de 60+ bases de données d'agences ONU (FAO, ILO, WHO, UNESCO)."
+            },
+            {
+              "name": "BIS Statistics",
+              "url": "https://www.bis.org/statistics/",
+              "desc": "Banque des Règlements Internationaux : statistiques bancaires mondiales, marchés dérivés, dette internationale."
+            }
+          ]
+        },
+        {
+          "name": "Finance & Marchés",
+          "resources": [
+            {
+              "name": "SSRN",
+              "url": "https://www.ssrn.com",
+              "desc": "Preprints en économie, finance, droit, sciences sociales. Première archive de working papers en finance mondiale."
+            },
+            {
+              "name": "NBER Working Papers",
+              "url": "https://www.nber.org/papers",
+              "desc": "Bureau National de Recherche Économique : working papers des économistes académiques les plus influents des États-Unis."
+            },
+            {
+              "name": "RePEc",
+              "url": "https://www.repec.org",
+              "desc": "Research Papers in Economics : 4+ millions de documents économiques, working papers, articles de revues. Agrégateur mondial."
+            }
+          ]
+        },
+        {
+          "name": "Commerce International & Développement",
+          "resources": [
+            {
+              "name": "UN Comtrade",
+              "url": "https://comtrade.un.org",
+              "desc": "Base de données du commerce mondial : flux d'importations/exportations par pays et produit depuis 1962. Standard pour l'économie internationale."
+            },
+            {
+              "name": "WITS — World Bank",
+              "url": "https://wits.worldbank.org",
+              "desc": "Données tarifaires et commerciales mondiales : droits de douane, accords préférentiels, analyse des politiques commerciales."
+            },
+            {
+              "name": "WTO Statistics",
+              "url": "https://www.wto.org/english/res_e/statis_e/statis_e.htm",
+              "desc": "Statistiques du commerce mondial de l'OMC : flux, tarifs, différends commerciaux, profils par pays membre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "informatique",
+      "name": "Informatique",
+      "groups": [
+        {
+          "name": "OSINT & Investigation",
+          "resources": [
+            {
+              "name": "Wayback Machine",
+              "url": "https://web.archive.org",
+              "desc": "Archive du web depuis 1996 : retrouvez pages supprimées, sites disparus et versions historiques de n'importe quel URL."
+            },
+            {
+              "name": "OpenCorporates",
+              "url": "https://opencorporates.com",
+              "desc": "Base de données de 200+ millions d'entreprises mondiales : registres, dirigeants, structures, filiales et connexions."
+            },
+            {
+              "name": "North Data",
+              "url": "https://www.northdata.com",
+              "desc": "Entreprises allemandes et européennes avec graphes de relations : réseaux de dirigeants, historique des mandats, connexions."
+            },
+            {
+              "name": "Shodan",
+              "url": "https://www.shodan.io",
+              "desc": "Moteur de recherche pour appareils connectés : serveurs exposés, caméras, systèmes industriels, IoT vulnérables."
+            },
+            {
+              "name": "TinEye",
+              "url": "https://tineye.com",
+              "desc": "Recherche inversée d'images : retrouvez l'origine d'une photo, ses modifications et toutes ses apparitions sur le web."
+            },
+            {
+              "name": "WikiLeaks",
+              "url": "https://wikileaks.org",
+              "desc": "Publications de documents classifiés et fuites : câbles diplomatiques, archives de surveillance, révélations d'intérêt public."
+            },
+            {
+              "name": "Sci-Hub",
+              "url": "https://sci-hub.se",
+              "desc": "Accès aux articles scientifiques derrière paywall : 85+ millions de papers académiques, recherche par DOI."
+            },
+            {
+              "name": "Library Genesis",
+              "url": "https://libgen.is",
+              "desc": "Bibliothèque d'ombre massive : livres académiques, manuels, fiction, magazines, comics. Miroirs multiples."
+            },
+            {
+              "name": "Bellingcat",
+              "url": "https://bellingcat.com",
+              "desc": "Collectif d'investigation OSINT : méthodologies, tutoriels, enquêtes géolocalisées, analyse d'images satellites."
+            },
+            {
+              "name": "OSINT Framework",
+              "url": "https://osintframework.com",
+              "desc": "Arborescence d'outils OSINT : réseaux sociaux, domaines, emails, géolocalisation, dark web, métadonnées."
+            },
+            {
+              "name": "IntelTechniques",
+              "url": "https://inteltechniques.com",
+              "desc": "Ressources OSINT de Michael Bazzell : outils de recherche, workbooks, podcasts, méthodologies d'investigation."
+            }
+          ]
+        },
+        {
+          "name": "Culture Hacker",
+          "resources": [
+            {
+              "name": "Hacker News",
+              "url": "https://news.ycombinator.com",
+              "desc": "Forum de Y Combinator : tech, startups, programmation. Discussions de qualité, communauté de fondateurs et ingénieurs."
+            },
+            {
+              "name": "Lobsters",
+              "url": "https://lobste.rs",
+              "desc": "Alternative invite-only à HN : plus technique, moins startup. Focus sur programmation, systèmes, sécurité."
+            },
+            {
+              "name": "Gwern.net",
+              "url": "https://gwern.net",
+              "desc": "Essais de recherche personnelle : ML/IA, statistiques, crypto, culture internet. Analyses quantitatives rigoureuses."
+            },
+            {
+              "name": "Fabrice Bellard",
+              "url": "https://bellard.org",
+              "desc": "Créateur de QEMU, FFmpeg, TinyCC. Démos techniques impressionnantes : JSLinux, QuickJS, records de calcul de Pi."
+            }
+          ]
+        },
+        {
+          "name": "Deep Technical",
+          "resources": [
+            {
+              "name": "Compiler Explorer",
+              "url": "https://godbolt.org",
+              "desc": "Visualisez l'assembleur généré par compilateurs : comparez GCC/Clang/MSVC, optimisations, architectures CPU."
+            },
+            {
+              "name": "Crafting Interpreters",
+              "url": "https://craftinginterpreters.com",
+              "desc": "Livre gratuit sur implémentation de langages : construisez deux interpréteurs complets, bytecode VM incluse."
+            },
+            {
+              "name": "Lambda the Ultimate",
+              "url": "http://lambda-the-ultimate.org",
+              "desc": "Blog communautaire sur théorie des langages de programmation : papers académiques, PL research, sémantique."
+            },
+            {
+              "name": "Project Nayuki",
+              "url": "https://www.nayuki.io",
+              "desc": "Implémentations propres d'algorithmes : compression, cryptographie, mathématiques. Code exemplaire et explications."
+            }
+          ]
+        },
+        {
+          "name": "Mathématiques & Théorie",
+          "resources": [
+            {
+              "name": "nLab",
+              "url": "https://ncatlab.org",
+              "desc": "Wiki de théorie des catégories et mathématiques supérieures : ∞-catégories, HoTT, physique mathématique."
+            },
+            {
+              "name": "Stacks Project",
+              "url": "https://stacks.math.columbia.edu",
+              "desc": "Traité open-source de géométrie algébrique : 7 000+ pages, schémas, faisceaux, cohomologie. Collaboratif."
+            },
+            {
+              "name": "OEIS",
+              "url": "https://oeis.org",
+              "desc": "Encyclopédie des suites d'entiers : 360 000+ suites avec formules, références, code. Outil essentiel en combinatoire."
+            },
+            {
+              "name": "Wolfram Alpha",
+              "url": "https://www.wolframalpha.com",
+              "desc": "Moteur de calcul symbolique : résolution d'équations, graphiques, données factuelles, conversions."
+            },
+            {
+              "name": "MathWorld",
+              "url": "https://mathworld.wolfram.com",
+              "desc": "Encyclopédie mathématique d'Eric Weisstein : 13 000+ entrées détaillées, formules, visualisations interactives."
+            },
+            {
+              "name": "Terry Tao's Blog",
+              "url": "https://terrytao.wordpress.com",
+              "desc": "Blog du Fields Medalist : analyse, combinatoire, notes de cours, problèmes ouverts, expository writing."
+            },
+            {
+              "name": "MathOverflow",
+              "url": "https://mathoverflow.net",
+              "desc": "Q&A pour mathématiciens professionnels : questions de recherche, preuves, conjectures, références."
+            },
+            {
+              "name": "Cut the Knot",
+              "url": "https://www.cut-the-knot.org",
+              "desc": "Mathématiques interactives d'Alexander Bogomolny : puzzles, preuves visuelles, géométrie, probabilités."
+            }
+          ]
+        },
+        {
+          "name": "Cryptographie & Sécurité",
+          "resources": [
+            {
+              "name": "NIST CSRC",
+              "url": "https://csrc.nist.gov",
+              "desc": "Standards cryptographiques américains : FIPS, publications spéciales, algorithmes approuvés. Référence pour la sécurité informatique."
+            },
+            {
+              "name": "IACR ePrint",
+              "url": "https://eprint.iacr.org",
+              "desc": "Archive de recherche en cryptologie : preprints des meilleurs chercheurs, protocoles, preuves de sécurité."
+            },
+            {
+              "name": "Schneier on Security",
+              "url": "https://www.schneier.com",
+              "desc": "Bruce Schneier : analyse de sécurité, cryptographie appliquée, politiques de surveillance. Référence depuis 25 ans."
+            }
+          ]
+        },
+        {
+          "name": "Mathématiques — Références",
+          "resources": [
+            {
+              "name": "NIST DLMF",
+              "url": "https://dlmf.nist.gov",
+              "desc": "Digital Library of Mathematical Functions : fonctions spéciales, formules, propriétés asymptotiques. Successeur des Tables d'Abramowitz."
+            },
+            {
+              "name": "ProofWiki",
+              "url": "https://proof.ethz.ch",
+              "desc": "Encyclopédie de preuves mathématiques formelles : théorèmes avec démonstrations étape par étape, définitions, corollaires."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metiers",
+      "name": "Métiers",
+      "groups": [
+        {
+          "name": "Construction & Menuiserie",
+          "resources": [
+            {
+              "name": "Fine Woodworking",
+              "url": "https://www.finewoodworking.com",
+              "desc": "Magazine de référence : techniques de menuiserie fine, assemblages traditionnels, finitions, projets de mobilier."
+            },
+            {
+              "name": "Lost Art Press",
+              "url": "https://lostartpress.com",
+              "desc": "Éditeur de livres sur woodworking traditionnel : établis, outils à main, ébénisterie 18e-19e siècle."
+            },
+            {
+              "name": "Building Science Corporation",
+              "url": "https://buildingscience.com",
+              "desc": "Science du bâtiment : gestion de l'humidité, enveloppe thermique, ventilation. Ressources techniques avancées."
+            },
+            {
+              "name": "Wood Database",
+              "url": "https://www.wood-database.com",
+              "desc": "Encyclopédie des essences de bois : propriétés mécaniques, travaillabilité, identification, toxicité."
+            }
+          ]
+        },
+        {
+          "name": "Forge & Métallurgie",
+          "resources": [
+            {
+              "name": "IForgeIron",
+              "url": "https://www.iforgeiron.com",
+              "desc": "Forum de forgerons : techniques de forge, construction de forges, projets pour débutants et avancés."
+            },
+            {
+              "name": "ABANA",
+              "url": "https://abana.org",
+              "desc": "Artist-Blacksmiths' Association : ressources, conférences, annuaire de forgerons, préservation des techniques."
+            }
+          ]
+        },
+        {
+          "name": "Agriculture & Permaculture",
+          "resources": [
+            {
+              "name": "ATTRA",
+              "url": "https://attra.ncat.org",
+              "desc": "Centre d'information sur agriculture durable : guides techniques, rotations, agroforesterie, élevage extensif."
+            },
+            {
+              "name": "Permaculture News",
+              "url": "https://www.permaculturenews.org",
+              "desc": "Actualités et techniques de permaculture : design, food forests, water harvesting, régénération des sols."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "groups": [
+        {
+          "name": "Design Japonais",
+          "resources": [
+            {
+              "name": "MUJI",
+              "url": "https://www.muji.com",
+              "desc": "Design minimaliste japonais : mobilier, vêtements, papeterie. Philosophie \"sans marque\" et fonctionnalité pure."
+            },
+            {
+              "name": "BEAMS",
+              "url": "https://www.beams.co.jp",
+              "desc": "Select shop japonais influent : mode, lifestyle, collaborations avec artisans. Curation pointue depuis 1976."
+            },
+            {
+              "name": "Tokyo Bungu",
+              "url": "https://www.bungu-do.com",
+              "desc": "Papeterie japonaise de qualité : stylos, carnets, instruments d'écriture. Marques comme Pilot, Sailor, Midori."
+            }
+          ]
+        },
+        {
+          "name": "Design Européen",
+          "resources": [
+            {
+              "name": "Vitra",
+              "url": "https://www.vitra.com",
+              "desc": "Mobilier design suisse : classiques de Eames, Panton, Prouvé. Musée du design et archive."
+            },
+            {
+              "name": "Manufactum",
+              "url": "https://www.manufactum.de",
+              "desc": "Produits durables allemands : outils, cuisine, jardin. \"Les bonnes choses\" - qualité artisanale traditionnelle."
+            },
+            {
+              "name": "Merci Paris",
+              "url": "https://www.merci-merci.com",
+              "desc": "Concept store parisien : mode, déco, librairie. Curation éclectique, profits reversés à Madagascar."
+            },
+            {
+              "name": "Labour and Wait",
+              "url": "https://www.labour-and-wait.co.uk",
+              "desc": "Londres : objets utilitaires intemporels. Brosserie, quincaillerie, textile. Design fonctionnel durable."
+            }
+          ]
+        },
+        {
+          "name": "Vintage & Seconde Main",
+          "resources": [
+            {
+              "name": "1stDibs",
+              "url": "https://www.1stdibs.com",
+              "desc": "Antiquités et design vintage haut de gamme : mobilier 20e siècle, bijoux, art. Marchands vérifiés."
+            },
+            {
+              "name": "Pamono",
+              "url": "https://www.pamono.com",
+              "desc": "Design vintage européen : mobilier mid-century, éclairage, objets de collection. Focus designer."
+            },
+            {
+              "name": "Selency",
+              "url": "https://www.selency.com",
+              "desc": "Brocante en ligne française : meubles vintage, déco, luminaires. Prix accessibles, vendeurs particuliers."
+            }
+          ]
+        },
+        {
+          "name": "Vêtements Vintage — Lisbonne",
+          "resources": [
+            {
+              "name": "A Outra Face da Lua",
+              "url": "https://www.aoutrafacedualua.com",
+              "desc": "Institution du vintage lisbonnite près de l'Intendente : robes années 50-70, tapisseries, disques. Dense, dense, dense."
+            },
+            {
+              "name": "Humana Portugal",
+              "url": "https://www.humana-portugal.org",
+              "desc": "Réseau de friperies solidaires à Lisbonne : tarifs accessibles, rotation de stock rapide. ONG international."
+            },
+            {
+              "name": "Kinda Store",
+              "url": "https://www.kindastore.pt",
+              "desc": "Vintage et seconde main sélectionné à Lisbonne : pièces curatées, mix décennies 80-00."
+            }
+          ]
+        },
+        {
+          "name": "Vêtements Vintage — Paris",
+          "resources": [
+            {
+              "name": "Kiliwatch",
+              "url": "https://espacekiliwatch.fr",
+              "desc": "Institution parisienne du Sentier depuis 1991 : vintage américain, workwear, denim. Références militaires et sportswear."
+            },
+            {
+              "name": "Free'P'Star",
+              "url": "https://www.freepstar.com",
+              "desc": "Vintage accessible au Marais et Châtelet : prix raisonnables, bon turnover. Idéal pour trouver des basiques rétro."
+            },
+            {
+              "name": "Episode",
+              "url": "https://www.episode.eu",
+              "desc": "Chaîne vintage européenne avec grande surface à Paris : sélection volumineuse, bon rapport qualité/prix."
+            },
+            {
+              "name": "Thanx God I'm A VIP",
+              "url": "https://www.thanxgod.com",
+              "desc": "Vintage designer haut de gamme au Marais : Chanel, Dior, Saint Laurent. Pièces collector et rare finds."
+            }
+          ]
+        },
+        {
+          "name": "Vêtements Vintage — Berlin",
+          "resources": [
+            {
+              "name": "Humana Berlin",
+              "url": "https://www.humana-second-hand.de",
+              "desc": "Chaîne emblématique berlinoise : plusieurs grandes surfaces (Mitte, Prenzlauer Berg, Friedrichshain). Prix fixes, volume immense."
+            },
+            {
+              "name": "Garage",
+              "url": "https://garagecompany.de",
+              "desc": "Institution de Wilmersdorf depuis les années 80 : vintage au kilo, grandes quantités. Vente au poids le week-end."
+            },
+            {
+              "name": "Prachtmädchen",
+              "url": "https://www.prachtmaedchen.de",
+              "desc": "Vintage féminin curaté à Prenzlauer Berg : robes imprimées, manteaux de laine, accessoires. Sélection soignée."
+            },
+            {
+              "name": "Kleidermarkt",
+              "url": "https://www.kleidermarkt.de",
+              "desc": "Marchés vintage itinérants à Berlin et dans toute l'Allemagne. Calendrier des foires, vente de particuliers."
+            }
+          ]
+        },
+        {
+          "name": "Vélos & Instruments",
+          "resources": [
+            {
+              "name": "Condor Cycles",
+              "url": "https://www.condorcycles.com",
+              "desc": "Vélos sur mesure britanniques depuis 1948 : cadres acier faits main, géométrie personnalisée."
+            },
+            {
+              "name": "Cicli Corsa",
+              "url": "https://www.cicli-corsa.com",
+              "desc": "Vélos italiens artisanaux : Colnago, De Rosa, Cinelli. Composants vintage, roues artisanales."
+            },
+            {
+              "name": "Thomann",
+              "url": "https://www.thomann.de",
+              "desc": "Plus grand magasin d'instruments en Europe : guitares, synthés, studio, prix compétitifs."
+            },
+            {
+              "name": "Reverb",
+              "url": "https://reverb.com",
+              "desc": "Marketplace d'instruments vintage et neufs : guitares, pédales, synthétiseurs. Communauté de musiciens."
+            }
+          ]
+        },
+        {
+          "name": "Outils & Recherche",
+          "resources": [
+            {
+              "name": "Google Fonts",
+              "url": "https://fonts.google.com",
+              "desc": "Bibliothèque de polices libres : 1 400+ familles typographiques optimisées pour le web. Variable fonts."
+            },
+            {
+              "name": "Fonts In Use",
+              "url": "https://fontsinuse.com",
+              "desc": "Archive de typographie appliquée : identifications, contexte historique, exemples d'usage professionnel."
+            },
+            {
+              "name": "AIGA Design Archives",
+              "url": "https://designarchives.aiga.org",
+              "desc": "Archives du design graphique américain : affiches, identités visuelles, packaging primés depuis 1924."
+            },
+            {
+              "name": "Are.na",
+              "url": "https://www.are.na",
+              "desc": "Plateforme de curation collaborative : collections visuelles, recherche créative, alternative non-algorithmique."
+            }
+          ]
+        },
+        {
+          "name": "Histoire du Design & Typographie",
+          "resources": [
+            {
+              "name": "Typewolf",
+              "url": "https://www.typewolf.com",
+              "desc": "Typographie web : sites en vedette, recommandations de pairings, ressources sur les fontes. Référence pour le design éditorial."
+            },
+            {
+              "name": "I Love Typography",
+              "url": "https://ilovetypography.com",
+              "desc": "Histoire de la typographie, anatomie des caractères, design de fontes, calligraphie. Approche académique et esthétique."
+            },
+            {
+              "name": "Design Museum London",
+              "url": "https://www.designmuseum.org/collection",
+              "desc": "Collection numérique du Design Museum : objets industriels, graphisme, mode, architecture. Contexte historique et critique."
+            },
+            {
+              "name": "Bauhaus-Archiv Berlin",
+              "url": "https://www.bauhaus-archiv.de/en/collection/",
+              "desc": "Archives numérisées du Bauhaus : œuvres de Klee, Kandinsky, Moholy-Nagy, typographie, design industriel 1919-1933."
+            },
+            {
+              "name": "MoMA Collection",
+              "url": "https://www.moma.org/collection/",
+              "desc": "Design et arts visuels modernes : affiche, produit industriel, architecture, graphisme. Base de données interrogeable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "groups": [
+        {
+          "name": "Trains",
+          "resources": [
+            {
+              "name": "Seat61",
+              "url": "https://www.seat61.com",
+              "desc": "Guide du voyage en train : itinéraires mondiaux, réservations, conseils pratiques. Alternative à l'avion."
+            },
+            {
+              "name": "Interrail",
+              "url": "https://www.interrail.eu",
+              "desc": "Pass ferroviaires européens : planification d'itinéraires, réservations de trains de nuit, tarifs."
+            },
+            {
+              "name": "SNCF Connect",
+              "url": "https://www.sncf-connect.com",
+              "desc": "Trains français : TGV, Intercités, TER. Réservations, cartes de réduction, abonnements."
+            },
+            {
+              "name": "Deutsche Bahn",
+              "url": "https://www.bahn.de",
+              "desc": "Trains allemands et européens : ICE, IC, connections internationales. Planificateur d'itinéraires."
+            },
+            {
+              "name": "ÖBB",
+              "url": "https://www.oebb.at",
+              "desc": "Chemins de fer autrichiens : Railjet, Nightjet trains de nuit vers toute l'Europe. Sparschiene offres."
+            },
+            {
+              "name": "RENFE",
+              "url": "https://www.renfe.com",
+              "desc": "Trains espagnols : AVE haute vitesse, Cercanías, connections vers Portugal et France."
+            },
+            {
+              "name": "CP Portugal",
+              "url": "https://www.cp.pt",
+              "desc": "Chemins de fer portugais : Alfa Pendular, Intercidades, réseau urbain de Lisbonne et Porto."
+            },
+            {
+              "name": "Japan Rail Pass",
+              "url": "https://www.jrpass.com",
+              "desc": "Pass JR pour touristes : Shinkansen illimité, trains régionaux, information sur le réseau japonais."
+            }
+          ]
+        },
+        {
+          "name": "Avions",
+          "resources": [
+            {
+              "name": "Google Flights",
+              "url": "https://www.google.com/flights",
+              "desc": "Comparateur de vols : calendrier des prix, exploration de destinations, alertes de prix."
+            },
+            {
+              "name": "Skyscanner",
+              "url": "https://www.skyscanner.com",
+              "desc": "Méta-moteur de recherche vols : \"mois entier\" et \"partout\" pour trouver les meilleures offres."
+            },
+            {
+              "name": "Ryanair",
+              "url": "https://www.ryanair.com",
+              "desc": "Low-cost européen majeur : vols pas chers, réseau dense en Europe, bagages en supplément."
+            },
+            {
+              "name": "EasyJet",
+              "url": "https://www.easyjet.com",
+              "desc": "Low-cost britannique : réseau européen, tarifs flexibles, hubs à Gatwick, Genève, Paris."
+            },
+            {
+              "name": "TAP Air Portugal",
+              "url": "https://www.flytap.com",
+              "desc": "Compagnie portugaise : hub Lisbonne, connexions Brésil et Afrique, stopover gratuit au Portugal."
+            },
+            {
+              "name": "FlightConnections",
+              "url": "https://www.flightconnections.com",
+              "desc": "Carte des routes aériennes : visualisez tous les vols directs depuis un aéroport, compagnies disponibles."
+            }
+          ]
+        },
+        {
+          "name": "Ferries & Maritime",
+          "resources": [
+            {
+              "name": "Direct Ferries",
+              "url": "https://www.directferries.com",
+              "desc": "Comparateur de ferries mondial : routes méditerranéennes, baltiques, transmanche. Réservation multi-compagnies."
+            },
+            {
+              "name": "MarineTraffic",
+              "url": "https://www.marinetraffic.com",
+              "desc": "Suivi AIS des navires en temps réel : cargo, tankers, ferries, yachts. Données historiques et ports."
+            }
+          ]
+        },
+        {
+          "name": "Aviation — Réglementation & Recherche",
+          "resources": [
+            {
+              "name": "NASA Technical Reports Server",
+              "url": "https://ntrs.nasa.gov",
+              "desc": "800 000+ rapports techniques NASA : aérodynamique, propulsion, structures, missions spatiales. Accès libre."
+            },
+            {
+              "name": "FAA Regulations",
+              "url": "https://www.faa.gov/regulations_policies/",
+              "desc": "Réglementation aéronautique américaine : FARs, AIM, circulaires consultatifs. Standard international pour l'aviation civile."
+            },
+            {
+              "name": "OACI Publications",
+              "url": "https://www.icao.int/publications/",
+              "desc": "Standards et pratiques recommandées de l'aviation civile internationale : annexes à la Convention de Chicago."
+            }
+          ]
+        },
+        {
+          "name": "Maritime — Réglementation & Histoire",
+          "resources": [
+            {
+              "name": "IMO Knowledge Centre",
+              "url": "https://www.imo.org/en/KnowledgeCentre/",
+              "desc": "Organisation Maritime Internationale : conventions SOLAS, MARPOL, STCW. Réglementation maritime internationale."
+            },
+            {
+              "name": "National Maritime Museum Greenwich",
+              "url": "https://www.nmm.ac.uk/collections/",
+              "desc": "Collections maritimes britanniques : instruments de navigation, cartes, journaux de bord, portraits d'amiraux."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "droit",
+      "name": "Droit",
+      "groups": [
+        {
+          "name": "International",
+          "resources": [
+            {
+              "name": "Documents ONU",
+              "url": "https://documents.un.org",
+              "desc": "Résolutions, rapports, procès-verbaux de l'ONU. Système de référence : A/RES/XX/YY pour résolutions de l'AG."
+            },
+            {
+              "name": "Cour Internationale de Justice",
+              "url": "https://www.icj-cij.org",
+              "desc": "Arrêts et avis consultatifs de la CIJ. Jurisprudence internationale, différends entre États."
+            },
+            {
+              "name": "Documents OMC",
+              "url": "https://docs.wto.org",
+              "desc": "Accords commerciaux, décisions du panel de règlement des différends, rapports des organes de l'OMC."
+            }
+          ]
+        },
+        {
+          "name": "Europe",
+          "resources": [
+            {
+              "name": "EUR-Lex",
+              "url": "https://eur-lex.europa.eu",
+              "desc": "Droit européen : règlements, directives, décisions. Format CELEX : 32016R0679 pour GDPR."
+            },
+            {
+              "name": "CURIA",
+              "url": "https://curia.europa.eu",
+              "desc": "Jurisprudence de la CJUE : arrêts, conclusions des avocats généraux. Citation ECLI."
+            },
+            {
+              "name": "HUDOC",
+              "url": "https://hudoc.echr.coe.int",
+              "desc": "Base de données de la CEDH : jurisprudence des droits de l'homme, décisions et arrêts."
+            }
+          ]
+        },
+        {
+          "name": "États-Unis",
+          "resources": [
+            {
+              "name": "Congress.gov",
+              "url": "https://www.congress.gov",
+              "desc": "Législation américaine : bills, Public Laws, U.S. Code. Suivi du processus législatif."
+            },
+            {
+              "name": "SEC EDGAR",
+              "url": "https://www.sec.gov/edgar",
+              "desc": "Filings des sociétés cotées US : 10-K (annuel), 10-Q (trimestriel), 8-K (événements), S-1 (IPO)."
+            },
+            {
+              "name": "Cornell LII",
+              "url": "https://www.law.cornell.edu",
+              "desc": "Legal Information Institute : U.S. Code, CFR, Constitution annotée, encyclopédie juridique gratuite."
+            }
+          ]
+        },
+        {
+          "name": "Droit National",
+          "resources": [
+            {
+              "name": "Légifrance",
+              "url": "https://www.legifrance.gouv.fr",
+              "desc": "Droit français officiel : codes, lois, décrets, jurisprudence. Journal officiel et consolidations."
+            },
+            {
+              "name": "Gesetze im Internet",
+              "url": "https://www.gesetze-im-internet.de",
+              "desc": "Lois allemandes fédérales en texte intégral : BGB, StGB, GG. Versions consolidées officielles."
+            },
+            {
+              "name": "BOE España",
+              "url": "https://www.boe.es",
+              "desc": "Boletín Oficial del Estado : législation espagnole, décrets royaux, traités. Base de données consolidée."
+            }
+          ]
+        },
+        {
+          "name": "Bases Juridiques Nationales — Suppléments",
+          "resources": [
+            {
+              "name": "DRE — Diário da República Electrónico",
+              "url": "https://www.dre.pt",
+              "desc": "Journal officiel portugais numérique : législation, jurisprudence, diplomas legais depuis 1910. Recherche plein texte."
+            },
+            {
+              "name": "BAILII — British & Irish Legal",
+              "url": "https://www.bailii.org",
+              "desc": "Jurisprudence britannique et irlandaise : House of Lords, Court of Appeal, High Court depuis 1996. Accès libre."
+            },
+            {
+              "name": "WorldLII",
+              "url": "https://worldlii.org",
+              "desc": "World Legal Information Institute : jurisprudence de 120+ juridictions mondiales. Portail de droit comparé."
+            },
+            {
+              "name": "Tribunal Fédéral Suisse",
+              "url": "https://www.bger.ch/ext/eurospider/live/fr/php/aza/http/index.php",
+              "desc": "Jurisprudence du Tribunal fédéral depuis 1954 : arrêts en allemand, français, italien. Droit civil comparé."
+            }
+          ]
+        },
+        {
+          "name": "Droit Européen — Suppléments",
+          "resources": [
+            {
+              "name": "Commission de Venise",
+              "url": "https://www.venice.coe.int/webforms/documents/",
+              "desc": "Avis constitutionnels du Conseil de l'Europe : référence pour le constitutionnalisme démocratique, État de droit, droits fondamentaux."
+            }
+          ]
+        },
+        {
+          "name": "Droit International — Suppléments",
+          "resources": [
+            {
+              "name": "CPI — Cour Pénale Internationale",
+              "url": "https://icc-cpi.int",
+              "desc": "Jurisprudence de la CPI : affaires en cours, jugements, statut de Rome annoté, documentation sur le droit pénal international."
+            },
+            {
+              "name": "UN Treaty Collection",
+              "url": "https://legal.un.org",
+              "desc": "Traités multilatéraux déposés auprès du Secrétaire Général : textes, signatures, ratifications, réserves."
+            },
+            {
+              "name": "TIDM — Tribunal International du Droit de la Mer",
+              "url": "https://www.itlos.org/en/main/cases/list-of-cases/",
+              "desc": "Jurisprudence maritime internationale : affaires UNCLOS, délimitations, pêche, protection de l'environnement marin."
+            },
+            {
+              "name": "Jus Mundi",
+              "url": "https://jusmundi.com",
+              "desc": "Moteur de recherche en droit international public et arbitrage d'investissement : 300 000+ documents multilingues."
+            },
+            {
+              "name": "WorldCourts",
+              "url": "https://www.worldcourts.com",
+              "desc": "Miroir de jurisprudence internationale : CIJ, CPJI, tribunaux pénaux ad hoc en HTML navigable."
+            },
+            {
+              "name": "ICSID — Centre International de Règlement",
+              "url": "https://icsid.worldbank.org/cases",
+              "desc": "Arbitrage investissement-État : affaires CIRDI, sentences arbitrales, accords bilatéraux d'investissement."
+            }
+          ]
+        },
+        {
+          "name": "Droit Constitutionnel Comparé",
+          "resources": [
+            {
+              "name": "Constitute Project",
+              "url": "https://www.constituteproject.org",
+              "desc": "Constitutions du monde entier en anglais : 200+ textes constitutionnels, recherche thématique par clause et droit garanti."
+            },
+            {
+              "name": "CODICES — Commission de Venise",
+              "url": "https://www.concourts.net",
+              "desc": "Base de données de jurisprudence constitutionnelle mondiale : cours constitutionnelles de 100+ pays classées par thème."
+            },
+            {
+              "name": "GlobaLex — NYU",
+              "url": "https://globalex.law.nyu.edu",
+              "desc": "Guides de recherche juridique par pays : sources primaires, doctrine, institutions pour 100+ systèmes juridiques."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biotechnologie",
+      "name": "Sciences",
+      "groups": [
+        {
+          "name": "Bases de Données Biologiques",
+          "resources": [
+            {
+              "name": "PubMed NCBI",
+              "url": "https://pubmed.ncbi.nlm.nih.gov",
+              "desc": "35+ millions de citations biomédicales. Standard mondial pour la littérature en sciences de la vie."
+            },
+            {
+              "name": "UniProt",
+              "url": "https://www.uniprot.org",
+              "desc": "Base de données des protéines : séquences, fonctions, structure, annotations. Swiss-Prot et TrEMBL."
+            },
+            {
+              "name": "Protein Data Bank",
+              "url": "https://www.rcsb.org",
+              "desc": "Structures 3D de protéines, acides nucléiques, complexes. 200 000+ structures déposées."
+            },
+            {
+              "name": "Ensembl",
+              "url": "https://www.ensembl.org",
+              "desc": "Navigateur de génomes : annotations pour vertébrés, comparaison interspécifique, variants."
+            },
+            {
+              "name": "GenBank NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+              "desc": "Base de données de séquences génétiques : 10+ milliards de nucléotides annotés."
+            },
+            {
+              "name": "OMIM",
+              "url": "https://omim.org",
+              "desc": "Online Mendelian Inheritance in Man : catalogue des maladies génétiques humaines."
+            },
+            {
+              "name": "BioRxiv",
+              "url": "https://www.biorxiv.org",
+              "desc": "Preprints en biologie : génomique, biologie moléculaire, évolution. Avant publication."
+            },
+            {
+              "name": "Cochrane Library",
+              "url": "https://www.cochranelibrary.com",
+              "desc": "Revues systématiques de la littérature médicale. Standard de la médecine fondée sur les preuves."
+            }
+          ]
+        },
+        {
+          "name": "Chimie",
+          "resources": [
+            {
+              "name": "PubChem",
+              "url": "https://pubchem.ncbi.nlm.nih.gov",
+              "desc": "100+ millions de structures chimiques : bioessais, propriétés, données toxicologiques."
+            },
+            {
+              "name": "ChemSpider",
+              "url": "https://www.chemspider.com",
+              "desc": "100+ millions de structures : propriétés, spectres, sources bibliographiques. Royal Society of Chemistry."
+            },
+            {
+              "name": "SDBS — Spectral Database",
+              "url": "https://sdbs.db.aist.go.jp",
+              "desc": "Base de données spectrales pour composés organiques : NMR, IR, MS. Référence analytique japonaise."
+            },
+            {
+              "name": "NIST Chemistry WebBook",
+              "url": "https://webbook.nist.gov/chemistry/",
+              "desc": "Données thermodynamiques et spectroscopiques pour 80 000+ composés. Standard du NIST."
+            }
+          ]
+        },
+        {
+          "name": "Physique & Astrophysique",
+          "resources": [
+            {
+              "name": "NASA ADS",
+              "url": "https://ui.adsabs.harvard.edu",
+              "desc": "15+ millions de références astrophysiques : preprints arXiv, accès libre à la majorité des articles."
+            },
+            {
+              "name": "SIMBAD",
+              "url": "https://simbad.u-strasbg.fr",
+              "desc": "Base de données d'objets astronomiques : étoiles, galaxies, nébuleuses. Observatoire de Strasbourg."
+            },
+            {
+              "name": "NASA Exoplanet Archive",
+              "url": "https://exoplanetarchive.ipac.caltech.edu",
+              "desc": "Catalogue des exoplanètes confirmées : données de transit, vitesse radiale, caractéristiques stellaires."
+            },
+            {
+              "name": "LIGO Open Science",
+              "url": "https://www.gw-openscience.org",
+              "desc": "Données de détection d'ondes gravitationnelles. Archives publiques des interféromètres LIGO/Virgo."
+            }
+          ]
+        },
+        {
+          "name": "Sciences de la Terre",
+          "resources": [
+            {
+              "name": "USGS",
+              "url": "https://www.usgs.gov",
+              "desc": "US Geological Survey : catalogue de séismes, cartes géologiques, données topographiques mondiales."
+            },
+            {
+              "name": "NOAA Data",
+              "url": "https://www.ncei.noaa.gov",
+              "desc": "Données climatiques et océanographiques : températures historiques, ouragans, bathymétrie mondiale."
+            },
+            {
+              "name": "PANGAEA",
+              "url": "https://www.pangaea.de",
+              "desc": "Bibliothèque de données en sciences de la Terre et de l'environnement : 430 000+ datasets."
+            },
+            {
+              "name": "Copernicus Climate Change Service",
+              "url": "https://climate.copernicus.eu",
+              "desc": "Service européen de surveillance du climat : ERA5, projections, indices climatiques."
+            },
+            {
+              "name": "IPCC Reports",
+              "url": "https://www.ipcc.ch/reports/",
+              "desc": "Rapports du GIEC en accès libre : AR6, rapports spéciaux, données sous-jacentes."
+            }
+          ]
+        },
+        {
+          "name": "Médecine & Épidémiologie",
+          "resources": [
+            {
+              "name": "WHO Global Health Observatory",
+              "url": "https://www.who.int/data/gho",
+              "desc": "Indicateurs sanitaires mondiaux : mortalité, maladies, systèmes de santé. 1 000+ indicateurs."
+            },
+            {
+              "name": "IHME — Global Burden of Disease",
+              "url": "https://www.healthdata.org/gbd",
+              "desc": "Charge mondiale des maladies et traumatismes par pays et année. Référence épidémiologique."
+            },
+            {
+              "name": "ClinicalTrials.gov",
+              "url": "https://clinicaltrials.gov",
+              "desc": "450 000+ essais cliniques enregistrés : protocoles, résultats, phases. Référence mondiale."
+            },
+            {
+              "name": "CDC Wonder",
+              "url": "https://wonder.cdc.gov",
+              "desc": "Données de santé publique américaines : mortalité, natalité, maladies, environnement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osint",
+      "name": "OSINT & Recherche",
+      "groups": [
+        {
+          "name": "Archives Web",
+          "resources": [
+            {
+              "name": "Wayback Machine",
+              "url": "https://web.archive.org",
+              "desc": "Instantanés historiques de pages web, contenu supprimé, évolution de sites depuis 1996."
+            },
+            {
+              "name": "Archive.today",
+              "url": "https://archive.is",
+              "desc": "Capture de pages web instantanée, contournement de paywalls, préservation de contenu."
+            },
+            {
+              "name": "CachedView",
+              "url": "https://cachedview.com",
+              "desc": "Agrégateur de caches : Google, Coral, Wayback Machine en une recherche."
+            }
+          ]
+        },
+        {
+          "name": "Analyse d'Images",
+          "resources": [
+            {
+              "name": "TinEye",
+              "url": "https://tineye.com",
+              "desc": "Recherche d'images inversée, identification de l'origine, détection de modifications."
+            },
+            {
+              "name": "Google Images",
+              "url": "https://images.google.com",
+              "desc": "Recherche inversée, images similaires, identification de sujets."
+            },
+            {
+              "name": "Yandex Images",
+              "url": "https://yandex.com/images/",
+              "desc": "Recherche inversée performante pour visages et reconnaissance faciale."
+            },
+            {
+              "name": "FotoForensics",
+              "url": "https://fotoforensics.com",
+              "desc": "Analyse forensique d'images : ELA, métadonnées EXIF, détection de manipulation."
+            }
+          ]
+        },
+        {
+          "name": "Personnes & Entreprises",
+          "resources": [
+            {
+              "name": "OpenCorporates",
+              "url": "https://opencorporates.com",
+              "desc": "200+ millions d'entreprises mondiales, registres officiels agrégés, données de dirigeants."
+            },
+            {
+              "name": "GLEIF",
+              "url": "https://www.gleif.org",
+              "desc": "Recherche LEI (Legal Entity Identifier), identification d'entités légales internationales."
+            },
+            {
+              "name": "LinkedIn",
+              "url": "https://linkedin.com",
+              "desc": "Profils professionnels, organigrammes d'entreprises, parcours de carrière."
+            },
+            {
+              "name": "ICANN WHOIS",
+              "url": "https://lookup.icann.org",
+              "desc": "Propriété de domaines, informations de registrar, historique DNS."
+            }
+          ]
+        },
+        {
+          "name": "Recherche Technique",
+          "resources": [
+            {
+              "name": "Shodan",
+              "url": "https://www.shodan.io",
+              "desc": "Moteur de recherche IoT : appareils exposés, ports ouverts, services vulnérables."
+            },
+            {
+              "name": "Censys",
+              "url": "https://search.censys.io",
+              "desc": "Scan internet global, certificats TLS, infrastructure réseau exposée."
+            },
+            {
+              "name": "Hunter.io",
+              "url": "https://hunter.io",
+              "desc": "Recherche d'emails par domaine, vérification d'adresses, patterns d'entreprise."
+            },
+            {
+              "name": "Have I Been Pwned",
+              "url": "https://haveibeenpwned.com",
+              "desc": "Vérification de fuites de données, compromission d'emails et mots de passe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organisations",
+      "name": "Organisations Internationales",
+      "groups": [
+        {
+          "name": "Nations Unies",
+          "resources": [
+            {
+              "name": "Documents ONU",
+              "url": "https://documents.un.org",
+              "desc": "Résolutions (A/RES/xx/xx), rapports, procès-verbaux de l'Assemblée générale et du Conseil de sécurité."
+            },
+            {
+              "name": "Traités ONU",
+              "url": "https://treaties.un.org",
+              "desc": "Collection des traités internationaux, états de signature et ratification, réserves."
+            },
+            {
+              "name": "Cour Internationale de Justice",
+              "url": "https://www.icj-cij.org",
+              "desc": "Affaires contentieuses, avis consultatifs, jurisprudence depuis 1946."
+            }
+          ]
+        },
+        {
+          "name": "Commerce & Finance",
+          "resources": [
+            {
+              "name": "OMC Documents",
+              "url": "https://docs.wto.org",
+              "desc": "Accords commerciaux, différends, rapports de panels, GATT/GATS/TRIPS."
+            },
+            {
+              "name": "FMI Publications",
+              "url": "https://www.imf.org/en/Publications",
+              "desc": "Rapports économiques, consultations Article IV, perspectives économiques mondiales."
+            },
+            {
+              "name": "Banque Mondiale Data",
+              "url": "https://data.worldbank.org",
+              "desc": "Indicateurs de développement, statistiques par pays, données économiques mondiales."
+            },
+            {
+              "name": "BRI - Banque des Règlements Internationaux",
+              "url": "https://www.bis.org",
+              "desc": "Standards Bâle III/IV, régulation bancaire, statistiques monétaires internationales."
+            }
+          ]
+        },
+        {
+          "name": "Propriété Intellectuelle & Commerce",
+          "resources": [
+            {
+              "name": "OMPI",
+              "url": "https://www.wipo.int",
+              "desc": "Traités de propriété intellectuelle, système PCT, Protocole de Madrid, recherche brevets."
+            },
+            {
+              "name": "OCDE",
+              "url": "https://www.oecd.org",
+              "desc": "Recherche politique, BEPS (prix de transfert), études économiques par pays."
+            },
+            {
+              "name": "CCI - Chambre de Commerce Internationale",
+              "url": "https://iccwbo.org",
+              "desc": "Incoterms, règles d'arbitrage, UCP 600 (crédits documentaires)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "droit-regional",
+      "name": "Droit Régional",
+      "groups": [
+        {
+          "name": "Union Européenne",
+          "resources": [
+            {
+              "name": "EUR-Lex",
+              "url": "https://eur-lex.europa.eu",
+              "desc": "Droit de l'UE : références CELEX, Journal Officiel, règlements, directives, jurisprudence."
+            },
+            {
+              "name": "CURIA",
+              "url": "https://curia.europa.eu",
+              "desc": "Jurisprudence CJUE et Tribunal, identifiants ECLI, conclusions des avocats généraux."
+            },
+            {
+              "name": "HUDOC - CEDH",
+              "url": "https://hudoc.echr.coe.int",
+              "desc": "Jurisprudence de la Cour européenne des droits de l'homme, violations par article."
+            },
+            {
+              "name": "ABE - Autorité Bancaire Européenne",
+              "url": "https://www.eba.europa.eu",
+              "desc": "Régulation bancaire, CRD/CRR, stress tests, guidelines prudentielles."
+            },
+            {
+              "name": "ESMA",
+              "url": "https://www.esma.europa.eu",
+              "desc": "Régulation des marchés financiers : MiFID II, UCITS, AIFMD, prospectus."
+            }
+          ]
+        },
+        {
+          "name": "Royaume-Uni",
+          "resources": [
+            {
+              "name": "Legislation.gov.uk",
+              "url": "https://www.legislation.gov.uk",
+              "desc": "Acts of Parliament, Statutory Instruments, numéros de chapitre officiels."
+            },
+            {
+              "name": "Companies House",
+              "url": "https://find-and-update.company-information.service.gov.uk",
+              "desc": "Recherche d'entreprises UK, filings, directors, comptes annuels."
+            },
+            {
+              "name": "FCA Register",
+              "url": "https://register.fca.org.uk",
+              "desc": "Entreprises autorisées par la Financial Conduct Authority, permissions réglementaires."
+            },
+            {
+              "name": "BAILII",
+              "url": "https://www.bailii.org",
+              "desc": "Jurisprudence britannique et irlandaise, citations neutres [2024] UKSC 1."
+            },
+            {
+              "name": "National Archives UK",
+              "url": "https://www.nationalarchives.gov.uk",
+              "desc": "Documents historiques britanniques, archives gouvernementales."
+            }
+          ]
+        },
+        {
+          "name": "États-Unis",
+          "resources": [
+            {
+              "name": "Congress.gov",
+              "url": "https://www.congress.gov",
+              "desc": "Projets de loi, Public Laws, United States Code, historique législatif."
+            },
+            {
+              "name": "GovInfo",
+              "url": "https://www.govinfo.gov",
+              "desc": "Federal Register, Code of Federal Regulations (CFR), statuts fédéraux."
+            },
+            {
+              "name": "SEC EDGAR",
+              "url": "https://www.sec.gov/edgar",
+              "desc": "Filings boursiers : 10-K, 10-Q, 8-K, S-1, proxy statements, CIK identifiers."
+            },
+            {
+              "name": "PACER",
+              "url": "https://pacer.uscourts.gov",
+              "desc": "Dossiers des tribunaux fédéraux, actes de procédure, calendriers."
+            },
+            {
+              "name": "CourtListener",
+              "url": "https://www.courtlistener.com",
+              "desc": "Jurisprudence américaine gratuite, projet RECAP, opinions de cours fédérales."
+            },
+            {
+              "name": "Cornell LII",
+              "url": "https://www.law.cornell.edu",
+              "desc": "Encyclopédie juridique, USC, CFR, Wex legal dictionary."
+            },
+            {
+              "name": "Justia",
+              "url": "https://www.justia.com",
+              "desc": "Jurisprudence gratuite, statuts par État, annotations légales."
+            },
+            {
+              "name": "Yale Avalon Project",
+              "url": "https://avalon.law.yale.edu",
+              "desc": "Documents juridiques historiques américains et internationaux."
+            }
+          ]
+        },
+        {
+          "name": "France",
+          "resources": [
+            {
+              "name": "Légifrance",
+              "url": "https://www.legifrance.gouv.fr",
+              "desc": "Codes, lois, JORF, décrets, jurisprudence française officielle."
+            },
+            {
+              "name": "Cour de cassation",
+              "url": "https://www.courdecassation.fr",
+              "desc": "Jurisprudence civile et pénale, pourvois, doctrine."
+            }
+          ]
+        },
+        {
+          "name": "Allemagne",
+          "resources": [
+            {
+              "name": "Gesetze im Internet",
+              "url": "https://www.gesetze-im-internet.de",
+              "desc": "Législation fédérale allemande : BGB, HGB, AktG, GmbHG."
+            },
+            {
+              "name": "Bundesanzeiger",
+              "url": "https://www.bundesanzeiger.de",
+              "desc": "Journal officiel allemand, publications d'entreprises, comptes annuels."
+            },
+            {
+              "name": "Bundesverfassungsgericht",
+              "url": "https://www.bundesverfassungsgericht.de",
+              "desc": "Cour constitutionnelle fédérale, décisions fondamentales."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asie-pacifique",
+      "name": "Asie-Pacifique",
+      "groups": [
+        {
+          "name": "Chine",
+          "resources": [
+            {
+              "name": "国家企业信用信息公示系统 (GSXT)",
+              "url": "https://www.gsxt.gov.cn",
+              "desc": "Registre national des entreprises chinoises, informations de crédit, dirigeants."
+            },
+            {
+              "name": "巨潮资讯 (CNINFO)",
+              "url": "http://www.cninfo.com.cn",
+              "desc": "Filings des sociétés cotées chinoises, rapports annuels, annonces."
+            },
+            {
+              "name": "北大法宝 (PKULaw)",
+              "url": "https://www.pkulaw.com",
+              "desc": "Base de données juridique chinoise, législation, jurisprudence."
+            },
+            {
+              "name": "中国裁判文书网",
+              "url": "https://wenshu.court.gov.cn",
+              "desc": "Jugements des tribunaux chinois, jurisprudence civile/pénale/administrative."
+            },
+            {
+              "name": "证监会 (CSRC)",
+              "url": "http://www.csrc.gov.cn",
+              "desc": "Commission de régulation des valeurs mobilières, régulation boursière."
+            }
+          ]
+        },
+        {
+          "name": "Japon",
+          "resources": [
+            {
+              "name": "e-Gov法令検索",
+              "url": "https://elaws.e-gov.go.jp",
+              "desc": "Législation japonaise officielle, codes et règlements."
+            },
+            {
+              "name": "EDINET",
+              "url": "https://disclosure.edinet-fsa.go.jp",
+              "desc": "Filings des sociétés cotées japonaises, rapports annuels."
+            },
+            {
+              "name": "裁判所 (Courts Japan)",
+              "url": "https://www.courts.go.jp",
+              "desc": "Système judiciaire japonais, jurisprudence, procédures."
+            },
+            {
+              "name": "JPX (Japan Exchange)",
+              "url": "https://www.jpx.co.jp",
+              "desc": "Bourse de Tokyo, règles de cotation, données de marché."
+            }
+          ]
+        },
+        {
+          "name": "Corée du Sud",
+          "resources": [
+            {
+              "name": "법제처 (Korean Law)",
+              "url": "https://www.law.go.kr",
+              "desc": "Législation coréenne officielle, traductions anglaises disponibles."
+            },
+            {
+              "name": "DART (전자공시)",
+              "url": "https://dart.fss.or.kr",
+              "desc": "Système de divulgation électronique, filings des sociétés coréennes."
+            },
+            {
+              "name": "KRX",
+              "url": "http://www.krx.co.kr",
+              "desc": "Korea Exchange : KOSPI, KOSDAQ, données de marché."
+            }
+          ]
+        },
+        {
+          "name": "Singapour",
+          "resources": [
+            {
+              "name": "Singapore Statutes Online",
+              "url": "https://sso.agc.gov.sg",
+              "desc": "Législation de Singapour, Acts et subsidiary legislation."
+            },
+            {
+              "name": "ACRA BizFile",
+              "url": "https://www.bizfile.gov.sg",
+              "desc": "Registre des entreprises de Singapour, UEN, filings."
+            },
+            {
+              "name": "MAS",
+              "url": "https://www.mas.gov.sg",
+              "desc": "Monetary Authority of Singapore, régulation financière, VCC framework."
+            },
+            {
+              "name": "SGX",
+              "url": "https://www.sgx.com",
+              "desc": "Singapore Exchange, règles de cotation, données de marché."
+            }
+          ]
+        },
+        {
+          "name": "Hong Kong",
+          "resources": [
+            {
+              "name": "HK e-Legislation",
+              "url": "https://www.elegislation.gov.hk",
+              "desc": "Ordonnances de Hong Kong, numéros de chapitre (Cap.)."
+            },
+            {
+              "name": "ICRIS",
+              "url": "https://www.icris.cr.gov.hk",
+              "desc": "Registre des entreprises de Hong Kong, recherche CR."
+            },
+            {
+              "name": "HKEX",
+              "url": "https://www.hkex.com.hk",
+              "desc": "Hong Kong Exchange, Main Board, GEM, règles de cotation."
+            },
+            {
+              "name": "SFC",
+              "url": "https://www.sfc.hk",
+              "desc": "Securities and Futures Commission, régulation des marchés HK."
+            }
+          ]
+        },
+        {
+          "name": "Autres Juridictions Asiatiques",
+          "resources": [
+            {
+              "name": "Indonésie - AHU",
+              "url": "https://ahu.go.id",
+              "desc": "Registre des entreprises indonésiennes (PT). Régulateur : OJK."
+            },
+            {
+              "name": "Malaisie - SSM",
+              "url": "https://www.ssm.com.my",
+              "desc": "Companies Commission of Malaysia, Berhad, Sdn Bhd."
+            },
+            {
+              "name": "Thaïlande - DBD",
+              "url": "https://www.dbd.go.th",
+              "desc": "Department of Business Development, registre des entreprises thaïlandaises."
+            },
+            {
+              "name": "Vietnam - Registre",
+              "url": "https://dangkykinhdoanh.gov.vn",
+              "desc": "Registre des entreprises vietnamiennes, TNHH, Cổ phần."
+            },
+            {
+              "name": "Philippines - SEC",
+              "url": "https://www.sec.gov.ph",
+              "desc": "Securities and Exchange Commission, Corporation registry."
+            },
+            {
+              "name": "Inde - MCA21",
+              "url": "https://www.mca.gov.in",
+              "desc": "Ministry of Corporate Affairs, registre CIN, Pvt Ltd, Ltd."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moyen-orient",
+      "name": "Moyen-Orient & Golfe",
+      "groups": [
+        {
+          "name": "Émirats Arabes Unis",
+          "resources": [
+            {
+              "name": "UAE Ministry of Economy",
+              "url": "https://www.economy.gov.ae",
+              "desc": "Licences fédérales, régulation commerciale aux EAU."
+            },
+            {
+              "name": "DIFC",
+              "url": "https://www.difc.ae",
+              "desc": "Dubai International Financial Centre, régulateur DFSA, common law."
+            },
+            {
+              "name": "ADGM",
+              "url": "https://www.adgm.com",
+              "desc": "Abu Dhabi Global Market, régulateur FSRA, centre financier."
+            },
+            {
+              "name": "DMCC",
+              "url": "https://www.dmcc.ae",
+              "desc": "Dubai Multi Commodities Centre, zone franche, licences commerciales."
+            },
+            {
+              "name": "DED Dubai",
+              "url": "https://www.dubaided.gov.ae",
+              "desc": "Department of Economic Development, licences mainland Dubai."
+            }
+          ]
+        },
+        {
+          "name": "Arabie Saoudite",
+          "resources": [
+            {
+              "name": "Tadawul",
+              "url": "https://www.saudiexchange.sa",
+              "desc": "Bourse saoudienne, filings des sociétés cotées."
+            },
+            {
+              "name": "Ministry of Commerce (Saudi)",
+              "url": "https://mc.gov.sa",
+              "desc": "Registre commercial saoudien, régulation des entreprises."
+            }
+          ]
+        },
+        {
+          "name": "Qatar & Bahreïn",
+          "resources": [
+            {
+              "name": "Qatar Stock Exchange",
+              "url": "https://www.qe.com.qa",
+              "desc": "Bourse du Qatar, sociétés cotées, données de marché."
+            },
+            {
+              "name": "Bahrain Sijilat",
+              "url": "https://www.sijilat.bh",
+              "desc": "Registre des entreprises de Bahreïn, commercial registry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crypto",
+      "name": "Crypto & Blockchain",
+      "groups": [
+        {
+          "name": "Whitepapers Fondateurs",
+          "resources": [
+            {
+              "name": "Bitcoin Whitepaper",
+              "url": "https://bitcoin.org/bitcoin.pdf",
+              "desc": "Satoshi Nakamoto, 2008. Peer-to-peer electronic cash system, blockchain, proof-of-work."
+            },
+            {
+              "name": "Ethereum Whitepaper",
+              "url": "https://ethereum.org/en/whitepaper/",
+              "desc": "Vitalik Buterin, 2013. Smart contracts, decentralized applications, EVM."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "count": 479
+  }
+}

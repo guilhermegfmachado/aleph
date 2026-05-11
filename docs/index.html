@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <!-- ═══════════════════════════════════════════════════════════════════════
@@ -233,13 +234,17 @@
                             Aleph ne possède rien : il indexe. Toutes les sources qui rendent ce projet possible — bibliothèques, archives, instituts.
                         </p>
                         <div class="sources-view-toggle">
-                            <button class="sources-view-btn active" data-view="bibliographie">bibliographie</button>
-                            <button class="sources-view-btn" data-view="vignettes">vignettes</button>
+                            <button class="sources-view-btn active" data-view="list">liste</button>
+                            <button class="sources-view-btn" data-view="network">réseau</button>
                         </div>
                     </header>
 
                     <div id="sourcesSections">
                         <!-- Populated by JS -->
+                    </div>
+
+                    <div id="networkContainer" class="network-container" style="display: none;">
+                        <!-- D3 network visualization rendered here -->
                     </div>
                 </div>
 

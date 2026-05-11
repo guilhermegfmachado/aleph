@@ -8,6 +8,7 @@
 const state = {
     corpus: null,
     glossary: null,
+    references: null,
     books: [],
     terms: [],
     favorites: JSON.parse(localStorage.getItem('aleph-favorites') || '[]'),
@@ -17,7 +18,8 @@ const state = {
         category: null
     },
     sort: 'year',
-    selectedTerm: null
+    selectedTerm: null,
+    sourcesView: 'list'
 };
 
 // Language names for display
@@ -28,31 +30,19 @@ const LANG_NAMES = {
     he: 'עברית', fa: 'فارسی', sa: 'संस्कृत', tr: 'Türkçe'
 };
 
-// Source categories for references page
-const SOURCE_CATEGORIES = [
-    { id: 'classics', name: 'Textes Classiques', sources: [
-        { name: 'Project Gutenberg', url: 'https://www.gutenberg.org', desc: 'Plus de 70 000 livres en domaine public, gratuits en ePub et texte brut.', year: 1971 },
-        { name: 'Perseus Digital Library', url: 'https://www.perseus.tufts.edu', desc: 'Textes grecs et latins avec morphologie interactive et traductions parallèles.', year: 1987 },
-        { name: 'Internet Archive', url: 'https://archive.org', desc: 'Bibliothèque numérique massive avec emprunt gratuit et 30+ millions de textes.', year: 1996 }
-    ]},
-    { id: 'national', name: 'Bibliothèques Nationales', sources: [
-        { name: 'Gallica (BnF)', url: 'https://gallica.bnf.fr', desc: 'Bibliothèque numérique de la BnF : manuscrits, livres, journaux, cartes.', year: 1997 },
-        { name: 'Deutsche Digitale Bibliothek', url: 'https://www.deutsche-digitale-bibliothek.de', desc: 'Portail culturel allemand unifié avec millions d\'objets numérisés.', year: 2012 },
-        { name: 'British Library', url: 'https://www.bl.uk', desc: 'Collections numériques de la bibliothèque nationale du Royaume-Uni.', year: 1753 }
-    ]},
-    { id: 'manuscripts', name: 'Manuscrits', sources: [
-        { name: 'Digital Vatican Library', url: 'https://digi.vatlib.it', desc: 'Manuscrits de la Bibliothèque Apostolique Vaticane numérisés.', year: 2014 },
-        { name: 'e-codices', url: 'https://www.e-codices.unifr.ch', desc: 'Manuscrits médiévaux de bibliothèques suisses.', year: 2005 }
-    ]},
-    { id: 'sacred', name: 'Textes Sacrés', sources: [
-        { name: 'Sacred Texts', url: 'https://www.sacred-texts.com', desc: 'Archive de textes religieux et mythologiques de toutes traditions.', year: 1999 },
-        { name: 'GRETIL', url: 'http://gretil.sub.uni-goettingen.de', desc: 'Textes indiens en sanskrit, pali, prakrit et dravidien.', year: 2003 }
-    ]},
-    { id: 'academic', name: 'Études', sources: [
-        { name: 'JSTOR', url: 'https://www.jstor.org', desc: 'Archive d\'articles académiques avec accès gratuit limité.', year: 1995 },
-        { name: 'PhilPapers', url: 'https://philpapers.org', desc: 'Index complet de la littérature philosophique.', year: 2009 }
-    ]}
-];
+// Network visualization state
+let networkState = {
+    simulation: null,
+    svg: null,
+    g: null,
+    width: 800,
+    height: 500,
+    expandedNodes: new Set(),
+    nodePositions: {},
+    allNodes: [],
+    subtopicNodes: [],
+    resourceNodes: []
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // INITIALIZATION
@@ -83,9 +73,10 @@ async function init() {
 // ─────────────────────────────────────────────────────────────────────────────
 async function loadData() {
     try {
-        const [corpusRes, glossaryRes] = await Promise.all([
+        const [corpusRes, glossaryRes, refsRes] = await Promise.all([
             fetch('data/corpus-manifest.json'),
-            fetch('data/glossary.json')
+            fetch('data/glossary.json'),
+            fetch('data/references.json')
         ]);
 
         if (corpusRes.ok) {
@@ -96,6 +87,10 @@ async function loadData() {
         if (glossaryRes.ok) {
             state.glossary = await glossaryRes.json();
             state.terms = state.glossary.terms || [];
+        }
+
+        if (refsRes.ok) {
+            state.references = await refsRes.json();
         }
     } catch (err) {
         console.error('Failed to load data:', err);
@@ -733,60 +728,450 @@ function renderSourcesPage() {
     renderSourcesStats();
     renderSourcesToc();
     renderSourcesSections();
+    setupSourcesViewToggle();
 }
 
 function renderSourcesStats() {
     const sourceCount = document.getElementById('sourceCount');
     const categoryCount = document.getElementById('categoryCount');
 
+    if (!state.references) return;
+
+    const sections = state.references.sections || [];
     let total = 0;
-    SOURCE_CATEGORIES.forEach(cat => {
-        total += cat.sources.length;
+    sections.forEach(sec => {
+        sec.groups.forEach(g => {
+            total += g.resources.length;
+        });
     });
 
     if (sourceCount) sourceCount.textContent = total;
-    if (categoryCount) categoryCount.textContent = SOURCE_CATEGORIES.length;
+    if (categoryCount) categoryCount.textContent = sections.length;
 }
 
 function renderSourcesToc() {
     const container = document.getElementById('sourcesToc');
-    if (!container) return;
+    if (!container || !state.references) return;
 
-    container.innerHTML = SOURCE_CATEGORIES.map((cat, i) => `
-        <a href="#section-${cat.id}" class="sources-toc-item">
-            <span class="num">${String(i + 1).padStart(2, '0')}</span>
-            <span>${cat.name}</span>
-            <span class="count">${cat.sources.length}</span>
-        </a>
-    `).join('');
+    const sections = state.references.sections || [];
+
+    container.innerHTML = sections.map((sec, i) => {
+        const count = sec.groups.reduce((sum, g) => sum + g.resources.length, 0);
+        return `
+            <a href="#section-${sec.id}" class="sources-toc-item" onclick="scrollToSourceSection('${sec.id}')">
+                <span class="num">${String(i + 1).padStart(2, '0')}</span>
+                <span>${escapeHtml(sec.name)}</span>
+                <span class="count">${count}</span>
+            </a>
+        `;
+    }).join('');
 }
+
+function scrollToSourceSection(id) {
+    if (state.sourcesView === 'network') {
+        setSourcesView('list');
+    }
+    setTimeout(() => {
+        const el = document.getElementById('section-' + id);
+        if (el) {
+            el.open = true;
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, 100);
+}
+window.scrollToSourceSection = scrollToSourceSection;
 
 function renderSourcesSections() {
     const container = document.getElementById('sourcesSections');
-    if (!container) return;
+    if (!container || !state.references) return;
 
-    container.innerHTML = SOURCE_CATEGORIES.map((cat, i) => `
-        <section class="sources-section" id="section-${cat.id}">
-            <header class="sources-section-header">
-                <span class="sources-section-num">§ ${String(i + 1).padStart(2, '0')}</span>
-                <h2 class="sources-section-title">${cat.name}</h2>
-                <span class="sources-section-count">${cat.sources.length} entrées</span>
-            </header>
-            <div class="sources-list">
-                ${cat.sources.map(s => `
-                    <article class="source-item">
-                        <div>
-                            <h3 class="source-name"><a href="${s.url}" target="_blank">${escapeHtml(s.name)}</a></h3>
-                            <p class="source-desc">${escapeHtml(s.desc)}</p>
+    const sections = state.references.sections || [];
+
+    container.innerHTML = sections.map((sec, i) => {
+        const totalCount = sec.groups.reduce((sum, g) => sum + g.resources.length, 0);
+        return `
+            <details class="sources-section" id="section-${sec.id}">
+                <summary class="sources-section-header">
+                    <span class="sources-section-num">§ ${String(i + 1).padStart(2, '0')}</span>
+                    <h2 class="sources-section-title">${escapeHtml(sec.name)}</h2>
+                    <span class="sources-section-count">${totalCount} entrées</span>
+                </summary>
+                <div class="sources-section-content">
+                    ${sec.groups.map(group => `
+                        <div class="sources-group">
+                            <h3 class="sources-group-title">${escapeHtml(group.name)}</h3>
+                            <div class="sources-list">
+                                ${group.resources.map(r => `
+                                    <article class="source-item">
+                                        <h4 class="source-name"><a href="${r.url}" target="_blank">${escapeHtml(r.name)}</a></h4>
+                                        ${r.desc ? `<p class="source-desc">${escapeHtml(r.desc)}</p>` : ''}
+                                    </article>
+                                `).join('')}
+                            </div>
                         </div>
-                        <div class="source-meta">
-                            <span>Fondé ${s.year}</span>
-                        </div>
-                    </article>
-                `).join('')}
-            </div>
-        </section>
-    `).join('');
+                    `).join('')}
+                </div>
+            </details>
+        `;
+    }).join('');
+}
+
+function setupSourcesViewToggle() {
+    const btns = document.querySelectorAll('.sources-view-btn');
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const view = btn.dataset.view;
+            setSourcesView(view);
+        });
+    });
+}
+
+function setSourcesView(view) {
+    state.sourcesView = view;
+
+    const btns = document.querySelectorAll('.sources-view-btn');
+    btns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === view);
+    });
+
+    const listContainer = document.getElementById('sourcesSections');
+    const networkContainer = document.getElementById('networkContainer');
+
+    if (view === 'network') {
+        if (listContainer) listContainer.style.display = 'none';
+        if (networkContainer) {
+            networkContainer.style.display = 'block';
+            initNetwork();
+        }
+    } else {
+        if (listContainer) listContainer.style.display = '';
+        if (networkContainer) networkContainer.style.display = 'none';
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NETWORK VISUALIZATION
+// ─────────────────────────────────────────────────────────────────────────────
+function buildNetworkNodes() {
+    if (!state.references) return;
+
+    const sections = state.references.sections || [];
+
+    networkState.allNodes = [
+        { id: 'root', label: 'א', group: 'root', depth: 0 }
+    ];
+
+    sections.forEach(sec => {
+        networkState.allNodes.push({
+            id: sec.id,
+            label: sec.name.length > 12 ? sec.name.slice(0, 10) + '…' : sec.name,
+            fullLabel: sec.name,
+            group: 'section',
+            depth: 1,
+            parent: 'root'
+        });
+    });
+
+    networkState.subtopicNodes = [];
+    networkState.resourceNodes = [];
+
+    sections.forEach(sec => {
+        sec.groups.forEach((group, gi) => {
+            const groupId = `${sec.id}_g${gi}`;
+            networkState.subtopicNodes.push({
+                id: groupId,
+                label: group.name.length > 15 ? group.name.slice(0, 13) + '…' : group.name,
+                fullLabel: group.name,
+                group: 'subtopic',
+                depth: 2,
+                parent: sec.id
+            });
+
+            group.resources.forEach((res, ri) => {
+                networkState.resourceNodes.push({
+                    id: `${groupId}_r${ri}`,
+                    label: res.name.length > 18 ? res.name.slice(0, 16) + '…' : res.name,
+                    fullLabel: res.name,
+                    group: 'resource',
+                    depth: 3,
+                    parent: groupId,
+                    url: res.url
+                });
+            });
+        });
+    });
+}
+
+function getVisibleNetworkData() {
+    const nodes = [];
+    const links = [];
+    const visibleIds = new Set();
+
+    const rootNode = networkState.allNodes.find(n => n.id === 'root');
+    if (rootNode) {
+        nodes.push({ ...rootNode });
+        visibleIds.add('root');
+    }
+
+    networkState.allNodes.forEach(node => {
+        if (node.parent && networkState.expandedNodes.has(node.parent)) {
+            nodes.push({ ...node });
+            visibleIds.add(node.id);
+            links.push({ source: node.parent, target: node.id });
+        }
+    });
+
+    networkState.subtopicNodes.forEach(node => {
+        if (networkState.expandedNodes.has(node.parent)) {
+            nodes.push({ ...node });
+            visibleIds.add(node.id);
+            links.push({ source: node.parent, target: node.id });
+        }
+    });
+
+    networkState.resourceNodes.forEach(node => {
+        if (networkState.expandedNodes.has(node.parent)) {
+            nodes.push({ ...node });
+            visibleIds.add(node.id);
+            links.push({ source: node.parent, target: node.id });
+        }
+    });
+
+    return { nodes, links };
+}
+
+function nodeRadius(d) {
+    if (d.depth === 0) return 28;
+    if (d.depth === 1) return 14;
+    if (d.depth === 2) return 9;
+    return 5;
+}
+
+function hasNetworkChildren(nodeId) {
+    if (networkState.allNodes.some(n => n.parent === nodeId)) return true;
+    if (networkState.subtopicNodes.some(n => n.parent === nodeId)) return true;
+    if (networkState.resourceNodes.some(n => n.parent === nodeId)) return true;
+    return false;
+}
+
+function toggleNetworkNode(nodeId) {
+    if (networkState.expandedNodes.has(nodeId)) {
+        networkState.expandedNodes.delete(nodeId);
+        collapseNetworkDescendants(nodeId);
+    } else {
+        networkState.expandedNodes.add(nodeId);
+    }
+    updateNetwork();
+}
+
+function collapseNetworkDescendants(nodeId) {
+    networkState.allNodes.filter(n => n.parent === nodeId).forEach(child => {
+        networkState.expandedNodes.delete(child.id);
+        collapseNetworkDescendants(child.id);
+    });
+    networkState.subtopicNodes.filter(n => n.parent === nodeId).forEach(child => {
+        networkState.expandedNodes.delete(child.id);
+        collapseNetworkDescendants(child.id);
+    });
+}
+
+function initNetwork() {
+    const container = document.getElementById('networkContainer');
+    if (!container || typeof d3 === 'undefined') {
+        console.warn('D3 not loaded or container not found');
+        return;
+    }
+
+    buildNetworkNodes();
+    networkState.expandedNodes.clear();
+    networkState.nodePositions = {};
+
+    const rect = container.getBoundingClientRect();
+    networkState.width = rect.width || 800;
+    networkState.height = Math.max(500, rect.height || 500);
+
+    container.innerHTML = '';
+
+    networkState.svg = d3.select(container)
+        .append('svg')
+        .attr('width', networkState.width)
+        .attr('height', networkState.height)
+        .attr('viewBox', `0 0 ${networkState.width} ${networkState.height}`);
+
+    networkState.g = networkState.svg.append('g');
+
+    const zoom = d3.zoom()
+        .scaleExtent([0.2, 4])
+        .on('zoom', e => networkState.g.attr('transform', e.transform));
+    networkState.svg.call(zoom);
+
+    updateNetwork();
+}
+
+function updateNetwork() {
+    if (!networkState.svg) return;
+
+    const data = getVisibleNetworkData();
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+    const colors = {
+        root: isDark ? '#c9a84c' : '#c14d2c',
+        section: isDark ? '#8a7a5a' : '#5a4a3a',
+        subtopic: isDark ? '#6a6a5a' : '#8a7a6a',
+        resource: isDark ? '#5a5a4a' : '#a09080'
+    };
+
+    if (networkState.simulation) networkState.simulation.stop();
+
+    const cx = networkState.width / 2;
+    const cy = networkState.height / 2;
+
+    data.nodes.forEach(n => {
+        if (n.id === 'root') {
+            n.fx = cx;
+            n.fy = cy;
+            n.x = cx;
+            n.y = cy;
+            return;
+        }
+        if (networkState.nodePositions[n.id]) {
+            n.x = networkState.nodePositions[n.id].x;
+            n.y = networkState.nodePositions[n.id].y;
+        } else {
+            const parent = data.nodes.find(p => p.id === n.parent);
+            const px = parent?.x ?? cx;
+            const py = parent?.y ?? cy;
+            n.x = px + (Math.random() - 0.5) * 60;
+            n.y = py + (Math.random() - 0.5) * 60;
+        }
+    });
+
+    networkState.simulation = d3.forceSimulation(data.nodes)
+        .force('link', d3.forceLink(data.links)
+            .id(d => d.id)
+            .distance(d => {
+                const sr = nodeRadius(d.source);
+                const tr = nodeRadius(d.target);
+                if (sr >= 12 || tr >= 12) return 90;
+                if (sr >= 8 || tr >= 8) return 55;
+                return 30;
+            })
+            .strength(0.5))
+        .force('charge', d3.forceManyBody().strength(d => -20 * nodeRadius(d)))
+        .force('collide', d3.forceCollide().radius(d => nodeRadius(d) + 3).iterations(2))
+        .force('x', d3.forceX(cx).strength(0.03))
+        .force('y', d3.forceY(cy).strength(0.03))
+        .alphaDecay(0.015)
+        .velocityDecay(0.3);
+
+    networkState.g.selectAll('*').remove();
+
+    const link = networkState.g.append('g')
+        .selectAll('line')
+        .data(data.links)
+        .join('line')
+        .attr('stroke', isDark ? '#555' : '#c8b89a')
+        .attr('stroke-opacity', 0.5)
+        .attr('stroke-width', d => d.target.depth >= 3 ? 0.5 : 1);
+
+    const node = networkState.g.append('g')
+        .selectAll('g')
+        .data(data.nodes)
+        .join('g')
+        .style('cursor', 'pointer')
+        .call(d3.drag()
+            .on('start', dragstart)
+            .on('drag', dragging)
+            .on('end', dragend));
+
+    node.append('circle')
+        .attr('r', d => nodeRadius(d))
+        .attr('fill', d => colors[d.group])
+        .attr('stroke', d => networkState.expandedNodes.has(d.id) ? (isDark ? '#fff' : '#1a1410') : 'none')
+        .attr('stroke-width', 2);
+
+    node.filter(d => hasNetworkChildren(d.id) && !networkState.expandedNodes.has(d.id))
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .attr('dy', '0.35em')
+        .attr('fill', '#fff')
+        .attr('font-size', d => d.depth <= 1 ? '12px' : '8px')
+        .attr('font-weight', 'bold')
+        .text('+');
+
+    const labels = networkState.g.append('g')
+        .selectAll('text')
+        .data(data.nodes)
+        .join('text')
+        .attr('text-anchor', 'start')
+        .attr('dominant-baseline', 'central')
+        .attr('dx', d => nodeRadius(d) + 5)
+        .style('font-size', d => d.depth === 0 ? '14px' : d.depth === 1 ? '11px' : d.depth === 2 ? '9px' : '8px')
+        .style('fill', isDark ? '#d0c8b8' : '#5a4a3a')
+        .style('opacity', d => d.depth <= 1 ? 1 : d.depth === 2 ? 0.7 : 0)
+        .style('pointer-events', 'none')
+        .style('font-family', 'var(--mono)')
+        .text(d => d.label);
+
+    node.on('mouseover', (event, d) => {
+        if (d.depth >= 2) {
+            labels.filter(l => l === d).style('opacity', 1);
+        }
+    }).on('mouseout', (event, d) => {
+        if (d.depth >= 2) {
+            labels.filter(l => l === d).style('opacity', d.depth === 2 ? 0.7 : 0);
+        }
+    });
+
+    node.on('click', (e, d) => {
+        e.stopPropagation();
+        if (d.group === 'resource' && d.url) {
+            window.open(d.url, '_blank');
+        } else if (hasNetworkChildren(d.id)) {
+            toggleNetworkNode(d.id);
+        }
+    });
+
+    const padding = 30;
+    networkState.simulation.on('tick', () => {
+        data.nodes.forEach(d => {
+            if (!d.fx) {
+                const r = nodeRadius(d);
+                d.x = Math.max(r + padding, Math.min(networkState.width - r - padding, d.x));
+                d.y = Math.max(r + padding, Math.min(networkState.height - r - padding, d.y));
+            }
+            networkState.nodePositions[d.id] = { x: d.x, y: d.y };
+        });
+
+        link.attr('x1', d => d.source.x)
+            .attr('y1', d => d.source.y)
+            .attr('x2', d => d.target.x)
+            .attr('y2', d => d.target.y);
+
+        node.attr('transform', d => `translate(${d.x},${d.y})`);
+        labels.attr('x', d => d.x).attr('y', d => d.y);
+    });
+
+    function dragstart(e) {
+        if (e.subject.id === 'root') return;
+        if (!e.active) networkState.simulation.alphaTarget(0.1).restart();
+        e.subject.fx = e.subject.x;
+        e.subject.fy = e.subject.y;
+    }
+
+    function dragging(e) {
+        if (e.subject.id === 'root') return;
+        const r = nodeRadius(e.subject);
+        e.subject.fx = Math.max(r + padding, Math.min(networkState.width - r - padding, e.x));
+        e.subject.fy = Math.max(r + padding, Math.min(networkState.height - r - padding, e.y));
+    }
+
+    function dragend(e) {
+        if (e.subject.id === 'root') return;
+        if (!e.active) networkState.simulation.alphaTarget(0);
+        e.subject.fx = null;
+        e.subject.fy = null;
+    }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

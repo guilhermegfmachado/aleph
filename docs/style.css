@@ -1187,6 +1187,98 @@ main {
   font-weight: 400;
 }
 
+/* Sources section accordion */
+details.sources-section {
+  border-bottom: 1px solid var(--rule);
+}
+
+details.sources-section:last-child {
+  border-bottom: none;
+}
+
+details.sources-section > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+details.sources-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.sources-section > summary::after {
+  content: '+';
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  color: var(--ink-3);
+  margin-left: auto;
+}
+
+details.sources-section[open] > summary::after {
+  content: '−';
+}
+
+.sources-section-content {
+  padding-bottom: 2rem;
+}
+
+.sources-group {
+  margin-bottom: 2rem;
+}
+
+.sources-group:last-child {
+  margin-bottom: 0;
+}
+
+.sources-group-title {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dotted var(--rule);
+}
+
+/* Network container */
+.network-container {
+  width: 100%;
+  height: 600px;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  position: relative;
+}
+
+.network-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.network-controls {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.network-btn {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.network-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    COMMAND PALETTE
    ───────────────────────────────────────────────────────────────────────────── */

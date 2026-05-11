@@ -731,6 +731,12 @@ function selectGlossaryTerm(id) {
     // Highlight entry
     document.querySelectorAll('.glossary-entry').forEach(e => e.classList.remove('selected'));
     document.querySelector(`.glossary-entry[data-id="${id}"]`)?.classList.add('selected');
+
+    // Show specimen panel on mobile
+    const specimenPane = document.getElementById('glossarySpecimen');
+    if (specimenPane && window.innerWidth <= 1024) {
+        specimenPane.classList.add('active');
+    }
 }
 
 function selectGlossaryTermByName(name) {
@@ -741,9 +747,15 @@ function selectGlossaryTermByName(name) {
     if (term) selectGlossaryTerm(term.id);
 }
 
+function closeGlossarySpecimen() {
+    const specimenPane = document.getElementById('glossarySpecimen');
+    if (specimenPane) specimenPane.classList.remove('active');
+}
+
 // Make it globally accessible
 window.selectGlossaryTerm = selectGlossaryTerm;
 window.selectGlossaryTermByName = selectGlossaryTermByName;
+window.closeGlossarySpecimen = closeGlossarySpecimen;
 window.navigateTo = navigateTo;
 
 // ─────────────────────────────────────────────────────────────────────────────

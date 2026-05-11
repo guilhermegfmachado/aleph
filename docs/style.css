@@ -1464,13 +1464,13 @@ details.sources-section[open] > summary::after {
     bottom: 0;
     left: 0;
     right: 0;
-    max-height: 50vh;
+    max-height: 70vh;
     overflow-y: auto;
     background: var(--paper);
     border-top: 2px solid var(--accent);
     box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
     z-index: 100;
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem 1.5rem;
     transform: translateY(100%);
     transition: transform 0.3s ease;
   }
@@ -1481,6 +1481,15 @@ details.sources-section[open] > summary::after {
 
   .glossary-specimen .specimen-index {
     display: none;
+  }
+
+  .glossary-specimen .specimen-term {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .glossary-specimen .specimen-meta {
+    margin-bottom: 1rem;
   }
 
   .specimen-close {

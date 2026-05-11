@@ -709,15 +709,10 @@ main {
 /* ─────────────────────────────────────────────────────────────────────────────
    GLOSSARY PAGE
    ───────────────────────────────────────────────────────────────────────────── */
-.glossary-layout {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  min-height: calc(100vh - 60px);
-}
-
-.glossary-main {
+.glossary-page {
   padding: var(--page-y) var(--page-x);
-  border-right: 1px solid var(--rule);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .glossary-header {
@@ -795,217 +790,125 @@ main {
 }
 
 .glossary-entry {
-  padding: 2rem 0;
   border-bottom: 1px solid var(--rule);
   cursor: pointer;
-  transition: background 0.15s;
-}
-
-.glossary-entry:hover {
-  background: var(--paper-2);
-  margin: 0 -1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .glossary-entry-header {
   display: flex;
   align-items: baseline;
-  gap: 1.5rem;
-  margin-bottom: 0.75rem;
+  gap: 1rem;
+  padding: 1.25rem 0;
 }
 
 .glossary-dropcap {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-style: italic;
-  line-height: 0.8;
-  color: var(--ink);
+  line-height: 1;
+  color: var(--ink-3);
+  min-width: 2rem;
 }
 
 .glossary-term {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-style: italic;
   color: var(--ink);
+  flex: 1;
 }
 
 .glossary-lang {
   font-family: var(--mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-left: auto;
-}
-
-.glossary-category {
-  font-family: var(--mono);
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--accent);
 }
 
-.glossary-definition {
-  font-style: italic;
-  color: var(--ink-2);
-  margin-bottom: 0.5rem;
-  font-size: 1.0625rem;
-  line-height: 1.5;
-}
-
-.glossary-gloss {
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--ink);
-}
-
-/* Specimen Pane */
-.glossary-specimen {
-  position: sticky;
-  top: 60px;
-  height: calc(100vh - 60px);
-  padding: var(--page-y) 2rem;
-  background: var(--paper-2);
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
-.specimen-close {
-  display: none;
-}
-
-.specimen-index {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 0.25rem;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.specimen-index a {
-  font-family: var(--serif);
-  font-size: 0.875rem;
-  color: var(--ink-3);
-  text-align: center;
-  padding: 0.25rem;
-  transition: color 0.15s;
-}
-
-.specimen-index a:hover,
-.specimen-index a.active {
-  color: var(--ink);
-}
-
-.specimen-label {
+.glossary-expand {
   font-family: var(--mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: 1.25rem;
   color: var(--ink-3);
-  margin-bottom: 1rem;
+  width: 1.5rem;
+  text-align: center;
 }
 
-.specimen-term {
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-style: italic;
-  line-height: 1;
-  margin-bottom: 1.5rem;
-  word-break: break-word;
+.glossary-entry:hover .glossary-expand {
+  color: var(--accent);
 }
 
-.specimen-meta {
+/* Entry body - hidden by default */
+.glossary-entry-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 0 0 3.5rem;
+}
+
+.glossary-entry.open .glossary-entry-body {
+  max-height: 1000px;
+  padding: 0 0 1.5rem 3.5rem;
+}
+
+.entry-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.specimen-tag {
+.entry-tag {
   font-family: var(--mono);
   font-size: 0.625rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.3rem 0.6rem;
+  padding: 0.25rem 0.5rem;
   border: 1px solid var(--rule);
   color: var(--ink-3);
 }
 
-.specimen-tag.lang {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-.specimen-related {
-  margin-top: auto;
-}
-
-.specimen-related-title {
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  margin-bottom: 0.75rem;
-}
-
-.specimen-related-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.specimen-related-list a {
-  font-size: 0.9375rem;
-  font-style: italic;
-  color: var(--ink-2);
-  transition: color 0.15s;
-}
-
-.specimen-related-list a:hover {
-  color: var(--ink);
-}
-
-.specimen-pronunciation {
+.entry-pron {
   font-family: var(--mono);
   font-size: 0.75rem;
-  color: var(--ink-3);
-  display: block;
-  margin-top: 0.5rem;
+  color: var(--ink-2);
 }
 
-.specimen-definition {
+.entry-definition {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--ink);
-  margin: 1.5rem 0;
+  margin-bottom: 1rem;
   padding-left: 1rem;
   border-left: 2px solid var(--accent);
 }
 
-.specimen-etymology,
-.specimen-usage {
+.entry-etymology,
+.entry-usage,
+.entry-related {
   font-size: 0.875rem;
   line-height: 1.6;
   color: var(--ink-2);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-.specimen-etymology strong,
-.specimen-usage strong {
+.entry-etymology strong,
+.entry-usage strong,
+.entry-related strong {
   font-weight: 500;
-  color: var(--ink);
-  display: block;
-  font-size: 0.6875rem;
+  color: var(--ink-3);
   font-family: var(--mono);
+  font-size: 0.625rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 0.25rem;
+  margin-right: 0.5rem;
 }
 
-.specimen-usage em {
-  font-style: italic;
+.entry-related a {
+  color: var(--accent);
+  border-bottom: 1px dotted var(--accent);
+}
+
+.entry-related a:hover {
+  border-bottom-style: solid;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -1440,10 +1343,6 @@ details.sources-section[open] > summary::after {
     --page-x: 48px;
     --page-y: 48px;
   }
-
-  .glossary-layout {
-    grid-template-columns: 1fr 320px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -1454,63 +1353,6 @@ details.sources-section[open] > summary::after {
 
   .featured-card {
     max-width: 380px;
-  }
-
-  .glossary-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .glossary-specimen {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-height: 70vh;
-    overflow-y: auto;
-    background: var(--paper);
-    border-top: 2px solid var(--accent);
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-    z-index: 100;
-    padding: 2.5rem 1.5rem 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-  }
-
-  .glossary-specimen.active {
-    transform: translateY(0);
-  }
-
-  .glossary-specimen .specimen-index {
-    display: none;
-  }
-
-  .glossary-specimen .specimen-term {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
-    margin-bottom: 1rem;
-  }
-
-  .glossary-specimen .specimen-meta {
-    margin-bottom: 1rem;
-  }
-
-  .specimen-close {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-    color: var(--ink-2);
-    background: var(--paper-2);
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .specimen-close:hover {
-    color: var(--accent);
-    border-color: var(--accent);
   }
 }
 

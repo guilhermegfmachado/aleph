@@ -644,16 +644,34 @@ function renderGlossaryList() {
     container.innerHTML = terms.map(t => {
         const firstLetter = t.term.charAt(0).toUpperCase();
         const cats = Array.isArray(t.category) ? t.category : [t.category || ''];
+        const pron = t.pronunciation ? `/${t.pronunciation}/` : '';
+        const etymology = t.etymology ? `<div class="entry-etymology"><strong>Étymologie:</strong> ${escapeHtml(t.etymology)}</div>` : '';
+        const usage = t.usage ? `<div class="entry-usage"><strong>Exemple:</strong> <em>${escapeHtml(t.usage)}</em></div>` : '';
+        const related = t.related && t.related.length ? `
+            <div class="entry-related">
+                <strong>Voir aussi:</strong>
+                ${t.related.map(r => `<a href="#" onclick="selectGlossaryTermByName('${escapeHtml(r)}'); return false;">${escapeHtml(r)}</a>`).join(', ')}
+            </div>
+        ` : '';
 
         return `
-            <article class="glossary-entry" data-id="${t.id}" onclick="selectGlossaryTerm('${t.id}')">
+            <article class="glossary-entry" data-id="${t.id}" onclick="toggleGlossaryEntry(this)">
                 <header class="glossary-entry-header">
                     <span class="glossary-dropcap">${firstLetter}</span>
                     <span class="glossary-term">${escapeHtml(t.term)}</span>
                     <span class="glossary-lang">${LANG_NAMES[t.lang] || t.lang}</span>
-                    <span class="glossary-category">${cats.join(' · ')}</span>
+                    <span class="glossary-expand">+</span>
                 </header>
-                <p class="glossary-definition">${escapeHtml(truncate(t.definition || '', 120))}</p>
+                <div class="glossary-entry-body">
+                    <div class="entry-meta">
+                        ${cats.map(c => `<span class="entry-tag">${escapeHtml(c)}</span>`).join('')}
+                        ${pron ? `<span class="entry-pron">${pron}</span>` : ''}
+                    </div>
+                    <p class="entry-definition">${escapeHtml(t.definition || '')}</p>
+                    ${etymology}
+                    ${usage}
+                    ${related}
+                </div>
             </article>
         `;
     }).join('');
@@ -675,67 +693,29 @@ function setupGlossarySearch() {
     });
 }
 
+function toggleGlossaryEntry(el) {
+    const wasOpen = el.classList.contains('open');
+
+    // Close all entries
+    document.querySelectorAll('.glossary-entry.open').forEach(e => {
+        e.classList.remove('open');
+        e.querySelector('.glossary-expand').textContent = '+';
+    });
+
+    // Open this one if it wasn't already open
+    if (!wasOpen) {
+        el.classList.add('open');
+        el.querySelector('.glossary-expand').textContent = '−';
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+}
+
 function selectGlossaryTerm(id) {
-    const term = state.terms.find(t => t.id === id);
-    if (!term) return;
-
-    state.selectedTerm = term;
     navigateTo('glossary');
-
-    // Update specimen pane
-    const specimenTerm = document.getElementById('specimenTerm');
-    const specimenMeta = document.getElementById('specimenMeta');
-    const specimenDefinition = document.getElementById('specimenDefinition');
-    const specimenEtymology = document.getElementById('specimenEtymology');
-    const specimenUsage = document.getElementById('specimenUsage');
-    const specimenRelated = document.getElementById('specimenRelated');
-    const specimenRelatedList = document.getElementById('specimenRelatedList');
-
-    if (specimenTerm) specimenTerm.textContent = term.term;
-
-    if (specimenMeta) {
-        const cats = Array.isArray(term.category) ? term.category : [term.category || ''];
-        const pron = term.pronunciation ? `<span class="specimen-pronunciation">/${term.pronunciation}/</span>` : '';
-        specimenMeta.innerHTML = `
-            <span class="specimen-tag lang">${LANG_NAMES[term.lang] || term.lang}</span>
-            ${cats.map(c => `<span class="specimen-tag">${escapeHtml(c)}</span>`).join('')}
-            ${pron}
-        `;
-    }
-
-    if (specimenDefinition) {
-        specimenDefinition.textContent = term.definition || '';
-        specimenDefinition.style.display = term.definition ? 'block' : 'none';
-    }
-
-    if (specimenEtymology) {
-        specimenEtymology.innerHTML = term.etymology ? `<strong>Étymologie:</strong> ${escapeHtml(term.etymology)}` : '';
-        specimenEtymology.style.display = term.etymology ? 'block' : 'none';
-    }
-
-    if (specimenUsage) {
-        specimenUsage.innerHTML = term.usage ? `<strong>Exemple:</strong> <em>${escapeHtml(term.usage)}</em>` : '';
-        specimenUsage.style.display = term.usage ? 'block' : 'none';
-    }
-
-    if (specimenRelated) {
-        specimenRelated.style.display = term.related && term.related.length ? 'block' : 'none';
-    }
-
-    if (specimenRelatedList && term.related) {
-        specimenRelatedList.innerHTML = term.related.map(r => `
-            <a href="#" onclick="selectGlossaryTermByName('${escapeHtml(r)}'); return false;">${escapeHtml(r)}</a>
-        `).join('');
-    }
-
-    // Highlight entry
-    document.querySelectorAll('.glossary-entry').forEach(e => e.classList.remove('selected'));
-    document.querySelector(`.glossary-entry[data-id="${id}"]`)?.classList.add('selected');
-
-    // Show specimen panel on mobile
-    const specimenPane = document.getElementById('glossarySpecimen');
-    if (specimenPane && window.innerWidth <= 1024) {
-        specimenPane.classList.add('active');
+    const entry = document.querySelector(`.glossary-entry[data-id="${id}"]`);
+    if (entry) {
+        toggleGlossaryEntry(entry);
+        entry.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -747,15 +727,10 @@ function selectGlossaryTermByName(name) {
     if (term) selectGlossaryTerm(term.id);
 }
 
-function closeGlossarySpecimen() {
-    const specimenPane = document.getElementById('glossarySpecimen');
-    if (specimenPane) specimenPane.classList.remove('active');
-}
-
 // Make it globally accessible
 window.selectGlossaryTerm = selectGlossaryTerm;
 window.selectGlossaryTermByName = selectGlossaryTermByName;
-window.closeGlossarySpecimen = closeGlossarySpecimen;
+window.toggleGlossaryEntry = toggleGlossaryEntry;
 window.navigateTo = navigateTo;
 
 // ─────────────────────────────────────────────────────────────────────────────

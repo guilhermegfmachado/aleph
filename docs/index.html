@@ -165,58 +165,29 @@
              GLOSSARY PAGE
              ═══════════════════════════════════════════════════════════════════ -->
         <section id="glossary" class="page">
-            <div class="glossary-layout">
-                <div class="glossary-main">
-                    <header class="glossary-header">
-                        <span class="label label-accent">Glossarium</span>
-                        <span class="label">●</span>
-                        <span class="label"><span id="termCount">0</span> termes</span>
-                        <span class="label">●</span>
-                        <span class="label"><span id="langCount">0</span> langues</span>
-                        <h1 class="page-title">intraduisibles<span class="accent-dot">.</span></h1>
-                        <p class="glossary-subtitle">
-                            Chaque langue découpe le monde différemment. Voici les mots qui refusent le passage.
-                        </p>
-                    </header>
+            <div class="glossary-page">
+                <header class="glossary-header">
+                    <span class="label label-accent">Glossarium</span>
+                    <span class="label">●</span>
+                    <span class="label"><span id="termCount">0</span> termes</span>
+                    <span class="label">●</span>
+                    <span class="label"><span id="langCount">0</span> langues</span>
+                    <h1 class="page-title">intraduisibles<span class="accent-dot">.</span></h1>
+                    <p class="glossary-subtitle">
+                        Chaque langue découpe le monde différemment. Voici les mots qui refusent le passage.
+                    </p>
+                </header>
 
-                    <div class="glossary-controls">
-                        <input type="text" class="glossary-search" id="glossarySearch" placeholder="rechercher un terme...">
-                        <div class="category-pills" id="categoryPills">
-                            <button class="category-pill active" data-category="all">all</button>
-                        </div>
-                    </div>
-
-                    <div class="glossary-list" id="glossaryList">
-                        <!-- Populated by JS -->
+                <div class="glossary-controls">
+                    <input type="text" class="glossary-search" id="glossarySearch" placeholder="rechercher un terme...">
+                    <div class="category-pills" id="categoryPills">
+                        <button class="category-pill active" data-category="all">all</button>
                     </div>
                 </div>
 
-                <aside class="glossary-specimen" id="glossarySpecimen">
-                    <button class="specimen-close" id="specimenClose" onclick="closeGlossarySpecimen()">✕</button>
-                    <div class="specimen-index" id="specimenIndex">
-                        <!-- A-Z populated by JS -->
-                    </div>
-                    <span class="specimen-label">Fiche</span>
-                    <h2 class="specimen-term" id="specimenTerm">—</h2>
-                    <div class="specimen-meta" id="specimenMeta">
-                        <!-- Populated by JS -->
-                    </div>
-                    <p class="specimen-definition" id="specimenDefinition">
-                        <!-- Full definition populated by JS -->
-                    </p>
-                    <div class="specimen-etymology" id="specimenEtymology">
-                        <!-- Etymology populated by JS -->
-                    </div>
-                    <div class="specimen-usage" id="specimenUsage">
-                        <!-- Usage example populated by JS -->
-                    </div>
-                    <div class="specimen-related" id="specimenRelated">
-                        <h3 class="specimen-related-title">Voir aussi</h3>
-                        <div class="specimen-related-list" id="specimenRelatedList">
-                            <!-- Populated by JS -->
-                        </div>
-                    </div>
-                </aside>
+                <div class="glossary-list" id="glossaryList">
+                    <!-- Populated by JS -->
+                </div>
             </div>
         </section>
 

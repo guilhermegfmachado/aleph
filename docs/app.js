@@ -755,15 +755,9 @@ function renderSourcesToc() {
 
     const sections = state.references.sections || [];
 
-    container.innerHTML = sections.map((sec, i) => {
+    container.innerHTML = sections.map(sec => {
         const count = sec.groups.reduce((sum, g) => sum + g.resources.length, 0);
-        return `
-            <a href="#section-${sec.id}" class="sources-toc-item" onclick="scrollToSourceSection('${sec.id}')">
-                <span class="num">${String(i + 1).padStart(2, '0')}</span>
-                <span>${escapeHtml(sec.name)}</span>
-                <span class="count">${count}</span>
-            </a>
-        `;
+        return `<a href="#section-${sec.id}" class="sources-toc-pill" onclick="scrollToSourceSection('${sec.id}'); return false;">${escapeHtml(sec.name)}<span class="count">${count}</span></a>`;
     }).join('');
 }
 

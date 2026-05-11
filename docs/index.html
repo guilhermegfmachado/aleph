@@ -214,51 +214,40 @@
              SOURCES PAGE
              ═══════════════════════════════════════════════════════════════════ -->
         <section id="sources" class="page">
-            <div class="sources-layout">
-                <aside class="sources-sidebar">
-                    <h2 class="sources-toc-title">Sommaire</h2>
-                    <nav class="sources-toc" id="sourcesToc">
-                        <!-- Populated by JS -->
-                    </nav>
-                </aside>
-
-                <div class="sources-main">
-                    <header class="sources-header">
-                        <span class="label label-accent">Références</span>
-                        <span class="label">●</span>
-                        <span class="label"><span id="sourceCount">0</span> sources</span>
-                        <span class="label">●</span>
-                        <span class="label"><span id="categoryCount">0</span> catégories</span>
-                        <h1 class="page-title">Sur les épaules des géants<span class="accent-dot">.</span></h1>
-                        <p class="sources-tagline">
-                            Aleph ne possède rien : il indexe. Toutes les sources qui rendent ce projet possible — bibliothèques, archives, instituts.
-                        </p>
+            <div class="sources-page">
+                <header class="sources-header">
+                    <span class="label label-accent">Références</span>
+                    <span class="label">●</span>
+                    <span class="label"><span id="sourceCount">0</span> sources</span>
+                    <span class="label">●</span>
+                    <span class="label"><span id="categoryCount">0</span> catégories</span>
+                    <h1 class="page-title">Sur les épaules des géants<span class="accent-dot">.</span></h1>
+                    <p class="sources-tagline">
+                        Aleph ne possède rien : il indexe. Toutes les sources qui rendent ce projet possible — bibliothèques, archives, instituts.
+                    </p>
+                    <div class="sources-controls">
+                        <nav class="sources-toc-inline" id="sourcesToc">
+                            <!-- Populated by JS -->
+                        </nav>
                         <div class="sources-view-toggle">
                             <button class="sources-view-btn active" data-view="list">liste</button>
                             <button class="sources-view-btn" data-view="network">réseau</button>
                         </div>
-                    </header>
-
-                    <div id="sourcesSections">
-                        <!-- Populated by JS -->
                     </div>
+                </header>
 
-                    <div id="networkContainer" class="network-container" style="display: none;">
-                        <div class="network-hint">Toucher pour ouvrir · Pincer pour zoomer · Glisser pour déplacer</div>
-                        <!-- D3 network visualization rendered here -->
-                    </div>
+                <div id="sourcesSections">
+                    <!-- Populated by JS -->
                 </div>
 
-                <aside class="sources-colophon">
-                    <h2 class="colophon-title">Colophon</h2>
-                    <div class="colophon-content">
-                        <p><strong>Composé en</strong> EB Garamond et JetBrains Mono. Encre sur papier numérique.</p>
-                        <p><strong>Conçu par</strong> GMFM, printemps 2025.</p>
-                        <p><strong>Licence</strong> Tous les textes indexés sont du domaine public. Le code source est MIT.</p>
-                        <p><strong>Dernière mise à jour</strong> Mai 2026</p>
-                        <p><strong>Contact</strong> aleph@gmfm.dev</p>
-                    </div>
-                </aside>
+                <div id="networkContainer" class="network-container" style="display: none;">
+                    <div class="network-hint">Toucher pour ouvrir · Pincer pour zoomer · Glisser pour déplacer</div>
+                    <!-- D3 network visualization rendered here -->
+                </div>
+
+                <footer class="sources-colophon-inline">
+                    <p><strong>Composé en</strong> EB Garamond et JetBrains Mono. <strong>Conçu par</strong> GMFM, 2025. <strong>Licence</strong> MIT.</p>
+                </footer>
             </div>
         </section>
     </main>

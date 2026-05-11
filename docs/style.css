@@ -655,19 +655,19 @@ main {
   overflow: hidden;
 }
 
-/* Language-based stripe colors */
-.book-cover[data-lang="de"] { background: repeating-linear-gradient(135deg, #f4ede0, #f4ede0 8px, #e8dcc8 8px, #e8dcc8 16px); }
-.book-cover[data-lang="el"] { background: repeating-linear-gradient(135deg, #f0e8f4, #f0e8f4 8px, #e4d8ec 8px, #e4d8ec 16px); }
-.book-cover[data-lang="en"] { background: repeating-linear-gradient(135deg, #e8f0f4, #e8f0f4 8px, #d8e4ec 8px, #d8e4ec 16px); }
-.book-cover[data-lang="es"] { background: repeating-linear-gradient(135deg, #f4ece8, #f4ece8 8px, #ecdcd4 8px, #ecdcd4 16px); }
-.book-cover[data-lang="fr"] { background: repeating-linear-gradient(135deg, #f4f0e8, #f4f0e8 8px, #ece4d4 8px, #ece4d4 16px); }
-.book-cover[data-lang="he"] { background: repeating-linear-gradient(135deg, #f4e8e8, #f4e8e8 8px, #ecd8d8 8px, #ecd8d8 16px); }
-.book-cover[data-lang="it"] { background: repeating-linear-gradient(135deg, #f0f4e8, #f0f4e8 8px, #e4ecd8 8px, #e4ecd8 16px); }
-.book-cover[data-lang="ja"] { background: repeating-linear-gradient(135deg, #fff0f0, #fff0f0 8px, #ffe4e4 8px, #ffe4e4 16px); }
-.book-cover[data-lang="la"] { background: repeating-linear-gradient(135deg, #f4f4e8, #f4f4e8 8px, #ececd8 8px, #ececd8 16px); }
-.book-cover[data-lang="pt"] { background: repeating-linear-gradient(135deg, #e8f4e8, #e8f4e8 8px, #d8ecd8 8px, #d8ecd8 16px); }
-.book-cover[data-lang="sa"] { background: repeating-linear-gradient(135deg, #f4e8f0, #f4e8f0 8px, #ecd8e4 8px, #ecd8e4 16px); }
-.book-cover[data-lang="zh"] { background: repeating-linear-gradient(135deg, #f4f0f0, #f4f0f0 8px, #ece4e4 8px, #ece4e4 16px); }
+/* Language-based cover colors - subtle solids */
+.book-cover[data-lang="de"] { background: linear-gradient(135deg, #f4ede0 0%, #ebe1cf 100%); }
+.book-cover[data-lang="el"] { background: linear-gradient(135deg, #f0e8f4 0%, #e4d8ec 100%); }
+.book-cover[data-lang="en"] { background: linear-gradient(135deg, #e8f0f4 0%, #d8e4ec 100%); }
+.book-cover[data-lang="es"] { background: linear-gradient(135deg, #f4ece8 0%, #ecdcd4 100%); }
+.book-cover[data-lang="fr"] { background: linear-gradient(135deg, #f4f0e8 0%, #ece4d4 100%); }
+.book-cover[data-lang="he"] { background: linear-gradient(135deg, #f4e8e8 0%, #ecd8d8 100%); }
+.book-cover[data-lang="it"] { background: linear-gradient(135deg, #f0f4e8 0%, #e4ecd8 100%); }
+.book-cover[data-lang="ja"] { background: linear-gradient(135deg, #fff0f0 0%, #ffe4e4 100%); }
+.book-cover[data-lang="la"] { background: linear-gradient(135deg, #f4f4e8 0%, #ececd8 100%); }
+.book-cover[data-lang="pt"] { background: linear-gradient(135deg, #e8f4e8 0%, #d8ecd8 100%); }
+.book-cover[data-lang="sa"] { background: linear-gradient(135deg, #f4e8f0 0%, #ecd8e4 100%); }
+.book-cover[data-lang="zh"] { background: linear-gradient(135deg, #f4f0f0 0%, #ece4e4 100%); }
 
 .book-cover-code {
   font-family: var(--mono);
@@ -1572,6 +1572,58 @@ details.sources-section[open] > summary::after {
     flex-direction: row;
     gap: 1rem;
   }
+
+  /* Simplify sources TOC on mobile */
+  .sources-toc-pill .count {
+    display: none;
+  }
+
+  .sources-toc-pill {
+    font-size: 0.6875rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .sources-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /* Simplify browse toolbar */
+  .browse-toolbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .browse-controls .label {
+    display: none;
+  }
+
+  /* Standardize small font sizes - minimum 0.6875rem */
+  .label,
+  .book-cover-code,
+  .book-cover-lang {
+    font-size: 0.6875rem;
+  }
+
+  /* Better glossary header on mobile */
+  .glossary-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .glossary-header .label {
+    display: inline;
+  }
+
+  .glossary-subtitle,
+  .sources-tagline {
+    font-size: 1rem;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1594,6 +1646,45 @@ details.sources-section[open] > summary::after {
 
   .network-container {
     height: 400px;
+  }
+
+  /* Hide view toggles on small phones - default to grid */
+  .view-toggles {
+    display: none;
+  }
+
+  /* Simplify home meta */
+  .home-meta .separator {
+    display: none;
+  }
+
+  .home-meta {
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+  }
+
+  /* Tighter book cards */
+  .book-cover {
+    aspect-ratio: 4/3;
+  }
+
+  /* Glossary controls */
+  .glossary-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .category-pills {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Sources simpler */
+  .sources-view-toggle {
+    width: 100%;
+    justify-content: center;
   }
 }
 

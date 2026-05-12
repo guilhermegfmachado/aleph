@@ -8944,6 +8944,623 @@
       "related": [
         "Cognate"
       ]
+    },
+    {
+      "id": "starboard",
+      "term": "Starboard",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The right-hand side of a ship when facing forward. From Old English 'steorbord' (steering side), as the steering oar was traditionally mounted on the right.",
+      "etymology": "Old English steorbord"
+    },
+    {
+      "id": "portside",
+      "term": "Port",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The left-hand side of a ship when facing forward. Originally 'larboard', changed to 'port' to avoid confusion with 'starboard' in verbal commands.",
+      "etymology": "From the loading port on the left side"
+    },
+    {
+      "id": "fathom",
+      "term": "Fathom",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A unit of length equal to six feet, used to measure water depth. Also means to understand deeply—to 'sound the depths' of a problem.",
+      "etymology": "Old English fæthm (outstretched arms)"
+    },
+    {
+      "id": "leeway",
+      "term": "Leeway",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The sideways drift of a ship downwind from its course. Metaphorically, the margin of freedom or flexibility in a situation.",
+      "etymology": "From lee (shelter from wind) + way"
+    },
+    {
+      "id": "scuttlebutt",
+      "term": "Scuttlebutt",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Shipboard gossip or rumors. Originally the cask of drinking water around which sailors would gather and chat—the ship's water cooler.",
+      "etymology": "From scuttle (hatch) + butt (cask)"
+    },
+    {
+      "id": "doldrums",
+      "term": "Doldrums",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A belt of calm winds near the equator where sailing ships could be stranded for weeks. Metaphorically, a state of stagnation or depression.",
+      "etymology": "Perhaps from Old English dol (dull)"
+    },
+    {
+      "id": "maelstrom",
+      "term": "Maelstrom",
+      "lang": "no",
+      "category": "maritime",
+      "definition": "A powerful whirlpool. From a specific tidal current off Norway's coast. Now denotes any turbulent, chaotic, or overwhelming situation.",
+      "etymology": "Dutch malen (to grind) + stroom (stream)"
+    },
+    {
+      "id": "kerning",
+      "term": "Kerning",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The adjustment of space between individual letter pairs to achieve visually pleasing spacing. Poor kerning creates awkward gaps or collisions.",
+      "related": [
+        "Leading",
+        "Ligature"
+      ]
+    },
+    {
+      "id": "leading",
+      "term": "Leading",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The vertical space between lines of text, measured from baseline to baseline. Named for the thin strips of lead placed between lines of metal type.",
+      "etymology": "From lead strips in letterpress",
+      "related": [
+        "Kerning"
+      ]
+    },
+    {
+      "id": "ligature",
+      "term": "Ligature",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Two or more letters combined into a single glyph, such as fi, fl, or æ. Originally a practical solution to letters that collided in metal type.",
+      "related": [
+        "Kerning"
+      ]
+    },
+    {
+      "id": "colophon",
+      "term": "Colophon",
+      "lang": "la",
+      "category": "typography",
+      "definition": "A statement at the end of a book giving details of its production—printer, typeface, paper. From ancient Greek practice of noting the scribe's name.",
+      "etymology": "Greek kolophōn (summit, finishing touch)"
+    },
+    {
+      "id": "incunabula",
+      "term": "Incunabula",
+      "lang": "la",
+      "category": "typography",
+      "definition": "Books printed before 1501, during the infancy of printing. The term evokes swaddling clothes—these are books from when print was in its cradle.",
+      "etymology": "Latin incunabula (swaddling clothes, cradle)"
+    },
+    {
+      "id": "recto-verso",
+      "term": "Recto/Verso",
+      "lang": "la",
+      "category": "typography",
+      "definition": "Recto: the front (right-hand) page of a book. Verso: the back (left-hand) page. From the Latin for 'right' and 'turned'."
+    },
+    {
+      "id": "gutter",
+      "term": "Gutter",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The inner margin of a book page, near the binding. Must be wide enough for comfortable reading without cracking the spine."
+    },
+    {
+      "id": "widow-orphan",
+      "term": "Widow & Orphan",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A widow is a lone line at the top of a page. An orphan is a lone line at the bottom. Both are considered typographic sins—no line should be left alone."
+    },
+    {
+      "id": "cru",
+      "term": "Cru",
+      "lang": "fr",
+      "category": "oenology",
+      "definition": "A vineyard or group of vineyards recognized for quality, especially in Burgundy and Bordeaux. Grand cru denotes the highest classification.",
+      "pronunciation": "kry"
+    },
+    {
+      "id": "appellation",
+      "term": "Appellation",
+      "lang": "fr",
+      "category": "oenology",
+      "definition": "A legally defined geographic region for wine production, guaranteeing origin and often production methods. The terroir made official.",
+      "related": [
+        "Terroir"
+      ]
+    },
+    {
+      "id": "sommelier",
+      "term": "Sommelier",
+      "lang": "fr",
+      "category": "oenology",
+      "definition": "A trained wine professional, typically in a restaurant, who specializes in wine service and food pairing. From Old French for 'pack animal driver'.",
+      "pronunciation": "som-el-YAY"
+    },
+    {
+      "id": "tannin",
+      "term": "Tannin",
+      "lang": "en",
+      "category": "oenology",
+      "definition": "Naturally occurring polyphenols in grape skins, seeds, and oak barrels that create astringency and structure in wine. The 'grip' you feel."
+    },
+    {
+      "id": "bouquet",
+      "term": "Bouquet",
+      "lang": "fr",
+      "category": "oenology",
+      "definition": "The complex aromas that develop in wine through aging, as opposed to primary fruit aromas. A mature wine's olfactory signature."
+    },
+    {
+      "id": "legs",
+      "term": "Legs",
+      "lang": "en",
+      "category": "oenology",
+      "definition": "The streaks of wine that run down the inside of a glass after swirling. Indicates alcohol and glycerol content, not quality despite the myth."
+    },
+    {
+      "id": "plie",
+      "term": "Plié",
+      "lang": "fr",
+      "category": "dance",
+      "definition": "A bending of the knees with the back held straight. The foundation of ballet technique, used to warm up and as preparation for jumps.",
+      "pronunciation": "plee-AY"
+    },
+    {
+      "id": "releve",
+      "term": "Relevé",
+      "lang": "fr",
+      "category": "dance",
+      "definition": "Rising to the balls of the feet or full pointe. From French 'raised'—the dancer lifts against gravity.",
+      "pronunciation": "rel-VAY"
+    },
+    {
+      "id": "pas-de-deux",
+      "term": "Pas de deux",
+      "lang": "fr",
+      "category": "dance",
+      "definition": "A dance for two, typically a ballerina and male partner, showcasing both virtuosity and partnership. The romantic centerpiece of classical ballet.",
+      "pronunciation": "pah duh DUH"
+    },
+    {
+      "id": "arabesque",
+      "term": "Arabesque",
+      "lang": "fr",
+      "category": [
+        "dance",
+        "art"
+      ],
+      "definition": "A pose on one leg with the other extended behind. Named for its resemblance to Arabic decorative patterns—a body made ornamental.",
+      "pronunciation": "ar-ah-BESK"
+    },
+    {
+      "id": "fouette",
+      "term": "Fouetté",
+      "lang": "fr",
+      "category": "dance",
+      "definition": "A turn in which the working leg whips around to provide momentum. The 32 fouettés in Swan Lake are a legendary test of technique.",
+      "pronunciation": "fweh-TAY"
+    },
+    {
+      "id": "en-pointe",
+      "term": "En pointe",
+      "lang": "fr",
+      "category": "dance",
+      "definition": "Dancing on the tips of the toes in reinforced shoes. The ethereal, gravity-defying image of ballet—achieved through years of training and pain."
+    },
+    {
+      "id": "barre",
+      "term": "Barre",
+      "lang": "fr",
+      "category": "dance",
+      "definition": "The horizontal rail used for support during ballet warm-up exercises. Every ballet class begins at the barre before moving to center work."
+    },
+    {
+      "id": "dramaturgy",
+      "term": "Dramaturgy",
+      "lang": "en",
+      "category": "theatre",
+      "definition": "The art of dramatic composition and theatrical representation. A dramaturg researches, advises on text, and bridges playwright and production."
+    },
+    {
+      "id": "denouement",
+      "term": "Dénouement",
+      "lang": "fr",
+      "category": [
+        "theatre",
+        "literature"
+      ],
+      "definition": "The final resolution of a plot's complications. From French 'unknotting'—the moment when all threads are untangled.",
+      "pronunciation": "day-noo-MAH"
+    },
+    {
+      "id": "soliloquy",
+      "term": "Soliloquy",
+      "lang": "en",
+      "category": "theatre",
+      "definition": "A speech in which a character speaks their thoughts aloud while alone on stage. The audience becomes privy to the inner mind.",
+      "etymology": "Latin solus (alone) + loqui (to speak)"
+    },
+    {
+      "id": "aside",
+      "term": "Aside",
+      "lang": "en",
+      "category": "theatre",
+      "definition": "A remark spoken to the audience that other characters supposedly cannot hear. A theatrical conspiracy between actor and viewer."
+    },
+    {
+      "id": "fourth-wall",
+      "term": "Fourth Wall",
+      "lang": "en",
+      "category": "theatre",
+      "definition": "The imaginary barrier between performers and audience. 'Breaking' it means directly acknowledging the audience—shattering the illusion."
+    },
+    {
+      "id": "blocking",
+      "term": "Blocking",
+      "lang": "en",
+      "category": "theatre",
+      "definition": "The precise staging of actors' movements and positions. Where you stand, when you move—the choreography of drama."
+    },
+    {
+      "id": "greenroom",
+      "term": "Green Room",
+      "lang": "en",
+      "category": "theatre",
+      "definition": "The backstage room where performers wait before going on stage. Origin disputed—possibly from green baize fabric or nervous pallor."
+    },
+    {
+      "id": "blazon",
+      "term": "Blazon",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The formal description of a coat of arms in heraldic language. A precise technical vocabulary that can recreate any design from text alone."
+    },
+    {
+      "id": "argent",
+      "term": "Argent",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "The heraldic term for silver or white. One of the two 'metals' in heraldry, along with or (gold).",
+      "pronunciation": "AR-jent"
+    },
+    {
+      "id": "gules",
+      "term": "Gules",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "The heraldic term for red. From Old French goules (red fur neckpieces). One of the five traditional 'colours'.",
+      "pronunciation": "gyoolz"
+    },
+    {
+      "id": "sinister",
+      "term": "Sinister",
+      "lang": "la",
+      "category": "heraldry",
+      "definition": "The left side of a shield (from the bearer's perspective, right from viewer's). Latin for 'left'—hence the word's ominous connotations."
+    },
+    {
+      "id": "couchant",
+      "term": "Couchant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "An animal lying down with head raised, alert. Contrasts with dormant (sleeping) and passant (walking).",
+      "pronunciation": "KOO-chant"
+    },
+    {
+      "id": "rampant",
+      "term": "Rampant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "An animal rearing up on its hind legs in profile, forepaws raised. The most aggressive heraldic posture—lions rampant are ubiquitous."
+    },
+    {
+      "id": "falsafa",
+      "term": "فلسفة (Falsafa)",
+      "lang": "ar",
+      "category": [
+        "philosophy",
+        "history"
+      ],
+      "definition": "Islamic philosophy derived from Greek thought. Practiced by Al-Farabi, Avicenna, and Averroes, it sought to reconcile reason with revelation."
+    },
+    {
+      "id": "ijma",
+      "term": "إجماع (Ijma)",
+      "lang": "ar",
+      "category": [
+        "philosophy",
+        "law"
+      ],
+      "definition": "Scholarly consensus in Islamic law. When qualified jurists agree on a ruling, it becomes binding—collective wisdom as legal source."
+    },
+    {
+      "id": "hikma",
+      "term": "حكمة (Hikma)",
+      "lang": "ar",
+      "category": "philosophy",
+      "definition": "Wisdom in Arabic philosophy. Not mere knowledge but deep understanding—the practical application of truth to life.",
+      "pronunciation": "HIK-mah"
+    },
+    {
+      "id": "kalam",
+      "term": "كلام (Kalām)",
+      "lang": "ar",
+      "category": [
+        "philosophy",
+        "theology"
+      ],
+      "definition": "Islamic scholastic theology. Literally 'speech'—the discipline of defending religious doctrines through rational argument."
+    },
+    {
+      "id": "barzakh",
+      "term": "برزخ (Barzakh)",
+      "lang": "ar",
+      "category": [
+        "philosophy",
+        "spirituality"
+      ],
+      "definition": "An isthmus or barrier between two things—in Islamic thought, the realm between death and resurrection. A liminal spiritual space."
+    },
+    {
+      "id": "ghazal",
+      "term": "غزل (Ghazal)",
+      "lang": "fa",
+      "category": [
+        "poetry",
+        "music"
+      ],
+      "definition": "A poetic form of rhyming couplets with a refrain, traditionally about love and loss. Each couplet is self-contained yet part of a whole.",
+      "pronunciation": "guh-ZAL"
+    },
+    {
+      "id": "rubai",
+      "term": "رباعی (Ruba'i)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A four-line poem with AABA rhyme scheme. Omar Khayyam's Rubaiyat made the form famous in the West.",
+      "pronunciation": "roo-BAH-ee"
+    },
+    {
+      "id": "masnavi",
+      "term": "مثنوی (Masnavi)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A poem of rhyming couplets, often of epic length. Rumi's Masnavi-ye-Ma'navi is the supreme example—26,000 verses of mystical teaching.",
+      "pronunciation": "mas-nah-VEE"
+    },
+    {
+      "id": "radif",
+      "term": "ردیف (Radif)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A word or phrase repeated at the end of each couplet in a ghazal, following the rhyme. Creates hypnotic musicality.",
+      "pronunciation": "rah-DEEF"
+    },
+    {
+      "id": "takhallos",
+      "term": "تخلص (Takhallos)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A poet's pen name, traditionally inserted in the final couplet. The poet signs their work within the poem itself.",
+      "pronunciation": "tah-khal-LOS"
+    },
+    {
+      "id": "diwan",
+      "term": "دیوان (Divan)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A collected volume of a poet's work, arranged alphabetically by the last letter of the rhyme. The standard format for Persian poetry anthologies."
+    },
+    {
+      "id": "raga",
+      "term": "राग (Raga)",
+      "lang": "sa",
+      "category": "music",
+      "definition": "A melodic framework for improvisation, with specific ascending/descending patterns, characteristic phrases, and emotional associations (rasa).",
+      "pronunciation": "RAH-guh"
+    },
+    {
+      "id": "tala",
+      "term": "ताल (Tala)",
+      "lang": "sa",
+      "category": "music",
+      "definition": "A rhythmic cycle that provides the temporal framework for composition and improvisation. Cycles range from 3 to 128 beats.",
+      "pronunciation": "TAH-luh"
+    },
+    {
+      "id": "shruti",
+      "term": "श्रुति (Shruti)",
+      "lang": "sa",
+      "category": "music",
+      "definition": "The smallest interval of pitch recognized in Indian music—22 shrutis per octave versus Western music's 12 semitones.",
+      "pronunciation": "SHROO-tee"
+    },
+    {
+      "id": "gamaka",
+      "term": "गमक (Gamaka)",
+      "lang": "sa",
+      "category": "music",
+      "definition": "Ornamental techniques including oscillations, slides, and grace notes that give Indian classical music its distinctive expressiveness.",
+      "pronunciation": "guh-MUH-kuh"
+    },
+    {
+      "id": "alap",
+      "term": "आलाप (Alap)",
+      "lang": "sa",
+      "category": "music",
+      "definition": "The slow, meditative, rhythm-free opening of a raga performance. The musician gradually reveals the raga's character, note by note.",
+      "pronunciation": "AH-lahp"
+    },
+    {
+      "id": "jugalbandi",
+      "term": "जुगलबंदी (Jugalbandi)",
+      "lang": "sa",
+      "category": "music",
+      "definition": "A duet between two soloists, often playing different instruments. Competitive yet collaborative—musical dialogue and friendly combat.",
+      "pronunciation": "joo-gul-BUN-dee"
+    },
+    {
+      "id": "gharana",
+      "term": "घराना (Gharana)",
+      "lang": "sa",
+      "category": "music",
+      "definition": "A lineage or school of musicians passing down distinctive style through generations. Literally 'household'—musical knowledge as family inheritance.",
+      "pronunciation": "guh-RAH-nuh"
+    },
+    {
+      "id": "prima-materia",
+      "term": "Prima Materia",
+      "lang": "la",
+      "category": [
+        "alchemy",
+        "philosophy"
+      ],
+      "definition": "The formless base of all matter in alchemy. Everything begins as and can be reduced to this primordial substance—chaos before creation."
+    },
+    {
+      "id": "nigredo",
+      "term": "Nigredo",
+      "lang": "la",
+      "category": [
+        "alchemy",
+        "psychology"
+      ],
+      "definition": "The first stage of the alchemical work—blackening, putrefaction, death. Jung interpreted it as confronting the shadow self.",
+      "related": [
+        "Albedo",
+        "Rubedo"
+      ]
+    },
+    {
+      "id": "albedo",
+      "term": "Albedo",
+      "lang": "la",
+      "category": [
+        "alchemy",
+        "psychology"
+      ],
+      "definition": "The second stage—whitening, purification, washing away impurities. Psychologically, the emergence of insight from darkness.",
+      "related": [
+        "Nigredo",
+        "Rubedo"
+      ]
+    },
+    {
+      "id": "rubedo",
+      "term": "Rubedo",
+      "lang": "la",
+      "category": [
+        "alchemy",
+        "psychology"
+      ],
+      "definition": "The final stage—reddening, the achievement of the philosopher's stone. Symbolizes wholeness, integration, spiritual gold.",
+      "related": [
+        "Nigredo",
+        "Albedo"
+      ]
+    },
+    {
+      "id": "magnum-opus",
+      "term": "Magnum Opus",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "The 'Great Work'—the alchemical process of creating the philosopher's stone. Now means any artist's or thinker's masterpiece."
+    },
+    {
+      "id": "ouroboros",
+      "term": "Οὐροβόρος (Ouroboros)",
+      "lang": "el",
+      "category": [
+        "alchemy",
+        "philosophy"
+      ],
+      "definition": "A serpent eating its own tail, symbolizing eternal cyclic renewal. What begins ends where it started—destruction feeding creation."
+    },
+    {
+      "id": "solve-et-coagula",
+      "term": "Solve et Coagula",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "'Dissolve and coagulate'—the essential alchemical operation. Break down to build up. Destruction precedes creation."
+    },
+    {
+      "id": "kata",
+      "term": "型 (Kata)",
+      "lang": "ja",
+      "category": "martial arts",
+      "definition": "A choreographed pattern of movements encoding combat techniques. The living textbook of a martial art, passed down through bodies.",
+      "pronunciation": "KAH-tah"
+    },
+    {
+      "id": "kime",
+      "term": "極め (Kime)",
+      "lang": "ja",
+      "category": "martial arts",
+      "definition": "The focus of physical and mental energy at the moment of impact. The explosive concentration that makes a technique decisive.",
+      "pronunciation": "kee-MEH"
+    },
+    {
+      "id": "zanshin",
+      "term": "残心 (Zanshin)",
+      "lang": "ja",
+      "category": "martial arts",
+      "definition": "Continued awareness and alertness after a technique. The fight isn't over when you think it is—maintain readiness.",
+      "pronunciation": "zahn-SHIN"
+    },
+    {
+      "id": "kiai",
+      "term": "気合 (Kiai)",
+      "lang": "ja",
+      "category": "martial arts",
+      "definition": "A sharp exhalation or shout focusing energy and spirit at the moment of action. The sound of ki (vital energy) being released.",
+      "pronunciation": "kee-AI"
+    },
+    {
+      "id": "dojo",
+      "term": "道場 (Dōjō)",
+      "lang": "ja",
+      "category": "martial arts",
+      "definition": "A training hall for martial arts. Literally 'place of the way'—the physical space where the path is practiced.",
+      "pronunciation": "DOH-joh"
+    },
+    {
+      "id": "sensei",
+      "term": "先生 (Sensei)",
+      "lang": "ja",
+      "category": [
+        "martial arts",
+        "culture"
+      ],
+      "definition": "Teacher or master. Literally 'one who came before'—someone who walks the path ahead of you and shows the way.",
+      "pronunciation": "sen-SAY"
+    },
+    {
+      "id": "dan",
+      "term": "段 (Dan)",
+      "lang": "ja",
+      "category": "martial arts",
+      "definition": "A rank indicating proficiency level, typically starting after achieving black belt. The dan ranks represent deepening mastery.",
+      "pronunciation": "dahn"
     }
   ]
 }

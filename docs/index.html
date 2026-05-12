@@ -51,60 +51,62 @@
              ═══════════════════════════════════════════════════════════════════ -->
         <section id="home" class="page active">
             <div class="home-hero">
-                <div class="home-hero-text">
-                    <h1 class="hero-title">
-                        <em>Trouver</em> l'idée à travers <em>toutes</em> les traditions<span class="accent-dot">.</span>
-                    </h1>
-                    <p class="tagline">
-                        Chaque langue découpe le monde différemment. Voici les mots qui refusent le passage.
-                    </p>
-                </div>
-
-                <article class="featured-card" id="featuredCard">
-                    <header class="featured-card-header">
-                        <span class="featured-card-code">AL.0001</span>
-                        <span class="featured-card-lang">DE</span>
-                    </header>
-                    <h2 class="featured-card-title">Le Gai Savoir</h2>
-                    <p class="featured-card-author">Friedrich Nietzsche</p>
-                    <div class="featured-card-meta">
-                        <span>1882</span>
-                        <span>·</span>
-                        <span>philosophie</span>
-                    </div>
-                </article>
+                <h1 class="hero-title">
+                    Catalogue des <em>intraduisibles</em><span class="accent-dot">.</span>
+                </h1>
+                <p class="tagline">
+                    Chaque langue découpe le monde différemment. Voici les mots qui refusent le passage.
+                </p>
             </div>
 
-            <section class="constellation-section">
-                <header class="constellation-header">
-                    <h2 class="section-title">Constellation des concepts</h2>
-                    <span class="label">Connexions</span>
+            <!-- Quick Stats -->
+            <nav class="quick-stats" id="quickStats">
+                <a href="#glossary" class="stat-link">
+                    <span class="stat-number" id="statTerms">0</span>
+                    <span class="stat-label">termes</span>
+                </a>
+                <a href="#glossary" class="stat-link">
+                    <span class="stat-number" id="statLangs">0</span>
+                    <span class="stat-label">langues</span>
+                </a>
+                <a href="#browse" class="stat-link">
+                    <span class="stat-number" id="statTexts">0</span>
+                    <span class="stat-label">textes</span>
+                </a>
+                <a href="#sources" class="stat-link">
+                    <span class="stat-number" id="statSources">0</span>
+                    <span class="stat-label">sources</span>
+                </a>
+            </nav>
+
+            <!-- Mot du Jour -->
+            <section class="mot-du-jour">
+                <header class="mdj-header">
+                    <span class="mdj-label">Mot du jour</span>
+                    <button class="mdj-refresh" id="mdjRefresh" title="Autre mot">↻</button>
                 </header>
-                <div class="constellation-grid" id="constellationGrid">
+                <article class="mdj-card" id="mdjCard">
+                    <h2 class="mdj-term" id="mdjTerm">—</h2>
+                    <span class="mdj-lang" id="mdjLang">—</span>
+                    <p class="mdj-definition" id="mdjDefinition">—</p>
+                    <button class="mdj-link" id="mdjLink">voir dans le glossaire →</button>
+                </article>
+            </section>
+
+            <!-- Language Quick Filters -->
+            <section class="lang-explore">
+                <h2 class="section-title">Explorer par langue</h2>
+                <div class="lang-pills" id="langPills">
                     <!-- Populated by JS -->
                 </div>
             </section>
 
-            <section class="recent-section">
-                <header class="recent-header">
-                    <h2 class="section-title">Ajouts récents</h2>
-                    <span class="label">Index</span>
-                </header>
-                <table class="recent-table">
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Titre</th>
-                            <th>Auteur</th>
-                            <th>Langue</th>
-                            <th>Année</th>
-                        </tr>
-                    </thead>
-                    <tbody id="recentTableBody">
-                        <!-- Populated by JS -->
-                    </tbody>
-                </table>
-            </section>
+            <!-- Surprise Button -->
+            <div class="surprise-section">
+                <button class="surprise-btn" id="surpriseBtn">
+                    <span>✦</span> Surprise
+                </button>
+            </div>
         </section>
 
         <!-- ═══════════════════════════════════════════════════════════════════

@@ -373,54 +373,118 @@ function setupKeyboardShortcuts() {
 // HOME PAGE
 // ─────────────────────────────────────────────────────────────────────────────
 function renderHomePage() {
-    renderConstellation();
-    renderRecentTable();
+    renderQuickStats();
+    renderMotDuJour();
+    renderLangPills();
+    setupSurpriseButton();
 }
 
-function renderConstellation() {
-    const grid = document.getElementById('constellationGrid');
-    if (!grid) return;
+function renderQuickStats() {
+    const statTerms = document.getElementById('statTerms');
+    const statLangs = document.getElementById('statLangs');
+    const statTexts = document.getElementById('statTexts');
+    const statSources = document.getElementById('statSources');
 
-    // Create concept clusters from terms
-    const concepts = [
-        { name: 'éternel retour', terms: ['Amor fati', 'Übermensch', 'Nihilisme'] },
-        { name: 'mono no aware', terms: ['Wabi-sabi', 'Mujo', 'Iki'] },
-        { name: 'ahiṃsā', terms: ['Dharma', 'Karma', 'Moksha'] },
-        { name: 'Vermassung', terms: ['Entfremdung', 'Zeitgeist', 'Weltanschauung'] },
-        { name: 'ressentiment', terms: ['Schadenfreude', 'Angst', 'Dasein'] },
-        { name: 'saudade', terms: ['Duende', 'Querencia', 'Sobremesa'] }
-    ];
+    if (statTerms) statTerms.textContent = state.terms.length;
+    if (statLangs) {
+        const langs = new Set(state.terms.map(t => t.lang));
+        statLangs.textContent = langs.size;
+    }
+    if (statTexts) statTexts.textContent = state.books.length;
+    if (statSources && state.references) {
+        let total = 0;
+        (state.references.sections || []).forEach(sec => {
+            sec.groups.forEach(g => { total += g.resources.length; });
+        });
+        statSources.textContent = total;
+    }
+}
 
-    grid.innerHTML = concepts.map(c => `
-        <div class="concept-cluster">
-            <h3 class="concept-name">${escapeHtml(c.name)}</h3>
-            <div class="concept-texts">
-                ${c.terms.map((t, i) => `
-                    <a href="#glossary" class="concept-text-link" onclick="selectGlossaryTermByName('${escapeHtml(t)}')">
-                        <span class="code">§${i + 1}</span>
-                        <span>${escapeHtml(t)}</span>
-                    </a>
-                `).join('')}
-            </div>
-        </div>
+function renderMotDuJour() {
+    const termEl = document.getElementById('mdjTerm');
+    const langEl = document.getElementById('mdjLang');
+    const defEl = document.getElementById('mdjDefinition');
+    const linkBtn = document.getElementById('mdjLink');
+    const refreshBtn = document.getElementById('mdjRefresh');
+
+    if (!termEl || !state.terms.length) return;
+
+    function showRandomTerm() {
+        const term = state.terms[Math.floor(Math.random() * state.terms.length)];
+        termEl.textContent = term.term;
+        langEl.textContent = term.lang.toUpperCase();
+        defEl.textContent = term.definition || '';
+        linkBtn.onclick = () => selectGlossaryTerm(term.id);
+    }
+
+    showRandomTerm();
+    refreshBtn?.addEventListener('click', showRandomTerm);
+}
+
+function renderLangPills() {
+    const container = document.getElementById('langPills');
+    if (!container) return;
+
+    // Count terms per language
+    const langCounts = {};
+    state.terms.forEach(t => {
+        langCounts[t.lang] = (langCounts[t.lang] || 0) + 1;
+    });
+
+    // Sort by count and take top languages
+    const topLangs = Object.entries(langCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 12);
+
+    container.innerHTML = topLangs.map(([lang, count]) => `
+        <button class="lang-pill" data-lang="${lang}" onclick="filterByLang('${lang}')">
+            <span class="lang-pill-code">${lang.toUpperCase()}</span>
+            <span class="lang-pill-count">${count}</span>
+        </button>
     `).join('');
 }
 
-function renderRecentTable() {
-    const tbody = document.getElementById('recentTableBody');
-    if (!tbody) return;
+function filterByLang(lang) {
+    navigateTo('glossary');
+    // Wait for page to render, then filter
+    setTimeout(() => {
+        const entries = document.querySelectorAll('.glossary-entry');
+        entries.forEach(entry => {
+            const entryLang = entry.querySelector('.glossary-lang')?.textContent.toLowerCase();
+            entry.style.display = entryLang === lang ? '' : 'none';
+        });
+        // Update search placeholder to indicate filter
+        const searchInput = document.getElementById('glossarySearch');
+        if (searchInput) {
+            searchInput.value = '';
+            searchInput.placeholder = `filtré: ${lang.toUpperCase()} — effacer pour tout voir`;
+        }
+    }, 50);
+}
+window.filterByLang = filterByLang;
 
-    const recent = state.books.slice(0, 10);
+function setupSurpriseButton() {
+    const btn = document.getElementById('surpriseBtn');
+    if (!btn) return;
 
-    tbody.innerHTML = recent.map(b => `
-        <tr>
-            <td class="recent-code">${escapeHtml(b.code)}</td>
-            <td class="recent-title">${escapeHtml(b.title)}</td>
-            <td class="recent-author">${escapeHtml(b.author)}</td>
-            <td class="recent-meta">${b.lang.toUpperCase()}</td>
-            <td class="recent-meta">${b.year || '—'}</td>
-        </tr>
-    `).join('');
+    btn.addEventListener('click', () => {
+        // 50% chance term, 50% chance book
+        if (Math.random() > 0.5 && state.terms.length) {
+            const term = state.terms[Math.floor(Math.random() * state.terms.length)];
+            selectGlossaryTerm(term.id);
+        } else if (state.books.length) {
+            const book = state.books[Math.floor(Math.random() * state.books.length)];
+            navigateTo('browse');
+            setTimeout(() => {
+                const card = document.querySelector(`.book-card[data-id="${book.id}"]`);
+                if (card) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    card.classList.add('highlight');
+                    setTimeout(() => card.classList.remove('highlight'), 2000);
+                }
+            }, 100);
+        }
+    });
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

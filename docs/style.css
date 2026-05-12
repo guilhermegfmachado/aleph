@@ -289,149 +289,236 @@ main {
    HOME PAGE
    ───────────────────────────────────────────────────────────────────────────── */
 .home-hero {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 4rem;
-  padding: var(--page-y) var(--page-x);
-  min-height: 70vh;
-  align-items: center;
+  padding: 4rem var(--page-x) 2rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.home-hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.home-meta {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.home-meta .separator {
-  color: var(--accent);
-}
-
-/* Featured Card */
-.featured-card {
-  border: 1px solid var(--rule);
-  background: var(--paper);
-  padding: 1.5rem;
-}
-
-.featured-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.featured-card-code {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  color: var(--ink-3);
-}
-
-.featured-card-lang {
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.featured-card-title {
-  font-size: 1.75rem;
-  font-style: italic;
-  margin-bottom: 0.5rem;
+.hero-title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   line-height: 1.2;
-}
-
-.featured-card-author {
-  font-size: 0.9375rem;
-  color: var(--ink-2);
   margin-bottom: 1rem;
 }
 
-.featured-card-meta {
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  color: var(--ink-3);
+.tagline {
+  font-size: 1rem;
+  color: var(--ink-2);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Quick Stats */
+.quick-stats {
   display: flex;
-  gap: 1rem;
-}
-
-/* Concept Constellation */
-.constellation-section {
-  padding: 4rem var(--page-x);
-  border-top: 1px solid var(--rule);
-}
-
-.constellation-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 2rem;
-}
-
-.constellation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  justify-content: center;
   gap: 1px;
   background: var(--rule);
   border: 1px solid var(--rule);
+  margin: 0 var(--page-x) 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.concept-cluster {
+.stat-link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  background: var(--paper);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.stat-link:hover {
+  background: var(--bg);
+}
+
+.stat-number {
+  font-family: var(--mono);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.25rem;
+}
+
+/* Mot du Jour */
+.mot-du-jour {
+  padding: 0 var(--page-x) 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mdj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mdj-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.mdj-refresh {
+  background: none;
+  border: 1px solid var(--rule);
+  color: var(--ink-3);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.15s;
+}
+
+.mdj-refresh:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.mdj-card {
+  border: 1px solid var(--rule);
   background: var(--paper);
   padding: 1.5rem;
 }
 
-.concept-name {
-  font-size: 1.25rem;
+.mdj-term {
+  font-size: 1.5rem;
   font-style: italic;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-.concept-texts {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.mdj-lang {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  background: rgba(201, 168, 76, 0.1);
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.concept-text-link {
-  font-size: 0.875rem;
+.mdj-definition {
+  font-size: 0.9375rem;
   color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.mdj-link {
+  background: none;
+  border: none;
+  color: var(--ink-3);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.mdj-link:hover {
+  color: var(--accent);
+}
+
+/* Language Pills */
+.lang-explore {
+  padding: 0 var(--page-x) 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.lang-explore .section-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.lang-pills {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 
-.concept-text-link:hover {
+.lang-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.lang-pill:hover {
+  border-color: var(--accent);
+}
+
+.lang-pill-code {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
   color: var(--ink);
 }
 
-.concept-text-link .code {
+.lang-pill-count {
   font-family: var(--mono);
   font-size: 0.625rem;
   color: var(--ink-3);
 }
 
-/* Recent Additions */
-.recent-section {
-  padding: 4rem var(--page-x);
-  border-top: 1px solid var(--rule);
+/* Surprise Button */
+.surprise-section {
+  padding: 2rem var(--page-x) 4rem;
+  text-align: center;
 }
 
-.recent-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 2rem;
+.surprise-btn {
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  padding: 0.75rem 2rem;
+  background: var(--accent);
+  color: var(--paper);
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.surprise-btn:hover {
+  background: var(--ink);
+}
+
+/* Book card highlight animation */
+.book-card.highlight {
+  animation: pulse 0.5s ease-in-out 3;
+}
+
+@keyframes pulse {
+  0%, 100% { border-color: var(--rule); }
+  50% { border-color: var(--accent); box-shadow: 0 0 12px rgba(201, 168, 76, 0.3); }
+}
 }
 
 .recent-table {
@@ -1346,13 +1433,9 @@ details.sources-section[open] > summary::after {
 }
 
 @media (max-width: 1024px) {
-  .home-hero {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .featured-card {
-    max-width: 380px;
+  .quick-stats {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
 
@@ -1405,12 +1488,43 @@ details.sources-section[open] > summary::after {
     gap: 1rem;
   }
 
-  .hero-title {
-    font-size: clamp(2.5rem, 10vw, 4rem);
+  /* Home page mobile */
+  .home-hero {
+    padding: 2.5rem var(--page-x) 1.5rem;
   }
 
-  .constellation-grid {
-    grid-template-columns: 1fr;
+  .quick-stats {
+    margin: 0 1rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-link {
+    min-width: calc(50% - 1px);
+    padding: 1rem 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .mot-du-jour {
+    padding: 0 1rem 2rem;
+  }
+
+  .mdj-term {
+    font-size: 1.25rem;
+  }
+
+  .lang-explore {
+    padding: 0 1rem 2rem;
+  }
+
+  .lang-pills {
+    gap: 0.4rem;
+  }
+
+  .lang-pill {
+    padding: 0.4rem 0.6rem;
   }
 
   .source-item {
@@ -1483,19 +1597,6 @@ details.sources-section[open] > summary::after {
     grid-template-columns: 1fr;
   }
 
-  .featured-card {
-    max-width: 100%;
-  }
-
-  .recent-table {
-    font-size: 0.875rem;
-  }
-
-  .recent-table th,
-  .recent-table td {
-    padding: 0.5rem;
-  }
-
   .network-container {
     height: 400px;
   }
@@ -1505,14 +1606,22 @@ details.sources-section[open] > summary::after {
     display: none;
   }
 
-  /* Simplify home meta */
-  .home-meta .separator {
-    display: none;
+  /* Home page small mobile */
+  .stat-link {
+    padding: 0.75rem 0.25rem;
   }
 
-  .home-meta {
-    flex-wrap: wrap;
-    gap: 0.25rem 0.75rem;
+  .stat-number {
+    font-size: 1.1rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .surprise-btn {
+    width: 100%;
+    max-width: 280px;
   }
 
   /* Tighter book cards */

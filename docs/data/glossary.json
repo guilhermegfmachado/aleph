@@ -407,7 +407,7 @@
       "definition": "A beam anchored at only one end, projecting into space — Fallingwater's terraces, diving boards, balconies. The structural drama of defying gravity. Engineering as spectacle.",
       "category": [
         "architecture",
-        "ingénierie"
+        "technique"
       ]
     },
     {
@@ -459,7 +459,7 @@
       "definition": "A structural bracket projecting from a wall to support weight — the technique that built Gothic cathedrals and Medieval castles. Stone stepping out to catch stone. The medieval cantilever.",
       "category": [
         "architecture",
-        "ingénierie"
+        "technique"
       ]
     },
     {
@@ -469,7 +469,7 @@
       "definition": "The external arched support that channels Gothic cathedral walls' outward thrust to the ground — engineering that enabled walls of glass. Structure made visible and beautiful.",
       "category": [
         "architecture",
-        "ingénierie"
+        "technique"
       ]
     },
     {
@@ -480,7 +480,7 @@
       "definition": "The central organizing idea of an architectural design — the big move, the diagram, the concept from which all decisions flow. Not the whole solution but its seed.",
       "category": [
         "architecture",
-        "design"
+        "art"
       ]
     },
     {
@@ -501,7 +501,7 @@
       "definition": "Intense final design sprint — from the cart (charrette) that collected student drawings at the École des Beaux-Arts. Now any deadline crunch. The all-nighter before presentation.",
       "category": [
         "architecture",
-        "design"
+        "art"
       ]
     },
     {
@@ -6879,7 +6879,7 @@
       "etymology": "From Kummer (grief) + Speck (bacon/fat)",
       "category": [
         "émotion",
-        "physiologie"
+        "médecine"
       ],
       "related": []
     },
@@ -8348,7 +8348,7 @@
       "definition": "What a waste! The sense that wasting anything—food, time, potential—is a shame. A Japanese environmental ethic.",
       "category": [
         "éthique",
-        "écologie"
+        "nature"
       ],
       "related": []
     },
@@ -8398,7 +8398,7 @@
       "definition": "Savory deliciousness — the fifth taste, beyond sweet, sour, salty, bitter. Glutamates in parmesan, soy sauce, tomatoes, mushrooms. Identified by Ikeda in 1908, dismissed by the West until recently. The taste that makes food satisfying.",
       "category": [
         "gastronomie",
-        "science"
+        "technique"
       ]
     },
     {
@@ -8408,7 +8408,7 @@
       "definition": "The chemical browning that creates flavor — amino acids and sugars reacting under heat. Bread crust, seared steak, roasted coffee. Not caramelization (that's just sugar). The reaction that makes cooked food taste cooked.",
       "category": [
         "gastronomie",
-        "science"
+        "technique"
       ]
     },
     {
@@ -8525,7 +8525,7 @@
       "definition": "A stable mixture of immiscible liquids — oil and water held together by lecithin or other emulsifiers. Mayonnaise, hollandaise, vinaigrette. The chemistry that makes sauces creamy. Break the emulsion: greasy disaster.",
       "category": [
         "gastronomie",
-        "science"
+        "technique"
       ]
     },
     {
@@ -15208,7 +15208,7 @@
       "etymology": "Greek: nemein (to allot, to distribute what is due)",
       "category": [
         "philosophie",
-        "mythologie"
+        "culture"
       ],
       "related": [
         "Hubris"
@@ -15455,7 +15455,7 @@
       "partOfSpeech": "noun",
       "definition": "The drowsiness that follows a large meal; the pleasant torpor of a satisfied stomach. The food coma.",
       "category": [
-        "physiologie",
+        "médecine",
         "gastronomie"
       ],
       "related": [
@@ -21043,7 +21043,7 @@
       "definition": "Life force; vital breath that animates all living things. The energy cultivated in yoga and meditation.",
       "category": [
         "spiritualité",
-        "physiologie"
+        "médecine"
       ],
       "related": [
         "Qi",

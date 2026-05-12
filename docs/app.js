@@ -475,10 +475,12 @@ function filterByLang(lang) {
     navigateTo('glossary');
     setTimeout(() => {
         state.filters.glossaryLang = lang;
+        state.filters.category = null;
         const langSelect = document.getElementById('glossaryLangFilter');
         if (langSelect) langSelect.value = lang;
-        renderGlossaryAccordions();
-        document.querySelectorAll('.glossary-category').forEach(d => d.open = true);
+        renderGlossarySidebar();
+        document.getElementById('glossaryContent').innerHTML =
+            '<div class="glossary-welcome"><p>Sélectionnez une catégorie à gauche.</p></div>';
     }, 50);
 }
 window.filterByLang = filterByLang;

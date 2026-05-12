@@ -13681,6 +13681,2700 @@
       "lang": "la",
       "category": "poetry",
       "definition": "A poem or song using an existing melody or form with new words. Sacred made secular or vice versa."
+    },
+    {
+      "id": "architrave",
+      "term": "Architrave",
+      "lang": "it",
+      "category": "architecture",
+      "definition": "The lowest part of an entablature, resting directly on column capitals. The main beam spanning columns."
+    },
+    {
+      "id": "entablature",
+      "term": "Entablature",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The horizontal structure above columns: architrave, frieze, and cornice. The classical crown."
+    },
+    {
+      "id": "frieze",
+      "term": "Frieze",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The middle band of an entablature, often decorated with sculpture. The Parthenon's frieze is legendary."
+    },
+    {
+      "id": "cornice",
+      "term": "Cornice",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The projecting horizontal molding crowning a building or wall. The final flourish."
+    },
+    {
+      "id": "pediment",
+      "term": "Pediment",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The triangular gable end of a roof, especially in classical architecture. Often filled with sculpture."
+    },
+    {
+      "id": "colonnade",
+      "term": "Colonnade",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A row of columns supporting a roof or entablature. The parade of verticals."
+    },
+    {
+      "id": "peristyle",
+      "term": "Peristyle",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "A colonnade surrounding a building or courtyard. Greek temples were often peripteral."
+    },
+    {
+      "id": "portico",
+      "term": "Portico",
+      "lang": "it",
+      "category": "architecture",
+      "definition": "A porch with a roof supported by columns, often at a building's entrance."
+    },
+    {
+      "id": "caryatid",
+      "term": "Caryatid",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "A sculpted female figure serving as a column. The Erechtheion's maidens bearing the roof."
+    },
+    {
+      "id": "atlas-arch",
+      "term": "Atlas/Telamon",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "A sculpted male figure serving as a column. The masculine counterpart to caryatids."
+    },
+    {
+      "id": "pilaster",
+      "term": "Pilaster",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A flat column attached to a wall, projecting slightly. Decorative, not structural."
+    },
+    {
+      "id": "engaged-column",
+      "term": "Engaged Column",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A column partially embedded in a wall. Half-free, half-bound."
+    },
+    {
+      "id": "fluting",
+      "term": "Fluting",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Vertical grooves carved into a column shaft. Creates play of light and shadow."
+    },
+    {
+      "id": "entasis",
+      "term": "Entasis",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The subtle swelling of a column's shaft. Corrects the optical illusion of concavity."
+    },
+    {
+      "id": "stylobate",
+      "term": "Stylobate",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The top step of a temple platform on which columns stand."
+    },
+    {
+      "id": "stereobate",
+      "term": "Stereobate",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The foundation platform of a Greek temple, below the stylobate."
+    },
+    {
+      "id": "cella",
+      "term": "Cella/Naos",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "The inner chamber of a Greek or Roman temple, housing the cult statue."
+    },
+    {
+      "id": "pronaos",
+      "term": "Pronaos",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The vestibule or porch before a temple's cella."
+    },
+    {
+      "id": "opisthodomos",
+      "term": "Opisthodomos",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The rear chamber of a Greek temple, often a treasury."
+    },
+    {
+      "id": "doric",
+      "term": "Doric Order",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The oldest and simplest Greek order: sturdy columns, no base, plain capitals. Masculine, severe."
+    },
+    {
+      "id": "ionic",
+      "term": "Ionic Order",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "Greek order with slender columns, scroll capitals (volutes), and base. Elegant, feminine."
+    },
+    {
+      "id": "corinthian",
+      "term": "Corinthian Order",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "Greek order with ornate capitals of acanthus leaves. The most decorative."
+    },
+    {
+      "id": "tuscan",
+      "term": "Tuscan Order",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "Roman order: simplified Doric, unfluted columns. Plain, robust."
+    },
+    {
+      "id": "composite",
+      "term": "Composite Order",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "Roman order combining Ionic volutes with Corinthian acanthus. Maximalist."
+    },
+    {
+      "id": "volute",
+      "term": "Volute",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "The spiral scroll of an Ionic capital. The shell-like curl."
+    },
+    {
+      "id": "acanthus",
+      "term": "Acanthus",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The spiny Mediterranean plant whose leaves ornament Corinthian capitals."
+    },
+    {
+      "id": "abacus-arch",
+      "term": "Abacus",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The flat slab atop a column capital, supporting the architrave."
+    },
+    {
+      "id": "echinus",
+      "term": "Echinus",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The curved molding below the abacus in Doric capitals. Sea-urchin shaped."
+    },
+    {
+      "id": "metope",
+      "term": "Metope",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "A panel between triglyphs in a Doric frieze, often sculpted."
+    },
+    {
+      "id": "triglyph",
+      "term": "Triglyph",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "A grooved block in a Doric frieze, with three vertical channels."
+    },
+    {
+      "id": "dentil",
+      "term": "Dentil",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "Small rectangular blocks in a row, like teeth, in Ionic/Corinthian cornices."
+    },
+    {
+      "id": "modillion",
+      "term": "Modillion",
+      "lang": "it",
+      "category": "architecture",
+      "definition": "An ornamental bracket under a cornice, especially Corinthian."
+    },
+    {
+      "id": "acroterion",
+      "term": "Acroterion",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "An ornament at the apex or corners of a pediment."
+    },
+    {
+      "id": "antefix",
+      "term": "Antefix",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "An upright ornament at the eaves, concealing tile ends."
+    },
+    {
+      "id": "rustication",
+      "term": "Rustication",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Masonry with deep joints and rough surfaces, creating bold texture. Renaissance power."
+    },
+    {
+      "id": "ashlar",
+      "term": "Ashlar",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Masonry of precisely cut rectangular stones with thin joints."
+    },
+    {
+      "id": "voussoir",
+      "term": "Voussoir",
+      "lang": "fr",
+      "category": "architecture",
+      "definition": "A wedge-shaped stone forming an arch. The keystone is the central voussoir."
+    },
+    {
+      "id": "keystone",
+      "term": "Keystone",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The central wedge-shaped stone at an arch's crown, locking all others in place."
+    },
+    {
+      "id": "impost",
+      "term": "Impost",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The projecting molding atop a pier or pilaster from which an arch springs."
+    },
+    {
+      "id": "spandrel",
+      "term": "Spandrel",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The triangular space between an arch and its rectangular frame."
+    },
+    {
+      "id": "soffit",
+      "term": "Soffit",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The underside of an arch, balcony, or overhanging eave."
+    },
+    {
+      "id": "vault",
+      "term": "Vault",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "An arched ceiling or roof. Barrel, groin, rib, fan—many types evolved."
+    },
+    {
+      "id": "barrel-vault",
+      "term": "Barrel Vault",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The simplest vault: a continuous semicircular arch. A tunnel of stone."
+    },
+    {
+      "id": "groin-vault",
+      "term": "Groin Vault",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Two barrel vaults intersecting at right angles. The groins are the edges."
+    },
+    {
+      "id": "rib-vault",
+      "term": "Rib Vault",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A vault with visible ribs along the groins. Gothic structural innovation."
+    },
+    {
+      "id": "fan-vault",
+      "term": "Fan Vault",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "English Gothic vault with fan-shaped ribs spreading from springs. King's College Chapel."
+    },
+    {
+      "id": "pendentive",
+      "term": "Pendentive",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A curved triangle transitioning from square base to circular dome. Byzantine solution."
+    },
+    {
+      "id": "squinch",
+      "term": "Squinch",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "An arch across a corner, bridging square to octagon to dome. Alternative to pendentive."
+    },
+    {
+      "id": "dome",
+      "term": "Dome",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A hemispherical roof. The Pantheon, Hagia Sophia, St. Peter's—architecture's crown."
+    },
+    {
+      "id": "oculus",
+      "term": "Oculus",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "A circular opening, especially at a dome's apex. The Pantheon's eye to heaven."
+    },
+    {
+      "id": "lantern",
+      "term": "Lantern",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A small turret with windows crowning a dome, admitting light."
+    },
+    {
+      "id": "drum",
+      "term": "Drum",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A cylindrical wall supporting a dome."
+    },
+    {
+      "id": "cupola",
+      "term": "Cupola",
+      "lang": "it",
+      "category": "architecture",
+      "definition": "A small dome, especially one atop a larger roof or tower."
+    },
+    {
+      "id": "apse",
+      "term": "Apse",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "A semicircular recess, especially at the east end of a church."
+    },
+    {
+      "id": "nave",
+      "term": "Nave",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "The central aisle of a church, where the congregation sits."
+    },
+    {
+      "id": "aisle",
+      "term": "Aisle",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A passage flanking the nave, separated by columns or piers."
+    },
+    {
+      "id": "transept",
+      "term": "Transept",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The arms of a cross-shaped church, crossing the nave."
+    },
+    {
+      "id": "crossing",
+      "term": "Crossing",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Where nave and transept intersect. Often crowned by a tower or dome."
+    },
+    {
+      "id": "chancel",
+      "term": "Chancel",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The eastern part of a church around the altar, for clergy."
+    },
+    {
+      "id": "choir",
+      "term": "Choir",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The part of a church between nave and altar where singers sit."
+    },
+    {
+      "id": "ambulatory",
+      "term": "Ambulatory",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "A walkway around the apse, allowing circulation behind the altar."
+    },
+    {
+      "id": "clerestory",
+      "term": "Clerestory",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "The upper level of a church wall with windows above aisle roofs."
+    },
+    {
+      "id": "triforium",
+      "term": "Triforium",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A shallow gallery between the arcade and clerestory."
+    },
+    {
+      "id": "buttress",
+      "term": "Buttress",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A mass of masonry projecting from a wall to resist outward thrust."
+    },
+    {
+      "id": "pinnacle",
+      "term": "Pinnacle",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A small ornamental turret, especially atop buttresses. Weight and decoration."
+    },
+    {
+      "id": "crocket",
+      "term": "Crocket",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Carved leaf-like ornaments along Gothic spires and pinnacles."
+    },
+    {
+      "id": "tracery",
+      "term": "Tracery",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Ornamental stonework in Gothic windows, supporting the glass."
+    },
+    {
+      "id": "mullion",
+      "term": "Mullion",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A vertical bar dividing window panes."
+    },
+    {
+      "id": "rose-window",
+      "term": "Rose Window",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A circular window with radiating tracery. Gothic cathedrals' crowning glory."
+    },
+    {
+      "id": "lancet",
+      "term": "Lancet",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A tall narrow window with a pointed arch. Early Gothic."
+    },
+    {
+      "id": "narthex",
+      "term": "Narthex",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The vestibule at a church's entrance, before the nave."
+    },
+    {
+      "id": "atrium",
+      "term": "Atrium",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "An open central court, especially in Roman houses. Roofless heart."
+    },
+    {
+      "id": "impluvium",
+      "term": "Impluvium",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "The sunken basin in a Roman atrium, catching rainwater."
+    },
+    {
+      "id": "compluvium",
+      "term": "Compluvium",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "The opening in a Roman atrium roof above the impluvium."
+    },
+    {
+      "id": "peristylium",
+      "term": "Peristylium",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "A colonnaded garden courtyard in a Roman house."
+    },
+    {
+      "id": "hypocaust",
+      "term": "Hypocaust",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "Roman underfloor heating system. Hot air circulating beneath raised floors."
+    },
+    {
+      "id": "thermae",
+      "term": "Thermae",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "Roman public baths—caldarium, tepidarium, frigidarium."
+    },
+    {
+      "id": "basilica",
+      "term": "Basilica",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "A Roman public hall with nave and aisles. Later the church plan."
+    },
+    {
+      "id": "triumphal-arch",
+      "term": "Triumphal Arch",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A freestanding arch commemorating victory. Roman emperors' monuments."
+    },
+    {
+      "id": "amphitheater",
+      "term": "Amphitheater",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "An oval arena with tiered seating all around. The Colosseum."
+    },
+    {
+      "id": "cavea",
+      "term": "Cavea",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "The seating area of a Roman theater or amphitheater."
+    },
+    {
+      "id": "orchestra",
+      "term": "Orchestra",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The circular dancing floor in a Greek theater; semicircular in Roman."
+    },
+    {
+      "id": "proscenium",
+      "term": "Proscenium",
+      "lang": "el",
+      "category": "architecture",
+      "definition": "The stage area before the scene building. Later, the arch framing the stage."
+    },
+    {
+      "id": "scaenae-frons",
+      "term": "Scaenae Frons",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "The elaborate facade behind a Roman theater stage."
+    },
+    {
+      "id": "vomitorium",
+      "term": "Vomitorium",
+      "lang": "la",
+      "category": "architecture",
+      "definition": "A passage through which crowds enter or exit an amphitheater. 'Spewing' people."
+    },
+    {
+      "id": "muqarnas",
+      "term": "مقرنص (Muqarnas)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "Honeycomb vaulting: tiers of niche-like cells creating a stalactite ceiling. Islamic geometric wonder."
+    },
+    {
+      "id": "iwan",
+      "term": "إيوان (Iwan)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "A vaulted hall open on one side. Four iwans often face a courtyard."
+    },
+    {
+      "id": "mihrab",
+      "term": "محراب (Mihrab)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "A niche in a mosque wall indicating the direction of Mecca."
+    },
+    {
+      "id": "minbar",
+      "term": "منبر (Minbar)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "The pulpit in a mosque from which sermons are delivered."
+    },
+    {
+      "id": "minaret",
+      "term": "مئذنة (Minaret)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "The tower from which the muezzin calls to prayer."
+    },
+    {
+      "id": "qibla",
+      "term": "قبلة (Qibla)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "The direction of Mecca; the qibla wall contains the mihrab."
+    },
+    {
+      "id": "sahn",
+      "term": "صحن (Sahn)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "The central courtyard of a mosque."
+    },
+    {
+      "id": "riwaq",
+      "term": "رواق (Riwaq)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "A covered arcade around a mosque courtyard."
+    },
+    {
+      "id": "mashrabiya",
+      "term": "مشربية (Mashrabiya)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "A projecting oriel window with wooden latticework. Privacy, shade, ventilation."
+    },
+    {
+      "id": "zellige",
+      "term": "زليج (Zellige)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "Moroccan mosaic tilework: hand-cut geometric pieces forming complex patterns."
+    },
+    {
+      "id": "pishtaq",
+      "term": "پیشطاق (Pishtaq)",
+      "lang": "fa",
+      "category": "architecture",
+      "definition": "A monumental portal projecting from a facade, framing an iwan."
+    },
+    {
+      "id": "chahar-bagh",
+      "term": "چهارباغ (Chahar Bagh)",
+      "lang": "fa",
+      "category": "architecture",
+      "definition": "Four-garden: Persian garden divided into quadrants by water channels. Paradise geometry."
+    },
+    {
+      "id": "badgir",
+      "term": "بادگیر (Badgir)",
+      "lang": "fa",
+      "category": "architecture",
+      "definition": "Persian wind tower: catches breezes and channels cool air into buildings."
+    },
+    {
+      "id": "qanat",
+      "term": "قنات (Qanat)",
+      "lang": "fa",
+      "category": "architecture",
+      "definition": "An underground aqueduct bringing mountain water to desert cities. Persian engineering."
+    },
+    {
+      "id": "caravanserai",
+      "term": "کاروانسرا (Caravanserai)",
+      "lang": "fa",
+      "category": "architecture",
+      "definition": "A roadside inn for caravans: courtyard, stables, rooms for merchants."
+    },
+    {
+      "id": "hammam",
+      "term": "حمّام (Hammam)",
+      "lang": "ar",
+      "category": "architecture",
+      "definition": "A bathhouse in Islamic architecture: hot rooms, domed ceilings, star-shaped skylights."
+    },
+    {
+      "id": "shikhara",
+      "term": "शिखर (Shikhara)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "The tower above the sanctuary of a North Indian Hindu temple. Mountain peak pointing to heaven."
+    },
+    {
+      "id": "vimana",
+      "term": "विमान (Vimana)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "The tower above the sanctuary in South Indian temple architecture."
+    },
+    {
+      "id": "gopuram",
+      "term": "கோபுரம் (Gopuram)",
+      "lang": "ta",
+      "category": "architecture",
+      "definition": "The monumental gateway tower of a South Indian temple. Teeming with sculpture."
+    },
+    {
+      "id": "mandapa",
+      "term": "मण्डप (Mandapa)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "A pillared hall or pavilion in Indian temple architecture."
+    },
+    {
+      "id": "garbhagriha",
+      "term": "गर्भगृह (Garbhagriha)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "The 'womb-chamber': the innermost sanctuary of a Hindu temple, housing the deity."
+    },
+    {
+      "id": "pradakshina",
+      "term": "प्रदक्षिणा (Pradakshina)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "The circumambulatory path around a temple or shrine."
+    },
+    {
+      "id": "torana",
+      "term": "तोरण (Torana)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "An ornamental gateway, especially at Buddhist stupas."
+    },
+    {
+      "id": "stupa",
+      "term": "स्तूप (Stupa)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "A Buddhist hemispherical mound containing relics. Sacred architecture of enlightenment."
+    },
+    {
+      "id": "chaitya",
+      "term": "चैत्य (Chaitya)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "A Buddhist prayer hall, often rock-cut, with a stupa at the end."
+    },
+    {
+      "id": "vihara",
+      "term": "विहार (Vihara)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "A Buddhist monastery: cells around a courtyard."
+    },
+    {
+      "id": "jali",
+      "term": "जाली (Jali)",
+      "lang": "hi",
+      "category": "architecture",
+      "definition": "A perforated stone or wood screen. Indian mashrabiya. Light filtered, privacy maintained."
+    },
+    {
+      "id": "chhatri",
+      "term": "छतरी (Chhatri)",
+      "lang": "hi",
+      "category": "architecture",
+      "definition": "An elevated dome-shaped pavilion. 'Umbrella'—decorative or commemorative."
+    },
+    {
+      "id": "haveli",
+      "term": "हवेली (Haveli)",
+      "lang": "hi",
+      "category": "architecture",
+      "definition": "A traditional Indian mansion, often with courtyards and ornate facades."
+    },
+    {
+      "id": "stepwell",
+      "term": "Stepwell",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Indian water architecture: stairs descending to water level. Vav, baoli—cool refuges."
+    },
+    {
+      "id": "amalaka",
+      "term": "आमलक (Amalaka)",
+      "lang": "sa",
+      "category": "architecture",
+      "definition": "The ribbed disc-like stone atop a shikhara, below the finial."
+    },
+    {
+      "id": "dougong",
+      "term": "斗拱 (Dǒugǒng)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "Chinese bracket system: interlocking wooden blocks supporting roof eaves. Structural poetry."
+    },
+    {
+      "id": "hutong",
+      "term": "胡同 (Hútòng)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "A narrow lane between traditional Beijing courtyard houses. Urban intimacy."
+    },
+    {
+      "id": "siheyuan",
+      "term": "四合院 (Sìhéyuàn)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "A Beijing courtyard house: buildings on four sides around a central yard."
+    },
+    {
+      "id": "pailou",
+      "term": "牌樓 (Páilóu)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "A Chinese memorial or ceremonial gateway. Ornate roofed arches."
+    },
+    {
+      "id": "ta-pagoda",
+      "term": "塔 (Tǎ)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "Chinese pagoda: multi-tiered tower, evolved from Indian stupa. Buddhist architecture."
+    },
+    {
+      "id": "ting",
+      "term": "亭 (Tíng)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "A Chinese pavilion: open-sided, often in gardens. Rest and contemplation."
+    },
+    {
+      "id": "moon-gate",
+      "term": "月亮門 (Yuèliang Mén)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "A circular doorway in Chinese gardens. Frame and passage."
+    },
+    {
+      "id": "feng-shui",
+      "term": "風水 (Fēng Shuǐ)",
+      "lang": "zh",
+      "category": "architecture",
+      "definition": "Chinese geomancy: the art of orienting buildings to harmonize with cosmic forces."
+    },
+    {
+      "id": "torii",
+      "term": "鳥居 (Torii)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "The gateway marking entrance to a Shinto shrine. Sacred threshold."
+    },
+    {
+      "id": "shoin",
+      "term": "書院 (Shoin)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "Japanese study-hall style: tatami, alcove (tokonoma), built-in desk. Zen aesthetic."
+    },
+    {
+      "id": "tokonoma",
+      "term": "床の間 (Tokonoma)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "A recessed alcove in a Japanese room for displaying art and flowers."
+    },
+    {
+      "id": "fusuma",
+      "term": "襖 (Fusuma)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "Sliding panels that divide Japanese rooms. Opaque, often painted."
+    },
+    {
+      "id": "shoji",
+      "term": "障子 (Shōji)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "Paper-covered sliding screens admitting diffused light. The soft wall."
+    },
+    {
+      "id": "engawa",
+      "term": "縁側 (Engawa)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "A wooden veranda along a Japanese building. Inside-outside threshold."
+    },
+    {
+      "id": "machiya",
+      "term": "町家 (Machiya)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "Traditional Kyoto townhouse: narrow facade, deep interior, courtyard gardens."
+    },
+    {
+      "id": "minka",
+      "term": "民家 (Minka)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "Traditional Japanese farmhouse with thatched roof and earthen floor areas."
+    },
+    {
+      "id": "irimoya",
+      "term": "入母屋 (Irimoya)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "A Japanese roof style combining hipped and gabled forms."
+    },
+    {
+      "id": "karesansui",
+      "term": "枯山水 (Karesansui)",
+      "lang": "ja",
+      "category": "architecture",
+      "definition": "Dry landscape garden: raked gravel, rocks, no water. Zen minimalism."
+    },
+    {
+      "id": "hanok",
+      "term": "한옥 (Hanok)",
+      "lang": "ko",
+      "category": "architecture",
+      "definition": "Traditional Korean house with curved roof, heated floor (ondol), natural materials."
+    },
+    {
+      "id": "ondol",
+      "term": "온돌 (Ondol)",
+      "lang": "ko",
+      "category": "architecture",
+      "definition": "Korean underfloor heating: flues carry heat from kitchen fire under stone floor."
+    },
+    {
+      "id": "dancheong",
+      "term": "단청 (Dancheong)",
+      "lang": "ko",
+      "category": "architecture",
+      "definition": "Traditional Korean decorative painting on wooden buildings: vivid geometric patterns."
+    },
+    {
+      "id": "talud-tablero",
+      "term": "Talud-tablero",
+      "lang": "es",
+      "category": "architecture",
+      "definition": "Mesoamerican architectural style: sloping wall (talud) topped by vertical panel (tablero). Teotihuacan signature."
+    },
+    {
+      "id": "tzompantli",
+      "term": "Tzompantli",
+      "lang": "nah",
+      "category": "architecture",
+      "definition": "Aztec skull rack: wooden structure displaying skulls of sacrificial victims."
+    },
+    {
+      "id": "sacbe",
+      "term": "Sacbé",
+      "lang": "yua",
+      "category": "architecture",
+      "definition": "A raised Mayan roadway of white limestone. 'White road.'"
+    },
+    {
+      "id": "cenote",
+      "term": "Cenote",
+      "lang": "yua",
+      "category": "architecture",
+      "definition": "A natural sinkhole exposing groundwater, sacred to the Maya. Architecture of descent."
+    },
+    {
+      "id": "chultun",
+      "term": "Chultun",
+      "lang": "yua",
+      "category": "architecture",
+      "definition": "A Mayan underground storage chamber carved into bedrock."
+    },
+    {
+      "id": "corbel-arch",
+      "term": "Corbel Arch",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A false arch made by stepping stones progressively inward. Mayan vaulting."
+    },
+    {
+      "id": "adobe",
+      "term": "Adobe",
+      "lang": "es",
+      "category": "architecture",
+      "definition": "Sun-dried mud brick. The material of Saharan architecture, Pueblo buildings."
+    },
+    {
+      "id": "banco",
+      "term": "Banco",
+      "lang": "fr",
+      "category": "architecture",
+      "definition": "West African mud-brick coated with mud plaster. The material of Djenné."
+    },
+    {
+      "id": "rondavel",
+      "term": "Rondavel",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A traditional round African dwelling with conical thatched roof."
+    },
+    {
+      "id": "kraal",
+      "term": "Kraal",
+      "lang": "af",
+      "category": "architecture",
+      "definition": "A Southern African enclosure for livestock, or a village of huts around such a space."
+    },
+    {
+      "id": "art-nouveau",
+      "term": "Art Nouveau",
+      "lang": "fr",
+      "category": [
+        "architecture",
+        "art"
+      ],
+      "definition": "Flowing organic forms, sinuous lines, natural motifs. Gaudí, Horta, Guimard. 1890-1910."
+    },
+    {
+      "id": "art-deco",
+      "term": "Art Deco",
+      "lang": "fr",
+      "category": [
+        "architecture",
+        "art"
+      ],
+      "definition": "Geometric elegance, bold colors, luxurious materials. Chrysler Building. 1920s-30s."
+    },
+    {
+      "id": "international-style",
+      "term": "International Style",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Modernist architecture: glass, steel, flat roofs, open plans. Mies, Gropius, Le Corbusier."
+    },
+    {
+      "id": "brise-soleil",
+      "term": "Brise-soleil",
+      "lang": "fr",
+      "category": "architecture",
+      "definition": "Sun-break: external shading devices. Le Corbusier's response to glass walls."
+    },
+    {
+      "id": "curtain-wall",
+      "term": "Curtain Wall",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "A non-structural exterior wall, typically glass. The skyscraper's skin."
+    },
+    {
+      "id": "deconstructivism",
+      "term": "Deconstructivism",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Fragmented, distorted forms challenging structural logic. Gehry, Hadid, Libeskind."
+    },
+    {
+      "id": "parametricism",
+      "term": "Parametricism",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Computer-generated organic forms from algorithmic parameters. Zaha Hadid's later work."
+    },
+    {
+      "id": "metabolism",
+      "term": "Metabolism",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "1960s Japanese movement: megastructures, capsules, biological metaphors. Kurokawa, Tange."
+    },
+    {
+      "id": "high-tech",
+      "term": "High-Tech Architecture",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Celebrating structure and services: exposed pipes, visible framework. Rogers, Foster, Piano."
+    },
+    {
+      "id": "critical-regionalism",
+      "term": "Critical Regionalism",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Modernism adapted to local climate, culture, materials. Against placeless universalism."
+    },
+    {
+      "id": "vernacular",
+      "term": "Vernacular Architecture",
+      "lang": "en",
+      "category": "architecture",
+      "definition": "Building traditions of ordinary people using local materials and techniques. Before architects."
+    },
+    {
+      "id": "counterpoint",
+      "term": "Counterpoint",
+      "lang": "en",
+      "category": "music",
+      "definition": "The art of combining independent melodic lines. Point against point. Bach's supreme mastery."
+    },
+    {
+      "id": "fugue",
+      "term": "Fugue",
+      "lang": "la",
+      "category": "music",
+      "definition": "A contrapuntal composition where voices enter successively with the same theme. Flight and pursuit."
+    },
+    {
+      "id": "canon",
+      "term": "Canon",
+      "lang": "el",
+      "category": "music",
+      "definition": "A melody imitated exactly by another voice at a fixed interval. 'Row, Row, Row Your Boat.'"
+    },
+    {
+      "id": "stretto",
+      "term": "Stretto",
+      "lang": "it",
+      "category": "music",
+      "definition": "In a fugue, entries of the subject overlapping before previous entries finish. Intensification."
+    },
+    {
+      "id": "pedal-point",
+      "term": "Pedal Point",
+      "lang": "en",
+      "category": "music",
+      "definition": "A sustained bass note over which harmonies change. The organist's feet hold steady."
+    },
+    {
+      "id": "figured-bass",
+      "term": "Figured Bass",
+      "lang": "en",
+      "category": "music",
+      "definition": "Numbers below a bass line indicating chords to be improvised. Baroque shorthand."
+    },
+    {
+      "id": "thoroughbass",
+      "term": "Thoroughbass",
+      "lang": "en",
+      "category": "music",
+      "definition": "Another term for basso continuo. The bass that runs through."
+    },
+    {
+      "id": "ritornello",
+      "term": "Ritornello",
+      "lang": "it",
+      "category": "music",
+      "definition": "A recurring orchestral passage in Baroque concertos. The return."
+    },
+    {
+      "id": "arpeggio",
+      "term": "Arpeggio",
+      "lang": "it",
+      "category": "music",
+      "definition": "A broken chord: notes played in succession rather than simultaneously."
+    },
+    {
+      "id": "andante",
+      "term": "Andante",
+      "lang": "it",
+      "category": "music",
+      "definition": "At a walking pace. A moderate tempo."
+    },
+    {
+      "id": "allegro",
+      "term": "Allegro",
+      "lang": "it",
+      "category": "music",
+      "definition": "Fast and lively. Literally 'cheerful.'"
+    },
+    {
+      "id": "adagio",
+      "term": "Adagio",
+      "lang": "it",
+      "category": "music",
+      "definition": "Slow and stately. 'At ease.'"
+    },
+    {
+      "id": "presto",
+      "term": "Presto",
+      "lang": "it",
+      "category": "music",
+      "definition": "Very fast. As fast as you can."
+    },
+    {
+      "id": "tempo-rubato",
+      "term": "Tempo Rubato",
+      "lang": "it",
+      "category": "music",
+      "definition": "Stolen time: expressive flexibility with tempo. Chopin's specialty."
+    },
+    {
+      "id": "sonata-form",
+      "term": "Sonata Form",
+      "lang": "en",
+      "category": "music",
+      "definition": "Exposition, development, recapitulation. The architecture of Classical first movements."
+    },
+    {
+      "id": "rondo",
+      "term": "Rondo",
+      "lang": "it",
+      "category": "music",
+      "definition": "A form where the main theme keeps returning: ABACADA... The round."
+    },
+    {
+      "id": "theme-variations",
+      "term": "Theme and Variations",
+      "lang": "en",
+      "category": "music",
+      "definition": "A theme followed by modified versions. Identity through transformation."
+    },
+    {
+      "id": "scherzo",
+      "term": "Scherzo",
+      "lang": "it",
+      "category": "music",
+      "definition": "A lively movement in triple time. 'Joke'—replaced the minuet in symphonies."
+    },
+    {
+      "id": "minuet",
+      "term": "Minuet",
+      "lang": "en",
+      "category": "music",
+      "definition": "A stately dance in triple time. Standard movement in Classical symphonies."
+    },
+    {
+      "id": "atonality",
+      "term": "Atonality",
+      "lang": "en",
+      "category": "music",
+      "definition": "Music without a tonal center. Schoenberg's liberation from keys."
+    },
+    {
+      "id": "twelve-tone",
+      "term": "Twelve-Tone",
+      "lang": "en",
+      "category": "music",
+      "definition": "Serialism using all twelve chromatic pitches in a fixed order. Schoenberg's method."
+    },
+    {
+      "id": "serialism",
+      "term": "Serialism",
+      "lang": "en",
+      "category": "music",
+      "definition": "Organizing music by ordered series—of pitches, rhythms, dynamics. Post-war total organization."
+    },
+    {
+      "id": "aleatory",
+      "term": "Aleatory Music",
+      "lang": "en",
+      "category": "music",
+      "definition": "Music incorporating chance: random elements, performer choice. Cage's dice."
+    },
+    {
+      "id": "musique-concrete",
+      "term": "Musique Concrète",
+      "lang": "fr",
+      "category": "music",
+      "definition": "Music made from recorded sounds, manipulated and assembled. Pierre Schaeffer's revolution."
+    },
+    {
+      "id": "minimalism-music",
+      "term": "Minimalism",
+      "lang": "en",
+      "category": "music",
+      "definition": "Pared-down music: repetitive patterns, gradual change. Reich, Glass, Riley."
+    },
+    {
+      "id": "spectralism",
+      "term": "Spectralism",
+      "lang": "en",
+      "category": "music",
+      "definition": "Music based on the acoustic properties of sound—overtones, spectra. French movement."
+    },
+    {
+      "id": "maqam",
+      "term": "مقام (Maqam)",
+      "lang": "ar",
+      "category": "music",
+      "definition": "Arabic melodic mode: scales, characteristic phrases, emotional affect. The modal system of the Arab world."
+    },
+    {
+      "id": "taqsim",
+      "term": "تقسيم (Taqsim)",
+      "lang": "ar",
+      "category": "music",
+      "definition": "Arabic instrumental improvisation exploring a maqam. Virtuosic, meditative."
+    },
+    {
+      "id": "samai",
+      "term": "سماعي (Sama'i)",
+      "lang": "ar",
+      "category": "music",
+      "definition": "An Arabic instrumental form in 10/8 time. Rhythmic complexity."
+    },
+    {
+      "id": "oud",
+      "term": "عود (Oud)",
+      "lang": "ar",
+      "category": "music",
+      "definition": "The fretless short-necked lute. Ancestor of the European lute. The sultan of instruments."
+    },
+    {
+      "id": "dastgah",
+      "term": "دستگاه (Dastgāh)",
+      "lang": "fa",
+      "category": "music",
+      "definition": "The modal system of Persian classical music. Twelve dastgahs, each a universe."
+    },
+    {
+      "id": "gusheh",
+      "term": "گوشه (Gusheh)",
+      "lang": "fa",
+      "category": "music",
+      "definition": "A melodic unit within a Persian dastgah. The building blocks of improvisation."
+    },
+    {
+      "id": "tar",
+      "term": "تار (Tar)",
+      "lang": "fa",
+      "category": "music",
+      "definition": "A long-necked Persian lute with figure-eight body. The instrument of dastgah."
+    },
+    {
+      "id": "santur",
+      "term": "سنتور (Santur)",
+      "lang": "fa",
+      "category": "music",
+      "definition": "Persian hammered dulcimer. Ancestor of the piano."
+    },
+    {
+      "id": "usul",
+      "term": "Usul",
+      "lang": "tr",
+      "category": "music",
+      "definition": "Rhythmic modes in Turkish classical music. Complex cycles, sometimes very long."
+    },
+    {
+      "id": "makam",
+      "term": "Makam",
+      "lang": "tr",
+      "category": "music",
+      "definition": "Turkish melodic modes, related to Arabic maqam but with distinct scales and practices."
+    },
+    {
+      "id": "gamelan",
+      "term": "Gamelan",
+      "lang": "jv",
+      "category": "music",
+      "definition": "Indonesian ensemble of bronze percussion. Interlocking patterns, shimmering sound. Bali, Java."
+    },
+    {
+      "id": "slendro",
+      "term": "Slendro",
+      "lang": "jv",
+      "category": "music",
+      "definition": "A five-note Javanese scale with roughly equal intervals."
+    },
+    {
+      "id": "pelog",
+      "term": "Pelog",
+      "lang": "jv",
+      "category": "music",
+      "definition": "A seven-note Javanese scale with unequal intervals."
+    },
+    {
+      "id": "colotomic",
+      "term": "Colotomic",
+      "lang": "en",
+      "category": "music",
+      "definition": "Rhythmic structure marked by gong strokes. Indonesian ensemble organization."
+    },
+    {
+      "id": "kotekan",
+      "term": "Kotekan",
+      "lang": "id",
+      "category": "music",
+      "definition": "Balinese interlocking rhythms: two parts combining into one rapid melody."
+    },
+    {
+      "id": "pansori",
+      "term": "판소리 (Pansori)",
+      "lang": "ko",
+      "category": "music",
+      "definition": "Korean narrative singing: one singer, one drummer. Hours-long epic dramas."
+    },
+    {
+      "id": "sanjo",
+      "term": "산조 (Sanjo)",
+      "lang": "ko",
+      "category": "music",
+      "definition": "Korean solo instrumental form with drum accompaniment. Gradual acceleration."
+    },
+    {
+      "id": "gagaku",
+      "term": "雅楽 (Gagaku)",
+      "lang": "ja",
+      "category": "music",
+      "definition": "Ancient Japanese court music. Solemn, slow, otherworldly."
+    },
+    {
+      "id": "hogaku",
+      "term": "邦楽 (Hōgaku)",
+      "lang": "ja",
+      "category": "music",
+      "definition": "Traditional Japanese music, as opposed to Western (yōgaku)."
+    },
+    {
+      "id": "jiuta",
+      "term": "地歌 (Jiuta)",
+      "lang": "ja",
+      "category": "music",
+      "definition": "Japanese chamber music for koto, shamisen, and voice. Refined, intimate."
+    },
+    {
+      "id": "shakuhachi",
+      "term": "尺八 (Shakuhachi)",
+      "lang": "ja",
+      "category": "music",
+      "definition": "Japanese bamboo flute. Zen breathing meditation made sound."
+    },
+    {
+      "id": "koto",
+      "term": "琴 (Koto)",
+      "lang": "ja",
+      "category": "music",
+      "definition": "Japanese thirteen-string zither. The sound of traditional Japan."
+    },
+    {
+      "id": "shamisen",
+      "term": "三味線 (Shamisen)",
+      "lang": "ja",
+      "category": "music",
+      "definition": "Japanese three-string lute. Kabuki, geisha, folk music."
+    },
+    {
+      "id": "qin",
+      "term": "琴 (Qín)",
+      "lang": "zh",
+      "category": "music",
+      "definition": "Chinese seven-string zither. The scholar's instrument. Confucius played qin."
+    },
+    {
+      "id": "erhu",
+      "term": "二胡 (Èrhú)",
+      "lang": "zh",
+      "category": "music",
+      "definition": "Chinese two-string bowed instrument. The voice of Chinese opera."
+    },
+    {
+      "id": "pipa",
+      "term": "琵琶 (Pípá)",
+      "lang": "zh",
+      "category": "music",
+      "definition": "Chinese four-string lute. Virtuosic, expressive, ancient."
+    },
+    {
+      "id": "jinghu",
+      "term": "京胡 (Jīnghú)",
+      "lang": "zh",
+      "category": "music",
+      "definition": "The small two-string fiddle of Beijing opera. Piercing, dramatic."
+    },
+    {
+      "id": "carnatic",
+      "term": "Carnatic Music",
+      "lang": "en",
+      "category": "music",
+      "definition": "South Indian classical music. Ragas, talas, devotional. Tyagaraja's tradition."
+    },
+    {
+      "id": "hindustani",
+      "term": "Hindustani Music",
+      "lang": "en",
+      "category": "music",
+      "definition": "North Indian classical music. Ragas, Persian influence, gharanas."
+    },
+    {
+      "id": "sitar",
+      "term": "Sitar",
+      "lang": "hi",
+      "category": "music",
+      "definition": "North Indian long-necked lute with sympathetic strings. Ravi Shankar's instrument."
+    },
+    {
+      "id": "tabla",
+      "term": "Tabla",
+      "lang": "hi",
+      "category": "music",
+      "definition": "North Indian hand drums: a pair with different pitches. Rhythmic virtuosity."
+    },
+    {
+      "id": "veena",
+      "term": "Veena",
+      "lang": "sa",
+      "category": "music",
+      "definition": "South Indian plucked string instrument. Saraswati's instrument."
+    },
+    {
+      "id": "mridangam",
+      "term": "Mridangam",
+      "lang": "ta",
+      "category": "music",
+      "definition": "South Indian barrel drum. The rhythmic anchor of Carnatic music."
+    },
+    {
+      "id": "tanpura",
+      "term": "Tanpura",
+      "lang": "hi",
+      "category": "music",
+      "definition": "The drone instrument of Indian classical music. The infinite hum beneath the raga."
+    },
+    {
+      "id": "griot",
+      "term": "Griot",
+      "lang": "fr",
+      "category": "music",
+      "definition": "West African hereditary musician and oral historian. The living library."
+    },
+    {
+      "id": "djembe",
+      "term": "Djembe",
+      "lang": "fr",
+      "category": "music",
+      "definition": "West African goblet drum. Goatskin, wood, hands. Global rhythm."
+    },
+    {
+      "id": "kora",
+      "term": "Kora",
+      "lang": "fr",
+      "category": "music",
+      "definition": "West African 21-string harp-lute. The griot's instrument."
+    },
+    {
+      "id": "balafon",
+      "term": "Balafon",
+      "lang": "fr",
+      "category": "music",
+      "definition": "West African wooden xylophone with gourd resonators."
+    },
+    {
+      "id": "mbira",
+      "term": "Mbira",
+      "lang": "sn",
+      "category": "music",
+      "definition": "Zimbabwean thumb piano: metal tines on a wooden board. Shona ancestral music."
+    },
+    {
+      "id": "fado",
+      "term": "Fado",
+      "lang": "pt",
+      "category": "music",
+      "definition": "Portuguese urban folk song. Longing, fate, saudade made audible."
+    },
+    {
+      "id": "flamenco",
+      "term": "Flamenco",
+      "lang": "es",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "Andalusian art: cante (song), toque (guitar), baile (dance). Gypsy passion."
+    },
+    {
+      "id": "cante-jondo",
+      "term": "Cante Jondo",
+      "lang": "es",
+      "category": "music",
+      "definition": "'Deep song': the oldest, most profound style of flamenco singing."
+    },
+    {
+      "id": "mariachi",
+      "term": "Mariachi",
+      "lang": "es",
+      "category": "music",
+      "definition": "Mexican folk ensemble: violins, guitars, trumpet. Serenade and celebration."
+    },
+    {
+      "id": "son-jarocho",
+      "term": "Son Jarocho",
+      "lang": "es",
+      "category": "music",
+      "definition": "Afro-Mexican music from Veracruz. Jaranas, requinto, zapateado."
+    },
+    {
+      "id": "tango-music",
+      "term": "Tango",
+      "lang": "es",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "Argentine music and dance born in Buenos Aires. Bandoneon, melancholy, embrace."
+    },
+    {
+      "id": "bandoneon",
+      "term": "Bandoneón",
+      "lang": "es",
+      "category": "music",
+      "definition": "The German concertina that became the voice of tango."
+    },
+    {
+      "id": "samba",
+      "term": "Samba",
+      "lang": "pt",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "Brazilian music of African origin. Syncopation, drums, carnival."
+    },
+    {
+      "id": "bossa-nova",
+      "term": "Bossa Nova",
+      "lang": "pt",
+      "category": "music",
+      "definition": "'New trend': Brazilian music mixing samba with cool jazz. Jobim, Gilberto."
+    },
+    {
+      "id": "choro",
+      "term": "Choro",
+      "lang": "pt",
+      "category": "music",
+      "definition": "Brazilian instrumental genre: virtuosic, improvisatory, joyful weeping."
+    },
+    {
+      "id": "forró",
+      "term": "Forró",
+      "lang": "pt",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "Brazilian Northeastern music: accordion, triangle, zabumba drum."
+    },
+    {
+      "id": "klezmer",
+      "term": "Klezmer",
+      "lang": "yi",
+      "category": "music",
+      "definition": "Traditional Ashkenazi Jewish music. Clarinet, violin, celebration and lament."
+    },
+    {
+      "id": "niggun",
+      "term": "Niggun",
+      "lang": "he",
+      "category": "music",
+      "definition": "Hasidic wordless melody. The soul speaks without language."
+    },
+    {
+      "id": "rebetiko",
+      "term": "Rebetiko",
+      "lang": "el",
+      "category": "music",
+      "definition": "Greek urban blues: bouzouki, underworld themes. The music of outcasts."
+    },
+    {
+      "id": "throat-singing",
+      "term": "Throat Singing",
+      "lang": "en",
+      "category": "music",
+      "definition": "Producing multiple pitches simultaneously. Tuvan khoomei, Inuit katajjaq."
+    },
+    {
+      "id": "khoomei",
+      "term": "Хөөмий (Khoomei)",
+      "lang": "mn",
+      "category": "music",
+      "definition": "Tuvan/Mongolian throat singing. Overtones ring above the fundamental."
+    },
+    {
+      "id": "morin-khuur",
+      "term": "Морин хуур (Morin Khuur)",
+      "lang": "mn",
+      "category": "music",
+      "definition": "Mongolian horsehead fiddle. The sound of the steppe."
+    },
+    {
+      "id": "didgeridoo",
+      "term": "Didgeridoo",
+      "lang": "en",
+      "category": "music",
+      "definition": "Australian Aboriginal drone instrument. Circular breathing, ancient earth."
+    },
+    {
+      "id": "taiko",
+      "term": "太鼓 (Taiko)",
+      "lang": "ja",
+      "category": "music",
+      "definition": "Japanese drums, especially the large barrel drums played in ensemble."
+    },
+    {
+      "id": "contrapposto",
+      "term": "Contrapposto",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "Weight on one leg, the body's axis in S-curve. Greek revolution from stiff frontality."
+    },
+    {
+      "id": "kouros",
+      "term": "Κούρος (Kouros)",
+      "lang": "el",
+      "category": "sculpture",
+      "definition": "Archaic Greek standing male nude. Stiff, frontal, smiling."
+    },
+    {
+      "id": "kore",
+      "term": "Κόρη (Kore)",
+      "lang": "el",
+      "category": "sculpture",
+      "definition": "Archaic Greek standing draped maiden. The female counterpart to kouros."
+    },
+    {
+      "id": "chryselephantine",
+      "term": "Chryselephantine",
+      "lang": "el",
+      "category": "sculpture",
+      "definition": "Made of gold and ivory. Zeus at Olympia, Athena Parthenos—lost wonders."
+    },
+    {
+      "id": "lost-wax",
+      "term": "Lost-Wax Casting",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Bronze casting method: wax model, clay mold, wax melted out, bronze poured in."
+    },
+    {
+      "id": "patina",
+      "term": "Patina",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "The surface color of bronze from age or chemicals. Green verdigris, brown warmth."
+    },
+    {
+      "id": "relief",
+      "term": "Relief",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Sculpture projecting from a background surface. Bas-relief (low), alto-relief (high)."
+    },
+    {
+      "id": "bas-relief",
+      "term": "Bas-relief",
+      "lang": "fr",
+      "category": "sculpture",
+      "definition": "Low relief: figures barely project from the background."
+    },
+    {
+      "id": "alto-relief",
+      "term": "Alto-relief",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "High relief: figures project boldly, nearly freestanding."
+    },
+    {
+      "id": "intaglio-sculpt",
+      "term": "Intaglio",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "Incised or sunken relief: the image cut into the surface. Opposite of cameo."
+    },
+    {
+      "id": "cameo",
+      "term": "Cameo",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "A raised relief carved from layered stone, the figure in one color against another."
+    },
+    {
+      "id": "maquette",
+      "term": "Maquette",
+      "lang": "fr",
+      "category": "sculpture",
+      "definition": "A small preliminary model for a larger sculpture. The sketch in three dimensions."
+    },
+    {
+      "id": "armature",
+      "term": "Armature",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "The internal framework supporting a sculpture, especially in clay modeling."
+    },
+    {
+      "id": "pointing",
+      "term": "Pointing",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "A technique for transferring a model's measurements to a marble block."
+    },
+    {
+      "id": "carving",
+      "term": "Carving",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Subtractive sculpture: removing material to reveal form. Stone, wood."
+    },
+    {
+      "id": "modeling",
+      "term": "Modeling",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Additive sculpture: building up form with clay, wax, plaster."
+    },
+    {
+      "id": "assemblage",
+      "term": "Assemblage",
+      "lang": "fr",
+      "category": "sculpture",
+      "definition": "Three-dimensional collage: combining found objects. Picasso, Cornell."
+    },
+    {
+      "id": "kinetic-sculpture",
+      "term": "Kinetic Sculpture",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Sculpture that moves. Calder's mobiles, Tinguely's machines."
+    },
+    {
+      "id": "mobile",
+      "term": "Mobile",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "A hanging kinetic sculpture balanced to move with air currents. Calder's invention."
+    },
+    {
+      "id": "stabile",
+      "term": "Stabile",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "A stationary abstract sculpture, as opposed to mobile. Also Calder's term."
+    },
+    {
+      "id": "ready-made",
+      "term": "Ready-made",
+      "lang": "en",
+      "category": [
+        "sculpture",
+        "art"
+      ],
+      "definition": "An ordinary object designated as art. Duchamp's urinal, bicycle wheel."
+    },
+    {
+      "id": "installation",
+      "term": "Installation",
+      "lang": "en",
+      "category": [
+        "sculpture",
+        "art"
+      ],
+      "definition": "Art that transforms a space. The viewer enters the work."
+    },
+    {
+      "id": "earthwork",
+      "term": "Earthwork",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Large-scale sculpture using the landscape itself. Smithson's Spiral Jetty."
+    },
+    {
+      "id": "site-specific",
+      "term": "Site-specific",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Art made for a particular location, inseparable from its place."
+    },
+    {
+      "id": "bust",
+      "term": "Bust",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "A sculpture of head, shoulders, and chest. Portrait and presence."
+    },
+    {
+      "id": "torso",
+      "term": "Torso",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "A sculpture of the trunk without head or limbs. Fragmentary beauty."
+    },
+    {
+      "id": "equestrian",
+      "term": "Equestrian",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "A sculpture of a rider on horseback. Power and command."
+    },
+    {
+      "id": "herm",
+      "term": "Herm",
+      "lang": "el",
+      "category": "sculpture",
+      "definition": "A pillar topped with a head, originally Hermes. Boundary markers, garden ornaments."
+    },
+    {
+      "id": "plinth",
+      "term": "Plinth",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "The base or pedestal on which a sculpture stands."
+    },
+    {
+      "id": "terracotta",
+      "term": "Terracotta",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "Fired clay, unglazed. From Etruscan tombs to Chinese warriors."
+    },
+    {
+      "id": "polychrome",
+      "term": "Polychrome",
+      "lang": "el",
+      "category": "sculpture",
+      "definition": "Multi-colored: sculpture painted in many colors. Greek statues were polychrome."
+    },
+    {
+      "id": "sfumato-sculpt",
+      "term": "Non-finito",
+      "lang": "it",
+      "category": "sculpture",
+      "definition": "Deliberately unfinished: figures emerging from rough stone. Michelangelo's slaves."
+    },
+    {
+      "id": "drapery",
+      "term": "Drapery",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Carved or modeled cloth. The Greek 'wet drapery' style clings revealingly."
+    },
+    {
+      "id": "idealization",
+      "term": "Idealization",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Perfecting the human form beyond nature. Greek gods in marble."
+    },
+    {
+      "id": "naturalism",
+      "term": "Naturalism",
+      "lang": "en",
+      "category": [
+        "sculpture",
+        "art"
+      ],
+      "definition": "Faithful representation of natural appearances. Hellenistic old women, Roman portraits."
+    },
+    {
+      "id": "archaic-smile",
+      "term": "Archaic Smile",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "The fixed smile on early Greek kouroi and korai. Convention, not emotion."
+    },
+    {
+      "id": "severe-style",
+      "term": "Severe Style",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Early Classical Greek sculpture: simplified forms, solemn faces. After the archaic smile."
+    },
+    {
+      "id": "high-classical",
+      "term": "High Classical",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "The peak of Greek sculpture: Phidias, Polykleitos. Ideal beauty achieved."
+    },
+    {
+      "id": "hellenistic",
+      "term": "Hellenistic",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Greek sculpture after Alexander: emotional, dramatic, virtuosic. Laocoön."
+    },
+    {
+      "id": "murti",
+      "term": "मूर्ति (Murti)",
+      "lang": "sa",
+      "category": "sculpture",
+      "definition": "A Hindu sacred image: embodiment of the divine, not mere representation."
+    },
+    {
+      "id": "tribhanga",
+      "term": "त्रिभंग (Tribhanga)",
+      "lang": "sa",
+      "category": "sculpture",
+      "definition": "Three-bend pose in Indian sculpture: head, torso, hips in opposite directions."
+    },
+    {
+      "id": "abhaya-mudra",
+      "term": "अभयमुद्रा (Abhaya Mudra)",
+      "lang": "sa",
+      "category": "sculpture",
+      "definition": "The fear-not gesture: palm outward. Buddhist and Hindu iconography."
+    },
+    {
+      "id": "dhyana-mudra",
+      "term": "ध्यानमुद्रा (Dhyana Mudra)",
+      "lang": "sa",
+      "category": "sculpture",
+      "definition": "Meditation gesture: hands in lap, palms up. The Buddha in contemplation."
+    },
+    {
+      "id": "ushnisha",
+      "term": "उष्णीष (Ushnisha)",
+      "lang": "sa",
+      "category": "sculpture",
+      "definition": "The cranial bump atop Buddha's head, representing enlightenment."
+    },
+    {
+      "id": "urna",
+      "term": "ऊर्णा (Urna)",
+      "lang": "sa",
+      "category": "sculpture",
+      "definition": "The dot or tuft between Buddha's eyebrows, representing wisdom."
+    },
+    {
+      "id": "mingqi",
+      "term": "明器 (Míngqì)",
+      "lang": "zh",
+      "category": "sculpture",
+      "definition": "Chinese tomb figurines: servants, animals, objects for the afterlife."
+    },
+    {
+      "id": "terracotta-army",
+      "term": "兵馬俑 (Bīngmǎ Yǒng)",
+      "lang": "zh",
+      "category": "sculpture",
+      "definition": "The terracotta army of Qin Shi Huang. Thousands of life-size soldiers."
+    },
+    {
+      "id": "netsuke",
+      "term": "根付 (Netsuke)",
+      "lang": "ja",
+      "category": "sculpture",
+      "definition": "Japanese miniature carved toggles. Ivory, wood, exquisite detail."
+    },
+    {
+      "id": "okimono",
+      "term": "置物 (Okimono)",
+      "lang": "ja",
+      "category": "sculpture",
+      "definition": "Japanese decorative sculpture for display. Not for wearing like netsuke."
+    },
+    {
+      "id": "daibutsu",
+      "term": "大仏 (Daibutsu)",
+      "lang": "ja",
+      "category": "sculpture",
+      "definition": "A giant Buddha statue. Nara, Kamakura—Japan's colossi."
+    },
+    {
+      "id": "haniwa",
+      "term": "埴輪 (Haniwa)",
+      "lang": "ja",
+      "category": "sculpture",
+      "definition": "Japanese tomb figurines of the Kofun period. Terracotta guardians."
+    },
+    {
+      "id": "benin-bronze",
+      "term": "Benin Bronze",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Cast brass plaques and heads from the Kingdom of Benin. African metallurgical mastery."
+    },
+    {
+      "id": "nkisi",
+      "term": "Nkisi",
+      "lang": "kg",
+      "category": "sculpture",
+      "definition": "Kongo power figure: wooden sculpture activated by ritual materials. Nails, mirrors, medicine."
+    },
+    {
+      "id": "chi-wara",
+      "term": "Chi Wara",
+      "lang": "bm",
+      "category": "sculpture",
+      "definition": "Bamana antelope headdress. Agriculture, fertility, mythical being."
+    },
+    {
+      "id": "moai",
+      "term": "Moai",
+      "lang": "rap",
+      "category": "sculpture",
+      "definition": "Easter Island monolithic human figures. Ancestors watching over the island."
+    },
+    {
+      "id": "tiki",
+      "term": "Tiki",
+      "lang": "mi",
+      "category": "sculpture",
+      "definition": "Polynesian carved human figure. First man, ancestor, powerful presence."
+    },
+    {
+      "id": "totem-pole",
+      "term": "Totem Pole",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Pacific Northwest monumental carving: stacked crests, figures, histories."
+    },
+    {
+      "id": "inukshuk",
+      "term": "Inukshuk",
+      "lang": "iu",
+      "category": "sculpture",
+      "definition": "Inuit stone landmarks in human form. 'That which acts like a human.'"
+    },
+    {
+      "id": "colossal-head",
+      "term": "Colossal Head",
+      "lang": "en",
+      "category": "sculpture",
+      "definition": "Giant Olmec basalt heads. Rulers' portraits, helmeted, powerful."
+    },
+    {
+      "id": "chacmool",
+      "term": "Chacmool",
+      "lang": "yua",
+      "category": "sculpture",
+      "definition": "Mesoamerican reclining figure with offering vessel on belly. Toltec, Maya, Aztec."
+    },
+    {
+      "id": "oblomovshchina",
+      "term": "Обломовщина (Oblomovshchina)",
+      "lang": "ru",
+      "category": [
+        "psychology",
+        "culture"
+      ],
+      "definition": "Inertia, apathy, inability to act. From Goncharov's character Oblomov, who can't get out of bed."
+    },
+    {
+      "id": "yurodivy",
+      "term": "Юродивый (Yurodivy)",
+      "lang": "ru",
+      "category": [
+        "spirituality",
+        "culture"
+      ],
+      "definition": "A holy fool: feigning madness to speak prophetic truth. Protected by tradition."
+    },
+    {
+      "id": "mir-ru",
+      "term": "Мир (Mir)",
+      "lang": "ru",
+      "category": [
+        "politics",
+        "culture"
+      ],
+      "definition": "The village commune that collectively held land. Also means 'world' and 'peace'—all one word."
+    },
+    {
+      "id": "dvornik",
+      "term": "Дворник (Dvornik)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "A building's caretaker/janitor. In Soviet times, also an informer—eyes of the state."
+    },
+    {
+      "id": "dacha",
+      "term": "Дача (Dacha)",
+      "lang": "ru",
+      "category": "architecture",
+      "definition": "A Russian country cottage. Summer retreat, potato garden, birch trees, nostalgia."
+    },
+    {
+      "id": "izba",
+      "term": "Изба (Izba)",
+      "lang": "ru",
+      "category": "architecture",
+      "definition": "A traditional Russian log house with decorated window frames."
+    },
+    {
+      "id": "onion-dome",
+      "term": "Луковичная глава (Onion Dome)",
+      "lang": "ru",
+      "category": "architecture",
+      "definition": "The bulbous dome of Russian Orthodox churches. St. Basil's rainbow domes."
+    },
+    {
+      "id": "iconostasis",
+      "term": "Иконостас (Iconostasis)",
+      "lang": "ru",
+      "category": "architecture",
+      "definition": "The icon-covered wall separating nave from sanctuary in Orthodox churches."
+    },
+    {
+      "id": "troika",
+      "term": "Тройка (Troika)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "A sled drawn by three horses abreast. Also a trio, or a Soviet judicial panel."
+    },
+    {
+      "id": "samovar",
+      "term": "Самовар (Samovar)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "A heated metal container for boiling tea water. The heart of Russian hospitality."
+    },
+    {
+      "id": "matryoshka",
+      "term": "Матрёшка (Matryoshka)",
+      "lang": "ru",
+      "category": [
+        "art",
+        "culture"
+      ],
+      "definition": "Nesting dolls: a set of wooden figures that open to reveal smaller ones inside."
+    },
+    {
+      "id": "balalaika",
+      "term": "Балалайка (Balalaika)",
+      "lang": "ru",
+      "category": "music",
+      "definition": "Triangular Russian stringed instrument. Folk music's jangle."
+    },
+    {
+      "id": "bylina",
+      "term": "Былина (Bylina)",
+      "lang": "ru",
+      "category": "poetry",
+      "definition": "Russian epic oral poetry celebrating bogatyrs (heroes). Sung, not recited."
+    },
+    {
+      "id": "chastushka",
+      "term": "Частушка (Chastushka)",
+      "lang": "ru",
+      "category": "poetry",
+      "definition": "A short Russian folk poem, often humorous or satirical. Sung rapidly, four lines."
+    },
+    {
+      "id": "bayan",
+      "term": "Баян (Bayan)",
+      "lang": "ru",
+      "category": "music",
+      "definition": "Russian chromatic button accordion. Named for a legendary bard."
+    },
+    {
+      "id": "perestroika",
+      "term": "Перестройка (Perestroika)",
+      "lang": "ru",
+      "category": "politics",
+      "definition": "Restructuring: Gorbachev's 1980s reforms. Political and economic opening."
+    },
+    {
+      "id": "glasnost",
+      "term": "Гласность (Glasnost)",
+      "lang": "ru",
+      "category": "politics",
+      "definition": "Openness, transparency. Gorbachev's policy of public disclosure."
+    },
+    {
+      "id": "nomenklatura",
+      "term": "Номенклатура (Nomenklatura)",
+      "lang": "ru",
+      "category": "politics",
+      "definition": "The Soviet elite: party members holding key positions. The ruling class."
+    },
+    {
+      "id": "apparatchik",
+      "term": "Аппаратчик (Apparatchik)",
+      "lang": "ru",
+      "category": "politics",
+      "definition": "A Communist Party bureaucrat. The machine's functionary."
+    },
+    {
+      "id": "samizdat",
+      "term": "Самиздат (Samizdat)",
+      "lang": "ru",
+      "category": [
+        "politics",
+        "culture"
+      ],
+      "definition": "Self-published dissident literature, copied and passed hand to hand."
+    },
+    {
+      "id": "tamizdat",
+      "term": "Тамиздат (Tamizdat)",
+      "lang": "ru",
+      "category": [
+        "politics",
+        "culture"
+      ],
+      "definition": "Dissident literature published abroad and smuggled back."
+    },
+    {
+      "id": "stiliagi",
+      "term": "Стиляги (Stiliagi)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "Soviet youth who embraced Western fashion and jazz in the 1950s. Rebels in pompadours."
+    },
+    {
+      "id": "khokhloma",
+      "term": "Хохлома (Khokhloma)",
+      "lang": "ru",
+      "category": "art",
+      "definition": "Russian folk decorative painting: black, red, gold on wood. Floral patterns."
+    },
+    {
+      "id": "gzhel",
+      "term": "Гжель (Gzhel)",
+      "lang": "ru",
+      "category": "art",
+      "definition": "Russian blue-and-white ceramics. Delicate floral patterns on porcelain."
+    },
+    {
+      "id": "palekh",
+      "term": "Палех (Palekh)",
+      "lang": "ru",
+      "category": "art",
+      "definition": "Russian lacquer miniatures: tiny paintings on boxes. Icon painting secularized."
+    },
+    {
+      "id": "honor-pl",
+      "term": "Honor",
+      "lang": "pl",
+      "category": [
+        "culture",
+        "ethics"
+      ],
+      "definition": "Polish concept of honor: pride, dignity, keeping one's word. Central to szlachta identity."
+    },
+    {
+      "id": "szlachta",
+      "term": "Szlachta",
+      "lang": "pl",
+      "category": [
+        "history",
+        "politics"
+      ],
+      "definition": "Polish nobility: a large, politically powerful class with traditions of liberty."
+    },
+    {
+      "id": "sarmatism",
+      "term": "Sarmatyzm (Sarmatism)",
+      "lang": "pl",
+      "category": [
+        "culture",
+        "history"
+      ],
+      "definition": "Polish noble ideology claiming descent from Sarmatians. Distinctive dress, customs, pride."
+    },
+    {
+      "id": "kontusz",
+      "term": "Kontusz",
+      "lang": "pl",
+      "category": "culture",
+      "definition": "The long outer robe of Polish nobility. National dress of the szlachta."
+    },
+    {
+      "id": "polonaise",
+      "term": "Polonez (Polonaise)",
+      "lang": "pl",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "A stately Polish processional dance in triple time. National dignity in motion."
+    },
+    {
+      "id": "mazurka",
+      "term": "Mazurek (Mazurka)",
+      "lang": "pl",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "A Polish folk dance with accent on weak beats. Chopin wrote 58."
+    },
+    {
+      "id": "krakowiak",
+      "term": "Krakowiak",
+      "lang": "pl",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "A fast Polish folk dance from the Kraków region."
+    },
+    {
+      "id": "oberek",
+      "term": "Oberek",
+      "lang": "pl",
+      "category": "music",
+      "definition": "A fast Polish folk dance with spinning couples."
+    },
+    {
+      "id": "dwor",
+      "term": "Dwór",
+      "lang": "pl",
+      "category": "architecture",
+      "definition": "A Polish manor house: country seat of the szlachta. Columned portico, wings."
+    },
+    {
+      "id": "solidarity-pl",
+      "term": "Solidarność (Solidarity)",
+      "lang": "pl",
+      "category": "politics",
+      "definition": "The Polish trade union that helped end communism. Workers' revolution."
+    },
+    {
+      "id": "hospoda",
+      "term": "Hospoda",
+      "lang": "cs",
+      "category": "culture",
+      "definition": "Czech pub: center of social life, democracy of the beer hall."
+    },
+    {
+      "id": "pivo",
+      "term": "Pivo",
+      "lang": "cs",
+      "category": "culture",
+      "definition": "Beer. Czechs drink more per capita than any nation. Central to identity."
+    },
+    {
+      "id": "defenestration",
+      "term": "Defenestrace (Defenestration)",
+      "lang": "cs",
+      "category": "history",
+      "definition": "Throwing someone out a window. Praguen specialty—started wars, ended careers."
+    },
+    {
+      "id": "svejk",
+      "term": "Švejk",
+      "lang": "cs",
+      "category": "culture",
+      "definition": "The good soldier who defeats the system by apparent idiocy. Czech survival strategy."
+    },
+    {
+      "id": "polka",
+      "term": "Polka",
+      "lang": "cs",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "A lively Bohemian dance in duple time. The Czech gift to world dance."
+    },
+    {
+      "id": "smetana",
+      "term": "Vltava",
+      "lang": "cs",
+      "category": "music",
+      "definition": "The river, the nation—Smetana's tone poem. Czech musical nationalism."
+    },
+    {
+      "id": "merak",
+      "term": "Мерак (Merak)",
+      "lang": "sr",
+      "category": "emotion",
+      "definition": "Serbian/Balkan feeling of blissful pleasure, especially from small things. Coffee, conversation."
+    },
+    {
+      "id": "kafana",
+      "term": "Кафана (Kafana)",
+      "lang": "sr",
+      "category": "culture",
+      "definition": "A Balkan tavern for coffee, rakija, music, and passionate conversation."
+    },
+    {
+      "id": "sevdah",
+      "term": "Sevdah",
+      "lang": "bs",
+      "category": [
+        "music",
+        "emotion"
+      ],
+      "definition": "Bosnian blues: love-longing music with Ottoman roots. Bittersweet ache."
+    },
+    {
+      "id": "gusle",
+      "term": "Гусле (Gusle)",
+      "lang": "sr",
+      "category": "music",
+      "definition": "South Slavic single-string bowed instrument. Epic poetry sung to its drone."
+    },
+    {
+      "id": "kolo",
+      "term": "Коло (Kolo)",
+      "lang": "sr",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "South Slavic circle dance. Hands joined, feet flying."
+    },
+    {
+      "id": "tamburica",
+      "term": "Tamburica",
+      "lang": "hr",
+      "category": "music",
+      "definition": "Croatian/Serbian small long-necked lute. The sound of Slavonian parties."
+    },
+    {
+      "id": "klapa",
+      "term": "Klapa",
+      "lang": "hr",
+      "category": "music",
+      "definition": "Croatian a cappella singing, especially in Dalmatia. Male voices, harmony, emotion."
+    },
+    {
+      "id": "gadulka",
+      "term": "Гъдулка (Gadulka)",
+      "lang": "bg",
+      "category": "music",
+      "definition": "Bulgarian bowed string instrument. The sound of Bulgarian folk music."
+    },
+    {
+      "id": "gaida",
+      "term": "Гайда (Gaida)",
+      "lang": "bg",
+      "category": "music",
+      "definition": "Bulgarian bagpipe. Drone and chanter, the voice of the mountains."
+    },
+    {
+      "id": "horo",
+      "term": "Хоро (Horo)",
+      "lang": "bg",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "Bulgarian folk dance in complex asymmetric meters. 7/8, 11/8—Balkan math."
+    },
+    {
+      "id": "nestinari",
+      "term": "Нестинари (Nestinari)",
+      "lang": "bg",
+      "category": "culture",
+      "definition": "Bulgarian fire dancers who walk on embers in trance. Thracian survival."
+    },
+    {
+      "id": "rachenitsa",
+      "term": "Ръченица (Rachenitsa)",
+      "lang": "bg",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "Bulgarian folk dance in 7/8 time. The national dance."
+    },
+    {
+      "id": "bandura",
+      "term": "Бандура (Bandura)",
+      "lang": "uk",
+      "category": "music",
+      "definition": "Ukrainian plucked string instrument with many strings. Kobzar's companion."
+    },
+    {
+      "id": "kobzar",
+      "term": "Кобзар (Kobzar)",
+      "lang": "uk",
+      "category": [
+        "music",
+        "culture"
+      ],
+      "definition": "Ukrainian traveling minstrel, often blind. Keeper of epic songs."
+    },
+    {
+      "id": "hopak",
+      "term": "Гопак (Hopak)",
+      "lang": "uk",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "Ukrainian Cossack dance with spectacular leaps and squatting kicks."
+    },
+    {
+      "id": "duma",
+      "term": "Дума (Duma)",
+      "lang": "uk",
+      "category": "poetry",
+      "definition": "Ukrainian epic song of Cossack deeds. Sung by kobzars."
+    },
+    {
+      "id": "vyshyvanka",
+      "term": "Вишиванка (Vyshyvanka)",
+      "lang": "uk",
+      "category": "culture",
+      "definition": "Ukrainian embroidered shirt. Regional patterns identify origins."
+    },
+    {
+      "id": "pysanka",
+      "term": "Писанка (Pysanka)",
+      "lang": "uk",
+      "category": "art",
+      "definition": "Ukrainian decorated Easter egg. Wax-resist dyeing, geometric patterns."
+    },
+    {
+      "id": "khata",
+      "term": "Хата (Khata)",
+      "lang": "uk",
+      "category": "architecture",
+      "definition": "Traditional Ukrainian whitewashed cottage with thatched roof."
+    },
+    {
+      "id": "maidan",
+      "term": "Майдан (Maidan)",
+      "lang": "uk",
+      "category": [
+        "politics",
+        "culture"
+      ],
+      "definition": "A public square. The site of Ukraine's revolutions: Orange, Euromaidan."
+    },
+    {
+      "id": "veselje",
+      "term": "Veselje",
+      "lang": "sl",
+      "category": "emotion",
+      "definition": "Slovenian joy, delight—a bright, uncomplicated happiness."
+    },
+    {
+      "id": "kozolec",
+      "term": "Kozolec",
+      "lang": "sl",
+      "category": "architecture",
+      "definition": "Slovenian traditional hayrack. Unique Alpine architecture."
+    },
+    {
+      "id": "dvor",
+      "term": "Dvor",
+      "lang": "cu",
+      "category": "architecture",
+      "definition": "Courtyard: the center of Slavic domestic life."
+    },
+    {
+      "id": "slava",
+      "term": "Слава (Slava)",
+      "lang": "sr",
+      "category": [
+        "spirituality",
+        "culture"
+      ],
+      "definition": "Serbian family patron saint's day. Each family has one, celebrated annually."
+    },
+    {
+      "id": "gusli",
+      "term": "Гусли (Gusli)",
+      "lang": "ru",
+      "category": "music",
+      "definition": "Ancient Slavic plucked string instrument. The bard's harp."
+    },
+    {
+      "id": "domovoi",
+      "term": "Домовой (Domovoi)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "Slavic house spirit. Protects the home if respected."
+    },
+    {
+      "id": "baba-yaga",
+      "term": "Баба-Яга (Baba Yaga)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "Slavic witch who lives in a hut on chicken legs. Ambiguous: danger or help."
+    },
+    {
+      "id": "rusalka",
+      "term": "Русалка (Rusalka)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "Slavic water spirit, often a drowned maiden. Dangerous beauty."
+    },
+    {
+      "id": "kupala",
+      "term": "Купала (Kupala)",
+      "lang": "ru",
+      "category": "culture",
+      "definition": "Slavic midsummer festival: bonfires, water, fern-flower seeking."
     }
   ]
 }

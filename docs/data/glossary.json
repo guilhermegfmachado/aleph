@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 522
+    "count": 629
   },
   "terms": [
     {
@@ -7844,6 +7844,1105 @@
       "category": [
         "culture",
         "philosophy"
+      ]
+    },
+    {
+      "id": "alpha",
+      "term": "Alpha",
+      "lang": "en",
+      "definition": "Excess return above the benchmark — the value a fund manager adds beyond market performance. Positive alpha: you beat the market. Negative alpha: you'd have done better with index funds. The grail every active manager seeks and most fail to find.",
+      "category": [
+        "finance",
+        "investing"
+      ]
+    },
+    {
+      "id": "beta",
+      "term": "Beta",
+      "lang": "en",
+      "definition": "Volatility relative to the market — a stock with beta 1.5 moves 50% more than the index. High beta: more risk, more potential return. Low beta: defensive. The measure of systematic risk you can't diversify away.",
+      "category": [
+        "finance",
+        "investing"
+      ]
+    },
+    {
+      "id": "arbitrage",
+      "term": "Arbitrage",
+      "lang": "fr",
+      "definition": "Risk-free profit from price differences — buying low in one market, selling high in another simultaneously. In theory, arbitrageurs eliminate inefficiencies instantly. In practice, execution risk, transaction costs, and black swans eat arbitrageurs alive. LTCM learned this.",
+      "category": [
+        "finance",
+        "trading"
+      ]
+    },
+    {
+      "id": "black-swan",
+      "term": "Black Swan",
+      "lang": "en",
+      "definition": "An unpredictable, high-impact event that experts rationalize in hindsight. Nassim Taleb's term: before Australia, all swans were white by definition. 9/11, 2008 crash, COVID: obvious in retrospect, invisible in prospect. Our models exclude what matters most.",
+      "category": [
+        "finance",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "dead-cat-bounce",
+      "term": "Dead Cat Bounce",
+      "lang": "en",
+      "definition": "A brief recovery in a declining market — even a dead cat bounces if dropped from high enough. The sucker's rally that tricks optimists before the next leg down. The relief that isn't.",
+      "category": [
+        "finance",
+        "trading"
+      ]
+    },
+    {
+      "id": "hodl",
+      "term": "HODL",
+      "lang": "en",
+      "definition": "Hold On for Dear Life — originally a typo in a 2013 Bitcoin forum post, now crypto gospel. Don't panic sell; diamond hands through the crash. The strategy that works until it doesn't. Also retronymed: Hold On for Dear Life.",
+      "category": [
+        "finance",
+        "crypto"
+      ]
+    },
+    {
+      "id": "fud",
+      "term": "FUD",
+      "lang": "en",
+      "definition": "Fear, Uncertainty, Doubt — negative information spread to drive prices down. Originally IBM's competitive tactic. In crypto: any bearish news is dismissed as FUD. The tribal epistemology of markets.",
+      "category": [
+        "finance",
+        "crypto"
+      ]
+    },
+    {
+      "id": "margin-call",
+      "term": "Margin Call",
+      "lang": "en",
+      "definition": "The broker's demand for more collateral when leveraged positions move against you. Deposit more or get liquidated. The moment leverage reverses from amplifier to executioner. The phone call that ends careers.",
+      "category": [
+        "finance",
+        "trading"
+      ]
+    },
+    {
+      "id": "short-squeeze",
+      "term": "Short Squeeze",
+      "lang": "en",
+      "definition": "When short sellers are forced to buy to cover positions, driving prices higher, forcing more covering. A feedback loop of pain. GameStop 2021: retail traders versus hedge funds, memes versus models.",
+      "category": [
+        "finance",
+        "trading"
+      ]
+    },
+    {
+      "id": "carry-trade",
+      "term": "Carry Trade",
+      "lang": "en",
+      "definition": "Borrowing in low-interest currency, investing in high-interest currency — pocketing the spread. Works until the borrowed currency spikes. Picking up nickels in front of steamrollers. The widow-maker.",
+      "category": [
+        "finance",
+        "forex"
+      ]
+    },
+    {
+      "id": "yield-curve",
+      "term": "Yield Curve",
+      "lang": "en",
+      "definition": "The graph of interest rates across maturities — normally slopes up (long-term rates higher than short). Inverted yield curve: short rates exceed long. The recession predictor with an imperfect but impressive track record.",
+      "category": [
+        "finance",
+        "economics"
+      ]
+    },
+    {
+      "id": "contango",
+      "term": "Contango",
+      "lang": "en",
+      "definition": "When futures prices exceed spot prices — the normal state for commodities with storage costs. Rolling futures contracts in contango bleeds money. The silent killer of commodity ETFs.",
+      "category": [
+        "finance",
+        "commodities"
+      ]
+    },
+    {
+      "id": "backwardation",
+      "term": "Backwardation",
+      "lang": "en",
+      "definition": "When spot prices exceed futures prices — supply shortage, immediate demand. The opposite of contango. Rolling futures in backwardation generates positive roll yield. The rare favorable condition.",
+      "category": [
+        "finance",
+        "commodities"
+      ],
+      "related": [
+        "Contango"
+      ]
+    },
+    {
+      "id": "liquidity",
+      "term": "Liquidity",
+      "lang": "en",
+      "definition": "The ease of buying or selling without moving the price — cash is perfectly liquid; real estate isn't. Liquidity vanishes precisely when you need it. Everyone heads for the exit at once, and the door shrinks.",
+      "category": [
+        "finance",
+        "economics"
+      ]
+    },
+    {
+      "id": "leverage",
+      "term": "Leverage",
+      "lang": "en",
+      "definition": "Using borrowed money to amplify returns — and losses. 10x leverage: 10% gain becomes 100%, 10% loss wipes you out. The tool that makes fortunes and destroys them. Every crisis has leverage at its heart.",
+      "category": [
+        "finance",
+        "investing"
+      ]
+    },
+    {
+      "id": "derivatives",
+      "term": "Derivatives",
+      "lang": "en",
+      "definition": "Financial instruments whose value derives from underlying assets — options, futures, swaps. Used to hedge risk or to speculate with leverage. Warren Buffett: 'financial weapons of mass destruction.' Also: essential market infrastructure.",
+      "category": [
+        "finance",
+        "trading"
+      ]
+    },
+    {
+      "id": "mark-to-market",
+      "term": "Mark-to-Market",
+      "lang": "en",
+      "definition": "Valuing assets at current market prices rather than purchase price — honest but volatile. When markets freeze, there is no market to mark to. The accounting that turns paper losses into real ones.",
+      "category": [
+        "finance",
+        "accounting"
+      ]
+    },
+    {
+      "id": "moral-hazard",
+      "term": "Moral Hazard",
+      "lang": "en",
+      "definition": "When insurance against risk encourages risk-taking — banks that expect bailouts gamble bigger. The more protected you are from consequences, the more recklessly you act. Every safety net creates perverse incentives.",
+      "category": [
+        "economics",
+        "finance"
+      ]
+    },
+    {
+      "id": "adverse-selection",
+      "term": "Adverse Selection",
+      "lang": "en",
+      "definition": "When one party has information the other lacks, and this distorts who participates — sick people buy health insurance, lemons get sold. Markets unravel when information asymmetry is severe. Akerlof's insight.",
+      "category": [
+        "economics",
+        "finance"
+      ]
+    },
+    {
+      "id": "pareto-efficiency",
+      "term": "Pareto Efficiency",
+      "lang": "en",
+      "definition": "A state where no one can be made better off without making someone worse off — the economist's criterion of optimality. Says nothing about fairness: slavery could be Pareto efficient. Necessary but not sufficient.",
+      "category": [
+        "economics"
+      ]
+    },
+    {
+      "id": "deadweight-loss",
+      "term": "Deadweight Loss",
+      "lang": "en",
+      "definition": "Value destroyed by market distortions — the transactions that don't happen because of taxes, monopolies, or price controls. The area of the triangle economists love to draw. Inefficiency made geometric.",
+      "category": [
+        "economics"
+      ]
+    },
+    {
+      "id": "ebitda",
+      "term": "EBITDA",
+      "lang": "en",
+      "definition": "Earnings Before Interest, Taxes, Depreciation, and Amortization — the profitability metric that ignores financing and accounting choices. Loved by private equity, mocked by Buffett: 'Does management think the tooth fairy pays for capital expenditures?'",
+      "category": [
+        "finance",
+        "accounting"
+      ]
+    },
+    {
+      "id": "goodwill-accounting",
+      "term": "Goodwill",
+      "lang": "en",
+      "definition": "The premium paid above book value in acquisitions — the accounting entry for overpaying. Supposedly represents brand value, synergies, intangibles. Often written down years later when the deal sours. The graveyard of M&A optimism.",
+      "category": [
+        "finance",
+        "accounting"
+      ]
+    },
+    {
+      "id": "quantitative-easing",
+      "term": "Quantitative Easing",
+      "lang": "en",
+      "definition": "Central bank buying assets to inject money into the economy — printing money with extra steps. QE1, QE2, QE∞. The policy that worked until it caused inflation. The monetary experiment of the 2010s.",
+      "category": [
+        "economics",
+        "finance"
+      ]
+    },
+    {
+      "id": "taper-tantrum",
+      "term": "Taper Tantrum",
+      "lang": "en",
+      "definition": "Market panic when central banks hint at reducing stimulus — the 2013 bond selloff when Bernanke mentioned tapering. Addicts don't like hearing about withdrawal. The market's dependency exposed.",
+      "category": [
+        "finance",
+        "economics"
+      ]
+    },
+    {
+      "id": "front-running",
+      "term": "Front-Running",
+      "lang": "en",
+      "definition": "Trading ahead of client orders using inside knowledge — illegal for brokers, gray area for high-frequency traders who detect order flow. The parasitic extraction that erodes trust.",
+      "category": [
+        "finance",
+        "trading"
+      ]
+    },
+    {
+      "id": "pump-and-dump",
+      "term": "Pump and Dump",
+      "lang": "en",
+      "definition": "Artificially inflating an asset's price through misleading hype, then selling. The classic stock fraud, now endemic in crypto. The telegram group that makes insiders rich and followers poor.",
+      "category": [
+        "finance",
+        "fraud"
+      ]
+    },
+    {
+      "id": "greater-fool",
+      "term": "Greater Fool Theory",
+      "lang": "en",
+      "definition": "Buying overpriced assets expecting to sell to someone even less informed — the logic of bubbles. You're not the fool if you sell first. Musical chairs with money. Works until the music stops.",
+      "category": [
+        "finance",
+        "economics"
+      ]
+    },
+    {
+      "id": "mise-en-place",
+      "term": "Mise en Place",
+      "lang": "fr",
+      "pronunciation": "meez-on-PLASS",
+      "definition": "Everything in its place — the chef's discipline of preparing and organizing all ingredients before cooking. Not just efficiency but mindset: the calm that comes from readiness. Chaos controlled through preparation.",
+      "category": [
+        "culinary",
+        "culture"
+      ]
+    },
+    {
+      "id": "sous-vide",
+      "term": "Sous Vide",
+      "lang": "fr",
+      "pronunciation": "soo-VEED",
+      "definition": "Under vacuum — cooking food sealed in plastic at precise low temperatures for extended periods. Perfect doneness edge-to-edge. The technique that modernist cuisine mainstreamed. Patience as method.",
+      "etymology": "French: sous (under) + vide (vacuum)",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "umami",
+      "term": "旨味 (Umami)",
+      "lang": "ja",
+      "pronunciation": "oo-MAH-mee",
+      "definition": "Savory deliciousness — the fifth taste, beyond sweet, sour, salty, bitter. Glutamates in parmesan, soy sauce, tomatoes, mushrooms. Identified by Ikeda in 1908, dismissed by the West until recently. The taste that makes food satisfying.",
+      "category": [
+        "culinary",
+        "science"
+      ]
+    },
+    {
+      "id": "maillard-reaction",
+      "term": "Maillard Reaction",
+      "lang": "en",
+      "definition": "The chemical browning that creates flavor — amino acids and sugars reacting under heat. Bread crust, seared steak, roasted coffee. Not caramelization (that's just sugar). The reaction that makes cooked food taste cooked.",
+      "category": [
+        "culinary",
+        "science"
+      ]
+    },
+    {
+      "id": "deglacer",
+      "term": "Déglacer",
+      "lang": "fr",
+      "pronunciation": "day-glah-SAY",
+      "definition": "To deglaze — adding liquid to a hot pan to dissolve the caramelized fond stuck to the bottom. Wine, stock, even water. The technique that turns brown bits into sauce. Waste not, want not.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "fond",
+      "term": "Fond",
+      "lang": "fr",
+      "definition": "Foundation — both the caramelized bits on the pan (fond de cuisson) and the stock base of sauces (fond de cuisine). French cooking builds layers: protein leaves fond, liquid captures it, sauce emerges. Architecture of flavor.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "mother-sauces",
+      "term": "Sauces Mères",
+      "lang": "fr",
+      "definition": "The five mother sauces of classical French cuisine — béchamel, velouté, espagnole, hollandaise, tomate. Escoffier's taxonomy: master these and derive hundreds of variations. The grammar of French cooking.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "julienne",
+      "term": "Julienne",
+      "lang": "fr",
+      "pronunciation": "zhoo-lee-EN",
+      "definition": "Matchstick cut — vegetables sliced into thin, uniform strips. Precision as technique. Along with brunoise, chiffonade, and others: the knife skills that separate amateur from professional.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "brunoise",
+      "term": "Brunoise",
+      "lang": "fr",
+      "pronunciation": "broo-NWAHZ",
+      "definition": "Fine dice — vegetables cut into tiny 3mm cubes, often starting from julienne. The smallest standard cut. Uniformity ensures even cooking. The meditation of knife work.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "chiffonade",
+      "term": "Chiffonade",
+      "lang": "fr",
+      "pronunciation": "shif-oh-NAHD",
+      "definition": "Ribbon cut — leafy herbs or greens rolled and sliced into thin strips. Basil over pasta, lettuce as garnish. The elegant finish.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "bain-marie",
+      "term": "Bain-Marie",
+      "lang": "fr",
+      "pronunciation": "ban-mah-REE",
+      "definition": "Water bath — cooking or warming via a container set in hot water. Gentle, indirect heat. For custards, chocolate, delicate sauces. Also: the steam table keeping brunch warm.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "blanching",
+      "term": "Blanchir",
+      "lang": "fr",
+      "definition": "To blanch — briefly boiling then shocking in ice water. Sets color, removes bitterness, loosens skins, par-cooks. The technique that makes vegetables vibrant green.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "confit",
+      "term": "Confit",
+      "lang": "fr",
+      "pronunciation": "kon-FEE",
+      "definition": "Preserved by slow-cooking in fat — duck legs submerged in duck fat, garlic in oil. Pre-refrigeration preservation that happens to be delicious. The texture that falls off the bone.",
+      "etymology": "French: confire (to preserve)",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "braise",
+      "term": "Braiser",
+      "lang": "fr",
+      "definition": "To braise — searing then slow-cooking covered in liquid. Breaks down tough cuts into tender. The alchemy of time: collagen becomes gelatin, sinew becomes silk. Peasant cooking elevated to art.",
+      "category": [
+        "culinary",
+        "technique"
+      ]
+    },
+    {
+      "id": "emulsion",
+      "term": "Émulsion",
+      "lang": "fr",
+      "definition": "A stable mixture of immiscible liquids — oil and water held together by lecithin or other emulsifiers. Mayonnaise, hollandaise, vinaigrette. The chemistry that makes sauces creamy. Break the emulsion: greasy disaster.",
+      "category": [
+        "culinary",
+        "science"
+      ]
+    },
+    {
+      "id": "cantilever",
+      "term": "Cantilever",
+      "lang": "en",
+      "definition": "A beam anchored at only one end, projecting into space — Fallingwater's terraces, diving boards, balconies. The structural drama of defying gravity. Engineering as spectacle.",
+      "category": [
+        "architecture",
+        "engineering"
+      ]
+    },
+    {
+      "id": "fenestration",
+      "term": "Fenestration",
+      "lang": "en",
+      "definition": "The arrangement of windows in a building — from Latin fenestra (window). The pattern that gives a façade rhythm. How light enters, how buildings breathe. The eyes of architecture.",
+      "category": [
+        "architecture"
+      ]
+    },
+    {
+      "id": "brutalism",
+      "term": "Brutalism",
+      "lang": "en",
+      "definition": "The architectural style of raw concrete — béton brut. Le Corbusier's Unité d'Habitation, Boston City Hall. Loved by architects, loathed by the public, rediscovered by Instagram. Honesty as aesthetic.",
+      "etymology": "From French béton brut (raw concrete)",
+      "category": [
+        "architecture",
+        "art"
+      ]
+    },
+    {
+      "id": "bauhaus",
+      "term": "Bauhaus",
+      "lang": "de",
+      "pronunciation": "BOW-house",
+      "definition": "The German art school (1919-1933) that unified art, craft, and technology — Gropius, Mies, Kandinsky. Form follows function. The template for modernist design. The Nazis closed it; its ideas conquered the world.",
+      "etymology": "German: Bau (building) + Haus (house)",
+      "category": [
+        "architecture",
+        "art"
+      ]
+    },
+    {
+      "id": "pilotis",
+      "term": "Pilotis",
+      "lang": "fr",
+      "pronunciation": "pee-lo-TEE",
+      "definition": "Columns that raise a building above ground — Le Corbusier's Five Points of Architecture. The building floats; the ground flows beneath. Freeing the plan from the earth.",
+      "category": [
+        "architecture"
+      ]
+    },
+    {
+      "id": "corbel",
+      "term": "Corbel",
+      "lang": "en",
+      "definition": "A structural bracket projecting from a wall to support weight — the technique that built Gothic cathedrals and Medieval castles. Stone stepping out to catch stone. The medieval cantilever.",
+      "category": [
+        "architecture",
+        "engineering"
+      ]
+    },
+    {
+      "id": "flying-buttress",
+      "term": "Flying Buttress",
+      "lang": "en",
+      "definition": "The external arched support that channels Gothic cathedral walls' outward thrust to the ground — engineering that enabled walls of glass. Structure made visible and beautiful.",
+      "category": [
+        "architecture",
+        "engineering"
+      ]
+    },
+    {
+      "id": "parti",
+      "term": "Parti",
+      "lang": "fr",
+      "pronunciation": "par-TEE",
+      "definition": "The central organizing idea of an architectural design — the big move, the diagram, the concept from which all decisions flow. Not the whole solution but its seed.",
+      "category": [
+        "architecture",
+        "design"
+      ]
+    },
+    {
+      "id": "poché",
+      "term": "Poché",
+      "lang": "fr",
+      "pronunciation": "poh-SHAY",
+      "definition": "The solid mass in architectural drawings shown as filled black — walls, structure, the space you can't occupy. The figure-ground relationship. What's not room is poché.",
+      "category": [
+        "architecture"
+      ]
+    },
+    {
+      "id": "charette",
+      "term": "Charrette",
+      "lang": "fr",
+      "pronunciation": "sha-RET",
+      "definition": "Intense final design sprint — from the cart (charrette) that collected student drawings at the École des Beaux-Arts. Now any deadline crunch. The all-nighter before presentation.",
+      "category": [
+        "architecture",
+        "design"
+      ]
+    },
+    {
+      "id": "cognitive-dissonance",
+      "term": "Cognitive Dissonance",
+      "lang": "en",
+      "definition": "The mental discomfort of holding contradictory beliefs — the smoker who knows smoking kills. We resolve it by changing beliefs, adding rationalizations, or ignoring information. Festinger's discovery: the mind demands consistency.",
+      "category": [
+        "psychology"
+      ]
+    },
+    {
+      "id": "dunning-kruger",
+      "term": "Dunning-Kruger Effect",
+      "lang": "en",
+      "definition": "The cognitive bias where incompetent people overestimate their ability while experts underestimate theirs — you need competence to recognize incompetence. The confidence of the ignorant. Mount Stupid before the valley of despair.",
+      "category": [
+        "psychology",
+        "cognition"
+      ]
+    },
+    {
+      "id": "confirmation-bias",
+      "term": "Confirmation Bias",
+      "lang": "en",
+      "definition": "The tendency to seek and interpret information that confirms existing beliefs — we google to prove ourselves right, not to learn. The algorithm of self-reinforcement. The bias that makes all other biases sticky.",
+      "category": [
+        "psychology",
+        "cognition"
+      ]
+    },
+    {
+      "id": "anchoring",
+      "term": "Anchoring",
+      "lang": "en",
+      "definition": "Over-relying on the first piece of information encountered — the initial price sets expectations, the first number frames negotiation. Arbitrary anchors affect judges, doctors, everyone. The power of going first.",
+      "category": [
+        "psychology",
+        "economics"
+      ]
+    },
+    {
+      "id": "availability-heuristic",
+      "term": "Availability Heuristic",
+      "lang": "en",
+      "definition": "Judging probability by how easily examples come to mind — plane crashes feel more common than car accidents because they're memorable. Vivid beats statistical. The news distorts reality by selecting the dramatic.",
+      "category": [
+        "psychology",
+        "cognition"
+      ]
+    },
+    {
+      "id": "sunk-cost-fallacy",
+      "term": "Sunk Cost Fallacy",
+      "lang": "en",
+      "definition": "Continuing a losing course because of past investment — the movie is bad but you've paid for the ticket. Throwing good money after bad. The inability to write off what's already lost. Concorde fallacy.",
+      "category": [
+        "psychology",
+        "economics"
+      ]
+    },
+    {
+      "id": "hindsight-bias",
+      "term": "Hindsight Bias",
+      "lang": "en",
+      "definition": "Believing after the fact that you knew it all along — 'I knew the market would crash.' Memory rewrites itself. The obstacle to learning from mistakes. Everyone's a genius in hindsight.",
+      "category": [
+        "psychology",
+        "cognition"
+      ]
+    },
+    {
+      "id": "fundamental-attribution-error",
+      "term": "Fundamental Attribution Error",
+      "lang": "en",
+      "definition": "Attributing others' behavior to character while attributing our own to circumstance — he's late because he's irresponsible; I'm late because of traffic. We're harsher judges of others than ourselves.",
+      "category": [
+        "psychology",
+        "social"
+      ]
+    },
+    {
+      "id": "halo-effect",
+      "term": "Halo Effect",
+      "lang": "en",
+      "definition": "Letting one positive trait color perception of everything else — attractive people seem smarter, successful companies seem well-managed. The cognitive shortcut that distorts judgment. First impressions contaminate everything.",
+      "category": [
+        "psychology",
+        "cognition"
+      ]
+    },
+    {
+      "id": "learned-helplessness",
+      "term": "Learned Helplessness",
+      "lang": "en",
+      "definition": "Giving up after repeated failure even when escape becomes possible — Seligman's dogs stopped trying. The psychological trap of depression and poverty. When trauma teaches that action is futile.",
+      "category": [
+        "psychology",
+        "therapy"
+      ]
+    },
+    {
+      "id": "gaslighting",
+      "term": "Gaslighting",
+      "lang": "en",
+      "definition": "Manipulating someone into questioning their own reality — from the 1944 film where a husband dims gaslights while denying change. Psychological abuse through reality distortion. 'That never happened. You're crazy.'",
+      "category": [
+        "psychology",
+        "abuse"
+      ]
+    },
+    {
+      "id": "projection",
+      "term": "Projection",
+      "lang": "en",
+      "definition": "Attributing your own unacceptable thoughts to others — the cheater who suspects cheating, the liar who trusts no one. Freudian defense mechanism. We see in others what we can't face in ourselves.",
+      "category": [
+        "psychology",
+        "psychoanalysis"
+      ]
+    },
+    {
+      "id": "transference",
+      "term": "Transference",
+      "lang": "en",
+      "definition": "Redirecting feelings about one person onto another — the patient who falls in love with the therapist, seeing a parent. Freud's discovery, now therapeutic tool. The past animating the present.",
+      "category": [
+        "psychology",
+        "psychoanalysis"
+      ]
+    },
+    {
+      "id": "sublimation",
+      "term": "Sublimation",
+      "lang": "en",
+      "definition": "Channeling unacceptable impulses into socially acceptable activities — aggression into sports, sexuality into art. The healthiest defense mechanism. Civilization built on redirected drives.",
+      "category": [
+        "psychology",
+        "psychoanalysis"
+      ]
+    },
+    {
+      "id": "operant-conditioning",
+      "term": "Operant Conditioning",
+      "lang": "en",
+      "definition": "Learning through consequences — Skinner's rats pressing levers. Positive reinforcement, negative reinforcement, punishment. The behaviorist mechanism beneath all training. Reward what you want; ignore what you don't.",
+      "category": [
+        "psychology",
+        "behaviorism"
+      ]
+    },
+    {
+      "id": "neuroplasticity",
+      "term": "Neuroplasticity",
+      "lang": "en",
+      "definition": "The brain's ability to rewire itself — forming new connections, reassigning functions. The discovery that ended 'hardwired' pessimism. Stroke patients recover; meditators change structure. The brain as ongoing construction site.",
+      "category": [
+        "psychology",
+        "neuroscience"
+      ]
+    },
+    {
+      "id": "straw-man",
+      "term": "Straw Man",
+      "lang": "en",
+      "definition": "Misrepresenting an argument to make it easier to attack — you argue against the caricature, not the position. The scarecrow you can knock down. Defeat an opponent who never showed up.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "red-herring",
+      "term": "Red Herring",
+      "lang": "en",
+      "definition": "A distraction from the actual issue — the irrelevant point that derails debate. From training hunting dogs with smoked fish. Change the subject when you're losing.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "tu-quoque",
+      "term": "Tu Quoque",
+      "lang": "la",
+      "definition": "You too — deflecting criticism by pointing to the accuser's hypocrisy. 'You criticize my emissions? You flew here.' The fallacy of avoiding substance through counter-accusation. Hypocrisy doesn't refute truth.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "slippery-slope",
+      "term": "Slippery Slope",
+      "lang": "en",
+      "definition": "Claiming one step inevitably leads to extremes without justification — 'If we allow X, soon we'll have Y and Z.' Sometimes valid (precedent matters), often fallacious (steps are distinguishable). The paranoid argument.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "false-dichotomy",
+      "term": "False Dichotomy",
+      "lang": "en",
+      "definition": "Presenting only two options when more exist — 'You're with us or against us.' The excluded middle. Forcing a choice between extremes, ignoring nuance. Either/or thinking.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "begging-the-question",
+      "term": "Begging the Question",
+      "lang": "en",
+      "definition": "Assuming the conclusion in the premise — circular reasoning. 'God exists because the Bible says so, and the Bible is true because it's God's word.' The argument that proves nothing. Often misused to mean 'raises the question.'",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "appeal-to-authority",
+      "term": "Appeal to Authority",
+      "lang": "en",
+      "definition": "Using an expert's opinion as proof — valid when the expert is relevant; fallacious when not. Einstein on physics versus Einstein on politics. Celebrity endorsements. The shortcut that sometimes works.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "appeal-to-nature",
+      "term": "Appeal to Nature",
+      "lang": "en",
+      "definition": "Assuming natural means good — arsenic is natural; vaccines aren't. The naturalistic fallacy. Evolution gave us cancer and cruelty. Nature is not a moral guide.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "ethos-pathos-logos",
+      "term": "Ethos, Pathos, Logos",
+      "lang": "el",
+      "definition": "Aristotle's three modes of persuasion — ethos (credibility), pathos (emotion), logos (logic). The complete rhetorical arsenal. Most persuasion is pathos wearing logos costume, delivered by ethos.",
+      "category": [
+        "rhetoric",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "steelman",
+      "term": "Steelman",
+      "lang": "en",
+      "definition": "The strongest version of an opponent's argument — the opposite of straw man. Engage the best case, not the worst. Intellectual honesty as practice. If you can't steelman it, you don't understand it.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ],
+      "related": [
+        "Straw Man"
+      ]
+    },
+    {
+      "id": "motte-and-bailey",
+      "term": "Motte and Bailey",
+      "lang": "en",
+      "definition": "Defending a controversial claim by retreating to an uncontroversial one — the bailey is the bold position; the motte is the defensible retreat. 'I just meant...' after pushback. Strategic ambiguity.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "gish-gallop",
+      "term": "Gish Gallop",
+      "lang": "en",
+      "definition": "Overwhelming opponents with quantity of arguments, regardless of quality — named for creationist Duane Gish. Each claim takes seconds to make, minutes to refute. The firehose of falsehood.",
+      "category": [
+        "logic",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "iatrogenic",
+      "term": "Iatrogenic",
+      "lang": "el",
+      "pronunciation": "eye-AT-roh-JEN-ik",
+      "definition": "Caused by medical treatment — the infection caught in hospital, the side effect worse than the disease. Medicine's dark side. First, do no harm is aspirational, not descriptive.",
+      "etymology": "Greek: iatros (healer) + genesis (origin)",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "nosocomial",
+      "term": "Nosocomial",
+      "lang": "el",
+      "pronunciation": "nos-oh-KOH-mee-al",
+      "definition": "Hospital-acquired — infections contracted during hospitalization. C. diff, MRSA, the bugs that breed where the sick gather. The paradox that hospitals can make you sicker.",
+      "etymology": "Greek: nosokomeion (hospital)",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "etiology",
+      "term": "Etiology",
+      "lang": "el",
+      "pronunciation": "ee-tee-OL-oh-jee",
+      "definition": "The study of causes — specifically, the cause of a disease. Unknown etiology: we don't know why this happens. The question before treatment: what went wrong?",
+      "etymology": "Greek: aitia (cause) + logos (study)",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "prognosis",
+      "term": "Prognosis",
+      "lang": "el",
+      "pronunciation": "prog-NOH-sis",
+      "definition": "The predicted course of a disease — the forecast, the odds. Good prognosis: likely recovery. Poor prognosis: prepare affairs. The doctor's crystal ball, clouded by uncertainty.",
+      "etymology": "Greek: pro (before) + gnosis (knowledge)",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "comorbidity",
+      "term": "Comorbidity",
+      "lang": "en",
+      "definition": "The presence of multiple diseases simultaneously — diabetes and heart disease, depression and anxiety. Conditions cluster. Treatment complicates. The body doesn't respect diagnostic categories.",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "palliative",
+      "term": "Palliative",
+      "lang": "en",
+      "definition": "Treatment that relieves symptoms without curing — comfort care when cure fails. Pain management, quality of life. Not giving up but changing goals. The medicine of dignity.",
+      "etymology": "Latin: palliare (to cloak)",
+      "category": [
+        "medicine",
+        "ethics"
+      ]
+    },
+    {
+      "id": "placebo",
+      "term": "Placebo",
+      "lang": "la",
+      "pronunciation": "plah-SEE-boh",
+      "definition": "A treatment with no active ingredient that works anyway — the sugar pill that heals through belief. The placebo effect: 30-40% of drug efficacy. The mind-body problem made clinical.",
+      "etymology": "Latin: I shall please",
+      "category": [
+        "medicine",
+        "psychology"
+      ]
+    },
+    {
+      "id": "nocebo",
+      "term": "Nocebo",
+      "lang": "la",
+      "definition": "Negative effects from expecting harm — the placebo's evil twin. Read the side effects and experience them. Voodoo death. Expectation shapes physiology.",
+      "etymology": "Latin: I shall harm",
+      "category": [
+        "medicine",
+        "psychology"
+      ],
+      "related": [
+        "Placebo"
+      ]
+    },
+    {
+      "id": "pathognomonic",
+      "term": "Pathognomonic",
+      "lang": "el",
+      "pronunciation": "path-og-no-MON-ik",
+      "definition": "A sign or symptom so characteristic that it confirms diagnosis — Koplik's spots mean measles, no other tests needed. The diagnostic slam dunk. Rare in medicine; most symptoms are nonspecific.",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "prodrome",
+      "term": "Prodrome",
+      "lang": "el",
+      "pronunciation": "PROH-drohm",
+      "definition": "Early symptoms before full disease — the aura before migraine, the fatigue before flu. The warning period. Sometimes actionable; often just ominous.",
+      "etymology": "Greek: pro (before) + dromos (running)",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "idiopathic",
+      "term": "Idiopathic",
+      "lang": "el",
+      "pronunciation": "id-ee-oh-PATH-ik",
+      "definition": "Of unknown cause — medicine's honest admission of ignorance. Idiopathic pulmonary fibrosis: your lungs are scarring and we don't know why. The word that means 'we don't know.'",
+      "etymology": "Greek: idios (one's own) + pathos (suffering)",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "sequela",
+      "term": "Sequela",
+      "lang": "la",
+      "definition": "A condition resulting from a previous disease — the lung damage after COVID, the heart problems after rheumatic fever. The shadow the illness leaves. Recovery isn't always complete.",
+      "category": [
+        "medicine"
+      ]
+    },
+    {
+      "id": "phoneme",
+      "term": "Phoneme",
+      "lang": "el",
+      "definition": "The smallest unit of sound that distinguishes meaning — /p/ and /b/ are different phonemes because 'pat' and 'bat' mean different things. The atoms of speech. Each language selects from the universal inventory.",
+      "category": [
+        "linguistics"
+      ]
+    },
+    {
+      "id": "morpheme",
+      "term": "Morpheme",
+      "lang": "el",
+      "definition": "The smallest unit of meaning — 'un-break-able' has three morphemes. Words decompose into meaningful pieces. The elements that combine into vocabulary.",
+      "category": [
+        "linguistics"
+      ]
+    },
+    {
+      "id": "pragmatics",
+      "term": "Pragmatics",
+      "lang": "en",
+      "definition": "How context shapes meaning — 'Nice weather we're having' during a storm. What's said versus what's meant. The study of implicature, speech acts, conversational norms. Language in use.",
+      "category": [
+        "linguistics",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "deixis",
+      "term": "Deixis",
+      "lang": "el",
+      "pronunciation": "DIKE-sis",
+      "definition": "Words whose meaning depends on context — 'here,' 'now,' 'I,' 'this.' You can't interpret them without knowing who, where, when. The pointers that ground language in situation.",
+      "category": [
+        "linguistics"
+      ]
+    },
+    {
+      "id": "syntax",
+      "term": "Syntax",
+      "lang": "el",
+      "definition": "The rules governing sentence structure — word order, phrase structure, grammatical relations. Chomsky's domain. The difference between 'dog bites man' and 'man bites dog.'",
+      "category": [
+        "linguistics"
+      ]
+    },
+    {
+      "id": "semantics",
+      "term": "Semantics",
+      "lang": "el",
+      "definition": "The study of meaning — what words and sentences mean, apart from how they're used. Truth conditions, reference, sense. 'That's just semantics' dismisses what actually matters.",
+      "category": [
+        "linguistics",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "code-switching",
+      "term": "Code-Switching",
+      "lang": "en",
+      "definition": "Alternating between languages or dialects in conversation — switching to Spanish at home, professional English at work. Identity performed through linguistic choice. Everyone does it; bilinguals just do it more visibly.",
+      "category": [
+        "linguistics",
+        "sociology"
+      ]
+    },
+    {
+      "id": "pidgin",
+      "term": "Pidgin",
+      "lang": "en",
+      "definition": "A simplified language arising between groups with no common tongue — limited vocabulary, simplified grammar, used for trade. No native speakers. The makeshift bridge. If children grow up speaking it, it becomes a creole.",
+      "category": [
+        "linguistics"
+      ]
+    },
+    {
+      "id": "creole",
+      "term": "Creole",
+      "lang": "en",
+      "definition": "A pidgin that has become a native language — full complexity emerges in one generation. Haitian Creole, Tok Pisin. The proof that children don't just learn language; they create it.",
+      "category": [
+        "linguistics"
+      ],
+      "related": [
+        "Pidgin"
+      ]
+    },
+    {
+      "id": "lingua-franca",
+      "term": "Lingua Franca",
+      "lang": "la",
+      "definition": "A common language between speakers of different native tongues — originally the Mediterranean trade pidgin. Now English globally, Swahili in East Africa, Indonesian in its archipelago. The bridge language.",
+      "category": [
+        "linguistics",
+        "culture"
+      ]
+    },
+    {
+      "id": "hapax-legomenon",
+      "term": "Hapax Legomenon",
+      "lang": "el",
+      "pronunciation": "HA-pax leg-OH-men-on",
+      "definition": "A word that appears only once in a corpus — occurring once in Shakespeare, once in the Bible. The translator's nightmare: context can't help. The lonely word.",
+      "category": [
+        "linguistics",
+        "literature"
+      ]
+    },
+    {
+      "id": "calque",
+      "term": "Calque",
+      "lang": "fr",
+      "pronunciation": "KALK",
+      "definition": "A loan translation — borrowing a foreign expression by translating its parts. 'Skyscraper' becomes gratte-ciel (French), rascacielos (Spanish). The idea crosses; the sounds don't.",
+      "category": [
+        "linguistics"
+      ]
+    },
+    {
+      "id": "cognate",
+      "term": "Cognate",
+      "lang": "la",
+      "definition": "Words in different languages descended from the same ancestor — 'mother,' 'mater,' 'Mutter,' 'mère.' Shared heritage across millennia. The family resemblance that traces migrations.",
+      "category": [
+        "linguistics"
+      ]
+    },
+    {
+      "id": "false-friends",
+      "term": "False Friends",
+      "lang": "en",
+      "definition": "Words that look similar across languages but differ in meaning — 'embarazada' (Spanish: pregnant) is not 'embarrassed.' The cognate that betrays. The translator's trap.",
+      "category": [
+        "linguistics"
+      ],
+      "related": [
+        "Cognate"
       ]
     }
   ]

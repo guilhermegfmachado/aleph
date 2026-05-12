@@ -238,11 +238,17 @@
                     <select class="glossary-lang-filter" id="glossaryLangFilter">
                         <option value="">toutes les langues</option>
                     </select>
-                    <button class="glossary-expand-all" id="glossaryExpandAll">tout déplier</button>
                 </div>
 
-                <div class="glossary-list" id="glossaryList">
-                    <!-- Populated by JS: category accordions -->
+                <div class="glossary-layout">
+                    <aside class="glossary-sidebar" id="glossarySidebar">
+                        <!-- Populated by JS: category list -->
+                    </aside>
+                    <main class="glossary-content" id="glossaryContent">
+                        <div class="glossary-welcome">
+                            <p>Sélectionnez une catégorie à gauche pour explorer les termes.</p>
+                        </div>
+                    </main>
                 </div>
             </div>
         </section>

@@ -883,7 +883,119 @@ main {
   color: var(--ink);
 }
 
-/* Category Accordions */
+/* Two-pane layout */
+.glossary-layout {
+  display: flex;
+  gap: 2rem;
+  min-height: 60vh;
+}
+
+.glossary-sidebar {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--nav-h) + 1rem);
+  padding-right: 0.5rem;
+}
+
+.glossary-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.glossary-sidebar::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 2px;
+}
+
+.glossary-cat-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.12s;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+
+.glossary-cat-btn:hover {
+  background: var(--paper-1);
+  border-color: var(--rule);
+}
+
+.glossary-cat-btn.active {
+  background: var(--paper-1);
+  border-color: var(--ink-2);
+  color: var(--ink);
+}
+
+.glossary-cat-btn.dimmed {
+  opacity: 0.4;
+}
+
+.glossary-cat-btn .cat-name {
+  font-style: italic;
+}
+
+.glossary-cat-btn .cat-count {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+
+.glossary-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.glossary-welcome {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--ink-3);
+  font-style: italic;
+  border: 1px dashed var(--rule);
+}
+
+.glossary-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.glossary-content-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: normal;
+  color: var(--ink);
+  margin: 0;
+}
+
+.glossary-content-count {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+  letter-spacing: 0.05em;
+}
+
+.glossary-terms-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Category Accordions (legacy, kept for compatibility) */
 .glossary-category {
   border-bottom: 1px solid var(--rule);
 }
@@ -2084,13 +2196,48 @@ details.sources-section[open] > summary::after {
   .network-hint { font-size: 0.6rem; padding: 0.2rem 0.4rem; }
   .network-tooltip { font-size: 0.65rem; max-width: 200px; }
 
-  /* Glossary accordions on mobile */
+  /* Glossary two-pane on mobile */
   .glossary-controls { gap: 0.5rem; }
   .glossary-search { min-width: 0; max-width: none; flex: 1 1 100%; }
   .glossary-lang-filter { flex: 1; min-width: 0; }
-  .glossary-expand-all { margin-left: 0; flex: 1; text-align: center; }
-  .glossary-category-name { font-size: 1.125rem; }
-  .glossary-category-terms { padding-left: 1rem; }
+
+  .glossary-layout {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .glossary-sidebar {
+    flex: none;
+    position: static;
+    max-height: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .glossary-cat-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    border: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+
+  .glossary-cat-btn .cat-count {
+    display: none;
+  }
+
+  .glossary-content-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .glossary-content-title {
+    font-size: 1.25rem;
+  }
+
   .glossary-dropcap { font-size: 2rem; }
 }
 
@@ -2131,10 +2278,23 @@ details.sources-section[open] > summary::after {
     aspect-ratio: 4/3;
   }
 
-  /* Glossary controls */
+  /* Glossary on small phones */
   .glossary-controls {
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .glossary-cat-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .glossary-content-title {
+    font-size: 1.125rem;
+  }
+
+  .glossary-welcome {
+    padding: 2rem 1rem;
   }
 
   .category-pills {

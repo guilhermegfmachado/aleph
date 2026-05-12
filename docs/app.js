@@ -308,7 +308,7 @@ function renderPaletteResults(query) {
             ${matchingTerms.map(t => `
                 <div class="command-palette-item" onclick="selectGlossaryTerm('${t.id}'); document.getElementById('commandPalette').classList.remove('active');">
                     <span class="command-palette-item-title">${escapeHtml(t.term)}</span>
-                    <span class="command-palette-item-meta">${LANG_NAMES[t.lang] || t.lang}</span>
+                    <span class="command-palette-item-meta">${t.lang.toUpperCase()}</span>
                 </div>
             `).join('')}
         </div>`;
@@ -417,7 +417,7 @@ function renderRecentTable() {
             <td class="recent-code">${escapeHtml(b.code)}</td>
             <td class="recent-title">${escapeHtml(b.title)}</td>
             <td class="recent-author">${escapeHtml(b.author)}</td>
-            <td class="recent-meta">${(LANG_NAMES[b.lang] || b.lang).substring(0, 2).toUpperCase()}</td>
+            <td class="recent-meta">${b.lang.toUpperCase()}</td>
             <td class="recent-meta">${b.year || '—'}</td>
         </tr>
     `).join('');
@@ -441,7 +441,7 @@ function renderLangFilters() {
 
     container.innerHTML = langs.map(lang => `
         <button class="filter-pill" data-lang="${lang}">
-            ${(LANG_NAMES[lang] || lang).substring(0, 2).toUpperCase()}
+            ${lang.toUpperCase()}
         </button>
     `).join('');
 
@@ -527,7 +527,7 @@ function renderBooksGrid() {
         <a href="${b.url || '#'}" target="_blank" rel="noopener" class="book-card${b.url ? '' : ' no-link'}" data-id="${b.id}">
             <div class="book-cover" data-lang="${b.lang}">
                 <span class="book-cover-code">${escapeHtml(b.code)}</span>
-                <span class="book-cover-lang">${(LANG_NAMES[b.lang] || b.lang).substring(0, 2).toUpperCase()}</span>
+                <span class="book-cover-lang">${b.lang.toUpperCase()}</span>
             </div>
             <h3 class="book-title">${escapeHtml(b.title)}</h3>
             <p class="book-author">${escapeHtml(b.author)}</p>
@@ -683,7 +683,7 @@ function renderGlossaryList() {
                 <header class="glossary-entry-header">
                     <span class="glossary-dropcap">${firstLetter}</span>
                     <span class="glossary-term">${escapeHtml(t.term)}</span>
-                    <span class="glossary-lang">${LANG_NAMES[t.lang] || t.lang}</span>
+                    <span class="glossary-lang">${t.lang.toUpperCase()}</span>
                     <span class="glossary-expand">+</span>
                 </header>
                 <div class="glossary-entry-body">

@@ -16,7 +16,8 @@ const state = {
         lang: null,
         type: null,
         category: null,
-        query: ''
+        query: '',
+        glossaryLang: ''
     },
     sort: 'year',
     selectedTerm: null,
@@ -472,19 +473,12 @@ function renderLangPills() {
 
 function filterByLang(lang) {
     navigateTo('glossary');
-    // Wait for page to render, then filter
     setTimeout(() => {
-        const entries = document.querySelectorAll('.glossary-entry');
-        entries.forEach(entry => {
-            const entryLang = entry.querySelector('.glossary-lang')?.textContent.toLowerCase();
-            entry.style.display = entryLang === lang ? '' : 'none';
-        });
-        // Update search placeholder to indicate filter
-        const searchInput = document.getElementById('glossarySearch');
-        if (searchInput) {
-            searchInput.value = '';
-            searchInput.placeholder = `filtré: ${lang.toUpperCase()} — effacer pour tout voir`;
-        }
+        state.filters.glossaryLang = lang;
+        const langSelect = document.getElementById('glossaryLangFilter');
+        if (langSelect) langSelect.value = lang;
+        renderGlossaryAccordions();
+        document.querySelectorAll('.glossary-category').forEach(d => d.open = true);
     }, 50);
 }
 window.filterByLang = filterByLang;
@@ -662,9 +656,9 @@ function setupBrowseControls() {
 // ─────────────────────────────────────────────────────────────────────────────
 function renderGlossaryPage() {
     renderGlossaryStats();
-    renderCategoryPills();
-    renderGlossaryList();
-    setupGlossarySearch();
+    renderGlossaryLangFilter();
+    renderGlossaryAccordions();
+    setupGlossaryControls();
 }
 
 function renderGlossaryStats() {
@@ -678,117 +672,127 @@ function renderGlossaryStats() {
     }
 }
 
-function renderCategoryPills() {
-    const container = document.getElementById('categoryPills');
-    if (!container) return;
+function renderGlossaryLangFilter() {
+    const select = document.getElementById('glossaryLangFilter');
+    if (!select) return;
 
-    // Count category occurrences
-    const categoryCounts = {};
+    const langCounts = {};
     state.terms.forEach(t => {
-        if (t.category) {
-            (Array.isArray(t.category) ? t.category : [t.category]).forEach(c => {
-                categoryCounts[c] = (categoryCounts[c] || 0) + 1;
-            });
-        }
+        langCounts[t.lang] = (langCounts[t.lang] || 0) + 1;
     });
 
-    // Sort by count and take top categories
-    const topCategories = Object.entries(categoryCounts)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 8)
-        .map(([cat]) => cat);
+    const sorted = Object.entries(langCounts).sort((a, b) => b[1] - a[1]);
 
-    container.innerHTML = `
-        <button class="category-pill active" data-category="all">tous</button>
-        ${topCategories.map(cat => `
-            <button class="category-pill" data-category="${escapeHtml(cat)}">${escapeHtml(cat)}</button>
-        `).join('')}
-    `;
-
-    container.addEventListener('click', (e) => {
-        const pill = e.target.closest('.category-pill');
-        if (!pill) return;
-
-        container.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-
-        state.filters.category = pill.dataset.category === 'all' ? null : pill.dataset.category;
-        renderGlossaryList();
-    });
+    select.innerHTML = `<option value="">toutes les langues (${state.terms.length})</option>` +
+        sorted.map(([lang, count]) => `<option value="${lang}">${lang.toUpperCase()} (${count})</option>`).join('');
 }
 
-function renderGlossaryList() {
+function renderGlossaryAccordions() {
     const container = document.getElementById('glossaryList');
     if (!container) return;
 
-    let terms = [...state.terms];
+    const langFilter = state.filters.glossaryLang || '';
+    let terms = langFilter ? state.terms.filter(t => t.lang === langFilter) : [...state.terms];
 
-    // Apply category filter
-    if (state.filters.category) {
-        terms = terms.filter(t => {
-            const cats = Array.isArray(t.category) ? t.category : [t.category];
-            return cats.includes(state.filters.category);
-        });
-    }
+    const byCategory = {};
+    terms.forEach(t => {
+        const cats = Array.isArray(t.category) ? t.category : [t.category || 'autre'];
+        const primary = cats[0] || 'autre';
+        if (!byCategory[primary]) byCategory[primary] = [];
+        byCategory[primary].push(t);
+    });
 
-    // Sort alphabetically
-    terms.sort((a, b) => a.term.localeCompare(b.term));
+    const sorted = Object.entries(byCategory).sort((a, b) => b[1].length - a[1].length);
 
-    container.innerHTML = terms.map(t => {
-        const firstLetter = t.term.charAt(0).toUpperCase();
-        const cats = Array.isArray(t.category) ? t.category : [t.category || ''];
-        const pron = t.pronunciation ? `/${t.pronunciation}/` : '';
-        const etymology = t.etymology ? `<div class="entry-etymology"><strong>Étymologie:</strong> ${escapeHtml(t.etymology)}</div>` : '';
-        const usage = t.usage ? `<div class="entry-usage"><strong>Exemple:</strong> <em>${escapeHtml(t.usage)}</em></div>` : '';
-        const validRelated = (t.related || []).filter(r =>
-            state.terms.some(term => term.term.toLowerCase() === r.toLowerCase() || term.id === r.toLowerCase())
-        );
-        const related = validRelated.length ? `
-            <div class="entry-related">
-                <strong>Voir aussi:</strong>
-                ${validRelated.map(r => `<a href="#" onclick="selectGlossaryTermByName('${escapeHtml(r)}'); return false;">${escapeHtml(r)}</a>`).join(', ')}
-            </div>
-        ` : '';
-
+    container.innerHTML = sorted.map(([cat, catTerms]) => {
+        catTerms.sort((a, b) => a.term.localeCompare(b.term));
         return `
-            <article class="glossary-entry" data-id="${t.id}" onclick="toggleGlossaryEntry(this)">
-                <header class="glossary-entry-header">
-                    <span class="glossary-dropcap">${firstLetter}</span>
-                    <span class="glossary-term">${escapeHtml(t.term)}</span>
-                    <span class="glossary-lang">${t.lang.toUpperCase()}</span>
-                    <span class="glossary-expand">+</span>
-                </header>
-                <div class="glossary-entry-body">
-                    <div class="entry-meta">
-                        ${cats.map(c => `<span class="entry-tag">${escapeHtml(c)}</span>`).join('')}
-                        ${pron ? `<span class="entry-pron">${pron}</span>` : ''}
-                    </div>
-                    <p class="entry-definition">${escapeHtml(t.definition || '')}</p>
-                    ${etymology}
-                    ${usage}
-                    ${related}
+            <details class="glossary-category" data-category="${escapeHtml(cat)}">
+                <summary class="glossary-category-header">
+                    <span class="glossary-category-name">${escapeHtml(cat)}</span>
+                    <span class="glossary-category-count">${catTerms.length}</span>
+                </summary>
+                <div class="glossary-category-terms">
+                    ${catTerms.map(t => renderGlossaryTerm(t)).join('')}
                 </div>
-            </article>
+            </details>
         `;
     }).join('');
 }
 
-function setupGlossarySearch() {
-    const input = document.getElementById('glossarySearch');
-    if (!input) return;
+function renderGlossaryTerm(t) {
+    const firstLetter = t.term.charAt(0).toUpperCase();
+    const cats = Array.isArray(t.category) ? t.category : [t.category || ''];
+    const pron = t.pronunciation ? `/${t.pronunciation}/` : '';
+    const etymology = t.etymology ? `<div class="entry-etymology"><strong>Étymologie:</strong> ${escapeHtml(t.etymology)}</div>` : '';
+    const usage = t.usage ? `<div class="entry-usage"><strong>Exemple:</strong> <em>${escapeHtml(t.usage)}</em></div>` : '';
+    const validRelated = (t.related || []).filter(r =>
+        state.terms.some(term => term.term.toLowerCase() === r.toLowerCase() || term.id === r.toLowerCase())
+    );
+    const related = validRelated.length ? `
+        <div class="entry-related">
+            <strong>Voir aussi:</strong>
+            ${validRelated.map(r => `<a href="#" onclick="selectGlossaryTermByName('${escapeHtml(r)}'); return false;">${escapeHtml(r)}</a>`).join(', ')}
+        </div>
+    ` : '';
 
-    input.addEventListener('input', () => {
-        const query = input.value.toLowerCase().trim();
-        filterGlossaryEntries(query);
+    return `
+        <article class="glossary-entry" data-id="${t.id}" data-lang="${t.lang}" onclick="toggleGlossaryEntry(this)">
+            <header class="glossary-entry-header">
+                <span class="glossary-dropcap">${firstLetter}</span>
+                <span class="glossary-term">${escapeHtml(t.term)}</span>
+                <span class="glossary-lang">${t.lang.toUpperCase()}</span>
+                <span class="glossary-expand">+</span>
+            </header>
+            <div class="glossary-entry-body">
+                <div class="entry-meta">
+                    ${cats.slice(1).map(c => `<span class="entry-tag">${escapeHtml(c)}</span>`).join('')}
+                    ${pron ? `<span class="entry-pron">${pron}</span>` : ''}
+                </div>
+                <p class="entry-definition">${escapeHtml(t.definition || '')}</p>
+                ${etymology}
+                ${usage}
+                ${related}
+            </div>
+        </article>
+    `;
+}
+
+function setupGlossaryControls() {
+    const searchInput = document.getElementById('glossarySearch');
+    const langSelect = document.getElementById('glossaryLangFilter');
+    const expandAllBtn = document.getElementById('glossaryExpandAll');
+
+    searchInput?.addEventListener('input', () => {
+        filterGlossaryBySearch(searchInput.value);
+    });
+
+    langSelect?.addEventListener('change', () => {
+        state.filters.glossaryLang = langSelect.value;
+        renderGlossaryAccordions();
+    });
+
+    expandAllBtn?.addEventListener('click', () => {
+        const details = document.querySelectorAll('.glossary-category');
+        const allOpen = [...details].every(d => d.open);
+        details.forEach(d => d.open = !allOpen);
+        expandAllBtn.textContent = allOpen ? 'tout déplier' : 'tout replier';
     });
 }
 
-function filterGlossaryEntries(query = '') {
-    document.querySelectorAll('.glossary-entry').forEach(entry => {
-        const term = entry.querySelector('.glossary-term')?.textContent.toLowerCase() || '';
-        const def = entry.querySelector('.entry-definition')?.textContent.toLowerCase() || '';
-        const matches = !query || term.includes(query) || def.includes(query);
-        entry.style.display = matches ? '' : 'none';
+function filterGlossaryBySearch(query) {
+    const q = query.toLowerCase().trim();
+    document.querySelectorAll('.glossary-category').forEach(cat => {
+        let hasVisible = false;
+        cat.querySelectorAll('.glossary-entry').forEach(entry => {
+            const term = entry.querySelector('.glossary-term')?.textContent.toLowerCase() || '';
+            const def = entry.querySelector('.entry-definition')?.textContent.toLowerCase() || '';
+            const match = !q || term.includes(q) || def.includes(q);
+            entry.style.display = match ? '' : 'none';
+            if (match) hasVisible = true;
+        });
+        cat.style.display = hasVisible ? '' : 'none';
+        if (q && hasVisible) cat.open = true;
     });
 }
 
@@ -812,22 +816,20 @@ function toggleGlossaryEntry(el) {
 function selectGlossaryTerm(id) {
     navigateTo('glossary');
 
-    // Clear search and filters so the term is visible
     const searchInput = document.getElementById('glossarySearch');
     if (searchInput) searchInput.value = '';
 
-    // Reset category filter to "all"
-    state.filters.category = null;
-    const pills = document.querySelectorAll('.category-pill');
-    pills.forEach(p => p.classList.toggle('active', p.dataset.category === 'all'));
+    const langSelect = document.getElementById('glossaryLangFilter');
+    if (langSelect) langSelect.value = '';
+    state.filters.glossaryLang = '';
 
-    // Re-render to show all terms
-    renderGlossaryList();
+    renderGlossaryAccordions();
 
-    // Now find and open the entry
     setTimeout(() => {
         const entry = document.querySelector(`.glossary-entry[data-id="${id}"]`);
         if (entry) {
+            const category = entry.closest('.glossary-category');
+            if (category) category.open = true;
             toggleGlossaryEntry(entry);
             entry.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }

@@ -235,13 +235,14 @@
 
                 <div class="glossary-controls">
                     <input type="text" class="glossary-search" id="glossarySearch" placeholder="rechercher un terme...">
-                    <div class="category-pills" id="categoryPills">
-                        <button class="category-pill active" data-category="all">all</button>
-                    </div>
+                    <select class="glossary-lang-filter" id="glossaryLangFilter">
+                        <option value="">toutes les langues</option>
+                    </select>
+                    <button class="glossary-expand-all" id="glossaryExpandAll">tout déplier</button>
                 </div>
 
                 <div class="glossary-list" id="glossaryList">
-                    <!-- Populated by JS -->
+                    <!-- Populated by JS: category accordions -->
                 </div>
             </div>
         </section>

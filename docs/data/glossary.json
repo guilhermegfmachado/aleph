@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 527
+    "count": 522
   },
   "terms": [
     {
@@ -1530,7 +1530,7 @@
     },
     {
       "id": "giri",
-      "term": "Giri",
+      "term": "義理 (Giri)",
       "native": "義理",
       "lang": "ja",
       "domain": [
@@ -1823,7 +1823,7 @@
     },
     {
       "id": "ikigai",
-      "term": "Ikigai",
+      "term": "生き甲斐 (Ikigai)",
       "native": "生き甲斐",
       "lang": "ja",
       "domain": [
@@ -2042,7 +2042,7 @@
     },
     {
       "id": "junzi",
-      "term": "Jūnzǐ",
+      "term": "君子 (Jūnzǐ)",
       "native": "君子",
       "lang": "zh",
       "definition": "The exemplary person, the noble one. Originally 'son of a lord' — Confucius democratised it: the jūnzǐ is defined not by birth but by character, learning, and conduct. The concept is the Confucian answer to the question 'what should a human being be?': someone who has cultivated humaneness (rén), who acts from inner virtue rather than external compulsion, whose very presence raises the moral level of those around them. Not a saint but an ideal of educated, ethical adulthood.",
@@ -2378,7 +2378,7 @@
     },
     {
       "id": "li-ritual",
-      "term": "Lǐ",
+      "term": "禮 (Lǐ)",
       "native": "禮",
       "lang": "zh",
       "definition": "Ritual propriety, ceremony, the web of correct conduct. The Confucian claim that civilisation is not built on law or force but on the fine-grained network of proper behaviour: the right gesture at the right moment, the correct form of address, the appropriate ceremony for each occasion. Lǐ is not mere etiquette — it is the argument that form is prior to content, that the rituals that structure human interaction are not decoration but foundation. Confucius: if names are not correct, speech does not accord with truth.",
@@ -2410,7 +2410,7 @@
     },
     {
       "id": "makoto",
-      "term": "Makoto",
+      "term": "誠 (Makoto)",
       "native": "誠",
       "lang": "ja",
       "domain": [
@@ -2566,24 +2566,8 @@
       ]
     },
     {
-      "id": "mianzi-concept",
-      "term": "Miànzi",
-      "native": "面子",
-      "lang": "zh",
-      "definition": "Face — the socially granted kind. Distinguished from liǎn (moral character face, which is intrinsic): miànzi is reputation, prestige, social standing — granted by others and destroyable by them. To give face is to affirm someone's social worth publicly; to lose face is to be exposed as less than one claimed. The concept structures Chinese social and political interaction more completely than any written rule. It is not vanity — it is the recognition that the social self is constituted by the gaze of others.",
-      "etymology": "Miàn (face) + zi (nominalising suffix). Conceptualised by sociologist Hu Hsien Chin in 1944.",
-      "category": [
-        "philosophy",
-        "politics"
-      ],
-      "related": [
-        "ethos",
-        "adab"
-      ]
-    },
-    {
       "id": "mushin",
-      "term": "Mushin",
+      "term": "無心 (Mushin)",
       "native": "無心",
       "lang": "ja",
       "domain": [
@@ -3143,7 +3127,7 @@
     },
     {
       "id": "satori",
-      "term": "Satori",
+      "term": "悟り (Satori)",
       "native": "悟り",
       "lang": "ja",
       "domain": [
@@ -3542,23 +3526,6 @@
       "related": [
         "dike",
         "phronesis"
-      ]
-    },
-    {
-      "id": "tian-ming",
-      "term": "Tiān mìng",
-      "native": "天命",
-      "lang": "zh",
-      "definition": "The Mandate of Heaven. The Zhou dynasty doctrine justifying the overthrow of the Shang: the divine order confers legitimacy on rulers who govern virtuously and withdraws it from those who do not. Natural disasters, social unrest, and military defeat are signs that the mandate has been lost — not causes of the loss but symptoms of it. The concept makes legitimacy radically conditional: there is no divine right that cannot be forfeited. Every Chinese dynasty collapse has been retrospectively explained as mandate-withdrawal.",
-      "etymology": "Tiān (heaven, sky, the natural-divine order) + mìng (fate, command, mandate). Developed by the Duke of Zhou (c. 1042 BCE).",
-      "category": [
-        "politics",
-        "philosophy"
-      ],
-      "related": [
-        "farr",
-        "nemesis",
-        "auctoritas"
       ]
     },
     {
@@ -4137,23 +4104,6 @@
       ]
     },
     {
-      "id": "wu-wei-dao",
-      "term": "Wú wéi",
-      "native": "無為",
-      "lang": "zh",
-      "definition": "Action through non-action. The Daoist governing principle: the sage ruler who acts so naturally, so in accord with the Dao, that nothing appears to be done and yet everything gets done. Not passivity — wú wéi is the hardest kind of action because it requires the complete dissolution of ego-driven interference. The Laozi: the best ruler is one whose subjects say 'we did it ourselves.' Translated into political theory: government that works with rather than against the grain of things.",
-      "etymology": "Wú (without, non-) + wéi (action, doing). Appears in the Daodejing, Chapter 2.",
-      "category": [
-        "philosophy",
-        "politics"
-      ],
-      "related": [
-        "logos",
-        "phronesis",
-        "dharma"
-      ]
-    },
-    {
       "id": "yakamoz",
       "term": "Yakamoz",
       "lang": "tr",
@@ -4633,26 +4583,6 @@
         "Noblesse oblige",
         "Arete"
       ]
-    },
-    {
-      "id": "philotimo",
-      "term": "Φιλότιμο (Philótimo)",
-      "lang": "el",
-      "pronunciation": "/fiˈlotimo/",
-      "partOfSpeech": "noun",
-      "definition": "Love of honor; a complex of virtues including pride, self-sacrifice, duty, courage, and respect for others. Often described as the essence of Greek character.",
-      "etymology": "Philo (love) + time (honor)",
-      "category": [
-        "ethics",
-        "culture",
-        "philosophy"
-      ],
-      "related": [
-        "Arete",
-        "Time",
-        "Kleos"
-      ],
-      "usage": "Philotimo encompasses personal honor and obligation to family and community."
     },
     {
       "id": "avos",
@@ -5595,29 +5525,6 @@
       "related": [
         "Mono no aware",
         "Carpe diem"
-      ]
-    },
-    {
-      "id": "wu-wei",
-      "term": "無為 (Wú wéi)",
-      "lang": "zh",
-      "pronunciation": "/wu˧˥ wej˧˥/",
-      "partOfSpeech": "noun",
-      "definition": "Non-action or effortless action; acting in accordance with the natural flow of things without forcing or striving.",
-      "etymology": "Wú (without, non-) + wéi (action, doing)",
-      "category": [
-        "philosophy",
-        "religion"
-      ],
-      "related": [
-        "Dao",
-        "Ziran",
-        "De"
-      ],
-      "usage": "Wu wei is central to Daoist philosophy and influences Chinese aesthetics and governance.",
-      "sources": [
-        "Laozi - Dao De Jing",
-        "Zhuangzi"
       ]
     },
     {

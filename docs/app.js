@@ -610,18 +610,25 @@ function renderCategoryPills() {
     const container = document.getElementById('categoryPills');
     if (!container) return;
 
-    const categories = new Set();
+    // Count category occurrences
+    const categoryCounts = {};
     state.terms.forEach(t => {
         if (t.category) {
-            (Array.isArray(t.category) ? t.category : [t.category]).forEach(c => categories.add(c));
+            (Array.isArray(t.category) ? t.category : [t.category]).forEach(c => {
+                categoryCounts[c] = (categoryCounts[c] || 0) + 1;
+            });
         }
     });
 
-    const catArray = [...categories].sort();
+    // Sort by count and take top categories
+    const topCategories = Object.entries(categoryCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 8)
+        .map(([cat]) => cat);
 
     container.innerHTML = `
-        <button class="category-pill active" data-category="all">all</button>
-        ${catArray.slice(0, 6).map(cat => `
+        <button class="category-pill active" data-category="all">tous</button>
+        ${topCategories.map(cat => `
             <button class="category-pill" data-category="${escapeHtml(cat)}">${escapeHtml(cat)}</button>
         `).join('')}
     `;
@@ -700,13 +707,16 @@ function setupGlossarySearch() {
 
     input.addEventListener('input', () => {
         const query = input.value.toLowerCase().trim();
+        filterGlossaryEntries(query);
+    });
+}
 
-        document.querySelectorAll('.glossary-entry').forEach(entry => {
-            const term = entry.querySelector('.glossary-term')?.textContent.toLowerCase() || '';
-            const def = entry.querySelector('.glossary-definition')?.textContent.toLowerCase() || '';
-            const matches = !query || term.includes(query) || def.includes(query);
-            entry.style.display = matches ? '' : 'none';
-        });
+function filterGlossaryEntries(query = '') {
+    document.querySelectorAll('.glossary-entry').forEach(entry => {
+        const term = entry.querySelector('.glossary-term')?.textContent.toLowerCase() || '';
+        const def = entry.querySelector('.entry-definition')?.textContent.toLowerCase() || '';
+        const matches = !query || term.includes(query) || def.includes(query);
+        entry.style.display = matches ? '' : 'none';
     });
 }
 
@@ -729,17 +739,34 @@ function toggleGlossaryEntry(el) {
 
 function selectGlossaryTerm(id) {
     navigateTo('glossary');
-    const entry = document.querySelector(`.glossary-entry[data-id="${id}"]`);
-    if (entry) {
-        toggleGlossaryEntry(entry);
-        entry.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+
+    // Clear search and filters so the term is visible
+    const searchInput = document.getElementById('glossarySearch');
+    if (searchInput) searchInput.value = '';
+
+    // Reset category filter to "all"
+    state.filters.category = null;
+    const pills = document.querySelectorAll('.category-pill');
+    pills.forEach(p => p.classList.toggle('active', p.dataset.category === 'all'));
+
+    // Re-render to show all terms
+    renderGlossaryList();
+
+    // Now find and open the entry
+    setTimeout(() => {
+        const entry = document.querySelector(`.glossary-entry[data-id="${id}"]`);
+        if (entry) {
+            toggleGlossaryEntry(entry);
+            entry.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, 50);
 }
 
 function selectGlossaryTermByName(name) {
     const term = state.terms.find(t =>
         t.term.toLowerCase() === name.toLowerCase() ||
-        t.id === name
+        t.id === name.toLowerCase() ||
+        t.term.toLowerCase().includes(name.toLowerCase())
     );
     if (term) selectGlossaryTerm(term.id);
 }

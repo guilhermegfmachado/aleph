@@ -1989,16 +1989,38 @@ details.sources-section[open] > summary::after {
   }
 
   /* Reader on mobile */
+  .reader-page { padding: 1.5rem 1rem; }
+  .reader-header { margin-bottom: 1.75rem; padding-bottom: 1rem; }
   .reader-actions { flex-direction: column; align-items: stretch; }
-  .reader-search-input { width: 100%; }
-  .reader-lang-switch { justify-content: flex-start; }
-  .reader-para { padding-left: 2rem; }
+  .reader-search-input { width: 100%; min-width: 0; }
+  .reader-lang-switch { justify-content: flex-start; flex-wrap: wrap; }
+  .reader-external { text-align: center; }
+  .reader-body { font-size: 1rem; line-height: 1.7; }
+  .reader-para { padding-left: 2rem; margin-bottom: 1.1rem; }
+  .reader-para::before { font-size: 0.6rem; }
+
+  /* Search page mobile */
+  .search-page { padding: 1.75rem 1rem; }
+  .search-controls { gap: 0.65rem; }
+  .fulltext-input { min-width: 0; width: 100%; font-size: 0.9375rem; padding: 0.7rem 0.85rem; }
+  .search-result { padding: 1rem 0; }
+  .search-result:hover { padding-inline: 0; margin-inline: 0; background: transparent; }
+  .sr-title { font-size: 1.0625rem; }
+  .sr-snippet { font-size: 0.875rem; }
+  .sr-meta { font-size: 0.65rem; }
+
+  /* Browse filter on mobile */
+  .browse-filter-input { font-size: 0.875rem; padding: 0.65rem 0.8rem; }
+  .books-grid.list-view .book-card { grid-template-columns: 60px 1fr; }
+  .books-grid.list-view .book-meta { grid-column: 2; }
 
   /* Network toolbar on mobile */
-  .network-toolbar { position: static; padding: 0.75rem; border-bottom: 1px solid var(--rule); }
+  .network-toolbar { position: static; padding: 0.6rem; gap: 0.4rem; border-bottom: 1px solid var(--rule); background: var(--paper-2); }
   .network-search { width: 100%; }
+  .network-btn { flex: 1; min-width: 0; }
   .network-container { min-height: 480px; }
   .network-hint { font-size: 0.6rem; padding: 0.2rem 0.4rem; }
+  .network-tooltip { font-size: 0.65rem; max-width: 200px; }
 }
 
 @media (max-width: 480px) {
@@ -2056,6 +2078,28 @@ details.sources-section[open] > summary::after {
     width: 100%;
     justify-content: center;
   }
+
+  /* Reader tighter on tiny screens */
+  .reader-page { padding: 1.25rem 0.875rem; }
+  .reader-title { font-size: 1.5rem; }
+  .reader-author { font-size: 1rem; }
+  .reader-meta { gap: 0.4rem; }
+  .reader-body { font-size: 0.9375rem; }
+  .reader-para { padding-left: 1.75rem; }
+  .reader-actions { gap: 0.5rem; }
+
+  /* Search tighter */
+  .search-page { padding: 1.25rem 0.875rem; }
+  .sr-head { gap: 0.25rem; }
+
+  /* Browse cards tighter */
+  .book-cover { padding: 0.65rem; }
+  .book-title { font-size: 0.9375rem; }
+  .book-author { font-size: 0.8125rem; }
+
+  /* Network on tiny screens */
+  .network-toolbar { flex-direction: column; }
+  .network-btn { width: 100%; }
 }
 
 /* Touch-friendly network */

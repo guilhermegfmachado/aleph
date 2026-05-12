@@ -1455,6 +1455,7 @@ async function loadReaderText() {
         const data = await loadTextContent(textId);
         if (`${state.reader.bookId}_${state.reader.lang}` !== expectedId) return;
         state.reader.text = data;
+        updateExternalLink(book, data);
         renderReaderBody();
     } catch (err) {
         if (`${state.reader.bookId}_${state.reader.lang}` !== expectedId) return;
@@ -1466,6 +1467,28 @@ async function loadReaderText() {
                 <p class="reader-detail">Identifiant manquant : <code>${escapeHtml(textId)}</code></p>
             </div>
         `;
+    }
+}
+
+function updateExternalLink(book, textData) {
+    const external = document.getElementById('readerExternal');
+    if (!external) return;
+    let url = null;
+    if (textData) {
+        if (textData.source === 'gutenberg' && textData.gutenberg_id) {
+            url = `https://www.gutenberg.org/ebooks/${textData.gutenberg_id}`;
+        } else if (textData.source === 'eurlex' && book.celex) {
+            url = `https://eur-lex.europa.eu/legal-content/${state.reader.lang.toUpperCase()}/TXT/?uri=CELEX:${book.celex}`;
+        } else if (textData.source_url) {
+            url = textData.source_url;
+        }
+    }
+    if (!url) url = externalUrlFor(book, state.reader.lang);
+    if (url) {
+        external.href = url;
+        external.style.display = '';
+    } else {
+        external.style.display = 'none';
     }
 }
 

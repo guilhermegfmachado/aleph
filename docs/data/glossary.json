@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 483
+    "count": 527
   },
   "terms": [
     {
@@ -6452,18 +6452,6 @@
       ]
     },
     {
-      "id": "vergangenheitsbewaltigung",
-      "term": "Vergangenheitsbewältigung",
-      "lang": "de",
-      "pronunciation": "fer-GONG-en-hites-beh-VELL-ti-goong",
-      "definition": "The struggle to come to terms with the past — specifically Germany's confrontation with Nazi history. Not forgetting but actively working through: memorials, education, reparations, legal accountability. A national project of collective moral reckoning. Other nations struggle to imitate it.",
-      "etymology": "German: Vergangenheit (past) + Bewältigung (coping, mastering)",
-      "category": [
-        "history",
-        "psychology"
-      ]
-    },
-    {
       "id": "ab-initio",
       "term": "Ab Initio",
       "lang": "la",
@@ -7461,6 +7449,494 @@
       "definition": "After-beat — ornamental notes following a main note or trill. The release after tension. What happens when the trill stops. The tail of the ornament.",
       "category": [
         "music"
+      ]
+    },
+    {
+      "id": "zhongguo",
+      "term": "中國 (Zhōngguó)",
+      "lang": "zh",
+      "pronunciation": "jong-gwoh",
+      "definition": "Middle Kingdom — China's name for itself: the center of civilization, the axis around which the world turns. Not ethnocentric arrogance but cosmological fact, in the traditional view. All else is periphery.",
+      "etymology": "Chinese: 中 (zhōng, middle) + 國 (guó, kingdom)",
+      "category": [
+        "history",
+        "culture"
+      ]
+    },
+    {
+      "id": "guanxi",
+      "term": "關係 (Guānxi)",
+      "lang": "zh",
+      "pronunciation": "gwahn-shee",
+      "definition": "Relationships, connections — the network of mutual obligations that structures Chinese social and business life. Not corruption but social fabric. You cultivate guanxi; you owe and are owed. Transactions happen within relationships, not between strangers.",
+      "category": [
+        "culture",
+        "business"
+      ]
+    },
+    {
+      "id": "ren-benevolence",
+      "term": "仁 (Rén)",
+      "lang": "zh",
+      "pronunciation": "ren",
+      "definition": "Benevolence, humaneness — the cardinal Confucian virtue. Love for others, compassion, human-heartedness. The character combines 'person' and 'two': humanity emerges in relationship. The inner quality that lǐ expresses outwardly.",
+      "category": [
+        "philosophy",
+        "ethics"
+      ]
+    },
+    {
+      "id": "wuwei",
+      "term": "無為 (Wúwéi)",
+      "lang": "zh",
+      "pronunciation": "woo-way",
+      "definition": "Non-action, effortless action — the Daoist principle of acting in harmony with natural flow rather than forcing. Not passivity but uncontrived effectiveness. Water doesn't try; it simply flows downhill and wears away stone.",
+      "category": [
+        "philosophy",
+        "Daoism"
+      ]
+    },
+    {
+      "id": "qi",
+      "term": "氣 (Qì)",
+      "lang": "zh",
+      "pronunciation": "chee",
+      "definition": "Vital energy, breath, life force — the animating substance that flows through all things. Chinese medicine balances qi; martial arts cultivate it; feng shui arranges space for its flow. The stuff between matter and spirit.",
+      "category": [
+        "philosophy",
+        "medicine"
+      ]
+    },
+    {
+      "id": "yin-yang",
+      "term": "陰陽 (Yīn Yáng)",
+      "lang": "zh",
+      "definition": "Shadow and light — the complementary opposites underlying all phenomena. Not good versus evil but interdependent polarities: dark/light, cold/hot, passive/active, female/male. Each contains the seed of the other. Balance, not victory.",
+      "category": [
+        "philosophy",
+        "cosmology"
+      ]
+    },
+    {
+      "id": "legalism",
+      "term": "法家 (Fǎjiā)",
+      "lang": "zh",
+      "pronunciation": "fah-jyah",
+      "definition": "Legalism — the philosophy of rule by strict law and harsh punishment. Han Feizi's realpolitik: humans are selfish, virtue is fantasy, only incentives work. Built Qin's brutal efficiency. The shadow tradition Confucianism officially rejected but emperors quietly used.",
+      "category": [
+        "philosophy",
+        "politics"
+      ]
+    },
+    {
+      "id": "keju",
+      "term": "科舉 (Kējǔ)",
+      "lang": "zh",
+      "pronunciation": "kuh-jyoo",
+      "definition": "Imperial examination — China's meritocratic system for selecting officials, lasting from 605 to 1905. Confucian classics tested; peasants could theoretically rise to power. Created the scholar-gentry class. The world's first standardized testing regime.",
+      "category": [
+        "history",
+        "education"
+      ]
+    },
+    {
+      "id": "kowtow",
+      "term": "叩頭 (Kòutóu)",
+      "lang": "zh",
+      "pronunciation": "kow-tow",
+      "definition": "Knocking the head — the prostration of kneeling and touching forehead to ground. The ultimate gesture of submission to emperor or ancestors. British refusal to kowtow in 1793 signaled coming collision of world orders.",
+      "etymology": "Chinese: 叩 (kòu, knock) + 頭 (tóu, head)",
+      "category": [
+        "history",
+        "culture"
+      ]
+    },
+    {
+      "id": "sinocentrism",
+      "term": "華夷之辨 (Huá Yí Zhī Biàn)",
+      "lang": "zh",
+      "definition": "Hua-Yi distinction — the differentiation between civilized Chinese (Hua) and barbarians (Yi). Cultural rather than racial: barbarians could become Chinese by adopting civilization. The framework that ordered the tributary system.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "century-of-humiliation",
+      "term": "百年國恥 (Bǎinián Guóchǐ)",
+      "lang": "zh",
+      "definition": "Century of humiliation — the period from the Opium Wars (1839) to Communist victory (1949) when China suffered foreign imperialism, unequal treaties, and national weakness. The wound that still shapes Chinese foreign policy. Never again.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "taiping",
+      "term": "太平天國 (Tàipíng Tiānguó)",
+      "lang": "zh",
+      "definition": "Taiping Heavenly Kingdom — the pseudo-Christian rebel state (1851-1864) whose civil war killed 20-30 million. Hong Xiuquan claimed to be Jesus's brother. The deadliest conflict of the 19th century, largely forgotten in the West.",
+      "category": [
+        "history",
+        "religion"
+      ]
+    },
+    {
+      "id": "cultural-revolution",
+      "term": "文化大革命 (Wénhuà Dà Gémìng)",
+      "lang": "zh",
+      "definition": "Great Proletarian Cultural Revolution — Mao's campaign (1966-1976) to purge capitalist and traditional elements. Red Guards destroyed temples, persecuted intellectuals, sent millions to countryside. Chaos rebranded as revolution. Still officially '70% good, 30% bad.'",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "great-leap-forward",
+      "term": "大躍進 (Dà Yuèjìn)",
+      "lang": "zh",
+      "definition": "Great Leap Forward — Mao's catastrophic industrialization campaign (1958-1962). Backyard furnaces, collectivized farming, falsified statistics. Result: 15-55 million dead in famine. The gap between utopian planning and reality.",
+      "category": [
+        "history",
+        "economics"
+      ]
+    },
+    {
+      "id": "deng-xiaoping-theory",
+      "term": "鄧小平理論",
+      "lang": "zh",
+      "definition": "Deng Xiaoping Theory — 'Socialism with Chinese characteristics,' the ideological framework for market reforms under Communist rule. It doesn't matter if the cat is black or white, as long as it catches mice. Pragmatism as doctrine.",
+      "category": [
+        "politics",
+        "economics"
+      ]
+    },
+    {
+      "id": "one-china",
+      "term": "一個中國 (Yīgè Zhōngguó)",
+      "lang": "zh",
+      "definition": "One China Policy — the principle that there is only one China, with Taiwan as part of it. Both PRC and ROC officially agree (or agreed); they just disagree on who governs. The diplomatic fiction that prevents war while satisfying no one.",
+      "category": [
+        "politics"
+      ]
+    },
+    {
+      "id": "xiucai",
+      "term": "秀才 (Xiùcái)",
+      "lang": "zh",
+      "definition": "Cultivated talent — the lowest degree in the imperial examination system, granting local prestige and tax exemptions but not office. The entry level to the scholar-gentry. Success here meant years of study; failure was common.",
+      "category": [
+        "history",
+        "education"
+      ]
+    },
+    {
+      "id": "bakufu",
+      "term": "幕府 (Bakufu)",
+      "lang": "ja",
+      "pronunciation": "bah-koo-foo",
+      "definition": "Tent government — the shogunate, military government ruling Japan while the Emperor remained nominal sovereign. Kamakura, Ashikaga, Tokugawa: three bakufu spanning 1185-1868. The fiction of imperial rule, the reality of warrior power.",
+      "etymology": "Japanese: 幕 (maku, curtain) + 府 (fu, government)",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "shogun",
+      "term": "将軍 (Shōgun)",
+      "lang": "ja",
+      "pronunciation": "shoh-goon",
+      "definition": "Commander of forces — the military dictator ruling Japan in the Emperor's name. Sei-i Taishōgun: 'Great General Who Subdues Barbarians.' The title that became a government. Real power behind the chrysanthemum curtain.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "daimyo",
+      "term": "大名 (Daimyō)",
+      "lang": "ja",
+      "pronunciation": "dye-myoh",
+      "definition": "Great name — feudal lords who ruled domains under the shogun. Controlled land, commanded samurai, collected taxes. Tokugawa kept them weak through sankin-kōtai. The balance of power that maintained 250 years of peace.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "samurai",
+      "term": "侍 (Samurai)",
+      "lang": "ja",
+      "pronunciation": "sah-moo-rye",
+      "definition": "One who serves — the warrior class of feudal Japan, bound by bushidō. Originally guards, they became rulers. Abolished as a class in 1876 but mythologized ever since. The sword is the soul of the samurai.",
+      "etymology": "Japanese: saburau (to serve)",
+      "category": [
+        "history",
+        "culture"
+      ]
+    },
+    {
+      "id": "ronin",
+      "term": "浪人 (Rōnin)",
+      "lang": "ja",
+      "pronunciation": "roh-neen",
+      "definition": "Drifting person — a masterless samurai, without lord or stipend. Shameful status, romantic image. The 47 Rōnin's revenge became Japan's favorite story. Now also: students who failed university entrance exams, adrift between attempts.",
+      "category": [
+        "history",
+        "culture"
+      ]
+    },
+    {
+      "id": "sankin-kotai",
+      "term": "参勤交代 (Sankin-kōtai)",
+      "lang": "ja",
+      "definition": "Alternate attendance — Tokugawa policy requiring daimyō to spend alternate years in Edo, leaving family as hostages. Bankrupted lords through travel costs, built roads, spread culture. Control through exhaustion.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "sakoku",
+      "term": "鎖国 (Sakoku)",
+      "lang": "ja",
+      "pronunciation": "sah-koh-koo",
+      "definition": "Chained country — Japan's isolation policy (1633-1853), limiting foreign contact to Chinese and Dutch at Nagasaki. Christianity banned, Japanese forbidden to leave. Two centuries of peace and stagnation, ended by Perry's black ships.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "meiji-restoration",
+      "term": "明治維新 (Meiji Ishin)",
+      "lang": "ja",
+      "definition": "Meiji Restoration — the 1868 revolution ending shogunate rule and restoring imperial power. Not restoration but revolution: feudalism abolished, modernization forced. Japan went from medieval to industrial in forty years. Transform or be colonized.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "fukoku-kyohei",
+      "term": "富国強兵 (Fukoku Kyōhei)",
+      "lang": "ja",
+      "definition": "Enrich country, strengthen military — Meiji Japan's national slogan. Industrialize to build armies to protect against Western imperialism. It worked, then worked too well: the army that beat Russia in 1905 overreached in 1941.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "zaibatsu",
+      "term": "財閥 (Zaibatsu)",
+      "lang": "ja",
+      "pronunciation": "zye-baht-soo",
+      "definition": "Financial clique — the industrial conglomerates that built modern Japan: Mitsubishi, Mitsui, Sumitomo, Yasuda. Family-controlled pyramids of companies. Officially dissolved after WWII, effectively reconstituted as keiretsu.",
+      "category": [
+        "economics",
+        "history"
+      ]
+    },
+    {
+      "id": "keiretsu",
+      "term": "系列 (Keiretsu)",
+      "lang": "ja",
+      "pronunciation": "kay-reh-tsoo",
+      "definition": "System, series — postwar business networks linking companies through cross-shareholding and long-term relationships. Horizontal (around a bank) or vertical (around a manufacturer). The successor to zaibatsu, without family control.",
+      "category": [
+        "economics",
+        "business"
+      ]
+    },
+    {
+      "id": "tennō",
+      "term": "天皇 (Tennō)",
+      "lang": "ja",
+      "pronunciation": "ten-noh",
+      "definition": "Heavenly sovereign — the Emperor of Japan, descendant of the sun goddess Amaterasu. Unbroken line for 2,600 years (mythologically). Divine until 1946, now constitutional symbol. Reigns but does not rule, except when he does.",
+      "category": [
+        "politics",
+        "religion"
+      ]
+    },
+    {
+      "id": "kamikaze",
+      "term": "神風 (Kamikaze)",
+      "lang": "ja",
+      "pronunciation": "kah-mee-kah-zeh",
+      "definition": "Divine wind — the typhoons that destroyed Mongol invasion fleets in 1274 and 1281, saving Japan. In WWII, suicide pilots invoking that salvation. Nature's intervention recoded as human sacrifice.",
+      "etymology": "Japanese: 神 (kami, god) + 風 (kaze, wind)",
+      "category": [
+        "history",
+        "war"
+      ]
+    },
+    {
+      "id": "kokutai",
+      "term": "國體 (Kokutai)",
+      "lang": "ja",
+      "definition": "National polity — the essence of Japan as a unique divine nation under the Emperor. State Shinto's core doctrine. What Japan fought WWII to preserve. The concept the postwar constitution carefully didn't abolish.",
+      "category": [
+        "politics",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "honne-tatemae",
+      "term": "本音と建前",
+      "lang": "ja",
+      "pronunciation": "hon-neh tah-teh-mah-eh",
+      "definition": "True feeling and façade — the distinction between one's real opinion (honne) and public presentation (tatemae). Not hypocrisy but social lubrication. Everyone knows everyone's performing; that's the point. Harmony over authenticity.",
+      "category": [
+        "culture",
+        "psychology"
+      ]
+    },
+    {
+      "id": "nemawashi",
+      "term": "根回し (Nemawashi)",
+      "lang": "ja",
+      "pronunciation": "neh-mah-wah-shee",
+      "definition": "Going around the roots — informal consensus-building before formal decision. Prepare the ground, consult stakeholders, address objections privately. The meeting just ratifies what's already decided. Process as politics.",
+      "etymology": "From gardening: preparing roots before transplanting",
+      "category": [
+        "business",
+        "culture"
+      ]
+    },
+    {
+      "id": "ringi",
+      "term": "稟議 (Ringi)",
+      "lang": "ja",
+      "pronunciation": "reen-gee",
+      "definition": "Request for decision — the Japanese system where proposals circulate for approval stamps (hanko) from all affected parties. Slow, consensus-building, risk-diffusing. Nobody decides; everybody decides.",
+      "category": [
+        "business",
+        "culture"
+      ]
+    },
+    {
+      "id": "amakudari",
+      "term": "天下り (Amakudari)",
+      "lang": "ja",
+      "pronunciation": "ah-mah-koo-dah-ree",
+      "definition": "Descent from heaven — retired bureaucrats taking cushy jobs in industries they regulated. Legal corruption, revolving door, captured regulators. The career path that blurs public and private.",
+      "category": [
+        "politics",
+        "business"
+      ]
+    },
+    {
+      "id": "karoshi",
+      "term": "過労死 (Karōshi)",
+      "lang": "ja",
+      "pronunciation": "kah-roh-shee",
+      "definition": "Death from overwork — dying from work-related stress, heart attack, or suicide. A recognized cause of death in Japan since 1987. The dark side of dedication. The salary man's occupational hazard.",
+      "category": [
+        "culture",
+        "business"
+      ]
+    },
+    {
+      "id": "seppuku",
+      "term": "切腹 (Seppuku)",
+      "lang": "ja",
+      "pronunciation": "sep-poo-koo",
+      "definition": "Cutting belly — ritual suicide by disembowelment, the samurai's honorable death. Also called hara-kiri. Avoid capture, atone for failure, protest with your life. The ultimate statement of sincerity.",
+      "category": [
+        "history",
+        "culture"
+      ]
+    },
+    {
+      "id": "gaijin",
+      "term": "外人 (Gaijin)",
+      "lang": "ja",
+      "pronunciation": "guy-jeen",
+      "definition": "Outside person — foreigner, non-Japanese. Slightly rude; gaikokujin is more polite. The permanent category for those who can never fully belong, no matter how long they stay or well they speak.",
+      "category": [
+        "culture",
+        "language"
+      ]
+    },
+    {
+      "id": "nihonjinron",
+      "term": "日本人論 (Nihonjinron)",
+      "lang": "ja",
+      "definition": "Theories of Japaneseness — the genre of literature explaining Japanese uniqueness. Usually self-congratulatory, sometimes insightful, always essentialist. The cultural nationalism that says Japan is different because Japan is Japan.",
+      "category": [
+        "culture",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "sempai-kohai",
+      "term": "先輩・後輩 (Senpai-Kōhai)",
+      "lang": "ja",
+      "definition": "Senior-junior — the hierarchical relationship structuring Japanese schools, companies, and society. Senpai guides and protects; kōhai respects and follows. Age or entry date determines rank. Vertical society made explicit.",
+      "category": [
+        "culture",
+        "business"
+      ]
+    },
+    {
+      "id": "genro",
+      "term": "元老 (Genrō)",
+      "lang": "ja",
+      "pronunciation": "gen-roh",
+      "definition": "Elder statesmen — the informal council of Meiji oligarchs who chose prime ministers and guided policy behind the scenes. Constitutional fiction, real power. The last died in 1940; no one replaced them; Japan had no brakes.",
+      "category": [
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "shinto",
+      "term": "神道 (Shintō)",
+      "lang": "ja",
+      "pronunciation": "shin-toh",
+      "definition": "Way of the gods — Japan's indigenous religion of kami worship, purification, and nature reverence. No founder, no scripture, no creed. State Shinto (1868-1945) was different: invented tradition serving nationalism. The original remains.",
+      "category": [
+        "religion",
+        "culture"
+      ]
+    },
+    {
+      "id": "kami",
+      "term": "神 (Kami)",
+      "lang": "ja",
+      "pronunciation": "kah-mee",
+      "definition": "God, spirit, sacred — the divine beings of Shinto, inhabiting nature, ancestors, and remarkable things. Not creator gods but immanent presences. Eight million kami: rocks, rivers, ancestors, emperors. The sacred is everywhere.",
+      "category": [
+        "religion",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "ninjo",
+      "term": "人情 (Ninjō)",
+      "lang": "ja",
+      "pronunciation": "neen-joh",
+      "definition": "Human feeling — natural emotion, compassion, what the heart wants. Often conflicts with giri (duty). The star-crossed lovers torn between obligation and love: Japan's favorite tragedy.",
+      "category": [
+        "culture",
+        "psychology"
+      ],
+      "related": [
+        "Giri"
+      ]
+    },
+    {
+      "id": "wa",
+      "term": "和 (Wa)",
+      "lang": "ja",
+      "pronunciation": "wah",
+      "definition": "Harmony — the supreme value in Japanese society. Avoid conflict, maintain group cohesion, suppress individual assertion. Article 1 of the 7th-century Constitution: 'Harmony is to be valued.' The collective over the self.",
+      "category": [
+        "culture",
+        "philosophy"
       ]
     }
   ]

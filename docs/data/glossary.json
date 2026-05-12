@@ -16375,6 +16375,3698 @@
       "lang": "ru",
       "category": "culture",
       "definition": "Slavic midsummer festival: bonfires, water, fern-flower seeking."
+    },
+    {
+      "id": "warp",
+      "term": "Warp",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The lengthwise threads held taut on a loom. The skeleton of the fabric."
+    },
+    {
+      "id": "weft",
+      "term": "Weft",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The crosswise threads woven through the warp. Also called woof."
+    },
+    {
+      "id": "selvage",
+      "term": "Selvage",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The finished edge of fabric that prevents unraveling. Self-edge."
+    },
+    {
+      "id": "ikat",
+      "term": "Ikat",
+      "lang": "id",
+      "category": "textiles",
+      "definition": "Dyeing technique where threads are tied and dyed before weaving. Blurred, feathered patterns."
+    },
+    {
+      "id": "batik",
+      "term": "Batik",
+      "lang": "jv",
+      "category": "textiles",
+      "definition": "Indonesian wax-resist dyeing on fabric. UNESCO heritage. Intricate patterns."
+    },
+    {
+      "id": "shibori",
+      "term": "絞り (Shibori)",
+      "lang": "ja",
+      "category": "textiles",
+      "definition": "Japanese shaped-resist dyeing: binding, stitching, folding before dyeing."
+    },
+    {
+      "id": "jacquard",
+      "term": "Jacquard",
+      "lang": "fr",
+      "category": "textiles",
+      "definition": "Weaving with programmed pattern cards. The first computers were looms."
+    },
+    {
+      "id": "damask",
+      "term": "Damask",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Reversible figured fabric with pattern woven in. Named for Damascus."
+    },
+    {
+      "id": "brocade",
+      "term": "Brocade",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Richly decorative fabric with raised patterns, often with gold or silver thread."
+    },
+    {
+      "id": "tapestry",
+      "term": "Tapestry",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Weft-faced weaving creating pictorial or patterned fabric. Gobelin, Bayeux."
+    },
+    {
+      "id": "twill",
+      "term": "Twill",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Weave with diagonal rib pattern. Denim is a twill."
+    },
+    {
+      "id": "satin",
+      "term": "Satin",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Weave with floats creating smooth, lustrous surface."
+    },
+    {
+      "id": "plain-weave",
+      "term": "Plain Weave",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The simplest weave: over one, under one. Also tabby weave."
+    },
+    {
+      "id": "warp-beam",
+      "term": "Warp Beam",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The roller holding wound warp threads at the back of the loom."
+    },
+    {
+      "id": "heddle",
+      "term": "Heddle",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The looped wire or cord through which warp threads pass, controlling the shed."
+    },
+    {
+      "id": "shed",
+      "term": "Shed",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The opening between raised and lowered warp threads through which the shuttle passes."
+    },
+    {
+      "id": "shuttle",
+      "term": "Shuttle",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The tool carrying the weft thread through the shed."
+    },
+    {
+      "id": "beater",
+      "term": "Beater",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "The frame that pushes each weft thread into place."
+    },
+    {
+      "id": "kente",
+      "term": "Kente",
+      "lang": "ak",
+      "category": "textiles",
+      "definition": "Ghanaian strip-woven cloth. Asante royalty. Bright geometric patterns."
+    },
+    {
+      "id": "mudcloth",
+      "term": "Bògòlanfini (Mudcloth)",
+      "lang": "bm",
+      "category": "textiles",
+      "definition": "Malian cloth dyed with fermented mud. Geometric patterns, natural browns."
+    },
+    {
+      "id": "kasuri",
+      "term": "絣 (Kasuri)",
+      "lang": "ja",
+      "category": "textiles",
+      "definition": "Japanese ikat technique. Indigo and white geometric patterns."
+    },
+    {
+      "id": "nishijin",
+      "term": "西陣 (Nishijin)",
+      "lang": "ja",
+      "category": "textiles",
+      "definition": "Kyoto's luxury silk-weaving district. Obi sashes, brocades."
+    },
+    {
+      "id": "pashmina",
+      "term": "Pashmina",
+      "lang": "fa",
+      "category": "textiles",
+      "definition": "Fine cashmere wool from Himalayan goats. Kashmiri shawls."
+    },
+    {
+      "id": "chintz",
+      "term": "Chintz",
+      "lang": "hi",
+      "category": "textiles",
+      "definition": "Glazed printed cotton. From Hindi 'chint' (variegated). India to Europe."
+    },
+    {
+      "id": "calico",
+      "term": "Calico",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Plain-woven cotton, originally from Calicut, India."
+    },
+    {
+      "id": "muslin",
+      "term": "Muslin",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Fine cotton fabric from Mosul. So sheer it was called 'woven air.'"
+    },
+    {
+      "id": "velvet",
+      "term": "Velvet",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Woven fabric with cut pile, creating soft surface. Luxury since Renaissance."
+    },
+    {
+      "id": "cordurouy",
+      "term": "Corduroy",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Cotton fabric with vertical ribs (wales). 'Corde du roi'—king's cord."
+    },
+    {
+      "id": "tartan",
+      "term": "Tartan",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Scottish plaid pattern: horizontal and vertical bands creating checks. Clan identity."
+    },
+    {
+      "id": "houndstooth",
+      "term": "Houndstooth",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Two-tone check pattern with jagged edges. Broken checks."
+    },
+    {
+      "id": "herringbone",
+      "term": "Herringbone",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "V-shaped twill weave resembling fish skeleton."
+    },
+    {
+      "id": "toile",
+      "term": "Toile",
+      "lang": "fr",
+      "category": "textiles",
+      "definition": "Cotton or linen fabric, or the scenic printed 'Toile de Jouy' style."
+    },
+    {
+      "id": "organza",
+      "term": "Organza",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Thin, stiff, transparent silk or synthetic. Wedding dresses, millinery."
+    },
+    {
+      "id": "tulle",
+      "term": "Tulle",
+      "lang": "fr",
+      "category": "textiles",
+      "definition": "Fine netting, originally silk. Named for Tulle, France. Ballet tutus."
+    },
+    {
+      "id": "felt",
+      "term": "Felt",
+      "lang": "en",
+      "category": "textiles",
+      "definition": "Non-woven fabric: fibers matted together by heat, moisture, pressure. Ancient."
+    },
+    {
+      "id": "tapa",
+      "term": "Tapa",
+      "lang": "to",
+      "category": "textiles",
+      "definition": "Pacific Island bark cloth. Beaten from paper mulberry. Painted designs."
+    },
+    {
+      "id": "raku",
+      "term": "楽焼 (Raku)",
+      "lang": "ja",
+      "category": "ceramics",
+      "definition": "Japanese low-fire ceramic for tea bowls. Removed glowing, cooled rapidly. Wabi-sabi aesthetic."
+    },
+    {
+      "id": "celadon",
+      "term": "Celadon",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Pale green glaze, especially Korean. The color of secret jade."
+    },
+    {
+      "id": "majolica",
+      "term": "Majolica",
+      "lang": "it",
+      "category": "ceramics",
+      "definition": "Tin-glazed earthenware, brightly painted. Italian Renaissance. Via Majorca."
+    },
+    {
+      "id": "delft",
+      "term": "Delft",
+      "lang": "nl",
+      "category": "ceramics",
+      "definition": "Dutch blue-and-white tin-glazed pottery. Imitating Chinese porcelain."
+    },
+    {
+      "id": "faience",
+      "term": "Faïence",
+      "lang": "fr",
+      "category": "ceramics",
+      "definition": "Tin-glazed pottery, named for Faenza, Italy. French term for majolica."
+    },
+    {
+      "id": "porcelain",
+      "term": "Porcelain",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "White, translucent ceramic fired at high temperature. China's secret."
+    },
+    {
+      "id": "stoneware",
+      "term": "Stoneware",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Dense, vitrified ceramic between earthenware and porcelain."
+    },
+    {
+      "id": "earthenware",
+      "term": "Earthenware",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Porous ceramic fired at low temperature. The most ancient pottery."
+    },
+    {
+      "id": "bisque",
+      "term": "Bisque",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Unglazed fired ceramic. The first firing before glazing."
+    },
+    {
+      "id": "slip",
+      "term": "Slip",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Liquid clay for coating, decorating, or joining pottery."
+    },
+    {
+      "id": "glaze",
+      "term": "Glaze",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Glassy coating fused to ceramic surface. Color, waterproofing, beauty."
+    },
+    {
+      "id": "crazing",
+      "term": "Crazing",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Network of fine cracks in glaze. Sometimes a defect, sometimes cultivated."
+    },
+    {
+      "id": "throwing",
+      "term": "Throwing",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Forming pottery on a spinning wheel. Centrifugal shaping."
+    },
+    {
+      "id": "coiling",
+      "term": "Coiling",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Building pottery by stacking ropes of clay. Ancient technique."
+    },
+    {
+      "id": "slab-building",
+      "term": "Slab Building",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Constructing pottery from flat sheets of clay."
+    },
+    {
+      "id": "kiln",
+      "term": "Kiln",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "The furnace for firing pottery. From wood-fired to electric."
+    },
+    {
+      "id": "saggar",
+      "term": "Saggar",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "A protective container for pottery during firing."
+    },
+    {
+      "id": "reduction",
+      "term": "Reduction Firing",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Firing with limited oxygen, affecting glaze colors. Copper goes red."
+    },
+    {
+      "id": "oxidation",
+      "term": "Oxidation Firing",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Firing with ample oxygen. Standard kiln atmosphere."
+    },
+    {
+      "id": "mingei",
+      "term": "民藝 (Mingei)",
+      "lang": "ja",
+      "category": [
+        "ceramics",
+        "aesthetics"
+      ],
+      "definition": "Japanese folk craft movement. Beauty in humble, functional objects."
+    },
+    {
+      "id": "jingdezhen",
+      "term": "景德鎮 (Jǐngdézhèn)",
+      "lang": "zh",
+      "category": "ceramics",
+      "definition": "The porcelain capital of China. Imperial kilns for a millennium."
+    },
+    {
+      "id": "blanc-de-chine",
+      "term": "Blanc de Chine",
+      "lang": "fr",
+      "category": "ceramics",
+      "definition": "White Dehua porcelain from Fujian. Figures, vessels, pure white."
+    },
+    {
+      "id": "famille-rose",
+      "term": "Famille Rose",
+      "lang": "fr",
+      "category": "ceramics",
+      "definition": "Chinese porcelain with pink enamel palette. Qing dynasty."
+    },
+    {
+      "id": "underglaze",
+      "term": "Underglaze",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Decoration applied before glazing and firing. Blue-and-white."
+    },
+    {
+      "id": "overglaze",
+      "term": "Overglaze",
+      "lang": "en",
+      "category": "ceramics",
+      "definition": "Decoration applied over fired glaze, requiring additional firing."
+    },
+    {
+      "id": "sgraffito",
+      "term": "Sgraffito",
+      "lang": "it",
+      "category": "ceramics",
+      "definition": "Scratching through slip to reveal clay beneath. Decorative contrast."
+    },
+    {
+      "id": "millefiori",
+      "term": "Millefiori",
+      "lang": "it",
+      "category": "glass",
+      "definition": "'Thousand flowers': glass technique using cross-sections of colored glass rods."
+    },
+    {
+      "id": "lampwork",
+      "term": "Lampwork",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Shaping glass with a torch. Beads, figurines, scientific glass."
+    },
+    {
+      "id": "blown-glass",
+      "term": "Blown Glass",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Glass shaped by inflating molten glass on a blowpipe. Ancient Syrian invention."
+    },
+    {
+      "id": "murano",
+      "term": "Murano Glass",
+      "lang": "it",
+      "category": "glass",
+      "definition": "Venetian glassmaking tradition. Sequestered on Murano island. Trade secrets."
+    },
+    {
+      "id": "cristallo",
+      "term": "Cristallo",
+      "lang": "it",
+      "category": "glass",
+      "definition": "Clear Venetian glass, approaching crystal clarity. 15th-century innovation."
+    },
+    {
+      "id": "latticino",
+      "term": "Latticino",
+      "lang": "it",
+      "category": "glass",
+      "definition": "Glass with embedded white or colored threads in patterns."
+    },
+    {
+      "id": "aventurine-glass",
+      "term": "Aventurine Glass",
+      "lang": "it",
+      "category": "glass",
+      "definition": "Glass with metallic sparkles from copper or chromic oxide."
+    },
+    {
+      "id": "cameo-glass",
+      "term": "Cameo Glass",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Layered glass with design carved in relief. Portland Vase."
+    },
+    {
+      "id": "pate-de-verre",
+      "term": "Pâte de Verre",
+      "lang": "fr",
+      "category": "glass",
+      "definition": "Crusite glass paste molded and fired. Art Nouveau revival."
+    },
+    {
+      "id": "stained-glass",
+      "term": "Stained Glass",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Colored glass in lead frames. Cathedral windows. Light transformed."
+    },
+    {
+      "id": "flashing",
+      "term": "Flashing",
+      "lang": "en",
+      "category": "glass",
+      "definition": "A thin layer of colored glass over clear, which can be etched through."
+    },
+    {
+      "id": "anneal",
+      "term": "Annealing",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Slow cooling to relieve internal stress. Prevents cracking."
+    },
+    {
+      "id": "gather",
+      "term": "Gather",
+      "lang": "en",
+      "category": "glass",
+      "definition": "A blob of molten glass collected on the blowpipe."
+    },
+    {
+      "id": "pontil",
+      "term": "Pontil",
+      "lang": "en",
+      "category": "glass",
+      "definition": "An iron rod for holding glass during shaping. Leaves a 'pontil mark.'"
+    },
+    {
+      "id": "marver",
+      "term": "Marver",
+      "lang": "en",
+      "category": "glass",
+      "definition": "A flat surface for shaping molten glass. Originally marble."
+    },
+    {
+      "id": "glory-hole",
+      "term": "Glory Hole",
+      "lang": "en",
+      "category": "glass",
+      "definition": "A small furnace opening for reheating glass during working."
+    },
+    {
+      "id": "cullet",
+      "term": "Cullet",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Broken or waste glass for recycling into new batches."
+    },
+    {
+      "id": "frit",
+      "term": "Frit",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Granulated glass, partially fused. Used in glazes and enamel."
+    },
+    {
+      "id": "opalescent",
+      "term": "Opalescent Glass",
+      "lang": "en",
+      "category": "glass",
+      "definition": "Glass with milky, iridescent quality. Tiffany's specialty."
+    },
+    {
+      "id": "damascene",
+      "term": "Damascene",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Inlaying gold or silver wire into steel. Named for Damascus."
+    },
+    {
+      "id": "repousse",
+      "term": "Repoussé",
+      "lang": "fr",
+      "category": "metalwork",
+      "definition": "Shaping metal by hammering from the reverse side. Relief work."
+    },
+    {
+      "id": "chasing",
+      "term": "Chasing",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Refining repoussé work by hammering from the front side."
+    },
+    {
+      "id": "niello",
+      "term": "Niello",
+      "lang": "it",
+      "category": "metalwork",
+      "definition": "Black metallic alloy inlaid in engraved silver or gold. Dark contrast."
+    },
+    {
+      "id": "mokume-gane",
+      "term": "木目金 (Mokume-gane)",
+      "lang": "ja",
+      "category": "metalwork",
+      "definition": "Japanese technique: layered metals forged and manipulated to resemble wood grain."
+    },
+    {
+      "id": "cloisonne",
+      "term": "Cloisonné",
+      "lang": "fr",
+      "category": "metalwork",
+      "definition": "Enamel filling compartments formed by wire strips soldered to a base."
+    },
+    {
+      "id": "champleve",
+      "term": "Champlevé",
+      "lang": "fr",
+      "category": "metalwork",
+      "definition": "Enamel filling recesses carved into metal. Limoges work."
+    },
+    {
+      "id": "plique-a-jour",
+      "term": "Plique-à-jour",
+      "lang": "fr",
+      "category": "metalwork",
+      "definition": "Translucent enamel without backing. Stained glass in metal."
+    },
+    {
+      "id": "granulation",
+      "term": "Granulation",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Fusing tiny metal spheres to a surface. Etruscan mastery."
+    },
+    {
+      "id": "filigree",
+      "term": "Filigree",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Delicate ornamental work of fine wire. Lace in metal."
+    },
+    {
+      "id": "engraving",
+      "term": "Engraving",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Cutting lines into metal with a burin. Permanent incision."
+    },
+    {
+      "id": "etching-metal",
+      "term": "Etching",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Using acid to bite lines into metal through a resist."
+    },
+    {
+      "id": "patination",
+      "term": "Patination",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Chemical treatment to color metal surfaces. Controlled aging."
+    },
+    {
+      "id": "planishing",
+      "term": "Planishing",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Smoothing metal by light hammering. Refining the surface."
+    },
+    {
+      "id": "raising",
+      "term": "Raising",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Forming a vessel by hammering flat sheet over a stake."
+    },
+    {
+      "id": "spinning",
+      "term": "Spinning",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Forming metal over a rotating mandrel. Lathe-based shaping."
+    },
+    {
+      "id": "forging",
+      "term": "Forging",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Shaping heated metal by hammering. The blacksmith's art."
+    },
+    {
+      "id": "quenching",
+      "term": "Quenching",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Rapid cooling of heated metal, hardening it."
+    },
+    {
+      "id": "tempering",
+      "term": "Tempering",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Reheating quenched metal to reduce brittleness while keeping hardness."
+    },
+    {
+      "id": "inlay",
+      "term": "Inlay",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Setting one material into recesses cut in another. Contrasting surfaces."
+    },
+    {
+      "id": "overlay",
+      "term": "Overlay",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Applying one metal over another. Decorative layer."
+    },
+    {
+      "id": "shakudo",
+      "term": "赤銅 (Shakudō)",
+      "lang": "ja",
+      "category": "metalwork",
+      "definition": "Japanese copper-gold alloy, patinated to blue-black. Sword fittings."
+    },
+    {
+      "id": "shibuichi",
+      "term": "四分一 (Shibuichi)",
+      "lang": "ja",
+      "category": "metalwork",
+      "definition": "Japanese copper-silver alloy. Gray, subtle. Sword guards."
+    },
+    {
+      "id": "koftgari",
+      "term": "Koftgari",
+      "lang": "fa",
+      "category": "metalwork",
+      "definition": "Indo-Persian gold or silver inlay on steel. Mughal weapons, armor."
+    },
+    {
+      "id": "bidri",
+      "term": "Bidriware",
+      "lang": "en",
+      "category": "metalwork",
+      "definition": "Indian zinc alloy inlaid with silver. From Bidar. Black and silver."
+    },
+    {
+      "id": "urushi",
+      "term": "漆 (Urushi)",
+      "lang": "ja",
+      "category": "lacquerwork",
+      "definition": "Japanese lacquer from the urushi tree sap. Builds up in dozens of coats."
+    },
+    {
+      "id": "maki-e",
+      "term": "蒔絵 (Maki-e)",
+      "lang": "ja",
+      "category": "lacquerwork",
+      "definition": "Japanese lacquer decoration: gold or silver powder sprinkled on wet lacquer."
+    },
+    {
+      "id": "nashiji",
+      "term": "梨子地 (Nashiji)",
+      "lang": "ja",
+      "category": "lacquerwork",
+      "definition": "'Pear skin ground': gold flakes under transparent lacquer. Shimmering."
+    },
+    {
+      "id": "raden",
+      "term": "螺鈿 (Raden)",
+      "lang": "ja",
+      "category": "lacquerwork",
+      "definition": "Mother-of-pearl inlay in lacquer. Iridescent shell fragments."
+    },
+    {
+      "id": "negoro",
+      "term": "根来 (Negoro)",
+      "lang": "ja",
+      "category": "lacquerwork",
+      "definition": "Red lacquer over black, worn to reveal underlayer. Accidental beauty."
+    },
+    {
+      "id": "kamakura-bori",
+      "term": "鎌倉彫 (Kamakura-bori)",
+      "lang": "ja",
+      "category": "lacquerwork",
+      "definition": "Japanese carved wood lacquerware. Red lacquer over carved patterns."
+    },
+    {
+      "id": "cinnabar-lacquer",
+      "term": "Cinnabar Lacquer",
+      "lang": "en",
+      "category": "lacquerwork",
+      "definition": "Chinese carved red lacquer, built up in hundreds of layers then carved."
+    },
+    {
+      "id": "coromandel",
+      "term": "Coromandel",
+      "lang": "en",
+      "category": "lacquerwork",
+      "definition": "Chinese incised lacquer filled with color. Named for the Indian coast trade route."
+    },
+    {
+      "id": "japanning",
+      "term": "Japanning",
+      "lang": "en",
+      "category": "lacquerwork",
+      "definition": "European imitation of Asian lacquer. Varnish and paint, not true lacquer."
+    },
+    {
+      "id": "quarto-book",
+      "term": "Quarto",
+      "lang": "la",
+      "category": "bookbinding",
+      "definition": "A book size from sheets folded twice, making four leaves (eight pages)."
+    },
+    {
+      "id": "octavo",
+      "term": "Octavo",
+      "lang": "la",
+      "category": "bookbinding",
+      "definition": "A book size from sheets folded three times, making eight leaves."
+    },
+    {
+      "id": "duodecimo",
+      "term": "Duodecimo",
+      "lang": "la",
+      "category": "bookbinding",
+      "definition": "A book size from sheets folded to make twelve leaves. Also 'twelvemo.'"
+    },
+    {
+      "id": "morocco",
+      "term": "Morocco",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Fine goatskin leather for binding. Takes gold tooling well."
+    },
+    {
+      "id": "calf",
+      "term": "Calf",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Calfskin leather for binding. Smooth, takes polish."
+    },
+    {
+      "id": "vellum",
+      "term": "Vellum",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Fine animal skin for writing or binding. Finer than parchment."
+    },
+    {
+      "id": "parchment",
+      "term": "Parchment",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Animal skin prepared for writing. Sheep or goat."
+    },
+    {
+      "id": "tooling",
+      "term": "Tooling",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Impressing designs into leather binding, often with gold leaf."
+    },
+    {
+      "id": "blind-tooling",
+      "term": "Blind Tooling",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Tooling without gold—impression only."
+    },
+    {
+      "id": "gilt-edge",
+      "term": "Gilt Edge",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Book edges covered with gold leaf."
+    },
+    {
+      "id": "headband",
+      "term": "Headband",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "The decorative band at head and tail of spine."
+    },
+    {
+      "id": "endpaper",
+      "term": "Endpaper",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "The paper joining book block to covers. Often decorative."
+    },
+    {
+      "id": "pastedown",
+      "term": "Pastedown",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "The endpaper pasted to the inside of the cover."
+    },
+    {
+      "id": "flyleaf",
+      "term": "Flyleaf",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "The free leaf of the endpaper."
+    },
+    {
+      "id": "raised-bands",
+      "term": "Raised Bands",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Horizontal ridges across the spine from sewing cords."
+    },
+    {
+      "id": "case-binding",
+      "term": "Case Binding",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "A cover made separately then attached to the book block."
+    },
+    {
+      "id": "perfect-binding",
+      "term": "Perfect Binding",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Gluing pages to a cover at the spine. Paperback standard."
+    },
+    {
+      "id": "saddle-stitch",
+      "term": "Saddle Stitch",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Binding with staples through the fold. Magazines, pamphlets."
+    },
+    {
+      "id": "coptic-binding",
+      "term": "Coptic Binding",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Ancient chain-stitch binding allowing book to open flat."
+    },
+    {
+      "id": "codex",
+      "term": "Codex",
+      "lang": "la",
+      "category": "bookbinding",
+      "definition": "A book of bound pages, as opposed to a scroll. The format we still use."
+    },
+    {
+      "id": "fore-edge",
+      "term": "Fore Edge",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "The front edge of the book, opposite the spine."
+    },
+    {
+      "id": "foxing",
+      "term": "Foxing",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Brown spots on old paper from fungus or oxidation."
+    },
+    {
+      "id": "marbled-paper",
+      "term": "Marbled Paper",
+      "lang": "en",
+      "category": "bookbinding",
+      "definition": "Decorative paper with swirled patterns from floating pigments."
+    },
+    {
+      "id": "dentelle",
+      "term": "Dentelle",
+      "lang": "fr",
+      "category": "bookbinding",
+      "definition": "Lace-like tooled border on fine bindings. French specialty."
+    },
+    {
+      "id": "noh",
+      "term": "能 (Nō)",
+      "lang": "ja",
+      "category": "theater",
+      "definition": "Japanese masked drama: slow, symbolic, austere. Warrior ghosts, possessed women."
+    },
+    {
+      "id": "kyogen",
+      "term": "狂言 (Kyōgen)",
+      "lang": "ja",
+      "category": "theater",
+      "definition": "Comic interludes between Noh plays. Servants, deception, slapstick."
+    },
+    {
+      "id": "kabuki",
+      "term": "歌舞伎 (Kabuki)",
+      "lang": "ja",
+      "category": "theater",
+      "definition": "Flamboyant Japanese theater: elaborate costumes, stylized acting, all-male casts."
+    },
+    {
+      "id": "onnagata",
+      "term": "女形 (Onnagata)",
+      "lang": "ja",
+      "category": "theater",
+      "definition": "Male Kabuki actors specializing in female roles. Idealized femininity."
+    },
+    {
+      "id": "mie",
+      "term": "見得 (Mie)",
+      "lang": "ja",
+      "category": "theater",
+      "definition": "Kabuki's dramatic pose: crossed eyes, frozen moment. The Instagram of Edo."
+    },
+    {
+      "id": "hanamichi",
+      "term": "花道 (Hanamichi)",
+      "lang": "ja",
+      "category": "theater",
+      "definition": "Kabuki's runway through the audience. 'Flower path.'"
+    },
+    {
+      "id": "bunraku",
+      "term": "文楽 (Bunraku)",
+      "lang": "ja",
+      "category": "theater",
+      "definition": "Japanese puppet theater with visible puppeteers. Three operators per puppet."
+    },
+    {
+      "id": "kathakali",
+      "term": "Kathakali",
+      "lang": "ml",
+      "category": "theater",
+      "definition": "Kerala dance-drama: green faces, elaborate makeup, all-night performances."
+    },
+    {
+      "id": "kutiyattam",
+      "term": "Kutiyattam",
+      "lang": "ml",
+      "category": "theater",
+      "definition": "Ancient Sanskrit drama of Kerala. UNESCO heritage. 2000-year tradition."
+    },
+    {
+      "id": "yakshagana",
+      "term": "Yakshagana",
+      "lang": "kn",
+      "category": "theater",
+      "definition": "Karnataka dance-drama: colorful costumes, mythology, improvisation."
+    },
+    {
+      "id": "jingju",
+      "term": "京劇 (Jīngjù)",
+      "lang": "zh",
+      "category": "theater",
+      "definition": "Beijing opera: singing, mime, acrobatics, martial arts. Painted faces."
+    },
+    {
+      "id": "kunqu",
+      "term": "崑曲 (Kūnqǔ)",
+      "lang": "zh",
+      "category": "theater",
+      "definition": "Elegant Chinese opera from Kunshan. UNESCO masterpiece. Refined, lyrical."
+    },
+    {
+      "id": "canjun-xi",
+      "term": "參軍戲 (Cānjūn xì)",
+      "lang": "zh",
+      "category": "theater",
+      "definition": "Ancient Chinese comic dialogue. Ancestor of xiangsheng."
+    },
+    {
+      "id": "wayang",
+      "term": "Wayang",
+      "lang": "jv",
+      "category": "theater",
+      "definition": "Javanese puppet theater: flat leather figures behind a screen. All night."
+    },
+    {
+      "id": "commedia",
+      "term": "Commedia dell'Arte",
+      "lang": "it",
+      "category": "theater",
+      "definition": "Italian masked improvised comedy. Stock characters: Harlequin, Pantalone, Columbina."
+    },
+    {
+      "id": "lazzi",
+      "term": "Lazzi",
+      "lang": "it",
+      "category": "theater",
+      "definition": "Comic routines in commedia dell'arte. Physical gags, interpolated business."
+    },
+    {
+      "id": "zanni",
+      "term": "Zanni",
+      "lang": "it",
+      "category": "theater",
+      "definition": "Servant characters in commedia. The tricksters. Root of 'zany.'"
+    },
+    {
+      "id": "arlecchino",
+      "term": "Arlecchino",
+      "lang": "it",
+      "category": "theater",
+      "definition": "Harlequin: the acrobatic servant in patchwork. Commedia's trickster."
+    },
+    {
+      "id": "pantomime",
+      "term": "Pantomime",
+      "lang": "en",
+      "category": "theater",
+      "definition": "Silent acting with gesture; also British Christmas theatrical tradition."
+    },
+    {
+      "id": "burlesque",
+      "term": "Burlesque",
+      "lang": "en",
+      "category": "theater",
+      "definition": "Comic parody; later, striptease entertainment."
+    },
+    {
+      "id": "vaudeville",
+      "term": "Vaudeville",
+      "lang": "en",
+      "category": "theater",
+      "definition": "American variety entertainment: songs, comedy, acrobatics. Died with cinema."
+    },
+    {
+      "id": "melodrama",
+      "term": "Melodrama",
+      "lang": "en",
+      "category": "theater",
+      "definition": "Exaggerated drama with music, clear villains and heroes. Now pejorative."
+    },
+    {
+      "id": "agitprop",
+      "term": "Agitprop",
+      "lang": "ru",
+      "category": "theater",
+      "definition": "Political propaganda theater. Soviet avant-garde, later global."
+    },
+    {
+      "id": "verfremdung",
+      "term": "Verfremdungseffekt",
+      "lang": "de",
+      "category": "theater",
+      "definition": "Brecht's 'alienation effect': breaking illusion so audiences think critically."
+    },
+    {
+      "id": "upstage",
+      "term": "Upstage",
+      "lang": "en",
+      "category": "theater",
+      "definition": "The rear of the stage (originally elevated). To upstage: steal focus."
+    },
+    {
+      "id": "downstage",
+      "term": "Downstage",
+      "lang": "en",
+      "category": "theater",
+      "definition": "The front of the stage, nearest the audience."
+    },
+    {
+      "id": "wings",
+      "term": "Wings",
+      "lang": "en",
+      "category": "theater",
+      "definition": "The sides of the stage, hidden from audience. Where actors wait."
+    },
+    {
+      "id": "fly-system",
+      "term": "Fly System",
+      "lang": "en",
+      "category": "theater",
+      "definition": "Rigging for raising and lowering scenery and lights."
+    },
+    {
+      "id": "sightlines",
+      "term": "Sightlines",
+      "lang": "en",
+      "category": "theater",
+      "definition": "What the audience can see from their seats. Blocking considers sightlines."
+    },
+    {
+      "id": "butoh",
+      "term": "舞踏 (Butō)",
+      "lang": "ja",
+      "category": "dance",
+      "definition": "Japanese avant-garde dance: white-painted bodies, grotesque slowness. Post-Hiroshima body."
+    },
+    {
+      "id": "bharatanatyam",
+      "term": "Bharatanatyam",
+      "lang": "ta",
+      "category": "dance",
+      "definition": "Classical Tamil dance: precise geometry, storytelling, temple origins."
+    },
+    {
+      "id": "kathak",
+      "term": "Kathak",
+      "lang": "hi",
+      "category": "dance",
+      "definition": "North Indian classical dance: footwork, spins, Mughal court elegance."
+    },
+    {
+      "id": "odissi",
+      "term": "Odissi",
+      "lang": "or",
+      "category": "dance",
+      "definition": "Odia classical dance: tribhanga pose, temple sculpture come alive."
+    },
+    {
+      "id": "kuchipudi",
+      "term": "Kuchipudi",
+      "lang": "te",
+      "category": "dance",
+      "definition": "Telugu classical dance-drama. Brass plate dancing."
+    },
+    {
+      "id": "manipuri",
+      "term": "Manipuri",
+      "lang": "mni",
+      "category": "dance",
+      "definition": "Northeastern Indian dance: fluid, circular, devotional."
+    },
+    {
+      "id": "mohiniyattam",
+      "term": "Mohiniyattam",
+      "lang": "ml",
+      "category": "dance",
+      "definition": "Kerala classical dance: graceful, feminine, swaying."
+    },
+    {
+      "id": "mudra",
+      "term": "Mudra",
+      "lang": "sa",
+      "category": "dance",
+      "definition": "Hand gesture in Indian dance. Each tells a story. Hundreds of meanings."
+    },
+    {
+      "id": "abhinaya",
+      "term": "Abhinaya",
+      "lang": "sa",
+      "category": "dance",
+      "definition": "Expression in Indian dance: face, body, emotion. Acting through movement."
+    },
+    {
+      "id": "nritta",
+      "term": "Nritta",
+      "lang": "sa",
+      "category": "dance",
+      "definition": "Pure dance: rhythm and form without narrative meaning."
+    },
+    {
+      "id": "nritya",
+      "term": "Nritya",
+      "lang": "sa",
+      "category": "dance",
+      "definition": "Expressive dance: movement conveying meaning and emotion."
+    },
+    {
+      "id": "capoeira",
+      "term": "Capoeira",
+      "lang": "pt",
+      "category": "dance",
+      "definition": "Afro-Brazilian martial art disguised as dance. Acrobatics, music, roda circle."
+    },
+    {
+      "id": "ginga",
+      "term": "Ginga",
+      "lang": "pt",
+      "category": "dance",
+      "definition": "The basic swaying step of capoeira. The root of all movement."
+    },
+    {
+      "id": "roda",
+      "term": "Roda",
+      "lang": "pt",
+      "category": "dance",
+      "definition": "The circle of players in capoeira. Energy contained and exchanged."
+    },
+    {
+      "id": "berimbau",
+      "term": "Berimbau",
+      "lang": "pt",
+      "category": [
+        "music",
+        "dance"
+      ],
+      "definition": "The single-string bow that leads capoeira. Its rhythm sets the game."
+    },
+    {
+      "id": "salsa",
+      "term": "Salsa",
+      "lang": "es",
+      "category": [
+        "dance",
+        "music"
+      ],
+      "definition": "Cuban-rooted Latin dance and music. Clave rhythm, partner work."
+    },
+    {
+      "id": "bachata",
+      "term": "Bachata",
+      "lang": "es",
+      "category": [
+        "dance",
+        "music"
+      ],
+      "definition": "Dominican romantic music and dance. Hip motion, close embrace."
+    },
+    {
+      "id": "merengue",
+      "term": "Merengue",
+      "lang": "es",
+      "category": [
+        "dance",
+        "music"
+      ],
+      "definition": "Dominican fast-tempo dance. Marching step, hip sway."
+    },
+    {
+      "id": "cumbia",
+      "term": "Cumbia",
+      "lang": "es",
+      "category": [
+        "dance",
+        "music"
+      ],
+      "definition": "Colombian folk music and dance. African, indigenous, Spanish roots."
+    },
+    {
+      "id": "milonga",
+      "term": "Milonga",
+      "lang": "es",
+      "category": [
+        "dance",
+        "music"
+      ],
+      "definition": "Argentine music and dance, ancestor of tango. Also a tango social dance."
+    },
+    {
+      "id": "vals-criollo",
+      "term": "Vals Criollo",
+      "lang": "es",
+      "category": "dance",
+      "definition": "Peruvian waltz: syncopated, romantic, distinct from European waltz."
+    },
+    {
+      "id": "lindy-hop",
+      "term": "Lindy Hop",
+      "lang": "en",
+      "category": "dance",
+      "definition": "1930s Harlem swing dance. Athletic, improvisational. Whitey's Lindy Hoppers."
+    },
+    {
+      "id": "breakdancing",
+      "term": "Breaking",
+      "lang": "en",
+      "category": "dance",
+      "definition": "Hip-hop athletic dance: toprock, downrock, freezes, power moves."
+    },
+    {
+      "id": "krump",
+      "term": "Krump",
+      "lang": "en",
+      "category": "dance",
+      "definition": "LA street dance: explosive, aggressive, expressive. Anger and joy."
+    },
+    {
+      "id": "voguing",
+      "term": "Voguing",
+      "lang": "en",
+      "category": "dance",
+      "definition": "Harlem ballroom dance: poses from fashion magazines. LGBTQ+ culture."
+    },
+    {
+      "id": "whacking",
+      "term": "Waacking",
+      "lang": "en",
+      "category": "dance",
+      "definition": "Disco-era arm-focused dance from LA gay clubs. Dramatic, musical."
+    },
+    {
+      "id": "contact-improv",
+      "term": "Contact Improvisation",
+      "lang": "en",
+      "category": "dance",
+      "definition": "Postmodern partner dance: sharing weight, following momentum. No steps."
+    },
+    {
+      "id": "morris-dance",
+      "term": "Morris Dance",
+      "lang": "en",
+      "category": "dance",
+      "definition": "English folk dance: bells, sticks, handkerchiefs. Ancient origins disputed."
+    },
+    {
+      "id": "tarantella",
+      "term": "Tarantella",
+      "lang": "it",
+      "category": "dance",
+      "definition": "Fast Southern Italian folk dance. Named for tarantula—dance out the bite."
+    },
+    {
+      "id": "dabke",
+      "term": "دبكة (Dabke)",
+      "lang": "ar",
+      "category": "dance",
+      "definition": "Levantine line dance. Stomping, linked arms, celebration."
+    },
+    {
+      "id": "sufi-whirling",
+      "term": "Sufi Whirling",
+      "lang": "en",
+      "category": [
+        "dance",
+        "spirituality"
+      ],
+      "definition": "Mevlevi dervish spinning meditation. Arms outstretched, skirts flying."
+    },
+    {
+      "id": "libretto",
+      "term": "Libretto",
+      "lang": "it",
+      "category": "opera",
+      "definition": "The text of an opera. 'Little book.'"
+    },
+    {
+      "id": "recitative",
+      "term": "Recitative",
+      "lang": "it",
+      "category": "opera",
+      "definition": "Speech-like singing advancing the plot between arias."
+    },
+    {
+      "id": "cavatina",
+      "term": "Cavatina",
+      "lang": "it",
+      "category": "opera",
+      "definition": "A short, simple aria, often a character's entrance."
+    },
+    {
+      "id": "cabaletta",
+      "term": "Cabaletta",
+      "lang": "it",
+      "category": "opera",
+      "definition": "The fast, brilliant conclusion to a two-part aria."
+    },
+    {
+      "id": "ensemble",
+      "term": "Ensemble",
+      "lang": "en",
+      "category": "opera",
+      "definition": "A piece for multiple singers. Duet, trio, quartet, finale."
+    },
+    {
+      "id": "finale",
+      "term": "Finale",
+      "lang": "it",
+      "category": "opera",
+      "definition": "The closing scene of an act, often complex with multiple voices."
+    },
+    {
+      "id": "overture",
+      "term": "Overture",
+      "lang": "en",
+      "category": "opera",
+      "definition": "Orchestral introduction to an opera, setting mood or previewing themes."
+    },
+    {
+      "id": "prelude",
+      "term": "Prelude",
+      "lang": "en",
+      "category": "opera",
+      "definition": "A shorter orchestral opening, leading directly into action. Wagner's term."
+    },
+    {
+      "id": "intermezzo",
+      "term": "Intermezzo",
+      "lang": "it",
+      "category": "opera",
+      "definition": "Music between acts or scenes. Originally, a comic piece between serious acts."
+    },
+    {
+      "id": "soprano",
+      "term": "Soprano",
+      "lang": "it",
+      "category": "opera",
+      "definition": "The highest female voice. Leads, heroines, ingénues."
+    },
+    {
+      "id": "mezzo",
+      "term": "Mezzo-soprano",
+      "lang": "it",
+      "category": "opera",
+      "definition": "Middle female voice. Villainesses, mothers, trousers roles."
+    },
+    {
+      "id": "contralto",
+      "term": "Contralto",
+      "lang": "it",
+      "category": "opera",
+      "definition": "The lowest female voice. Rare, dark, mysterious."
+    },
+    {
+      "id": "tenor",
+      "term": "Tenor",
+      "lang": "it",
+      "category": "opera",
+      "definition": "High male voice. Heroes, lovers, the leading man."
+    },
+    {
+      "id": "baritone",
+      "term": "Baritone",
+      "lang": "it",
+      "category": "opera",
+      "definition": "Middle male voice. Fathers, rivals, villains."
+    },
+    {
+      "id": "bass",
+      "term": "Bass",
+      "lang": "it",
+      "category": "opera",
+      "definition": "The lowest male voice. Kings, priests, devils."
+    },
+    {
+      "id": "spinto",
+      "term": "Spinto",
+      "lang": "it",
+      "category": "opera",
+      "definition": "A voice pushed toward dramatic weight. Between lyric and dramatic."
+    },
+    {
+      "id": "fach",
+      "term": "Fach",
+      "lang": "de",
+      "category": "opera",
+      "definition": "Voice category system in German opera. Your Fach determines your roles."
+    },
+    {
+      "id": "claque",
+      "term": "Claque",
+      "lang": "fr",
+      "category": "opera",
+      "definition": "Hired applauders. A 19th-century opera institution."
+    },
+    {
+      "id": "prima-donna",
+      "term": "Prima Donna",
+      "lang": "it",
+      "category": "opera",
+      "definition": "'First lady': the lead soprano. Now also: a temperamental star."
+    },
+    {
+      "id": "divo",
+      "term": "Divo",
+      "lang": "it",
+      "category": "opera",
+      "definition": "A male opera star. Less common than 'diva.'"
+    },
+    {
+      "id": "verismo",
+      "term": "Verismo",
+      "lang": "it",
+      "category": "opera",
+      "definition": "Realist Italian opera: working-class characters, violent passions. Puccini, Mascagni."
+    },
+    {
+      "id": "singspiel",
+      "term": "Singspiel",
+      "lang": "de",
+      "category": "opera",
+      "definition": "German opera with spoken dialogue. Mozart's Magic Flute."
+    },
+    {
+      "id": "operetta",
+      "term": "Operetta",
+      "lang": "it",
+      "category": "opera",
+      "definition": "Light opera with spoken dialogue, dancing. Offenbach, Strauss."
+    },
+    {
+      "id": "zarzuela",
+      "term": "Zarzuela",
+      "lang": "es",
+      "category": "opera",
+      "definition": "Spanish operetta: spoken and sung, often folk-flavored."
+    },
+    {
+      "id": "mise-en-scene",
+      "term": "Mise-en-scène",
+      "lang": "fr",
+      "category": "cinema",
+      "definition": "Everything in the frame: set, lighting, costume, actor placement. What's 'put in the scene.'"
+    },
+    {
+      "id": "montage",
+      "term": "Montage",
+      "lang": "fr",
+      "category": "cinema",
+      "definition": "Editing to create meaning through juxtaposition. Eisenstein's theory."
+    },
+    {
+      "id": "diegetic",
+      "term": "Diegetic",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Sound from within the story world. Characters can hear it."
+    },
+    {
+      "id": "non-diegetic",
+      "term": "Non-diegetic",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Sound from outside the story: score, narration. Characters can't hear it."
+    },
+    {
+      "id": "jump-cut",
+      "term": "Jump Cut",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "An abrupt edit within a scene. Godard's disruption."
+    },
+    {
+      "id": "match-cut",
+      "term": "Match Cut",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "An edit linking two shots by visual similarity. Bone to spaceship."
+    },
+    {
+      "id": "dissolve",
+      "term": "Dissolve",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "A transition where one shot fades into the next."
+    },
+    {
+      "id": "fade",
+      "term": "Fade",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Gradual transition to or from black (or white)."
+    },
+    {
+      "id": "tracking-shot",
+      "term": "Tracking Shot",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Camera moving alongside action. On tracks, dolly, or Steadicam."
+    },
+    {
+      "id": "dolly",
+      "term": "Dolly",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Camera platform on wheels. Dolly in: move toward subject."
+    },
+    {
+      "id": "pan",
+      "term": "Pan",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Camera rotating horizontally on its axis."
+    },
+    {
+      "id": "tilt",
+      "term": "Tilt",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Camera rotating vertically on its axis."
+    },
+    {
+      "id": "crane-shot",
+      "term": "Crane Shot",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Camera on a crane, rising or swooping."
+    },
+    {
+      "id": "steadicam",
+      "term": "Steadicam",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Stabilized handheld camera for smooth movement. The Shining's corridors."
+    },
+    {
+      "id": "deep-focus",
+      "term": "Deep Focus",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Keeping foreground and background in sharp focus. Citizen Kane."
+    },
+    {
+      "id": "shallow-focus",
+      "term": "Shallow Focus",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Only one plane in focus, blurring the rest. Directs attention."
+    },
+    {
+      "id": "rack-focus",
+      "term": "Rack Focus",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Shifting focus from one subject to another within a shot."
+    },
+    {
+      "id": "aspect-ratio",
+      "term": "Aspect Ratio",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "The frame's width to height. 4:3 classic TV, 16:9 widescreen, 2.35:1 scope."
+    },
+    {
+      "id": "film-noir",
+      "term": "Film Noir",
+      "lang": "fr",
+      "category": "cinema",
+      "definition": "Dark 1940s-50s crime films: shadows, cynicism, femmes fatales."
+    },
+    {
+      "id": "nouvelle-vague",
+      "term": "Nouvelle Vague",
+      "lang": "fr",
+      "category": "cinema",
+      "definition": "French New Wave: Godard, Truffaut. Breaking rules, personal vision."
+    },
+    {
+      "id": "neorealism",
+      "term": "Neorealism",
+      "lang": "it",
+      "category": "cinema",
+      "definition": "Italian postwar cinema: location shooting, non-actors, social themes."
+    },
+    {
+      "id": "auteur",
+      "term": "Auteur",
+      "lang": "fr",
+      "category": "cinema",
+      "definition": "The director as author. Personal vision despite industrial production."
+    },
+    {
+      "id": "mcguffin",
+      "term": "MacGuffin",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Hitchcock's term: the object everyone wants but doesn't really matter."
+    },
+    {
+      "id": "foley",
+      "term": "Foley",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Post-production sound effects: footsteps, rustling. Named for Jack Foley."
+    },
+    {
+      "id": "adr",
+      "term": "ADR",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Automated Dialogue Replacement: re-recording dialogue in studio."
+    },
+    {
+      "id": "continuity",
+      "term": "Continuity",
+      "lang": "en",
+      "category": "cinema",
+      "definition": "Matching details between shots. Continuity errors break the illusion."
+    },
+    {
+      "id": "sillage",
+      "term": "Sillage",
+      "lang": "fr",
+      "category": "perfumery",
+      "definition": "The scent trail left behind. 'Wake' in English. How far your perfume travels."
+    },
+    {
+      "id": "top-notes",
+      "term": "Top Notes",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "The first scents perceived, evaporating quickly. Citrus, herbs."
+    },
+    {
+      "id": "heart-notes",
+      "term": "Heart Notes",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "The middle of a fragrance, emerging as top notes fade. Florals, spices."
+    },
+    {
+      "id": "base-notes",
+      "term": "Base Notes",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "The foundation, lasting longest. Woods, musks, resins."
+    },
+    {
+      "id": "accord",
+      "term": "Accord",
+      "lang": "fr",
+      "category": "perfumery",
+      "definition": "A blend of notes creating a unified impression. The chord of perfumery."
+    },
+    {
+      "id": "chypre",
+      "term": "Chypre",
+      "lang": "fr",
+      "category": "perfumery",
+      "definition": "A fragrance family: bergamot, oakmoss, labdanum. Named for Cyprus."
+    },
+    {
+      "id": "fougere",
+      "term": "Fougère",
+      "lang": "fr",
+      "category": "perfumery",
+      "definition": "'Fern': lavender, oakmoss, coumarin. Classic masculine family."
+    },
+    {
+      "id": "oriental",
+      "term": "Oriental",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "Warm, spicy, resinous fragrances. Vanilla, amber, incense."
+    },
+    {
+      "id": "gourmand",
+      "term": "Gourmand",
+      "lang": "fr",
+      "category": "perfumery",
+      "definition": "Edible scents: vanilla, chocolate, caramel. Sweet and delicious."
+    },
+    {
+      "id": "aquatic",
+      "term": "Aquatic",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "Fresh, ozonic, marine scents. A 1990s innovation."
+    },
+    {
+      "id": "ambergris",
+      "term": "Ambergris",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "Whale-derived fixative. Rare, valuable, now mostly synthetic."
+    },
+    {
+      "id": "absolute",
+      "term": "Absolute",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "Highly concentrated plant extract obtained by solvent extraction."
+    },
+    {
+      "id": "essential-oil",
+      "term": "Essential Oil",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "Concentrated plant extract obtained by distillation or pressing."
+    },
+    {
+      "id": "enfleurage",
+      "term": "Enfleurage",
+      "lang": "fr",
+      "category": "perfumery",
+      "definition": "Extracting fragrance by pressing flowers into fat. Ancient, labor-intensive."
+    },
+    {
+      "id": "maceration",
+      "term": "Maceration",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "Soaking materials in solvent to extract fragrance."
+    },
+    {
+      "id": "fixative",
+      "term": "Fixative",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "A substance that slows evaporation, making fragrance last."
+    },
+    {
+      "id": "niche",
+      "term": "Niche Perfumery",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "Small-batch, artisanal fragrance. Versus designer/mass market."
+    },
+    {
+      "id": "nose",
+      "term": "Nose",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "A perfumer. One who creates fragrances professionally."
+    },
+    {
+      "id": "drydown",
+      "term": "Drydown",
+      "lang": "en",
+      "category": "perfumery",
+      "definition": "How a fragrance smells after it settles. The base notes in action."
+    },
+    {
+      "id": "complication",
+      "term": "Complication",
+      "lang": "en",
+      "category": "horology",
+      "definition": "Any function beyond basic timekeeping. Calendar, chronograph, repeater."
+    },
+    {
+      "id": "tourbillon",
+      "term": "Tourbillon",
+      "lang": "fr",
+      "category": "horology",
+      "definition": "A rotating cage compensating for gravity's effect on accuracy. Haute horlogerie showpiece."
+    },
+    {
+      "id": "escapement",
+      "term": "Escapement",
+      "lang": "en",
+      "category": "horology",
+      "definition": "The mechanism releasing energy in controlled increments. The tick."
+    },
+    {
+      "id": "balance-wheel",
+      "term": "Balance Wheel",
+      "lang": "en",
+      "category": "horology",
+      "definition": "The oscillating wheel regulating timekeeping. The heart of a watch."
+    },
+    {
+      "id": "mainspring",
+      "term": "Mainspring",
+      "lang": "en",
+      "category": "horology",
+      "definition": "The coiled spring storing energy. Power source of mechanical watches."
+    },
+    {
+      "id": "automatic",
+      "term": "Automatic",
+      "lang": "en",
+      "category": "horology",
+      "definition": "Self-winding: a rotor winds the mainspring with wrist movement."
+    },
+    {
+      "id": "caliber",
+      "term": "Caliber",
+      "lang": "en",
+      "category": "horology",
+      "definition": "A specific movement design. Each has a number."
+    },
+    {
+      "id": "movement",
+      "term": "Movement",
+      "lang": "en",
+      "category": "horology",
+      "definition": "The mechanism inside a watch. Mechanical or quartz."
+    },
+    {
+      "id": "jewel",
+      "term": "Jewel",
+      "lang": "en",
+      "category": "horology",
+      "definition": "Synthetic ruby bearings reducing friction. '17 jewels.'"
+    },
+    {
+      "id": "chronograph",
+      "term": "Chronograph",
+      "lang": "en",
+      "category": "horology",
+      "definition": "A stopwatch function: measure elapsed time."
+    },
+    {
+      "id": "perpetual-calendar",
+      "term": "Perpetual Calendar",
+      "lang": "en",
+      "category": "horology",
+      "definition": "A complication tracking date, day, month, leap years."
+    },
+    {
+      "id": "minute-repeater",
+      "term": "Minute Repeater",
+      "lang": "en",
+      "category": "horology",
+      "definition": "A complication chiming the time on demand. Audible timekeeping."
+    },
+    {
+      "id": "grande-sonnerie",
+      "term": "Grande Sonnerie",
+      "lang": "fr",
+      "category": "horology",
+      "definition": "A repeater striking hours and quarters automatically. The king of complications."
+    },
+    {
+      "id": "moon-phase",
+      "term": "Moon Phase",
+      "lang": "en",
+      "category": "horology",
+      "definition": "A complication displaying lunar cycle. Poetic timekeeping."
+    },
+    {
+      "id": "power-reserve",
+      "term": "Power Reserve",
+      "lang": "en",
+      "category": "horology",
+      "definition": "Indicator showing remaining mainspring energy."
+    },
+    {
+      "id": "guilloché",
+      "term": "Guilloche",
+      "lang": "fr",
+      "category": "horology",
+      "definition": "Engine-turned engraving: precise geometric patterns on dials."
+    },
+    {
+      "id": "enamel-dial",
+      "term": "Enamel Dial",
+      "lang": "en",
+      "category": "horology",
+      "definition": "Watch face coated with fired enamel. Grand feu technique."
+    },
+    {
+      "id": "haute-horlogerie",
+      "term": "Haute Horlogerie",
+      "lang": "fr",
+      "category": "horology",
+      "definition": "'High watchmaking': the pinnacle of craft. Patek, Vacheron, Audemars."
+    },
+    {
+      "id": "carat",
+      "term": "Carat",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Unit of gem weight: 200 milligrams. Derived from carob seeds."
+    },
+    {
+      "id": "brilliance",
+      "term": "Brilliance",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "The total light reflected from a gem. Internal and external reflection."
+    },
+    {
+      "id": "fire",
+      "term": "Fire",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Spectral colors dispersed by a gem. Rainbows flashing."
+    },
+    {
+      "id": "scintillation",
+      "term": "Scintillation",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Flashes of light when gem, light source, or viewer moves."
+    },
+    {
+      "id": "inclusion",
+      "term": "Inclusion",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Internal feature: crystal, feather, needle. Flaws or character."
+    },
+    {
+      "id": "clarity",
+      "term": "Clarity",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Degree of freedom from inclusions. FL to I3 scale for diamonds."
+    },
+    {
+      "id": "cut",
+      "term": "Cut",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "How a gem is shaped and faceted. Determines light performance."
+    },
+    {
+      "id": "brilliant-cut",
+      "term": "Brilliant Cut",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Round cut with 57 or 58 facets. Maximizes brilliance."
+    },
+    {
+      "id": "step-cut",
+      "term": "Step Cut",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Rectangular facets in steps. Emerald cut, Asscher."
+    },
+    {
+      "id": "cabochon",
+      "term": "Cabochon",
+      "lang": "fr",
+      "category": "gemology",
+      "definition": "A gem polished but not faceted. Domed, smooth surface."
+    },
+    {
+      "id": "pavilion",
+      "term": "Pavilion",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "The bottom portion of a cut gem, below the girdle."
+    },
+    {
+      "id": "crown",
+      "term": "Crown",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "The top portion of a cut gem, above the girdle."
+    },
+    {
+      "id": "girdle",
+      "term": "Girdle",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "The widest part of a cut gem, where crown meets pavilion."
+    },
+    {
+      "id": "table",
+      "term": "Table",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "The flat top facet of a cut gem."
+    },
+    {
+      "id": "culet",
+      "term": "Culet",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "The tiny facet at the bottom point of a cut gem."
+    },
+    {
+      "id": "loupe",
+      "term": "Loupe",
+      "lang": "fr",
+      "category": "gemology",
+      "definition": "A small magnifying lens for examining gems. 10x standard."
+    },
+    {
+      "id": "eye-clean",
+      "term": "Eye-clean",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "No inclusions visible to the naked eye."
+    },
+    {
+      "id": "fluorescence",
+      "term": "Fluorescence",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Glowing under UV light. Some diamonds fluoresce blue."
+    },
+    {
+      "id": "pleochroism",
+      "term": "Pleochroism",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Showing different colors from different angles. Tanzanite."
+    },
+    {
+      "id": "asterism",
+      "term": "Asterism",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "A star effect from light reflecting off needle inclusions. Star sapphire."
+    },
+    {
+      "id": "chatoyancy",
+      "term": "Chatoyancy",
+      "lang": "fr",
+      "category": "gemology",
+      "definition": "Cat's eye effect: a moving line of light. Tiger's eye, chrysoberyl."
+    },
+    {
+      "id": "mohs",
+      "term": "Mohs Scale",
+      "lang": "en",
+      "category": "gemology",
+      "definition": "Hardness scale 1-10. Diamond is 10, talc is 1."
+    },
+    {
+      "id": "jess",
+      "term": "Jess",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "Leather straps around a hawk's legs, attached to the leash."
+    },
+    {
+      "id": "hood",
+      "term": "Hood",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A leather cap covering the hawk's eyes, keeping it calm."
+    },
+    {
+      "id": "mews",
+      "term": "Mews",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "The building housing hawks. Now often 'mews' for converted stables."
+    },
+    {
+      "id": "haggard",
+      "term": "Haggard",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A wild-caught adult hawk. Harder to train. Now means gaunt."
+    },
+    {
+      "id": "eyass",
+      "term": "Eyass",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A nestling hawk taken for training."
+    },
+    {
+      "id": "tiercel",
+      "term": "Tiercel",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A male hawk, one-third smaller than the female."
+    },
+    {
+      "id": "falcon",
+      "term": "Falcon",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "Technically, a female falcon. Or broadly, the longwing family."
+    },
+    {
+      "id": "austringer",
+      "term": "Austringer",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "One who flies hawks (shortwings). Versus falconer (longwings)."
+    },
+    {
+      "id": "cadge",
+      "term": "Cadge",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A frame for carrying several hawks. Origin of 'cadger.'"
+    },
+    {
+      "id": "creance",
+      "term": "Creance",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A long training line attached to the hawk."
+    },
+    {
+      "id": "stoop",
+      "term": "Stoop",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A falcon's hunting dive. Wings closed, maximum speed."
+    },
+    {
+      "id": "bate",
+      "term": "Bate",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "When a hawk attempts to fly from the fist, hanging by jesses."
+    },
+    {
+      "id": "imp",
+      "term": "Imp",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "To repair a broken feather by grafting in a piece."
+    },
+    {
+      "id": "mantle",
+      "term": "Mantle",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "When a hawk spreads wings over prey protectively."
+    },
+    {
+      "id": "yarak",
+      "term": "Yarak",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "A hawk in perfect hunting condition: keen, fit, ready."
+    },
+    {
+      "id": "rouse",
+      "term": "Rouse",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "When a hawk shakes and fluffs its feathers."
+    },
+    {
+      "id": "weathering",
+      "term": "Weathering",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "Setting a hawk outside on a perch. Exposure to elements."
+    },
+    {
+      "id": "cast",
+      "term": "Cast",
+      "lang": "en",
+      "category": "falconry",
+      "definition": "The pellet of indigestible matter a hawk regurgitates."
+    },
+    {
+      "id": "piaffe",
+      "term": "Piaffe",
+      "lang": "fr",
+      "category": "equestrian",
+      "definition": "A highly collected trot in place. Horse trots without advancing."
+    },
+    {
+      "id": "passage",
+      "term": "Passage",
+      "lang": "fr",
+      "category": "equestrian",
+      "definition": "An elevated, cadenced trot with suspension. Floating movement."
+    },
+    {
+      "id": "haute-ecole",
+      "term": "Haute École",
+      "lang": "fr",
+      "category": "equestrian",
+      "definition": "'High school': advanced dressage movements. The art above."
+    },
+    {
+      "id": "levade",
+      "term": "Levade",
+      "lang": "fr",
+      "category": "equestrian",
+      "definition": "Horse raises forequarters, hindquarters deeply bent. Classical air."
+    },
+    {
+      "id": "courbette",
+      "term": "Courbette",
+      "lang": "fr",
+      "category": "equestrian",
+      "definition": "Horse leaps forward on hind legs. An 'air above the ground.'"
+    },
+    {
+      "id": "capriole",
+      "term": "Capriole",
+      "lang": "fr",
+      "category": "equestrian",
+      "definition": "Horse leaps, kicks hind legs straight back at height of jump. Most difficult air."
+    },
+    {
+      "id": "pirouette",
+      "term": "Pirouette",
+      "lang": "fr",
+      "category": "equestrian",
+      "definition": "A 360-degree turn on the haunches at canter or walk."
+    },
+    {
+      "id": "half-pass",
+      "term": "Half-pass",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "Lateral movement: horse moves forward and sideways, bent toward direction."
+    },
+    {
+      "id": "flying-change",
+      "term": "Flying Change",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "Changing canter lead in the air, without breaking gait."
+    },
+    {
+      "id": "collection",
+      "term": "Collection",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "Shifting weight to hindquarters, lightening forehand. Self-carriage."
+    },
+    {
+      "id": "impulsion",
+      "term": "Impulsion",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "Controlled forward energy. Not speed—contained power."
+    },
+    {
+      "id": "contact",
+      "term": "Contact",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "The connection between rider's hand and horse's mouth through reins."
+    },
+    {
+      "id": "on-the-bit",
+      "term": "On the Bit",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "Horse accepting contact, flexed at poll, working from behind."
+    },
+    {
+      "id": "above-the-bit",
+      "term": "Above the Bit",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "Horse evading contact by raising head. A fault."
+    },
+    {
+      "id": "spanish-walk",
+      "term": "Spanish Walk",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "An exaggerated high-stepping walk, extending forelegs."
+    },
+    {
+      "id": "airs-above",
+      "term": "Airs Above the Ground",
+      "lang": "en",
+      "category": "equestrian",
+      "definition": "Classical movements where horse leaves the ground: capriole, courbette, levade."
+    },
+    {
+      "id": "touche",
+      "term": "Touché",
+      "lang": "fr",
+      "category": "fencing",
+      "definition": "'Touched': a valid hit. Also acknowledgment of a point in argument."
+    },
+    {
+      "id": "riposte",
+      "term": "Riposte",
+      "lang": "fr",
+      "category": "fencing",
+      "definition": "An attack immediately following a parry. Counter-strike."
+    },
+    {
+      "id": "parry",
+      "term": "Parry",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "Deflecting an attack with the blade. Eight basic parries."
+    },
+    {
+      "id": "lunge",
+      "term": "Lunge",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "The basic attacking footwork: extending front leg while pushing off back."
+    },
+    {
+      "id": "fleche",
+      "term": "Flèche",
+      "lang": "fr",
+      "category": "fencing",
+      "definition": "A running attack, crossing feet. 'Arrow.'"
+    },
+    {
+      "id": "balestra",
+      "term": "Balestra",
+      "lang": "it",
+      "category": "fencing",
+      "definition": "A short jump forward followed by a lunge."
+    },
+    {
+      "id": "piste",
+      "term": "Piste",
+      "lang": "fr",
+      "category": "fencing",
+      "definition": "The fencing strip: 14 meters long, 1.5-2 meters wide."
+    },
+    {
+      "id": "en-garde",
+      "term": "En Garde",
+      "lang": "fr",
+      "category": "fencing",
+      "definition": "The ready position. Also the referee's command."
+    },
+    {
+      "id": "bout",
+      "term": "Bout",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "A fencing match between two fencers."
+    },
+    {
+      "id": "foil",
+      "term": "Foil",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "The lightest weapon, point-only, target is torso."
+    },
+    {
+      "id": "epee",
+      "term": "Épée",
+      "lang": "fr",
+      "category": "fencing",
+      "definition": "The dueling sword: point-only, entire body is target."
+    },
+    {
+      "id": "sabre",
+      "term": "Sabre",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "A cutting weapon: point and edge score, target is above waist."
+    },
+    {
+      "id": "right-of-way",
+      "term": "Right of Way",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "Priority rules in foil and sabre: who has the attack."
+    },
+    {
+      "id": "attack",
+      "term": "Attack",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "The initial offensive action threatening the target."
+    },
+    {
+      "id": "counter-attack",
+      "term": "Counter-attack",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "An offensive action into an opponent's attack."
+    },
+    {
+      "id": "feint",
+      "term": "Feint",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "A fake attack to draw a parry, creating an opening."
+    },
+    {
+      "id": "disengage",
+      "term": "Disengage",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "Moving the blade around opponent's blade to attack another line."
+    },
+    {
+      "id": "beat",
+      "term": "Beat",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "Striking opponent's blade sharply to create an opening."
+    },
+    {
+      "id": "bind",
+      "term": "Bind",
+      "lang": "en",
+      "category": "fencing",
+      "definition": "Taking opponent's blade diagonally from high to low or vice versa."
+    },
+    {
+      "id": "corps-a-corps",
+      "term": "Corps-à-corps",
+      "lang": "fr",
+      "category": "fencing",
+      "definition": "Body contact, which halts the action. A fault if intentional."
+    },
+    {
+      "id": "zugzwang",
+      "term": "Zugzwang",
+      "lang": "de",
+      "category": "chess",
+      "definition": "'Compulsion to move': any move worsens your position. Being forced to self-destruct."
+    },
+    {
+      "id": "zwischenzug",
+      "term": "Zwischenzug",
+      "lang": "de",
+      "category": "chess",
+      "definition": "'In-between move': an unexpected interposed move before the expected one."
+    },
+    {
+      "id": "fianchetto",
+      "term": "Fianchetto",
+      "lang": "it",
+      "category": "chess",
+      "definition": "Developing a bishop to the long diagonal (b2/g2 or b7/g7)."
+    },
+    {
+      "id": "en-passant",
+      "term": "En Passant",
+      "lang": "fr",
+      "category": "chess",
+      "definition": "'In passing': pawn captures another pawn that just moved two squares."
+    },
+    {
+      "id": "gambit",
+      "term": "Gambit",
+      "lang": "it",
+      "category": "chess",
+      "definition": "Sacrificing material, usually a pawn, for positional advantage."
+    },
+    {
+      "id": "fork",
+      "term": "Fork",
+      "lang": "en",
+      "category": "chess",
+      "definition": "One piece attacking two or more enemy pieces simultaneously."
+    },
+    {
+      "id": "pin",
+      "term": "Pin",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Attacking a piece that cannot move without exposing a more valuable piece behind it."
+    },
+    {
+      "id": "skewer",
+      "term": "Skewer",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Like a pin reversed: attacking a valuable piece that must move, exposing a lesser piece."
+    },
+    {
+      "id": "discovered-attack",
+      "term": "Discovered Attack",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Moving one piece reveals an attack by another."
+    },
+    {
+      "id": "castling",
+      "term": "Castling",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Special move: king and rook move simultaneously for king safety."
+    },
+    {
+      "id": "stalemate",
+      "term": "Stalemate",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Player has no legal moves but isn't in check. Draw."
+    },
+    {
+      "id": "checkmate",
+      "term": "Checkmate",
+      "lang": "en",
+      "category": "chess",
+      "definition": "King is in check with no escape. Game over."
+    },
+    {
+      "id": "blunder",
+      "term": "Blunder",
+      "lang": "en",
+      "category": "chess",
+      "definition": "A very bad move, often losing material or the game."
+    },
+    {
+      "id": "brilliancy",
+      "term": "Brilliancy",
+      "lang": "en",
+      "category": "chess",
+      "definition": "A spectacular, unexpected, often sacrificial winning move."
+    },
+    {
+      "id": "tempo",
+      "term": "Tempo",
+      "lang": "it",
+      "category": "chess",
+      "definition": "A unit of time: one move. Gaining or losing tempo."
+    },
+    {
+      "id": "initiative",
+      "term": "Initiative",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Having the attacking momentum, forcing opponent to react."
+    },
+    {
+      "id": "development",
+      "term": "Development",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Getting pieces off their starting squares to active positions."
+    },
+    {
+      "id": "endgame",
+      "term": "Endgame",
+      "lang": "en",
+      "category": "chess",
+      "definition": "The final phase with few pieces remaining."
+    },
+    {
+      "id": "middlegame",
+      "term": "Middlegame",
+      "lang": "en",
+      "category": "chess",
+      "definition": "The phase after opening development, before endgame."
+    },
+    {
+      "id": "opening",
+      "term": "Opening",
+      "lang": "en",
+      "category": "chess",
+      "definition": "The initial moves, often following known theory."
+    },
+    {
+      "id": "elo",
+      "term": "Elo Rating",
+      "lang": "en",
+      "category": "chess",
+      "definition": "Numerical skill rating. Named for Arpad Elo. 2800+ is elite."
+    },
+    {
+      "id": "sicilian",
+      "term": "Sicilian Defense",
+      "lang": "en",
+      "category": "chess",
+      "definition": "1.e4 c5. Black's most popular and combative response."
+    },
+    {
+      "id": "kings-indian",
+      "term": "King's Indian Defense",
+      "lang": "en",
+      "category": "chess",
+      "definition": "A hypermodern defense: fianchettoed kingside bishop, counterattack."
+    },
+    {
+      "id": "atari",
+      "term": "アタリ (Atari)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "A stone or group with only one liberty remaining. 'Check' in Go."
+    },
+    {
+      "id": "ko",
+      "term": "劫 (Kō)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "A position that could repeat infinitely. Rules prevent immediate recapture."
+    },
+    {
+      "id": "sente",
+      "term": "先手 (Sente)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Having the initiative: opponent must respond. The tempo holder."
+    },
+    {
+      "id": "gote",
+      "term": "後手 (Gote)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Losing the initiative: you must respond to opponent's move."
+    },
+    {
+      "id": "joseki",
+      "term": "定石 (Jōseki)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Established sequences in the corners. 'Set stones'—local equality."
+    },
+    {
+      "id": "fuseki",
+      "term": "布石 (Fuseki)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "The opening: spreading stones across the board. Whole-board strategy."
+    },
+    {
+      "id": "tesuji",
+      "term": "手筋 (Tesuji)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "A skillful tactical move. 'Hand muscle'—the clever play."
+    },
+    {
+      "id": "aji",
+      "term": "味 (Aji)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "'Taste': latent possibilities in a position. Potential not yet realized."
+    },
+    {
+      "id": "sabaki",
+      "term": "捌き (Sabaki)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Light, flexible handling of stones in a difficult position. Graceful escape."
+    },
+    {
+      "id": "shape",
+      "term": "形 (Katachi)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "The form of connected stones. Good shape is efficient; bad shape is heavy."
+    },
+    {
+      "id": "liberty",
+      "term": "呼吸点 (Kokyūten)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "An empty point adjacent to a stone. Stones need liberties to survive."
+    },
+    {
+      "id": "eye",
+      "term": "眼 (Me)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "An empty point surrounded by your stones. Two eyes = life."
+    },
+    {
+      "id": "life-and-death",
+      "term": "死活 (Shikatsu)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "The study of which groups can live or will die."
+    },
+    {
+      "id": "miai",
+      "term": "見合い (Miai)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Two equivalent options: if opponent takes one, you take the other."
+    },
+    {
+      "id": "tenuki",
+      "term": "手抜き (Tenuki)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Ignoring opponent's last move to play elsewhere. Strategic abandonment."
+    },
+    {
+      "id": "dame",
+      "term": "駄目 (Dame)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "A neutral point belonging to neither player. Also: no good, useless."
+    },
+    {
+      "id": "komi",
+      "term": "コミ (Komi)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Points given to White to compensate for Black playing first."
+    },
+    {
+      "id": "kyu",
+      "term": "級 (Kyū)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "Amateur ranks, counting down. 30-kyu beginner to 1-kyu strong amateur."
+    },
+    {
+      "id": "goban",
+      "term": "碁盤 (Goban)",
+      "lang": "ja",
+      "category": "go",
+      "definition": "The Go board: 19×19 lines. Also 9×9 and 13×13 for learning."
+    },
+    {
+      "id": "nash-equilibrium",
+      "term": "Nash Equilibrium",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A state where no player benefits from changing strategy alone. Stable but not optimal."
+    },
+    {
+      "id": "prisoners-dilemma",
+      "term": "Prisoner's Dilemma",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Two players gain most by cooperating, but incentive favors betrayal. The tragedy of rationality."
+    },
+    {
+      "id": "zero-sum",
+      "term": "Zero-sum Game",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "One player's gain equals another's loss. Total value constant."
+    },
+    {
+      "id": "non-zero-sum",
+      "term": "Non-zero-sum",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Games where total gains can increase. Cooperation possible."
+    },
+    {
+      "id": "dominant-strategy",
+      "term": "Dominant Strategy",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A strategy that's best regardless of what opponents do."
+    },
+    {
+      "id": "pareto-optimal",
+      "term": "Pareto Optimal",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A state where no one can be made better off without making someone worse off."
+    },
+    {
+      "id": "minimax",
+      "term": "Minimax",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Minimizing the maximum possible loss. Conservative strategy."
+    },
+    {
+      "id": "tit-for-tat",
+      "term": "Tit for Tat",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Cooperate first, then mirror opponent's last move. Surprisingly effective."
+    },
+    {
+      "id": "chicken-game",
+      "term": "Chicken",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Two players drive at each other; first to swerve loses face. Brinksmanship."
+    },
+    {
+      "id": "stag-hunt",
+      "term": "Stag Hunt",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Cooperation yields the big prize, but solo action is safer. Trust dilemma."
+    },
+    {
+      "id": "battle-of-sexes",
+      "term": "Battle of the Sexes",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Coordination game: both prefer different options but want to be together."
+    },
+    {
+      "id": "focal-point",
+      "term": "Focal Point",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Schelling point: a solution people gravitate to without communication."
+    },
+    {
+      "id": "mechanism-design",
+      "term": "Mechanism Design",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Designing rules so self-interested players achieve desired outcomes. Reverse game theory."
+    },
+    {
+      "id": "signaling",
+      "term": "Signaling",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Actions conveying information about private knowledge. Costly signals are credible."
+    },
+    {
+      "id": "screening",
+      "term": "Screening",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Designing choices that make others reveal their type."
+    },
+    {
+      "id": "commitment-device",
+      "term": "Commitment Device",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A mechanism that binds you to a future action. Burning bridges."
+    },
+    {
+      "id": "backward-induction",
+      "term": "Backward Induction",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Solving sequential games by reasoning backward from the end."
+    },
+    {
+      "id": "subgame-perfect",
+      "term": "Subgame Perfect",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A Nash equilibrium that's also Nash in every subgame. No empty threats."
+    },
+    {
+      "id": "bayesian-game",
+      "term": "Bayesian Game",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A game with incomplete information. Players have beliefs about others' types."
+    },
+    {
+      "id": "common-knowledge",
+      "term": "Common Knowledge",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Everyone knows X, everyone knows everyone knows X, ad infinitum."
+    },
+    {
+      "id": "mixed-strategy",
+      "term": "Mixed Strategy",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Randomizing between pure strategies with specific probabilities."
+    },
+    {
+      "id": "trembling-hand",
+      "term": "Trembling Hand",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Equilibrium robust to small probability of mistakes. No hair-trigger instability."
+    },
+    {
+      "id": "evolutionary-stable",
+      "term": "Evolutionarily Stable Strategy",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A strategy that, if adopted by a population, cannot be invaded by mutants."
+    },
+    {
+      "id": "tragedy-commons",
+      "term": "Tragedy of the Commons",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Shared resources depleted because individual incentives diverge from collective good."
+    },
+    {
+      "id": "free-rider",
+      "term": "Free Rider Problem",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Enjoying benefits without contributing. Public goods dilemma."
+    },
+    {
+      "id": "rent-seeking",
+      "term": "Rent Seeking",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Expending resources to capture existing wealth rather than create it."
+    },
+    {
+      "id": "coordination-game",
+      "term": "Coordination Game",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "A game where players benefit from making the same choice. Driving on the same side."
+    },
+    {
+      "id": "extensive-form",
+      "term": "Extensive Form",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Game representation as a tree: nodes are decisions, branches are choices."
+    },
+    {
+      "id": "strategic-form",
+      "term": "Normal Form",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Game represented as a payoff matrix. All strategies enumerated."
+    },
+    {
+      "id": "auction-theory",
+      "term": "Auction Theory",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Study of bidding strategies and auction design. English, Dutch, Vickrey."
+    },
+    {
+      "id": "winners-curse",
+      "term": "Winner's Curse",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "In common-value auctions, the winner often overbids. Winning can mean losing."
+    },
+    {
+      "id": "ultimatum-game",
+      "term": "Ultimatum Game",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Proposer offers a split; responder accepts or both get nothing. Tests rationality."
+    },
+    {
+      "id": "dictator-game",
+      "term": "Dictator Game",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "One player simply allocates. No strategic element—tests pure altruism."
+    },
+    {
+      "id": "centipede-game",
+      "term": "Centipede Game",
+      "lang": "en",
+      "category": "game theory",
+      "definition": "Sequential game where pot grows but either player can grab it. Tests backward induction."
+    },
+    {
+      "id": "major-arcana",
+      "term": "Major Arcana",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "The 22 trump cards: Fool to World. The soul's journey."
+    },
+    {
+      "id": "minor-arcana",
+      "term": "Minor Arcana",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "The 56 suit cards: Wands, Cups, Swords, Pentacles. Daily life."
+    },
+    {
+      "id": "arcana",
+      "term": "Arcana",
+      "lang": "la",
+      "category": "tarot",
+      "definition": "'Secrets': the mysteries encoded in tarot."
+    },
+    {
+      "id": "fool",
+      "term": "The Fool",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "Card 0: the beginning and end, innocence, leap of faith."
+    },
+    {
+      "id": "magician",
+      "term": "The Magician",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "Card I: will, skill, manifestation. As above, so below."
+    },
+    {
+      "id": "high-priestess",
+      "term": "High Priestess",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "Card II: intuition, mystery, the subconscious."
+    },
+    {
+      "id": "tower",
+      "term": "The Tower",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "Card XVI: sudden upheaval, destruction, revelation."
+    },
+    {
+      "id": "spread",
+      "term": "Spread",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "The pattern in which cards are laid out. Celtic Cross, three-card."
+    },
+    {
+      "id": "significator",
+      "term": "Significator",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "A card chosen to represent the querent or question."
+    },
+    {
+      "id": "querent",
+      "term": "Querent",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "The person asking the question. The seeker."
+    },
+    {
+      "id": "reversed",
+      "term": "Reversed",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "A card appearing upside down, often modifying its meaning."
+    },
+    {
+      "id": "court-cards",
+      "term": "Court Cards",
+      "lang": "en",
+      "category": "tarot",
+      "definition": "Page, Knight, Queen, King of each suit. Personalities or aspects."
+    },
+    {
+      "id": "i-ching",
+      "term": "易經 (Yì Jīng)",
+      "lang": "zh",
+      "category": "divination",
+      "definition": "The Book of Changes: 64 hexagrams, ancient Chinese oracle."
+    },
+    {
+      "id": "hexagram",
+      "term": "Hexagram",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Six-line figure in I Ching, each line yin or yang."
+    },
+    {
+      "id": "yarrow-stalks",
+      "term": "Yarrow Stalks",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Traditional method for casting I Ching. 50 stalks, complex sorting."
+    },
+    {
+      "id": "runes",
+      "term": "Runes",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Norse alphabet used for divination. Each rune has meaning."
+    },
+    {
+      "id": "futhark",
+      "term": "Futhark",
+      "lang": "en",
+      "category": "divination",
+      "definition": "The runic alphabet, named for first six letters."
+    },
+    {
+      "id": "geomancy",
+      "term": "Geomancy",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Divination by earth: random marks generating figures. Arabic origin."
+    },
+    {
+      "id": "augury",
+      "term": "Augury",
+      "lang": "la",
+      "category": "divination",
+      "definition": "Roman divination by bird behavior. Reading the sky."
+    },
+    {
+      "id": "haruspicy",
+      "term": "Haruspicy",
+      "lang": "la",
+      "category": "divination",
+      "definition": "Divination by examining animal entrails. Etruscan practice."
+    },
+    {
+      "id": "scrying",
+      "term": "Scrying",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Seeing visions in reflective surfaces: crystal ball, water, mirror."
+    },
+    {
+      "id": "tasseography",
+      "term": "Tasseography",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Reading tea leaves or coffee grounds."
+    },
+    {
+      "id": "palmistry",
+      "term": "Palmistry",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Reading character and future from hand lines. Chiromancy."
+    },
+    {
+      "id": "bibliomancy",
+      "term": "Bibliomancy",
+      "lang": "en",
+      "category": "divination",
+      "definition": "Seeking guidance by opening a book to a random passage."
+    },
+    {
+      "id": "sephirot",
+      "term": "ספירות (Sephirot)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "The ten emanations through which Ein Sof reveals itself. The Tree of Life."
+    },
+    {
+      "id": "ein-sof",
+      "term": "אין סוף (Ein Sof)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Without end': the infinite, unknowable divine. Before emanation."
+    },
+    {
+      "id": "tree-of-life",
+      "term": "עץ החיים (Etz Chaim)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "Diagram of the ten sephirot and 22 paths. Map of creation."
+    },
+    {
+      "id": "kether",
+      "term": "כתר (Keter)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Crown': the first sephirah. Closest to Ein Sof, pure will."
+    },
+    {
+      "id": "malkuth",
+      "term": "מלכות (Malkuth)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Kingdom': the tenth sephirah. Physical reality, manifestation."
+    },
+    {
+      "id": "tikkun",
+      "term": "תיקון (Tikkun)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Repair': mending the world's brokenness through righteous action."
+    },
+    {
+      "id": "tzimtzum",
+      "term": "צמצום (Tzimtzum)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "Divine contraction: God withdrew to make room for creation."
+    },
+    {
+      "id": "klippot",
+      "term": "קליפות (Klippot)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Shells': husks concealing divine sparks. Obstacles to holiness."
+    },
+    {
+      "id": "gematria",
+      "term": "גמטריא (Gematria)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "Numerical value of Hebrew words revealing hidden connections."
+    },
+    {
+      "id": "notarikon",
+      "term": "נוטריקון (Notarikon)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "Creating words from first or last letters of a phrase. Kabbalistic acronyms."
+    },
+    {
+      "id": "temurah",
+      "term": "תמורה (Temurah)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "Letter substitution revealing hidden meanings. Cipher mysticism."
+    },
+    {
+      "id": "pardes",
+      "term": "פרדס (PaRDeS)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "Four levels of Torah interpretation: Peshat, Remez, Derash, Sod."
+    },
+    {
+      "id": "zohar",
+      "term": "זוהר (Zohar)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Splendor': foundational Kabbalistic text. Mystical commentary on Torah."
+    },
+    {
+      "id": "sefer-yetzirah",
+      "term": "ספר יצירה (Sefer Yetzirah)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Book of Formation': early Kabbalistic text on creation through Hebrew letters."
+    },
+    {
+      "id": "merkabah",
+      "term": "מרכבה (Merkabah)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "The divine chariot of Ezekiel's vision. Early Jewish mysticism."
+    },
+    {
+      "id": "devekut",
+      "term": "דבקות (Devekut)",
+      "lang": "he",
+      "category": "kabbalah",
+      "definition": "'Cleaving': mystical communion with God. Hasidic goal."
+    },
+    {
+      "id": "aphelion",
+      "term": "Aphelion",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "The point in orbit farthest from the Sun."
+    },
+    {
+      "id": "perihelion",
+      "term": "Perihelion",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "The point in orbit closest to the Sun."
+    },
+    {
+      "id": "apogee",
+      "term": "Apogee",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "The point in orbit farthest from Earth. Also: highest point."
+    },
+    {
+      "id": "perigee",
+      "term": "Perigee",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "The point in orbit closest to Earth."
+    },
+    {
+      "id": "ecliptic",
+      "term": "Ecliptic",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "The Sun's apparent path through the sky. The zodiac belt."
+    },
+    {
+      "id": "zenith",
+      "term": "Zenith",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "The point directly overhead. From Arabic 'samt ar-ras.'"
+    },
+    {
+      "id": "nadir",
+      "term": "Nadir",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "The point directly below, opposite the zenith. Lowest point."
+    },
+    {
+      "id": "azimuth",
+      "term": "Azimuth",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "Horizontal direction measured in degrees from north."
+    },
+    {
+      "id": "altitude-astro",
+      "term": "Altitude",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Angular height above the horizon."
+    },
+    {
+      "id": "right-ascension",
+      "term": "Right Ascension",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Celestial longitude, measured in hours from the vernal equinox."
+    },
+    {
+      "id": "declination",
+      "term": "Declination",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Celestial latitude, measured in degrees from the celestial equator."
+    },
+    {
+      "id": "sidereal",
+      "term": "Sidereal",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Measured relative to stars. Sidereal day is 4 minutes shorter than solar."
+    },
+    {
+      "id": "parsec",
+      "term": "Parsec",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "3.26 light-years. Distance at which 1 AU subtends one arcsecond."
+    },
+    {
+      "id": "light-year",
+      "term": "Light-year",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Distance light travels in one year. About 9.5 trillion kilometers."
+    },
+    {
+      "id": "astronomical-unit",
+      "term": "Astronomical Unit",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Earth-Sun distance. About 150 million kilometers."
+    },
+    {
+      "id": "magnitude",
+      "term": "Magnitude",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Brightness measure: lower is brighter. Sirius is -1.46."
+    },
+    {
+      "id": "libration",
+      "term": "Libration",
+      "lang": "la",
+      "category": "astronomy",
+      "definition": "The Moon's apparent wobble, revealing 59% of its surface over time."
+    },
+    {
+      "id": "terminator",
+      "term": "Terminator",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "The line between day and night on a planet or moon."
+    },
+    {
+      "id": "syzygy",
+      "term": "Syzygy",
+      "lang": "el",
+      "category": "astronomy",
+      "definition": "Three bodies in alignment. Sun-Earth-Moon at new and full moons."
+    },
+    {
+      "id": "opposition",
+      "term": "Opposition",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "When a planet is opposite the Sun from Earth. Best viewing."
+    },
+    {
+      "id": "transit",
+      "term": "Transit",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "A body passing across the face of a larger one. Mercury transiting the Sun."
+    },
+    {
+      "id": "occultation",
+      "term": "Occultation",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "One body hiding another. The Moon occults stars."
+    },
+    {
+      "id": "retrograde",
+      "term": "Retrograde",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Apparent backward motion of a planet. An optical illusion of orbits."
+    },
+    {
+      "id": "precession",
+      "term": "Precession",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "Earth's axis slowly wobbles over 26,000 years. The pole star changes."
+    },
+    {
+      "id": "nutation",
+      "term": "Nutation",
+      "lang": "en",
+      "category": "astronomy",
+      "definition": "A small wobble superimposed on precession. 18.6-year cycle."
+    },
+    {
+      "id": "aldebaran",
+      "term": "Aldebaran",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "'The Follower': bright star in Taurus, following the Pleiades."
+    },
+    {
+      "id": "betelgeuse",
+      "term": "Betelgeuse",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "'Hand of the Giant': red supergiant in Orion's shoulder."
+    },
+    {
+      "id": "rigel",
+      "term": "Rigel",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "'Foot': blue supergiant in Orion's foot."
+    },
+    {
+      "id": "deneb",
+      "term": "Deneb",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "'Tail': the tail of Cygnus the Swan. Part of the Summer Triangle."
+    },
+    {
+      "id": "vega",
+      "term": "Vega",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "'Falling Eagle': brightest star in Lyra. Once the pole star, will be again."
+    },
+    {
+      "id": "altair",
+      "term": "Altair",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "'Flying Eagle': brightest star in Aquila."
+    },
+    {
+      "id": "fomalhaut",
+      "term": "Fomalhaut",
+      "lang": "ar",
+      "category": "astronomy",
+      "definition": "'Mouth of the Fish': lonely bright star in the southern autumn sky."
+    },
+    {
+      "id": "trump",
+      "term": "Trump",
+      "lang": "en",
+      "category": "card games",
+      "definition": "A suit designated to beat other suits. The master cards."
+    },
+    {
+      "id": "finesse",
+      "term": "Finesse",
+      "lang": "fr",
+      "category": "card games",
+      "definition": "Attempting to win with a lower card by playing through an opponent."
+    },
+    {
+      "id": "grand-slam",
+      "term": "Grand Slam",
+      "lang": "en",
+      "category": "card games",
+      "definition": "Winning all tricks in a bridge hand. Maximum triumph."
+    },
+    {
+      "id": "small-slam",
+      "term": "Small Slam",
+      "lang": "en",
+      "category": "card games",
+      "definition": "Winning 12 of 13 tricks in bridge."
+    },
+    {
+      "id": "void",
+      "term": "Void",
+      "lang": "en",
+      "category": "card games",
+      "definition": "Having no cards in a suit. Opportunity to trump."
+    },
+    {
+      "id": "singleton",
+      "term": "Singleton",
+      "lang": "en",
+      "category": "card games",
+      "definition": "Having only one card in a suit."
+    },
+    {
+      "id": "doubleton",
+      "term": "Doubleton",
+      "lang": "en",
+      "category": "card games",
+      "definition": "Having exactly two cards in a suit."
+    },
+    {
+      "id": "squeeze",
+      "term": "Squeeze",
+      "lang": "en",
+      "category": "card games",
+      "definition": "Forcing opponent to discard a winning card. Endgame technique."
+    },
+    {
+      "id": "renege",
+      "term": "Renege",
+      "lang": "en",
+      "category": "card games",
+      "definition": "To fail to follow suit when able. Usually a penalty."
+    },
+    {
+      "id": "bid",
+      "term": "Bid",
+      "lang": "en",
+      "category": "card games",
+      "definition": "An offer to take a certain number of tricks, often in auction."
+    },
+    {
+      "id": "declarer",
+      "term": "Declarer",
+      "lang": "en",
+      "category": "card games",
+      "definition": "In bridge, the player who plays both their hand and dummy's."
+    },
+    {
+      "id": "dummy",
+      "term": "Dummy",
+      "lang": "en",
+      "category": "card games",
+      "definition": "In bridge, the hand laid face-up, played by declarer."
+    },
+    {
+      "id": "kibitzer",
+      "term": "Kibitzer",
+      "lang": "yi",
+      "category": "card games",
+      "definition": "An onlooker offering unsolicited advice. Yiddish origin."
+    },
+    {
+      "id": "wild-card",
+      "term": "Wild Card",
+      "lang": "en",
+      "category": "card games",
+      "definition": "A card that can represent any other card. The joker."
     }
   ]
 }

@@ -1,6 +1,24 @@
-// Aleph Search Engine - Auto-generated
+/* Aleph search engine — TF-IDF over pre-built positional index. */
 
-// Aleph search function
+let indexLoadPromise = null;
+let textCache = new Map();
+
+function ensureSearchIndex() {
+    if (window.alephIndex) return Promise.resolve(window.alephIndex);
+    if (indexLoadPromise) return indexLoadPromise;
+    indexLoadPromise = fetch('data/search-index.min.json')
+        .then(r => r.json())
+        .then(idx => {
+            window.alephIndex = idx;
+            return idx;
+        })
+        .catch(err => {
+            indexLoadPromise = null;
+            throw err;
+        });
+    return indexLoadPromise;
+}
+
 function alephSearch(query, maxResults = 50) {
     if (!window.alephIndex) return [];
     const idx = window.alephIndex;
@@ -18,43 +36,42 @@ function alephSearch(query, maxResults = 50) {
         const matches = idx.terms[term] || [];
         for (const match of matches) {
             if (!scores[match.doc]) {
-                scores[match.doc] = { score: 0, termMatches: 0 };
+                scores[match.doc] = { score: 0, termMatches: 0, hits: 0, positions: [] };
             }
-            // TF-IDF-ish scoring
             const tf = Math.log(1 + match.freq);
             const idf = Math.log(idx.meta.totalDocs / matches.length);
             scores[match.doc].score += tf * idf;
             scores[match.doc].termMatches++;
+            scores[match.doc].hits += match.freq;
+            scores[match.doc].positions.push(...(match.pos || []));
         }
     }
 
-    // Boost docs matching more terms
     for (const docId of Object.keys(scores)) {
         scores[docId].score *= (1 + scores[docId].termMatches * 0.5);
     }
 
-    // Sort by score
-    const results = Object.entries(scores)
+    return Object.entries(scores)
         .sort((a, b) => b[1].score - a[1].score)
         .slice(0, maxResults)
         .map(([docId, data]) => ({
             id: docId,
             score: data.score,
+            hits: data.hits,
+            positions: data.positions.sort((a, b) => a - b).slice(0, 5),
             ...idx.docs[docId]
         }));
-
-    return results;
 }
 
+async function loadTextContent(textId) {
+    if (textCache.has(textId)) return textCache.get(textId);
+    const res = await fetch(`data/texts/${textId}.json`);
+    if (!res.ok) throw new Error(`text not found: ${textId}`);
+    const data = await res.json();
+    textCache.set(textId, data);
+    return data;
+}
 
-// Load index on page load
-(function() {
-    fetch('data/search-index.json')
-        .then(r => r.json())
-        .then(idx => {
-            window.alephIndex = idx;
-            console.log('Search index loaded:', idx.meta.totalDocs, 'docs,', idx.meta.totalTerms, 'terms');
-            if (typeof onSearchIndexLoaded === 'function') onSearchIndexLoaded();
-        })
-        .catch(err => console.error('Failed to load search index:', err));
-})();
+window.ensureSearchIndex = ensureSearchIndex;
+window.alephSearch = alephSearch;
+window.loadTextContent = loadTextContent;

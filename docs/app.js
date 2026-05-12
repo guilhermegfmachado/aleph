@@ -10,16 +10,24 @@ const state = {
     glossary: null,
     references: null,
     books: [],
+    bookIndex: {},
     terms: [],
-    favorites: JSON.parse(localStorage.getItem('aleph-favorites') || '[]'),
     filters: {
         lang: null,
         type: null,
-        category: null
+        category: null,
+        query: ''
     },
     sort: 'year',
     selectedTerm: null,
-    sourcesView: 'list'
+    sourcesView: 'list',
+    reader: {
+        bookId: null,
+        lang: null,
+        text: null,
+        query: '',
+        previousPage: 'browse'
+    }
 };
 
 // Language names for display
@@ -61,11 +69,11 @@ async function init() {
     renderBrowsePage();
     renderGlossaryPage();
     renderSourcesPage();
+    setupSearchPage();
+    setupReaderPage();
 
     handleHashChange();
     window.addEventListener('hashchange', handleHashChange);
-
-    updateFavoritesCount();
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -101,6 +109,7 @@ function processCorpus() {
     if (!state.corpus || !state.corpus.corpus) return;
 
     state.books = [];
+    state.bookIndex = {};
     let codeNum = 1;
 
     const sources = state.corpus.sources || {};
@@ -118,15 +127,14 @@ function processCorpus() {
             const firstLang = langs[0] || 'en';
             const langData = doc.languages?.[firstLang] || {};
 
-            // Generate URL based on source
-            let url = doc.url || null;
-            if (!url && doc.celex) {
-                url = `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${doc.celex}`;
-            } else if (!url && langData.source && sources[langData.source]) {
-                url = sources[langData.source];
+            let externalUrl = doc.url || null;
+            if (!externalUrl && doc.celex) {
+                externalUrl = `https://eur-lex.europa.eu/legal-content/${firstLang.toUpperCase()}/TXT/?uri=CELEX:${doc.celex}`;
+            } else if (!externalUrl && langData.source && sources[langData.source]) {
+                externalUrl = sources[langData.source];
             }
 
-            state.books.push({
+            const book = {
                 id: doc.id,
                 code: `AL.${String(codeNum++).padStart(4, '0')}`,
                 title: doc.title,
@@ -137,10 +145,27 @@ function processCorpus() {
                 langs: langs,
                 tags: doc.tags || [],
                 source: category.name,
-                url: url
-            });
+                celex: doc.celex || null,
+                externalUrl: externalUrl,
+                languages: doc.languages || {}
+            };
+
+            state.books.push(book);
+            state.bookIndex[doc.id] = book;
         });
     }
+}
+
+function externalUrlFor(book, lang) {
+    if (!book) return null;
+    lang = lang || book.lang;
+    if (book.celex) {
+        return `https://eur-lex.europa.eu/legal-content/${lang.toUpperCase()}/TXT/?uri=CELEX:${book.celex}`;
+    }
+    const sources = (state.corpus && state.corpus.sources) || {};
+    const langData = book.languages?.[lang] || {};
+    if (langData.source && sources[langData.source]) return sources[langData.source];
+    return book.externalUrl;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -294,7 +319,7 @@ function renderPaletteResults(query) {
         html += `<div class="command-palette-section">
             <div class="command-palette-section-title">Textes</div>
             ${matchingBooks.map(b => `
-                <div class="command-palette-item" onclick="navigateTo('browse'); document.getElementById('commandPalette').classList.remove('active');">
+                <div class="command-palette-item" onclick="openReader('${b.id}'); document.getElementById('commandPalette').classList.remove('active');">
                     <span class="command-palette-item-title">${escapeHtml(b.title)}</span>
                     <span class="command-palette-item-meta">${escapeHtml(b.author)}</span>
                 </div>
@@ -364,6 +389,7 @@ function setupKeyboardShortcuts() {
                 case 'b': navigateTo('browse'); break;
                 case 'l': navigateTo('glossary'); break;
                 case 's': navigateTo('sources'); break;
+                case 'r': navigateTo('search'); break;
             }
         }
     });
@@ -565,16 +591,22 @@ function renderBooksGrid() {
 
     let books = [...state.books];
 
-    // Apply filters
     if (state.filters.lang) {
-        books = books.filter(b => b.lang === state.filters.lang);
+        books = books.filter(b => b.lang === state.filters.lang || b.langs.includes(state.filters.lang));
     }
 
     if (state.filters.type) {
         books = books.filter(b => state.filters.type.includes(b.type));
     }
 
-    // Sort
+    const q = (state.filters.query || '').toLowerCase().trim();
+    if (q) {
+        books = books.filter(b => {
+            const hay = [b.title, b.author, b.code, b.source, ...(b.tags || [])].join(' ').toLowerCase();
+            return hay.includes(q);
+        });
+    }
+
     books.sort((a, b) => {
         switch (state.sort) {
             case 'year': return (b.year || 0) - (a.year || 0);
@@ -588,14 +620,14 @@ function renderBooksGrid() {
     if (totalEl) totalEl.textContent = state.books.length;
 
     grid.innerHTML = books.map(b => `
-        <a href="${b.url || '#'}" target="_blank" rel="noopener" class="book-card${b.url ? '' : ' no-link'}" data-id="${b.id}">
+        <a href="#reader" class="book-card" data-id="${b.id}" onclick="openReader('${b.id}'); return false;">
             <div class="book-cover" data-lang="${b.lang}">
                 <span class="book-cover-code">${escapeHtml(b.code)}</span>
                 <span class="book-cover-lang">${b.lang.toUpperCase()}</span>
             </div>
             <h3 class="book-title">${escapeHtml(b.title)}</h3>
             <p class="book-author">${escapeHtml(b.author)}</p>
-            <p class="book-meta">${b.year || '—'}</p>
+            <p class="book-meta">${b.year || '—'}${b.langs.length > 1 ? ` · ${b.langs.length} langues` : ''}</p>
         </a>
     `).join('');
 }
@@ -603,6 +635,8 @@ function renderBooksGrid() {
 function setupBrowseControls() {
     const sortSelect = document.getElementById('sortSelect');
     const viewToggles = document.querySelectorAll('.view-toggle');
+    const grid = document.getElementById('booksGrid');
+    const filterInput = document.getElementById('browseFilter');
 
     sortSelect?.addEventListener('change', () => {
         state.sort = sortSelect.value;
@@ -613,8 +647,13 @@ function setupBrowseControls() {
         toggle.addEventListener('click', () => {
             viewToggles.forEach(t => t.classList.remove('active'));
             toggle.classList.add('active');
-            // View toggle logic could switch between grid/list view
+            if (grid) grid.classList.toggle('list-view', toggle.dataset.view === 'list');
         });
+    });
+
+    filterInput?.addEventListener('input', () => {
+        state.filters.query = filterInput.value;
+        renderBooksGrid();
     });
 }
 
@@ -623,7 +662,6 @@ function setupBrowseControls() {
 // ─────────────────────────────────────────────────────────────────────────────
 function renderGlossaryPage() {
     renderGlossaryStats();
-    renderAlphabetIndex();
     renderCategoryPills();
     renderGlossaryList();
     setupGlossarySearch();
@@ -638,36 +676,6 @@ function renderGlossaryStats() {
         const langs = new Set(state.terms.map(t => t.lang));
         langCount.textContent = langs.size;
     }
-}
-
-function renderAlphabetIndex() {
-    const container = document.getElementById('specimenIndex');
-    if (!container) return;
-
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-    const specialChars = ['ה', '日', '物'];
-
-    container.innerHTML = [...letters, ...specialChars].map(letter => `
-        <a href="#" data-letter="${letter}">${letter}</a>
-    `).join('');
-
-    container.addEventListener('click', (e) => {
-        e.preventDefault();
-        const link = e.target.closest('a');
-        if (!link) return;
-
-        const letter = link.dataset.letter;
-        container.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-        link.classList.add('active');
-
-        // Scroll to first term starting with letter
-        const firstTerm = state.terms.find(t =>
-            t.term.toUpperCase().startsWith(letter)
-        );
-        if (firstTerm) {
-            selectGlossaryTerm(firstTerm.id);
-        }
-    });
 }
 
 function renderCategoryPills() {
@@ -1099,20 +1107,31 @@ function initNetwork() {
     }
 
     buildNetworkNodes();
-    networkState.expandedNodes.clear();
+    networkState.expandedNodes = new Set(['root']);
     networkState.nodePositions = {};
+    networkState.highlight = '';
 
     const rect = container.getBoundingClientRect();
     networkState.width = rect.width || 800;
-    networkState.height = Math.max(500, rect.height || 500);
+    networkState.height = Math.max(600, rect.height || 600);
 
-    container.innerHTML = '';
+    container.innerHTML = `
+        <div class="network-toolbar">
+            <input type="text" class="network-search" id="networkSearch" placeholder="filtrer les nœuds…">
+            <button class="network-btn" id="networkExpandAll">Tout déplier</button>
+            <button class="network-btn" id="networkCollapseAll">Tout replier</button>
+            <button class="network-btn" id="networkReset">Recentrer</button>
+        </div>
+        <div class="network-hint">Cliquer pour déplier · Glisser pour déplacer · Molette pour zoomer</div>
+        <div class="network-tooltip" id="networkTooltip"></div>
+    `;
 
     networkState.svg = d3.select(container)
         .append('svg')
-        .attr('width', networkState.width)
+        .attr('width', '100%')
         .attr('height', networkState.height)
-        .attr('viewBox', `0 0 ${networkState.width} ${networkState.height}`);
+        .attr('viewBox', `0 0 ${networkState.width} ${networkState.height}`)
+        .attr('preserveAspectRatio', 'xMidYMid meet');
 
     networkState.g = networkState.svg.append('g');
 
@@ -1120,6 +1139,43 @@ function initNetwork() {
         .scaleExtent([0.2, 4])
         .on('zoom', e => networkState.g.attr('transform', e.transform));
     networkState.svg.call(zoom);
+    networkState.zoom = zoom;
+
+    document.getElementById('networkExpandAll')?.addEventListener('click', () => {
+        networkState.allNodes.forEach(n => { if (hasNetworkChildren(n.id)) networkState.expandedNodes.add(n.id); });
+        networkState.subtopicNodes.forEach(n => networkState.expandedNodes.add(n.id));
+        updateNetwork();
+    });
+    document.getElementById('networkCollapseAll')?.addEventListener('click', () => {
+        networkState.expandedNodes = new Set(['root']);
+        updateNetwork();
+    });
+    document.getElementById('networkReset')?.addEventListener('click', () => {
+        networkState.svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+    });
+    document.getElementById('networkSearch')?.addEventListener('input', (e) => {
+        networkState.highlight = e.target.value.toLowerCase().trim();
+        if (networkState.highlight) {
+            networkState.allNodes.forEach(n => {
+                if ((n.fullLabel || n.label).toLowerCase().includes(networkState.highlight) && n.parent) {
+                    networkState.expandedNodes.add(n.parent);
+                }
+            });
+            networkState.subtopicNodes.forEach(n => {
+                if ((n.fullLabel || n.label).toLowerCase().includes(networkState.highlight)) {
+                    networkState.expandedNodes.add(n.parent);
+                }
+            });
+            networkState.resourceNodes.forEach(n => {
+                if ((n.fullLabel || n.label).toLowerCase().includes(networkState.highlight)) {
+                    networkState.expandedNodes.add(n.parent);
+                    const parent = networkState.subtopicNodes.find(s => s.id === n.parent);
+                    if (parent) networkState.expandedNodes.add(parent.parent);
+                }
+            });
+        }
+        updateNetwork();
+    });
 
     updateNetwork();
 }
@@ -1168,17 +1224,18 @@ function updateNetwork() {
             .distance(d => {
                 const sr = nodeRadius(d.source);
                 const tr = nodeRadius(d.target);
-                if (sr >= 12 || tr >= 12) return 90;
-                if (sr >= 8 || tr >= 8) return 55;
-                return 30;
+                if (sr >= 20 || tr >= 20) return 140;
+                if (sr >= 12 || tr >= 12) return 100;
+                if (sr >= 8 || tr >= 8) return 65;
+                return 36;
             })
-            .strength(0.5))
-        .force('charge', d3.forceManyBody().strength(d => -20 * nodeRadius(d)))
-        .force('collide', d3.forceCollide().radius(d => nodeRadius(d) + 3).iterations(2))
-        .force('x', d3.forceX(cx).strength(0.03))
-        .force('y', d3.forceY(cy).strength(0.03))
-        .alphaDecay(0.015)
-        .velocityDecay(0.3);
+            .strength(0.45))
+        .force('charge', d3.forceManyBody().strength(d => -30 * nodeRadius(d)))
+        .force('collide', d3.forceCollide().radius(d => nodeRadius(d) + 8).iterations(2))
+        .force('x', d3.forceX(cx).strength(0.04))
+        .force('y', d3.forceY(cy).strength(0.04))
+        .alphaDecay(0.02)
+        .velocityDecay(0.4);
 
     networkState.g.selectAll('*').remove();
 
@@ -1221,32 +1278,64 @@ function updateNetwork() {
         .join('text')
         .attr('text-anchor', 'start')
         .attr('dominant-baseline', 'central')
-        .attr('dx', d => nodeRadius(d) + 5)
-        .style('font-size', d => d.depth === 0 ? '14px' : d.depth === 1 ? '11px' : d.depth === 2 ? '9px' : '8px')
-        .style('fill', isDark ? '#d0c8b8' : '#5a4a3a')
-        .style('opacity', d => d.depth <= 1 ? 1 : d.depth === 2 ? 0.7 : 0)
+        .attr('dx', d => nodeRadius(d) + 6)
+        .style('font-size', d => d.depth === 0 ? '14px' : d.depth === 1 ? '11px' : d.depth === 2 ? '9.5px' : '8.5px')
+        .style('fill', d => labelOpacityForMatch(d) > 0 ? (isDark ? '#e8e0d0' : '#1a1410') : (isDark ? '#d0c8b8' : '#5a4a3a'))
+        .style('font-weight', d => labelOpacityForMatch(d) > 0 ? 600 : 400)
+        .style('opacity', d => baseLabelOpacity(d))
         .style('pointer-events', 'none')
         .style('font-family', 'var(--mono)')
         .text(d => d.label);
 
+    const tooltip = document.getElementById('networkTooltip');
+
+    function showTooltip(event, d) {
+        if (!tooltip) return;
+        const text = d.fullLabel || d.label;
+        const extra = d.group === 'resource' && d.url ? `<br><span class="tip-url">${d.url}</span>` : '';
+        tooltip.innerHTML = `<strong>${escapeHtml(text)}</strong>${extra}`;
+        tooltip.style.opacity = '1';
+        moveTooltip(event);
+    }
+    function hideTooltip() { if (tooltip) tooltip.style.opacity = '0'; }
+    function moveTooltip(event) {
+        if (!tooltip) return;
+        const rect = networkState.svg.node().getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        tooltip.style.transform = `translate(${x + 14}px, ${y + 14}px)`;
+    }
+
     node.on('mouseover', (event, d) => {
-        if (d.depth >= 2) {
-            labels.filter(l => l === d).style('opacity', 1);
-        }
-    }).on('mouseout', (event, d) => {
-        if (d.depth >= 2) {
-            labels.filter(l => l === d).style('opacity', d.depth === 2 ? 0.7 : 0);
-        }
+        labels.filter(l => l === d).style('opacity', 1).style('font-weight', 600);
+        showTooltip(event, d);
+    }).on('mousemove', moveTooltip)
+    .on('mouseout', (event, d) => {
+        labels.filter(l => l === d).style('opacity', baseLabelOpacity(d)).style('font-weight', labelOpacityForMatch(d) > 0 ? 600 : 400);
+        hideTooltip();
     });
 
     node.on('click', (e, d) => {
         e.stopPropagation();
         if (d.group === 'resource' && d.url) {
-            window.open(d.url, '_blank');
+            window.open(d.url, '_blank', 'noopener');
         } else if (hasNetworkChildren(d.id)) {
             toggleNetworkNode(d.id);
         }
     });
+
+    function baseLabelOpacity(d) {
+        const matchOp = labelOpacityForMatch(d);
+        if (matchOp > 0) return matchOp;
+        if (d.depth <= 1) return 1;
+        if (d.depth === 2) return 0.75;
+        return 0;
+    }
+
+    function labelOpacityForMatch(d) {
+        if (!networkState.highlight) return 0;
+        return (d.fullLabel || d.label).toLowerCase().includes(networkState.highlight) ? 1 : 0;
+    }
 
     const padding = 30;
     networkState.simulation.on('tick', () => {
@@ -1291,22 +1380,254 @@ function updateNetwork() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// FAVORITES
+// READER PAGE — full text display
 // ─────────────────────────────────────────────────────────────────────────────
-function toggleFavorite(id) {
-    const idx = state.favorites.indexOf(id);
-    if (idx > -1) {
-        state.favorites.splice(idx, 1);
-    } else {
-        state.favorites.push(id);
-    }
-    localStorage.setItem('aleph-favorites', JSON.stringify(state.favorites));
-    updateFavoritesCount();
+function setupReaderPage() {
+    document.getElementById('readerBack')?.addEventListener('click', () => {
+        navigateTo(state.reader.previousPage || 'browse');
+    });
+
+    const searchInput = document.getElementById('readerSearchInput');
+    searchInput?.addEventListener('input', () => {
+        state.reader.query = searchInput.value;
+        renderReaderBody();
+    });
 }
 
-function updateFavoritesCount() {
-    const el = document.getElementById('favCount');
-    if (el) el.textContent = state.favorites.length;
+async function openReader(bookId, opts = {}) {
+    const book = state.bookIndex[bookId];
+    if (!book) return;
+
+    state.reader.bookId = bookId;
+    state.reader.lang = opts.lang || book.lang;
+    state.reader.query = opts.query || '';
+    state.reader.previousPage = opts.from || (window.location.hash.slice(1) || 'browse');
+
+    const searchInput = document.getElementById('readerSearchInput');
+    if (searchInput) searchInput.value = state.reader.query;
+
+    renderReaderShell(book);
+    navigateTo('reader');
+    window.scrollTo(0, 0);
+
+    await loadReaderText();
+}
+window.openReader = openReader;
+
+function renderReaderShell(book) {
+    document.getElementById('readerCode').textContent = book.code;
+    document.getElementById('readerYear').textContent = book.year || '—';
+    document.getElementById('readerTitle').textContent = book.title;
+    document.getElementById('readerAuthor').textContent = book.author;
+    document.getElementById('readerLang').textContent = state.reader.lang.toUpperCase();
+
+    const langSwitch = document.getElementById('readerLangSwitch');
+    if (langSwitch) {
+        langSwitch.innerHTML = book.langs.length > 1 ? book.langs.map(l => `
+            <button class="reader-lang-btn${l === state.reader.lang ? ' active' : ''}" data-lang="${l}" onclick="openReader('${book.id}', {lang: '${l}', from: '${state.reader.previousPage}'})">${l.toUpperCase()}</button>
+        `).join('') : '';
+    }
+
+    const external = document.getElementById('readerExternal');
+    if (external) {
+        const url = externalUrlFor(book, state.reader.lang);
+        if (url) {
+            external.href = url;
+            external.style.display = '';
+        } else {
+            external.style.display = 'none';
+        }
+    }
+}
+
+async function loadReaderText() {
+    const body = document.getElementById('readerBody');
+    if (!body) return;
+    body.innerHTML = '<p class="reader-loading">Chargement…</p>';
+    state.reader.text = null;
+
+    const book = state.bookIndex[state.reader.bookId];
+    if (!book) return;
+    const textId = `${book.id}_${state.reader.lang}`;
+    const expectedId = textId;
+
+    try {
+        const data = await loadTextContent(textId);
+        if (`${state.reader.bookId}_${state.reader.lang}` !== expectedId) return;
+        state.reader.text = data;
+        renderReaderBody();
+    } catch (err) {
+        if (`${state.reader.bookId}_${state.reader.lang}` !== expectedId) return;
+        const url = externalUrlFor(book, state.reader.lang);
+        body.innerHTML = `
+            <div class="reader-unavailable">
+                <p>Le texte intégral n'est pas disponible localement pour cette langue.</p>
+                ${url ? `<p><a class="reader-external-link" href="${url}" target="_blank" rel="noopener">Consulter la source originale ↗</a></p>` : ''}
+                <p class="reader-detail">Identifiant manquant : <code>${escapeHtml(textId)}</code></p>
+            </div>
+        `;
+    }
+}
+
+function renderReaderBody() {
+    const body = document.getElementById('readerBody');
+    const meta = document.getElementById('readerSearchMeta');
+    if (!body || !state.reader.text) return;
+
+    const content = state.reader.text.content || '';
+    const query = (state.reader.query || '').trim();
+
+    const paragraphs = content
+        .replace(/\r\n/g, '\n')
+        .split(/\n{2,}/)
+        .map(p => p.trim())
+        .filter(Boolean);
+
+    let html = '';
+    let totalHits = 0;
+
+    if (query && query.length >= 2) {
+        const rx = new RegExp(`(${escapeRegex(query)})`, 'gi');
+        paragraphs.forEach((p, i) => {
+            const matches = p.match(rx);
+            if (!matches) return;
+            totalHits += matches.length;
+            const highlighted = escapeHtml(p).replace(rx, '<mark>$1</mark>');
+            html += `<p class="reader-para reader-match" id="para-${i}" data-i="${i + 1}">${highlighted}</p>`;
+        });
+        if (!html) {
+            html = `<p class="reader-empty-search">Aucune occurrence pour <em>${escapeHtml(query)}</em>.</p>`;
+        }
+        if (meta) meta.textContent = totalHits ? `${totalHits} occurrence${totalHits > 1 ? 's' : ''} dans ${html.match(/class="reader-para/g)?.length || 0} paragraphe${totalHits > 1 ? 's' : ''}` : '';
+    } else {
+        html = paragraphs.map((p, i) => `<p class="reader-para" id="para-${i}" data-i="${i + 1}">${escapeHtml(p)}</p>`).join('');
+        if (meta) meta.textContent = `${paragraphs.length} paragraphes · ${state.reader.text.char_count || content.length} caractères`;
+    }
+
+    body.innerHTML = html;
+}
+
+function escapeRegex(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SEARCH PAGE — full-text concordance across all texts
+// ─────────────────────────────────────────────────────────────────────────────
+function setupSearchPage() {
+    const input = document.getElementById('fulltextInput');
+    const corpusCount = document.getElementById('searchCorpusCount');
+
+    if (corpusCount) corpusCount.textContent = '146';
+
+    let debounceTimer = null;
+    input?.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => runFulltextSearch(input.value), 200);
+    });
+
+    document.querySelectorAll('.search-empty [data-suggest]').forEach(a => {
+        a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const q = a.dataset.suggest;
+            if (input) {
+                input.value = q;
+                runFulltextSearch(q);
+            }
+        });
+    });
+}
+
+async function runFulltextSearch(query) {
+    const results = document.getElementById('searchResults');
+    const meta = document.getElementById('searchMeta');
+    if (!results) return;
+
+    const q = (query || '').trim();
+    if (q.length < 3) {
+        if (meta) meta.textContent = '';
+        results.innerHTML = `
+            <div class="search-empty">
+                <p>Tapez au moins trois caractères pour commencer.</p>
+                <p class="search-hint">Suggestions : <a href="#" data-suggest="virtue">virtue</a> · <a href="#" data-suggest="justice">justice</a> · <a href="#" data-suggest="natura">natura</a> · <a href="#" data-suggest="dharma">dharma</a> · <a href="#" data-suggest="république">république</a></p>
+            </div>
+        `;
+        document.querySelectorAll('.search-empty [data-suggest]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.getElementById('fulltextInput').value = a.dataset.suggest;
+                runFulltextSearch(a.dataset.suggest);
+            });
+        });
+        return;
+    }
+
+    if (meta) meta.textContent = 'Chargement de l\'index…';
+    results.innerHTML = '<div class="search-loading">⋯</div>';
+
+    try {
+        await ensureSearchIndex();
+    } catch (err) {
+        results.innerHTML = `<div class="search-empty"><p>Impossible de charger l'index. ${escapeHtml(String(err))}</p></div>`;
+        return;
+    }
+
+    const hits = alephSearch(q, 30);
+
+    if (!hits.length) {
+        if (meta) meta.textContent = '0 résultats';
+        results.innerHTML = `<div class="search-empty"><p>Aucun texte ne contient <em>${escapeHtml(q)}</em>.</p></div>`;
+        return;
+    }
+
+    if (meta) meta.textContent = `${hits.length} texte${hits.length > 1 ? 's' : ''} contiennent ${q}`;
+
+    const html = await Promise.all(hits.map(async (hit, i) => {
+        const parts = hit.id.split('_');
+        const lang = parts[parts.length - 1];
+        const bookId = parts.slice(0, -1).join('_');
+        const book = state.bookIndex[bookId];
+        const snippet = await buildSnippet(hit, q);
+
+        const title = book?.title || hit.title || hit.id;
+        const author = book?.author || hit.author || '';
+
+        return `
+            <article class="search-result" data-book="${escapeHtml(bookId)}" data-lang="${escapeHtml(lang)}" data-query="${escapeHtml(q)}">
+                <header class="sr-head">
+                    <h3 class="sr-title">${escapeHtml(title)}</h3>
+                    <span class="sr-meta">${escapeHtml(author)} · ${lang.toUpperCase()} · ${hit.hits} occurrence${hit.hits > 1 ? 's' : ''}</span>
+                </header>
+                <p class="sr-snippet">${snippet}</p>
+            </article>
+        `;
+    }));
+
+    results.innerHTML = html.join('');
+
+    results.querySelectorAll('.search-result').forEach(el => {
+        el.addEventListener('click', () => {
+            openReader(el.dataset.book, { lang: el.dataset.lang, query: el.dataset.query, from: 'search' });
+        });
+    });
+}
+
+async function buildSnippet(hit, query) {
+    try {
+        const data = await loadTextContent(hit.id);
+        const content = data.content || '';
+        const rx = new RegExp(escapeRegex(query), 'gi');
+        const match = rx.exec(content);
+        if (!match) return escapeHtml((hit.snippet || '').slice(0, 200) + '…');
+        const start = Math.max(0, match.index - 80);
+        const end = Math.min(content.length, match.index + query.length + 120);
+        let excerpt = content.slice(start, end).replace(/\s+/g, ' ').trim();
+        if (start > 0) excerpt = '…' + excerpt;
+        if (end < content.length) excerpt = excerpt + '…';
+        return escapeHtml(excerpt).replace(new RegExp(`(${escapeRegex(query)})`, 'gi'), '<mark>$1</mark>');
+    } catch {
+        return escapeHtml((hit.snippet || '').slice(0, 200) + '…');
+    }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

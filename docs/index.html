@@ -31,6 +31,7 @@
         <nav class="main-nav">
             <a href="#home" data-page="home">accueil</a>
             <a href="#browse" data-page="browse">parcourir</a>
+            <a href="#search" data-page="search">recherche</a>
             <a href="#glossary" data-page="glossary">glossaire</a>
             <a href="#sources" data-page="sources">références</a>
         </nav>
@@ -131,6 +132,8 @@
                 </aside>
 
                 <div class="browse-main">
+                    <input type="text" class="browse-filter-input" id="browseFilter" placeholder="filtrer par titre, auteur, mot-clé...">
+
                     <div class="browse-toolbar">
                         <span class="browse-count">
                             <strong id="browseCount">0</strong> / <span id="browseTotal">0</span> textes
@@ -152,6 +155,63 @@
                     <div class="books-grid" id="booksGrid">
                         <!-- Populated by JS -->
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             SEARCH PAGE — full-text search across all texts
+             ═══════════════════════════════════════════════════════════════════ -->
+        <section id="search" class="page">
+            <div class="search-page">
+                <header class="search-header">
+                    <span class="label label-accent">Concordance</span>
+                    <h1 class="page-title">Rechercher dans les textes<span class="accent-dot">.</span></h1>
+                    <p class="search-tagline">
+                        Recherche plein-texte à travers <span id="searchCorpusCount">0</span> ouvrages indexés. Tapez un mot — Aleph trouve chaque occurrence.
+                    </p>
+                </header>
+
+                <div class="search-controls">
+                    <input type="text" class="fulltext-input" id="fulltextInput" placeholder="ex: virtue, ataraxia, république..." autocomplete="off">
+                    <div class="search-meta" id="searchMeta"></div>
+                </div>
+
+                <div class="search-results" id="searchResults">
+                    <div class="search-empty">
+                        <p>Tapez au moins trois caractères pour commencer.</p>
+                        <p class="search-hint">Suggestions : <a href="#" data-suggest="virtue">virtue</a> · <a href="#" data-suggest="justice">justice</a> · <a href="#" data-suggest="natura">natura</a> · <a href="#" data-suggest="dharma">dharma</a> · <a href="#" data-suggest="république">république</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             READER PAGE — full text of a single work
+             ═══════════════════════════════════════════════════════════════════ -->
+        <section id="reader" class="page">
+            <div class="reader-page">
+                <header class="reader-header">
+                    <button class="reader-back" id="readerBack">← retour</button>
+                    <div class="reader-meta">
+                        <span class="label" id="readerCode">—</span>
+                        <span class="label">●</span>
+                        <span class="label" id="readerLang">—</span>
+                        <span class="label">●</span>
+                        <span class="label" id="readerYear">—</span>
+                    </div>
+                    <h1 class="reader-title" id="readerTitle">—</h1>
+                    <p class="reader-author" id="readerAuthor">—</p>
+                    <div class="reader-actions">
+                        <div class="reader-lang-switch" id="readerLangSwitch"></div>
+                        <input type="text" class="reader-search-input" id="readerSearchInput" placeholder="chercher dans ce texte...">
+                        <a href="#" class="reader-external" id="readerExternal" target="_blank" rel="noopener">source originale ↗</a>
+                    </div>
+                    <div class="reader-search-meta" id="readerSearchMeta"></div>
+                </header>
+
+                <div class="reader-body" id="readerBody">
+                    <p class="reader-loading">Chargement…</p>
                 </div>
             </div>
         </section>
@@ -252,6 +312,7 @@
         <span class="footer-tagline">Aleph · Catalogue littéraire universel · <a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme Machado</a></span>
     </footer>
 
+    <script src="search-engine.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

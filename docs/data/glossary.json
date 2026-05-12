@@ -9561,6 +9561,1852 @@
       "category": "martial arts",
       "definition": "A rank indicating proficiency level, typically starting after achieving black belt. The dan ranks represent deepening mastery.",
       "pronunciation": "dahn"
+    },
+    {
+      "id": "abaft",
+      "term": "Abaft",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Toward the stern of a ship, behind. 'Abaft the beam' means behind an imaginary line across the ship's middle."
+    },
+    {
+      "id": "abeam",
+      "term": "Abeam",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "At right angles to the ship's length. A landmark 'abeam' is directly to the side, neither ahead nor behind."
+    },
+    {
+      "id": "avast",
+      "term": "Avast",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A command to stop or cease. From Dutch 'houd vast' (hold fast). The sailor's imperative halt.",
+      "etymology": "Dutch houd vast"
+    },
+    {
+      "id": "batten-down",
+      "term": "Batten Down",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To secure a ship's hatches with strips of wood (battens) before a storm. Now means to prepare for any difficulty."
+    },
+    {
+      "id": "belay",
+      "term": "Belay",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To secure a rope by winding it around a cleat or pin. Also a command to disregard a previous order."
+    },
+    {
+      "id": "bilge",
+      "term": "Bilge",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The lowest internal part of a ship's hull where water collects. Bilge water is notoriously foul—hence 'bilge' as nonsense."
+    },
+    {
+      "id": "binnacle",
+      "term": "Binnacle",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The stand housing the ship's compass, with correcting magnets and a light for night navigation. The navigator's altar."
+    },
+    {
+      "id": "bollard",
+      "term": "Bollard",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A short thick post on a ship or wharf for securing mooring lines. The humble anchor point of enormous vessels."
+    },
+    {
+      "id": "bosun",
+      "term": "Bosun",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Boatswain—the petty officer responsible for a ship's deck crew, rigging, and anchors. Pronounced 'BOH-sun'.",
+      "pronunciation": "BOH-sun"
+    },
+    {
+      "id": "bowsprit",
+      "term": "Bowsprit",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A spar extending forward from the bow, carrying forestays and sails. The ship's pointing finger."
+    },
+    {
+      "id": "bulkhead",
+      "term": "Bulkhead",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A wall-like partition dividing a ship's interior into compartments. Critical for containing flooding and fire."
+    },
+    {
+      "id": "capstan",
+      "term": "Capstan",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A vertical rotating machine for winding rope or chain, used for raising anchors. Sailors pushed its bars in endless circles."
+    },
+    {
+      "id": "careening",
+      "term": "Careening",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Tilting a ship on its side to clean or repair the hull below the waterline. A vulnerable position—hence 'careening out of control'."
+    },
+    {
+      "id": "cathead",
+      "term": "Cathead",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A beam projecting from the bow for raising and carrying the anchor. Named for the carved cat faces that often decorated them."
+    },
+    {
+      "id": "caulking",
+      "term": "Caulking",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Sealing the seams between planks with oakum and pitch to make the hull watertight. An ancient shipwright's art."
+    },
+    {
+      "id": "cleat",
+      "term": "Cleat",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A T-shaped fitting for securing ropes. Simple, elegant, essential—the grammar of the working deck."
+    },
+    {
+      "id": "coaming",
+      "term": "Coaming",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A raised border around a hatch or cockpit to prevent water from entering. The ship's lips."
+    },
+    {
+      "id": "companionway",
+      "term": "Companionway",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A stairway or ladder leading from the deck to the cabin below. The threshold between above and below."
+    },
+    {
+      "id": "dead-reckoning",
+      "term": "Dead Reckoning",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Navigation by calculating position from speed, time, and course—without celestial observation. Deduced reckoning, corrupted to 'dead'."
+    },
+    {
+      "id": "draft",
+      "term": "Draft",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The depth of water a ship needs to float. A ship 'draws' this much water. Deep draft limits where you can go."
+    },
+    {
+      "id": "fairlead",
+      "term": "Fairlead",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A fitting that guides a rope, changing its direction without chafing. Invisible when working, obvious when absent."
+    },
+    {
+      "id": "figurehead",
+      "term": "Figurehead",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A carved figure at the ship's prow. Once believed to appease sea gods; now means a leader without real power."
+    },
+    {
+      "id": "flotsam",
+      "term": "Flotsam",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Wreckage floating after a shipwreck. Legally distinct from jetsam (thrown overboard intentionally). The sea's detritus."
+    },
+    {
+      "id": "jetsam",
+      "term": "Jetsam",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Cargo deliberately thrown overboard to lighten a ship in distress. What we sacrifice to survive.",
+      "related": [
+        "Flotsam"
+      ]
+    },
+    {
+      "id": "fo-c-sle",
+      "term": "Fo'c'sle",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Forecastle—the forward part of a ship where crew quarters are located. Pronounced 'FOKE-sul'. Where sailors lived.",
+      "pronunciation": "FOKE-sul"
+    },
+    {
+      "id": "freeboard",
+      "term": "Freeboard",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The distance from waterline to deck. More freeboard means a drier, safer ship; less means more cargo but more risk."
+    },
+    {
+      "id": "furl",
+      "term": "Furl",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To roll and secure a sail to its yard or boom. The opposite of setting sail—putting the ship to sleep."
+    },
+    {
+      "id": "galley",
+      "term": "Galley",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A ship's kitchen. Compact, efficient, rolling with the sea. The cook works in a space where nothing stays still."
+    },
+    {
+      "id": "gangway",
+      "term": "Gangway",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A passage or ramp for boarding a ship. Also an order to clear the way—make a path!"
+    },
+    {
+      "id": "gunwale",
+      "term": "Gunwale",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The upper edge of a ship's side. Pronounced 'GUNN-ul'. Originally reinforced to support guns.",
+      "pronunciation": "GUNN-ul"
+    },
+    {
+      "id": "halyard",
+      "term": "Halyard",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A rope for raising and lowering sails or flags. From 'haul yard'—pull the yard (the horizontal spar)."
+    },
+    {
+      "id": "hawser",
+      "term": "Hawser",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A thick rope or cable for mooring or towing. The heavy-duty lines that hold great ships to the shore."
+    },
+    {
+      "id": "heave-to",
+      "term": "Heave To",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To stop a sailing vessel by backing some sails while keeping others set. The ship drifts slowly, riding out a storm."
+    },
+    {
+      "id": "kedge",
+      "term": "Kedge",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To move a ship by dropping a small anchor ahead and winching toward it. Laborious progress when wind fails."
+    },
+    {
+      "id": "keel",
+      "term": "Keel",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The central structural beam running the length of the hull's bottom. The ship's spine. 'On an even keel' means balanced."
+    },
+    {
+      "id": "knot-unit",
+      "term": "Knot",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "One nautical mile per hour. Measured by counting knots on a line paid out behind the ship—hence the name."
+    },
+    {
+      "id": "lanyard",
+      "term": "Lanyard",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A short rope for securing or fastening. Now any cord worn around the neck—the sailor's reach extended to land."
+    },
+    {
+      "id": "lee",
+      "term": "Lee",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The side sheltered from the wind. 'In the lee of' means protected by. The safe side of any obstacle.",
+      "related": [
+        "Leeway"
+      ]
+    },
+    {
+      "id": "list",
+      "term": "List",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A ship's tilt to one side from uneven loading or damage. Not rolling (temporary) but listing (persistent imbalance)."
+    },
+    {
+      "id": "log",
+      "term": "Ship's Log",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The official record of a ship's voyage. Named for the log thrown overboard to measure speed. Every captain's diary."
+    },
+    {
+      "id": "mooring",
+      "term": "Mooring",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The arrangement by which a ship is secured in place—anchors, lines, buoys. A ship at rest is still held by many forces."
+    },
+    {
+      "id": "plimsoll-line",
+      "term": "Plimsoll Line",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Markings on a ship's hull showing maximum safe loading depths for different water conditions. Samuel Plimsoll's lifesaving reform."
+    },
+    {
+      "id": "ratlines",
+      "term": "Ratlines",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Rope rungs tied between shrouds, forming a ladder to climb the mast. Pronounced 'RAT-lins'. The sailor's stairway to heaven.",
+      "pronunciation": "RAT-lins"
+    },
+    {
+      "id": "rigging",
+      "term": "Rigging",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The system of ropes, cables, and chains supporting masts and controlling sails. Standing rigging stays; running rigging moves."
+    },
+    {
+      "id": "scupper",
+      "term": "Scupper",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "An opening in the ship's side to drain water from the deck. Also slang for to sink or ruin—scupper a plan."
+    },
+    {
+      "id": "sheet",
+      "term": "Sheet",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A rope controlling a sail's angle to the wind. Not the sail itself—that's a common landlubber error."
+    },
+    {
+      "id": "shroud",
+      "term": "Shroud",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Standing rigging that supports the mast from the sides. The mast's guy-wires, keeping it upright against the wind's push."
+    },
+    {
+      "id": "sounding",
+      "term": "Sounding",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "Measuring water depth with a weighted line. The leadsman's call—'by the mark, twain'—named Mark Twain."
+    },
+    {
+      "id": "splice",
+      "term": "Splice",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To join ropes by interweaving their strands. 'Splice the mainbrace' meant an extra rum ration—celebration."
+    },
+    {
+      "id": "spinnaker",
+      "term": "Spinnaker",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A large balloon-like sail used when running before the wind. Colorful and dramatic—the sail of speed and spectacle."
+    },
+    {
+      "id": "stay",
+      "term": "Stay",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A strong rope supporting the mast from fore or aft. The forestay runs to the bow; the backstay to the stern."
+    },
+    {
+      "id": "stern",
+      "term": "Stern",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The rear of the ship. Opposite of bow. Where the name is painted and the rudder hangs."
+    },
+    {
+      "id": "strake",
+      "term": "Strake",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A continuous line of planking running the length of the hull. Ships are built strake by strake, plank over plank."
+    },
+    {
+      "id": "tack",
+      "term": "Tack",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To turn the bow through the wind to change course. Also the course itself—on the port tack, on the starboard tack."
+    },
+    {
+      "id": "thwart",
+      "term": "Thwart",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A seat across a boat, also serving as structural bracing. To sit athwart is to sit crosswise."
+    },
+    {
+      "id": "topsides",
+      "term": "Topsides",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The sides of the hull above the waterline. What you paint, what people see, what takes the weather."
+    },
+    {
+      "id": "transom",
+      "term": "Transom",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The flat surface at the stern. The ship's back wall—where the name is mounted, where the dinghy hangs."
+    },
+    {
+      "id": "trim",
+      "term": "Trim",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The fore-and-aft balance of a ship in the water. Down by the bow or down by the stern—both problematic."
+    },
+    {
+      "id": "weigh-anchor",
+      "term": "Weigh Anchor",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "To raise the anchor preparatory to sailing. The moment of commitment—once weighed, you're going somewhere."
+    },
+    {
+      "id": "windlass",
+      "term": "Windlass",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "A horizontal rotating machine for raising the anchor. The capstan's horizontal cousin."
+    },
+    {
+      "id": "yardarm",
+      "term": "Yardarm",
+      "lang": "en",
+      "category": "maritime",
+      "definition": "The outer end of a yard (horizontal spar). 'Sun over the yardarm' meant noon—time for the first drink."
+    },
+    {
+      "id": "ascender",
+      "term": "Ascender",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The part of a lowercase letter extending above the x-height: b, d, f, h, k, l. Reaching upward.",
+      "related": [
+        "Descender",
+        "X-height"
+      ]
+    },
+    {
+      "id": "descender",
+      "term": "Descender",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The part of a lowercase letter extending below the baseline: g, j, p, q, y. Reaching downward.",
+      "related": [
+        "Ascender"
+      ]
+    },
+    {
+      "id": "x-height",
+      "term": "X-height",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The height of lowercase letters without ascenders or descenders—measured by 'x'. Determines a typeface's apparent size."
+    },
+    {
+      "id": "baseline",
+      "term": "Baseline",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The invisible line on which letters sit. Most characters rest here; descenders drop below it."
+    },
+    {
+      "id": "serif",
+      "term": "Serif",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The small projecting feature at the end of letter strokes. Times New Roman has serifs; Helvetica doesn't.",
+      "related": [
+        "Sans-serif"
+      ]
+    },
+    {
+      "id": "sans-serif",
+      "term": "Sans-serif",
+      "lang": "fr",
+      "category": "typography",
+      "definition": "A typeface without serifs—clean, modern, geometric. 'Sans' is French for 'without'.",
+      "related": [
+        "Serif"
+      ]
+    },
+    {
+      "id": "counter",
+      "term": "Counter",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The enclosed or partially enclosed space within a letter: the hole in 'o', the bowl of 'a'."
+    },
+    {
+      "id": "bowl",
+      "term": "Bowl",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The curved part of a letter enclosing a counter: the round part of 'b', 'd', 'p', 'o'."
+    },
+    {
+      "id": "stem",
+      "term": "Stem",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The main vertical stroke of a letter. The backbone of 'l', the uprights of 'H'."
+    },
+    {
+      "id": "crossbar",
+      "term": "Crossbar",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A horizontal stroke connecting two stems, as in 'H' and 'A'. Also called a bar."
+    },
+    {
+      "id": "finial",
+      "term": "Finial",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The tapered or curved end of a stroke that doesn't terminate in a serif. The elegant finishing touch."
+    },
+    {
+      "id": "swash",
+      "term": "Swash",
+      "lang": "en",
+      "category": "typography",
+      "definition": "An ornamental extension or flourish on a letter. Decorative swashes add calligraphic flair to type."
+    },
+    {
+      "id": "terminal",
+      "term": "Terminal",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The end of a stroke that doesn't have a serif. Ball terminals are rounded; beak terminals are pointed."
+    },
+    {
+      "id": "apex",
+      "term": "Apex",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The point where two strokes meet at the top of a letter, as in 'A'. The typographic peak."
+    },
+    {
+      "id": "vertex",
+      "term": "Vertex",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The point where two strokes meet at the bottom of a letter, as in 'V'. The typographic valley."
+    },
+    {
+      "id": "crotch",
+      "term": "Crotch",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The interior angle where two strokes meet, as inside the 'V'. The apex seen from inside."
+    },
+    {
+      "id": "shoulder",
+      "term": "Shoulder",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The curved stroke of 'h', 'm', 'n' connecting the stem to the arch."
+    },
+    {
+      "id": "spine",
+      "term": "Spine",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The main curved stroke of 'S'. The letter's sinuous backbone."
+    },
+    {
+      "id": "spur",
+      "term": "Spur",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A small projection from a main stroke, smaller than a serif. An accent of attitude."
+    },
+    {
+      "id": "tail",
+      "term": "Tail",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The descending stroke of 'Q', 'R', or 'K'. The letter's signature flourish."
+    },
+    {
+      "id": "ear",
+      "term": "Ear",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The small stroke projecting from the top of lowercase 'g'. Not all g's have ears."
+    },
+    {
+      "id": "link",
+      "term": "Link",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The stroke connecting the two bowls of a double-story 'g'."
+    },
+    {
+      "id": "loop",
+      "term": "Loop",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The lower bowl of a double-story 'g'. Some typefaces have open loops; others closed."
+    },
+    {
+      "id": "leg",
+      "term": "Leg",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The downward diagonal stroke of 'K', 'R', and 'k'. Not quite a tail, not quite a stem."
+    },
+    {
+      "id": "arm",
+      "term": "Arm",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A horizontal stroke that doesn't connect on one or both ends: the top of 'T', the strokes of 'E'."
+    },
+    {
+      "id": "tracking",
+      "term": "Tracking",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The uniform adjustment of space between all characters in a block of text. Looser or tighter overall.",
+      "related": [
+        "Kerning"
+      ]
+    },
+    {
+      "id": "em",
+      "term": "Em",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A unit equal to the current point size. An em-dash is one em wide. Named for the width of 'M' in metal type."
+    },
+    {
+      "id": "en",
+      "term": "En",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Half an em. An en-dash is used for ranges (1990–2000). Named for the width of 'N'."
+    },
+    {
+      "id": "pica",
+      "term": "Pica",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A unit of type measurement equal to 12 points, or about 1/6 inch. The inch of typography."
+    },
+    {
+      "id": "point",
+      "term": "Point",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The smallest unit of type measurement—approximately 1/72 inch. 12 points make a pica."
+    },
+    {
+      "id": "folio",
+      "term": "Folio",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A page number, or a sheet folded once to make two leaves (four pages). From Latin 'leaf'."
+    },
+    {
+      "id": "verso-typo",
+      "term": "Verso",
+      "lang": "la",
+      "category": "typography",
+      "definition": "A left-hand page in a book (even-numbered). The back of a leaf. Opposite of recto.",
+      "related": [
+        "Recto/Verso"
+      ]
+    },
+    {
+      "id": "recto",
+      "term": "Recto",
+      "lang": "la",
+      "category": "typography",
+      "definition": "A right-hand page in a book (odd-numbered). The front of a leaf. Where chapters traditionally begin."
+    },
+    {
+      "id": "signature-typo",
+      "term": "Signature",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A folded sheet forming a section of a book, typically 8, 16, or 32 pages. Books are bound signature by signature."
+    },
+    {
+      "id": "imposition",
+      "term": "Imposition",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The arrangement of pages on a press sheet so they'll be in order when folded. The printer's spatial puzzle."
+    },
+    {
+      "id": "bleed",
+      "term": "Bleed",
+      "lang": "en",
+      "category": "typography",
+      "definition": "When a printed element extends beyond the trim edge. The image 'bleeds' off the page—no white margin."
+    },
+    {
+      "id": "trim",
+      "term": "Trim",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The final cut size of a printed piece. What remains after the edges are cut away."
+    },
+    {
+      "id": "slug",
+      "term": "Slug",
+      "lang": "en",
+      "category": "typography",
+      "definition": "In hot metal, a line of type cast as a single piece. Also the space for running headers/footers."
+    },
+    {
+      "id": "measure",
+      "term": "Measure",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The width of a column of text, usually in picas. Ideal measure: 45-75 characters for comfortable reading."
+    },
+    {
+      "id": "rag",
+      "term": "Rag",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The uneven edge of a column of text set flush left or right. A good rag has gentle, not jagged, undulation."
+    },
+    {
+      "id": "rivers",
+      "term": "Rivers",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Distracting vertical gaps in text caused by word spaces aligning across multiple lines. A sign of bad justification."
+    },
+    {
+      "id": "orphan-typo",
+      "term": "Orphan",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A single word or short line at the end of a paragraph. Left behind, looking lonely.",
+      "related": [
+        "Widow & Orphan"
+      ]
+    },
+    {
+      "id": "hanging-punctuation",
+      "term": "Hanging Punctuation",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Setting punctuation slightly outside the text margin for optical alignment. The margin looks straighter."
+    },
+    {
+      "id": "small-caps",
+      "term": "Small Caps",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Capital letters drawn at roughly x-height. Used for acronyms, abbreviations, and elegant headers."
+    },
+    {
+      "id": "oldstyle-figures",
+      "term": "Oldstyle Figures",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Numerals with varying heights—some ascending, some descending—that blend with lowercase text. Also called text figures."
+    },
+    {
+      "id": "lining-figures",
+      "term": "Lining Figures",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Numerals of uniform height, aligning with capitals. Modern and tabular, but can look clunky in running text."
+    },
+    {
+      "id": "dingbat",
+      "term": "Dingbat",
+      "lang": "en",
+      "category": "typography",
+      "definition": "An ornamental character or symbol—bullets, stars, pointing hands. The typographer's garnish."
+    },
+    {
+      "id": "fleuron",
+      "term": "Fleuron",
+      "lang": "fr",
+      "category": "typography",
+      "definition": "A typographic ornament resembling a flower or leaf. Used to decorate or separate text. The printer's flower."
+    },
+    {
+      "id": "pilcrow",
+      "term": "Pilcrow",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The paragraph symbol: ¶. From Greek 'paragraphos'. Once marked new paragraphs before indentation became standard."
+    },
+    {
+      "id": "manicule",
+      "term": "Manicule",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A pointing hand symbol: ☞. Used in margins to draw attention. From Latin 'little hand'. Also called a fist."
+    },
+    {
+      "id": "catch-word",
+      "term": "Catchword",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The first word of the next page printed at the bottom of the current page. Helped binders order loose sheets."
+    },
+    {
+      "id": "rubric",
+      "term": "Rubric",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Text printed in red, especially headings or initial letters. From Latin 'ruber' (red). Now means any set of instructions."
+    },
+    {
+      "id": "chase",
+      "term": "Chase",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The metal frame that holds type and blocks for letterpress printing. The forme goes in the chase."
+    },
+    {
+      "id": "forme",
+      "term": "Forme",
+      "lang": "en",
+      "category": "typography",
+      "definition": "The assembled type and blocks locked in a chase, ready for printing. What goes on the press."
+    },
+    {
+      "id": "quoin",
+      "term": "Quoin",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Expandable wedges that lock type in the chase. Pronounced 'coin'. The pressure that holds it all together.",
+      "pronunciation": "coin"
+    },
+    {
+      "id": "furniture",
+      "term": "Furniture",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Blocks of wood or metal used to fill blank spaces in a forme. What isn't type is furniture."
+    },
+    {
+      "id": "reglet",
+      "term": "Reglet",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A thin strip of wood used for spacing in letterpress. Smaller than furniture, larger than leading."
+    },
+    {
+      "id": "sorts",
+      "term": "Sorts",
+      "lang": "en",
+      "category": "typography",
+      "definition": "Individual pieces of type. To be 'out of sorts' meant lacking specific characters—hence the modern idiom for feeling unwell."
+    },
+    {
+      "id": "composing-stick",
+      "term": "Composing Stick",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A hand-held adjustable tray for assembling type character by character. The compositor's instrument."
+    },
+    {
+      "id": "case",
+      "term": "Case",
+      "lang": "en",
+      "category": "typography",
+      "definition": "A drawer with compartments for storing type. Capital letters were in the upper case; small letters in the lower case."
+    },
+    {
+      "id": "achievement",
+      "term": "Achievement",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The complete armorial display: shield, helmet, crest, mantling, supporters, motto. The full heraldic statement."
+    },
+    {
+      "id": "escutcheon",
+      "term": "Escutcheon",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The shield on which arms are displayed. The heraldic canvas. Also a small shield within a larger one."
+    },
+    {
+      "id": "field",
+      "term": "Field",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The background of a shield, before any charges are placed. The tincture of the field is named first in a blazon."
+    },
+    {
+      "id": "charge",
+      "term": "Charge",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "Any emblem or figure placed on the field of a shield. Lions, eagles, crosses, crescents—all are charges."
+    },
+    {
+      "id": "ordinary",
+      "term": "Ordinary",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A basic geometric charge: fess (horizontal bar), pale (vertical bar), bend (diagonal), chief (top third)."
+    },
+    {
+      "id": "fess",
+      "term": "Fess",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A horizontal band across the middle of the shield, typically one-third its height. A fundamental ordinary."
+    },
+    {
+      "id": "pale",
+      "term": "Pale",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A vertical band down the center of the shield. The fess turned sideways."
+    },
+    {
+      "id": "bend",
+      "term": "Bend",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A diagonal band from upper dexter to lower sinister. A bend sinister goes the other way—not illegitimacy, despite the myth."
+    },
+    {
+      "id": "chief",
+      "term": "Chief",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The upper third of the shield, treated as a charge. 'In chief' means in this top section."
+    },
+    {
+      "id": "chevron",
+      "term": "Chevron",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "An inverted V-shaped ordinary. Represents rafters of a house—hence association with builders and protection."
+    },
+    {
+      "id": "saltire",
+      "term": "Saltire",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A diagonal cross, like an X. St. Andrew's cross. The Scottish flag is a white saltire on blue."
+    },
+    {
+      "id": "cross-heraldry",
+      "term": "Cross",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A vertical and horizontal band intersecting at the center. Hundreds of variant crosses exist in heraldry."
+    },
+    {
+      "id": "bordure",
+      "term": "Bordure",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A border around the edge of the shield. Often used to mark cadency—a difference between family branches."
+    },
+    {
+      "id": "canton",
+      "term": "Canton",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A small square in the upper dexter corner of the shield. Often bears a secondary emblem."
+    },
+    {
+      "id": "quarter",
+      "term": "Quarter",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "One fourth of a shield, when divided by a cross. Quartering combines arms from different lineages."
+    },
+    {
+      "id": "tincture",
+      "term": "Tincture",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The colors used in heraldry. Metals (or, argent), colours (gules, azure, vert, sable, purpure), and furs."
+    },
+    {
+      "id": "or",
+      "term": "Or",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "Gold in heraldry, typically depicted as yellow. One of the two metals. From French/Latin for gold."
+    },
+    {
+      "id": "azure",
+      "term": "Azure",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "Blue in heraldry. From the Arabic for lapis lazuli. One of the five traditional colours."
+    },
+    {
+      "id": "vert",
+      "term": "Vert",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "Green in heraldry. From French for green. Relatively rare as a field color."
+    },
+    {
+      "id": "sable",
+      "term": "Sable",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "Black in heraldry. Named for the black fur of the sable animal."
+    },
+    {
+      "id": "purpure",
+      "term": "Purpure",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "Purple in heraldry. The rarest of the traditional colours, as purple dye was historically expensive."
+    },
+    {
+      "id": "ermine",
+      "term": "Ermine",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A fur pattern: black spots on white, representing ermine winter pelts. Symbol of royalty and nobility."
+    },
+    {
+      "id": "vair",
+      "term": "Vair",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "A fur pattern of alternating blue and white shield-shapes, representing squirrel pelts. Cinderella's slippers may have been vair, not 'verre' (glass)."
+    },
+    {
+      "id": "dexter",
+      "term": "Dexter",
+      "lang": "la",
+      "category": "heraldry",
+      "definition": "The right side of a shield from the bearer's viewpoint (left as you look at it). The more honorable side.",
+      "related": [
+        "Sinister"
+      ]
+    },
+    {
+      "id": "passant",
+      "term": "Passant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "An animal walking, three paws on the ground, one forepaw raised. The typical posture of the English lions."
+    },
+    {
+      "id": "statant",
+      "term": "Statant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "An animal standing with all four feet on the ground. Alert but not in motion."
+    },
+    {
+      "id": "sejant",
+      "term": "Sejant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "An animal sitting on its haunches, forepaws on the ground. Lions sejant are less common than rampant."
+    },
+    {
+      "id": "regardant",
+      "term": "Regardant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "An animal looking backward over its shoulder. Added to any posture—'passant regardant', 'rampant regardant'."
+    },
+    {
+      "id": "guardant",
+      "term": "Guardant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "An animal looking outward at the viewer. The English royal lions are 'passant guardant'."
+    },
+    {
+      "id": "displayed",
+      "term": "Displayed",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A bird shown with wings spread and tips upward. The imperial eagle is always displayed."
+    },
+    {
+      "id": "naiant",
+      "term": "Naiant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "A fish swimming horizontally across the shield."
+    },
+    {
+      "id": "hauriant",
+      "term": "Hauriant",
+      "lang": "fr",
+      "category": "heraldry",
+      "definition": "A fish swimming vertically, head upward, as if rising to breathe."
+    },
+    {
+      "id": "cadency",
+      "term": "Cadency",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The system of marks distinguishing junior branches of a family. Labels, crescents, mullets—each child's difference."
+    },
+    {
+      "id": "label",
+      "term": "Label",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A horizontal bar with hanging points, mark of the eldest son during his father's lifetime."
+    },
+    {
+      "id": "mullet",
+      "term": "Mullet",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A star, typically five-pointed, representing a spur rowel. Mark of the third son."
+    },
+    {
+      "id": "crescent",
+      "term": "Crescent",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A half-moon with horns pointing upward. Mark of the second son."
+    },
+    {
+      "id": "martlet",
+      "term": "Martlet",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A bird without feet, representing a swift or martin. Mark of the fourth son."
+    },
+    {
+      "id": "annulet",
+      "term": "Annulet",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A ring. Mark of the fifth son."
+    },
+    {
+      "id": "mantling",
+      "term": "Mantling",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "Cloth draped from the helmet, often shown slashed and flowing. Originally protected armor from sun and rain."
+    },
+    {
+      "id": "crest",
+      "term": "Crest",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A figure mounted on top of the helmet. Not the coat of arms itself—a common error."
+    },
+    {
+      "id": "torse",
+      "term": "Torse",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A twisted roll of fabric between crest and helmet, in the principal colors. Also called a wreath."
+    },
+    {
+      "id": "supporter",
+      "term": "Supporter",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "Figures standing on either side of the shield, appearing to hold it up. Usually reserved for high nobility."
+    },
+    {
+      "id": "compartment",
+      "term": "Compartment",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The base on which supporters stand—often a mound, waves, or symbolic ground."
+    },
+    {
+      "id": "motto",
+      "term": "Motto",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "A short phrase on a scroll, usually beneath the shield. War cries, moral principles, family sentiments."
+    },
+    {
+      "id": "impalement",
+      "term": "Impalement",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "Combining two coats of arms side by side on one shield, typically for marriage. Each squeezed to fit."
+    },
+    {
+      "id": "marshalling",
+      "term": "Marshalling",
+      "lang": "en",
+      "category": "heraldry",
+      "definition": "The arrangement of multiple coats of arms on a single shield, showing lineage and alliances."
+    },
+    {
+      "id": "vexillum",
+      "term": "Vexillum",
+      "lang": "la",
+      "category": "vexillology",
+      "definition": "A Roman military standard—a cloth square hung from a crossbar. The ancestor of modern flags. Gives vexillology its name."
+    },
+    {
+      "id": "canton-flag",
+      "term": "Canton",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "The upper corner of a flag, typically the hoist side. The U.S. stars occupy the canton."
+    },
+    {
+      "id": "fly",
+      "term": "Fly",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "The half of the flag farthest from the pole—the part that flies free. Also the flag's horizontal length."
+    },
+    {
+      "id": "hoist",
+      "term": "Hoist",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "The half of the flag nearest the pole. Also the flag's vertical width. You hoist a flag up the pole."
+    },
+    {
+      "id": "field-flag",
+      "term": "Field",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "The background color or pattern of a flag. The French field is three vertical stripes; Japan's is white."
+    },
+    {
+      "id": "charge-flag",
+      "term": "Charge",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "Any emblem or device on a flag. Stars, crescents, eagles, symbols—all are charges."
+    },
+    {
+      "id": "fimbriation",
+      "term": "Fimbriation",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A narrow border separating two colors that would otherwise touch improperly. The white stripes in the Union Jack are fimbriations."
+    },
+    {
+      "id": "triband",
+      "term": "Triband",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A flag of three horizontal or vertical stripes. France, Germany, Italy, Russia—tribands dominate world flags."
+    },
+    {
+      "id": "tricolour",
+      "term": "Tricolour",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A three-colored flag, specifically vertical stripes. The French tricolore sparked a revolution in flag design."
+    },
+    {
+      "id": "bicolour",
+      "term": "Bicolour",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A two-colored flag divided horizontally or vertically. Poland, Monaco, Ukraine."
+    },
+    {
+      "id": "nordic-cross",
+      "term": "Nordic Cross",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "An off-center cross extending to the flag's edges, shifted toward the hoist. Denmark, Sweden, Norway, Finland, Iceland."
+    },
+    {
+      "id": "serration",
+      "term": "Serration",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A zigzag or triangular edge between flag sections. Bahrain's and Qatar's flags have serrated divisions."
+    },
+    {
+      "id": "swallowtail",
+      "term": "Swallowtail",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A flag with a V-shaped cut in the fly, creating two points. Common in Scandinavian naval ensigns."
+    },
+    {
+      "id": "burgee",
+      "term": "Burgee",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A triangular or swallowtail flag, typically identifying a yacht club. A sailor's affiliation."
+    },
+    {
+      "id": "guidon",
+      "term": "Guidon",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A small flag carried by military units, often swallow-tailed. The unit's identity in battle."
+    },
+    {
+      "id": "pennant",
+      "term": "Pennant",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A long, narrow, tapering flag. Naval signal flags are often pennants."
+    },
+    {
+      "id": "gonfalon",
+      "term": "Gonfalon",
+      "lang": "it",
+      "category": "vexillology",
+      "definition": "A banner hung from a crossbar, often with streamers. Medieval Italian city-states carried gonfalons."
+    },
+    {
+      "id": "ensign",
+      "term": "Ensign",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A flag indicating nationality, especially flown by ships. The Red, White, and Blue Ensigns of Britain."
+    },
+    {
+      "id": "jack",
+      "term": "Jack",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A small flag flown at the bow of a warship. The Union Jack is Britain's naval jack."
+    },
+    {
+      "id": "standard",
+      "term": "Standard",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A flag with the arms or badge of a sovereign or noble. Also a ceremonial or military flag."
+    },
+    {
+      "id": "banner",
+      "term": "Banner",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A square or vertical flag bearing arms or emblems. Heraldic banners show the full coat of arms."
+    },
+    {
+      "id": "civil-flag",
+      "term": "Civil Flag",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A national flag for use by civilians. Some nations have different civil and state flags."
+    },
+    {
+      "id": "state-flag",
+      "term": "State Flag",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A national flag for government use, sometimes with additional emblems. Austria's state flag adds an eagle."
+    },
+    {
+      "id": "war-flag",
+      "term": "War Flag",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A variant flown by the military or in time of war. Often more elaborate than the civil flag."
+    },
+    {
+      "id": "courtesy-flag",
+      "term": "Courtesy Flag",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A foreign nation's flag flown by a visiting ship as a sign of respect. Maritime diplomacy."
+    },
+    {
+      "id": "half-mast",
+      "term": "Half-mast",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A flag flown below the peak of the pole as a sign of mourning. Leaving room for the invisible flag of death."
+    },
+    {
+      "id": "dip",
+      "term": "Dip",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "To lower a flag briefly as a salute to another ship or dignitary. The U.S. flag is never dipped."
+    },
+    {
+      "id": "union",
+      "term": "Union",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "A distinctive part of a flag symbolizing unity—often in the canton. The stars in the U.S. flag form the union."
+    },
+    {
+      "id": "bunting",
+      "term": "Bunting",
+      "lang": "en",
+      "category": "vexillology",
+      "definition": "The material from which flags are made, or festive decorations of flag-like strips. Dressed overall in bunting."
+    },
+    {
+      "id": "bayt",
+      "term": "بیت (Bayt)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A couplet—the basic unit of Persian poetry. Literally 'house'; each couplet is a complete dwelling of meaning.",
+      "pronunciation": "BAYT"
+    },
+    {
+      "id": "misra",
+      "term": "مصرع (Misra)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A single line of poetry—half a couplet. The first misra sets up; the second completes.",
+      "pronunciation": "mis-RAH"
+    },
+    {
+      "id": "matla",
+      "term": "مطلع (Matla)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The opening couplet of a ghazal, where both lines rhyme, establishing the pattern.",
+      "pronunciation": "mat-LAH"
+    },
+    {
+      "id": "maqta",
+      "term": "مقطع (Maqta)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The final couplet of a ghazal, where the poet traditionally includes their pen name.",
+      "pronunciation": "maq-TAH",
+      "related": [
+        "Takhallos"
+      ]
+    },
+    {
+      "id": "qafiya",
+      "term": "قافیه (Qafiya)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The rhyme in a ghazal—the sound that ends each couplet. Must remain consistent throughout.",
+      "pronunciation": "qa-FEE-yah"
+    },
+    {
+      "id": "beher",
+      "term": "بحر (Bahr)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A meter or rhythmic pattern. From Arabic 'sea'—the vast ocean of possible rhythms.",
+      "pronunciation": "BAHR"
+    },
+    {
+      "id": "aruz",
+      "term": "عروض (Aruz)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The science of prosody—the rules governing meter in Persian and Arabic poetry. The mathematics of verse.",
+      "pronunciation": "a-ROOZ"
+    },
+    {
+      "id": "qasida",
+      "term": "قصیده (Qasida)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A long monorhyme poem, often praising a patron. The formal ode of Persian literature.",
+      "pronunciation": "qa-SEE-dah"
+    },
+    {
+      "id": "marsiya",
+      "term": "مرثیه (Marsiya)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "An elegy or lamentation, especially for the martyrs of Karbala. Poetry as mourning.",
+      "pronunciation": "mar-SEE-yah"
+    },
+    {
+      "id": "mustazad",
+      "term": "مستزاد (Mustazad)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A poem with short phrases added to each line, creating an echo effect. Augmented verse.",
+      "pronunciation": "mus-ta-ZAD"
+    },
+    {
+      "id": "tarji-band",
+      "term": "ترجیع‌بند (Tarji-band)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A poem where stanzas are linked by a recurring refrain. The refrain ties disparate thoughts together.",
+      "pronunciation": "tar-jee-BAND"
+    },
+    {
+      "id": "tarkib-band",
+      "term": "ترکیب‌بند (Tarkib-band)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "Like tarji-band but with varying refrains. Each refrain unique, yet binding the stanzas.",
+      "pronunciation": "tar-keeb-BAND"
+    },
+    {
+      "id": "robai",
+      "term": "رباعی (Roba'i)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A quatrain with AABA rhyme. Omar Khayyam's chosen form. Four lines to capture one truth.",
+      "pronunciation": "ro-BAH-ee",
+      "related": [
+        "Ruba'i"
+      ]
+    },
+    {
+      "id": "dobaiti",
+      "term": "دوبیتی (Dobaiti)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A folk quatrain, simpler than the literary robai. Popular verse in rustic Persian.",
+      "pronunciation": "doe-BAY-tee"
+    },
+    {
+      "id": "ghazal-love",
+      "term": "عشق (Ishq)",
+      "lang": "fa",
+      "category": [
+        "poetry",
+        "philosophy"
+      ],
+      "definition": "Divine or passionate love—the central theme of Persian poetry. Not mere romance but spiritual longing.",
+      "pronunciation": "ESHQ"
+    },
+    {
+      "id": "hijr",
+      "term": "هجر (Hijr)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "Separation from the beloved. The pain that fuels the ghazal. Union is brief; separation is poetry.",
+      "pronunciation": "HEJR"
+    },
+    {
+      "id": "vasl",
+      "term": "وصل (Vasl)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "Union with the beloved. The goal the poet rarely reaches. The silence after the poem.",
+      "pronunciation": "VASL"
+    },
+    {
+      "id": "mey",
+      "term": "می (Mey)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "Wine—literal intoxication or metaphor for divine ecstasy. The poet's sacrament.",
+      "pronunciation": "MAY"
+    },
+    {
+      "id": "saqi",
+      "term": "ساقی (Saqi)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The cupbearer who pours wine. Often addressed by the poet. Human server or divine intermediary.",
+      "pronunciation": "SA-qee"
+    },
+    {
+      "id": "kharabat",
+      "term": "خرابات (Kharabat)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The tavern or ruin where mystics gather. A place outside social norms, where truth is spoken.",
+      "pronunciation": "kha-ra-BAT"
+    },
+    {
+      "id": "rind",
+      "term": "رند (Rind)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "A libertine mystic who defies convention. The antinomian spiritual seeker. Hafiz's persona.",
+      "pronunciation": "REND"
+    },
+    {
+      "id": "zahed",
+      "term": "زاهد (Zahed)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "An ascetic or pious hypocrite—the rind's opposite. Often mocked for outer piety without inner truth.",
+      "pronunciation": "ZA-hed"
+    },
+    {
+      "id": "zulf",
+      "term": "زلف (Zulf)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The beloved's curling lock of hair. A snare, a chain, a source of madness. The soul trapped in beauty.",
+      "pronunciation": "ZOLF"
+    },
+    {
+      "id": "khal",
+      "term": "خال (Khal)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The beauty spot or mole on the beloved's face. A dot that anchors the lover's obsession.",
+      "pronunciation": "KHAL"
+    },
+    {
+      "id": "lab",
+      "term": "لب (Lab)",
+      "lang": "fa",
+      "category": "poetry",
+      "definition": "The beloved's lip. Source of words, kisses, the water of life. Ruby lips, life-giving lips.",
+      "pronunciation": "LAB"
+    },
+    {
+      "id": "azoth",
+      "term": "Azoth",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "The universal solvent sought by alchemists. Also the life-force or Mercury. The alpha and omega combined."
+    },
+    {
+      "id": "athanor",
+      "term": "Athanor",
+      "lang": "ar",
+      "category": "alchemy",
+      "definition": "The alchemical furnace, designed to maintain constant heat. From Arabic for 'oven'. The alchemist's womb.",
+      "etymology": "Arabic al-tannur (oven)"
+    },
+    {
+      "id": "calcination",
+      "term": "Calcination",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Heating a substance until reduced to powder or ash. The first operation. Burning away what is not essential."
+    },
+    {
+      "id": "dissolution",
+      "term": "Dissolution",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Dissolving the calcined matter in water or acid. The second operation. What was solid becomes fluid."
+    },
+    {
+      "id": "separation",
+      "term": "Separation",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Isolating the components of dissolution. The third operation. Sorting what is pure from what is waste."
+    },
+    {
+      "id": "conjunction",
+      "term": "Conjunction",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Recombining the purified elements. The fourth operation. The chemical marriage."
+    },
+    {
+      "id": "fermentation",
+      "term": "Fermentation",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Introduction of new life into the conjunction. The fifth operation. The substance begins to live."
+    },
+    {
+      "id": "distillation",
+      "term": "Distillation",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Boiling and condensing to purify. The sixth operation. Rising and falling, ever more refined."
+    },
+    {
+      "id": "coagulation",
+      "term": "Coagulation",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "The final solidification of the purified matter. The seventh operation. The stone achieved."
+    },
+    {
+      "id": "citrinitas",
+      "term": "Citrinitas",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "The yellowing stage, sometimes placed between albedo and rubedo. The dawn before full illumination."
+    },
+    {
+      "id": "cauda-pavonis",
+      "term": "Cauda Pavonis",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "The 'peacock's tail'—a display of iridescent colors signaling transition in the work. Beauty mid-transformation."
+    },
+    {
+      "id": "philosophical-mercury",
+      "term": "Philosophical Mercury",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Not common mercury but the volatile, spiritual principle in all matter. The soul that transforms."
+    },
+    {
+      "id": "philosophical-sulfur",
+      "term": "Philosophical Sulfur",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "The fixed, fiery principle. Soul as opposed to Mercury's spirit. What gives matter its individuality."
+    },
+    {
+      "id": "philosophical-salt",
+      "term": "Philosophical Salt",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "The third principle—body, materiality, the crystallizing force. What makes things solid."
+    },
+    {
+      "id": "rebis",
+      "term": "Rebis",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "The hermaphroditic figure representing the union of opposites. From 'res bina' (double thing). Completion in duality."
+    },
+    {
+      "id": "vitriol",
+      "term": "V.I.T.R.I.O.L.",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "An acronym: 'Visita Interiora Terrae Rectificando Invenies Occultum Lapidem'—Visit the interior of the earth; by rectifying you will find the hidden stone."
+    },
+    {
+      "id": "spagyric",
+      "term": "Spagyric",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "The alchemical method of separating and recombining. From Greek 'to tear apart' and 'to gather'. Analysis and synthesis.",
+      "etymology": "Greek spao (tear) + ageiro (gather)"
+    },
+    {
+      "id": "tincture",
+      "term": "Tincture",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "An essence capable of transmuting base metals. Also a spiritual quality that transforms what it touches."
+    },
+    {
+      "id": "elixir",
+      "term": "Elixir",
+      "lang": "ar",
+      "category": "alchemy",
+      "definition": "A liquid form of the philosopher's stone, capable of healing and prolonging life. From Arabic 'al-iksir'.",
+      "etymology": "Arabic al-iksir"
+    },
+    {
+      "id": "quintessence",
+      "term": "Quintessence",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "The fifth essence—beyond earth, water, fire, air. The pure, unchanging substance of heavenly bodies."
+    },
+    {
+      "id": "multiplication",
+      "term": "Multiplication",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "Increasing the quantity or potency of the philosopher's stone. The stone can make more of itself."
+    },
+    {
+      "id": "hermetic-seal",
+      "term": "Hermetic Seal",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "An airtight closure preventing escape of volatile spirits. Named for Hermes. Now 'hermetically sealed'."
+    },
+    {
+      "id": "cucurbit",
+      "term": "Cucurbit",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "A gourd-shaped vessel for distillation—the lower part that holds the liquid. From Latin for gourd."
+    },
+    {
+      "id": "alembic",
+      "term": "Alembic",
+      "lang": "ar",
+      "category": "alchemy",
+      "definition": "The still's cap that collects and directs vapor. From Arabic 'al-anbiq'. The distillation apparatus.",
+      "etymology": "Arabic al-anbiq"
+    },
+    {
+      "id": "retort",
+      "term": "Retort",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "A vessel with a long bent neck for distillation. The alchemist's curved thinking."
+    },
+    {
+      "id": "pelican",
+      "term": "Pelican",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "A circulatory vessel with tubes returning distillate to the body. Named for the bird that feeds its young from its breast."
+    },
+    {
+      "id": "maria-prophetissa",
+      "term": "Maria Prophetissa",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "Maria the Jewess—legendary founder of Western alchemy. Invented the bain-marie, tribikos, and kerotakis."
+    },
+    {
+      "id": "hermes-trismegistus",
+      "term": "Hermes Trismegistus",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "Thrice-great Hermes—mythical author of the Hermetic texts. Fusion of Greek Hermes and Egyptian Thoth."
+    },
+    {
+      "id": "emerald-tablet",
+      "term": "Emerald Tablet",
+      "lang": "en",
+      "category": "alchemy",
+      "definition": "The foundational alchemical text, attributed to Hermes. 'As above, so below.' The microcosm mirrors the macrocosm."
+    },
+    {
+      "id": "lapis-philosophorum",
+      "term": "Lapis Philosophorum",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "The philosopher's stone. Goal of the great work. Transmutes lead to gold, grants immortality, perfects the soul."
+    },
+    {
+      "id": "chrysopoeia",
+      "term": "Chrysopoeia",
+      "lang": "el",
+      "category": "alchemy",
+      "definition": "The transmutation of base metals into gold. From Greek 'gold-making'. The alchemist's most famous aim."
+    },
+    {
+      "id": "aurum-potabile",
+      "term": "Aurum Potabile",
+      "lang": "la",
+      "category": "alchemy",
+      "definition": "Drinkable gold—a liquid medicine containing gold. Believed to cure all ailments and extend life."
     }
   ]
 }

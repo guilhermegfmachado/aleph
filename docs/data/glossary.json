@@ -10272,7 +10272,7 @@
       "definition": "When a printed element extends beyond the trim edge. The image 'bleeds' off the page—no white margin."
     },
     {
-      "id": "trim",
+      "id": "trim-typo",
       "term": "Trim",
       "lang": "en",
       "category": "typography",
@@ -11071,17 +11071,6 @@
       "pronunciation": "tar-keeb-BAND"
     },
     {
-      "id": "robai",
-      "term": "رباعی (Roba'i)",
-      "lang": "fa",
-      "category": "poetry",
-      "definition": "A quatrain with AABA rhyme. Omar Khayyam's chosen form. Four lines to capture one truth.",
-      "pronunciation": "ro-BAH-ee",
-      "related": [
-        "Ruba'i"
-      ]
-    },
-    {
       "id": "dobaiti",
       "term": "دوبیتی (Dobaiti)",
       "lang": "fa",
@@ -11302,7 +11291,7 @@
       "etymology": "Greek spao (tear) + ageiro (gather)"
     },
     {
-      "id": "tincture",
+      "id": "tincture-alch",
       "term": "Tincture",
       "lang": "en",
       "category": "alchemy",
@@ -11407,6 +11396,2291 @@
       "lang": "la",
       "category": "alchemy",
       "definition": "Drinkable gold—a liquid medicine containing gold. Believed to cure all ailments and extend life."
+    },
+    {
+      "id": "hexameter",
+      "term": "Hexameter",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A line of six metrical feet, the meter of Homer's epics. The dactylic hexameter: DUM-da-da repeated, the heartbeat of classical epic."
+    },
+    {
+      "id": "pentameter",
+      "term": "Pentameter",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A line of five metrical feet. In elegiac couplets, paired with hexameter. The second line always shorter, always falling."
+    },
+    {
+      "id": "tetrameter",
+      "term": "Tetrameter",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A line of four metrical feet. Common in Greek comedy and Latin verse. Shorter, punchier than hexameter."
+    },
+    {
+      "id": "trimeter",
+      "term": "Trimeter",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A line of three metrical feet (or six in iambic trimeter). The meter of Greek tragic dialogue."
+    },
+    {
+      "id": "dactyl",
+      "term": "Dactyl",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot: one long syllable followed by two short (DUM-da-da). Named for finger joints. The galloping rhythm.",
+      "etymology": "Greek daktylos (finger)"
+    },
+    {
+      "id": "spondee",
+      "term": "Spondee",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot of two long/stressed syllables (DUM-DUM). Slow, heavy, solemn. Used for emphasis."
+    },
+    {
+      "id": "trochee",
+      "term": "Trochee",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot: stressed-unstressed (DUM-da). The falling rhythm. 'Tyger, tyger, burning bright.'"
+    },
+    {
+      "id": "iamb",
+      "term": "Iamb",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot: unstressed-stressed (da-DUM). The rising rhythm. The most natural English meter."
+    },
+    {
+      "id": "anapest",
+      "term": "Anapest",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot: two unstressed followed by stressed (da-da-DUM). Galloping, often comic. 'Twas the night before Christmas.'"
+    },
+    {
+      "id": "amphibrach",
+      "term": "Amphibrach",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot: unstressed-stressed-unstressed (da-DUM-da). Rocking, wavelike. 'Romantic' is an amphibrach."
+    },
+    {
+      "id": "pyrrhic",
+      "term": "Pyrrhic",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot of two unstressed syllables (da-da). The lightest foot, often considered a substitution."
+    },
+    {
+      "id": "molossus",
+      "term": "Molossus",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A metrical foot of three long/stressed syllables (DUM-DUM-DUM). Rare, heavy, emphatic."
+    },
+    {
+      "id": "caesura",
+      "term": "Caesura",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "A pause within a line of verse, often marked by punctuation. The breath in the middle. Latin for 'cutting.'"
+    },
+    {
+      "id": "enjambment",
+      "term": "Enjambment",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "When a sentence runs over the line break without pause. The meaning strides across boundaries. French for 'straddling.'"
+    },
+    {
+      "id": "elision",
+      "term": "Elision",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Omitting a vowel sound for meter's sake. 'Th'eternal' for 'the eternal.' The poet's compression."
+    },
+    {
+      "id": "synaloepha",
+      "term": "Synaloepha",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Merging the final vowel of one word with the initial vowel of the next. Smoothing the seams."
+    },
+    {
+      "id": "hiatus",
+      "term": "Hiatus",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "The opposite of elision: a gap between two vowels. Sometimes avoided, sometimes used for effect."
+    },
+    {
+      "id": "strophe",
+      "term": "Strophe",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "The first part of a Greek choral ode, sung while moving left. Also any stanza or verse paragraph.",
+      "related": [
+        "Antistrophe",
+        "Epode"
+      ]
+    },
+    {
+      "id": "antistrophe",
+      "term": "Antistrophe",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "The second part of a Greek choral ode, answering the strophe in the same meter, moving right.",
+      "related": [
+        "Strophe",
+        "Epode"
+      ]
+    },
+    {
+      "id": "epode",
+      "term": "Epode",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "The third section of a Greek choral ode, in different meter, sung standing still. The resolution.",
+      "related": [
+        "Strophe",
+        "Antistrophe"
+      ]
+    },
+    {
+      "id": "paean",
+      "term": "Paean",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A song of praise or triumph, originally to Apollo. Now any enthusiastic praise."
+    },
+    {
+      "id": "dithyramb",
+      "term": "Dithyramb",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A wild, ecstatic hymn to Dionysus. Passionate, irregular, the ancestor of tragedy."
+    },
+    {
+      "id": "threnody",
+      "term": "Threnody",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A song of lamentation for the dead. Greek threnos. The formal wail of grief."
+    },
+    {
+      "id": "epithalamium",
+      "term": "Epithalamium",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A wedding song or poem, celebrating the bride and groom. Sung at the bridal chamber door."
+    },
+    {
+      "id": "eclogue",
+      "term": "Eclogue",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A short pastoral poem, often a dialogue between shepherds. Virgil's Eclogues defined the form."
+    },
+    {
+      "id": "idyll",
+      "term": "Idyll",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A short poem depicting rural or pastoral scenes. From Greek 'little picture.' Theocritus invented them."
+    },
+    {
+      "id": "epigram",
+      "term": "Epigram",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A brief, witty, pointed poem. Originally inscriptions on monuments. Martial perfected the satirical epigram."
+    },
+    {
+      "id": "elegiac-couplet",
+      "term": "Elegiac Couplet",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Hexameter followed by pentameter. The meter of Greek and Latin elegy—not necessarily sad, despite the name."
+    },
+    {
+      "id": "sapphic",
+      "term": "Sapphic Stanza",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A four-line stanza invented by Sappho: three eleven-syllable lines and one five-syllable. Horace adopted it."
+    },
+    {
+      "id": "alcaic",
+      "term": "Alcaic Stanza",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A four-line stanza invented by Alcaeus of Lesbos. Complex meter, favored by Horace for odes."
+    },
+    {
+      "id": "anacreontic",
+      "term": "Anacreontic",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Light verse in the manner of Anacreon: wine, love, and pleasure. The Star-Spangled Banner's tune was anacreontic."
+    },
+    {
+      "id": "pindaric",
+      "term": "Pindaric Ode",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "An ode in the manner of Pindar: irregular stanzas, elevated language, celebrating athletic or heroic achievement."
+    },
+    {
+      "id": "horatian",
+      "term": "Horatian Ode",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "An ode in the manner of Horace: regular stanzas, calm meditation, philosophical reflection."
+    },
+    {
+      "id": "sonnet",
+      "term": "Sonnet",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "A 14-line poem in iambic pentameter. Italian (Petrarchan) or English (Shakespearean) rhyme schemes. The little song that conquered poetry."
+    },
+    {
+      "id": "petrarchan",
+      "term": "Petrarchan Sonnet",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "Sonnet with octave (ABBAABBA) and sestet (CDECDE or variants). The turn (volta) divides them.",
+      "related": [
+        "Sonnet",
+        "Volta"
+      ]
+    },
+    {
+      "id": "shakespearean",
+      "term": "Shakespearean Sonnet",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Sonnet with three quatrains and a couplet (ABAB CDCD EFEF GG). The couplet delivers the punch.",
+      "related": [
+        "Sonnet"
+      ]
+    },
+    {
+      "id": "spenserian-sonnet",
+      "term": "Spenserian Sonnet",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Sonnet with interlocking rhymes (ABAB BCBC CDCD EE). Links quatrains like chain mail.",
+      "related": [
+        "Sonnet"
+      ]
+    },
+    {
+      "id": "volta",
+      "term": "Volta",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "The 'turn' in a sonnet where the argument shifts, typically between octave and sestet or before the couplet."
+    },
+    {
+      "id": "blank-verse",
+      "term": "Blank Verse",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Unrhymed iambic pentameter. Shakespeare's plays, Milton's Paradise Lost. The closest English comes to natural speech."
+    },
+    {
+      "id": "free-verse",
+      "term": "Free Verse",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry without regular meter or rhyme. Not formless—shaped by breath, image, phrase. Whitman's revolution."
+    },
+    {
+      "id": "heroic-couplet",
+      "term": "Heroic Couplet",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Two rhyming lines of iambic pentameter. Pope's weapon. Closed couplets end with punctuation; open ones flow on."
+    },
+    {
+      "id": "quatrain",
+      "term": "Quatrain",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A four-line stanza. The building block of much English verse. Various rhyme schemes possible."
+    },
+    {
+      "id": "couplet",
+      "term": "Couplet",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Two consecutive lines that rhyme. The simplest unit of rhymed verse."
+    },
+    {
+      "id": "tercet",
+      "term": "Tercet",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A three-line stanza. The building block of terza rima and villanelles."
+    },
+    {
+      "id": "sestet",
+      "term": "Sestet",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "A six-line stanza or the final six lines of a Petrarchan sonnet."
+    },
+    {
+      "id": "octave",
+      "term": "Octave",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "An eight-line stanza or the first eight lines of a Petrarchan sonnet."
+    },
+    {
+      "id": "stanza",
+      "term": "Stanza",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "A grouped set of lines in a poem, separated by space. Italian for 'room'—each stanza a chamber."
+    },
+    {
+      "id": "refrain",
+      "term": "Refrain",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A repeated line or lines at intervals in a poem. The return that gives structure and emphasis."
+    },
+    {
+      "id": "envoi",
+      "term": "Envoi",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A short concluding stanza, especially in a ballade, often addressing the poem to a patron or prince."
+    },
+    {
+      "id": "rhyme-royal",
+      "term": "Rhyme Royal",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A seven-line stanza in iambic pentameter (ABABBCC). Chaucer's Troilus and Criseyde. Shakespeare's Lucrece."
+    },
+    {
+      "id": "ottava-rima",
+      "term": "Ottava Rima",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "An eight-line stanza (ABABABCC). Italian epic meter; Byron used it for Don Juan's comic effect."
+    },
+    {
+      "id": "spenserian-stanza",
+      "term": "Spenserian Stanza",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Nine lines (ABABBCBCC) with a final alexandrine. Invented for The Faerie Queene. Keats used it."
+    },
+    {
+      "id": "terza-rima",
+      "term": "Terza Rima",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "Interlocking tercets (ABA BCB CDC...). Dante's Divine Comedy. Each stanza reaches forward and back."
+    },
+    {
+      "id": "alexandrine",
+      "term": "Alexandrine",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A twelve-syllable line with caesura after the sixth. The standard French heroic meter. Named for Alexander romances."
+    },
+    {
+      "id": "fourteener",
+      "term": "Fourteener",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A fourteen-syllable line, usually seven iambs. Splits naturally into common meter. Chapman's Homer."
+    },
+    {
+      "id": "common-meter",
+      "term": "Common Meter",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Alternating lines of eight and six syllables (8.6.8.6), rhyming ABAB. Hymns, ballads. Emily Dickinson."
+    },
+    {
+      "id": "ballad-meter",
+      "term": "Ballad Meter",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Similar to common meter but looser. The rhythm of folk ballads: strong stresses, flexible syllables."
+    },
+    {
+      "id": "long-meter",
+      "term": "Long Meter",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Four lines of eight syllables each (8.8.8.8). Common in hymns."
+    },
+    {
+      "id": "short-meter",
+      "term": "Short Meter",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "6.6.8.6 syllable pattern. Another hymn meter."
+    },
+    {
+      "id": "poulter-measure",
+      "term": "Poulter's Measure",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Alternating alexandrines and fourteeners. Named for poulterers giving extra eggs. Popular in Tudor England."
+    },
+    {
+      "id": "sprung-rhythm",
+      "term": "Sprung Rhythm",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Hopkins's meter: counting stresses, not syllables. Each foot begins with a stress. Anglo-Saxon meets Victorian."
+    },
+    {
+      "id": "accentual",
+      "term": "Accentual Verse",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry counting stresses per line, ignoring unstressed syllables. Old English meter; revived by moderns."
+    },
+    {
+      "id": "syllabic",
+      "term": "Syllabic Verse",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry counting syllables, ignoring stress. Marianne Moore's method. Quiet precision."
+    },
+    {
+      "id": "accentual-syllabic",
+      "term": "Accentual-Syllabic",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "The dominant English system: counting both syllables and stresses. Iambic pentameter is accentual-syllabic."
+    },
+    {
+      "id": "quantitative",
+      "term": "Quantitative Verse",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Meter based on syllable length (long vs. short), not stress. Greek and Latin meter. Awkward in English."
+    },
+    {
+      "id": "scansion",
+      "term": "Scansion",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "The analysis of meter: marking stressed and unstressed syllables, identifying feet and patterns."
+    },
+    {
+      "id": "prosody",
+      "term": "Prosody",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "The study of versification: meter, rhythm, sound, form. The science of how poems move."
+    },
+    {
+      "id": "cadence",
+      "term": "Cadence",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "The rhythmic flow or fall of language. In free verse, cadence replaces meter. From Latin 'to fall.'"
+    },
+    {
+      "id": "foot",
+      "term": "Foot",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "The basic unit of meter: a pattern of stressed and unstressed syllables. Iamb, trochee, dactyl, etc."
+    },
+    {
+      "id": "hemistich",
+      "term": "Hemistich",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Half a line of verse, divided by caesura. The two halves may mirror or contrast."
+    },
+    {
+      "id": "masculine-rhyme",
+      "term": "Masculine Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Rhyme on a single stressed syllable: cat/hat, desire/fire. Strong, emphatic endings."
+    },
+    {
+      "id": "feminine-rhyme",
+      "term": "Feminine Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Rhyme on two syllables, stressed then unstressed: turning/burning. Softer, flowing endings."
+    },
+    {
+      "id": "triple-rhyme",
+      "term": "Triple Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Rhyme on three syllables: meticulous/ridiculous. Often comic effect."
+    },
+    {
+      "id": "slant-rhyme",
+      "term": "Slant Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Near-rhyme: words that almost rhyme. Soul/all, gone/on. Dickinson's trademark. Also called half-rhyme."
+    },
+    {
+      "id": "eye-rhyme",
+      "term": "Eye Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Words that look like they rhyme but don't: love/move, cough/through. Visual trickery."
+    },
+    {
+      "id": "internal-rhyme",
+      "term": "Internal Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Rhyme within a line rather than at line ends. 'Once upon a midnight dreary, while I pondered, weak and weary.'"
+    },
+    {
+      "id": "end-rhyme",
+      "term": "End Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Rhyme at the ends of lines. The most common type."
+    },
+    {
+      "id": "monorhyme",
+      "term": "Monorhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A poem or stanza using one rhyme throughout. AAAA... Arabic qasida and ghazal use monorhyme."
+    },
+    {
+      "id": "assonance",
+      "term": "Assonance",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Repetition of vowel sounds: 'the rain in Spain.' Internal music without full rhyme."
+    },
+    {
+      "id": "consonance",
+      "term": "Consonance",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Repetition of consonant sounds, especially at word ends: stroke/luck, boat/night."
+    },
+    {
+      "id": "alliteration",
+      "term": "Alliteration",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Repetition of initial consonant sounds: 'Peter Piper picked.' The binding force of Old English verse."
+    },
+    {
+      "id": "onomatopoeia",
+      "term": "Onomatopoeia",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Words that sound like their meaning: buzz, hiss, splash. Language imitating the world."
+    },
+    {
+      "id": "euphony",
+      "term": "Euphony",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Pleasing, harmonious sounds. Smooth vowels, soft consonants. The opposite of cacophony."
+    },
+    {
+      "id": "cacophony",
+      "term": "Cacophony",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Harsh, discordant sounds. Hard consonants, jarring combinations. Deliberate ugliness for effect."
+    },
+    {
+      "id": "sibilance",
+      "term": "Sibilance",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Repetition of 's' and 'sh' sounds. Hissing, whispering, sinister or soothing."
+    },
+    {
+      "id": "anaphora",
+      "term": "Anaphora",
+      "lang": "el",
+      "category": [
+        "poetry",
+        "rhetoric"
+      ],
+      "definition": "Repetition of a word or phrase at the beginning of successive lines or clauses. 'We shall fight...'"
+    },
+    {
+      "id": "epistrophe",
+      "term": "Epistrophe",
+      "lang": "el",
+      "category": [
+        "poetry",
+        "rhetoric"
+      ],
+      "definition": "Repetition at the end of successive clauses. 'Government of the people, by the people, for the people.'"
+    },
+    {
+      "id": "anadiplosis",
+      "term": "Anadiplosis",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Repeating the last word of one clause at the start of the next. 'Fear leads to anger, anger leads to hate.'"
+    },
+    {
+      "id": "chiasmus",
+      "term": "Chiasmus",
+      "lang": "el",
+      "category": [
+        "poetry",
+        "rhetoric"
+      ],
+      "definition": "Reversed parallel structure: ABBA pattern. 'Ask not what your country can do for you—ask what you can do for your country.'"
+    },
+    {
+      "id": "parallelism",
+      "term": "Parallelism",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Repeated grammatical structure. The rhythm of Hebrew psalms, the power of rhetoric."
+    },
+    {
+      "id": "antithesis",
+      "term": "Antithesis",
+      "lang": "el",
+      "category": [
+        "poetry",
+        "rhetoric"
+      ],
+      "definition": "Contrasting ideas in parallel structure. 'It was the best of times, it was the worst of times.'"
+    },
+    {
+      "id": "litotes",
+      "term": "Litotes",
+      "lang": "el",
+      "category": [
+        "poetry",
+        "rhetoric"
+      ],
+      "definition": "Understatement by negating the opposite. 'Not bad' for 'good.' 'No small achievement.'"
+    },
+    {
+      "id": "hyperbole",
+      "term": "Hyperbole",
+      "lang": "el",
+      "category": [
+        "poetry",
+        "rhetoric"
+      ],
+      "definition": "Exaggeration for effect. 'I've told you a million times.' Not lies but emphasis."
+    },
+    {
+      "id": "synecdoche",
+      "term": "Synecdoche",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A part representing the whole, or vice versa. 'All hands on deck.' 'The crown' for the monarchy."
+    },
+    {
+      "id": "metonymy",
+      "term": "Metonymy",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Substituting an associated term for something. 'The pen is mightier than the sword.' Pen for writing, sword for military."
+    },
+    {
+      "id": "apostrophe",
+      "term": "Apostrophe",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Addressing an absent person, abstract quality, or object. 'O Death, where is thy sting?'"
+    },
+    {
+      "id": "personification",
+      "term": "Personification",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Giving human qualities to non-human things. 'The wind whispered.' Nature made animate."
+    },
+    {
+      "id": "pathetic-fallacy",
+      "term": "Pathetic Fallacy",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Attributing human emotions to nature. Storms reflecting anger, sunshine joy. Ruskin's term, not always pejorative."
+    },
+    {
+      "id": "conceit",
+      "term": "Conceit",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "An elaborate, extended metaphor. Metaphysical conceits push unlikely comparisons: lovers as compasses."
+    },
+    {
+      "id": "imagery",
+      "term": "Imagery",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Language that evokes sensory experience. Visual, auditory, tactile—the poem's body."
+    },
+    {
+      "id": "symbol",
+      "term": "Symbol",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "An image that represents something beyond itself. The road, the rose, the sea—surfaces with depths."
+    },
+    {
+      "id": "allegory",
+      "term": "Allegory",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "Extended metaphor where characters and events represent abstract ideas. Pilgrim's Progress. The Faerie Queene."
+    },
+    {
+      "id": "trope",
+      "term": "Trope",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A figure of speech that turns a word from its literal meaning. Metaphor, metonymy, irony—all tropes."
+    },
+    {
+      "id": "figure",
+      "term": "Figure of Speech",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Any departure from literal expression. Schemes (patterns of words) and tropes (turns of meaning)."
+    },
+    {
+      "id": "diction",
+      "term": "Diction",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Word choice. High/formal or low/colloquial. Latinate or Anglo-Saxon. The poet's vocabulary."
+    },
+    {
+      "id": "tone",
+      "term": "Tone",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "The speaker's attitude toward subject or audience. Ironic, sincere, bitter, tender—the emotional coloring."
+    },
+    {
+      "id": "voice",
+      "term": "Voice",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "The distinctive style of a poet or persona. The who behind the words."
+    },
+    {
+      "id": "persona",
+      "term": "Persona",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "The speaker of a poem, not necessarily the poet. A mask through which the poet speaks."
+    },
+    {
+      "id": "lyric",
+      "term": "Lyric",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A short poem expressing personal emotion. Originally sung to a lyre. The dominant modern mode."
+    },
+    {
+      "id": "narrative",
+      "term": "Narrative Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry that tells a story. Epics, ballads, verse novels. Once dominant, now rarer."
+    },
+    {
+      "id": "dramatic-poetry",
+      "term": "Dramatic Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry in the voice of a character, or plays in verse. Dramatic monologue. Verse drama."
+    },
+    {
+      "id": "dramatic-monologue",
+      "term": "Dramatic Monologue",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A poem spoken by a fictional character to an implied listener. Browning perfected it. 'My Last Duchess.'"
+    },
+    {
+      "id": "occasional-verse",
+      "term": "Occasional Verse",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry written for a specific occasion: wedding, funeral, coronation. Public poetry."
+    },
+    {
+      "id": "vers-de-societe",
+      "term": "Vers de Société",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "Light, witty, polished verse on social themes. Drawing-room poetry."
+    },
+    {
+      "id": "light-verse",
+      "term": "Light Verse",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry meant to entertain: witty, humorous, technically adroit. Ogden Nash, Dorothy Parker."
+    },
+    {
+      "id": "doggerel",
+      "term": "Doggerel",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Crude, awkward verse. Irregular meter, forced rhymes. Sometimes deliberately comic."
+    },
+    {
+      "id": "aubade",
+      "term": "Aubade",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A dawn song, often of lovers parting at daybreak. The opposite of a serenade."
+    },
+    {
+      "id": "nocturne",
+      "term": "Nocturne",
+      "lang": "fr",
+      "category": [
+        "poetry",
+        "music"
+      ],
+      "definition": "A night piece—poetry or music evoking night. Dreamy, meditative."
+    },
+    {
+      "id": "pastoral",
+      "term": "Pastoral",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Poetry idealizing rural life. Shepherds, nature, simplicity. An ancient escape from urban complexity."
+    },
+    {
+      "id": "georgic",
+      "term": "Georgic",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "Poetry about farming and rural labor. Virgil's Georgics. Less idealized than pastoral."
+    },
+    {
+      "id": "elegy",
+      "term": "Elegy",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A poem of mourning or loss. Originally any poem in elegiac couplets; now specifically lament."
+    },
+    {
+      "id": "dirge",
+      "term": "Dirge",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "A funeral song or lament. Shorter, more raw than elegy. From the Latin 'dirige.'"
+    },
+    {
+      "id": "epitaph",
+      "term": "Epitaph",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "An inscription on a tomb, or a short poem suitable for one. 'Here lies...'"
+    },
+    {
+      "id": "monody",
+      "term": "Monody",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A poem of mourning spoken by one voice. Milton's Lycidas is a monody."
+    },
+    {
+      "id": "ode",
+      "term": "Ode",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "An elevated lyric poem, often addressing a person or thing. Pindaric, Horatian, or irregular."
+    },
+    {
+      "id": "hymn",
+      "term": "Hymn",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A song of praise, especially religious. One of poetry's oldest functions."
+    },
+    {
+      "id": "psalm",
+      "term": "Psalm",
+      "lang": "he",
+      "category": "poetry",
+      "definition": "A sacred song or poem, especially from the biblical Book of Psalms. Hebrew poetry's parallel structures."
+    },
+    {
+      "id": "canticle",
+      "term": "Canticle",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "A hymn or song from the Bible (other than psalms). The Canticle of Canticles is the Song of Songs."
+    },
+    {
+      "id": "ballad",
+      "term": "Ballad",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A narrative song or poem, often folk origin. Quatrains, refrains, tragic stories. 'Barbara Allen.'"
+    },
+    {
+      "id": "folk-ballad",
+      "term": "Folk Ballad",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Traditional ballads of anonymous origin, passed down orally. Stark, dramatic, impersonal."
+    },
+    {
+      "id": "literary-ballad",
+      "term": "Literary Ballad",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A ballad written by a known poet in imitation of folk ballads. Keats's 'La Belle Dame sans Merci.'"
+    },
+    {
+      "id": "broadside-ballad",
+      "term": "Broadside Ballad",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Ballads printed on single sheets and sold cheaply. News, scandals, executions. Popular poetry."
+    },
+    {
+      "id": "carol",
+      "term": "Carol",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A song of joy, especially for Christmas. Originally a ring-dance with song."
+    },
+    {
+      "id": "lullaby",
+      "term": "Lullaby",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A song to soothe a child to sleep. Among the oldest forms of verse."
+    },
+    {
+      "id": "nursery-rhyme",
+      "term": "Nursery Rhyme",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Traditional children's verse. Often nonsensical, sometimes subversively political."
+    },
+    {
+      "id": "limerick",
+      "term": "Limerick",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A five-line comic poem (AABBA), usually bawdy. The last line delivers the punchline."
+    },
+    {
+      "id": "clerihew",
+      "term": "Clerihew",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A humorous four-line biographical poem (AABB). Invented by Edmund Clerihew Bentley."
+    },
+    {
+      "id": "double-dactyl",
+      "term": "Double Dactyl",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A comic form: two quatrains of dactylic dimeter, with rules about nonsense words and single six-syllable words."
+    },
+    {
+      "id": "epyllion",
+      "term": "Epyllion",
+      "lang": "el",
+      "category": "poetry",
+      "definition": "A 'little epic'—a short narrative poem on a mythological theme. Miniature epic."
+    },
+    {
+      "id": "lay",
+      "term": "Lay",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A narrative poem, especially of Celtic origin. Marie de France wrote lays."
+    },
+    {
+      "id": "romance",
+      "term": "Romance",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A medieval narrative of chivalry and adventure. Verse romances preceded prose ones."
+    },
+    {
+      "id": "chanson",
+      "term": "Chanson",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A French song, or a type of medieval lyric. Chanson de geste: epic songs of heroic deeds."
+    },
+    {
+      "id": "chanson-de-geste",
+      "term": "Chanson de Geste",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "Medieval French epic poems celebrating heroic deeds. The Song of Roland is the greatest."
+    },
+    {
+      "id": "canzone",
+      "term": "Canzone",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "An Italian lyric form with complex stanza structure. Petrarch's vehicle. Precursor to the sonnet."
+    },
+    {
+      "id": "canso",
+      "term": "Canso",
+      "lang": "oc",
+      "category": "poetry",
+      "definition": "A Provençal troubadour love song. Five or six stanzas with envoi."
+    },
+    {
+      "id": "alba",
+      "term": "Alba",
+      "lang": "oc",
+      "category": "poetry",
+      "definition": "A Provençal dawn song. Lovers must part as daylight comes. The troubadour aubade."
+    },
+    {
+      "id": "sirventes",
+      "term": "Sirventes",
+      "lang": "oc",
+      "category": "poetry",
+      "definition": "A Provençal satirical poem, often political. The troubadour's weapon against lords and rivals."
+    },
+    {
+      "id": "planh",
+      "term": "Planh",
+      "lang": "oc",
+      "category": "poetry",
+      "definition": "A Provençal lament for the dead. The troubadour elegy."
+    },
+    {
+      "id": "tenso",
+      "term": "Tenso",
+      "lang": "oc",
+      "category": "poetry",
+      "definition": "A Provençal debate poem between two poets. Formal poetic argument."
+    },
+    {
+      "id": "partimen",
+      "term": "Partimen",
+      "lang": "oc",
+      "category": "poetry",
+      "definition": "A debate poem where one poet poses a dilemma and each argues one side."
+    },
+    {
+      "id": "ballade",
+      "term": "Ballade",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "Three stanzas and an envoi, all ending with the same refrain line. Villon's form. Not to be confused with ballad."
+    },
+    {
+      "id": "rondeau",
+      "term": "Rondeau",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A 13-line poem using only two rhymes, with the opening words as a refrain. Tightly woven."
+    },
+    {
+      "id": "rondel",
+      "term": "Rondel",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A 13 or 14-line poem with two rhymes and two refrains. Related to but distinct from rondeau."
+    },
+    {
+      "id": "roundel",
+      "term": "Roundel",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Swinburne's English adaptation of the rondeau: 11 lines with a refrain."
+    },
+    {
+      "id": "triolet",
+      "term": "Triolet",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "An eight-line poem with two rhymes; the first line repeats as the fourth and seventh."
+    },
+    {
+      "id": "villanelle",
+      "term": "Villanelle",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "Nineteen lines, five tercets and a quatrain. Two refrains alternate throughout. Dylan Thomas's 'Do not go gentle.'"
+    },
+    {
+      "id": "virelai",
+      "term": "Virelai",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A medieval French form with intricate rhyme and repetition. Related to the lai."
+    },
+    {
+      "id": "lai",
+      "term": "Lai",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "A medieval French lyric form with irregular stanzas and intricate rhyme."
+    },
+    {
+      "id": "chant-royal",
+      "term": "Chant Royal",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "Five 11-line stanzas and a 5-line envoi, all ending with the same refrain. The ballade expanded."
+    },
+    {
+      "id": "sestina",
+      "term": "Sestina",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "Six six-line stanzas plus a tercet. No rhyme—instead, six end-words rotate through all positions."
+    },
+    {
+      "id": "pantoum",
+      "term": "Pantoum",
+      "lang": "ms",
+      "category": "poetry",
+      "definition": "Malay form: quatrains where lines 2 and 4 become lines 1 and 3 of the next stanza. Interlocking repetition."
+    },
+    {
+      "id": "rime-couee",
+      "term": "Rime Couée",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "Tail rhyme: stanzas with lines of different lengths, the short lines ('tails') rhyming together."
+    },
+    {
+      "id": "vers-libre",
+      "term": "Vers Libre",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "French free verse, pioneered by Symbolists. Freed from alexandrine's strictures."
+    },
+    {
+      "id": "prose-poem",
+      "term": "Prose Poem",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry written as prose, without line breaks. Baudelaire's Paris Spleen. The border erased."
+    },
+    {
+      "id": "copla",
+      "term": "Copla",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A Spanish stanza form, typically a quatrain with assonant rhyme. The basis of flamenco lyrics."
+    },
+    {
+      "id": "decima",
+      "term": "Décima",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A ten-line stanza with specific rhyme (ABBAACCDDC). Used in Spanish Golden Age and Latin American folk poetry."
+    },
+    {
+      "id": "glosa",
+      "term": "Glosa",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A poem that glosses or elaborates a short text, often a quatrain, dedicating one stanza to each line."
+    },
+    {
+      "id": "redondilla",
+      "term": "Redondilla",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A Spanish quatrain of octosyllables, rhyming ABBA. A building block of Spanish verse."
+    },
+    {
+      "id": "cuarteta",
+      "term": "Cuarteta",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A Spanish quatrain rhyming ABAB. The redondilla's cousin."
+    },
+    {
+      "id": "seguidilla",
+      "term": "Seguidilla",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A Spanish folk verse form associated with dance. Short lines, specific syllable counts."
+    },
+    {
+      "id": "lira",
+      "term": "Lira",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A five-line Spanish stanza combining seven- and eleven-syllable lines. Garcilaso imported it from Italy."
+    },
+    {
+      "id": "silva",
+      "term": "Silva",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A Spanish form mixing seven- and eleven-syllable lines with irregular rhyme. Free within constraints."
+    },
+    {
+      "id": "endecha",
+      "term": "Endecha",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A Spanish lament, typically in short lines. Dirge-like, mournful."
+    },
+    {
+      "id": "villancico",
+      "term": "Villancico",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A Spanish song form with refrain. Originally secular, later associated with Christmas carols."
+    },
+    {
+      "id": "mote",
+      "term": "Mote",
+      "lang": "es",
+      "category": "poetry",
+      "definition": "A short poem, usually a single stanza, that serves as the basis for a glosa."
+    },
+    {
+      "id": "cantiga",
+      "term": "Cantiga",
+      "lang": "pt",
+      "category": "poetry",
+      "definition": "A medieval Galician-Portuguese lyric song. Love songs (cantigas de amor) or mocking songs (cantigas de escárnio)."
+    },
+    {
+      "id": "madrigal",
+      "term": "Madrigal",
+      "lang": "it",
+      "category": [
+        "poetry",
+        "music"
+      ],
+      "definition": "A short lyric poem, often pastoral, set to music for several voices. Renaissance polyphony's text."
+    },
+    {
+      "id": "strambotto",
+      "term": "Strambotto",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "An Italian folk form: an octave rhyming ABABABCC. Precursor to the sonnet."
+    },
+    {
+      "id": "rispetto",
+      "term": "Rispetto",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "A Tuscan folk poem, usually eight lines. Love poetry of the countryside."
+    },
+    {
+      "id": "frottola",
+      "term": "Frottola",
+      "lang": "it",
+      "category": [
+        "poetry",
+        "music"
+      ],
+      "definition": "A late 15th-century Italian song form. Light, secular, popular."
+    },
+    {
+      "id": "capitolo",
+      "term": "Capitolo",
+      "lang": "it",
+      "category": "poetry",
+      "definition": "A poem in terza rima, often satirical. The chapter of a longer work."
+    },
+    {
+      "id": "minnesang",
+      "term": "Minnesang",
+      "lang": "de",
+      "category": "poetry",
+      "definition": "Medieval German love poetry sung by Minnesänger. 'Minne' means courtly love."
+    },
+    {
+      "id": "meistersang",
+      "term": "Meistersang",
+      "lang": "de",
+      "category": "poetry",
+      "definition": "The guild poetry of German Meistersinger. Strict rules, competitions. Wagner's opera."
+    },
+    {
+      "id": "volkslied",
+      "term": "Volkslied",
+      "lang": "de",
+      "category": "poetry",
+      "definition": "German folk song. Simple, melodic, often strophic. Goethe and Heine wrote kunstlieder (art songs) in this style."
+    },
+    {
+      "id": "kunstlied",
+      "term": "Kunstlied",
+      "lang": "de",
+      "category": [
+        "poetry",
+        "music"
+      ],
+      "definition": "German art song: sophisticated setting of poetry to music. Schubert, Schumann, Brahms."
+    },
+    {
+      "id": "leich",
+      "term": "Leich",
+      "lang": "de",
+      "category": "poetry",
+      "definition": "A medieval German lyric form with varying stanza structure. Related to the lai."
+    },
+    {
+      "id": "spruch",
+      "term": "Spruch",
+      "lang": "de",
+      "category": "poetry",
+      "definition": "A short German didactic poem. Proverb-like, pointed."
+    },
+    {
+      "id": "tagelied",
+      "term": "Tagelied",
+      "lang": "de",
+      "category": "poetry",
+      "definition": "A German dawn song. Lovers parting at sunrise. The alba/aubade in German."
+    },
+    {
+      "id": "knittelvers",
+      "term": "Knittelvers",
+      "lang": "de",
+      "category": "poetry",
+      "definition": "A rough German verse form: four-stress lines with free syllables. Deliberately rustic."
+    },
+    {
+      "id": "haiku",
+      "term": "俳句 (Haiku)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Three lines of 5-7-5 syllables (on). A season word (kigo) and cutting word (kireji). Bashō's art of the moment.",
+      "related": [
+        "Kigo",
+        "Kireji"
+      ]
+    },
+    {
+      "id": "hokku",
+      "term": "発句 (Hokku)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "The opening verse of a renga, which became the independent haiku. The seed that grew into its own form."
+    },
+    {
+      "id": "tanka",
+      "term": "短歌 (Tanka)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Five lines of 5-7-5-7-7 syllables. The dominant classical Japanese form. Precursor to haiku."
+    },
+    {
+      "id": "waka",
+      "term": "和歌 (Waka)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Classical Japanese poetry, primarily tanka. Distinguished from Chinese poetry (kanshi)."
+    },
+    {
+      "id": "renga",
+      "term": "連歌 (Renga)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Linked verse: poets alternate adding stanzas (5-7-5 then 7-7) to create a collaborative poem."
+    },
+    {
+      "id": "haikai",
+      "term": "俳諧 (Haikai)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Comic or informal linked verse, less elevated than renga. Haiku emerged from haikai's hokku."
+    },
+    {
+      "id": "renku",
+      "term": "連句 (Renku)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Modern linked verse, descendant of renga and haikai. Collaborative, associative."
+    },
+    {
+      "id": "senryu",
+      "term": "川柳 (Senryū)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Like haiku in form (5-7-5) but satirical, focusing on human nature rather than nature. No kigo required.",
+      "related": [
+        "Haiku"
+      ]
+    },
+    {
+      "id": "kigo",
+      "term": "季語 (Kigo)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "A seasonal reference required in traditional haiku. Cherry blossoms (spring), cicadas (summer), etc."
+    },
+    {
+      "id": "kireji",
+      "term": "切れ字 (Kireji)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "A 'cutting word' in haiku that creates pause or emphasis. Untranslatable particles like 'ya' or 'kana.'"
+    },
+    {
+      "id": "yugen",
+      "term": "幽玄 (Yūgen)",
+      "lang": "ja",
+      "category": [
+        "poetry",
+        "aesthetics"
+      ],
+      "definition": "Mysterious depth, profound beauty beyond words. What hovers at the edges of a poem."
+    },
+    {
+      "id": "makura-kotoba",
+      "term": "枕詞 (Makura Kotoba)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Pillow words: fixed epithets in classical Japanese poetry. Conventional phrases attached to certain words."
+    },
+    {
+      "id": "kakekotoba",
+      "term": "掛詞 (Kakekotoba)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Pivot words: puns that work in two ways simultaneously, linking images. Untranslatable wordplay."
+    },
+    {
+      "id": "engo",
+      "term": "縁語 (Engo)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Associated words: clusters of related terms woven through a poem. Thematic resonance."
+    },
+    {
+      "id": "honkadori",
+      "term": "本歌取り (Honkadori)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Allusive variation: echoing a classical poem while transforming it. Intertextual tribute."
+    },
+    {
+      "id": "uta-awase",
+      "term": "歌合 (Uta-awase)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Poetry competitions where poems were judged in pairs. Social and aesthetic ritual."
+    },
+    {
+      "id": "choka",
+      "term": "長歌 (Chōka)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Long poems alternating 5-7 syllable lines, ending 5-7-7. Often followed by envoys (hanka)."
+    },
+    {
+      "id": "sedoka",
+      "term": "旋頭歌 (Sedōka)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "A six-line form (5-7-7-5-7-7). Rare, archaic."
+    },
+    {
+      "id": "bussokusekika",
+      "term": "仏足石歌 (Bussokusekika)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "A six-line form (5-7-5-7-7-7) found on Buddha footprint stones."
+    },
+    {
+      "id": "haibun",
+      "term": "俳文 (Haibun)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "Prose interspersed with haiku. Bashō's travel journals are haibun. Prose and poem illuminating each other."
+    },
+    {
+      "id": "haiga",
+      "term": "俳画 (Haiga)",
+      "lang": "ja",
+      "category": "poetry",
+      "definition": "A painting accompanied by a haiku. Visual and verbal arts combined."
+    },
+    {
+      "id": "shi",
+      "term": "詩 (Shī)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Classical Chinese poetry, especially regulated verse. The ancient and enduring tradition."
+    },
+    {
+      "id": "lushi",
+      "term": "律詩 (Lǜshī)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Regulated verse: eight lines with strict tonal patterns and parallelism. Tang dynasty perfection."
+    },
+    {
+      "id": "jueju",
+      "term": "絕句 (Juéjù)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Quatrain: four lines of five or seven syllables each. Tang dynasty gems."
+    },
+    {
+      "id": "gushi",
+      "term": "古詩 (Gǔshī)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Old-style poetry: freer than regulated verse, varying line lengths. Pre-Tang conventions."
+    },
+    {
+      "id": "ci",
+      "term": "詞 (Cí)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Song lyrics: poetry written to existing melodies, with fixed patterns. Song dynasty flowering."
+    },
+    {
+      "id": "qu",
+      "term": "曲 (Qǔ)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Aria poetry: dramatic verse with colloquial language. Yuan dynasty theater."
+    },
+    {
+      "id": "fu",
+      "term": "賦 (Fù)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Rhapsody or prose-poem: long, ornate compositions. Han dynasty showpiece."
+    },
+    {
+      "id": "sao",
+      "term": "騷 (Sāo)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "A poetry genre named for Qu Yuan's Li Sao (Encountering Sorrow). Southern, shamanic."
+    },
+    {
+      "id": "yuefu",
+      "term": "樂府 (Yuèfǔ)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Music Bureau poetry: folk songs collected or imitated by literati. Popular roots."
+    },
+    {
+      "id": "liushi",
+      "term": "六詩 (Liùshī)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "The six principles of Chinese poetry from the Book of Songs: feng, ya, song, fu, bi, xing."
+    },
+    {
+      "id": "duilian",
+      "term": "對聯 (Duìlián)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "Couplets: parallel phrases for scrolls, gates, occasions. Each character balances."
+    },
+    {
+      "id": "pingze",
+      "term": "平仄 (Píngzè)",
+      "lang": "zh",
+      "category": "poetry",
+      "definition": "The level and oblique tones that create tonal patterns in Chinese regulated verse."
+    },
+    {
+      "id": "sijo",
+      "term": "시조 (Sijo)",
+      "lang": "ko",
+      "category": "poetry",
+      "definition": "A three-line Korean form, typically 44-46 syllables. Formal yet personal. Korea's signature verse."
+    },
+    {
+      "id": "hyangga",
+      "term": "향가 (Hyangga)",
+      "lang": "ko",
+      "category": "poetry",
+      "definition": "Ancient Korean poetry (7th-10th century), written in a now-lost system. 25 survive."
+    },
+    {
+      "id": "gasa",
+      "term": "가사 (Gasa)",
+      "lang": "ko",
+      "category": "poetry",
+      "definition": "A Korean narrative verse form, longer than sijo. Sung, often by women."
+    },
+    {
+      "id": "changga",
+      "term": "창가 (Changga)",
+      "lang": "ko",
+      "category": "poetry",
+      "definition": "Modern Korean songs introduced in the late 19th century. Blending old and new."
+    },
+    {
+      "id": "luc-bat",
+      "term": "Lục Bát",
+      "lang": "vi",
+      "category": "poetry",
+      "definition": "Vietnamese six-eight form: alternating lines of 6 and 8 syllables with interlocking rhyme. The national meter."
+    },
+    {
+      "id": "song-that-luc-bat",
+      "term": "Song Thất Lục Bát",
+      "lang": "vi",
+      "category": "poetry",
+      "definition": "Double seven-six-eight: two seven-syllable lines followed by luc bat. For longer narratives."
+    },
+    {
+      "id": "hat-noi",
+      "term": "Hát Nói",
+      "lang": "vi",
+      "category": "poetry",
+      "definition": "Vietnamese 'spoken singing'—a poetry form meant for chanting. Flexible syllables."
+    },
+    {
+      "id": "sloka",
+      "term": "श्लोक (Śloka)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "The most common Sanskrit verse: two lines of 16 syllables each. The Mahabharata's meter."
+    },
+    {
+      "id": "anushtubh",
+      "term": "अनुष्टुभ् (Anuṣṭubh)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "A Sanskrit meter of 32 syllables, the basis of the sloka. The workhorse of epic poetry."
+    },
+    {
+      "id": "chandas",
+      "term": "छन्दस् (Chandas)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "The science of Sanskrit prosody. Hundreds of meters catalogued. Mathematical precision."
+    },
+    {
+      "id": "kavya",
+      "term": "काव्य (Kāvya)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "Sanskrit poetry, especially ornate court poetry. Elaborate figures, dense meaning."
+    },
+    {
+      "id": "mahakavya",
+      "term": "महाकाव्य (Mahākāvya)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "Great court epic: long narrative poems with prescribed features. Kalidasa's Raghuvamsa."
+    },
+    {
+      "id": "alamkara",
+      "term": "अलंकार (Alaṃkāra)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "Ornament or figure of speech in Sanskrit poetics. Elaborately classified. Decoration as essence."
+    },
+    {
+      "id": "dhvani",
+      "term": "ध्वनि (Dhvani)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "Suggestion or resonance: what a poem implies beyond its literal meaning. The highest poetic mode."
+    },
+    {
+      "id": "vakrokti",
+      "term": "वक्रोक्ति (Vakrokti)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "Oblique or indirect expression. The crooked path from meaning to meaning. Striking deviance."
+    },
+    {
+      "id": "doha",
+      "term": "दोहा (Dohā)",
+      "lang": "hi",
+      "category": "poetry",
+      "definition": "A rhyming couplet in Hindi/Urdu. Kabir's and Rahim's wisdom compressed into two lines."
+    },
+    {
+      "id": "chaupai",
+      "term": "चौपाई (Chaupāī)",
+      "lang": "hi",
+      "category": "poetry",
+      "definition": "A quatrain in Hindi, each line with 16 matras. Tulsidas's Ramcharitmanas uses chaupai."
+    },
+    {
+      "id": "soratha",
+      "term": "सोरठा (Soraṭhā)",
+      "lang": "hi",
+      "category": "poetry",
+      "definition": "A Hindi couplet form, reverse of doha. The rhyme at the beginning."
+    },
+    {
+      "id": "pada",
+      "term": "पद (Pada)",
+      "lang": "hi",
+      "category": "poetry",
+      "definition": "A devotional song-poem in Hindi. Mirabai, Surdas, Kabir wrote padas to their gods."
+    },
+    {
+      "id": "bhajan",
+      "term": "भजन (Bhajan)",
+      "lang": "hi",
+      "category": "poetry",
+      "definition": "A devotional song in the Hindu tradition. Simple, repetitive, ecstatic."
+    },
+    {
+      "id": "kirtan",
+      "term": "कीर्तन (Kīrtan)",
+      "lang": "sa",
+      "category": "poetry",
+      "definition": "Call-and-response devotional singing. Repetition as meditation."
+    },
+    {
+      "id": "abhanga",
+      "term": "अभंग (Abhanga)",
+      "lang": "mr",
+      "category": "poetry",
+      "definition": "A Marathi devotional verse form. Four-line stanzas, often addressed to Vithoba."
+    },
+    {
+      "id": "ovi",
+      "term": "ओवी (Ovī)",
+      "lang": "mr",
+      "category": "poetry",
+      "definition": "A Marathi folk verse form, sung by women. Work songs, lullabies."
+    },
+    {
+      "id": "qasida-ar",
+      "term": "قصيدة (Qaṣīda)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "A long Arabic monorhyme poem with strict meter. Formal structure: nasib (erotic prelude), journey, praise."
+    },
+    {
+      "id": "muwashshah",
+      "term": "موشح (Muwashshaḥ)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Andalusian strophic poetry with complex rhyme schemes. Arabic and Romance combined."
+    },
+    {
+      "id": "zajal",
+      "term": "زجل (Zajal)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "A colloquial Arabic strophic form, related to muwashshah but in vernacular language."
+    },
+    {
+      "id": "rajaz",
+      "term": "رجز (Rajaz)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "An Arabic meter used for simple verse, work songs, and improvisation. The camel-driver's rhythm."
+    },
+    {
+      "id": "bahr",
+      "term": "بحر (Baḥr)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "An Arabic metrical pattern. Literally 'sea'—the vast ocean of possible rhythms. Al-Khalil catalogued 16."
+    },
+    {
+      "id": "tafila",
+      "term": "تفعيلة (Tafʿīla)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "A metrical foot in Arabic prosody. The building blocks of bahr."
+    },
+    {
+      "id": "rawi",
+      "term": "روي (Rawī)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "The rhyme letter in Arabic: the consonant that must repeat throughout a qasida."
+    },
+    {
+      "id": "bayt-ar",
+      "term": "بيت (Bayt)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "A verse or line in Arabic poetry. Literally 'house'—each line a dwelling complete in itself."
+    },
+    {
+      "id": "sadr",
+      "term": "صدر (Ṣadr)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "The first hemistich of an Arabic verse. The 'chest' before the heart."
+    },
+    {
+      "id": "ajuz",
+      "term": "عجز (ʿAjuz)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "The second hemistich of an Arabic verse. The 'backside' completing the body."
+    },
+    {
+      "id": "nasib",
+      "term": "نسيب (Nasīb)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "The erotic or elegiac prelude of a qasida. Remembering the beloved, the abandoned campsite."
+    },
+    {
+      "id": "madih",
+      "term": "مديح (Madīḥ)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Praise poetry—often the main section of a qasida. Lauding a patron or tribe."
+    },
+    {
+      "id": "hija",
+      "term": "هجاء (Hijāʾ)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Satire or invective in Arabic poetry. Tribal warfare in verse."
+    },
+    {
+      "id": "ritha",
+      "term": "رثاء (Rithāʾ)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Elegy in Arabic poetry. Mourning the dead, especially fallen warriors."
+    },
+    {
+      "id": "fakhr",
+      "term": "فخر (Fakhr)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Boasting poetry—praising oneself or one's tribe. Heroic self-assertion."
+    },
+    {
+      "id": "khamriyya",
+      "term": "خمرية (Khamriyya)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Wine poetry, celebrating drinking. Abu Nuwas perfected it."
+    },
+    {
+      "id": "tardiyya",
+      "term": "طردية (Ṭardiyya)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Hunting poetry. The pursuit, the kill, the feast."
+    },
+    {
+      "id": "zuhdiyya",
+      "term": "زهدية (Zuhdiyya)",
+      "lang": "ar",
+      "category": "poetry",
+      "definition": "Ascetic poetry, contemptus mundi. Renouncing worldly pleasures."
+    },
+    {
+      "id": "shirah",
+      "term": "שירה (Shira)",
+      "lang": "he",
+      "category": "poetry",
+      "definition": "Hebrew poetry. From biblical psalms to modern verse."
+    },
+    {
+      "id": "piyyut",
+      "term": "פיוט (Piyyut)",
+      "lang": "he",
+      "category": "poetry",
+      "definition": "Liturgical Hebrew poetry, sung or chanted in synagogue. Elaborate acrostics and structures."
+    },
+    {
+      "id": "seliha",
+      "term": "סליחה (Seliḥa)",
+      "lang": "he",
+      "category": "poetry",
+      "definition": "Penitential poems recited before and during the High Holidays. Seeking forgiveness."
+    },
+    {
+      "id": "kina",
+      "term": "קינה (Qina)",
+      "lang": "he",
+      "category": "poetry",
+      "definition": "A Hebrew lament or dirge. The meter of Lamentations: 3+2 stresses."
+    },
+    {
+      "id": "zemer",
+      "term": "זמר (Zemer)",
+      "lang": "he",
+      "category": "poetry",
+      "definition": "A Hebrew song, especially a Sabbath table song."
+    },
+    {
+      "id": "maqama",
+      "term": "מקאמה (Maqama)",
+      "lang": "he",
+      "category": "poetry",
+      "definition": "Rhymed prose narrative with verse interludes. Hebrew poets adopted the Arabic form."
+    },
+    {
+      "id": "cynghanedd",
+      "term": "Cynghanedd",
+      "lang": "cy",
+      "category": "poetry",
+      "definition": "Strict Welsh sound-patterning: alliteration and internal rhyme in precise arrangements. Four types."
+    },
+    {
+      "id": "englyn",
+      "term": "Englyn",
+      "lang": "cy",
+      "category": "poetry",
+      "definition": "A Welsh short-poem form with cynghanedd. Multiple types; englyn unodl union has 30 syllables."
+    },
+    {
+      "id": "cywydd",
+      "term": "Cywydd",
+      "lang": "cy",
+      "category": "poetry",
+      "definition": "A Welsh meter: rhyming couplets of seven syllables with cynghanedd. Medieval bardic staple."
+    },
+    {
+      "id": "awdl",
+      "term": "Awdl",
+      "lang": "cy",
+      "category": "poetry",
+      "definition": "A long Welsh poem in cynghanedd, using multiple meters. The supreme challenge."
+    },
+    {
+      "id": "triban",
+      "term": "Triban",
+      "lang": "cy",
+      "category": "poetry",
+      "definition": "A Welsh folk verse form: three seven-syllable lines plus one of five."
+    },
+    {
+      "id": "hir-a-thoddaid",
+      "term": "Hir a Thoddaid",
+      "lang": "cy",
+      "category": "poetry",
+      "definition": "A Welsh meter combining long and short lines with complex sound patterns."
+    },
+    {
+      "id": "duan",
+      "term": "Dán",
+      "lang": "ga",
+      "category": "poetry",
+      "definition": "Irish poetry, especially the strict syllabic verse of the bardic schools."
+    },
+    {
+      "id": "deibide",
+      "term": "Deibhídhe",
+      "lang": "ga",
+      "category": "poetry",
+      "definition": "An Irish meter: quatrains with seven syllables per line and intricate rhyme."
+    },
+    {
+      "id": "rannaigecht",
+      "term": "Rannaigheacht",
+      "lang": "ga",
+      "category": "poetry",
+      "definition": "An Irish quatrain form with end-rhyme and alliteration. Multiple subtypes."
+    },
+    {
+      "id": "caoineadh",
+      "term": "Caoineadh",
+      "lang": "ga",
+      "category": "poetry",
+      "definition": "An Irish lament, often sung over the dead. The keen: wailing poetry."
+    },
+    {
+      "id": "aisling",
+      "term": "Aisling",
+      "lang": "ga",
+      "category": "poetry",
+      "definition": "An Irish vision poem where Ireland appears as a woman. Political allegory."
+    },
+    {
+      "id": "dinnseanchas",
+      "term": "Dinnseanchas",
+      "lang": "ga",
+      "category": "poetry",
+      "definition": "Irish place-name poetry: onomastic lore, explaining how places got their names."
+    },
+    {
+      "id": "gazel-tr",
+      "term": "Gazel",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "The Turkish/Ottoman ghazal. Same form as Persian: rhyming couplets, refrain, pen name in final couplet."
+    },
+    {
+      "id": "kaside-tr",
+      "term": "Kaside",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "The Turkish qasida. Long praise poems for sultans and patrons."
+    },
+    {
+      "id": "murabba",
+      "term": "Murabba",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "A Turkish quatrain form (AAAB CCCB DDDB...). Each stanza ends with the refrain rhyme."
+    },
+    {
+      "id": "mesnevi",
+      "term": "Mesnevi",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "The Turkish masnavi: rhyming couplets for narrative poetry. Rumi's masterpiece form."
+    },
+    {
+      "id": "tuyug",
+      "term": "Tuyuğ",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "A Turkic quatrain form unique to Central Asian poetry. Related to the rubai."
+    },
+    {
+      "id": "kosma",
+      "term": "Koşma",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "A Turkish folk poetry form in quatrains. Sung by aşıks (minstrels)."
+    },
+    {
+      "id": "mani",
+      "term": "Mâni",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "Turkish folk quatrains, often witty or romantic. Improvised and sung."
+    },
+    {
+      "id": "destan",
+      "term": "Destan",
+      "lang": "tr",
+      "category": "poetry",
+      "definition": "A Turkish epic or narrative poem. From folk tradition to literary epic."
+    },
+    {
+      "id": "nazm",
+      "term": "نظم (Nazm)",
+      "lang": "ur",
+      "category": "poetry",
+      "definition": "Urdu poetry with a continuous theme, unlike the independent couplets of ghazal. Modern form."
+    },
+    {
+      "id": "marsiya-ur",
+      "term": "مرثیہ (Marsiya)",
+      "lang": "ur",
+      "category": "poetry",
+      "definition": "Urdu elegies for Husain, recited during Muharram. Deeply emotional mourning poetry."
+    },
+    {
+      "id": "qawwali",
+      "term": "قوالی (Qawwali)",
+      "lang": "ur",
+      "category": [
+        "poetry",
+        "music"
+      ],
+      "definition": "Sufi devotional songs in Urdu/Punjabi. Ecstatic, repetitive, transcendent."
+    },
+    {
+      "id": "mushaira",
+      "term": "مشاعرہ (Mushaira)",
+      "lang": "ur",
+      "category": "poetry",
+      "definition": "An Urdu poetry gathering where poets recite and audiences respond. Living literary tradition."
+    },
+    {
+      "id": "praise-poem",
+      "term": "Praise Poem",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "African oral poetry praising chiefs, ancestors, or animals. Izibongo (Zulu), oriki (Yoruba)."
+    },
+    {
+      "id": "izibongo",
+      "term": "Izibongo",
+      "lang": "zu",
+      "category": "poetry",
+      "definition": "Zulu praise poetry. Performed at ceremonies, praising kings and ancestors."
+    },
+    {
+      "id": "oriki",
+      "term": "Oríkì",
+      "lang": "yo",
+      "category": "poetry",
+      "definition": "Yoruba praise poetry. Names and epithets invoking personal and family history."
+    },
+    {
+      "id": "concrete-poetry",
+      "term": "Concrete Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Visual poetry where typography and arrangement are meaning. The poem as image."
+    },
+    {
+      "id": "found-poetry",
+      "term": "Found Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry made from existing text: newspapers, manuals, overheard speech. Reframing as art."
+    },
+    {
+      "id": "erasure",
+      "term": "Erasure Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry created by erasing words from an existing text, leaving a new poem."
+    },
+    {
+      "id": "flarf",
+      "term": "Flarf",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Internet-age poetry: deliberately bad, absurdist, using Google search results. Anti-aesthetic."
+    },
+    {
+      "id": "language-poetry",
+      "term": "Language Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Avant-garde American poetry foregrounding language itself. Disjunction, fragmentation."
+    },
+    {
+      "id": "imagism",
+      "term": "Imagism",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Early 20th-century movement: direct treatment, no excess words, musical rhythm. Pound, H.D., Williams."
+    },
+    {
+      "id": "objectivism",
+      "term": "Objectivism",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "1930s movement emphasizing sincerity and objectification. Zukofsky, Oppen, Reznikoff."
+    },
+    {
+      "id": "confessional",
+      "term": "Confessional Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Personal, autobiographical poetry. Lowell, Plath, Sexton. The private made public."
+    },
+    {
+      "id": "deep-image",
+      "term": "Deep Image",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry drawing on the unconscious for images. Bly, Wright. Surrealism Americanized."
+    },
+    {
+      "id": "black-mountain",
+      "term": "Black Mountain",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poetry from Black Mountain College: projective verse, open form. Olson, Creeley, Duncan."
+    },
+    {
+      "id": "projective-verse",
+      "term": "Projective Verse",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Olson's theory: breath-based composition, the typewriter as scoring device. Open field."
+    },
+    {
+      "id": "new-york-school",
+      "term": "New York School",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Poets connected to Abstract Expressionism: playful, urban, anti-academic. O'Hara, Ashbery, Koch."
+    },
+    {
+      "id": "beat-poetry",
+      "term": "Beat Poetry",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Countercultural poetry of the 1950s-60s. Ginsberg's Howl, spontaneous prosody. 'I saw the best minds...'"
+    },
+    {
+      "id": "oulipo",
+      "term": "OuLiPo",
+      "lang": "fr",
+      "category": "poetry",
+      "definition": "Ouvroir de Littérature Potentielle: constrained writing. Lipograms, prisoner's constraint. Perec, Queneau."
+    },
+    {
+      "id": "lipogram",
+      "term": "Lipogram",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "Writing that excludes one or more letters. Perec's La Disparition has no 'e.'"
+    },
+    {
+      "id": "anagram",
+      "term": "Anagram Poem",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A poem where each line is an anagram of the title or previous line."
+    },
+    {
+      "id": "acrostic",
+      "term": "Acrostic",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A poem where initial letters spell a word or message. Hidden signatures."
+    },
+    {
+      "id": "abecedarian",
+      "term": "Abecedarian",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A poem where each line or stanza begins with successive letters of the alphabet."
+    },
+    {
+      "id": "golden-shovel",
+      "term": "Golden Shovel",
+      "lang": "en",
+      "category": "poetry",
+      "definition": "A poem where end words, read down, form a line from another poem. Terrance Hayes invented it."
+    },
+    {
+      "id": "cento",
+      "term": "Cento",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "A poem made entirely of lines from other poems. Patchwork poetry. Ancient practice."
+    },
+    {
+      "id": "contrafact",
+      "term": "Contrafactum",
+      "lang": "la",
+      "category": "poetry",
+      "definition": "A poem or song using an existing melody or form with new words. Sacred made secular or vice versa."
     }
   ]
 }

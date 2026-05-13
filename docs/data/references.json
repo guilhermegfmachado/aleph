@@ -1386,11 +1386,6 @@
               "name": "CryptoFees",
               "url": "https://cryptofees.info",
               "desc": "Frais générés par protocoles : comparaison quotidienne des revenus de Ethereum, Uniswap, Lido, etc."
-            },
-            {
-              "name": "Etherscan",
-              "url": "https://etherscan.io",
-              "desc": "Explorateur Ethereum : transactions, contrats, tokens, gas tracker. Équivalents pour autres EVM chains."
             }
           ]
         },
@@ -3437,17 +3432,172 @@
       "name": "Crypto & Blockchain",
       "groups": [
         {
-          "name": "Whitepapers Fondateurs",
+          "name": "Documentation Protocole",
           "resources": [
             {
-              "name": "Bitcoin Whitepaper",
-              "url": "https://bitcoin.org/bitcoin.pdf",
-              "desc": "Satoshi Nakamoto, 2008. Peer-to-peer electronic cash system, blockchain, proof-of-work."
+              "name": "Bitcoin.org Developer",
+              "url": "https://developer.bitcoin.org",
+              "desc": "Documentation officielle développeurs Bitcoin — RPC, transactions, P2P, scripts."
             },
             {
-              "name": "Ethereum Whitepaper",
-              "url": "https://ethereum.org/en/whitepaper/",
-              "desc": "Whitepaper Ethereum par Vitalik Buterin — vision smart contracts, machine virtuelle, Turing-complete."
+              "name": "Ethereum.org Developers",
+              "url": "https://ethereum.org/en/developers/",
+              "desc": "Documentation Ethereum — smart contracts, EVM, Solidity, JSON-RPC, staking."
+            },
+            {
+              "name": "Solana Docs",
+              "url": "https://docs.solana.com",
+              "desc": "Documentation Solana — runtime SVM, programmes Rust, RPC, validateurs."
+            },
+            {
+              "name": "Cosmos SDK",
+              "url": "https://docs.cosmos.network",
+              "desc": "Framework Cosmos — chaînes interopérables, IBC, Tendermint consensus."
+            },
+            {
+              "name": "Polkadot Wiki",
+              "url": "https://wiki.polkadot.network",
+              "desc": "Documentation Polkadot — parachains, relay chain, gouvernance, Substrate."
+            }
+          ]
+        },
+        {
+          "name": "Explorateurs de Blocs",
+          "resources": [
+            {
+              "name": "Etherscan",
+              "url": "https://etherscan.io",
+              "desc": "Explorateur Ethereum — transactions, contrats, tokens, vérification source code."
+            },
+            {
+              "name": "Blockstream Explorer",
+              "url": "https://blockstream.info",
+              "desc": "Explorateur Bitcoin sans tracking — mempool, frais, statistiques réseau."
+            },
+            {
+              "name": "Mempool.space",
+              "url": "https://mempool.space",
+              "desc": "Visualisation temps réel mempool Bitcoin — projections frais, blocs entrants."
+            },
+            {
+              "name": "Arbiscan",
+              "url": "https://arbiscan.io",
+              "desc": "Explorateur Arbitrum — L2 Ethereum, transactions, contrats."
+            },
+            {
+              "name": "Solscan",
+              "url": "https://solscan.io",
+              "desc": "Explorateur Solana — transactions, comptes, programmes, NFTs."
+            }
+          ]
+        },
+        {
+          "name": "DeFi & Protocoles",
+          "resources": [
+            {
+              "name": "Uniswap Docs",
+              "url": "https://docs.uniswap.org",
+              "desc": "Documentation Uniswap — AMM, v3 concentrated liquidity, hooks, swaps."
+            },
+            {
+              "name": "Aave Docs",
+              "url": "https://docs.aave.com",
+              "desc": "Documentation Aave — protocole lending, flash loans, paramètres risque."
+            },
+            {
+              "name": "MakerDAO Docs",
+              "url": "https://docs.makerdao.com",
+              "desc": "Documentation MakerDAO — DAI stablecoin, vaults, gouvernance MKR."
+            },
+            {
+              "name": "Curve Docs",
+              "url": "https://resources.curve.fi",
+              "desc": "Documentation Curve — pools stablecoins, mécanique veCRV, gauges."
+            },
+            {
+              "name": "Lido Docs",
+              "url": "https://docs.lido.fi",
+              "desc": "Documentation Lido — staking liquide ETH, opérateurs nœuds, stETH."
+            }
+          ]
+        },
+        {
+          "name": "Sécurité & Audits",
+          "resources": [
+            {
+              "name": "Trail of Bits",
+              "url": "https://www.trailofbits.com/research/",
+              "desc": "Recherche sécurité blockchain — audits, outils (Slither, Echidna), publications."
+            },
+            {
+              "name": "OpenZeppelin",
+              "url": "https://docs.openzeppelin.com",
+              "desc": "Bibliothèque de contrats sécurisés — standards ERC, upgrades, accès, gouvernance."
+            },
+            {
+              "name": "Certik Skynet",
+              "url": "https://skynet.certik.com",
+              "desc": "Tableau de bord sécurité — scores projets, alertes incidents, audits."
+            },
+            {
+              "name": "Code4rena",
+              "url": "https://code4rena.com",
+              "desc": "Plateforme audits compétitifs — rapports publics, vulnérabilités trouvées."
+            },
+            {
+              "name": "Immunefi",
+              "url": "https://immunefi.com",
+              "desc": "Bug bounty crypto — vulnérabilités révélées, rapports d'incidents."
+            }
+          ]
+        },
+        {
+          "name": "Recherche & Données",
+          "resources": [
+            {
+              "name": "Vitalik Blog",
+              "url": "https://vitalik.eth.limo",
+              "desc": "Blog de Vitalik Buterin — théorie protocole Ethereum, gouvernance, cryptographie."
+            },
+            {
+              "name": "a16z crypto",
+              "url": "https://a16zcrypto.com/posts/",
+              "desc": "Recherche Andreessen Horowitz — design protocoles, gouvernance, État de industrie."
+            },
+            {
+              "name": "Ethereum Research",
+              "url": "https://ethresear.ch",
+              "desc": "Forum recherche Ethereum — proposals, consensus, sharding, MEV."
+            },
+            {
+              "name": "Flashbots",
+              "url": "https://docs.flashbots.net",
+              "desc": "Recherche MEV — bundles, builder/proposer separation, transparency."
+            },
+            {
+              "name": "L2BEAT",
+              "url": "https://l2beat.com",
+              "desc": "Données L2 Ethereum — TVL, risques, technologie rollups, comparaisons."
+            }
+          ]
+        },
+        {
+          "name": "ZK & Cryptographie",
+          "resources": [
+            {
+              "name": "ZK Learning",
+              "url": "https://zk-learning.org",
+              "desc": "Cours MOOC zero-knowledge proofs — Berkeley/Stanford, SNARKs, STARKs."
+            },
+            {
+              "name": "Awesome ZK",
+              "url": "https://github.com/ventali/awesome-zk",
+              "desc": "Liste curée ressources ZK — bibliothèques, papers, projets, tutoriels."
+            },
+            {
+              "name": "Vitalik on ZK-SNARKs",
+              "url": "https://vitalik.eth.limo/general/2022/06/15/using_snarks.html",
+              "desc": "Introduction technique aux ZK-SNARKs — cas usage, limitations."
             }
           ]
         }

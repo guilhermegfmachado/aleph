@@ -928,22 +928,6 @@ main {
   border-color: var(--ink-2);
 }
 
-.glossary-expand-all {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--rule);
-  color: var(--ink-2);
-  transition: all 0.15s;
-  margin-left: auto;
-}
-
-.glossary-expand-all:hover {
-  border-color: var(--ink);
-  color: var(--ink);
-}
-
 /* Two-pane layout */
 .glossary-layout {
   display: flex;

@@ -1543,6 +1543,116 @@
               "desc": "Statistiques du commerce mondial de l'OMC : flux, tarifs, différends commerciaux, profils par pays membre."
             }
           ]
+        },
+        {
+          "name": "Banques Centrales & Recherche",
+          "resources": [
+            {
+              "name": "BIS Research",
+              "url": "https://www.bis.org/research/",
+              "desc": "Recherche de la Banque des Règlements Internationaux sur politique monétaire, stabilité financière et marchés."
+            },
+            {
+              "name": "ECB Research",
+              "url": "https://www.ecb.europa.eu/pub/research/",
+              "desc": "Working papers et publications de la BCE sur politique monétaire, économie zone euro et stabilité financière."
+            },
+            {
+              "name": "Fed Research",
+              "url": "https://www.federalreserve.gov/econres.htm",
+              "desc": "Recherche économique de la Réserve Fédérale : FEDS papers, modèles macroéconomiques, données financières."
+            },
+            {
+              "name": "BoE Research",
+              "url": "https://www.bankofengland.co.uk/research",
+              "desc": "Staff Working Papers de la Bank of England sur économie, finance et politique monétaire."
+            }
+          ]
+        },
+        {
+          "name": "Finance Quantitative",
+          "resources": [
+            {
+              "name": "QuantLib",
+              "url": "https://www.quantlib.org",
+              "desc": "Bibliothèque open-source C++ pour modélisation financière quantitative : pricing dérivés, courbes de taux, Monte Carlo."
+            },
+            {
+              "name": "Quantopian Lectures",
+              "url": "https://github.com/quantopian/research_public",
+              "desc": "Notebooks Jupyter sur finance quantitative : facteurs, backtesting, analyse de portefeuille, machine learning."
+            },
+            {
+              "name": "WRDS",
+              "url": "https://wrds-www.wharton.upenn.edu",
+              "desc": "Wharton Research Data Services — données financières académiques : CRSP, Compustat, TAQ, IBES."
+            },
+            {
+              "name": "Ken French Data",
+              "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+              "desc": "Facteurs Fama-French, portefeuilles triés, rendements industrie — données gratuites pour recherche académique."
+            },
+            {
+              "name": "AQR Data Sets",
+              "url": "https://www.aqr.com/Insights/Datasets",
+              "desc": "Données de facteurs et anomalies de marché publiées par AQR Capital pour recherche quantitative."
+            }
+          ]
+        },
+        {
+          "name": "Données de Marché",
+          "resources": [
+            {
+              "name": "Yahoo Finance",
+              "url": "https://finance.yahoo.com",
+              "desc": "Cours actions, indices, devises, crypto — données historiques téléchargeables, API gratuite via yfinance."
+            },
+            {
+              "name": "Investing.com",
+              "url": "https://www.investing.com",
+              "desc": "Données marchés mondiaux : actions, obligations, commodités, calendrier économique, screeners."
+            },
+            {
+              "name": "TradingView",
+              "url": "https://www.tradingview.com",
+              "desc": "Graphiques techniques avancés, Pine Script pour indicateurs personnalisés, communauté de traders."
+            },
+            {
+              "name": "OpenBB",
+              "url": "https://openbb.co",
+              "desc": "Terminal financier open-source en Python — alternative Bloomberg pour recherche et analyse de données."
+            },
+            {
+              "name": "Polygon.io",
+              "url": "https://polygon.io",
+              "desc": "API données de marché : actions, options, forex, crypto — données tick-level et historiques."
+            }
+          ]
+        },
+        {
+          "name": "Comptabilité & Reporting",
+          "resources": [
+            {
+              "name": "SEC EDGAR",
+              "url": "https://www.sec.gov/edgar/",
+              "desc": "Filings SEC complets : 10-K, 10-Q, 8-K, proxy statements. Base de données officielle des sociétés cotées US."
+            },
+            {
+              "name": "IFRS Foundation",
+              "url": "https://www.ifrs.org",
+              "desc": "Normes comptables internationales IFRS, interprétations IFRIC, ressources pédagogiques."
+            },
+            {
+              "name": "FASB",
+              "url": "https://www.fasb.org",
+              "desc": "Financial Accounting Standards Board — normes US GAAP, Codification, ASUs."
+            },
+            {
+              "name": "Calcbench",
+              "url": "https://www.calcbench.com",
+              "desc": "Données financières XBRL extraites des filings SEC, comparable et téléchargeable."
+            }
+          ]
         }
       ]
     },
@@ -1737,6 +1847,176 @@
               "name": "ProofWiki",
               "url": "https://proof.ethz.ch",
               "desc": "Encyclopédie de preuves mathématiques formelles : théorèmes avec démonstrations étape par étape, définitions, corollaires."
+            }
+          ]
+        },
+        {
+          "name": "Documentation & Standards",
+          "resources": [
+            {
+              "name": "MDN Web Docs",
+              "url": "https://developer.mozilla.org",
+              "desc": "Documentation de référence pour HTML, CSS, JavaScript, APIs Web. Maintenue par Mozilla et communauté."
+            },
+            {
+              "name": "DevDocs",
+              "url": "https://devdocs.io",
+              "desc": "Agrégateur de documentation technique : 500+ langages et frameworks, recherche unifiée, mode offline."
+            },
+            {
+              "name": "IETF RFCs",
+              "url": "https://www.rfc-editor.org",
+              "desc": "Request for Comments — standards Internet : HTTP, TCP/IP, DNS, TLS, SMTP et tous protocoles fondamentaux."
+            },
+            {
+              "name": "W3C Standards",
+              "url": "https://www.w3.org/TR/",
+              "desc": "Spécifications W3C : HTML, CSS, XML, SVG, WebAssembly, Accessibility Guidelines."
+            },
+            {
+              "name": "ECMA-262",
+              "url": "https://tc39.es/ecma262/",
+              "desc": "Spécification officielle ECMAScript (JavaScript) — living standard maintenu par TC39."
+            }
+          ]
+        },
+        {
+          "name": "Systèmes & Infrastructure",
+          "resources": [
+            {
+              "name": "The Linux Kernel Archives",
+              "url": "https://www.kernel.org",
+              "desc": "Source officielle du noyau Linux, documentation, changelogs et archives historiques."
+            },
+            {
+              "name": "LWN.net",
+              "url": "https://lwn.net",
+              "desc": "Actualité technique approfondie : développement kernel Linux, sécurité, systèmes distribués."
+            },
+            {
+              "name": "Brendan Gregg",
+              "url": "https://www.brendangregg.com",
+              "desc": "Performance engineering : flame graphs, BPF/eBPF, tracing systèmes, optimisation Linux."
+            },
+            {
+              "name": "Julia Evans",
+              "url": "https://jvns.ca",
+              "desc": "Zines et articles accessibles sur Linux, debugging, networking, systèmes — pédagogie technique."
+            },
+            {
+              "name": "Dan Luu",
+              "url": "https://danluu.com",
+              "desc": "Analyses techniques approfondies : performance, hardware, systèmes, culture d'ingénierie."
+            }
+          ]
+        },
+        {
+          "name": "Langages & Compilateurs",
+          "resources": [
+            {
+              "name": "Rust Book",
+              "url": "https://doc.rust-lang.org/book/",
+              "desc": "Documentation officielle Rust — ownership, borrowing, lifetimes, async, macros."
+            },
+            {
+              "name": "Go by Example",
+              "url": "https://gobyexample.com",
+              "desc": "Introduction pratique à Go avec exemples annotés : goroutines, channels, interfaces."
+            },
+            {
+              "name": "Learn You a Haskell",
+              "url": "http://learnyouahaskell.com",
+              "desc": "Introduction illustrée à Haskell et programmation fonctionnelle — monades, functors, applicatives."
+            },
+            {
+              "name": "Zig Language",
+              "url": "https://ziglang.org/learn/",
+              "desc": "Documentation Zig — langage systèmes moderne, alternative C, comptime, SIMD."
+            },
+            {
+              "name": "LLVM Documentation",
+              "url": "https://llvm.org/docs/",
+              "desc": "Documentation LLVM : IR, passes d'optimisation, backends, Clang internals."
+            }
+          ]
+        },
+        {
+          "name": "Algorithmes & Structures",
+          "resources": [
+            {
+              "name": "Visualgo",
+              "url": "https://visualgo.net",
+              "desc": "Visualisations interactives d'algorithmes et structures de données : tri, graphes, arbres, hash."
+            },
+            {
+              "name": "CP-Algorithms",
+              "url": "https://cp-algorithms.com",
+              "desc": "Algorithmes pour competitive programming : graphes, strings, géométrie, maths — avec implémentations C++."
+            },
+            {
+              "name": "Big-O Cheat Sheet",
+              "url": "https://www.bigocheatsheet.com",
+              "desc": "Complexités temporelles et spatiales des structures de données et algorithmes courants."
+            },
+            {
+              "name": "The Algorithms",
+              "url": "https://the-algorithms.com",
+              "desc": "Implémentations d'algorithmes dans 30+ langages — open source, éducatif, bien documenté."
+            }
+          ]
+        },
+        {
+          "name": "AI & Machine Learning",
+          "resources": [
+            {
+              "name": "Papers With Code",
+              "url": "https://paperswithcode.com",
+              "desc": "Papers ML avec implémentations, benchmarks, datasets — suivi state-of-the-art par tâche."
+            },
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co",
+              "desc": "Hub de modèles ML : transformers, diffusion, datasets, spaces pour démos — écosystème open source."
+            },
+            {
+              "name": "Distill.pub",
+              "url": "https://distill.pub",
+              "desc": "Articles ML interactifs avec visualisations — explications approfondies de concepts complexes."
+            },
+            {
+              "name": "Andrej Karpathy",
+              "url": "https://karpathy.ai",
+              "desc": "Blog et cours sur deep learning, neural networks, LLMs — ex-Tesla AI, OpenAI."
+            },
+            {
+              "name": "Lil'Log",
+              "url": "https://lilianweng.github.io",
+              "desc": "Blog technique OpenAI : surveys détaillés sur attention, RL, diffusion, agents."
+            }
+          ]
+        },
+        {
+          "name": "Bases de Données",
+          "resources": [
+            {
+              "name": "Use The Index, Luke",
+              "url": "https://use-the-index-luke.com",
+              "desc": "Guide complet indexation SQL — performance queries, plans d'exécution, optimisation."
+            },
+            {
+              "name": "PostgreSQL Docs",
+              "url": "https://www.postgresql.org/docs/",
+              "desc": "Documentation PostgreSQL exhaustive : SQL, administration, extensions, internals."
+            },
+            {
+              "name": "Redis Docs",
+              "url": "https://redis.io/docs/",
+              "desc": "Documentation Redis : structures de données, persistence, clustering, Lua scripting."
+            },
+            {
+              "name": "CMU Database Course",
+              "url": "https://15445.courses.cs.cmu.edu",
+              "desc": "Cours CMU d'Andy Pavlo sur database internals : storage, indexing, query processing, concurrency."
             }
           ]
         }

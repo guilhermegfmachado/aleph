@@ -1277,6 +1277,36 @@
               "desc": "Archives caribéennes numérisées : journaux historiques, cartes, photographies, documents officiels des Caraïbes."
             }
           ]
+        },
+        {
+          "name": "Portails Open Data",
+          "resources": [
+            {
+              "name": "data.gov",
+              "url": "https://data.gov",
+              "desc": "Portail open data du gouvernement américain — 300 000+ datasets fédéraux."
+            },
+            {
+              "name": "data.gouv.fr",
+              "url": "https://www.data.gouv.fr",
+              "desc": "Plateforme open data française — données publiques, transports, santé, environnement."
+            },
+            {
+              "name": "data.gov.uk",
+              "url": "https://www.data.gov.uk",
+              "desc": "Portail open data britannique — NHS, transport, éducation, criminalité."
+            },
+            {
+              "name": "EU Open Data Portal",
+              "url": "https://data.europa.eu",
+              "desc": "Données ouvertes des institutions européennes et États membres."
+            },
+            {
+              "name": "World Bank Microdata",
+              "url": "https://microdata.worldbank.org",
+              "desc": "Enquêtes ménages, études d'impact, données de développement à l'échelle individuelle."
+            }
+          ]
         }
       ]
     },
@@ -1361,11 +1391,6 @@
               "name": "Etherscan",
               "url": "https://etherscan.io",
               "desc": "Explorateur Ethereum : transactions, contrats, tokens, gas tracker. Équivalents pour autres EVM chains."
-            },
-            {
-              "name": "Ethereum Whitepaper",
-              "url": "https://ethereum.org/en/whitepaper",
-              "desc": "Document fondateur de Vitalik Buterin : smart contracts, EVM, vision originale de la plateforme."
             }
           ]
         },
@@ -1586,6 +1611,96 @@
               "name": "Calcbench",
               "url": "https://www.calcbench.com",
               "desc": "Données financières XBRL extraites des filings SEC, comparable et téléchargeable."
+            }
+          ]
+        },
+        {
+          "name": "Brevets & Propriété Intellectuelle",
+          "resources": [
+            {
+              "name": "Google Patents",
+              "url": "https://patents.google.com",
+              "desc": "Recherche de brevets mondiale — USPTO, EPO, WIPO, Japon, Chine, texte intégral."
+            },
+            {
+              "name": "WIPO PATENTSCOPE",
+              "url": "https://patentscope.wipo.int",
+              "desc": "Base OMPI — brevets PCT internationaux, 100+ millions de documents."
+            },
+            {
+              "name": "Espacenet",
+              "url": "https://worldwide.espacenet.com",
+              "desc": "Base EPO — 140+ millions de brevets mondiaux, traduction automatique."
+            },
+            {
+              "name": "USPTO",
+              "url": "https://www.uspto.gov/patents",
+              "desc": "Office américain des brevets — recherche, filing, PAIR, données bulk."
+            },
+            {
+              "name": "EPO",
+              "url": "https://www.epo.org",
+              "desc": "Office européen des brevets — dépôt, recherche, European Patent Register."
+            },
+            {
+              "name": "Lens.org",
+              "url": "https://www.lens.org",
+              "desc": "Plateforme open — brevets + littérature scientifique liés, analyse citations."
+            }
+          ]
+        },
+        {
+          "name": "Registres d'Entreprises — Europe",
+          "resources": [
+            {
+              "name": "Companies House",
+              "url": "https://www.gov.uk/government/organisations/companies-house",
+              "desc": "Registre UK — données entreprises gratuites, comptes annuels, dirigeants."
+            },
+            {
+              "name": "Infogreffe",
+              "url": "https://www.infogreffe.fr",
+              "desc": "Registre du commerce français — Kbis, comptes, statuts, dirigeants."
+            },
+            {
+              "name": "Handelsregister",
+              "url": "https://www.handelsregister.de",
+              "desc": "Registre commercial allemand — recherche entreprises, documents officiels."
+            },
+            {
+              "name": "KVK",
+              "url": "https://www.kvk.nl",
+              "desc": "Chambre de commerce néerlandaise — recherche entreprises Pays-Bas."
+            },
+            {
+              "name": "Bolagsverket",
+              "url": "https://bolagsverket.se",
+              "desc": "Registre suédois — données entreprises, comptes annuels gratuits."
+            }
+          ]
+        },
+        {
+          "name": "Registres d'Entreprises — Amériques & Asie",
+          "resources": [
+            {
+              "name": "SEDAR+",
+              "url": "https://www.sedarplus.ca",
+              "desc": "Filings sociétés cotées Canada — prospectus, rapports annuels."
+            },
+            {
+              "name": "MCA India",
+              "url": "https://www.mca.gov.in",
+              "desc": "Ministry of Corporate Affairs Inde — registre entreprises, directors."
+            },
+            {
+              "name": "EDINET Japan",
+              "url": "https://disclosure.edinet-fsa.go.jp",
+              "desc": "Filings sociétés cotées Japon — rapports annuels, securities reports."
+            },
+            {
+              "name": "CNPJ Brasil",
+              "url": "https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/",
+              "desc": "Consultation CNPJ entreprises brésiliennes — données fiscales de base."
             }
           ]
         }
@@ -1952,6 +2067,41 @@
               "name": "CMU Database Course",
               "url": "https://15445.courses.cs.cmu.edu",
               "desc": "Cours CMU d'Andy Pavlo sur database internals : storage, indexing, query processing, concurrency."
+            }
+          ]
+        },
+        {
+          "name": "Organismes de Normalisation",
+          "resources": [
+            {
+              "name": "ISO",
+              "url": "https://www.iso.org",
+              "desc": "Organisation internationale de normalisation — catalogue, previews, standards achetables."
+            },
+            {
+              "name": "IEEE Xplore",
+              "url": "https://ieeexplore.ieee.org",
+              "desc": "Publications IEEE — standards électronique, informatique, télécoms, conférences."
+            },
+            {
+              "name": "ITU",
+              "url": "https://www.itu.int",
+              "desc": "Union internationale des télécommunications — recommandations, fréquences, numérotation."
+            },
+            {
+              "name": "ANSI Webstore",
+              "url": "https://webstore.ansi.org",
+              "desc": "Standards américains ANSI — catalogue, normes industrielles US."
+            },
+            {
+              "name": "BSI",
+              "url": "https://www.bsigroup.com",
+              "desc": "British Standards Institution — normes UK, certification, PAS."
+            },
+            {
+              "name": "DIN",
+              "url": "https://www.din.de",
+              "desc": "Deutsches Institut für Normung — normes allemandes, catalogue."
             }
           ]
         }
@@ -2714,6 +2864,71 @@
               "desc": "Données et scénarios du GIEC — modèles climatiques, projections, données observées."
             }
           ]
+        },
+        {
+          "name": "Géospatial",
+          "resources": [
+            {
+              "name": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org",
+              "desc": "Carte du monde collaborative et libre — données vectorielles exportables, Overpass API."
+            },
+            {
+              "name": "Natural Earth",
+              "url": "https://www.naturalearthdata.com",
+              "desc": "Données cartographiques vectorielles et raster libres — frontières, relief, villes."
+            },
+            {
+              "name": "GADM",
+              "url": "https://gadm.org",
+              "desc": "Global Administrative Areas — frontières administratives mondiales en shapefile/geoJSON."
+            },
+            {
+              "name": "Copernicus",
+              "url": "https://www.copernicus.eu",
+              "desc": "Programme d'observation terrestre européen — imagerie satellite, climat, océans."
+            },
+            {
+              "name": "USGS Earth Explorer",
+              "url": "https://earthexplorer.usgs.gov",
+              "desc": "Imagerie satellite Landsat, MODIS, données topographiques SRTM."
+            }
+          ]
+        },
+        {
+          "name": "Statistiques Nationales",
+          "resources": [
+            {
+              "name": "INSEE",
+              "url": "https://www.insee.fr",
+              "desc": "Institut national de la statistique français — données démographiques, économiques, sociales."
+            },
+            {
+              "name": "ONS",
+              "url": "https://www.ons.gov.uk",
+              "desc": "Office for National Statistics UK — census, emploi, inflation, données régionales."
+            },
+            {
+              "name": "Destatis",
+              "url": "https://www.destatis.de",
+              "desc": "Statistisches Bundesamt — statistiques officielles allemandes, commerce, industrie."
+            },
+            {
+              "name": "Statistics Japan",
+              "url": "https://www.stat.go.jp/english/",
+              "desc": "Bureau of Statistics Japan — recensement, enquêtes ménages, données économiques."
+            },
+            {
+              "name": "US Census Bureau",
+              "url": "https://www.census.gov",
+              "desc": "Données démographiques américaines, American Community Survey, économie."
+            },
+            {
+              "name": "Statistics Canada",
+              "url": "https://www.statcan.gc.ca",
+              "desc": "Statistique Canada — recensement, données économiques et sociales canadiennes."
+            }
+          ]
         }
       ]
     },
@@ -3228,311 +3443,11 @@
               "name": "Bitcoin Whitepaper",
               "url": "https://bitcoin.org/bitcoin.pdf",
               "desc": "Satoshi Nakamoto, 2008. Peer-to-peer electronic cash system, blockchain, proof-of-work."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "donnees-ouvertes",
-      "name": "Données Ouvertes",
-      "groups": [
-        {
-          "name": "Statistiques Nationales",
-          "resources": [
-            {
-              "name": "INSEE",
-              "url": "https://www.insee.fr",
-              "desc": "Institut national de la statistique français — données démographiques, économiques, sociales."
             },
             {
-              "name": "ONS",
-              "url": "https://www.ons.gov.uk",
-              "desc": "Office for National Statistics UK — census, emploi, inflation, données régionales."
-            },
-            {
-              "name": "Destatis",
-              "url": "https://www.destatis.de",
-              "desc": "Statistisches Bundesamt — statistiques officielles allemandes, commerce, industrie."
-            },
-            {
-              "name": "Statistics Japan",
-              "url": "https://www.stat.go.jp/english/",
-              "desc": "Bureau of Statistics Japan — recensement, enquêtes ménages, données économiques."
-            },
-            {
-              "name": "US Census Bureau",
-              "url": "https://www.census.gov",
-              "desc": "Données démographiques américaines, American Community Survey, économie."
-            },
-            {
-              "name": "Statistics Canada",
-              "url": "https://www.statcan.gc.ca",
-              "desc": "Statistique Canada — recensement, données économiques et sociales canadiennes."
-            }
-          ]
-        },
-        {
-          "name": "Portails Open Data",
-          "resources": [
-            {
-              "name": "data.gov",
-              "url": "https://data.gov",
-              "desc": "Portail open data du gouvernement américain — 300 000+ datasets fédéraux."
-            },
-            {
-              "name": "data.gouv.fr",
-              "url": "https://www.data.gouv.fr",
-              "desc": "Plateforme open data française — données publiques, transports, santé, environnement."
-            },
-            {
-              "name": "data.gov.uk",
-              "url": "https://www.data.gov.uk",
-              "desc": "Portail open data britannique — NHS, transport, éducation, criminalité."
-            },
-            {
-              "name": "EU Open Data Portal",
-              "url": "https://data.europa.eu",
-              "desc": "Données ouvertes des institutions européennes et États membres."
-            },
-            {
-              "name": "World Bank Microdata",
-              "url": "https://microdata.worldbank.org",
-              "desc": "Enquêtes ménages, études d'impact, données de développement à l'échelle individuelle."
-            }
-          ]
-        },
-        {
-          "name": "Géospatial",
-          "resources": [
-            {
-              "name": "OpenStreetMap",
-              "url": "https://www.openstreetmap.org",
-              "desc": "Carte du monde collaborative et libre — données vectorielles exportables, Overpass API."
-            },
-            {
-              "name": "Natural Earth",
-              "url": "https://www.naturalearthdata.com",
-              "desc": "Données cartographiques vectorielles et raster libres — frontières, relief, villes."
-            },
-            {
-              "name": "GADM",
-              "url": "https://gadm.org",
-              "desc": "Global Administrative Areas — frontières administratives mondiales en shapefile/geoJSON."
-            },
-            {
-              "name": "Copernicus",
-              "url": "https://www.copernicus.eu",
-              "desc": "Programme d'observation terrestre européen — imagerie satellite, climat, océans."
-            },
-            {
-              "name": "USGS Earth Explorer",
-              "url": "https://earthexplorer.usgs.gov",
-              "desc": "Imagerie satellite Landsat, MODIS, données topographiques SRTM."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "education",
-      "name": "Éducation",
-      "groups": [
-        {
-          "name": "Cours Universitaires Ouverts",
-          "resources": [
-            {
-              "name": "MIT OpenCourseWare",
-              "url": "https://ocw.mit.edu",
-              "desc": "Cours MIT gratuits — notes, vidéos, examens pour 2500+ cours dans tous domaines."
-            },
-            {
-              "name": "Khan Academy",
-              "url": "https://www.khanacademy.org",
-              "desc": "Cours gratuits K-12 et universitaires — math, sciences, économie, humanités."
-            },
-            {
-              "name": "Stanford Online",
-              "url": "https://online.stanford.edu",
-              "desc": "Cours Stanford gratuits — CS, AI, entrepreneuriat, médecine."
-            },
-            {
-              "name": "Yale Open Courses",
-              "url": "https://oyc.yale.edu",
-              "desc": "Cours Yale filmés — philosophie, histoire, sciences politiques, littérature."
-            },
-            {
-              "name": "Harvard Online",
-              "url": "https://online-learning.harvard.edu",
-              "desc": "Cours Harvard gratuits via edX — CS50, data science, humanities."
-            }
-          ]
-        },
-        {
-          "name": "Plateformes MOOC",
-          "resources": [
-            {
-              "name": "Coursera",
-              "url": "https://www.coursera.org",
-              "desc": "MOOCs d'universités mondiales — audit gratuit, certificats payants, spécialisations."
-            },
-            {
-              "name": "edX",
-              "url": "https://www.edx.org",
-              "desc": "Cours Harvard, MIT, Berkeley — audit gratuit, MicroMasters, programmes en ligne."
-            },
-            {
-              "name": "FUN MOOC",
-              "url": "https://www.fun-mooc.fr",
-              "desc": "Plateforme française — cours d'universités et grandes écoles francophones."
-            },
-            {
-              "name": "Udacity",
-              "url": "https://www.udacity.com",
-              "desc": "Nanodegrees tech — AI, data science, cloud, programmation, partenariats industrie."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "brevets",
-      "name": "Brevets & Propriété Intellectuelle",
-      "groups": [
-        {
-          "name": "Bases de Brevets",
-          "resources": [
-            {
-              "name": "Google Patents",
-              "url": "https://patents.google.com",
-              "desc": "Recherche de brevets mondiale — USPTO, EPO, WIPO, Japon, Chine, texte intégral."
-            },
-            {
-              "name": "WIPO PATENTSCOPE",
-              "url": "https://patentscope.wipo.int",
-              "desc": "Base OMPI — brevets PCT internationaux, 100+ millions de documents."
-            },
-            {
-              "name": "Espacenet",
-              "url": "https://worldwide.espacenet.com",
-              "desc": "Base EPO — 140+ millions de brevets mondiaux, traduction automatique."
-            },
-            {
-              "name": "USPTO",
-              "url": "https://www.uspto.gov/patents",
-              "desc": "Office américain des brevets — recherche, filing, PAIR, données bulk."
-            },
-            {
-              "name": "EPO",
-              "url": "https://www.epo.org",
-              "desc": "Office européen des brevets — dépôt, recherche, European Patent Register."
-            },
-            {
-              "name": "Lens.org",
-              "url": "https://www.lens.org",
-              "desc": "Plateforme open — brevets + littérature scientifique liés, analyse citations."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "registres",
-      "name": "Registres d'Entreprises",
-      "groups": [
-        {
-          "name": "Europe",
-          "resources": [
-            {
-              "name": "Companies House",
-              "url": "https://www.gov.uk/government/organisations/companies-house",
-              "desc": "Registre UK — données entreprises gratuites, comptes annuels, dirigeants."
-            },
-            {
-              "name": "Infogreffe",
-              "url": "https://www.infogreffe.fr",
-              "desc": "Registre du commerce français — Kbis, comptes, statuts, dirigeants."
-            },
-            {
-              "name": "Handelsregister",
-              "url": "https://www.handelsregister.de",
-              "desc": "Registre commercial allemand — recherche entreprises, documents officiels."
-            },
-            {
-              "name": "KVK",
-              "url": "https://www.kvk.nl",
-              "desc": "Chambre de commerce néerlandaise — recherche entreprises Pays-Bas."
-            },
-            {
-              "name": "Bolagsverket",
-              "url": "https://bolagsverket.se",
-              "desc": "Registre suédois — données entreprises, comptes annuels gratuits."
-            }
-          ]
-        },
-        {
-          "name": "Amériques & Asie",
-          "resources": [
-            {
-              "name": "SEDAR+",
-              "url": "https://www.sedarplus.ca",
-              "desc": "Filings sociétés cotées Canada — prospectus, rapports annuels."
-            },
-            {
-              "name": "MCA India",
-              "url": "https://www.mca.gov.in",
-              "desc": "Ministry of Corporate Affairs Inde — registre entreprises, directors."
-            },
-            {
-              "name": "EDINET Japan",
-              "url": "https://disclosure.edinet-fsa.go.jp",
-              "desc": "Filings sociétés cotées Japon — rapports annuels, securities reports."
-            },
-            {
-              "name": "CNPJ Brasil",
-              "url": "https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/",
-              "desc": "Consultation CNPJ entreprises brésiliennes — données fiscales de base."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "normes",
-      "name": "Normes & Standards",
-      "groups": [
-        {
-          "name": "Organismes de Normalisation",
-          "resources": [
-            {
-              "name": "ISO",
-              "url": "https://www.iso.org",
-              "desc": "Organisation internationale de normalisation — catalogue, previews, standards achetables."
-            },
-            {
-              "name": "IEEE Xplore",
-              "url": "https://ieeexplore.ieee.org",
-              "desc": "Publications IEEE — standards électronique, informatique, télécoms, conférences."
-            },
-            {
-              "name": "ITU",
-              "url": "https://www.itu.int",
-              "desc": "Union internationale des télécommunications — recommandations, fréquences, numérotation."
-            },
-            {
-              "name": "ANSI Webstore",
-              "url": "https://webstore.ansi.org",
-              "desc": "Standards américains ANSI — catalogue, normes industrielles US."
-            },
-            {
-              "name": "BSI",
-              "url": "https://www.bsigroup.com",
-              "desc": "British Standards Institution — normes UK, certification, PAS."
-            },
-            {
-              "name": "DIN",
-              "url": "https://www.din.de",
-              "desc": "Deutsches Institut für Normung — normes allemandes, catalogue."
+              "name": "Ethereum Whitepaper",
+              "url": "https://ethereum.org/en/whitepaper/",
+              "desc": "Whitepaper Ethereum par Vitalik Buterin — vision smart contracts, machine virtuelle, Turing-complete."
             }
           ]
         }

@@ -156,6 +156,21 @@
               "name": "Monoskop",
               "url": "https://monoskop.org",
               "desc": "Wiki collaboratif sur art médiatique, théorie critique, philosophie continentale. PDFs rares et documentation alternative."
+            },
+            {
+              "name": "JSTOR",
+              "url": "https://www.jstor.org",
+              "desc": "Archive de revues académiques — humanités, sciences sociales, lecture gratuite jusqu'à 100 articles/mois."
+            },
+            {
+              "name": "Project MUSE",
+              "url": "https://muse.jhu.edu",
+              "desc": "Bibliothèque numérique sciences humaines — 700+ revues, 50 000+ livres académiques."
+            },
+            {
+              "name": "DOAJ",
+              "url": "https://doaj.org",
+              "desc": "Directory of Open Access Journals — 20 000+ revues académiques gratuites, vérifiées."
             }
           ]
         },
@@ -241,6 +256,16 @@
               "name": "NINJAL 国立国語研究所",
               "url": "https://www.ninjal.ac.jp",
               "desc": "Institut national de linguistique japonaise : corpus de langue classique et contemporaine, dictionnaires historiques."
+            },
+            {
+              "name": "J-STAGE",
+              "url": "https://www.jstage.jst.go.jp",
+              "desc": "Plateforme de revues scientifiques japonaises — humanités, sciences, accès libre."
+            },
+            {
+              "name": "Edo Period Texts",
+              "url": "https://dl.ndl.go.jp/en/wagosho.html",
+              "desc": "Textes japonais époque Edo numérisés par la NDL — manuscrits, imprimés anciens."
             }
           ]
         },
@@ -331,6 +356,11 @@
               "name": "Wikiforrás",
               "url": "https://hu.wikisource.org",
               "desc": "Wikisource hongroise : textes sources libres en hongrois. Classiques littéraires et documents historiques."
+            },
+            {
+              "name": "Digital Archive Hungary",
+              "url": "https://dka.oszk.hu",
+              "desc": "Archives numériques hongroises — photographies, manuscrits, documents historiques."
             }
           ]
         },
@@ -351,6 +381,16 @@
               "name": "The Latin Library",
               "url": "https://www.thelatinlibrary.com",
               "desc": "Textes latins classiques en plein texte : Cicéron, Virgile, Ovide, Sénèque. Format simple, chargement rapide."
+            },
+            {
+              "name": "Biblioteca Nacional Digital Brasil",
+              "url": "https://bndigital.bn.gov.br",
+              "desc": "Bibliothèque nationale du Brésil numérique — littérature lusophone, archives historiques."
+            },
+            {
+              "name": "BNE Hispana",
+              "url": "https://hispana.mcu.es",
+              "desc": "Portail des bibliothèques espagnoles numérisées — Quichotte, chroniques, codex."
             }
           ]
         },
@@ -366,6 +406,16 @@
               "name": "David Rumsey Map Collection",
               "url": "https://www.davidrumsey.com",
               "desc": "150 000+ cartes historiques en haute résolution : atlas anciens, cartes maritimes, plans de villes."
+            },
+            {
+              "name": "Old Maps Online",
+              "url": "https://www.oldmapsonline.org",
+              "desc": "Portail unifié de cartes historiques — recherche par lieu et époque, 400+ collections."
+            },
+            {
+              "name": "Library of Congress Maps",
+              "url": "https://www.loc.gov/maps/",
+              "desc": "Cartes numérisées de la LoC — Amérique coloniale, batailles, ferroviaire, géologique."
             }
           ]
         },
@@ -586,11 +636,6 @@
               "name": "ORBIS — Stanford",
               "url": "https://orbis.stanford.edu",
               "desc": "Simulateur du réseau de transport romain : calcule temps de voyage, coûts, routes optimales dans l'Empire. Outil extraordinaire."
-            },
-            {
-              "name": "Old Maps Online",
-              "url": "https://www.oldmapsonline.org",
-              "desc": "Moteur de recherche pour cartes historiques de toutes les collections mondiales. Recherche par lieu et période."
             },
             {
               "name": "World Historical Gazetteer",
@@ -823,6 +868,16 @@
               "name": "Ukiyo-e.org",
               "url": "https://ukiyo-e.org",
               "desc": "Estampes japonaises avec recherche par similarité visuelle : Hokusai, Hiroshige, Utamaro et milliers d'autres."
+            },
+            {
+              "name": "British Museum",
+              "url": "https://www.britishmuseum.org/collection",
+              "desc": "Collection du British Museum — 4+ millions d'objets, recherche avancée."
+            },
+            {
+              "name": "Getty Open Content",
+              "url": "https://www.getty.edu/art/collection/",
+              "desc": "Collections Getty — images haute résolution libres de droits, art occidental."
             }
           ]
         },
@@ -858,6 +913,26 @@
               "name": "Warburg Institute",
               "url": "https://warburg.sas.ac.uk",
               "desc": "Bibliothèque Aby Warburg : iconologie, survie de l'Antiquité, histoire des images. Photothèque et archives uniques."
+            },
+            {
+              "name": "Iconclass",
+              "url": "https://iconclass.org",
+              "desc": "Système de classification iconographique — 28 000 concepts pour identifier sujets artistiques."
+            },
+            {
+              "name": "Warburg Institute Library",
+              "url": "https://warburg.sas.ac.uk/library/",
+              "desc": "Institut Warburg — bibliothèque sur survie de l'Antiquité, iconologie, magie, science."
+            },
+            {
+              "name": "Index of Medieval Art",
+              "url": "https://theindex.princeton.edu",
+              "desc": "Princeton — index iconographique de l'art médiéval, motifs, sujets, manuscrits."
+            },
+            {
+              "name": "PHAROS",
+              "url": "https://pharosartresearch.org",
+              "desc": "Consortium de 14 archives photographiques d'art — recherche unifiée, provenance."
             }
           ]
         },
@@ -1029,6 +1104,16 @@
               "name": "Mutant Sounds",
               "url": "https://mutant-sounds.blogspot.com",
               "desc": "Archive de musique expérimentale : noise japonais, musique industrielle, free jazz, electronics obscures."
+            },
+            {
+              "name": "Mutopia Project",
+              "url": "https://www.mutopiaproject.org",
+              "desc": "Partitions libres de droits — éditions modernes en Lilypond, MIDI."
+            },
+            {
+              "name": "Choral Public Domain Library",
+              "url": "https://www.cpdl.org",
+              "desc": "Bibliothèque de partitions chorales en domaine public — Renaissance à contemporain."
             }
           ]
         },
@@ -1094,6 +1179,21 @@
               "name": "Open Music Theory",
               "url": "https://www.counterpointhacks.com",
               "desc": "Manuel open source de théorie musicale : contrepoint, harmonie tonale, analyse post-tonale. Niveau universitaire."
+            },
+            {
+              "name": "Open Music Theory",
+              "url": "https://viva.pressbooks.pub/openmusictheory/",
+              "desc": "Manuel ouvert de théorie musicale — harmonie, contrepoint, analyse formelle."
+            },
+            {
+              "name": "MuseScore",
+              "url": "https://musescore.org",
+              "desc": "Logiciel de notation musicale gratuit + bibliothèque communautaire de partitions."
+            },
+            {
+              "name": "Society for Music Theory",
+              "url": "https://www.societymusictheory.org",
+              "desc": "SMT — revues, congrès, ressources pédagogiques en théorie musicale académique."
             }
           ]
         },
@@ -1114,6 +1214,21 @@
               "name": "Virtual Music Library",
               "url": "https://www.virtualmusiclibrary.info",
               "desc": "Portail vers collections de partitions numériques mondiales : agrégateur de ressources musicologiques libres."
+            },
+            {
+              "name": "Internet Archive — Music",
+              "url": "https://archive.org/details/audio",
+              "desc": "Collections audio Internet Archive — concerts live, 78 tours, vieux vinyles."
+            },
+            {
+              "name": "Library of Congress — Music",
+              "url": "https://www.loc.gov/collections/?fa=original-format:notated+music",
+              "desc": "Partitions historiques de la LoC — folksongs américaines, jazz, classique."
+            },
+            {
+              "name": "Petrucci Music Library",
+              "url": "https://imslp.org/wiki/Main_Page",
+              "desc": "Encyclopédie musicale liée à IMSLP — compositeurs, périodes, instrumentations."
             }
           ]
         }
@@ -1190,17 +1305,27 @@
               "name": "German Propaganda Archive",
               "url": "https://research.calvin.edu/german-propaganda-archive/",
               "desc": "Matériaux de propagande nazie et DDR traduits : affiches, discours, manuels scolaires, films pour analyse historique."
+            },
+            {
+              "name": "Wilson Center Digital Archive",
+              "url": "https://digitalarchive.wilsoncenter.org",
+              "desc": "Documents diplomatiques déclassifiés — Guerre froide, archives mondiales, 100 000+ docs."
+            },
+            {
+              "name": "National Security Archive",
+              "url": "https://nsarchive.gwu.edu",
+              "desc": "GWU — documents déclassifiés gouvernement américain, FOIA, dossiers historiques."
+            },
+            {
+              "name": "CVCE — European Integration",
+              "url": "https://www.cvce.eu",
+              "desc": "Centre virtuel sur la connaissance européenne — documents, traités, témoignages."
             }
           ]
         },
         {
           "name": "Histoire — Bases de Données",
           "resources": [
-            {
-              "name": "JSTOR",
-              "url": "https://www.jstor.org",
-              "desc": "Archive de revues académiques : 12+ millions d'articles en sciences humaines. Accès partiel libre (100 articles/mois)."
-            },
             {
               "name": "Cambridge Core",
               "url": "https://www.cambridge.org/core",
@@ -1215,11 +1340,6 @@
               "name": "OpenEdition",
               "url": "https://www.openedition.org",
               "desc": "Portail de sciences humaines en open access : Revues.org, Hypotheses (carnets), Calenda (agenda), OpenEdition Books."
-            },
-            {
-              "name": "DOAJ — Directory of Open Access Journals",
-              "url": "https://doaj.org",
-              "desc": "Répertoire de 20 000+ revues scientifiques en accès libre : sciences humaines, sciences sociales, sciences exactes."
             }
           ]
         },
@@ -1331,6 +1451,16 @@
               "name": "NBER Working Papers",
               "url": "https://www.nber.org/papers",
               "desc": "Recherche économique de pointe : 30 000+ papers pré-publication par économistes de Harvard, MIT, Stanford."
+            },
+            {
+              "name": "Trading Economics",
+              "url": "https://tradingeconomics.com",
+              "desc": "Indicateurs macroéconomiques 196 pays — inflation, PIB, chômage, taux, dette."
+            },
+            {
+              "name": "CEIC Data",
+              "url": "https://www.ceicdata.com",
+              "desc": "Données macroéconomiques mondiales — séries longues, marchés émergents, sectoriels."
             }
           ]
         },
@@ -1431,6 +1561,21 @@
               "name": "First Round Review",
               "url": "https://review.firstround.com",
               "desc": "Conseils opérationnels de First Round Capital : interviews de fondateurs, tactiques de scaling, management."
+            },
+            {
+              "name": "PitchBook",
+              "url": "https://pitchbook.com",
+              "desc": "Données VC, PE, M&A — valuations, deals, fonds, sociétés cibles."
+            },
+            {
+              "name": "CB Insights",
+              "url": "https://www.cbinsights.com",
+              "desc": "Tech market intelligence — startups, tendances, M&A, brevets."
+            },
+            {
+              "name": "Preqin",
+              "url": "https://www.preqin.com",
+              "desc": "Données alternatives investissement — VC, PE, hedge funds, infrastructure, immobilier."
             }
           ]
         },
@@ -1481,6 +1626,21 @@
               "name": "RePEc",
               "url": "https://www.repec.org",
               "desc": "Research Papers in Economics : 4+ millions de documents économiques, working papers, articles de revues. Agrégateur mondial."
+            },
+            {
+              "name": "Bloomberg Markets",
+              "url": "https://www.bloomberg.com/markets",
+              "desc": "Données marchés mondiaux — actions, obligations, devises, commodités, taux."
+            },
+            {
+              "name": "Bank for International Settlements",
+              "url": "https://www.bis.org",
+              "desc": "BIS — banque des banques centrales, recherche, stabilité financière, statistiques."
+            },
+            {
+              "name": "CFA Institute Research",
+              "url": "https://www.cfainstitute.org/research",
+              "desc": "Recherche CFA Institute — finance d'entreprise, gestion portefeuille, éthique."
             }
           ]
         },
@@ -1501,6 +1661,21 @@
               "name": "WTO Statistics",
               "url": "https://www.wto.org/english/res_e/statis_e/statis_e.htm",
               "desc": "Statistiques du commerce mondial de l'OMC : flux, tarifs, différends commerciaux, profils par pays membre."
+            },
+            {
+              "name": "OECD Data",
+              "url": "https://data.oecd.org",
+              "desc": "Données OCDE — commerce, croissance, inégalités, éducation, 38 pays membres."
+            },
+            {
+              "name": "UNCTAD",
+              "url": "https://unctad.org/statistics",
+              "desc": "Conférence ONU commerce et développement — flux, IDE, transport maritime."
+            },
+            {
+              "name": "Observatory of Economic Complexity",
+              "url": "https://oec.world",
+              "desc": "OEC — visualisation des flux commerciaux mondiaux par produit et pays."
             }
           ]
         },
@@ -1606,6 +1781,21 @@
               "name": "Calcbench",
               "url": "https://www.calcbench.com",
               "desc": "Données financières XBRL extraites des filings SEC, comparable et téléchargeable."
+            },
+            {
+              "name": "IASB",
+              "url": "https://www.ifrs.org/groups/international-accounting-standards-board/",
+              "desc": "International Accounting Standards Board — normes IFRS, projets en cours."
+            },
+            {
+              "name": "XBRL International",
+              "url": "https://www.xbrl.org",
+              "desc": "Standard XBRL pour reporting financier — taxonomies, validation, outils."
+            },
+            {
+              "name": "AICPA",
+              "url": "https://www.aicpa-cima.org",
+              "desc": "American Institute of CPAs — normes audit US, ressources, certifications."
             }
           ]
         },
@@ -1877,6 +2067,21 @@
               "name": "Schneier on Security",
               "url": "https://www.schneier.com",
               "desc": "Bruce Schneier : analyse de sécurité, cryptographie appliquée, politiques de surveillance. Référence depuis 25 ans."
+            },
+            {
+              "name": "OWASP",
+              "url": "https://owasp.org",
+              "desc": "Open Web Application Security — top 10 vulnérabilités, guides, outils gratuits."
+            },
+            {
+              "name": "CVE Database",
+              "url": "https://cve.mitre.org",
+              "desc": "Common Vulnerabilities and Exposures — base mondiale des failles connues."
+            },
+            {
+              "name": "Cryptopals",
+              "url": "https://cryptopals.com",
+              "desc": "Challenges cryptographie pratique — 8 sets, attaques sur algorithmes réels."
             }
           ]
         },
@@ -1892,6 +2097,21 @@
               "name": "ProofWiki",
               "url": "https://proof.ethz.ch",
               "desc": "Encyclopédie de preuves mathématiques formelles : théorèmes avec démonstrations étape par étape, définitions, corollaires."
+            },
+            {
+              "name": "PlanetMath",
+              "url": "https://planetmath.org",
+              "desc": "Encyclopédie mathématique collaborative — définitions, théorèmes, preuves."
+            },
+            {
+              "name": "AMS MathSciNet",
+              "url": "https://mathscinet.ams.org",
+              "desc": "Base bibliographique mathématiques — reviews, citations, depuis 1940."
+            },
+            {
+              "name": "arXiv math",
+              "url": "https://arxiv.org/list/math/recent",
+              "desc": "Section mathématiques arXiv — preprints, toutes branches, accès libre."
             }
           ]
         },
@@ -2143,6 +2363,16 @@
               "name": "ABANA",
               "url": "https://abana.org",
               "desc": "Artist-Blacksmiths' Association : ressources, conférences, annuaire de forgerons, préservation des techniques."
+            },
+            {
+              "name": "Anvilfire",
+              "url": "https://www.anvilfire.com",
+              "desc": "Encyclopédie forge — techniques, outils, projets, histoire des forgerons."
+            },
+            {
+              "name": "British Blade Smiths",
+              "url": "https://britishbladesmiths.com",
+              "desc": "Association forgerons britanniques — guides, formation, traditions."
             }
           ]
         },
@@ -2158,6 +2388,16 @@
               "name": "Permaculture News",
               "url": "https://www.permaculturenews.org",
               "desc": "Actualités et techniques de permaculture : design, food forests, water harvesting, régénération des sols."
+            },
+            {
+              "name": "FAO Open Knowledge",
+              "url": "https://www.fao.org/publications",
+              "desc": "Publications FAO — agriculture mondiale, sécurité alimentaire, pêche, forêts."
+            },
+            {
+              "name": "Practical Action",
+              "url": "https://practicalaction.org",
+              "desc": "Technologies appropriées agriculture — Afrique, Asie, Amérique latine."
             }
           ]
         }
@@ -2184,6 +2424,16 @@
               "name": "Tokyo Bungu",
               "url": "https://www.bungu-do.com",
               "desc": "Papeterie japonaise de qualité : stylos, carnets, instruments d'écriture. Marques comme Pilot, Sailor, Midori."
+            },
+            {
+              "name": "Japan Design Foundation",
+              "url": "https://www.g-mark.org",
+              "desc": "Good Design Award japonais — catalogue annuel, philosophie design, lauréats."
+            },
+            {
+              "name": "JAGDA",
+              "url": "https://www.jagda.or.jp",
+              "desc": "Japan Graphic Designers Association — annuaire designers, expositions, prix."
             }
           ]
         },
@@ -2229,6 +2479,16 @@
               "name": "Selency",
               "url": "https://www.selency.com",
               "desc": "Brocante en ligne française : meubles vintage, déco, luminaires. Prix accessibles, vendeurs particuliers."
+            },
+            {
+              "name": "Vinted",
+              "url": "https://www.vinted.com",
+              "desc": "Marketplace de vêtements de seconde main — Europe, particuliers, expédition."
+            },
+            {
+              "name": "Vestiaire Collective",
+              "url": "https://www.vestiairecollective.com",
+              "desc": "Marketplace luxe d'occasion — authentification, mondial, mode et accessoires."
             }
           ]
         },
@@ -2249,6 +2509,16 @@
               "name": "Kinda Store",
               "url": "https://www.kindastore.pt",
               "desc": "Vintage et seconde main sélectionné à Lisbonne : pièces curatées, mix décennies 80-00."
+            },
+            {
+              "name": "Feira da Ladra",
+              "url": "https://www.visitlisboa.com/en/places/feira-da-ladra",
+              "desc": "Marché aux puces de Lisbonne — Campo de Santa Clara, mardis et samedis."
+            },
+            {
+              "name": "Outra Face da Lua",
+              "url": "https://www.aoutrafacedalua.com",
+              "desc": "Boutique vintage emblématique à Lisbonne — Baixa, sélection 70s-90s."
             }
           ]
         },
@@ -2480,6 +2750,11 @@
               "name": "MarineTraffic",
               "url": "https://www.marinetraffic.com",
               "desc": "Suivi AIS des navires en temps réel : cargo, tankers, ferries, yachts. Données historiques et ports."
+            },
+            {
+              "name": "Ferrylines",
+              "url": "https://www.ferrylines.com",
+              "desc": "Base de données mondiale routes de ferries — opérateurs, navires, capacités."
             }
           ]
         },
@@ -2500,6 +2775,21 @@
               "name": "OACI Publications",
               "url": "https://www.icao.int/publications/",
               "desc": "Standards et pratiques recommandées de l'aviation civile internationale : annexes à la Convention de Chicago."
+            },
+            {
+              "name": "FAA",
+              "url": "https://www.faa.gov",
+              "desc": "Federal Aviation Administration — réglementation aviation US, certifications."
+            },
+            {
+              "name": "EASA",
+              "url": "https://www.easa.europa.eu",
+              "desc": "European Union Aviation Safety Agency — règles UE, certifications, sécurité."
+            },
+            {
+              "name": "ICAO",
+              "url": "https://www.icao.int",
+              "desc": "Organisation aviation civile internationale — standards mondiaux, statistiques."
             }
           ]
         },
@@ -2515,6 +2805,21 @@
               "name": "National Maritime Museum Greenwich",
               "url": "https://www.nmm.ac.uk/collections/",
               "desc": "Collections maritimes britanniques : instruments de navigation, cartes, journaux de bord, portraits d'amiraux."
+            },
+            {
+              "name": "IMO",
+              "url": "https://www.imo.org",
+              "desc": "International Maritime Organization — réglementation maritime mondiale, SOLAS, MARPOL."
+            },
+            {
+              "name": "Lloyd's List",
+              "url": "https://www.lloydslist.com",
+              "desc": "Référence shipping depuis 1734 — intelligence maritime, casualties, sanctions."
+            },
+            {
+              "name": "Lloyd's Register",
+              "url": "https://www.lr.org",
+              "desc": "Société de classification maritime — registre navires, certifications, recherche."
             }
           ]
         }
@@ -2832,6 +3137,21 @@
               "name": "GISAID",
               "url": "https://www.gisaid.org",
               "desc": "Base de données de séquences virales — influenza, SARS-CoV-2, surveillance génomique."
+            },
+            {
+              "name": "CDC",
+              "url": "https://www.cdc.gov",
+              "desc": "Centers for Disease Control US — surveillance maladies, guides cliniques, statistiques."
+            },
+            {
+              "name": "ECDC",
+              "url": "https://www.ecdc.europa.eu",
+              "desc": "European Centre for Disease Prevention — surveillance épidémiologique UE."
+            },
+            {
+              "name": "OurWorldInData Health",
+              "url": "https://ourworldindata.org/health-meta",
+              "desc": "Données santé mondiale — espérance de vie, vaccination, mortalité par cause."
             }
           ]
         },
@@ -2943,6 +3263,16 @@
               "name": "CachedView",
               "url": "https://cachedview.com",
               "desc": "Agrégateur de caches : Google, Coral, Wayback Machine en une recherche."
+            },
+            {
+              "name": "Common Crawl",
+              "url": "https://commoncrawl.org",
+              "desc": "Archive massive du web — pétabytes crawlés, accessible pour recherche."
+            },
+            {
+              "name": "Memento Time Travel",
+              "url": "https://timetravel.mementoweb.org",
+              "desc": "Méta-recherche dans 30+ archives web — agrégateur snapshots historiques."
             }
           ]
         },
@@ -2963,6 +3293,16 @@
               "name": "FotoForensics",
               "url": "https://fotoforensics.com",
               "desc": "Analyse forensique d'images : ELA, métadonnées EXIF, détection de manipulation."
+            },
+            {
+              "name": "PimEyes",
+              "url": "https://pimeyes.com",
+              "desc": "Recherche faciale inversée — moteur spécialisé reconnaissance visages publics."
+            },
+            {
+              "name": "Forensically",
+              "url": "https://29a.ch/photo-forensics/",
+              "desc": "Outils analyse forensique d'images — détection retouches, métadonnées EXIF."
             }
           ]
         },
@@ -2983,6 +3323,21 @@
               "name": "ICANN WHOIS",
               "url": "https://lookup.icann.org",
               "desc": "Propriété de domaines, informations de registrar, historique DNS."
+            },
+            {
+              "name": "PeekYou",
+              "url": "https://www.peekyou.com",
+              "desc": "Agrégateur de profils publics — réseaux sociaux, articles, mentions."
+            },
+            {
+              "name": "Whoxy",
+              "url": "https://www.whoxy.com",
+              "desc": "Historique WHOIS domaines — propriétaires, changements, recherche inversée."
+            },
+            {
+              "name": "Aleph (OCCRP)",
+              "url": "https://aleph.occrp.org",
+              "desc": "Plateforme OCCRP — leaks, registres, données crime organisé et corruption."
             }
           ]
         },
@@ -3003,6 +3358,21 @@
               "name": "Have I Been Pwned",
               "url": "https://haveibeenpwned.com",
               "desc": "Vérification de fuites de données, compromission d'emails et mots de passe."
+            },
+            {
+              "name": "BuiltWith",
+              "url": "https://builtwith.com",
+              "desc": "Détection technologies utilisées par un site — CMS, frameworks, analytics, hosting."
+            },
+            {
+              "name": "crt.sh",
+              "url": "https://crt.sh",
+              "desc": "Recherche certificats SSL/TLS — découverte sous-domaines via Certificate Transparency."
+            },
+            {
+              "name": "GreyNoise",
+              "url": "https://www.greynoise.io",
+              "desc": "Analyse trafic Internet bruit — scanners, attaques opportunistes, contexte IPs."
             }
           ]
         }
@@ -3019,6 +3389,16 @@
               "name": "Traités ONU",
               "url": "https://treaties.un.org",
               "desc": "Collection des traités internationaux, états de signature et ratification, réserves."
+            },
+            {
+              "name": "UN.org",
+              "url": "https://www.un.org",
+              "desc": "Site officiel ONU — actualités, Conseil de sécurité, AGNU, programmes."
+            },
+            {
+              "name": "UNHCR Data",
+              "url": "https://www.unhcr.org/data",
+              "desc": "Haut-Commissariat aux réfugiés — données globales réfugiés, déplacés, apatrides."
             }
           ]
         },
@@ -3031,9 +3411,19 @@
               "desc": "Rapports économiques, consultations Article IV, perspectives économiques mondiales."
             },
             {
-              "name": "BRI - Banque des Règlements Internationaux",
-              "url": "https://www.bis.org",
-              "desc": "Standards Bâle III/IV, régulation bancaire, statistiques monétaires internationales."
+              "name": "WTO",
+              "url": "https://www.wto.org",
+              "desc": "Organisation mondiale du commerce — règles, accords, différends, statistiques."
+            },
+            {
+              "name": "IMF",
+              "url": "https://www.imf.org",
+              "desc": "Fonds monétaire international — surveillance, prêts, données, World Economic Outlook."
+            },
+            {
+              "name": "OECD",
+              "url": "https://www.oecd.org",
+              "desc": "Organisation pour la coopération et le développement économiques — études, normes."
             }
           ]
         },
@@ -3046,14 +3436,19 @@
               "desc": "Traités de propriété intellectuelle, système PCT, Protocole de Madrid, recherche brevets."
             },
             {
-              "name": "OCDE",
-              "url": "https://www.oecd.org",
-              "desc": "Recherche politique, BEPS (prix de transfert), études économiques par pays."
-            },
-            {
               "name": "CCI - Chambre de Commerce Internationale",
               "url": "https://iccwbo.org",
               "desc": "Incoterms, règles d'arbitrage, UCP 600 (crédits documentaires)."
+            },
+            {
+              "name": "WIPO Lex",
+              "url": "https://www.wipo.int/wipolex/",
+              "desc": "Base mondiale lois propriété intellectuelle — par pays, par sujet, traités."
+            },
+            {
+              "name": "WTO TRIPS",
+              "url": "https://www.wto.org/english/tratop_e/trips_e/trips_e.htm",
+              "desc": "Accord TRIPS — propriété intellectuelle dans commerce international."
             }
           ]
         }
@@ -3180,6 +3575,16 @@
               "name": "Cour de cassation",
               "url": "https://www.courdecassation.fr",
               "desc": "Jurisprudence civile et pénale, pourvois, doctrine."
+            },
+            {
+              "name": "Conseil Constitutionnel",
+              "url": "https://www.conseil-constitutionnel.fr",
+              "desc": "Décisions du Conseil constitutionnel — QPC, contrôle a priori, doctrine."
+            },
+            {
+              "name": "Conseil d'État",
+              "url": "https://www.conseil-etat.fr",
+              "desc": "Décisions Conseil d'État et juridictions administratives — ArianeWeb."
             }
           ]
         },
@@ -3200,6 +3605,11 @@
               "name": "Bundesverfassungsgericht",
               "url": "https://www.bundesverfassungsgericht.de",
               "desc": "Cour constitutionnelle fédérale, décisions fondamentales."
+            },
+            {
+              "name": "Bundestag",
+              "url": "https://www.bundestag.de",
+              "desc": "Parlement allemand — débats, lois en cours, comptes rendus stenographiques."
             }
           ]
         }
@@ -3256,6 +3666,16 @@
               "name": "JPX (Japan Exchange)",
               "url": "https://www.jpx.co.jp",
               "desc": "Bourse de Tokyo, règles de cotation, données de marché."
+            },
+            {
+              "name": "Japan Law Translation",
+              "url": "https://www.japaneselawtranslation.go.jp",
+              "desc": "Traductions officielles lois japonaises en anglais — codes civil, pénal, commerce."
+            },
+            {
+              "name": "Supreme Court of Japan",
+              "url": "https://www.courts.go.jp/english/",
+              "desc": "Cour suprême du Japon — décisions importantes traduites en anglais."
             }
           ]
         },
@@ -3276,6 +3696,16 @@
               "name": "KRX",
               "url": "http://www.krx.co.kr",
               "desc": "Korea Exchange : KOSPI, KOSDAQ, données de marché."
+            },
+            {
+              "name": "Korea Legislation Research Institute",
+              "url": "https://elaw.klri.re.kr",
+              "desc": "Lois coréennes traduites en anglais — codes, règlements, jurisprudence."
+            },
+            {
+              "name": "Constitutional Court of Korea",
+              "url": "https://english.ccourt.go.kr",
+              "desc": "Cour constitutionnelle coréenne — décisions clés, doctrine constitutionnelle."
             }
           ]
         },
@@ -3407,6 +3837,21 @@
               "name": "Ministry of Commerce (Saudi)",
               "url": "https://mc.gov.sa",
               "desc": "Registre commercial saoudien, régulation des entreprises."
+            },
+            {
+              "name": "Saudi Bureau of Experts",
+              "url": "https://laws.boe.gov.sa",
+              "desc": "Bureau des experts saoudien — codification lois, règlements, ordonnances royales."
+            },
+            {
+              "name": "CMA Saudi Arabia",
+              "url": "https://cma.org.sa",
+              "desc": "Capital Market Authority saoudienne — règles marchés financiers, Tadawul."
+            },
+            {
+              "name": "Saudi Vision 2030",
+              "url": "https://www.vision2030.gov.sa",
+              "desc": "Plan stratégique Arabie saoudite — diversification économique, réformes."
             }
           ]
         },
@@ -3422,6 +3867,21 @@
               "name": "Bahrain Sijilat",
               "url": "https://www.sijilat.bh",
               "desc": "Registre des entreprises de Bahreïn, commercial registry."
+            },
+            {
+              "name": "QFC Authority",
+              "url": "https://www.qfc.qa",
+              "desc": "Qatar Financial Centre — zone financière, règles, registre entreprises."
+            },
+            {
+              "name": "CBB Bahrain",
+              "url": "https://www.cbb.gov.bh",
+              "desc": "Central Bank of Bahrain — règles banques, assurance, marchés capitaux."
+            },
+            {
+              "name": "Qatar Legal Portal",
+              "url": "https://www.almeezan.qa",
+              "desc": "Portail juridique qatari — lois, règlements, traduction anglaise."
             }
           ]
         }
@@ -3598,6 +4058,16 @@
               "name": "Vitalik on ZK-SNARKs",
               "url": "https://vitalik.eth.limo/general/2022/06/15/using_snarks.html",
               "desc": "Introduction technique aux ZK-SNARKs — cas usage, limitations."
+            },
+            {
+              "name": "Circom",
+              "url": "https://docs.circom.io",
+              "desc": "Langage et compilateur pour circuits zero-knowledge — DSL ZK, intégration snarkjs."
+            },
+            {
+              "name": "StarkWare",
+              "url": "https://starkware.co/learn/",
+              "desc": "Recherche StarkWare — STARKs, Cairo, scalabilité Ethereum L2."
             }
           ]
         }

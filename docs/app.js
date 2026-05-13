@@ -82,10 +82,11 @@ async function init() {
 // ─────────────────────────────────────────────────────────────────────────────
 async function loadData() {
     try {
-        const [corpusRes, glossaryRes, refsRes] = await Promise.all([
+        const [corpusRes, glossaryRes, refsRes, crosslinksRes] = await Promise.all([
             fetch('data/corpus-manifest.json'),
             fetch('data/glossary.json'),
-            fetch('data/references.json')
+            fetch('data/references.json'),
+            fetch('data/crosslinks.json')
         ]);
 
         if (corpusRes.ok) {
@@ -100,6 +101,10 @@ async function loadData() {
 
         if (refsRes.ok) {
             state.references = await refsRes.json();
+        }
+
+        if (crosslinksRes.ok) {
+            state.crosslinks = await crosslinksRes.json();
         }
     } catch (err) {
         console.error('Failed to load data:', err);
@@ -403,7 +408,9 @@ function renderHomePage() {
     renderQuickStats();
     renderMotDuJour();
     renderLangPills();
+    renderRecentlyRead();
     setupSurpriseButton();
+    setupRandomPassage();
 }
 
 function renderQuickStats() {
@@ -505,6 +512,65 @@ function setupSurpriseButton() {
                     setTimeout(() => card.classList.remove('highlight'), 2000);
                 }
             }, 100);
+        }
+    });
+}
+
+function renderRecentlyRead() {
+    const container = document.getElementById('recentlyRead');
+    const list = document.getElementById('recentList');
+    if (!container || !list) return;
+
+    const recent = JSON.parse(localStorage.getItem('aleph-recent') || '[]');
+    const validRecent = recent.filter(id => state.bookIndex[id]).slice(0, 5);
+
+    if (!validRecent.length) {
+        container.style.display = 'none';
+        return;
+    }
+
+    container.style.display = '';
+    list.innerHTML = validRecent.map(id => {
+        const book = state.bookIndex[id];
+        return `
+            <a href="#reader" class="recent-item" onclick="openReader('${id}'); return false;">
+                <span class="recent-title">${escapeHtml(book.title)}</span>
+                <span class="recent-author">${escapeHtml(book.author)}</span>
+            </a>
+        `;
+    }).join('');
+}
+
+function setupRandomPassage() {
+    const btn = document.getElementById('randomPassageBtn');
+    if (!btn) return;
+
+    btn.addEventListener('click', async () => {
+        if (!state.books.length) return;
+
+        // Pick random book with text available
+        const booksWithTexts = state.books.filter(b => b.langs?.length);
+        if (!booksWithTexts.length) return;
+
+        const book = booksWithTexts[Math.floor(Math.random() * booksWithTexts.length)];
+        const lang = book.langs[0];
+        const textId = `${book.id}_${lang}`;
+
+        try {
+            const text = await loadTextContent(textId);
+            const paragraphs = (text.content || '')
+                .replace(/\r\n/g, '\n')
+                .split(/\n{2,}/)
+                .filter(p => p.trim().length > 100);
+
+            if (paragraphs.length) {
+                const paraIndex = Math.floor(Math.random() * paragraphs.length);
+                openReader(book.id, { lang, scrollToPara: `para-${paraIndex}` });
+            } else {
+                openReader(book.id, { lang });
+            }
+        } catch {
+            openReader(book.id);
         }
     });
 }
@@ -772,12 +838,26 @@ function renderGlossaryTerm(t) {
         </div>
     ` : '';
 
+    // Cross-links to texts
+    const textIds = state.crosslinks?.termToTexts?.[t.id] || [];
+    const appearsIn = textIds.length ? `
+        <div class="entry-appears">
+            <strong>Apparaît dans:</strong>
+            ${textIds.slice(0, 5).map(tid => {
+                const book = state.bookIndex[tid.replace(/_[a-z]+$/, '')];
+                const title = book?.title || tid;
+                return `<a href="#" onclick="openReader('${tid.replace(/_[a-z]+$/, '')}', {query: '${escapeHtml(t.term)}'}); return false;">${escapeHtml(title)}</a>`;
+            }).join(', ')}${textIds.length > 5 ? ` <span class="entry-more">+${textIds.length - 5}</span>` : ''}
+        </div>
+    ` : '';
+
     return `
         <article class="glossary-entry" data-id="${t.id}" data-lang="${t.lang}" onclick="toggleGlossaryEntry(this)">
             <header class="glossary-entry-header">
                 <span class="glossary-dropcap">${firstLetter}</span>
                 <span class="glossary-term">${escapeHtml(t.term)}</span>
                 <span class="glossary-lang">${t.lang.toUpperCase()}</span>
+                ${textIds.length ? `<span class="glossary-textcount" title="Apparaît dans ${textIds.length} textes">📖${textIds.length}</span>` : ''}
                 <span class="glossary-expand">+</span>
             </header>
             <div class="glossary-entry-body">
@@ -789,6 +869,7 @@ function renderGlossaryTerm(t) {
                 ${etymology}
                 ${usage}
                 ${related}
+                ${appearsIn}
             </div>
         </article>
     `;
@@ -1449,6 +1530,77 @@ function setupReaderPage() {
         state.reader.query = searchInput.value;
         renderReaderBody();
     });
+
+    // Font size controls
+    let fontSize = parseFloat(localStorage.getItem('aleph-font-size') || '1.1');
+    document.getElementById('fontIncrease')?.addEventListener('click', () => {
+        fontSize = Math.min(fontSize + 0.1, 1.6);
+        applyReaderFontSize(fontSize);
+    });
+    document.getElementById('fontDecrease')?.addEventListener('click', () => {
+        fontSize = Math.max(fontSize - 0.1, 0.85);
+        applyReaderFontSize(fontSize);
+    });
+
+    // Save reading position on scroll
+    let scrollTimer = null;
+    document.getElementById('readerBody')?.addEventListener('scroll', () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(saveReadingPosition, 500);
+    }, { passive: true });
+    window.addEventListener('scroll', () => {
+        if (window.location.hash === '#reader') {
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(saveReadingPosition, 500);
+        }
+    }, { passive: true });
+}
+
+function applyReaderFontSize(size) {
+    const body = document.getElementById('readerBody');
+    if (body) body.style.fontSize = size + 'rem';
+    localStorage.setItem('aleph-font-size', size.toString());
+}
+
+function saveReadingPosition() {
+    if (!state.reader.bookId) return;
+    const textId = `${state.reader.bookId}_${state.reader.lang}`;
+    const body = document.getElementById('readerBody');
+    const paras = body?.querySelectorAll('.reader-para');
+    if (!paras?.length) return;
+
+    // Find first visible paragraph
+    const viewTop = window.scrollY;
+    for (const p of paras) {
+        const rect = p.getBoundingClientRect();
+        if (rect.top >= 0 || rect.bottom > 100) {
+            const pos = { para: p.id, scroll: window.scrollY };
+            const positions = JSON.parse(localStorage.getItem('aleph-positions') || '{}');
+            positions[textId] = pos;
+            localStorage.setItem('aleph-positions', JSON.stringify(positions));
+            break;
+        }
+    }
+}
+
+function restoreReadingPosition() {
+    if (!state.reader.bookId) return;
+    const textId = `${state.reader.bookId}_${state.reader.lang}`;
+    const positions = JSON.parse(localStorage.getItem('aleph-positions') || '{}');
+    const pos = positions[textId];
+    if (pos?.para) {
+        setTimeout(() => {
+            const el = document.getElementById(pos.para);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+}
+
+function trackRecentlyRead(bookId) {
+    const recent = JSON.parse(localStorage.getItem('aleph-recent') || '[]');
+    const filtered = recent.filter(id => id !== bookId);
+    filtered.unshift(bookId);
+    localStorage.setItem('aleph-recent', JSON.stringify(filtered.slice(0, 10)));
 }
 
 async function openReader(bookId, opts = {}) {
@@ -1463,11 +1615,33 @@ async function openReader(bookId, opts = {}) {
     const searchInput = document.getElementById('readerSearchInput');
     if (searchInput) searchInput.value = state.reader.query;
 
+    trackRecentlyRead(bookId);
     renderReaderShell(book);
     navigateTo('reader');
-    window.scrollTo(0, 0);
+
+    // Restore font size
+    const fontSize = parseFloat(localStorage.getItem('aleph-font-size') || '1.1');
+    applyReaderFontSize(fontSize);
+
+    // Check for paragraph hash (permalink)
+    const paraMatch = window.location.hash.match(/para-(\d+)/);
+    if (paraMatch) {
+        opts.scrollToPara = `para-${paraMatch[1]}`;
+    }
 
     await loadReaderText();
+
+    // Restore position or scroll to paragraph
+    if (opts.scrollToPara) {
+        setTimeout(() => {
+            const el = document.getElementById(opts.scrollToPara);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    } else if (!opts.query) {
+        restoreReadingPosition();
+    } else {
+        window.scrollTo(0, 0);
+    }
 }
 window.openReader = openReader;
 

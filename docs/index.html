@@ -107,7 +107,18 @@
                 <button class="surprise-btn" id="surpriseBtn">
                     <span>✦</span> Surprise
                 </button>
+                <button class="surprise-btn surprise-passage" id="randomPassageBtn">
+                    <span>📜</span> Passage aléatoire
+                </button>
             </div>
+
+            <!-- Recently Read -->
+            <section class="recently-read" id="recentlyRead" style="display: none;">
+                <h2 class="section-title">Lectures récentes</h2>
+                <div class="recent-list" id="recentList">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
         </section>
 
         <!-- ═══════════════════════════════════════════════════════════════════
@@ -205,6 +216,10 @@
                     <div class="reader-actions">
                         <div class="reader-lang-switch" id="readerLangSwitch"></div>
                         <input type="text" class="reader-search-input" id="readerSearchInput" placeholder="chercher dans ce texte...">
+                        <div class="reader-font-controls">
+                            <button class="reader-font-btn" id="fontDecrease" title="Réduire">A−</button>
+                            <button class="reader-font-btn" id="fontIncrease" title="Agrandir">A+</button>
+                        </div>
                         <a href="#" class="reader-external" id="readerExternal" target="_blank" rel="noopener">source originale ↗</a>
                     </div>
                     <div class="reader-search-meta" id="readerSearchMeta"></div>

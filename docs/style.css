@@ -510,6 +510,18 @@ main {
   background: var(--ink);
 }
 
+.surprise-passage {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+
+.surprise-passage:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--paper);
+}
+
 /* Book card highlight animation */
 .book-card.highlight {
   animation: pulse 0.5s ease-in-out 3;
@@ -519,6 +531,55 @@ main {
   0%, 100% { border-color: var(--rule); }
   50% { border-color: var(--accent); box-shadow: 0 0 12px rgba(201, 168, 76, 0.3); }
 }
+
+/* Recently Read Section */
+.recently-read {
+  padding: 0 var(--page-x) 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.recently-read .section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 1rem;
+  font-family: var(--mono);
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.recent-item:hover {
+  border-color: var(--ink);
+  background: var(--paper-1);
+}
+
+.recent-title {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.recent-author {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--ink-3);
+  letter-spacing: 0.03em;
 }
 
 .recent-table {
@@ -1172,6 +1233,46 @@ main {
   border-bottom-style: solid;
 }
 
+.entry-appears {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--rule);
+  font-size: 0.85rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.entry-appears strong {
+  color: var(--ink);
+  font-weight: 500;
+  margin-right: 0.35rem;
+}
+
+.entry-appears a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.entry-appears a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.entry-more {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+}
+
+.glossary-textcount {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--ink-3);
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    SOURCES PAGE
    ───────────────────────────────────────────────────────────────────────────── */
@@ -1734,6 +1835,27 @@ details.sources-section[open] > summary::after {
 
 .reader-search-input:focus { border-color: var(--ink-2); }
 .reader-search-input::placeholder { color: var(--ink-3); }
+
+.reader-font-controls {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.reader-font-btn {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.reader-font-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
 
 .reader-external {
   font-family: var(--mono);

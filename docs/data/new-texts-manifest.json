@@ -1,0 +1,1360 @@
+[
+  {
+    "id": "gilgamesh",
+    "title": "The Epic of Gilgamesh",
+    "author": "Anonymous",
+    "period": "ancient",
+    "year": -2100,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 11000
+      }
+    },
+    "tags": [
+      "epic",
+      "mesopotamia",
+      "sumerian",
+      "flood myth",
+      "immortality"
+    ]
+  },
+  {
+    "id": "book-of-dead",
+    "title": "The Egyptian Book of the Dead",
+    "author": "Anonymous",
+    "period": "ancient",
+    "year": -1550,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 7145
+      }
+    },
+    "tags": [
+      "egyptian",
+      "afterlife",
+      "funerary",
+      "spells",
+      "osiris"
+    ]
+  },
+  {
+    "id": "epictetus-enchiridion",
+    "title": "Enchiridion",
+    "author": "Epictetus",
+    "period": "classical",
+    "year": 125,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 45109
+      }
+    },
+    "tags": [
+      "stoicism",
+      "ethics",
+      "manual",
+      "practical philosophy"
+    ]
+  },
+  {
+    "id": "epictetus-discourses",
+    "title": "Discourses",
+    "author": "Epictetus",
+    "period": "classical",
+    "year": 108,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 10661
+      }
+    },
+    "tags": [
+      "stoicism",
+      "ethics",
+      "lectures",
+      "arrian"
+    ]
+  },
+  {
+    "id": "diogenes-laertius",
+    "title": "Lives of Eminent Philosophers",
+    "author": "Diogenes Laërtius",
+    "period": "classical",
+    "year": 230,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 57342
+      }
+    },
+    "tags": [
+      "biography",
+      "philosophy",
+      "doxography",
+      "anecdotes"
+    ]
+  },
+  {
+    "id": "plotinus-enneads",
+    "title": "The Enneads (Selections)",
+    "author": "Plotinus",
+    "period": "classical",
+    "year": 270,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 37903
+      }
+    },
+    "tags": [
+      "neoplatonism",
+      "metaphysics",
+      "the one",
+      "emanation"
+    ]
+  },
+  {
+    "id": "hesiod-theogony",
+    "title": "Theogony & Works and Days",
+    "author": "Hesiod",
+    "period": "classical",
+    "year": -700,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 348
+      }
+    },
+    "tags": [
+      "cosmogony",
+      "greek mythology",
+      "didactic poetry",
+      "ages of man"
+    ]
+  },
+  {
+    "id": "pindar-odes",
+    "title": "The Odes",
+    "author": "Pindar",
+    "period": "classical",
+    "year": -470,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 10717
+      }
+    },
+    "tags": [
+      "lyric poetry",
+      "victory odes",
+      "olympic games",
+      "mythology"
+    ]
+  },
+  {
+    "id": "euripides-medea",
+    "title": "Medea",
+    "author": "Euripides",
+    "period": "classical",
+    "year": -431,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 35451
+      }
+    },
+    "tags": [
+      "tragedy",
+      "revenge",
+      "women",
+      "infanticide",
+      "jason"
+    ]
+  },
+  {
+    "id": "euripides-bacchae",
+    "title": "The Bacchae",
+    "author": "Euripides",
+    "period": "classical",
+    "year": -405,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 5793
+      }
+    },
+    "tags": [
+      "tragedy",
+      "dionysus",
+      "ecstasy",
+      "madness",
+      "ritual"
+    ]
+  },
+  {
+    "id": "euripides-hippolytus",
+    "title": "Hippolytus",
+    "author": "Euripides",
+    "period": "classical",
+    "year": -428,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 14337
+      }
+    },
+    "tags": [
+      "tragedy",
+      "phaedra",
+      "passion",
+      "artemis",
+      "aphrodite"
+    ]
+  },
+  {
+    "id": "aristophanes-clouds",
+    "title": "The Clouds",
+    "author": "Aristophanes",
+    "period": "classical",
+    "year": -423,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 2562
+      }
+    },
+    "tags": [
+      "comedy",
+      "socrates",
+      "satire",
+      "sophistry",
+      "education"
+    ]
+  },
+  {
+    "id": "aristophanes-birds",
+    "title": "The Birds",
+    "author": "Aristophanes",
+    "period": "classical",
+    "year": -414,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 3013
+      }
+    },
+    "tags": [
+      "comedy",
+      "utopia",
+      "fantasy",
+      "politics",
+      "satire"
+    ]
+  },
+  {
+    "id": "aristophanes-lysistrata",
+    "title": "Lysistrata",
+    "author": "Aristophanes",
+    "period": "classical",
+    "year": -411,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 7700
+      }
+    },
+    "tags": [
+      "comedy",
+      "war",
+      "women",
+      "sex strike",
+      "peace"
+    ]
+  },
+  {
+    "id": "xenophon-anabasis",
+    "title": "Anabasis",
+    "author": "Xenophon",
+    "period": "classical",
+    "year": -370,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 1170
+      }
+    },
+    "tags": [
+      "history",
+      "ten thousand",
+      "persia",
+      "mercenaries",
+      "march"
+    ]
+  },
+  {
+    "id": "xenophon-memorabilia",
+    "title": "Memorabilia",
+    "author": "Xenophon",
+    "period": "classical",
+    "year": -371,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 1177
+      }
+    },
+    "tags": [
+      "socrates",
+      "dialogues",
+      "ethics",
+      "biography"
+    ]
+  },
+  {
+    "id": "xenophon-cyropaedia",
+    "title": "Cyropaedia",
+    "author": "Xenophon",
+    "period": "classical",
+    "year": -370,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 2085
+      }
+    },
+    "tags": [
+      "cyrus",
+      "persia",
+      "education",
+      "leadership",
+      "political philosophy"
+    ]
+  },
+  {
+    "id": "lucian-dialogues",
+    "title": "Dialogues of the Dead",
+    "author": "Lucian",
+    "period": "classical",
+    "year": 165,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 6829
+      }
+    },
+    "tags": [
+      "satire",
+      "afterlife",
+      "philosophy",
+      "wit",
+      "menippean"
+    ]
+  },
+  {
+    "id": "longus-daphnis",
+    "title": "Daphnis and Chloe",
+    "author": "Longus",
+    "period": "classical",
+    "year": 200,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 2629
+      }
+    },
+    "tags": [
+      "pastoral",
+      "romance",
+      "love",
+      "greek novel"
+    ]
+  },
+  {
+    "id": "cicero-offices",
+    "title": "De Officiis (On Duties)",
+    "author": "Cicero",
+    "period": "classical",
+    "year": -44,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 47001
+      }
+    },
+    "tags": [
+      "ethics",
+      "duty",
+      "stoicism",
+      "practical wisdom"
+    ]
+  },
+  {
+    "id": "cicero-tusculan",
+    "title": "Tusculan Disputations",
+    "author": "Cicero",
+    "period": "classical",
+    "year": -45,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 14988
+      }
+    },
+    "tags": [
+      "philosophy",
+      "death",
+      "pain",
+      "grief",
+      "emotions"
+    ]
+  },
+  {
+    "id": "cicero-nature-gods",
+    "title": "On the Nature of the Gods",
+    "author": "Cicero",
+    "period": "classical",
+    "year": -45,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 14988
+      }
+    },
+    "tags": [
+      "theology",
+      "epicureanism",
+      "stoicism",
+      "skepticism"
+    ]
+  },
+  {
+    "id": "lucretius-natura",
+    "title": "De Rerum Natura",
+    "author": "Lucretius",
+    "period": "classical",
+    "year": -55,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 785
+      }
+    },
+    "tags": [
+      "epicureanism",
+      "atomism",
+      "physics",
+      "didactic poetry",
+      "death"
+    ]
+  },
+  {
+    "id": "seneca-letters",
+    "title": "Moral Letters to Lucilius",
+    "author": "Seneca",
+    "period": "classical",
+    "year": 65,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 56075
+      }
+    },
+    "tags": [
+      "stoicism",
+      "ethics",
+      "letters",
+      "practical philosophy",
+      "death"
+    ]
+  },
+  {
+    "id": "seneca-dialogues",
+    "title": "Dialogues (On Anger, On Providence)",
+    "author": "Seneca",
+    "period": "classical",
+    "year": 50,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 56078
+      }
+    },
+    "tags": [
+      "stoicism",
+      "anger",
+      "providence",
+      "consolation"
+    ]
+  },
+  {
+    "id": "boethius-consolation",
+    "title": "The Consolation of Philosophy",
+    "author": "Boethius",
+    "period": "late_antique",
+    "year": 524,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 14328
+      }
+    },
+    "tags": [
+      "philosophy",
+      "fortune",
+      "free will",
+      "theodicy",
+      "prison"
+    ]
+  },
+  {
+    "id": "ovid-metamorphoses",
+    "title": "Metamorphoses",
+    "author": "Ovid",
+    "period": "classical",
+    "year": 8,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 26073
+      }
+    },
+    "tags": [
+      "mythology",
+      "transformation",
+      "epic",
+      "love",
+      "gods"
+    ]
+  },
+  {
+    "id": "ovid-art-love",
+    "title": "Ars Amatoria",
+    "author": "Ovid",
+    "period": "classical",
+    "year": 2,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 5765
+      }
+    },
+    "tags": [
+      "love",
+      "seduction",
+      "didactic",
+      "wit",
+      "elegiac"
+    ]
+  },
+  {
+    "id": "horace-odes",
+    "title": "Odes",
+    "author": "Horace",
+    "period": "classical",
+    "year": -23,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 9175
+      }
+    },
+    "tags": [
+      "lyric poetry",
+      "carpe diem",
+      "wine",
+      "friendship",
+      "golden mean"
+    ]
+  },
+  {
+    "id": "horace-satires",
+    "title": "Satires and Epistles",
+    "author": "Horace",
+    "period": "classical",
+    "year": -35,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 14020
+      }
+    },
+    "tags": [
+      "satire",
+      "ethics",
+      "self-mockery",
+      "horatian satire"
+    ]
+  },
+  {
+    "id": "juvenal-satires",
+    "title": "Satires",
+    "author": "Juvenal",
+    "period": "classical",
+    "year": 127,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 50848
+      }
+    },
+    "tags": [
+      "satire",
+      "indignation",
+      "rome",
+      "corruption",
+      "women"
+    ]
+  },
+  {
+    "id": "catullus-poems",
+    "title": "Poems",
+    "author": "Catullus",
+    "period": "classical",
+    "year": -54,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 24122
+      }
+    },
+    "tags": [
+      "love poetry",
+      "lesbia",
+      "lyric",
+      "invective",
+      "neoteric"
+    ]
+  },
+  {
+    "id": "livy-rome",
+    "title": "History of Rome (Books I-X)",
+    "author": "Livy",
+    "period": "classical",
+    "year": -27,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 19725
+      }
+    },
+    "tags": [
+      "history",
+      "rome",
+      "republic",
+      "founding myths",
+      "exempla"
+    ]
+  },
+  {
+    "id": "suetonius-caesars",
+    "title": "Lives of the Twelve Caesars",
+    "author": "Suetonius",
+    "period": "classical",
+    "year": 121,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 6386
+      }
+    },
+    "tags": [
+      "biography",
+      "emperors",
+      "gossip",
+      "anecdotes",
+      "rome"
+    ]
+  },
+  {
+    "id": "pliny-letters",
+    "title": "Letters",
+    "author": "Pliny the Younger",
+    "period": "classical",
+    "year": 109,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 2811
+      }
+    },
+    "tags": [
+      "letters",
+      "eruption vesuvius",
+      "roman life",
+      "trajan"
+    ]
+  },
+  {
+    "id": "petronius-satyricon",
+    "title": "Satyricon",
+    "author": "Petronius",
+    "period": "classical",
+    "year": 65,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 5225
+      }
+    },
+    "tags": [
+      "novel",
+      "satire",
+      "picaresque",
+      "feast trimalchio",
+      "decadence"
+    ]
+  },
+  {
+    "id": "apuleius-golden-ass",
+    "title": "The Golden Ass",
+    "author": "Apuleius",
+    "period": "classical",
+    "year": 170,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 1666
+      }
+    },
+    "tags": [
+      "novel",
+      "metamorphosis",
+      "cupid psyche",
+      "isis",
+      "magic"
+    ]
+  },
+  {
+    "id": "beowulf",
+    "title": "Beowulf",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 1000,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 16328
+      }
+    },
+    "tags": [
+      "old english",
+      "epic",
+      "monsters",
+      "anglo-saxon",
+      "heroism"
+    ]
+  },
+  {
+    "id": "poetic-edda",
+    "title": "The Poetic Edda",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 1270,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 14726
+      }
+    },
+    "tags": [
+      "norse mythology",
+      "old norse",
+      "ragnarok",
+      "odin",
+      "thor"
+    ]
+  },
+  {
+    "id": "song-roland",
+    "title": "The Song of Roland",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 1100,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 391
+      }
+    },
+    "tags": [
+      "chanson de geste",
+      "charlemagne",
+      "chivalry",
+      "crusades",
+      "french epic"
+    ]
+  },
+  {
+    "id": "nibelungenlied",
+    "title": "Nibelungenlied",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 1200,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 7321
+      }
+    },
+    "tags": [
+      "german epic",
+      "siegfried",
+      "kriemhild",
+      "burgundy",
+      "revenge"
+    ]
+  },
+  {
+    "id": "cid",
+    "title": "El Cantar de mio Cid",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 1207,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 500
+      }
+    },
+    "tags": [
+      "spanish epic",
+      "reconquista",
+      "honor",
+      "exile",
+      "castile"
+    ]
+  },
+  {
+    "id": "gawain-green-knight",
+    "title": "Sir Gawain and the Green Knight",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 1375,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 14568
+      }
+    },
+    "tags": [
+      "arthurian",
+      "chivalry",
+      "temptation",
+      "beheading game",
+      "alliterative"
+    ]
+  },
+  {
+    "id": "malory-morte-arthur",
+    "title": "Le Morte d'Arthur",
+    "author": "Thomas Malory",
+    "period": "medieval",
+    "year": 1485,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 1251
+      }
+    },
+    "tags": [
+      "arthurian",
+      "round table",
+      "lancelot",
+      "grail",
+      "camelot"
+    ]
+  },
+  {
+    "id": "boccaccio-decameron",
+    "title": "The Decameron",
+    "author": "Giovanni Boccaccio",
+    "period": "medieval",
+    "year": 1353,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 23700
+      }
+    },
+    "tags": [
+      "frame narrative",
+      "plague",
+      "novella",
+      "wit",
+      "renaissance"
+    ]
+  },
+  {
+    "id": "petrarch-canzoniere",
+    "title": "Canzoniere (Sonnets to Laura)",
+    "author": "Francesco Petrarca",
+    "period": "medieval",
+    "year": 1374,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 17650
+      }
+    },
+    "tags": [
+      "sonnets",
+      "laura",
+      "love poetry",
+      "petrarchism",
+      "vernacular"
+    ]
+  },
+  {
+    "id": "chaucer-canterbury",
+    "title": "The Canterbury Tales",
+    "author": "Geoffrey Chaucer",
+    "period": "medieval",
+    "year": 1400,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 2383
+      }
+    },
+    "tags": [
+      "pilgrimage",
+      "estates satire",
+      "frame narrative",
+      "middle english"
+    ]
+  },
+  {
+    "id": "piers-plowman",
+    "title": "Piers Plowman",
+    "author": "William Langland",
+    "period": "medieval",
+    "year": 1370,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 43659
+      }
+    },
+    "tags": [
+      "allegory",
+      "vision",
+      "social criticism",
+      "alliterative"
+    ]
+  },
+  {
+    "id": "margery-kempe",
+    "title": "The Book of Margery Kempe",
+    "author": "Margery Kempe",
+    "period": "medieval",
+    "year": 1438,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 5196
+      }
+    },
+    "tags": [
+      "autobiography",
+      "mysticism",
+      "pilgrimage",
+      "visions",
+      "women"
+    ]
+  },
+  {
+    "id": "cloud-unknowing",
+    "title": "The Cloud of Unknowing",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 1375,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 30448
+      }
+    },
+    "tags": [
+      "mysticism",
+      "contemplation",
+      "apophatic",
+      "prayer"
+    ]
+  },
+  {
+    "id": "julian-norwich",
+    "title": "Revelations of Divine Love",
+    "author": "Julian of Norwich",
+    "period": "medieval",
+    "year": 1395,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 52958
+      }
+    },
+    "tags": [
+      "mysticism",
+      "visions",
+      "theodicy",
+      "divine love",
+      "anchoress"
+    ]
+  },
+  {
+    "id": "aquinas-summa",
+    "title": "Summa Theologica (Selections)",
+    "author": "Thomas Aquinas",
+    "period": "medieval",
+    "year": 1274,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 17611
+      }
+    },
+    "tags": [
+      "scholasticism",
+      "theology",
+      "five ways",
+      "natural law",
+      "thomism"
+    ]
+  },
+  {
+    "id": "meister-eckhart",
+    "title": "Meister Eckhart's Sermons",
+    "author": "Meister Eckhart",
+    "period": "medieval",
+    "year": 1328,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 39766
+      }
+    },
+    "tags": [
+      "mysticism",
+      "german",
+      "detachment",
+      "ground of soul",
+      "apophatic"
+    ]
+  },
+  {
+    "id": "abelard-heloise",
+    "title": "Letters of Abelard and Heloise",
+    "author": "Peter Abelard & Heloise",
+    "period": "medieval",
+    "year": 1132,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 35977
+      }
+    },
+    "tags": [
+      "letters",
+      "love",
+      "philosophy",
+      "monasticism",
+      "tragedy"
+    ]
+  },
+  {
+    "id": "rubaiyat-khayyam",
+    "title": "Rubáiyát of Omar Khayyám",
+    "author": "Omar Khayyám",
+    "period": "medieval",
+    "year": 1120,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 246
+      }
+    },
+    "tags": [
+      "persian poetry",
+      "quatrains",
+      "carpe diem",
+      "wine",
+      "mortality"
+    ]
+  },
+  {
+    "id": "rumi-masnavi",
+    "title": "The Masnavi (Selections)",
+    "author": "Jalal ad-Din Rumi",
+    "period": "medieval",
+    "year": 1273,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 34903
+      }
+    },
+    "tags": [
+      "persian poetry",
+      "sufi",
+      "mysticism",
+      "love",
+      "parables"
+    ]
+  },
+  {
+    "id": "arabian-nights",
+    "title": "The Arabian Nights (Selections)",
+    "author": "Anonymous",
+    "period": "medieval",
+    "year": 850,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 128
+      }
+    },
+    "tags": [
+      "arabic",
+      "frame narrative",
+      "scheherazade",
+      "folklore"
+    ]
+  },
+  {
+    "id": "tale-of-genji",
+    "title": "The Tale of Genji (Selections)",
+    "author": "Murasaki Shikibu",
+    "period": "medieval",
+    "year": 1010,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 6540
+      }
+    },
+    "tags": [
+      "japanese",
+      "heian",
+      "novel",
+      "court life",
+      "mono no aware"
+    ]
+  },
+  {
+    "id": "zhuangzi",
+    "title": "Zhuangzi",
+    "author": "Zhuangzi",
+    "period": "classical",
+    "year": -300,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 17072
+      }
+    },
+    "tags": [
+      "taoism",
+      "chinese philosophy",
+      "wu wei",
+      "relativism",
+      "butterfly dream"
+    ]
+  },
+  {
+    "id": "i-ching",
+    "title": "I Ching (Book of Changes)",
+    "author": "Anonymous",
+    "period": "ancient",
+    "year": -1000,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 339
+      }
+    },
+    "tags": [
+      "divination",
+      "chinese philosophy",
+      "yin yang",
+      "hexagrams",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "mencius",
+    "title": "Mencius",
+    "author": "Mencius",
+    "period": "classical",
+    "year": -300,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 56063
+      }
+    },
+    "tags": [
+      "confucianism",
+      "human nature",
+      "righteousness",
+      "benevolence"
+    ]
+  },
+  {
+    "id": "upanishads",
+    "title": "The Upanishads",
+    "author": "Various",
+    "period": "ancient",
+    "year": -800,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 3283
+      }
+    },
+    "tags": [
+      "sanskrit",
+      "hindu philosophy",
+      "vedanta",
+      "brahman",
+      "atman"
+    ]
+  },
+  {
+    "id": "ramayana",
+    "title": "The Ramayana (Selections)",
+    "author": "Valmiki",
+    "period": "ancient",
+    "year": -400,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 24869
+      }
+    },
+    "tags": [
+      "sanskrit",
+      "epic",
+      "rama",
+      "sita",
+      "dharma",
+      "hindu"
+    ]
+  },
+  {
+    "id": "mahabharata-selections",
+    "title": "Mahabharata (Selections)",
+    "author": "Vyasa",
+    "period": "ancient",
+    "year": -400,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 7864
+      }
+    },
+    "tags": [
+      "sanskrit",
+      "epic",
+      "kurukshetra",
+      "dharma",
+      "hindu"
+    ]
+  },
+  {
+    "id": "montaigne-essays",
+    "title": "Essays",
+    "author": "Michel de Montaigne",
+    "period": "early_modern",
+    "year": 1580,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 3600
+      }
+    },
+    "tags": [
+      "essay",
+      "skepticism",
+      "self-examination",
+      "humanism"
+    ]
+  },
+  {
+    "id": "pascal-pensees",
+    "title": "Pensées",
+    "author": "Blaise Pascal",
+    "period": "early_modern",
+    "year": 1670,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 18269
+      }
+    },
+    "tags": [
+      "aphorisms",
+      "christianity",
+      "wagering",
+      "human condition"
+    ]
+  },
+  {
+    "id": "erasmus-folly",
+    "title": "In Praise of Folly",
+    "author": "Erasmus",
+    "period": "early_modern",
+    "year": 1511,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 9371
+      }
+    },
+    "tags": [
+      "satire",
+      "humanism",
+      "church criticism",
+      "wit"
+    ]
+  },
+  {
+    "id": "more-utopia",
+    "title": "Utopia",
+    "author": "Thomas More",
+    "period": "early_modern",
+    "year": 1516,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 2130
+      }
+    },
+    "tags": [
+      "utopia",
+      "political philosophy",
+      "humanism",
+      "satire"
+    ]
+  },
+  {
+    "id": "bacon-essays",
+    "title": "Essays",
+    "author": "Francis Bacon",
+    "period": "early_modern",
+    "year": 1625,
+    "languages": {
+      "en": {
+        "source": "gutenberg",
+        "gutenberg_id": 575
+      }
+    },
+    "tags": [
+      "essays",
+      "practical wisdom",
+      "aphorisms",
+      "science"
+    ]
+  }
+]

@@ -907,6 +907,140 @@ main {
   font-size: 0.65rem;
 }
 
+/* Map View */
+.map-container {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  margin-top: 1rem;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+}
+
+.map-world {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.map-region {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.15s;
+}
+
+.map-region:hover {
+  transform: scale(1.1);
+}
+
+.map-region.active .map-pin {
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
+.map-pin {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.map-pin-count {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.map-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.map-books-panel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 280px;
+  max-height: calc(100% - 2rem);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.map-hint {
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  font-style: italic;
+  text-align: center;
+}
+
+.map-panel-title {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.map-panel-count {
+  color: var(--ink-3);
+  font-weight: normal;
+}
+
+.map-books-list {
+  flex: 1;
+  overflow-y: auto;
+  margin: 0 -1rem;
+  padding: 0;
+}
+
+.map-book-item {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.1s;
+}
+
+.map-book-item:last-child {
+  border-bottom: none;
+}
+
+.map-book-item:hover {
+  background: var(--paper-2);
+}
+
+.map-book-title {
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+.map-book-author {
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+
 /* Book Cards Grid */
 .books-grid {
   display: grid;
@@ -2239,8 +2373,166 @@ details.sources-section[open] > summary::after {
   opacity: 1;
 }
 
-.para-share:hover {
+.para-share:hover,
+.para-note:hover {
   color: var(--accent);
+}
+
+.para-actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.reader-para:hover .para-actions {
+  opacity: 1;
+}
+
+.para-note {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.15s;
+}
+
+.para-note.active {
+  color: var(--accent);
+}
+
+.reader-para.has-note {
+  background: linear-gradient(to right, rgba(193, 77, 44, 0.06), transparent);
+}
+
+.para-note-preview {
+  display: block;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--ink-3);
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-left: 2px solid var(--accent);
+  background: rgba(193, 77, 44, 0.04);
+}
+
+/* Note Modal */
+.note-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 20, 16, 0.6);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.note-modal-overlay.active {
+  display: flex;
+}
+
+.note-modal {
+  width: 100%;
+  max-width: 500px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+.note-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.note-modal-header h3 {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0;
+}
+
+.note-modal-close {
+  font-size: 1.5rem;
+  color: var(--ink-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.note-modal-close:hover {
+  color: var(--ink);
+}
+
+.note-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem 1.25rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  resize: vertical;
+  outline: none;
+}
+
+.note-textarea::placeholder {
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+.note-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.note-btn {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.note-btn-delete {
+  background: transparent;
+  color: var(--ink-3);
+}
+
+.note-btn-delete:hover {
+  color: #c14d2c;
+  border-color: #c14d2c;
+}
+
+.note-btn-save {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.note-btn-save:hover {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .reader-body mark {

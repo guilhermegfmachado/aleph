@@ -962,19 +962,21 @@ function setupBrowseControls() {
         renderBooksGrid();
     });
 
+    const mapContainer = document.getElementById('mapContainer');
+
     viewToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
             viewToggles.forEach(t => t.classList.remove('active'));
             toggle.classList.add('active');
             const view = toggle.dataset.view;
 
-            if (grid) grid.style.display = view === 'timeline' ? 'none' : '';
+            if (grid) grid.style.display = (view === 'timeline' || view === 'map') ? 'none' : '';
             if (grid) grid.classList.toggle('list-view', view === 'list');
             if (timeline) timeline.style.display = view === 'timeline' ? 'block' : 'none';
+            if (mapContainer) mapContainer.style.display = view === 'map' ? 'block' : 'none';
 
-            if (view === 'timeline') {
-                renderTimeline();
-            }
+            if (view === 'timeline') renderTimeline();
+            if (view === 'map') renderMap();
         });
     });
 
@@ -1106,6 +1108,88 @@ function renderTimeline() {
             .text(lang.name);
     });
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MAP VIEW
+// ─────────────────────────────────────────────────────────────────────────────
+function renderMap() {
+    const container = document.getElementById('mapContainer');
+    if (!container || !state.books.length) return;
+
+    // Define regions and their texts based on language/origin
+    const regions = [
+        { id: 'greece', name: 'Grèce', langs: ['el', 'grc'], color: '#8b5cf6', x: 55, y: 35 },
+        { id: 'rome', name: 'Rome', langs: ['la'], color: '#ef4444', x: 45, y: 38 },
+        { id: 'britain', name: 'Îles Britanniques', langs: ['en', 'ang'], color: '#3b82f6', x: 35, y: 25 },
+        { id: 'france', name: 'France', langs: ['fr'], color: '#f59e0b', x: 40, y: 32 },
+        { id: 'germany', name: 'Germanie', langs: ['de', 'gmh'], color: '#22c55e', x: 48, y: 28 },
+        { id: 'iberia', name: 'Ibérie', langs: ['es', 'pt'], color: '#ec4899', x: 32, y: 40 },
+        { id: 'italy', name: 'Italie', langs: ['it'], color: '#f97316', x: 48, y: 42 },
+        { id: 'persia', name: 'Perse', langs: ['fa'], color: '#14b8a6', x: 70, y: 38 },
+        { id: 'india', name: 'Inde', langs: ['sa', 'pi'], color: '#f97316', x: 78, y: 48 },
+        { id: 'china', name: 'Chine', langs: ['zh'], color: '#ec4899', x: 88, y: 38 },
+        { id: 'japan', name: 'Japon', langs: ['ja'], color: '#06b6d4', x: 95, y: 35 },
+        { id: 'arabia', name: 'Arabie', langs: ['ar'], color: '#84cc16', x: 65, y: 48 },
+        { id: 'mesopotamia', name: 'Mésopotamie', langs: ['akk', 'sux'], color: '#a855f7', x: 68, y: 42 },
+        { id: 'egypt', name: 'Égypte', langs: ['egy'], color: '#eab308', x: 58, y: 50 },
+        { id: 'scandinavia', name: 'Scandinavie', langs: ['non', 'no'], color: '#0ea5e9', x: 48, y: 18 }
+    ];
+
+    // Count books per region
+    const regionBooks = {};
+    regions.forEach(r => { regionBooks[r.id] = []; });
+
+    state.books.forEach(book => {
+        const region = regions.find(r => r.langs.includes(book.lang));
+        if (region) {
+            regionBooks[region.id].push(book);
+        }
+    });
+
+    container.innerHTML = `
+        <div class="map-world">
+            ${regions.map(r => {
+                const books = regionBooks[r.id];
+                if (books.length === 0) return '';
+                return `
+                    <div class="map-region" style="left: ${r.x}%; top: ${r.y}%;">
+                        <button class="map-pin" style="background: ${r.color};" onclick="showRegionBooks('${r.id}')" title="${r.name}: ${books.length} textes">
+                            <span class="map-pin-count">${books.length}</span>
+                        </button>
+                        <span class="map-label">${r.name}</span>
+                    </div>
+                `;
+            }).join('')}
+        </div>
+        <div class="map-books-panel" id="mapBooksPanel">
+            <p class="map-hint">Cliquez sur une région pour voir ses textes</p>
+        </div>
+    `;
+
+    // Store for click handler
+    window.mapRegions = regions;
+    window.mapRegionBooks = regionBooks;
+}
+
+window.showRegionBooks = function(regionId) {
+    const region = window.mapRegions.find(r => r.id === regionId);
+    const books = window.mapRegionBooks[regionId];
+    const panel = document.getElementById('mapBooksPanel');
+
+    if (!panel || !region || !books.length) return;
+
+    panel.innerHTML = `
+        <h3 class="map-panel-title">${region.name} <span class="map-panel-count">${books.length} textes</span></h3>
+        <div class="map-books-list">
+            ${books.map(b => `
+                <button class="map-book-item" onclick="openReader('${b.id}')">
+                    <span class="map-book-title">${escapeHtml(b.title)}</span>
+                    <span class="map-book-author">${escapeHtml(b.author)}</span>
+                </button>
+            `).join('')}
+        </div>
+    `;
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // GLOSSARY PAGE
@@ -1930,7 +2014,7 @@ function setupReaderPage() {
         applyReaderFontSize(fontSize);
     });
 
-    // Share paragraph link
+    // Share paragraph link and notes
     document.getElementById('readerBody')?.addEventListener('click', (e) => {
         if (e.target.classList.contains('para-share')) {
             const paraIdx = e.target.dataset.para;
@@ -1939,6 +2023,10 @@ function setupReaderPage() {
                 e.target.textContent = '✓';
                 setTimeout(() => { e.target.textContent = '§'; }, 1500);
             });
+        }
+        if (e.target.classList.contains('para-note')) {
+            const paraIdx = e.target.dataset.para;
+            openNoteEditor(paraIdx);
         }
     });
 
@@ -2154,12 +2242,99 @@ function renderReaderBody() {
         }
         if (meta) meta.textContent = totalHits ? `${totalHits} occurrence${totalHits > 1 ? 's' : ''} dans ${html.match(/class="reader-para/g)?.length || 0} paragraphe${totalHits > 1 ? 's' : ''}` : '';
     } else {
-        html = paragraphs.map((p, i) => `<p class="reader-para" id="para-${i}" data-i="${i + 1}">${escapeHtml(p)}<button class="para-share" data-para="${i}" title="Copier le lien">§</button></p>`).join('');
+        html = paragraphs.map((p, i) => {
+            const noteKey = `${state.reader.bookId}_${state.reader.lang}_${i}`;
+            const hasNote = getUserNote(noteKey);
+            return `<p class="reader-para ${hasNote ? 'has-note' : ''}" id="para-${i}" data-i="${i + 1}">
+                ${escapeHtml(p)}
+                <span class="para-actions">
+                    <button class="para-note ${hasNote ? 'active' : ''}" data-para="${i}" title="Ajouter une note">✎</button>
+                    <button class="para-share" data-para="${i}" title="Copier le lien">§</button>
+                </span>
+                ${hasNote ? `<span class="para-note-preview">${escapeHtml(hasNote.substring(0, 100))}${hasNote.length > 100 ? '…' : ''}</span>` : ''}
+            </p>`;
+        }).join('');
         if (meta) meta.textContent = `${paragraphs.length} paragraphes · ${state.reader.text.char_count || content.length} caractères`;
     }
 
     body.innerHTML = html;
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// USER NOTES
+// ─────────────────────────────────────────────────────────────────────────────
+function getUserNote(key) {
+    const notes = JSON.parse(localStorage.getItem('aleph-notes') || '{}');
+    return notes[key] || null;
+}
+
+function saveUserNote(key, text) {
+    const notes = JSON.parse(localStorage.getItem('aleph-notes') || '{}');
+    if (text && text.trim()) {
+        notes[key] = text.trim();
+    } else {
+        delete notes[key];
+    }
+    localStorage.setItem('aleph-notes', JSON.stringify(notes));
+}
+
+function openNoteEditor(paraIdx) {
+    const noteKey = `${state.reader.bookId}_${state.reader.lang}_${paraIdx}`;
+    const existingNote = getUserNote(noteKey);
+
+    // Create modal if it doesn't exist
+    let modal = document.getElementById('noteModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'noteModal';
+        modal.className = 'note-modal-overlay';
+        modal.innerHTML = `
+            <div class="note-modal">
+                <div class="note-modal-header">
+                    <h3>Note — Paragraphe <span id="noteParaNum"></span></h3>
+                    <button class="note-modal-close" onclick="closeNoteEditor()">×</button>
+                </div>
+                <textarea id="noteTextarea" class="note-textarea" placeholder="Écrivez votre note..."></textarea>
+                <div class="note-modal-actions">
+                    <button class="note-btn note-btn-delete" onclick="deleteNote()">Supprimer</button>
+                    <button class="note-btn note-btn-save" onclick="saveNote()">Enregistrer</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    // Populate
+    document.getElementById('noteParaNum').textContent = parseInt(paraIdx) + 1;
+    document.getElementById('noteTextarea').value = existingNote || '';
+    state.currentNoteKey = noteKey;
+    state.currentNotePara = paraIdx;
+
+    modal.classList.add('active');
+    document.getElementById('noteTextarea').focus();
+}
+
+function closeNoteEditor() {
+    const modal = document.getElementById('noteModal');
+    if (modal) modal.classList.remove('active');
+}
+
+function saveNote() {
+    const text = document.getElementById('noteTextarea').value;
+    saveUserNote(state.currentNoteKey, text);
+    closeNoteEditor();
+    renderReaderBody();
+}
+window.saveNote = saveNote;
+
+function deleteNote() {
+    saveUserNote(state.currentNoteKey, null);
+    closeNoteEditor();
+    renderReaderBody();
+}
+window.deleteNote = deleteNote;
+
+window.closeNoteEditor = closeNoteEditor;
 
 function escapeRegex(s) {
     return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

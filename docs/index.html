@@ -12,6 +12,10 @@
     <title>aleph — catalogue littéraire universel</title>
     <meta name="description" content="Index de littérature du domaine public à travers toutes les traditions — grec, sanskrit, japonais, hébreu, latin, et plus.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#c14d2c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -177,6 +181,7 @@
                                 <button class="view-toggle active" data-view="grid" title="Grille">▦</button>
                                 <button class="view-toggle" data-view="list" title="Liste">≡</button>
                                 <button class="view-toggle" data-view="timeline" title="Chronologie">―⏱</button>
+                                <button class="view-toggle" data-view="map" title="Carte">🗺</button>
                             </div>
                         </div>
                     </div>
@@ -187,6 +192,10 @@
 
                     <div class="timeline-container" id="timelineContainer" style="display: none;">
                         <!-- D3 timeline rendered here -->
+                    </div>
+
+                    <div class="map-container" id="mapContainer" style="display: none;">
+                        <!-- Geographic regions rendered here -->
                     </div>
                 </div>
             </div>
@@ -377,5 +386,10 @@
 
     <script src="search-engine.js"></script>
     <script src="app.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+    </script>
 </body>
 </html>

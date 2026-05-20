@@ -1,0 +1,19 @@
+{
+  "name": "Aleph — Catalogue littéraire universel",
+  "short_name": "Aleph",
+  "description": "Index de littérature du domaine public à travers toutes les traditions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4ede0",
+  "theme_color": "#c14d2c",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["books", "education", "reference"]
+}

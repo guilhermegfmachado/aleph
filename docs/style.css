@@ -1392,6 +1392,25 @@ main {
   flex: 1;
 }
 
+.glossary-speak {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+  background: transparent;
+  border: none;
+  color: var(--ink-3);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+.glossary-entry:hover .glossary-speak {
+  opacity: 1;
+}
+
+.glossary-speak:hover {
+  color: var(--accent);
+}
+
 .glossary-lang {
   font-family: var(--mono);
   font-size: 0.6875rem;
@@ -2557,6 +2576,99 @@ details.sources-section[open] > summary::after {
 
 .reader-unavailable p { margin-bottom: 0.75rem; }
 .reader-unavailable .reader-detail { font-family: var(--mono); font-size: 0.75rem; opacity: 0.6; }
+
+/* Side-by-side translation toggle */
+.reader-side-by-side-btn {
+  font-family: var(--mono);
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  color: var(--ink-3);
+  background: transparent;
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.reader-side-by-side-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink-3);
+}
+
+.reader-side-by-side-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(193, 77, 44, 0.08);
+}
+
+.reader-side-lang {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--paper-2);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+}
+
+/* Side-by-side reader layout */
+.reader-body.side-by-side {
+  max-width: none;
+}
+
+.side-by-side-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.side-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+
+.para-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.para-row .reader-para {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.para-row .reader-para::before {
+  display: none;
+}
+
+.para-row .main-para {
+  padding-left: 2rem;
+  position: relative;
+}
+
+.para-row .main-para::before {
+  display: block;
+  content: attr(data-i);
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--ink-3);
+}
+
+.side-para {
+  color: var(--ink-2);
+}
 .reader-external-link { color: var(--accent); border-bottom: 1px dotted var(--accent); }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -2891,6 +3003,22 @@ details.sources-section[open] > summary::after {
   .book-cover-code,
   .book-cover-lang {
     font-size: 0.6875rem;
+  }
+
+  /* Side-by-side stacks on mobile */
+  .side-by-side-header,
+  .para-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .para-row .main-para {
+    border-bottom: 1px dashed var(--rule);
+    padding-bottom: 0.5rem;
+  }
+
+  .reader-side-by-side-btn {
+    display: none;
   }
 
   /* Better glossary header on mobile */

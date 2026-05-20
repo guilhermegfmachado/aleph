@@ -27,7 +27,10 @@ const state = {
         lang: null,
         text: null,
         query: '',
-        previousPage: 'browse'
+        previousPage: 'browse',
+        sideBySide: false,
+        sideLang: null,
+        sideText: null
     }
 };
 
@@ -1328,6 +1331,7 @@ function renderGlossaryTerm(t) {
             <header class="glossary-entry-header">
                 <span class="glossary-dropcap">${firstLetter}</span>
                 <span class="glossary-term">${escapeHtml(t.term)}</span>
+                <button class="glossary-speak" onclick="speakTerm('${escapeHtml(t.term)}', '${t.lang}'); event.stopPropagation();" title="Écouter la prononciation">🔊</button>
                 <span class="glossary-lang">${t.lang.toUpperCase()}</span>
                 ${textIds.length ? `<span class="glossary-textcount" title="Apparaît dans ${textIds.length} textes">📖${textIds.length}</span>` : ''}
                 <span class="glossary-expand">+</span>
@@ -2014,6 +2018,13 @@ function setupReaderPage() {
         applyReaderFontSize(fontSize);
     });
 
+    // Side-by-side translation toggle
+    document.getElementById('sideBySideToggle')?.addEventListener('click', toggleSideBySide);
+    document.getElementById('sideLangSelect')?.addEventListener('change', (e) => {
+        state.reader.sideLang = e.target.value;
+        loadSideText();
+    });
+
     // Share paragraph link and notes
     document.getElementById('readerBody')?.addEventListener('click', (e) => {
         if (e.target.classList.contains('para-share')) {
@@ -2105,6 +2116,7 @@ async function openReader(bookId, opts = {}) {
 
     trackRecentlyRead(bookId);
     renderReaderShell(book);
+    updateSideBySideUI();
     navigateTo('reader');
 
     // Restore font size
@@ -2189,6 +2201,72 @@ async function loadReaderText() {
     }
 }
 
+function toggleSideBySide() {
+    const book = state.bookIndex[state.reader.bookId];
+    if (!book || book.langs.length < 2) return;
+
+    state.reader.sideBySide = !state.reader.sideBySide;
+    const toggle = document.getElementById('sideBySideToggle');
+    const select = document.getElementById('sideLangSelect');
+    const body = document.getElementById('readerBody');
+
+    if (state.reader.sideBySide) {
+        toggle?.classList.add('active');
+        body?.classList.add('side-by-side');
+        // Populate language selector with other languages
+        if (select) {
+            const otherLangs = book.langs.filter(l => l !== state.reader.lang);
+            select.innerHTML = otherLangs.map(l =>
+                `<option value="${l}">${l.toUpperCase()} — ${LANG_NAMES[l] || l}</option>`
+            ).join('');
+            select.style.display = '';
+            state.reader.sideLang = otherLangs[0];
+            loadSideText();
+        }
+    } else {
+        toggle?.classList.remove('active');
+        body?.classList.remove('side-by-side');
+        if (select) select.style.display = 'none';
+        state.reader.sideLang = null;
+        state.reader.sideText = null;
+        renderReaderBody();
+    }
+}
+
+async function loadSideText() {
+    if (!state.reader.sideBySide || !state.reader.sideLang) return;
+
+    const book = state.bookIndex[state.reader.bookId];
+    if (!book) return;
+
+    const textId = `${book.id}_${state.reader.sideLang}`;
+    try {
+        state.reader.sideText = await loadTextContent(textId);
+    } catch (err) {
+        state.reader.sideText = { content: '[Texte non disponible dans cette langue]' };
+    }
+    renderReaderBody();
+}
+
+function updateSideBySideUI() {
+    const book = state.bookIndex[state.reader.bookId];
+    const toggle = document.getElementById('sideBySideToggle');
+    const select = document.getElementById('sideLangSelect');
+
+    // Hide toggle if only one language available
+    if (toggle) {
+        toggle.style.display = (book?.langs?.length > 1) ? '' : 'none';
+    }
+    if (select) select.style.display = 'none';
+
+    // Reset side-by-side state when changing books
+    state.reader.sideBySide = false;
+    state.reader.sideLang = null;
+    state.reader.sideText = null;
+    document.getElementById('readerBody')?.classList.remove('side-by-side');
+    toggle?.classList.remove('active');
+}
+
 function updateExternalLink(book, textData) {
     const external = document.getElementById('readerExternal');
     if (!external) return;
@@ -2224,6 +2302,35 @@ function renderReaderBody() {
         .split(/\n{2,}/)
         .map(p => p.trim())
         .filter(Boolean);
+
+    // Side-by-side mode
+    if (state.reader.sideBySide && state.reader.sideText) {
+        const sideContent = state.reader.sideText.content || '';
+        const sideParagraphs = sideContent
+            .replace(/\r\n/g, '\n')
+            .split(/\n{2,}/)
+            .map(p => p.trim())
+            .filter(Boolean);
+
+        const maxLen = Math.max(paragraphs.length, sideParagraphs.length);
+        let html = `<div class="side-by-side-header">
+            <span class="side-label">${state.reader.lang.toUpperCase()}</span>
+            <span class="side-label">${state.reader.sideLang.toUpperCase()}</span>
+        </div>`;
+
+        for (let i = 0; i < maxLen; i++) {
+            const mainPara = paragraphs[i] || '';
+            const sidePara = sideParagraphs[i] || '';
+            html += `<div class="para-row" id="para-${i}">
+                <p class="reader-para main-para" data-i="${i + 1}">${escapeHtml(mainPara)}</p>
+                <p class="reader-para side-para">${escapeHtml(sidePara)}</p>
+            </div>`;
+        }
+
+        body.innerHTML = html;
+        if (meta) meta.textContent = `${maxLen} paragraphes · mode bilingue`;
+        return;
+    }
 
     let html = '';
     let totalHits = 0;
@@ -2462,6 +2569,29 @@ async function buildSnippet(hit, query) {
 // ─────────────────────────────────────────────────────────────────────────────
 // UTILITIES
 // ─────────────────────────────────────────────────────────────────────────────
+// Audio pronunciation using Web Speech API
+const SPEECH_LANG_MAP = {
+    grc: 'el-GR', el: 'el-GR', la: 'it-IT', // Greek/Latin approximate
+    en: 'en-US', fr: 'fr-FR', de: 'de-DE', es: 'es-ES',
+    it: 'it-IT', pt: 'pt-PT', ru: 'ru-RU', ja: 'ja-JP',
+    zh: 'zh-CN', ar: 'ar-SA', he: 'he-IL', fa: 'fa-IR',
+    sa: 'hi-IN', pi: 'hi-IN', // Sanskrit/Pali approximate with Hindi
+    tr: 'tr-TR', nl: 'nl-NL', pl: 'pl-PL', no: 'nb-NO'
+};
+
+function speakTerm(term, lang) {
+    if (!('speechSynthesis' in window)) {
+        console.warn('Speech synthesis not supported');
+        return;
+    }
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(term);
+    utterance.lang = SPEECH_LANG_MAP[lang] || 'en-US';
+    utterance.rate = 0.8;
+    window.speechSynthesis.speak(utterance);
+}
+window.speakTerm = speakTerm;
+
 function escapeHtml(str) {
     if (!str) return '';
     const div = document.createElement('div');

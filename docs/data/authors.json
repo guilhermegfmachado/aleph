@@ -215,6 +215,116 @@
       "bio": "Théologien et philosophe dominicain, Docteur de l'Église. Sa Somme théologique synthétise la philosophie aristotélicienne et la foi chrétienne. Le thomisme reste la philosophie officielle de l'Église catholique.",
       "works": ["aquinas-summa"],
       "tags": ["scolastique", "théologie", "philosophie"]
+    },
+    {
+      "id": "sophocles",
+      "name": "Sophocle",
+      "name_original": "Σοφοκλῆς",
+      "dates": "c. 496–406 av. J.-C.",
+      "origin": "Colone, Athènes",
+      "lang": "grc",
+      "bio": "Dramaturge athénien, maître de la tragédie grecque. Œdipe roi est considéré comme le chef-d'œuvre du genre. Il introduit le troisième acteur et réduit le rôle du chœur, créant des personnages plus complexes et humains.",
+      "works": ["sophocles-oedipus", "sophocles-antigone"],
+      "tags": ["tragédie", "théâtre", "mythologie"]
+    },
+    {
+      "id": "aeschylus",
+      "name": "Eschyle",
+      "name_original": "Αἰσχύλος",
+      "dates": "c. 525–456 av. J.-C.",
+      "origin": "Éleusis, Athènes",
+      "lang": "grc",
+      "bio": "Père de la tragédie grecque. Combattant à Marathon et Salamine, il introduit le deuxième acteur et les décors. L'Orestie, seule trilogie complète conservée, explore la justice, la vengeance et la naissance du droit.",
+      "works": ["aeschylus-oresteia", "aeschylus-prometheus"],
+      "tags": ["tragédie", "théâtre", "mythologie"]
+    },
+    {
+      "id": "euripides",
+      "name": "Euripide",
+      "name_original": "Εὐριπίδης",
+      "dates": "c. 480–406 av. J.-C.",
+      "origin": "Salamine, Grèce",
+      "lang": "grc",
+      "bio": "Dernier des trois grands tragiques athéniens. Plus psychologue que ses prédécesseurs, il humanise les héros et donne voix aux marginaux : femmes, esclaves, barbares. Médée et Les Bacchantes restent des œuvres majeures.",
+      "works": ["euripides-medea", "euripides-bacchae"],
+      "tags": ["tragédie", "théâtre", "psychologie"]
+    },
+    {
+      "id": "herodotus",
+      "name": "Hérodote",
+      "name_original": "Ἡρόδοτος",
+      "dates": "c. 484–425 av. J.-C.",
+      "origin": "Halicarnasse, Carie",
+      "lang": "grc",
+      "bio": "« Père de l'histoire » selon Cicéron. Ses Histoires racontent les guerres médiques mais explorent aussi les cultures égyptienne, perse et scythe. Premier à enquêter systématiquement sur le passé.",
+      "works": ["herodotus-histories"],
+      "tags": ["histoire", "ethnographie", "récit"]
+    },
+    {
+      "id": "thucydides",
+      "name": "Thucydide",
+      "name_original": "Θουκυδίδης",
+      "dates": "c. 460–400 av. J.-C.",
+      "origin": "Athènes",
+      "lang": "grc",
+      "bio": "Historien athénien, général exilé pendant la guerre du Péloponnèse qu'il raconte. Son approche rigoureuse, sans intervention divine, fonde l'histoire politique. Ses analyses du pouvoir influencent encore les relations internationales.",
+      "works": ["thucydides-peloponnesian"],
+      "tags": ["histoire", "politique", "guerre"]
+    },
+    {
+      "id": "sun-tzu",
+      "name": "Sun Tzu",
+      "name_original": "孫子",
+      "dates": "c. 544–496 av. J.-C.",
+      "origin": "État de Qi, Chine",
+      "lang": "zh",
+      "bio": "Général et stratège chinois, auteur présumé de L'Art de la guerre. Ce traité militaire, le plus ancien connu, transcende la guerre pour enseigner la stratégie en toute situation. « Connais-toi toi-même, connais ton ennemi. »",
+      "works": ["sun-tzu-art-of-war"],
+      "tags": ["stratégie", "militaire", "philosophie"]
+    },
+    {
+      "id": "murasaki",
+      "name": "Murasaki Shikibu",
+      "name_original": "紫式部",
+      "dates": "c. 978–1014",
+      "origin": "Kyoto, Japon",
+      "lang": "ja",
+      "bio": "Dame de cour japonaise de l'époque Heian. Le Dit du Genji, récit de la vie à la cour impériale, est considéré comme le premier roman psychologique de l'histoire. Chef-d'œuvre de la littérature mondiale.",
+      "works": ["murasaki-genji"],
+      "tags": ["roman", "cour", "psychologie"]
+    },
+    {
+      "id": "valmiki",
+      "name": "Vālmīki",
+      "name_original": "वाल्मीकि",
+      "dates": "c. 5ᵉ siècle av. J.-C.",
+      "origin": "Inde",
+      "lang": "sa",
+      "bio": "Sage légendaire, « premier poète » (Ādikavi). Le Rāmāyaṇa, qu'il aurait composé, narre l'épopée du prince Rāma. Cette œuvre fondatrice de la culture indienne influence l'Asie du Sud-Est entière.",
+      "works": ["valmiki-ramayana"],
+      "tags": ["épique", "sanskrit", "mythologie"]
+    },
+    {
+      "id": "kalidasa",
+      "name": "Kālidāsa",
+      "name_original": "कालिदास",
+      "dates": "c. 4ᵉ–5ᵉ siècle",
+      "origin": "Inde (époque Gupta)",
+      "lang": "sa",
+      "bio": "Le « Shakespeare indien », plus grand poète et dramaturge classique sanskrit. Śakuntalā raconte un amour maudit par l'oubli. Ses métaphores et sa maîtrise du vers restent inégalées dans la tradition indienne.",
+      "works": ["kalidasa-shakuntala"],
+      "tags": ["drame", "poésie", "sanskrit"]
+    },
+    {
+      "id": "cervantes",
+      "name": "Miguel de Cervantes",
+      "name_original": "Miguel de Cervantes Saavedra",
+      "dates": "1547–1616",
+      "origin": "Alcalá de Henares, Espagne",
+      "lang": "es",
+      "bio": "Écrivain espagnol, créateur du roman moderne. Don Quichotte, satire des romans de chevalerie, explore la tension entre idéal et réalité. Soldat à Lépante, captif à Alger, sa vie fut aussi aventureuse que son œuvre.",
+      "works": ["cervantes-quixote"],
+      "tags": ["roman", "satire", "chevalerie"]
     }
   ]
 }

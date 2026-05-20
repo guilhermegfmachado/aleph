@@ -533,6 +533,80 @@ main {
   background: var(--paper);
 }
 
+/* Reading Lists */
+.reading-lists {
+  padding: 0 var(--page-x) 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.reading-lists .section-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: var(--mono);
+}
+
+.lists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.list-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.list-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.list-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.list-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-name {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0 0 0.35rem;
+}
+
+.list-desc {
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+}
+
+.list-count {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+  letter-spacing: 0.05em;
+}
+
 /* Book card highlight animation */
 .book-card.highlight {
   animation: pulse 0.5s ease-in-out 3;
@@ -785,6 +859,52 @@ main {
 .view-toggle.active {
   background: var(--paper-2);
   color: var(--ink);
+}
+
+/* Timeline View */
+.timeline-container {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.timeline-container svg {
+  width: 100%;
+  overflow: visible;
+}
+
+.timeline-axis path,
+.timeline-axis line {
+  stroke: var(--rule);
+}
+
+.timeline-axis text {
+  fill: var(--ink-3);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+
+.timeline-dot {
+  transition: r 0.15s;
+}
+
+.timeline-tooltip {
+  position: absolute;
+  padding: 0.6rem 0.8rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  pointer-events: none;
+  z-index: 10;
+  max-width: 200px;
+}
+
+.timeline-legend-text {
+  fill: var(--ink-2);
+  font-family: var(--mono);
+  font-size: 0.65rem;
 }
 
 /* Book Cards Grid */
@@ -1510,6 +1630,199 @@ details.sources-section[open] > summary::after {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px dotted var(--rule);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   AUTHORS PAGE
+   ───────────────────────────────────────────────────────────────────────────── */
+.authors-page {
+  padding: var(--page-y) var(--page-x);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.authors-header {
+  margin-bottom: 3rem;
+}
+
+.authors-header .label {
+  margin-bottom: 0.75rem;
+}
+
+.authors-tagline {
+  font-size: 1.0625rem;
+  color: var(--ink-2);
+  max-width: 48ch;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.author-card {
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  background: var(--paper);
+  transition: border-color 0.15s;
+}
+
+.author-card:hover {
+  border-color: var(--ink-2);
+}
+
+.author-card-header {
+  margin-bottom: 0.75rem;
+}
+
+.author-card-name {
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0;
+}
+
+.author-card-original {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--ink-3);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.author-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+
+.author-card-bio {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-bottom: 1rem;
+}
+
+.author-card-works {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.works-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-right: 0.5rem;
+}
+
+.work-link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.work-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.author-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.author-tag {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--rule);
+  color: var(--ink-3);
+}
+
+/* Featured Authors on Home */
+.featured-authors {
+  padding: 0 var(--page-x) 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.featured-authors .section-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: var(--mono);
+}
+
+.featured-authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.author-card-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.author-card-small:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.author-card-small .author-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.author-card-small .author-dates {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--ink-3);
+  margin-top: 0.25rem;
+}
+
+.see-all-link {
+  display: block;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.15s;
+}
+
+.see-all-link:hover {
+  color: var(--accent);
 }
 
 /* Network container */

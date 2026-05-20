@@ -1,0 +1,220 @@
+{
+  "authors": [
+    {
+      "id": "homer",
+      "name": "Homère",
+      "name_original": "Ὅμηρος",
+      "dates": "c. 8ᵉ siècle av. J.-C.",
+      "origin": "Grèce (Ionie)",
+      "lang": "grc",
+      "bio": "Poète épique grec légendaire, considéré comme l'auteur de l'Iliade et l'Odyssée. Ces œuvres fondatrices de la littérature occidentale racontent la guerre de Troie et le retour d'Ulysse. La « question homérique » débat encore de l'existence historique d'Homère.",
+      "works": ["homer-iliad", "homer-odyssey"],
+      "tags": ["épique", "grec ancien", "mythologie"]
+    },
+    {
+      "id": "plato",
+      "name": "Platon",
+      "name_original": "Πλάτων",
+      "dates": "c. 428–348 av. J.-C.",
+      "origin": "Athènes, Grèce",
+      "lang": "grc",
+      "bio": "Philosophe athénien, fondateur de l'Académie. Élève de Socrate et maître d'Aristote. Ses dialogues explorent la justice, la beauté, l'égalité, et introduisent la théorie des Formes. La République reste son œuvre la plus influente.",
+      "works": ["plato-republic"],
+      "tags": ["philosophie", "idéalisme", "politique"]
+    },
+    {
+      "id": "aristotle",
+      "name": "Aristote",
+      "name_original": "Ἀριστοτέλης",
+      "dates": "384–322 av. J.-C.",
+      "origin": "Stagire, Macédoine",
+      "lang": "grc",
+      "bio": "Philosophe et scientifique grec, élève de Platon et précepteur d'Alexandre le Grand. Fondateur du Lycée, il a écrit sur la logique, la métaphysique, l'éthique, la politique, la biologie. Son influence sur la pensée occidentale est incommensurable.",
+      "works": ["aristotle-politics"],
+      "tags": ["philosophie", "logique", "science"]
+    },
+    {
+      "id": "marcus-aurelius",
+      "name": "Marc Aurèle",
+      "name_original": "Marcus Aurelius",
+      "dates": "121–180",
+      "origin": "Rome",
+      "lang": "la",
+      "bio": "Empereur romain (161-180) et philosophe stoïcien. Ses Pensées pour moi-même, journal intime écrit en grec pendant ses campagnes, offrent une méditation profonde sur la vertu, le devoir et l'acceptation du destin.",
+      "works": ["marcus-aurelius-meditations"],
+      "tags": ["stoïcisme", "philosophie", "empereur"]
+    },
+    {
+      "id": "seneca",
+      "name": "Sénèque",
+      "name_original": "Lucius Annaeus Seneca",
+      "dates": "c. 4 av. J.-C. – 65",
+      "origin": "Cordoue, Hispanie",
+      "lang": "la",
+      "bio": "Philosophe stoïcien, dramaturge et homme d'État romain. Tuteur puis conseiller de Néron. Ses Lettres à Lucilius sont un chef-d'œuvre de sagesse pratique. Contraint au suicide par Néron.",
+      "works": ["seneca-letters"],
+      "tags": ["stoïcisme", "lettres", "tragédie"]
+    },
+    {
+      "id": "epictetus",
+      "name": "Épictète",
+      "name_original": "Ἐπίκτητος",
+      "dates": "c. 50–135",
+      "origin": "Hiérapolis, Phrygie",
+      "lang": "grc",
+      "bio": "Philosophe stoïcien né esclave. Affranchi, il enseigna à Rome puis à Nicopolis. Son Manuel (Enchiridion) et ses Entretiens, transcrits par Arrien, enseignent la distinction entre ce qui dépend de nous et ce qui n'en dépend pas.",
+      "works": ["epictetus-enchiridion", "epictetus-discourses"],
+      "tags": ["stoïcisme", "éthique", "liberté"]
+    },
+    {
+      "id": "virgil",
+      "name": "Virgile",
+      "name_original": "Publius Vergilius Maro",
+      "dates": "70–19 av. J.-C.",
+      "origin": "Mantoue, Gaule cisalpine",
+      "lang": "la",
+      "bio": "Poète romain majeur de l'époque augustéenne. L'Énéide, épopée nationale romaine, raconte les origines troyennes de Rome. Ses Bucoliques et Géorgiques célèbrent la vie pastorale et agricole.",
+      "works": ["virgil-aeneid"],
+      "tags": ["épique", "poésie", "Rome"]
+    },
+    {
+      "id": "ovid",
+      "name": "Ovide",
+      "name_original": "Publius Ovidius Naso",
+      "dates": "43 av. J.-C. – 17/18",
+      "origin": "Sulmone, Italie",
+      "lang": "la",
+      "bio": "Poète romain célèbre pour ses Métamorphoses, encyclopédie mythologique en vers. L'Art d'aimer lui valut l'exil par Auguste. Son style élégant et son humour ont influencé toute la littérature occidentale.",
+      "works": ["ovid-metamorphoses", "ovid-art-love"],
+      "tags": ["mythologie", "poésie", "amour"]
+    },
+    {
+      "id": "cicero",
+      "name": "Cicéron",
+      "name_original": "Marcus Tullius Cicero",
+      "dates": "106–43 av. J.-C.",
+      "origin": "Arpinum, Italie",
+      "lang": "la",
+      "bio": "Orateur, homme politique et philosophe romain. Consul en 63 av. J.-C., il défendit la République contre Catilina. Ses traités philosophiques ont transmis la pensée grecque à l'Occident latin.",
+      "works": ["cicero-offices", "cicero-tusculan"],
+      "tags": ["rhétorique", "philosophie", "politique"]
+    },
+    {
+      "id": "dante",
+      "name": "Dante Alighieri",
+      "dates": "c. 1265–1321",
+      "origin": "Florence, Italie",
+      "lang": "it",
+      "bio": "Poète florentin, père de la langue italienne. La Divine Comédie, voyage allégorique à travers l'Enfer, le Purgatoire et le Paradis, est considérée comme le plus grand poème de la littérature italienne.",
+      "works": ["dante-divine-comedy"],
+      "tags": ["poésie", "allégorie", "médiéval"]
+    },
+    {
+      "id": "shakespeare",
+      "name": "William Shakespeare",
+      "dates": "1564–1616",
+      "origin": "Stratford-upon-Avon, Angleterre",
+      "lang": "en",
+      "bio": "Dramaturge et poète anglais, le plus grand écrivain de langue anglaise. Ses tragédies (Hamlet, Macbeth, Othello, Le Roi Lear) et comédies explorent toute la gamme de l'expérience humaine.",
+      "works": ["shakespeare-hamlet", "shakespeare-king-lear"],
+      "tags": ["théâtre", "tragédie", "Renaissance"]
+    },
+    {
+      "id": "montaigne",
+      "name": "Michel de Montaigne",
+      "dates": "1533–1592",
+      "origin": "Château de Montaigne, Guyenne",
+      "lang": "fr",
+      "bio": "Philosophe et écrivain français, inventeur de l'essai comme genre littéraire. Ses Essais, exploration de soi et de la condition humaine, prônent la tolérance et le scepticisme face aux certitudes.",
+      "works": ["montaigne-essays"],
+      "tags": ["essai", "humanisme", "scepticisme"]
+    },
+    {
+      "id": "nietzsche",
+      "name": "Friedrich Nietzsche",
+      "dates": "1844–1900",
+      "origin": "Röcken, Prusse",
+      "lang": "de",
+      "bio": "Philosophe allemand, critique radical de la morale et de la religion. Ainsi parlait Zarathoustra proclame la mort de Dieu et l'avènement du Surhomme. Son style poétique et aphoristique a révolutionné la philosophie.",
+      "works": ["nietzsche-zarathustra", "nietzsche-beyond-good-evil"],
+      "tags": ["philosophie", "nihilisme", "existentialisme"]
+    },
+    {
+      "id": "kant",
+      "name": "Emmanuel Kant",
+      "name_original": "Immanuel Kant",
+      "dates": "1724–1804",
+      "origin": "Königsberg, Prusse",
+      "lang": "de",
+      "bio": "Philosophe allemand, figure centrale des Lumières. La Critique de la raison pure établit les limites de la connaissance humaine. Son éthique du devoir et son cosmopolitisme restent fondamentaux.",
+      "works": ["kant-critique-pure-reason"],
+      "tags": ["philosophie", "Lumières", "métaphysique"]
+    },
+    {
+      "id": "lao-tzu",
+      "name": "Lao Tseu",
+      "name_original": "老子",
+      "dates": "c. 6ᵉ siècle av. J.-C.",
+      "origin": "Chine",
+      "lang": "zh",
+      "bio": "Sage chinois légendaire, fondateur présumé du taoïsme. Le Tao Te King, attribué à Lao Tseu, enseigne le wu wei (non-agir) et l'harmonie avec le Tao, la voie naturelle de l'univers.",
+      "works": ["tao-te-ching"],
+      "tags": ["taoïsme", "sagesse", "Chine"]
+    },
+    {
+      "id": "confucius",
+      "name": "Confucius",
+      "name_original": "孔子",
+      "dates": "551–479 av. J.-C.",
+      "origin": "Lu, Chine",
+      "lang": "zh",
+      "bio": "Philosophe et éducateur chinois, fondateur du confucianisme. Les Entretiens compilent ses enseignements sur l'éthique, la vertu et l'harmonie sociale. Sa pensée a façonné la civilisation d'Asie de l'Est.",
+      "works": ["analects-confucius"],
+      "tags": ["confucianisme", "éthique", "Chine"]
+    },
+    {
+      "id": "rumi",
+      "name": "Rûmî",
+      "name_original": "جلال‌الدین محمد رومی",
+      "dates": "1207–1273",
+      "origin": "Balkh (actuel Afghanistan)",
+      "lang": "fa",
+      "bio": "Poète mystique persan, fondateur de l'ordre des derviches tourneurs. Son Masnavi, épopée spirituelle de 25 000 vers, explore l'amour divin et l'union mystique. L'un des poètes les plus lus au monde.",
+      "works": ["rumi-masnavi"],
+      "tags": ["soufisme", "poésie", "mystique"]
+    },
+    {
+      "id": "omar-khayyam",
+      "name": "Omar Khayyâm",
+      "name_original": "عمر خیّام",
+      "dates": "1048–1131",
+      "origin": "Nichapur, Perse",
+      "lang": "fa",
+      "bio": "Mathématicien, astronome et poète persan. Ses Rubaiyat (quatrains) célèbrent les plaisirs de la vie face à l'incertitude de l'existence. La traduction de FitzGerald en fit un classique en Occident.",
+      "works": ["rubaiyat-khayyam"],
+      "tags": ["poésie", "mathématiques", "Perse"]
+    },
+    {
+      "id": "augustine",
+      "name": "Saint Augustin",
+      "name_original": "Aurelius Augustinus",
+      "dates": "354–430",
+      "origin": "Thagaste, Numidie",
+      "lang": "la",
+      "bio": "Théologien et philosophe, Père de l'Église. Ses Confessions, première autobiographie spirituelle, racontent sa conversion au christianisme. La Cité de Dieu défend le christianisme contre le paganisme.",
+      "works": ["augustine-confessions"],
+      "tags": ["théologie", "autobiographie", "patristique"]
+    },
+    {
+      "id": "aquinas",
+      "name": "Thomas d'Aquin",
+      "name_original": "Thomas Aquinas",
+      "dates": "1225–1274",
+      "origin": "Roccasecca, Italie",
+      "lang": "la",
+      "bio": "Théologien et philosophe dominicain, Docteur de l'Église. Sa Somme théologique synthétise la philosophie aristotélicienne et la foi chrétienne. Le thomisme reste la philosophie officielle de l'Église catholique.",
+      "works": ["aquinas-summa"],
+      "tags": ["scolastique", "théologie", "philosophie"]
+    }
+  ]
+}

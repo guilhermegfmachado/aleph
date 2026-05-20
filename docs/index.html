@@ -102,6 +102,23 @@
                 </div>
             </section>
 
+            <!-- Reading Lists -->
+            <section class="reading-lists">
+                <h2 class="section-title">Parcours de lecture</h2>
+                <div class="lists-grid" id="listsGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- Featured Authors -->
+            <section class="featured-authors">
+                <h2 class="section-title">Portraits d'auteurs</h2>
+                <div class="featured-authors-grid" id="featuredAuthors">
+                    <!-- Populated by JS -->
+                </div>
+                <a href="#authors" class="see-all-link">Voir tous les auteurs →</a>
+            </section>
+
             <!-- Surprise Button -->
             <div class="surprise-section">
                 <button class="surprise-btn" id="surpriseBtn">
@@ -159,12 +176,17 @@
                             <div class="view-toggles">
                                 <button class="view-toggle active" data-view="grid" title="Grille">▦</button>
                                 <button class="view-toggle" data-view="list" title="Liste">≡</button>
+                                <button class="view-toggle" data-view="timeline" title="Chronologie">―⏱</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="books-grid" id="booksGrid">
                         <!-- Populated by JS -->
+                    </div>
+
+                    <div class="timeline-container" id="timelineContainer" style="display: none;">
+                        <!-- D3 timeline rendered here -->
                     </div>
                 </div>
             </div>
@@ -306,6 +328,27 @@
                 <footer class="sources-colophon-inline">
                     <p><strong>Composé en</strong> EB Garamond et JetBrains Mono. <strong>Conçu par</strong> <a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme Machado</a>, 2025. <strong>Licence</strong> MIT.</p>
                 </footer>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             AUTHORS PAGE
+             ═══════════════════════════════════════════════════════════════════ -->
+        <section id="authors" class="page">
+            <div class="authors-page">
+                <header class="authors-header">
+                    <span class="label label-accent">Portraits</span>
+                    <span class="label">●</span>
+                    <span class="label"><span id="authorCount">0</span> auteurs</span>
+                    <h1 class="page-title">Les voix du passé<span class="accent-dot">.</span></h1>
+                    <p class="authors-tagline">
+                        Derrière chaque texte, une vie. Biographies des auteurs dont les œuvres traversent les siècles.
+                    </p>
+                </header>
+
+                <div class="authors-grid" id="authorsGrid">
+                    <!-- Populated by JS -->
+                </div>
             </div>
         </section>
     </main>

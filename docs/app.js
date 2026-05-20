@@ -70,6 +70,7 @@ async function init() {
     renderBrowsePage();
     renderGlossaryPage();
     renderSourcesPage();
+    renderAuthorsPage();
     setupSearchPage();
     setupReaderPage();
 
@@ -82,11 +83,12 @@ async function init() {
 // ─────────────────────────────────────────────────────────────────────────────
 async function loadData() {
     try {
-        const [corpusRes, glossaryRes, refsRes, crosslinksRes] = await Promise.all([
+        const [corpusRes, glossaryRes, refsRes, crosslinksRes, listsRes] = await Promise.all([
             fetch('data/corpus-manifest.json'),
             fetch('data/glossary.json'),
             fetch('data/references.json'),
-            fetch('data/crosslinks.json')
+            fetch('data/crosslinks.json'),
+            fetch('data/reading-lists.json')
         ]);
 
         if (corpusRes.ok) {
@@ -105,6 +107,15 @@ async function loadData() {
 
         if (crosslinksRes.ok) {
             state.crosslinks = await crosslinksRes.json();
+        }
+
+        if (listsRes.ok) {
+            state.readingLists = await listsRes.json();
+        }
+
+        const authorsRes = await fetch('data/authors.json');
+        if (authorsRes.ok) {
+            state.authors = await authorsRes.json();
         }
     } catch (err) {
         console.error('Failed to load data:', err);
@@ -546,10 +557,117 @@ function renderHomePage() {
     renderQuickStats();
     renderMotDuJour();
     renderLangPills();
+    renderReadingLists();
+    renderFeaturedAuthors();
     renderRecentlyRead();
     setupSurpriseButton();
     setupRandomPassage();
 }
+
+function renderReadingLists() {
+    const container = document.getElementById('listsGrid');
+    if (!container || !state.readingLists?.lists) return;
+
+    container.innerHTML = state.readingLists.lists.map(list => {
+        const textCount = list.texts.filter(id => state.bookIndex[id]).length;
+        return `
+            <button class="list-card" onclick="openReadingList('${list.id}')">
+                <span class="list-icon">${list.icon}</span>
+                <div class="list-info">
+                    <h3 class="list-name">${escapeHtml(list.name)}</h3>
+                    <p class="list-desc">${escapeHtml(list.description)}</p>
+                    <span class="list-count">${textCount} textes</span>
+                </div>
+            </button>
+        `;
+    }).join('');
+}
+
+function openReadingList(listId) {
+    const list = state.readingLists?.lists?.find(l => l.id === listId);
+    if (!list) return;
+
+    state.currentList = list;
+    state.browseFilter = '';
+
+    // Filter books to only those in the list
+    const listBookIds = new Set(list.texts);
+    const filteredBooks = state.books.filter(b => listBookIds.has(b.id));
+
+    // Render with custom header
+    const container = document.getElementById('booksGrid');
+    const countEl = document.getElementById('browseCount');
+    const totalEl = document.getElementById('browseTotal');
+
+    if (countEl) countEl.textContent = filteredBooks.length;
+    if (totalEl) totalEl.innerHTML = `<em>${escapeHtml(list.name)}</em>`;
+
+    container.innerHTML = filteredBooks.map(renderBookCard).join('');
+
+    navigateTo('browse');
+}
+window.openReadingList = openReadingList;
+
+function renderFeaturedAuthors() {
+    const container = document.getElementById('featuredAuthors');
+    if (!container || !state.authors?.authors) return;
+
+    // Show 4 random featured authors
+    const shuffled = [...state.authors.authors].sort(() => Math.random() - 0.5);
+    const featured = shuffled.slice(0, 4);
+
+    container.innerHTML = featured.map(author => `
+        <button class="author-card-small" onclick="openAuthorPage('${author.id}')">
+            <span class="author-name">${escapeHtml(author.name)}</span>
+            <span class="author-dates">${escapeHtml(author.dates)}</span>
+        </button>
+    `).join('');
+}
+
+function renderAuthorsPage() {
+    const container = document.getElementById('authorsGrid');
+    const countEl = document.getElementById('authorCount');
+    if (!container || !state.authors?.authors) return;
+
+    if (countEl) countEl.textContent = state.authors.authors.length;
+
+    container.innerHTML = state.authors.authors.map(author => {
+        const workCount = author.works.filter(id => state.bookIndex[id]).length;
+        return `
+            <article class="author-card" id="author-${author.id}">
+                <header class="author-card-header">
+                    <h2 class="author-card-name">${escapeHtml(author.name)}</h2>
+                    ${author.name_original ? `<span class="author-card-original">${escapeHtml(author.name_original)}</span>` : ''}
+                </header>
+                <div class="author-card-meta">
+                    <span class="author-dates">${escapeHtml(author.dates)}</span>
+                    <span class="author-origin">${escapeHtml(author.origin)}</span>
+                </div>
+                <p class="author-card-bio">${escapeHtml(author.bio)}</p>
+                <div class="author-card-works">
+                    <span class="works-label">${workCount} œuvre${workCount > 1 ? 's' : ''} :</span>
+                    ${author.works.map(workId => {
+                        const book = state.bookIndex[workId];
+                        if (!book) return '';
+                        return `<a href="#" class="work-link" onclick="openReader('${workId}'); return false;">${escapeHtml(book.title)}</a>`;
+                    }).filter(Boolean).join(' · ')}
+                </div>
+                <div class="author-card-tags">
+                    ${author.tags.map(t => `<span class="author-tag">${escapeHtml(t)}</span>`).join('')}
+                </div>
+            </article>
+        `;
+    }).join('');
+}
+
+function openAuthorPage(authorId) {
+    navigateTo('authors');
+    setTimeout(() => {
+        const el = document.getElementById(`author-${authorId}`);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+}
+window.openAuthorPage = openAuthorPage;
 
 function renderQuickStats() {
     const statTerms = document.getElementById('statTerms');
@@ -836,6 +954,7 @@ function setupBrowseControls() {
     const sortSelect = document.getElementById('sortSelect');
     const viewToggles = document.querySelectorAll('.view-toggle');
     const grid = document.getElementById('booksGrid');
+    const timeline = document.getElementById('timelineContainer');
     const filterInput = document.getElementById('browseFilter');
 
     sortSelect?.addEventListener('change', () => {
@@ -847,13 +966,144 @@ function setupBrowseControls() {
         toggle.addEventListener('click', () => {
             viewToggles.forEach(t => t.classList.remove('active'));
             toggle.classList.add('active');
-            if (grid) grid.classList.toggle('list-view', toggle.dataset.view === 'list');
+            const view = toggle.dataset.view;
+
+            if (grid) grid.style.display = view === 'timeline' ? 'none' : '';
+            if (grid) grid.classList.toggle('list-view', view === 'list');
+            if (timeline) timeline.style.display = view === 'timeline' ? 'block' : 'none';
+
+            if (view === 'timeline') {
+                renderTimeline();
+            }
         });
     });
 
     filterInput?.addEventListener('input', () => {
         state.filters.query = filterInput.value;
         renderBooksGrid();
+    });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TIMELINE VIEW
+// ─────────────────────────────────────────────────────────────────────────────
+function renderTimeline() {
+    const container = document.getElementById('timelineContainer');
+    if (!container || !state.books.length) return;
+
+    container.innerHTML = '';
+
+    const margin = { top: 40, right: 40, bottom: 60, left: 40 };
+    const width = container.clientWidth - margin.left - margin.right;
+    const height = 500 - margin.top - margin.bottom;
+
+    const svg = d3.select(container)
+        .append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // Filter books with valid years
+    const booksWithYears = state.books.filter(b => b.year && !isNaN(b.year));
+
+    // Create scales
+    const minYear = Math.min(...booksWithYears.map(b => b.year));
+    const maxYear = Math.max(...booksWithYears.map(b => b.year));
+
+    const x = d3.scaleLinear()
+        .domain([minYear - 100, maxYear + 100])
+        .range([0, width]);
+
+    // Group books by era to avoid overlap
+    const eras = {};
+    booksWithYears.forEach(b => {
+        const era = Math.floor(b.year / 100) * 100;
+        if (!eras[era]) eras[era] = [];
+        eras[era].push(b);
+    });
+
+    // Draw axis
+    const xAxis = d3.axisBottom(x)
+        .tickFormat(d => d < 0 ? `${Math.abs(d)} av. J.-C.` : d)
+        .ticks(10);
+
+    svg.append('g')
+        .attr('class', 'timeline-axis')
+        .attr('transform', `translate(0,${height})`)
+        .call(xAxis);
+
+    // Draw era backgrounds
+    const eraColors = {
+        ancient: 'rgba(193, 77, 44, 0.1)',
+        classical: 'rgba(139, 69, 19, 0.1)',
+        medieval: 'rgba(70, 130, 180, 0.1)',
+        early_modern: 'rgba(85, 107, 47, 0.1)',
+        modern: 'rgba(128, 128, 128, 0.1)'
+    };
+
+    // Draw books as circles
+    const tooltip = d3.select(container)
+        .append('div')
+        .attr('class', 'timeline-tooltip')
+        .style('opacity', 0);
+
+    svg.selectAll('.timeline-dot')
+        .data(booksWithYears)
+        .enter()
+        .append('circle')
+        .attr('class', 'timeline-dot')
+        .attr('cx', d => x(d.year))
+        .attr('cy', (d, i) => {
+            const era = Math.floor(d.year / 100) * 100;
+            const idx = eras[era].indexOf(d);
+            return height / 2 + (idx % 5 - 2) * 35;
+        })
+        .attr('r', 8)
+        .attr('fill', d => {
+            const langColors = { el: '#8b5cf6', la: '#ef4444', en: '#3b82f6', de: '#22c55e', fr: '#f59e0b', zh: '#ec4899', sa: '#f97316', ja: '#06b6d4' };
+            return langColors[d.lang] || 'var(--ink-3)';
+        })
+        .attr('stroke', 'var(--paper)')
+        .attr('stroke-width', 2)
+        .style('cursor', 'pointer')
+        .on('mouseover', function(event, d) {
+            d3.select(this).attr('r', 12);
+            tooltip.transition().duration(100).style('opacity', 1);
+            tooltip.html(`<strong>${d.title}</strong><br>${d.author}<br><em>${d.year < 0 ? Math.abs(d.year) + ' av. J.-C.' : d.year}</em>`)
+                .style('left', (event.pageX - container.offsetLeft + 10) + 'px')
+                .style('top', (event.pageY - container.offsetTop - 60) + 'px');
+        })
+        .on('mouseout', function() {
+            d3.select(this).attr('r', 8);
+            tooltip.transition().duration(100).style('opacity', 0);
+        })
+        .on('click', (event, d) => openReader(d.id));
+
+    // Add legend
+    const legend = svg.append('g')
+        .attr('class', 'timeline-legend')
+        .attr('transform', `translate(0, -25)`);
+
+    const langs = [
+        { code: 'el', name: 'Grec', color: '#8b5cf6' },
+        { code: 'la', name: 'Latin', color: '#ef4444' },
+        { code: 'en', name: 'Anglais', color: '#3b82f6' },
+        { code: 'de', name: 'Allemand', color: '#22c55e' },
+        { code: 'fr', name: 'Français', color: '#f59e0b' }
+    ];
+
+    langs.forEach((lang, i) => {
+        legend.append('circle')
+            .attr('cx', i * 90)
+            .attr('cy', 0)
+            .attr('r', 5)
+            .attr('fill', lang.color);
+        legend.append('text')
+            .attr('x', i * 90 + 10)
+            .attr('y', 4)
+            .attr('class', 'timeline-legend-text')
+            .text(lang.name);
     });
 }
 

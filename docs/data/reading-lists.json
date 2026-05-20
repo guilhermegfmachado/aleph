@@ -1,0 +1,88 @@
+{
+  "lists": [
+    {
+      "id": "stoic-essentials",
+      "name": "Stoïcisme : l'essentiel",
+      "description": "Les textes fondamentaux de la philosophie stoïcienne",
+      "icon": "🏛️",
+      "texts": ["marcus-aurelius-meditations", "epictetus-enchiridion", "seneca-letters", "epictetus-discourses"]
+    },
+    {
+      "id": "greek-tragedy",
+      "name": "Tragédie grecque",
+      "description": "Les grands tragédiens d'Athènes",
+      "icon": "🎭",
+      "texts": ["sophocles-oedipus-rex", "aeschylus-oresteia", "euripides-medea", "euripides-bacchae"]
+    },
+    {
+      "id": "epic-journey",
+      "name": "Épopées fondatrices",
+      "description": "Les grandes épopées de l'humanité",
+      "icon": "⚔️",
+      "texts": ["homer-iliad", "homer-odyssey", "virgil-aeneid", "dante-divine-comedy", "gilgamesh", "beowulf"]
+    },
+    {
+      "id": "eastern-wisdom",
+      "name": "Sagesse orientale",
+      "description": "Philosophie et spiritualité d'Asie",
+      "icon": "☯️",
+      "texts": ["tao-te-ching", "analects-confucius", "bhagavad-gita", "dhammapada", "zhuangzi", "sun-tzu-art-of-war"]
+    },
+    {
+      "id": "medieval-mystics",
+      "name": "Mystiques médiévaux",
+      "description": "Visions et contemplation au Moyen Âge",
+      "icon": "✨",
+      "texts": ["augustine-confessions", "kempis-imitation-christ", "cloud-unknowing", "julian-norwich", "meister-eckhart"]
+    },
+    {
+      "id": "political-thought",
+      "name": "Pensée politique",
+      "description": "De la République à l'État moderne",
+      "icon": "⚖️",
+      "texts": ["plato-republic", "aristotle-politics", "machiavelli-prince", "hobbes-leviathan", "locke-government"]
+    },
+    {
+      "id": "roman-masters",
+      "name": "Maîtres romains",
+      "description": "Littérature et philosophie de Rome",
+      "icon": "🦅",
+      "texts": ["virgil-aeneid", "cicero-offices", "ovid-metamorphoses", "seneca-letters", "marcus-aurelius-meditations", "lucretius-natura"]
+    },
+    {
+      "id": "enlightenment",
+      "name": "Lumières et raison",
+      "description": "L'âge de la raison et de la critique",
+      "icon": "💡",
+      "texts": ["descartes-meditations", "spinoza-ethics", "locke-government", "hume-enquiry", "kant-critique-pure-reason"]
+    },
+    {
+      "id": "existential",
+      "name": "Questions existentielles",
+      "description": "La condition humaine et le sens de la vie",
+      "icon": "🌑",
+      "texts": ["pascal-pensees", "nietzsche-zarathustra", "nietzsche-beyond-good-evil", "schopenhauer-world-will", "montaigne-essays"]
+    },
+    {
+      "id": "arthurian",
+      "name": "Légendes arthuriennes",
+      "description": "Camelot, la Table Ronde et le Graal",
+      "icon": "🗡️",
+      "texts": ["malory-morte-arthur", "gawain-green-knight"]
+    },
+    {
+      "id": "economics-classics",
+      "name": "Économie politique",
+      "description": "Les fondements de la pensée économique",
+      "icon": "📈",
+      "texts": ["smith-wealth-nations", "marx-communist-manifesto", "keynes-general-theory", "ricardo-political-economy", "mill-political-economy"]
+    },
+    {
+      "id": "persian-poetry",
+      "name": "Poésie persane",
+      "description": "Les maîtres de la poésie soufie",
+      "icon": "🌹",
+      "texts": ["rubaiyat-khayyam", "rumi-masnavi"]
+    }
+  ]
+}

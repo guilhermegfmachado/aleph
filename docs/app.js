@@ -184,8 +184,10 @@ function setupTheme() {
     updateThemeIcon();
 
     toggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const themes = ['light', 'sepia', 'dark'];
+        const idx = themes.indexOf(current);
+        const next = themes[(idx + 1) % themes.length];
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('aleph-theme', next);
         updateThemeIcon();
@@ -195,8 +197,10 @@ function setupTheme() {
 function updateThemeIcon() {
     const toggle = document.getElementById('themeToggle');
     if (!toggle) return;
-    const theme = document.documentElement.getAttribute('data-theme');
-    toggle.textContent = theme === 'dark' ? '◐' : '◑';
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    const icons = { light: '◑', sepia: '◒', dark: '◐' };
+    toggle.textContent = icons[theme] || '◑';
+    toggle.title = `Thème: ${theme}`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -218,6 +222,23 @@ function navigateTo(page) {
 
 function handleHashChange() {
     let hash = window.location.hash.slice(1) || 'home';
+
+    // Handle read URLs: #read/bookId or #read/bookId/lang or #read/bookId/lang/p5
+    if (hash.startsWith('read/')) {
+        const parts = hash.split('/');
+        const bookId = parts[1];
+        const lang = parts[2] || null;
+        const paraMatch = parts[3]?.match(/^p(\d+)$/);
+        const paraIdx = paraMatch ? paraMatch[1] : null;
+
+        if (bookId && state.bookIndex?.[bookId]) {
+            const opts = {};
+            if (lang) opts.lang = lang;
+            if (paraIdx) opts.scrollToPara = `para-${paraIdx}`;
+            openReader(bookId, opts);
+        }
+        return;
+    }
 
     // Update active nav link
     document.querySelectorAll('.main-nav a').forEach(link => {
@@ -362,6 +383,8 @@ function setupKeyboardShortcuts() {
         // Ignore if typing in input
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
 
+        const currentPage = document.querySelector('.page.active')?.id;
+
         // Command palette: Cmd+K or /
         if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
             e.preventDefault();
@@ -378,6 +401,56 @@ function setupKeyboardShortcuts() {
         // Escape closes palette
         if (e.key === 'Escape') {
             document.getElementById('commandPalette')?.classList.remove('active');
+            return;
+        }
+
+        // Reader-specific shortcuts
+        if (currentPage === 'reader') {
+            // j/k to scroll paragraphs
+            if (e.key === 'j' || e.key === 'k') {
+                e.preventDefault();
+                scrollReaderParagraph(e.key === 'j' ? 1 : -1);
+                return;
+            }
+            // n/p or arrow keys for next/previous text
+            if (e.key === 'n' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateToAdjacentText(1);
+                return;
+            }
+            if (e.key === 'p' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateToAdjacentText(-1);
+                return;
+            }
+            // b to go back to browse
+            if (e.key === 'b') {
+                navigateTo('browse');
+                return;
+            }
+        }
+
+        // Browse-specific shortcuts
+        if (currentPage === 'browse') {
+            // Arrow keys to navigate book grid
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+                e.preventDefault();
+                navigateBookGrid(e.key);
+                return;
+            }
+            // Enter to open selected book
+            if (e.key === 'Enter') {
+                const selected = document.querySelector('.book-card.keyboard-selected');
+                if (selected) {
+                    selected.click();
+                    return;
+                }
+            }
+        }
+
+        // Theme toggle: t
+        if (e.key === 't') {
+            document.getElementById('themeToggle')?.click();
             return;
         }
 
@@ -399,6 +472,71 @@ function setupKeyboardShortcuts() {
             }
         }
     });
+}
+
+function scrollReaderParagraph(direction) {
+    const paras = document.querySelectorAll('.reader-para');
+    if (!paras.length) return;
+
+    const viewportCenter = window.innerHeight / 2;
+    let closestIdx = 0;
+    let closestDist = Infinity;
+
+    paras.forEach((p, i) => {
+        const rect = p.getBoundingClientRect();
+        const dist = Math.abs(rect.top - viewportCenter);
+        if (dist < closestDist) {
+            closestDist = dist;
+            closestIdx = i;
+        }
+    });
+
+    const nextIdx = Math.max(0, Math.min(paras.length - 1, closestIdx + direction));
+    paras[nextIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function navigateToAdjacentText(direction) {
+    const currentId = state.currentText?.id;
+    if (!currentId || !state.corpus?.texts) return;
+
+    const texts = state.corpus.texts;
+    const idx = texts.findIndex(t => t.id === currentId);
+    if (idx === -1) return;
+
+    const nextIdx = idx + direction;
+    if (nextIdx >= 0 && nextIdx < texts.length) {
+        const nextText = texts[nextIdx];
+        window.location.hash = `#read/${nextText.id}`;
+    }
+}
+
+function navigateBookGrid(key) {
+    const grid = document.getElementById('booksGrid');
+    if (!grid) return;
+
+    const cards = [...grid.querySelectorAll('.book-card')];
+    if (!cards.length) return;
+
+    let selected = grid.querySelector('.book-card.keyboard-selected');
+    let currentIdx = selected ? cards.indexOf(selected) : -1;
+
+    // Calculate grid columns
+    const gridStyle = getComputedStyle(grid);
+    const cols = gridStyle.gridTemplateColumns.split(' ').length || 1;
+
+    let nextIdx = currentIdx;
+    switch (key) {
+        case 'ArrowRight': nextIdx = Math.min(cards.length - 1, currentIdx + 1); break;
+        case 'ArrowLeft': nextIdx = Math.max(0, currentIdx - 1); break;
+        case 'ArrowDown': nextIdx = Math.min(cards.length - 1, currentIdx + cols); break;
+        case 'ArrowUp': nextIdx = Math.max(0, currentIdx - cols); break;
+    }
+
+    if (nextIdx === -1) nextIdx = 0;
+
+    cards.forEach(c => c.classList.remove('keyboard-selected'));
+    cards[nextIdx].classList.add('keyboard-selected');
+    cards[nextIdx].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1542,6 +1680,18 @@ function setupReaderPage() {
         applyReaderFontSize(fontSize);
     });
 
+    // Share paragraph link
+    document.getElementById('readerBody')?.addEventListener('click', (e) => {
+        if (e.target.classList.contains('para-share')) {
+            const paraIdx = e.target.dataset.para;
+            const url = `${window.location.origin}${window.location.pathname}#read/${state.reader.bookId}/${state.reader.lang}/p${paraIdx}`;
+            navigator.clipboard.writeText(url).then(() => {
+                e.target.textContent = '✓';
+                setTimeout(() => { e.target.textContent = '§'; }, 1500);
+            });
+        }
+    });
+
     // Save reading position on scroll
     let scrollTimer = null;
     document.getElementById('readerBody')?.addEventListener('scroll', () => {
@@ -1754,7 +1904,7 @@ function renderReaderBody() {
         }
         if (meta) meta.textContent = totalHits ? `${totalHits} occurrence${totalHits > 1 ? 's' : ''} dans ${html.match(/class="reader-para/g)?.length || 0} paragraphe${totalHits > 1 ? 's' : ''}` : '';
     } else {
-        html = paragraphs.map((p, i) => `<p class="reader-para" id="para-${i}" data-i="${i + 1}">${escapeHtml(p)}</p>`).join('');
+        html = paragraphs.map((p, i) => `<p class="reader-para" id="para-${i}" data-i="${i + 1}">${escapeHtml(p)}<button class="para-share" data-para="${i}" title="Copier le lien">§</button></p>`).join('');
         if (meta) meta.textContent = `${paragraphs.length} paragraphes · ${state.reader.text.char_count || content.length} caractères`;
     }
 

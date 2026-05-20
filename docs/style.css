@@ -39,6 +39,17 @@
   --accent:   #d96a4a;
 }
 
+[data-theme="sepia"] {
+  --paper:    #f5e6c8;
+  --paper-2:  #eddcb8;
+  --paper-3:  #e5d2a8;
+  --ink:      #3d2b1f;
+  --ink-2:    #5c4433;
+  --ink-3:    #8b7355;
+  --rule:     #c9b896;
+  --accent:   #8b4513;
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    RESET & BASE
    ───────────────────────────────────────────────────────────────────────────── */
@@ -785,10 +796,15 @@ main {
 
 .book-card {
   cursor: pointer;
-  transition: transform 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .book-card:hover {
+  transform: translateY(-2px);
+}
+
+.book-card.keyboard-selected {
+  box-shadow: 0 0 0 2px var(--accent);
   transform: translateY(-2px);
 }
 
@@ -1891,6 +1907,29 @@ details.sources-section[open] > summary::after {
   padding-block: 0.4rem;
 }
 
+.para-share {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+  padding: 0.25rem 0.5rem;
+}
+
+.reader-para:hover .para-share {
+  opacity: 1;
+}
+
+.para-share:hover {
+  color: var(--accent);
+}
+
 .reader-body mark {
   background: rgba(193, 77, 44, 0.2);
   color: inherit;
@@ -2480,4 +2519,122 @@ details.sources-section[open] > summary::after {
 
 .hidden {
   display: none !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   PRINT STYLESHEET
+   ───────────────────────────────────────────────────────────────────────────── */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .site-header,
+  .site-footer,
+  .command-palette-overlay,
+  .browse-sidebar,
+  .browse-toolbar,
+  .reader-actions,
+  .reader-back,
+  .glossary-controls,
+  .glossary-sidebar,
+  .sources-view-toggle,
+  .sources-toc-inline,
+  .network-container,
+  .theme-toggle,
+  .search-trigger,
+  .surprise-section,
+  .quick-stats,
+  .lang-explore,
+  .recently-read,
+  .mot-du-jour,
+  .share-btn,
+  .note-btn {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  .page {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  .page:not(.active) {
+    display: none !important;
+  }
+
+  .reader-page {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .reader-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .reader-title {
+    font-size: 24pt;
+    margin-bottom: 0.5rem;
+  }
+
+  .reader-author {
+    font-size: 14pt;
+  }
+
+  .reader-body {
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  .reader-para {
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    page-break-inside: avoid;
+  }
+
+  .reader-para::before {
+    font-size: 8pt;
+    color: #666 !important;
+  }
+
+  .glossary-page,
+  .sources-page,
+  .search-page {
+    max-width: 100% !important;
+  }
+
+  .glossary-entry {
+    page-break-inside: avoid;
+  }
+
+  .source-item {
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  @page {
+    margin: 2cm;
+  }
 }

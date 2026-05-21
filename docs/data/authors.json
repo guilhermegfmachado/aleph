@@ -3053,6 +3053,116 @@
       "bio": "Critique littéraire et essayiste français, fasciste impénitent. Beau-frère de Brasillach, il défendit sa mémoire et le fascisme jusqu'au bout — Nuremberg ou la Terre promise lui valut la prison. Spécialiste de Balzac et Stendhal, négationniste avant l'heure. Il vécut assez vieux pour voir ses idées renaître.",
       "works": ["bardeche-fascisme"],
       "tags": ["fascisme", "critique", "négationnisme"]
+    },
+    {
+      "id": "burckhardt",
+      "name": "Titus Burckhardt",
+      "name_original": "Titus Ibrahim Burckhardt",
+      "dates": "1908–1984",
+      "origin": "Florence, Italie",
+      "lang": "de",
+      "bio": "Métaphysicien suisse, maître de l'art sacré. Neveu de l'historien Jacob Burckhardt, disciple de Guénon et ami de Schuon. Il vécut à Fès, devint musulman, étudia l'alchimie et l'art islamique. Ses livres sur Chartres, Sienne, Fès révèlent le symbolisme des formes. Discret, savant, il mourut à Lausanne en paix.",
+      "works": ["burckhardt-art-sacre"],
+      "tags": ["tradition", "art sacré", "islam"]
+    },
+    {
+      "id": "lings",
+      "name": "Martin Lings",
+      "name_original": "Abu Bakr Siraj ad-Din",
+      "dates": "1909–2005",
+      "origin": "Burnage, Angleterre",
+      "lang": "en",
+      "bio": "Islamologue britannique, gardien des manuscrits. Élève de Guénon au Caire, initié par Schuon, il devint conservateur au British Museum. Sa biographie du Prophète reste un classique. Il écrivit aussi sur Shakespeare comme voyant. À 96 ans, il priait encore cinq fois par jour, pont entre Oxford et La Mecque.",
+      "works": ["lings-muhammad"],
+      "tags": ["tradition", "islam", "shakespeare"]
+    },
+    {
+      "id": "nasr",
+      "name": "Seyyed Hossein Nasr",
+      "name_original": "سید حسین نصر",
+      "dates": "1933–",
+      "origin": "Téhéran, Iran",
+      "lang": "fa",
+      "bio": "Philosophe irano-américain, voix de l'islam traditionnel. Formé au MIT et Harvard, recteur d'université sous le Shah, exilé après 1979. À Washington, il enseigne la philosophie islamique et la crise du monde moderne. Plus de 50 livres, infatigable. Le dernier géant de l'école traditionnelle, toujours vivant.",
+      "works": ["nasr-connaissance-sacre"],
+      "tags": ["tradition", "islam", "philosophie"]
+    },
+    {
+      "id": "pallis",
+      "name": "Marco Pallis",
+      "name_original": "Marco Alexander Douka Pallis",
+      "dates": "1895–1989",
+      "origin": "Liverpool, Angleterre",
+      "lang": "en",
+      "bio": "Alpiniste et musicien gréco-britannique, pèlerin du Tibet. Il monta des expéditions himalayennes, découvrit le bouddhisme tibétain, devint luthiste et compositeur. Peaks and Lamas : voyage spirituel autant que montagnard. Ami de Guénon et Schuon, il resta discret, jouant du luth jusqu'à la fin.",
+      "works": ["pallis-peaks-lamas"],
+      "tags": ["tradition", "tibet", "musique"]
+    },
+    {
+      "id": "perry",
+      "name": "Whitall Perry",
+      "name_original": "Whitall Nicholson Perry",
+      "dates": "1920–2005",
+      "origin": "New York, États-Unis",
+      "lang": "en",
+      "bio": "Éditeur américain, compilateur de la sagesse. Disciple de Schuon, il vécut des décennies en Suisse. Son Treasury of Traditional Wisdom rassemble des milliers de citations de toutes traditions — somme de la philosophia perennis. Travail monumental, presque anonyme.",
+      "works": ["perry-treasury"],
+      "tags": ["tradition", "anthologie", "sagesse"]
+    },
+    {
+      "id": "sherrard",
+      "name": "Philip Sherrard",
+      "name_original": "Philip Sherrard",
+      "dates": "1922–1995",
+      "origin": "Oxford, Angleterre",
+      "lang": "en",
+      "bio": "Théologien et traducteur britannique, orthodoxe de Grèce. Il traduisit les poètes grecs modernes — Cavafy, Séféris, Elytis — et défendit la théologie byzantine contre l'Occident. Installé en Eubée, il vécut en ermite orthodoxe, écrivant sur l'écologie sacrée. L'homme, la nature et Dieu : inséparables.",
+      "works": ["sherrard-grece-sacree"],
+      "tags": ["orthodoxie", "grèce", "écologie"]
+    },
+    {
+      "id": "raine",
+      "name": "Kathleen Raine",
+      "name_original": "Kathleen Jessie Raine",
+      "dates": "1908–2003",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Poétesse et critique britannique, prêtresse de Blake. Elle fonda Temenos, revue de l'imagination sacrée, et la Temenos Academy. Trois mariages malheureux, un amour impossible pour Gavin Maxwell. Ses poèmes célèbrent la nature comme théophanie. À 95 ans, elle récitait encore Blake par cœur.",
+      "works": ["raine-blake-tradition"],
+      "tags": ["poésie", "blake", "tradition"]
+    },
+    {
+      "id": "borella",
+      "name": "Jean Borella",
+      "name_original": "Jean Borella",
+      "dates": "1930–",
+      "origin": "Nancy, France",
+      "lang": "fr",
+      "bio": "Philosophe français, métaphysicien chrétien. Professeur à Nancy, il repensa l'ésotérisme chrétien contre Guénon — la Tradition existe, mais le christianisme n'en est pas une branche : il est le centre. La Charité profanée critique la religion moderne. Discret, rigoureux, encore vivant.",
+      "works": ["borella-charite"],
+      "tags": ["tradition", "christianisme", "métaphysique"]
+    },
+    {
+      "id": "huston-smith",
+      "name": "Huston Smith",
+      "name_original": "Huston Cummings Smith",
+      "dates": "1919–2016",
+      "origin": "Suzhou, Chine",
+      "lang": "en",
+      "bio": "Philosophe américain des religions, vulgarisateur de la sagesse. Né en Chine de missionnaires méthodistes, il explora toutes les voies : hindouisme, bouddhisme, islam, chamanisme. The World's Religions reste le manuel. Il pratiqua chaque tradition qu'il enseigna. Mort à 97 ans, toujours émerveillé.",
+      "works": ["smith-religions-monde"],
+      "tags": ["religions", "pérennialisme", "sagesse"]
+    },
+    {
+      "id": "wolfgang-smith",
+      "name": "Wolfgang Smith",
+      "name_original": "Wolfgang Smith",
+      "dates": "1930–",
+      "origin": "Vienne, Autriche",
+      "lang": "en",
+      "bio": "Mathématicien et philosophe austro-américain. Physicien à Bell Labs, pionnier de la rentrée atmosphérique, il se tourna vers la métaphysique. Contre le scientisme, il défend les niveaux de réalité et la cosmologie traditionnelle. Toujours vivant à plus de 90 ans, il publie encore.",
+      "works": ["smith-cosmos-transcendance"],
+      "tags": ["tradition", "physique", "cosmologie"]
     }
   ]
 }

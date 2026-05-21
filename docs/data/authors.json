@@ -2635,6 +2635,193 @@
       "bio": "Critique d'art, poète et anarchiste britannique. Fils de fermier du Yorkshire, traumatisé par les tranchées, il devint le champion de l'art moderne en Angleterre — surréalisme, Henry Moore, Barbara Hepworth. Education Through Art : l'imagination contre la machine. Anarchiste paisible, il accepta le titre de chevalier et s'en excusa auprès des camarades.",
       "works": ["read-education-art"],
       "tags": ["art", "anarchisme", "éducation"]
+    },
+    {
+      "id": "ruskin",
+      "name": "John Ruskin",
+      "name_original": "John Ruskin",
+      "dates": "1819–1900",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Critique d'art et réformateur social victorien. Il défendit Turner, les Préraphaélites, l'architecture gothique — et attaqua le capitalisme industriel. Unto This Last inspira Gandhi. Mariage non consommé, annulé, scandale. Il sombra dans la folie, reclus à Brantwood. Prophète de la beauté comme éthique.",
+      "works": ["ruskin-stones-venice"],
+      "tags": ["art", "socialisme", "esthétique"]
+    },
+    {
+      "id": "morris",
+      "name": "William Morris",
+      "name_original": "William Morris",
+      "dates": "1834–1896",
+      "origin": "Walthamstow, Angleterre",
+      "lang": "en",
+      "bio": "Poète, designer et socialiste britannique. Il fonda le mouvement Arts and Crafts contre la laideur industrielle — papiers peints, tapisseries, livres. News from Nowhere : utopie médiévale-socialiste. Riche héritier devenu marxiste, il fabriquait de belles choses pour les riches en rêvant de révolution.",
+      "works": ["morris-news-nowhere"],
+      "tags": ["art", "socialisme", "artisanat"]
+    },
+    {
+      "id": "gill",
+      "name": "Eric Gill",
+      "name_original": "Arthur Eric Rowton Gill",
+      "dates": "1882–1940",
+      "origin": "Brighton, Angleterre",
+      "lang": "en",
+      "bio": "Sculpteur et typographe britannique. Gill Sans, Perpetua — ses polices sont partout. Catholique médiévaliste, il sculpta des stations de chemin de croix et des nus érotiques. Après sa mort, ses journaux révélèrent inceste et zoophilie. L'œuvre demeure ; l'homme est irrécupérable.",
+      "works": ["gill-essay-typography"],
+      "tags": ["typographie", "sculpture", "scandale"]
+    },
+    {
+      "id": "david-jones",
+      "name": "David Jones",
+      "name_original": "David Michael Jones",
+      "dates": "1895–1974",
+      "origin": "Brockley, Angleterre",
+      "lang": "en",
+      "bio": "Poète et peintre britannique, vétéran de la Somme. In Parenthesis : épopée des tranchées, mêlant l'argot des soldats à Malory et au Mabinogion. Catholique converti, il vécut pauvre et reclus, peignant des inscriptions celtiques et romaines. Neurasthénique à vie, il refusa la gloire.",
+      "works": ["jones-in-parenthesis"],
+      "tags": ["poésie", "guerre", "celtisme"]
+    },
+    {
+      "id": "comfort",
+      "name": "Alex Comfort",
+      "name_original": "Alexander Comfort",
+      "dates": "1920–2000",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Médecin, poète et anarchiste britannique. Objecteur de conscience pendant la guerre, il écrivit sur la mort, le vieillissement, la liberté sexuelle. Puis en 1972 : The Joy of Sex — best-seller planétaire aux illustrations poilues. Le penseur sérieux devint l'apôtre du plaisir. Il n'en eut pas honte.",
+      "works": ["comfort-joy-sex"],
+      "tags": ["anarchisme", "sexualité", "gérontologie"]
+    },
+    {
+      "id": "woodcock",
+      "name": "George Woodcock",
+      "name_original": "George Woodcock",
+      "dates": "1912–1995",
+      "origin": "Winnipeg, Canada",
+      "lang": "en",
+      "bio": "Écrivain et anarchiste canadien. Il édita des revues avec Herbert Read et Marie-Louise Berneri, puis écrivit l'histoire définitive de l'anarchisme. Biographe d'Orwell, de Gandhi, des Doukhobors. Retourné au Canada, il fonda Canadian Literature. Pacifiste infatigable, voyageur, jardinier.",
+      "works": ["woodcock-anarchism"],
+      "tags": ["anarchisme", "histoire", "canada"]
+    },
+    {
+      "id": "goodman",
+      "name": "Paul Goodman",
+      "name_original": "Paul Goodman",
+      "dates": "1911–1972",
+      "origin": "New York, États-Unis",
+      "lang": "en",
+      "bio": "Écrivain et anarchiste américain, penseur de l'éducation. Growing Up Absurd critiqua la société de masse ; il devint gourou involontaire de la Nouvelle Gauche. Bisexuel ouvert, il scandalisa les radicaux respectables. Poète, romancier, thérapeute gestalt — il toucha à tout et mourut oublié.",
+      "works": ["goodman-growing-up-absurd"],
+      "tags": ["anarchisme", "éducation", "critique sociale"]
+    },
+    {
+      "id": "szewc",
+      "name": "Piotr Szewc",
+      "name_original": "Piotr Szewc",
+      "dates": "1961–",
+      "origin": "Zamość, Pologne",
+      "lang": "pl",
+      "bio": "Écrivain polonais, archéologue de la mémoire. Zagłada (Annihilation) : un jour d'été 1934 dans une petite ville polonaise — juifs, catholiques, vie ordinaire avant l'abîme. Prose poétique, temps suspendu. Il écrit peu, lentement, creusant ce qui a disparu.",
+      "works": ["szewc-zaglada"],
+      "tags": ["mémoire", "shoah", "pologne"]
+    },
+    {
+      "id": "schulz",
+      "name": "Bruno Schulz",
+      "name_original": "Bruno Schulz",
+      "dates": "1892–1942",
+      "origin": "Drohobycz, Galicie",
+      "lang": "pl",
+      "bio": "Écrivain et dessinateur polonais, génie du fantastique. Les Boutiques de cannelle : Drohobycz transfigurée en labyrinthe onirique, le père métamorphosé en cafard ou oiseau. Professeur de dessin timide, il fut abattu dans le ghetto par un SS. Son roman perdu, Le Messie, hante les chercheurs.",
+      "works": ["schulz-boutiques-cannelle"],
+      "tags": ["fantastique", "shoah", "galicie"]
+    },
+    {
+      "id": "borowski",
+      "name": "Tadeusz Borowski",
+      "name_original": "Tadeusz Borowski",
+      "dates": "1922–1951",
+      "origin": "Jitomir, Ukraine",
+      "lang": "pl",
+      "bio": "Poète et nouvelliste polonais, survivant d'Auschwitz. Ses récits du camp — Le Monde de pierre — décrivent l'horreur sans pathos, avec une ironie glacée. Le narrateur est complice : pour survivre, on devient fonctionnaire de la mort. Trois jours après la naissance de sa fille, il ouvrit le gaz. Il avait 28 ans.",
+      "works": ["borowski-monde-pierre"],
+      "tags": ["shoah", "auschwitz", "suicide"]
+    },
+    {
+      "id": "herbert-zbigniew",
+      "name": "Zbigniew Herbert",
+      "name_original": "Zbigniew Herbert",
+      "dates": "1924–1998",
+      "origin": "Lwów, Pologne",
+      "lang": "pl",
+      "bio": "Poète polonais, moraliste stoïcien. Monsieur Cogito : un personnage qui pense, doute, résiste. Il refusa de collaborer sous le communisme, vécut dans la pauvreté, voyagea en Occident. Ses vers classiques, ironiques, défendent la dignité contre l'histoire. « Il faut aller là où vont ceux qui ont choisi l'abîme. »",
+      "works": ["herbert-monsieur-cogito"],
+      "tags": ["poésie", "résistance", "morale"]
+    },
+    {
+      "id": "gombrowicz",
+      "name": "Witold Gombrowicz",
+      "name_original": "Witold Gombrowicz",
+      "dates": "1904–1969",
+      "origin": "Małoszyce, Pologne",
+      "lang": "pl",
+      "bio": "Romancier et dramaturge polonais, maître de l'absurde. Ferdydurke : un homme ramené à l'enfance, prisonnier des formes imposées. En 1939, il partit pour l'Argentine et n'en revint jamais — 24 ans d'exil obscur avant la gloire tardive. « L'homme est créé par la forme, et il crée la forme. »",
+      "works": ["gombrowicz-ferdydurke"],
+      "tags": ["absurde", "forme", "exil"]
+    },
+    {
+      "id": "kis",
+      "name": "Danilo Kiš",
+      "name_original": "Данило Киш",
+      "dates": "1935–1989",
+      "origin": "Subotica, Yougoslavie",
+      "lang": "sr",
+      "bio": "Écrivain yougoslave, juif hongrois de Voïvodine. Un tombeau pour Boris Davidovitch : nouvelles sur les victimes de Staline. On l'accusa de plagiat — il répondit par un essai dévastateur. Père disparu à Auschwitz, il passa sa vie à écrire contre l'oubli. Mort d'un cancer à Paris, amer et admiré.",
+      "works": ["kis-tombeau-boris"],
+      "tags": ["mémoire", "stalinisme", "yougoslavie"]
+    },
+    {
+      "id": "hrabal",
+      "name": "Bohumil Hrabal",
+      "name_original": "Bohumil Hrabal",
+      "dates": "1914–1997",
+      "origin": "Brno, Tchécoslovaquie",
+      "lang": "cs",
+      "bio": "Écrivain tchèque, conteur des marges. Trains étroitement surveillés, Une trop bruyante solitude — ses héros sont ouvriers, piloneurs de livres, bavards de brasserie. Sous le communisme, il publia en samizdat puis signa une rétractation — honte dont il ne se remit pas. Il tomba d'une fenêtre d'hôpital en nourrissant des pigeons.",
+      "works": ["hrabal-solitude"],
+      "tags": ["absurde", "prague", "brasserie"]
+    },
+    {
+      "id": "marai",
+      "name": "Sándor Márai",
+      "name_original": "Márai Sándor",
+      "dates": "1900–1989",
+      "origin": "Košice, Hongrie",
+      "lang": "hu",
+      "bio": "Romancier hongrois, chroniqueur de la bourgeoisie disparue. Les Braises : deux vieillards, un secret de 40 ans, une nuit de vérité. Exilé après 1948, il erra de Naples à New York, oublié. Sa femme mourut, son fils aussi. Il se tira une balle à San Diego. La Hongrie postcommuniste le redécouvrit.",
+      "works": ["marai-braises"],
+      "tags": ["exil", "bourgeoisie", "suicide"]
+    },
+    {
+      "id": "csath",
+      "name": "Géza Csáth",
+      "name_original": "Csáth Géza",
+      "dates": "1887–1919",
+      "origin": "Subotica, Hongrie",
+      "lang": "hu",
+      "bio": "Écrivain et psychiatre hongrois, météore de la décadence. Ses nouvelles explorent la folie, l'enfance, le désir — Schnitzler avec de la morphine. Il devint morphinomane, tua sa femme, tenta de tuer ses enfants, se suicida à la frontière en fuyant. Il avait 32 ans. Redécouvert un siècle plus tard.",
+      "works": ["csath-nouvelles"],
+      "tags": ["décadence", "morphine", "meurtre"]
+    },
+    {
+      "id": "zagajewski",
+      "name": "Adam Zagajewski",
+      "name_original": "Adam Zagajewski",
+      "dates": "1945–2021",
+      "origin": "Lwów, Pologne",
+      "lang": "pl",
+      "bio": "Poète polonais, voix de l'exil et de l'émerveillement. Né à Lwów cédée à l'URSS, il grandit à Gliwice, ville allemande devenue polonaise — double déracinement. Essayiste de la beauté, il vécut à Paris, Houston, Cracovie. Try to Praise the Mutilated World parut le 24 septembre 2001. Il mourut à Cracovie.",
+      "works": ["zagajewski-poemes"],
+      "tags": ["poésie", "exil", "beauté"]
     }
   ]
 }

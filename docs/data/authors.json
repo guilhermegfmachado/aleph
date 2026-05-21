@@ -2965,6 +2965,94 @@
       "bio": "Poète polonais, du stalinisme au dégel. Avant-gardiste dans les années 20, communiste convaincu après la guerre, il chanta le régime — puis se réveilla. Son Poème pour adultes (1955) dénonça la misère et le mensonge : « Ils ont couru vers nous en criant : Sous le socialisme / un homme de la jeunesse ne sera pas seul. » Le poème déclencha l'Octobre polonais. Rédemption par la vérité.",
       "works": ["wazyk-poeme-adultes"],
       "tags": ["poésie", "dégel", "dissidence"]
+    },
+    {
+      "id": "venner",
+      "name": "Dominique Venner",
+      "name_original": "Dominique Venner",
+      "dates": "1935–2013",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Historien et militant français, samouraï de la droite. OAS pendant la guerre d'Algérie, prison, puis historien des armes et de l'Europe. Il dirigea la Nouvelle Revue d'Histoire. Le 21 mai 2013, il se tira une balle dans la bouche devant l'autel de Notre-Dame — geste sacrificiel contre le « grand remplacement ». Sa mort fit plus de bruit que ses livres.",
+      "works": ["venner-coeur-rebelle"],
+      "tags": ["histoire", "europe", "suicide"]
+    },
+    {
+      "id": "faye",
+      "name": "Guillaume Faye",
+      "name_original": "Guillaume Faye",
+      "dates": "1949–2019",
+      "origin": "Angoulême, France",
+      "lang": "fr",
+      "bio": "Essayiste français, prophète de l'archéofuturisme. Figure de la Nouvelle Droite puis dissident, il prônait un retour aux valeurs archaïques combiné à la technoscience. Provocateur, excommunié par Benoist, il poussa la logique identitaire jusqu'au bout. Mort oublié des médias qu'il avait tant méprisés.",
+      "works": ["faye-archeofuturisme"],
+      "tags": ["identitaire", "futurisme", "europe"]
+    },
+    {
+      "id": "benoist",
+      "name": "Alain de Benoist",
+      "name_original": "Alain de Benoist",
+      "dates": "1943–",
+      "origin": "Saint-Symphorien, France",
+      "lang": "fr",
+      "bio": "Philosophe français, pape de la Nouvelle Droite. Il fonda GRECE en 1968 — « gramscisme de droite », guerre culturelle contre l'égalitarisme. Païen, anti-américain, anti-libéral, inclassable. Des dizaines de livres, des centaines de pseudonymes. La gauche le diabolise, la droite s'en méfie. Il pense toujours.",
+      "works": ["benoist-vu-droite"],
+      "tags": ["nouvelle droite", "paganisme", "métapolitique"]
+    },
+    {
+      "id": "raspail",
+      "name": "Jean Raspail",
+      "name_original": "Jean Raspail",
+      "dates": "1925–2020",
+      "origin": "Chemillé-sur-Dême, France",
+      "lang": "fr",
+      "bio": "Romancier et voyageur français, consul de Patagonie. Explorateur des peuples oubliés — Indiens, Alakalufs, royaumes perdus. Le Camp des saints (1973) imaginait l'invasion migratoire de l'Europe. Prophétie ou fantasme ? Le livre revient hanter chaque crise. Royaliste excentrique, il mourut fidèle à ses chimères.",
+      "works": ["raspail-camp-saints"],
+      "tags": ["roman", "prophétie", "patagonie"]
+    },
+    {
+      "id": "brasillach",
+      "name": "Robert Brasillach",
+      "name_original": "Robert Brasillach",
+      "dates": "1909–1945",
+      "origin": "Perpignan, France",
+      "lang": "fr",
+      "bio": "Écrivain et journaliste français, fasciste fusillé. Normalien brillant, critique au Je suis partout, il choisit la collaboration avec enthousiasme — « nous avons couché avec l'Allemagne ». Condamné à mort, refusé la grâce par de Gaulle malgré Mauriac. 35 ans. Son talent n'excuse rien mais complique tout.",
+      "works": ["brasillach-poemes"],
+      "tags": ["collaboration", "poésie", "fascisme"]
+    },
+    {
+      "id": "drieu",
+      "name": "Pierre Drieu la Rochelle",
+      "name_original": "Pierre Drieu la Rochelle",
+      "dates": "1893–1945",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Écrivain français, fasciste désespéré. Dandy de l'entre-deux-guerres, il chercha une foi — communisme, fascisme, Europe. Directeur de la NRF sous l'Occupation, il rêvait d'un homme nouveau qui ne vint jamais. À la Libération, il se suicida à la troisième tentative. Gilles reste son autoportrait impitoyable.",
+      "works": ["drieu-gilles"],
+      "tags": ["fascisme", "décadence", "suicide"]
+    },
+    {
+      "id": "rebatet",
+      "name": "Lucien Rebatet",
+      "name_original": "Lucien Rebatet",
+      "dates": "1903–1972",
+      "origin": "Moras-en-Valloire, France",
+      "lang": "fr",
+      "bio": "Écrivain et journaliste français, collaborateur virulent. Les Décombres (1942) : pamphlet antisémite, best-seller de l'Occupation. Condamné à mort, gracié, il écrivit en prison Les Deux Étendards — chef-d'œuvre ignoré. Critique musical exquis, homme politique ignoble. La postérité ne sait qu'en faire.",
+      "works": ["rebatet-deux-etendards"],
+      "tags": ["collaboration", "musique", "antisémitisme"]
+    },
+    {
+      "id": "bardeche",
+      "name": "Maurice Bardèche",
+      "name_original": "Maurice Bardèche",
+      "dates": "1907–1998",
+      "origin": "Dun-sur-Auron, France",
+      "lang": "fr",
+      "bio": "Critique littéraire et essayiste français, fasciste impénitent. Beau-frère de Brasillach, il défendit sa mémoire et le fascisme jusqu'au bout — Nuremberg ou la Terre promise lui valut la prison. Spécialiste de Balzac et Stendhal, négationniste avant l'heure. Il vécut assez vieux pour voir ses idées renaître.",
+      "works": ["bardeche-fascisme"],
+      "tags": ["fascisme", "critique", "négationnisme"]
     }
   ]
 }

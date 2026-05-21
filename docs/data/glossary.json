@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2111
+    "count": 2140
   },
   "terms": [
     {
@@ -22755,6 +22755,306 @@
       ],
       "definition": "Heidegger's 'enframing'—the essence of modern technology that reveals everything as resource to be optimized. The Rhine becomes hydroelectric potential.",
       "related": ["Technik", "Dasein"]
+    },
+    {
+      "id": "deep-time",
+      "term": "Deep Time",
+      "lang": "en",
+      "category": [
+        "géologie",
+        "philosophie"
+      ],
+      "definition": "Geological time—millions and billions of years. John McPhee's term for the vertigo of comprehending Earth's 4.5 billion year history. Human civilization: the last eyeblink.",
+      "related": ["Stratigraphy", "Anthropocène"]
+    },
+    {
+      "id": "precambrian",
+      "term": "Précambrien",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The first 4 billion years—88% of Earth's history. Mostly microbial, mostly mysterious. Ends with the Cambrian explosion. The long slow fuse.",
+      "related": ["Cambrian Explosion", "Deep Time"]
+    },
+    {
+      "id": "cambrian-explosion",
+      "term": "Explosion cambrienne",
+      "lang": "fr",
+      "category": [
+        "géologie",
+        "biologie"
+      ],
+      "definition": "541 million years ago: suddenly, complex animals with shells, eyes, legs. In 20 million years, most major body plans appear. Darwin's dilemma, still debated.",
+      "related": ["Précambrien", "Paléozoïque"]
+    },
+    {
+      "id": "paleozoic",
+      "term": "Paléozoïque",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The 'ancient life' era—541 to 252 million years ago. Trilobites, fish, amphibians, the first forests. Ends with the Great Dying: 96% of species gone.",
+      "related": ["Mésozoïque", "Extinction permienne"]
+    },
+    {
+      "id": "mesozoic",
+      "term": "Mésozoïque",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The 'middle life' era—252 to 66 million years ago. Age of dinosaurs: Triassic, Jurassic, Cretaceous. Ends with the asteroid. Mammals inherit the Earth.",
+      "related": ["Paléozoïque", "Cénozoïque", "K-Pg"]
+    },
+    {
+      "id": "triassic",
+      "term": "Trias",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "First period of the Mesozoic—252 to 201 million years ago. Recovery from the Great Dying. First dinosaurs, first mammals. Pangaea intact.",
+      "related": ["Jurassique", "Mésozoïque"]
+    },
+    {
+      "id": "jurassic",
+      "term": "Jurassique",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "Middle Mesozoic—201 to 145 million years ago. Giant sauropods, Archaeopteryx. Pangaea breaks apart. Named for the Jura Mountains.",
+      "related": ["Trias", "Crétacé"]
+    },
+    {
+      "id": "cretaceous",
+      "term": "Crétacé",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "Last period of the dinosaurs—145 to 66 million years ago. T. rex, Triceratops, flowering plants explode. Named for chalk (creta). Ends with impact.",
+      "related": ["Jurassique", "K-Pg"]
+    },
+    {
+      "id": "k-pg",
+      "term": "K-Pg",
+      "lang": "en",
+      "category": [
+        "géologie",
+        "extinction"
+      ],
+      "definition": "The Cretaceous-Paleogene boundary—66 million years ago. Chicxulub asteroid, nuclear winter, 76% of species extinct. The dinosaurs' last day. Mammals' first dawn.",
+      "related": ["Crétacé", "Cénozoïque"]
+    },
+    {
+      "id": "cenozoic",
+      "term": "Cénozoïque",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The 'recent life' era—66 million years ago to now. Age of mammals, birds, grasses. Ice ages, primates, us. We live in the Cenozoic's latest heartbeat.",
+      "related": ["Mésozoïque", "Anthropocène"]
+    },
+    {
+      "id": "permian-extinction",
+      "term": "Extinction permienne",
+      "lang": "fr",
+      "category": [
+        "géologie",
+        "extinction"
+      ],
+      "definition": "The Great Dying—252 million years ago. 96% of marine species, 70% of land species. Siberian volcanism, ocean acidification, runaway warming. Earth nearly sterilized.",
+      "related": ["Paléozoïque", "Mésozoïque"]
+    },
+    {
+      "id": "pangaea",
+      "term": "Pangée",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The supercontinent—all lands joined, 335 to 175 million years ago. From Greek 'all earth.' Its breakup shaped our world: Atlantic opens, India crashes into Asia.",
+      "related": ["Gondwana", "Laurasia"]
+    },
+    {
+      "id": "gondwana",
+      "term": "Gondwana",
+      "lang": "sa",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The southern supercontinent—South America, Africa, Antarctica, India, Australia joined. Named for the Gond people of India. Its fossils match across oceans.",
+      "related": ["Pangée", "Laurasia"]
+    },
+    {
+      "id": "laurasia",
+      "term": "Laurasie",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The northern supercontinent—North America, Europe, Asia. Split from Pangaea, drifted north. Named from Laurentia + Eurasia.",
+      "related": ["Pangée", "Gondwana"]
+    },
+    {
+      "id": "stratigraphy",
+      "term": "Stratigraphie",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "Reading Earth's history in rock layers. Oldest below, youngest above. Each stratum a page, each unconformity a chapter missing. The autobiography of stone.",
+      "related": ["Deep Time", "Fossil"]
+    },
+    {
+      "id": "fossil",
+      "term": "Fossile",
+      "lang": "fr",
+      "category": [
+        "géologie",
+        "biologie"
+      ],
+      "definition": "From Latin 'dug up'—traces of ancient life preserved in stone. Bones, shells, footprints, even chemical traces. Messages from the dead, written in rock.",
+      "related": ["Stratigraphie", "Paléontologie"]
+    },
+    {
+      "id": "uniformitarianism",
+      "term": "Uniformitarisme",
+      "lang": "fr",
+      "category": [
+        "géologie",
+        "philosophie"
+      ],
+      "definition": "Lyell's principle: the present is the key to the past. Same processes, same rates, over deep time. No catastrophes needed—just patience. Geology's founding assumption.",
+      "related": ["Catastrophisme", "Deep Time"]
+    },
+    {
+      "id": "catastrophism",
+      "term": "Catastrophisme",
+      "lang": "fr",
+      "category": [
+        "géologie",
+        "philosophie"
+      ],
+      "definition": "Earth shaped by sudden disasters—floods, extinctions, impacts. Once dismissed for uniformitarianism, now partly rehabilitated. Chicxulub proved: sometimes catastrophe wins.",
+      "related": ["Uniformitarisme", "K-Pg"]
+    },
+    {
+      "id": "plate-tectonics",
+      "term": "Tectonique des plaques",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "Earth's crust broken into moving plates—continents drift, oceans open and close, mountains rise. Wegener guessed; it took 50 years to prove. The planet breathes.",
+      "related": ["Pangée", "Subduction"]
+    },
+    {
+      "id": "subduction",
+      "term": "Subduction",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "One tectonic plate diving beneath another—into the mantle, recycled. Creates volcanoes, earthquakes, trenches. The Ring of Fire: subduction's signature.",
+      "related": ["Tectonique des plaques"]
+    },
+    {
+      "id": "orogeny",
+      "term": "Orogenèse",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "Mountain-building—continents collide, crust crumples, peaks rise. The Himalayas: India ramming into Asia for 50 million years. Slow-motion violence.",
+      "related": ["Tectonique des plaques", "Subduction"]
+    },
+    {
+      "id": "holocene",
+      "term": "Holocène",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "Our current epoch—11,700 years of warm stability after the ice age. Agriculture, cities, civilization: all Holocene. Now ending, say some, in the Anthropocene.",
+      "related": ["Anthropocène", "Pléistocène"]
+    },
+    {
+      "id": "pleistocene",
+      "term": "Pléistocène",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "The Ice Age epoch—2.6 million to 11,700 years ago. Glaciers advanced and retreated; mammoths, saber-tooths, early humans. We are ice age creatures in an interglacial.",
+      "related": ["Holocène", "Cénozoïque"]
+    },
+    {
+      "id": "extinction",
+      "term": "Extinction",
+      "lang": "fr",
+      "category": [
+        "biologie",
+        "géologie"
+      ],
+      "definition": "The end of a species—forever. Background rate: a few per million years. Mass extinctions: 75%+ gone. We are now causing the sixth.",
+      "related": ["K-Pg", "Extinction permienne"]
+    },
+    {
+      "id": "lazarus-taxon",
+      "term": "Taxon Lazare",
+      "lang": "fr",
+      "category": [
+        "biologie",
+        "paléontologie"
+      ],
+      "definition": "A species thought extinct, then found alive—risen from the fossil record. The coelacanth: 66 million years missing, then caught off South Africa in 1938.",
+      "related": ["Fossil", "Extinction"]
+    },
+    {
+      "id": "living-fossil",
+      "term": "Fossile vivant",
+      "lang": "fr",
+      "category": [
+        "biologie"
+      ],
+      "definition": "A species unchanged for millions of years—horseshoe crabs, ginkgos, nautiluses. Darwin's term, now controversial: nothing truly stops evolving.",
+      "related": ["Taxon Lazare", "Évolution"]
+    },
+    {
+      "id": "convergent-evolution",
+      "term": "Convergence évolutive",
+      "lang": "fr",
+      "category": [
+        "biologie"
+      ],
+      "definition": "Unrelated species evolving similar solutions—eyes invented 40+ times, wings at least 4 times. Different ancestors, same problems, same answers.",
+      "related": ["Évolution", "Homologie"]
+    },
+    {
+      "id": "radiometric-dating",
+      "term": "Datation radiométrique",
+      "lang": "fr",
+      "category": [
+        "géologie",
+        "physique"
+      ],
+      "definition": "Reading time from radioactive decay—uranium to lead, potassium to argon. Each isotope a clock ticking at its own rate. How we know Earth is 4.5 billion years old.",
+      "related": ["Deep Time", "Stratigraphie"]
+    },
+    {
+      "id": "supercontinent-cycle",
+      "term": "Cycle des supercontinents",
+      "lang": "fr",
+      "category": [
+        "géologie"
+      ],
+      "definition": "Continents assemble, break apart, reassemble—every 400-600 million years. Rodinia, Pangaea, and in 250 million years: Pangaea Proxima. Earth's slow heartbeat.",
+      "related": ["Pangée", "Tectonique des plaques"]
     }
   ]
 }

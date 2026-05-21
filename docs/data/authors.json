@@ -4824,6 +4824,138 @@
         "physique",
         "cosmologie"
       ]
+    },
+    {
+      "id": "geulincx",
+      "name": "Arnold Geulincx",
+      "name_original": "Arnold Geulincx",
+      "dates": "1624–1669",
+      "origin": "Anvers, Pays-Bas espagnols",
+      "lang": "la",
+      "bio": "Philosophe flamand, occasionnaliste radical. Cartésien à Louvain, il fut chassé pour ses idées et se convertit au protestantisme. L'âme ne meut pas le corps — Dieu seul agit à chaque instant. « Là où tu ne peux rien, tu ne dois rien vouloir. » Beckett le citait. Il mourut de la peste à Leyde, pauvre et oublié.",
+      "works": ["geulincx-ethique"],
+      "tags": ["occasionnalisme", "cartésianisme", "métaphysique"]
+    },
+    {
+      "id": "malebranche",
+      "name": "Nicolas Malebranche",
+      "name_original": "Nicolas Malebranche",
+      "dates": "1638–1715",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Prêtre et philosophe français, visionnaire de l'occasionnalisme. Lisant Descartes, il eut une révélation : nous voyons toutes choses en Dieu. La Recherche de la vérité fascina et scandalisa. Bossuet et Arnauld l'attaquèrent. Il mourut après une dispute avec Berkeley qui lui rendit visite. Métaphysicien des métaphysiciens.",
+      "works": ["malebranche-recherche-verite"],
+      "tags": ["occasionnalisme", "cartésianisme", "vision en dieu"]
+    },
+    {
+      "id": "bruno",
+      "name": "Giordano Bruno",
+      "name_original": "Filippo Bruno",
+      "dates": "1548–1600",
+      "origin": "Nola, Italie",
+      "lang": "la",
+      "bio": "Philosophe et hérétique italien, martyr de la pensée. Dominicain défroqué, il erra à travers l'Europe, prêchant l'univers infini et les mondes multiples. L'Inquisition le rattrapa à Venise. Huit ans de procès, puis le bûcher au Campo de' Fiori. Il refusa de se rétracter. « Vous avez plus peur de prononcer cette sentence que moi de la recevoir. »",
+      "works": ["bruno-infini-univers"],
+      "tags": ["hermétisme", "hérésie", "infini", "renaissance"]
+    },
+    {
+      "id": "ficino",
+      "name": "Marsile Ficin",
+      "name_original": "Marsilio Ficino",
+      "dates": "1433–1499",
+      "origin": "Figline Valdarno, Italie",
+      "lang": "la",
+      "bio": "Philosophe et prêtre florentin, père du néoplatonisme renaissant. Cosme de Médicis lui offrit une villa pour traduire Platon et Hermès Trismégiste. Il fonda l'Académie platonicienne, réconcilia Platon et le Christ, théorisa l'amour comme force cosmique. Toute la Renaissance but à sa source.",
+      "works": ["ficino-theologie-platonicienne"],
+      "tags": ["néoplatonisme", "hermétisme", "renaissance", "florence"]
+    },
+    {
+      "id": "pico",
+      "name": "Pic de la Mirandole",
+      "name_original": "Giovanni Pico della Mirandola",
+      "dates": "1463–1494",
+      "origin": "Mirandola, Italie",
+      "lang": "la",
+      "bio": "Philosophe italien, prince de la concordance. À 23 ans, il proposa 900 thèses conciliant toutes les sagesses — kabbale, Platon, Aristote, magie. Le pape condamna 13 thèses ; il s'enfuit en France. Son Discours sur la dignité de l'homme : l'homme n'a pas de nature fixe, il se crée lui-même. Il mourut à 31 ans, peut-être empoisonné.",
+      "works": ["pico-dignite-homme"],
+      "tags": ["néoplatonisme", "kabbale", "renaissance", "florence"]
+    },
+    {
+      "id": "cusanus",
+      "name": "Nicolas de Cues",
+      "name_original": "Nikolaus von Kues",
+      "dates": "1401–1464",
+      "origin": "Cues, Allemagne",
+      "lang": "la",
+      "bio": "Cardinal et philosophe allemand, penseur de l'infini. La Docte Ignorance : Dieu est la coïncidence des opposés, l'univers n'a pas de centre. Avant Copernic, il imagina la Terre en mouvement. Réformateur, diplomate, mathématicien, il mourut en route vers Rome. Leibniz et Hegel le redécouvrirent.",
+      "works": ["cusanus-docte-ignorance"],
+      "tags": ["néoplatonisme", "infini", "coïncidence des opposés"]
+    },
+    {
+      "id": "campanella",
+      "name": "Tommaso Campanella",
+      "name_original": "Giovanni Domenico Campanella",
+      "dates": "1568–1639",
+      "origin": "Stilo, Calabre",
+      "lang": "la",
+      "bio": "Dominicain et utopiste calabrais, conspirateur visionnaire. Il complota contre les Espagnols, fut torturé, passa 27 ans en prison. Dans son cachot, il écrivit La Cité du Soleil — utopie communiste théocratique. Libéré, il finit ses jours à Paris sous la protection de Richelieu. L'astrologie le sauva de la folie.",
+      "works": ["campanella-cite-soleil"],
+      "tags": ["utopie", "hermétisme", "prison", "renaissance"]
+    },
+    {
+      "id": "paracelse",
+      "name": "Paracelse",
+      "name_original": "Theophrastus von Hohenheim",
+      "dates": "1493–1541",
+      "origin": "Einsiedeln, Suisse",
+      "lang": "de",
+      "bio": "Médecin et alchimiste suisse, révolutionnaire de la médecine. Il brûla publiquement les livres de Galien, soigna avec des minéraux, voyagea partout, se fit des ennemis partout. « Le poison est dans la dose. » Charlatan ou génie ? Les deux. Il mourut à Salzbourg, peut-être assassiné, laissant des milliers de pages.",
+      "works": ["paracelse-archidoxes"],
+      "tags": ["alchimie", "médecine", "hermétisme"]
+    },
+    {
+      "id": "boehme",
+      "name": "Jacob Böhme",
+      "name_original": "Jacob Böhme",
+      "dates": "1575–1624",
+      "origin": "Görlitz, Allemagne",
+      "lang": "de",
+      "bio": "Cordonnier et théosophe allemand, visionnaire de Silésie. En 1600, contemplant un rayon de soleil sur un vase d'étain, il eut l'illumination : Dieu contient le mal, la nature naît d'un combat. Aurora scandalisa le clergé. Il écrivit en secret, mourut persécuté. Hegel, Blake, Berdiaev : tous lui doivent.",
+      "works": ["boehme-aurora"],
+      "tags": ["théosophie", "mystique", "cordonnier"]
+    },
+    {
+      "id": "swedenborg",
+      "name": "Emanuel Swedenborg",
+      "name_original": "Emanuel Swedberg",
+      "dates": "1688–1772",
+      "origin": "Stockholm, Suède",
+      "lang": "la",
+      "bio": "Scientifique et visionnaire suédois, cartographe du ciel. Ingénieur des mines, anatomiste, il eut à 56 ans des visions : il visita le ciel et l'enfer, conversa avec les anges. 30 volumes de révélations. Kant le critiqua, Blake l'adora, Borges le relut. Fondateur involontaire d'une Église qui existe toujours.",
+      "works": ["swedenborg-ciel-enfer"],
+      "tags": ["mystique", "visions", "correspondances"]
+    },
+    {
+      "id": "agrippa",
+      "name": "Cornelius Agrippa",
+      "name_original": "Heinrich Cornelius Agrippa von Nettesheim",
+      "dates": "1486–1535",
+      "origin": "Cologne, Allemagne",
+      "lang": "la",
+      "bio": "Philosophe et occultiste allemand, mage errant de la Renaissance. De Occulta Philosophia : somme de la magie naturelle, céleste et cérémonielle. Médecin, avocat, soldat, espion, il défendit une sorcière, finit en prison, mourut misérable. Faust lui doit beaucoup. Le chien noir qui le suivait était-il un démon ?",
+      "works": ["agrippa-philosophie-occulte"],
+      "tags": ["magie", "hermétisme", "kabbale", "renaissance"]
+    },
+    {
+      "id": "fludd",
+      "name": "Robert Fludd",
+      "name_original": "Robert Fludd",
+      "dates": "1574–1637",
+      "origin": "Bearsted, Angleterre",
+      "lang": "la",
+      "bio": "Médecin et cosmologue anglais, défenseur des Rose-Croix. Son Utriusque Cosmi Historia : macrocosme et microcosme en correspondance, illustrations somptueuses. Kepler l'attaqua, il répondit. Médecin à Londres, hermétiste en secret, il tentait de tout unifier — musique, médecine, alchimie. Le dernier grand encyclopédiste de la magie.",
+      "works": ["fludd-deux-mondes"],
+      "tags": ["hermétisme", "rose-croix", "cosmologie"]
     }
   ]
 }

@@ -1799,6 +1799,160 @@
       "bio": "Écrivain français, moine puis médecin. Gargantua et Pantagruel débordent de verve, d'obscénité et de savoir. Moine franciscain, bénédictin, puis prêtre séculier, médecin à Lyon, il fuyait la Sorbonne qui condamnait ses livres. « Tirez le rideau, la farce est jouée » — ses derniers mots peut-être apocryphes.",
       "works": ["rabelais-gargantua"],
       "tags": ["rire", "corps", "humanisme"]
+    },
+    {
+      "id": "borne",
+      "name": "Ludwig Börne",
+      "name_original": "Löb Baruch",
+      "dates": "1786–1837",
+      "origin": "Francfort, Allemagne",
+      "lang": "de",
+      "bio": "Écrivain et journaliste allemand, pionnier du feuilleton politique. Né Löb Baruch dans le ghetto de Francfort, il se convertit au protestantisme pour obtenir des droits civiques. Ses Lettres de Paris enflammèrent la jeunesse libérale allemande. Exilé, il mourut à Paris. Heine écrivit sur lui un livre cruel et fasciné.",
+      "works": ["borne-lettres"],
+      "tags": ["journalisme", "liberté", "exil"]
+    },
+    {
+      "id": "eminescu",
+      "name": "Mihai Eminescu",
+      "name_original": "Mihail Eminovici",
+      "dates": "1850–1889",
+      "origin": "Botoșani, Moldavie",
+      "lang": "ro",
+      "bio": "Poète national roumain, romantique tardif au lyrisme cosmique. Luceafărul (L'Étoile du soir) est un sommet de la poésie européenne. Journaliste conservateur, amoureux malheureux de Veronica Micle, il sombra dans la folie à 33 ans — syphilis ou maladie mentale. Il mourut à l'asile, indigent et oublié, avant d'être sanctifié.",
+      "works": ["eminescu-poemes"],
+      "tags": ["romantisme", "roumanie", "folie"]
+    },
+    {
+      "id": "ionesco",
+      "name": "Eugène Ionesco",
+      "name_original": "Eugen Ionescu",
+      "dates": "1909–1994",
+      "origin": "Slatina, Roumanie",
+      "lang": "fr",
+      "bio": "Dramaturge franco-roumain, père du théâtre de l'absurde. La Cantatrice chauve et Rhinocéros démontent le langage et le conformisme. Fuyant la Roumanie fasciste puis communiste, il s'installa à Paris. Académicien français, angoissé par la mort, il mourut paisiblement, absurde jusqu'au bout.",
+      "works": ["ionesco-rhinoceros"],
+      "tags": ["absurde", "langage", "académie"]
+    },
+    {
+      "id": "eliade",
+      "name": "Mircea Eliade",
+      "name_original": "Mircea Eliade",
+      "dates": "1907–1986",
+      "origin": "Bucarest, Roumanie",
+      "lang": "ro",
+      "bio": "Historien des religions et romancier roumain. Le Sacré et le Profane et Le Mythe de l'éternel retour fondent l'étude comparée des religions. Dans sa jeunesse, il flirta avec la Garde de Fer fasciste — tache qu'il n'effaça jamais. Professeur à Chicago, il mourut vénéré des universitaires, suspect des historiens.",
+      "works": ["eliade-sacre"],
+      "tags": ["religion", "mythe", "fascisme"]
+    },
+    {
+      "id": "creanga",
+      "name": "Ion Creangă",
+      "name_original": "Ion Creangă",
+      "dates": "1837–1889",
+      "origin": "Humulești, Moldavie",
+      "lang": "ro",
+      "bio": "Conteur roumain, voix de la paysannerie moldave. Les Souvenirs d'enfance et ses contes (Harap-Alb, Dănilă Prepeleac) capturent l'âme du village. Diacre défroqué pour avoir fréquenté le théâtre, instituteur ami d'Eminescu, il vécut modestement. Il mourut de la même maladie qu'Eminescu, un an après lui.",
+      "works": ["creanga-souvenirs"],
+      "tags": ["conte", "village", "enfance"]
+    },
+    {
+      "id": "caragiale",
+      "name": "Ion Luca Caragiale",
+      "name_original": "Ion Luca Caragiale",
+      "dates": "1852–1912",
+      "origin": "Haimanale, Roumanie",
+      "lang": "ro",
+      "bio": "Dramaturge roumain, maître de la satire. Une Lettre perdue et Une Nuit orageuse moquent la politique et la bourgeoisie roumaines. Journaliste mordant, il s'attira tant d'ennemis qu'il s'exila à Berlin. Il y mourut, loin du pays qu'il avait disséqué. La Roumanie rit toujours de ses personnages.",
+      "works": ["caragiale-lettre"],
+      "tags": ["satire", "théâtre", "politique"]
+    },
+    {
+      "id": "heine",
+      "name": "Heinrich Heine",
+      "name_original": "Christian Johann Heinrich Heine",
+      "dates": "1797–1856",
+      "origin": "Düsseldorf, Allemagne",
+      "lang": "de",
+      "bio": "Poète et essayiste allemand, dernier romantique et premier moderne. Le Livre des chants inspira Schubert et Schumann. Juif converti par pragmatisme, exilé à Paris, il attaqua tout le monde avec un esprit dévastateur. Cloué huit ans dans sa « tombe de matelas » par la syphilis, il écrivit jusqu'au bout.",
+      "works": ["heine-chants"],
+      "tags": ["romantisme", "ironie", "exil"]
+    },
+    {
+      "id": "lessing",
+      "name": "Gotthold Ephraim Lessing",
+      "name_original": "Gotthold Ephraim Lessing",
+      "dates": "1729–1781",
+      "origin": "Kamenz, Saxe",
+      "lang": "de",
+      "bio": "Dramaturge et critique allemand, phare des Lumières. Nathan le Sage plaide pour la tolérance religieuse. Il révolutionna la critique théâtrale et libéra le théâtre allemand de l'imitation française. Bibliothécaire à Wolfenbüttel, il perdit sa femme et son fils en couches. Il mourut endetté, vénéré mais seul.",
+      "works": ["lessing-nathan"],
+      "tags": ["lumières", "tolérance", "critique"]
+    },
+    {
+      "id": "schiller",
+      "name": "Friedrich Schiller",
+      "name_original": "Johann Christoph Friedrich von Schiller",
+      "dates": "1759–1805",
+      "origin": "Marbach, Wurtemberg",
+      "lang": "de",
+      "bio": "Poète et dramaturge allemand, compagnon de Goethe. Les Brigands, Don Carlos et l'Ode à la joie (reprise par Beethoven) enflammèrent l'Europe. Médecin militaire en fuite, professeur d'histoire, ami de Goethe à Weimar. Tuberculeux, il travailla jusqu'à l'épuisement. Il mourut à 45 ans, Goethe inconsolable.",
+      "works": ["schiller-brigands"],
+      "tags": ["idéalisme", "liberté", "weimar"]
+    },
+    {
+      "id": "holderlin",
+      "name": "Friedrich Hölderlin",
+      "name_original": "Johann Christian Friedrich Hölderlin",
+      "dates": "1770–1843",
+      "origin": "Lauffen, Wurtemberg",
+      "lang": "de",
+      "bio": "Poète allemand, visionnaire solitaire. Hypérion et ses hymnes tardifs atteignent une intensité mystique inégalée. Amoureux de Diotima (Susette Gontard, femme de son employeur), il ne s'en remit jamais. À 36 ans, il sombra dans la folie et passa ses 36 dernières années dans une tour à Tübingen, soigné par un menuisier.",
+      "works": ["holderlin-hyperion"],
+      "tags": ["grèce", "folie", "hymne"]
+    },
+    {
+      "id": "kleist",
+      "name": "Heinrich von Kleist",
+      "name_original": "Bernd Heinrich Wilhelm von Kleist",
+      "dates": "1777–1811",
+      "origin": "Francfort-sur-l'Oder, Prusse",
+      "lang": "de",
+      "bio": "Dramaturge et nouvelliste allemand, météore foudroyé. Le Prince de Hombourg et Michael Kohlhaas explorent la justice et la démesure. Incompris de Goethe, rejeté par tous, il proposa le double suicide à plusieurs femmes. Henriette Vogel, atteinte d'un cancer, accepta. Il la tua d'une balle puis se suicida au bord du Wannsee.",
+      "works": ["kleist-kohlhaas"],
+      "tags": ["passion", "justice", "suicide"]
+    },
+    {
+      "id": "buchner",
+      "name": "Georg Büchner",
+      "name_original": "Karl Georg Büchner",
+      "dates": "1813–1837",
+      "origin": "Goddelau, Hesse",
+      "lang": "de",
+      "bio": "Dramaturge allemand, révolutionnaire mort à 23 ans. Woyzeck et La Mort de Danton anticipent le théâtre moderne d'un siècle. Étudiant en médecine, il écrivit un pamphlet révolutionnaire et dut fuir en Suisse. Le typhus l'emporta à Zurich. Trois pièces, un récit, et l'impression d'un génie à peine entrevu.",
+      "works": ["buchner-woyzeck"],
+      "tags": ["révolution", "folie", "précocité"]
+    },
+    {
+      "id": "schnitzler",
+      "name": "Arthur Schnitzler",
+      "name_original": "Arthur Schnitzler",
+      "dates": "1862–1931",
+      "origin": "Vienne, Autriche",
+      "lang": "de",
+      "bio": "Dramaturge et nouvelliste autrichien, explorateur de l'inconscient viennois. La Ronde scandalisa par sa franchise sexuelle. Médecin, il nota ses rêves avant Freud, qui le considérait comme son double. Sa fille se suicida ; lui mourut d'une hémorragie cérébrale, Vienne s'effondrant autour de lui.",
+      "works": ["schnitzler-ronde"],
+      "tags": ["vienne", "éros", "inconscient"]
+    },
+    {
+      "id": "musil",
+      "name": "Robert Musil",
+      "name_original": "Robert Musil",
+      "dates": "1880–1942",
+      "origin": "Klagenfurt, Autriche",
+      "lang": "de",
+      "bio": "Romancier autrichien, architecte de l'inachevé. L'Homme sans qualités, fleuve de 1 700 pages, resta incomplet. Ingénieur, soldat décoré en 14-18, il vécut dans l'oubli et la pauvreté à Genève pendant la guerre. Une attaque l'emporta dans son bain. Sa femme trouva le corps. Presque personne à l'enterrement.",
+      "works": ["musil-homme"],
+      "tags": ["vienne", "ironie", "inachevé"]
     }
   ]
 }

@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2140
+    "count": 2158
   },
   "terms": [
     {
@@ -23055,6 +23055,204 @@
       ],
       "definition": "Continents assemble, break apart, reassemble—every 400-600 million years. Rodinia, Pangaea, and in 250 million years: Pangaea Proxima. Earth's slow heartbeat.",
       "related": ["Pangée", "Tectonique des plaques"]
+    },
+    {
+      "id": "hodogetria",
+      "term": "Ὁδηγήτρια",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "She Who Shows the Way—Byzantine icon type where Mary points to Christ on her arm. The child is the path; she indicates. Original in Constantinople, lost in 1453. Countless copies became miracle-workers.",
+      "related": ["Theotokos", "Eleusa", "Pantocrator"]
+    },
+    {
+      "id": "theotokos",
+      "term": "Θεοτόκος",
+      "lang": "el",
+      "category": [
+        "religion",
+        "iconographie"
+      ],
+      "definition": "God-bearer—Mary's title affirmed at Ephesus 431. Not merely Christ-bearer (Christotokos): she bore God himself. The Nestorians disagreed; the Council did not. The title shaped all Marian iconography.",
+      "related": ["Hodogetria", "Eleusa"]
+    },
+    {
+      "id": "eleusa",
+      "term": "Ἐλεοῦσα",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "The Tender Mercy—icon type where Mary and Christ press cheek to cheek. Intimacy, foreshadowed grief. The Vladimir Mother of God: Eleusa that shaped Russian piety for nine centuries.",
+      "related": ["Hodogetria", "Theotokos"]
+    },
+    {
+      "id": "pantocrator",
+      "term": "Παντοκράτωρ",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "The Almighty—Christ enthroned, one hand blessing, the other holding the Gospel. Eyes that follow you in every Byzantine dome. Judge and Savior, terror and hope in one gaze.",
+      "related": ["Deesis", "Mandylion"]
+    },
+    {
+      "id": "deesis",
+      "term": "Δέησις",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "The Entreaty—Christ flanked by Mary and John the Baptist, both interceding for humanity. Central to the iconostasis. We cannot approach the Judge alone; we need advocates.",
+      "related": ["Pantocrator", "Iconostasis"]
+    },
+    {
+      "id": "mandylion",
+      "term": "Μανδύλιον",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "The Holy Face—image of Christ 'not made by hands' (acheiropoieta). Legend: Christ pressed a cloth to his face for King Abgar. The original, lost, spawned infinite copies. Icon of icons.",
+      "related": ["Pantocrator", "Acheiropoieton"]
+    },
+    {
+      "id": "acheiropoieton",
+      "term": "Ἀχειροποίητον",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "Not made by human hands—miraculous images: the Mandylion, the Shroud, icons that painted themselves. The iconoclasts asked: how can we depict God? Answer: God depicted himself first.",
+      "related": ["Mandylion", "Iconoclasm"]
+    },
+    {
+      "id": "iconostasis",
+      "term": "Εἰκονοστάσιον",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "architecture"
+      ],
+      "definition": "The icon screen separating nave from sanctuary in Orthodox churches. Not a wall but a window: icons reveal what the altar hides. The visible makes the invisible present.",
+      "related": ["Deesis", "Pantocrator"]
+    },
+    {
+      "id": "iconoclasm",
+      "term": "Εἰκονοκλασμός",
+      "lang": "el",
+      "category": [
+        "religion",
+        "histoire"
+      ],
+      "definition": "Image-breaking—the Byzantine controversy (726-843): can we depict Christ? Emperors smashed icons; monks died defending them. The iconodules won: images participate in what they represent.",
+      "related": ["Acheiropoieton", "Iconostasis"]
+    },
+    {
+      "id": "hesychasm",
+      "term": "Ἡσυχασμός",
+      "lang": "el",
+      "category": [
+        "religion",
+        "mystique"
+      ],
+      "definition": "The stillness—Orthodox mystical practice: repetition of the Jesus Prayer, breath control, inner silence. Gregory Palamas defended it: the monks on Athos truly see uncreated light. Theosis through prayer.",
+      "related": ["Theosis", "Philokalia"]
+    },
+    {
+      "id": "theosis",
+      "term": "Θέωσις",
+      "lang": "el",
+      "category": [
+        "religion",
+        "mystique"
+      ],
+      "definition": "Deification—the Orthodox goal: God became human so humans might become God. Not identity but participation in divine nature. Athanasius's formula, the East's answer to Western atonement theories.",
+      "related": ["Hesychasm", "Philokalia"]
+    },
+    {
+      "id": "philokalia",
+      "term": "Φιλοκαλία",
+      "lang": "el",
+      "category": [
+        "religion",
+        "mystique"
+      ],
+      "definition": "Love of the Beautiful—the anthology of Eastern Christian mystical texts compiled on Athos (1782). Teachings on prayer, stillness, theosis. The pilgrim's guidebook to inner transformation.",
+      "related": ["Hesychasm", "Theosis"]
+    },
+    {
+      "id": "anastasis",
+      "term": "Ἀνάστασις",
+      "lang": "el",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "The Resurrection—Byzantine icon showing Christ descending to Hades, pulling Adam and Eve from their tombs. Not the Western empty tomb: he goes down to bring everyone up. Harrowing of Hell.",
+      "related": ["Pantocrator", "Deesis"]
+    },
+    {
+      "id": "kenosis",
+      "term": "Κένωσις",
+      "lang": "el",
+      "category": [
+        "religion",
+        "philosophie"
+      ],
+      "definition": "Self-emptying—Christ's descent from divine glory to human flesh (Philippians 2). God pours himself out, becomes nothing, dies. The mystery at the heart of incarnation. Simone Weil's favorite concept.",
+      "related": ["Theosis", "Incarnation"]
+    },
+    {
+      "id": "apophatic",
+      "term": "Ἀποφατικός",
+      "lang": "el",
+      "category": [
+        "religion",
+        "philosophie"
+      ],
+      "definition": "The negative way—theology by denial. God is not this, not that, not anything we can say. Pseudo-Dionysius: the divine darkness beyond all concepts. We know God by unknowing.",
+      "related": ["Cataphatic", "Theosis"]
+    },
+    {
+      "id": "cataphatic",
+      "term": "Καταφατικός",
+      "lang": "el",
+      "category": [
+        "religion",
+        "philosophie"
+      ],
+      "definition": "The affirmative way—theology by positive statements. God is good, beautiful, true. Necessary but insufficient: every affirmation must be negated, then the negation negated. Dialectic of the sacred.",
+      "related": ["Apophatic"]
+    },
+    {
+      "id": "orans",
+      "term": "Orans",
+      "lang": "la",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "The praying figure—arms raised, palms outward. Oldest Christian posture, from the catacombs. Mary as Orans: the Church at prayer, arms open to heaven and humanity.",
+      "related": ["Theotokos", "Hodogetria"]
+    },
+    {
+      "id": "icon-window",
+      "term": "Окно в вечность",
+      "lang": "ru",
+      "category": [
+        "iconographie",
+        "religion"
+      ],
+      "definition": "A window into eternity—Pavel Florensky's definition of icons. Not representation but presence. The saint looks out at us; we look through into the Kingdom. Reverse perspective: heaven sees us.",
+      "related": ["Iconostasis", "Theosis"]
     }
   ]
 }

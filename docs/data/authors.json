@@ -2822,6 +2822,138 @@
       "bio": "Poète polonais, voix de l'exil et de l'émerveillement. Né à Lwów cédée à l'URSS, il grandit à Gliwice, ville allemande devenue polonaise — double déracinement. Essayiste de la beauté, il vécut à Paris, Houston, Cracovie. Try to Praise the Mutilated World parut le 24 septembre 2001. Il mourut à Cracovie.",
       "works": ["zagajewski-poemes"],
       "tags": ["poésie", "exil", "beauté"]
+    },
+    {
+      "id": "marion",
+      "name": "Jean-Luc Marion",
+      "name_original": "Jean-Luc Marion",
+      "dates": "1946–",
+      "origin": "Meudon, France",
+      "lang": "fr",
+      "bio": "Philosophe français, phénoménologue du don et de la saturation. Dieu sans l'être : penser Dieu au-delà de la métaphysique, comme amour plutôt qu'être. Élève de Derrida, successeur de Ricœur à Chicago, membre de l'Académie française. Catholique qui philosophe en tremblant devant l'excès du phénomène.",
+      "works": ["marion-dieu-sans-etre"],
+      "tags": ["phénoménologie", "théologie", "donation"]
+    },
+    {
+      "id": "levinas",
+      "name": "Emmanuel Levinas",
+      "name_original": "עמנואל לוינס",
+      "dates": "1906–1995",
+      "origin": "Kaunas, Lituanie",
+      "lang": "fr",
+      "bio": "Philosophe franco-lituanien, penseur du visage. L'éthique comme philosophie première : avant l'être, la responsabilité pour autrui. Juif formé à Fribourg sous Husserl et Heidegger, prisonnier de guerre, famille massacrée. Le visage de l'autre dit « Tu ne tueras point ». Talmudiste le samedi, phénoménologue la semaine.",
+      "works": ["levinas-totalite-infini"],
+      "tags": ["phénoménologie", "éthique", "altérité"]
+    },
+    {
+      "id": "ricoeur",
+      "name": "Paul Ricœur",
+      "name_original": "Paul Ricœur",
+      "dates": "1913–2005",
+      "origin": "Valence, France",
+      "lang": "fr",
+      "bio": "Philosophe français, herméneute du sens. De Freud à la Bible, il interpréta les symboles, les récits, les textes — le détour par l'autre pour se comprendre soi-même. Protestant discret, prisonnier de guerre, doyen à Nanterre pendant Mai 68. Il réconcilia conflits et traditions, médiateur infatigable.",
+      "works": ["ricoeur-soi-meme-autre"],
+      "tags": ["herméneutique", "récit", "éthique"]
+    },
+    {
+      "id": "henry",
+      "name": "Michel Henry",
+      "name_original": "Michel Henry",
+      "dates": "1922–2002",
+      "origin": "Haïphong, Indochine",
+      "lang": "fr",
+      "bio": "Philosophe français, phénoménologue de la vie. Contre Husserl : la conscience ne vise pas le monde mais s'éprouve elle-même dans l'affect. L'Essence de la manifestation, puis des romans, puis une christologie radicale : le Christ révèle la Vie absolue. Reclus à Montpellier, ignoré puis redécouvert.",
+      "works": ["henry-essence-manifestation"],
+      "tags": ["phénoménologie", "vie", "affectivité"]
+    },
+    {
+      "id": "weil-simone",
+      "name": "Simone Weil",
+      "name_original": "Simone Weil",
+      "dates": "1909–1943",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Philosophe et mystique française. Agrégée, ouvrière en usine, combattante en Espagne, elle chercha Dieu dans le malheur. La Pesanteur et la Grâce : aphorismes d'une intensité brûlante. Juive attirée par le Christ, elle refusa le baptême pour rester avec les exclus. Elle se laissa mourir à Londres, solidaire des affamés.",
+      "works": ["weil-pesanteur-grace"],
+      "tags": ["mystique", "malheur", "attention"]
+    },
+    {
+      "id": "stein",
+      "name": "Edith Stein",
+      "name_original": "Edith Stein",
+      "dates": "1891–1942",
+      "origin": "Breslau, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe allemande, carmélite et martyre. Assistante de Husserl, elle se convertit en lisant Thérèse d'Avila. Entrée au Carmel comme Thérèse-Bénédicte de la Croix, elle fut déportée en représailles contre les évêques néerlandais. Gazée à Auschwitz. Canonisée en 1998, co-patronne de l'Europe.",
+      "works": ["stein-empathie"],
+      "tags": ["phénoménologie", "carmel", "shoah"]
+    },
+    {
+      "id": "balthasar",
+      "name": "Hans Urs von Balthasar",
+      "name_original": "Hans Urs von Balthasar",
+      "dates": "1905–1988",
+      "origin": "Lucerne, Suisse",
+      "lang": "de",
+      "bio": "Théologien suisse, géant de l'esthétique théologique. La Gloire et la Croix : le beau comme voie vers Dieu. Jésuite défroqué pour suivre la mystique Adrienne von Speyr, il fut réhabilité par Jean-Paul II. Trilogie monumentale : esthétique, dramatique, logique. Il mourut deux jours avant de recevoir le chapeau de cardinal.",
+      "works": ["balthasar-gloire-croix"],
+      "tags": ["théologie", "esthétique", "dramatique"]
+    },
+    {
+      "id": "brague",
+      "name": "Rémi Brague",
+      "name_original": "Rémi Brague",
+      "dates": "1947–",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Philosophe français, médiéviste et penseur de l'Europe. Europe, la voie romaine : l'identité européenne comme transmission de l'étranger — Athènes, Jérusalem, Rome. Spécialiste de la philosophie arabe médiévale, il défend une anthropologie de la créature. Catholique ironique et érudit.",
+      "works": ["brague-europe-voie-romaine"],
+      "tags": ["europe", "médiéval", "anthropologie"]
+    },
+    {
+      "id": "florensky",
+      "name": "Pavel Florenski",
+      "name_original": "Павел Александрович Флоренский",
+      "dates": "1882–1937",
+      "origin": "Ievlakh, Azerbaïdjan",
+      "lang": "ru",
+      "bio": "Prêtre, mathématicien et philosophe russe, « Léonard de Vinci russe ». La Colonne et le Fondement de la Vérité : théologie de l'amitié et de l'icône. Il refusa d'émigrer, servit les Soviets comme ingénieur électricien, fut envoyé au goulag, fusillé. Ses manuscrits survécurent dans des valises.",
+      "works": ["florensky-colonne-verite"],
+      "tags": ["orthodoxie", "icône", "goulag"]
+    },
+    {
+      "id": "lossky",
+      "name": "Vladimir Lossky",
+      "name_original": "Владимир Николаевич Лосский",
+      "dates": "1903–1958",
+      "origin": "Göttingen, Allemagne",
+      "lang": "fr",
+      "bio": "Théologien orthodoxe russe, exilé à Paris. Essai sur la théologie mystique de l'Église d'Orient : il révéla aux Occidentaux la tradition apophatique, la théosis, l'énergie divine. Fils du philosophe Nicolas Lossky, il forma des générations à l'Institut Saint-Serge. Mort jeune, il reste le passeur.",
+      "works": ["lossky-theologie-mystique"],
+      "tags": ["orthodoxie", "apophatique", "théosis"]
+    },
+    {
+      "id": "bulgakov",
+      "name": "Sergueï Boulgakov",
+      "name_original": "Сергей Николаевич Булгаков",
+      "dates": "1871–1944",
+      "origin": "Livny, Russie",
+      "lang": "ru",
+      "bio": "Économiste devenu prêtre, théologien de la Sophia. Marxiste converti, ordonné en 1918, expulsé par Lénine en 1922. À Paris, il dirigea l'Institut Saint-Serge et développa la sophiologie — la Sagesse divine comme quatrième hypostase. Condamné par Moscou, défendu par personne, il reste sulfureux et fascinant.",
+      "works": ["bulgakov-agneau-dieu"],
+      "tags": ["orthodoxie", "sophiologie", "exil"]
+    },
+    {
+      "id": "noica",
+      "name": "Constantin Noica",
+      "name_original": "Constantin Noica",
+      "dates": "1909–1987",
+      "origin": "Vitănești, Roumanie",
+      "lang": "ro",
+      "bio": "Philosophe roumain, ermite des Carpates. Ami de jeunesse d'Eliade et Cioran, il resta en Roumanie quand les autres partirent. Six ans de prison sous les communistes. Libéré, il se retira à Păltiniș et forma une génération de disciples dans sa cabane de montagne. Penseur de l'être roumain, traducteur de Platon, il mourut en maître vénéré.",
+      "works": ["noica-devenir-etre"],
+      "tags": ["ontologie", "roumanie", "résistance"]
     }
   ]
 }

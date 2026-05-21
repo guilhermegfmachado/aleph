@@ -446,6 +446,237 @@
       "bio": "Humaniste anglais, Lord Chancelier d'Henri VIII. L'Utopie décrit une société idéale sur une île imaginaire, critiquant l'Angleterre de son temps. Décapité pour avoir refusé l'Acte de Suprématie, il fut canonisé.",
       "works": ["more-utopia"],
       "tags": ["humanisme", "utopie", "renaissance"]
+    },
+    {
+      "id": "boethius",
+      "name": "Boèce",
+      "name_original": "Anicius Manlius Severinus Boethius",
+      "dates": "c. 480–524",
+      "origin": "Rome",
+      "lang": "la",
+      "bio": "Philosophe et homme d'État romain, pont entre l'Antiquité et le Moyen Âge. Emprisonné par Théodoric, il écrit La Consolation de Philosophie, dialogue avec Dame Philosophie sur le bonheur et le destin.",
+      "works": ["boethius-consolation"],
+      "tags": ["philosophie", "néoplatonisme", "prison"]
+    },
+    {
+      "id": "plotinus",
+      "name": "Plotin",
+      "name_original": "Πλωτῖνος",
+      "dates": "c. 204–270",
+      "origin": "Lycopolis, Égypte",
+      "lang": "grc",
+      "bio": "Fondateur du néoplatonisme. Ses Ennéades, rédigées par son disciple Porphyre, développent une métaphysique de l'Un, source ineffable de toute réalité. Son influence traverse la philosophie médiévale et la Renaissance.",
+      "works": ["plotinus-enneads"],
+      "tags": ["néoplatonisme", "métaphysique", "mystique"]
+    },
+    {
+      "id": "diogenes-laertius",
+      "name": "Diogène Laërce",
+      "name_original": "Διογένης Λαέρτιος",
+      "dates": "c. 3ᵉ siècle",
+      "origin": "Laërte, Cilicie",
+      "lang": "grc",
+      "bio": "Biographe des philosophes grecs. Ses Vies et doctrines des philosophes illustres sont notre source principale sur de nombreux penseurs antiques. Anecdotes, citations et doctrines s'y mêlent.",
+      "works": ["diogenes-lives"],
+      "tags": ["biographie", "doxographie", "histoire"]
+    },
+    {
+      "id": "plutarch",
+      "name": "Plutarque",
+      "name_original": "Πλούταρχος",
+      "dates": "c. 46–120",
+      "origin": "Chéronée, Béotie",
+      "lang": "grc",
+      "bio": "Historien et moraliste grec. Les Vies parallèles comparent Grecs et Romains illustres. Les Œuvres morales traitent d'éthique, de religion et de philosophie. Source majeure pour l'Antiquité.",
+      "works": ["plutarch-lives"],
+      "tags": ["biographie", "morale", "histoire"]
+    },
+    {
+      "id": "xenophon",
+      "name": "Xénophon",
+      "name_original": "Ξενοφῶν",
+      "dates": "c. 430–354 av. J.-C.",
+      "origin": "Athènes",
+      "lang": "grc",
+      "bio": "Historien, philosophe et général athénien, élève de Socrate. L'Anabase raconte la retraite des Dix Mille. Ses écrits socratiques offrent un portrait de Socrate différent de celui de Platon.",
+      "works": ["xenophon-anabasis", "xenophon-memorabilia"],
+      "tags": ["histoire", "mémoires", "socratique"]
+    },
+    {
+      "id": "livy",
+      "name": "Tite-Live",
+      "name_original": "Titus Livius",
+      "dates": "c. 59 av. J.-C. – 17",
+      "origin": "Padoue, Italie",
+      "lang": "la",
+      "bio": "Historien romain, auteur de l'Ab Urbe Condita, histoire monumentale de Rome depuis sa fondation. Seuls 35 des 142 livres nous sont parvenus. Style éloquent, patriotisme assumé.",
+      "works": ["livy-rome"],
+      "tags": ["histoire", "rome", "république"]
+    },
+    {
+      "id": "tacitus",
+      "name": "Tacite",
+      "name_original": "Publius Cornelius Tacitus",
+      "dates": "c. 56–120",
+      "origin": "Gaule narbonnaise",
+      "lang": "la",
+      "bio": "Historien et sénateur romain. Les Annales et les Histoires décrivent l'Empire avec une lucidité amère. La Germanie est notre principale source sur les peuples germaniques. Style concis et mordant.",
+      "works": ["tacitus-annals", "tacitus-germania"],
+      "tags": ["histoire", "empire", "barbares"]
+    },
+    {
+      "id": "suetonius",
+      "name": "Suétone",
+      "name_original": "Gaius Suetonius Tranquillus",
+      "dates": "c. 69–122",
+      "origin": "Hippone, Afrique",
+      "lang": "la",
+      "bio": "Biographe romain, secrétaire d'Hadrien. Les Vies des douze Césars, de César à Domitien, mêlent histoire politique et anecdotes privées. Source précieuse mais parfois scandaleuse.",
+      "works": ["suetonius-caesars"],
+      "tags": ["biographie", "empereurs", "rome"]
+    },
+    {
+      "id": "apuleius",
+      "name": "Apulée",
+      "name_original": "Lucius Apuleius Madaurensis",
+      "dates": "c. 124–170",
+      "origin": "Madaure, Numidie",
+      "lang": "la",
+      "bio": "Écrivain et philosophe platonicien africain. L'Âne d'or (Métamorphoses), seul roman latin complet conservé, raconte les aventures de Lucius transformé en âne, incluant le conte de Psyché.",
+      "works": ["apuleius-golden-ass"],
+      "tags": ["roman", "métamorphose", "mystères"]
+    },
+    {
+      "id": "julian-norwich",
+      "name": "Julienne de Norwich",
+      "name_original": "Julian of Norwich",
+      "dates": "c. 1343–1416",
+      "origin": "Norwich, Angleterre",
+      "lang": "en",
+      "bio": "Mystique anglaise, première femme auteur en anglais. Ses Révélations de l'amour divin, visions reçues lors d'une maladie, offrent une théologie optimiste : « Tout sera bien, et tout sera bien. »",
+      "works": ["julian-norwich"],
+      "tags": ["mystique", "théologie", "visions"]
+    },
+    {
+      "id": "meister-eckhart",
+      "name": "Maître Eckhart",
+      "name_original": "Eckhart von Hochheim",
+      "dates": "c. 1260–1328",
+      "origin": "Hochheim, Thuringe",
+      "lang": "de",
+      "bio": "Théologien et mystique dominicain. Ses sermons en allemand explorent le détachement et la naissance de Dieu dans l'âme. Condamné pour hérésie après sa mort, il influence la mystique rhénane.",
+      "works": ["meister-eckhart"],
+      "tags": ["mystique", "dominicain", "détachement"]
+    },
+    {
+      "id": "hildegard",
+      "name": "Hildegarde de Bingen",
+      "name_original": "Hildegardis Bingensis",
+      "dates": "1098–1179",
+      "origin": "Bermersheim, Allemagne",
+      "lang": "la",
+      "bio": "Abbesse bénédictine, mystique, compositrice et naturaliste. Le Scivias décrit ses visions cosmiques. Correspondante des papes et des rois, elle fut déclarée Docteur de l'Église en 2012.",
+      "works": ["hildegard-scivias"],
+      "tags": ["mystique", "visions", "musique"]
+    },
+    {
+      "id": "chrétien-troyes",
+      "name": "Chrétien de Troyes",
+      "name_original": "Chrétien de Troyes",
+      "dates": "c. 1130–1191",
+      "origin": "Troyes, Champagne",
+      "lang": "fr",
+      "bio": "Poète français, inventeur du roman courtois. Ses récits arthuriens — Lancelot, Perceval — établissent les codes de la littérature chevaleresque : quête, amour courtois, aventure merveilleuse.",
+      "works": ["chretien-perceval"],
+      "tags": ["roman courtois", "arthurien", "graal"]
+    },
+    {
+      "id": "marie-france",
+      "name": "Marie de France",
+      "name_original": "Marie de France",
+      "dates": "c. 1160–1215",
+      "origin": "France / Angleterre",
+      "lang": "fr",
+      "bio": "Poétesse médiévale, probablement à la cour d'Henri II. Ses Lais, courts récits en vers, mêlent amour et merveilleux celtique. Première femme poète connue de langue française.",
+      "works": ["marie-france-lais"],
+      "tags": ["lais", "féerique", "amour courtois"]
+    },
+    {
+      "id": "petrarch",
+      "name": "Pétrarque",
+      "name_original": "Francesco Petrarca",
+      "dates": "1304–1374",
+      "origin": "Arezzo, Italie",
+      "lang": "it",
+      "bio": "Poète et humaniste italien, « père de l'humanisme ». Le Canzoniere, sonnets à Laure, révolutionne la poésie amoureuse. Il redécouvre des textes antiques et dialogue avec Cicéron et Augustin.",
+      "works": ["petrarch-canzoniere"],
+      "tags": ["sonnet", "humanisme", "laure"]
+    },
+    {
+      "id": "boccaccio",
+      "name": "Boccace",
+      "name_original": "Giovanni Boccaccio",
+      "dates": "1313–1375",
+      "origin": "Certaldo, Italie",
+      "lang": "it",
+      "bio": "Écrivain italien, ami de Pétrarque. Le Décaméron, cent nouvelles racontées pendant la peste de Florence, offre un tableau vivant et souvent licencieux de la société médiévale.",
+      "works": ["boccaccio-decameron"],
+      "tags": ["nouvelles", "peste", "réalisme"]
+    },
+    {
+      "id": "sappho",
+      "name": "Sappho",
+      "name_original": "Σαπφώ",
+      "dates": "c. 630–570 av. J.-C.",
+      "origin": "Lesbos, Grèce",
+      "lang": "grc",
+      "bio": "Poétesse grecque de Lesbos, « dixième Muse » selon Platon. De ses neuf livres de poésie lyrique, il ne reste que des fragments. Sa poésie d'amour, d'intensité brûlante, influence toute la tradition occidentale.",
+      "works": ["sappho-fragments"],
+      "tags": ["lyrique", "amour", "fragments"]
+    },
+    {
+      "id": "hafez",
+      "name": "Hâfez",
+      "name_original": "حافظ",
+      "dates": "c. 1315–1390",
+      "origin": "Chiraz, Perse",
+      "lang": "fa",
+      "bio": "Poète persan, maître du ghazal. Son Divân, recueil de poésie mystique et amoureuse, est lu en Iran comme un oracle. Goethe le considérait comme son « jumeau » spirituel.",
+      "works": ["hafez-divan"],
+      "tags": ["ghazal", "soufi", "vin"]
+    },
+    {
+      "id": "attar",
+      "name": "Attâr",
+      "name_original": "عطار",
+      "dates": "c. 1145–1221",
+      "origin": "Nishapur, Perse",
+      "lang": "fa",
+      "bio": "Poète mystique persan. La Conférence des oiseaux, allégorie soufie, raconte le voyage de trente oiseaux vers leur roi, le Simorgh, découvrant qu'ils sont eux-mêmes ce qu'ils cherchaient.",
+      "works": ["attar-birds"],
+      "tags": ["soufi", "allégorie", "quête"]
+    },
+    {
+      "id": "sei-shonagon",
+      "name": "Sei Shōnagon",
+      "name_original": "清少納言",
+      "dates": "c. 966–1017",
+      "origin": "Kyoto, Japon",
+      "lang": "ja",
+      "bio": "Dame de cour japonaise, rivale de Murasaki Shikibu. Les Notes de chevet, recueil de listes, observations et anecdotes, capturent l'esthétique raffinée de la cour Heian avec esprit et ironie.",
+      "works": ["sei-shonagon-pillow"],
+      "tags": ["zuihitsu", "listes", "cour"]
+    },
+    {
+      "id": "basho",
+      "name": "Matsuo Bashō",
+      "name_original": "松尾芭蕉",
+      "dates": "1644–1694",
+      "origin": "Iga, Japon",
+      "lang": "ja",
+      "bio": "Poète japonais, maître du haïku. Ses carnets de voyage, dont La Sente étroite du Bout-du-Monde, mêlent prose et poésie. Il élève le haïku de divertissement à art contemplatif.",
+      "works": ["basho-narrow-road"],
+      "tags": ["haïku", "voyage", "zen"]
     }
   ]
 }

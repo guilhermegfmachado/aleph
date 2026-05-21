@@ -1331,9 +1331,9 @@ function renderGlossaryTerm(t) {
             <header class="glossary-entry-header">
                 <span class="glossary-dropcap">${firstLetter}</span>
                 <span class="glossary-term">${escapeHtml(t.term)}</span>
-                <button class="glossary-speak" onclick="speakTerm('${escapeHtml(t.term)}', '${t.lang}'); event.stopPropagation();" title="Écouter la prononciation">🔊</button>
+                <button class="glossary-speak" onclick="speakTerm('${escapeHtml(t.term)}', '${t.lang}'); event.stopPropagation();" title="Écouter la prononciation">♫</button>
                 <span class="glossary-lang">${t.lang.toUpperCase()}</span>
-                ${textIds.length ? `<span class="glossary-textcount" title="Apparaît dans ${textIds.length} textes">📖${textIds.length}</span>` : ''}
+                ${textIds.length ? `<span class="glossary-textcount" title="Apparaît dans ${textIds.length} textes">№${textIds.length}</span>` : ''}
                 <span class="glossary-expand">+</span>
             </header>
             <div class="glossary-entry-body">
@@ -2355,7 +2355,7 @@ function renderReaderBody() {
             return `<p class="reader-para ${hasNote ? 'has-note' : ''}" id="para-${i}" data-i="${i + 1}">
                 ${escapeHtml(p)}
                 <span class="para-actions">
-                    <button class="para-note ${hasNote ? 'active' : ''}" data-para="${i}" title="Ajouter une note">✎</button>
+                    <button class="para-note ${hasNote ? 'active' : ''}" data-para="${i}" title="Ajouter une note">•</button>
                     <button class="para-share" data-para="${i}" title="Copier le lien">§</button>
                 </span>
                 ${hasNote ? `<span class="para-note-preview">${escapeHtml(hasNote.substring(0, 100))}${hasNote.length > 100 ? '…' : ''}</span>` : ''}

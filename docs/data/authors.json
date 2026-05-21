@@ -2316,6 +2316,160 @@
       "bio": "Socialiste allemand, fondateur du mouvement ouvrier. Juif flamboyant, orateur magnétique, il créa l'Association générale des travailleurs allemands. Marx le méprisait et l'admirait. À 39 ans, il mourut en duel pour une femme — Hélène von Dönniges, dont le père refusait le mariage. Trois jours d'agonie. Le mouvement ouvrier perdit son tribun.",
       "works": ["lassalle-programme-ouvriers"],
       "tags": ["socialisme", "mouvement ouvrier", "duel"]
+    },
+    {
+      "id": "okudzhava",
+      "name": "Boulat Okoudjava",
+      "name_original": "Булат Шалвович Окуджава",
+      "dates": "1924–1997",
+      "origin": "Moscou, URSS",
+      "lang": "ru",
+      "bio": "Barde soviétique, père de la chanson d'auteur russe. Fils de communistes géorgiens fusillés par Staline, il survécut à la guerre puis chanta la tendresse et l'absurdité. Sa guitare et sa voix douce contournaient la censure. Arbat, son quartier, devint synonyme de poésie intime. Il mourut à Paris, exilé volontaire d'un pays qui n'existait plus.",
+      "works": ["okudzhava-chansons"],
+      "tags": ["barde", "chanson", "moscou"]
+    },
+    {
+      "id": "vysotsky",
+      "name": "Vladimir Vyssotski",
+      "name_original": "Владимир Семёнович Высоцкий",
+      "dates": "1938–1980",
+      "origin": "Moscou, URSS",
+      "lang": "ru",
+      "bio": "Acteur et barde soviétique, voix rauque d'une génération. Ses chansons circulaient sur cassettes pirates — le pouvoir ne pouvait ni le publier ni le faire taire. Alcool, drogues, trois mariages dont Marina Vlady. Il mourut à 42 ans pendant les JO de Moscou. Des milliers vinrent à ses funérailles que le régime voulait discrètes.",
+      "works": ["vysotsky-chansons"],
+      "tags": ["barde", "théâtre", "samizdat"]
+    },
+    {
+      "id": "akhmatova",
+      "name": "Anna Akhmatova",
+      "name_original": "Анна Андреевна Ахматова",
+      "dates": "1889–1966",
+      "origin": "Odessa, Empire russe",
+      "lang": "ru",
+      "bio": "Poétesse russe, voix de la souffrance. Premier mari fusillé, fils au goulag, elle-même interdite de publication pendant des décennies. Requiem, son chef-d'œuvre sur la Terreur, circula en secret — elle le récitait à des amis qui le mémorisaient. Jamais elle ne quitta la Russie. « J'étais avec mon peuple, là où mon peuple, pour son malheur, se trouvait. »",
+      "works": ["akhmatova-requiem"],
+      "tags": ["poésie", "terreur", "mémoire"]
+    },
+    {
+      "id": "mandelstam",
+      "name": "Ossip Mandelstam",
+      "name_original": "Осип Эмильевич Мандельштам",
+      "dates": "1891–1938",
+      "origin": "Varsovie, Empire russe",
+      "lang": "ru",
+      "bio": "Poète russe, martyr de la poésie. Son épigramme contre Staline — « ses doigts gras comme des vers » — le condamna. Arrêté, exilé, arrêté encore, il mourut dans un camp de transit près de Vladivostok, fou, fouillant les ordures. Sa femme Nadejda passa sa vie à préserver ses vers par cœur. « La poésie est le pouvoir. »",
+      "works": ["mandelstam-poemes"],
+      "tags": ["poésie", "goulag", "acméisme"]
+    },
+    {
+      "id": "tsvetaeva",
+      "name": "Marina Tsvetaïeva",
+      "name_original": "Марина Ивановна Цветаева",
+      "dates": "1892–1941",
+      "origin": "Moscou, Empire russe",
+      "lang": "ru",
+      "bio": "Poétesse russe, flamme dévorante. Émigration à Prague et Paris, misère, retour en URSS en 1939 — désastre. Mari fusillé, fille au goulag, elle-même évacuée à Ielabouga pendant la guerre. Elle se pendit dans une isba. Personne ne sait où elle est enterrée. Pasternak : « Elle avait une âme masculine, résolue, indomptable. »",
+      "works": ["tsvetaeva-poemes"],
+      "tags": ["poésie", "émigration", "suicide"]
+    },
+    {
+      "id": "brodsky",
+      "name": "Joseph Brodsky",
+      "name_original": "Иосиф Александрович Бродский",
+      "dates": "1940–1996",
+      "origin": "Leningrad, URSS",
+      "lang": "ru",
+      "bio": "Poète russo-américain, Nobel 1987. Autodidacte, juif, il fut jugé pour « parasitisme social » à 24 ans — son procès devint célèbre. Exilé en 1972, il s'installa à New York et écrivit aussi en anglais. Cœur fragile, il mourut à 55 ans dans son appartement de Brooklyn. Enterré à Venise, sa ville adorée.",
+      "works": ["brodsky-poemes"],
+      "tags": ["poésie", "exil", "nobel"]
+    },
+    {
+      "id": "celan",
+      "name": "Paul Celan",
+      "name_original": "Paul Antschel",
+      "dates": "1920–1970",
+      "origin": "Cernăuți, Roumanie",
+      "lang": "de",
+      "bio": "Poète roumain de langue allemande, survivant de la Shoah. Ses parents périrent dans les camps ; lui survécut au travail forcé. Todesfuge (Fugue de mort) est le poème de l'Holocauste. Installé à Paris, il traduisit, enseigna, sombra dans la dépression. Il se jeta dans la Seine depuis le pont Mirabeau. Écrire après Auschwitz — il essaya.",
+      "works": ["celan-pavot-memoire"],
+      "tags": ["shoah", "poésie", "allemand"]
+    },
+    {
+      "id": "milosz",
+      "name": "Czesław Miłosz",
+      "name_original": "Czesław Miłosz",
+      "dates": "1911–2004",
+      "origin": "Šeteniai, Lituanie",
+      "lang": "pl",
+      "bio": "Poète polonais, Nobel 1980. Résistant à Varsovie, diplomate communiste, puis dissident exilé à Paris et Berkeley. La Pensée captive analysa la séduction du stalinisme sur les intellectuels. Il rentra en Pologne après 1989, héros national. « Ce qui est trop grand pour la raison se réfugie dans la poésie. »",
+      "works": ["milosz-pensee-captive"],
+      "tags": ["poésie", "exil", "nobel"]
+    },
+    {
+      "id": "szymborska",
+      "name": "Wisława Szymborska",
+      "name_original": "Wisława Szymborska",
+      "dates": "1923–2012",
+      "origin": "Kórnik, Pologne",
+      "lang": "pl",
+      "bio": "Poétesse polonaise, Nobel 1996. Discrète, ironique, elle écrivait peu — 350 poèmes en 60 ans. Stalinienne repentie, elle trouva sa voix dans le doute et l'émerveillement quotidien. « Je ne sais pas » était sa devise. Elle vécut à Cracovie, refusa les honneurs, resta fidèle à son petit appartement et à ses chats.",
+      "works": ["szymborska-poemes"],
+      "tags": ["poésie", "ironie", "nobel"]
+    },
+    {
+      "id": "brel",
+      "name": "Jacques Brel",
+      "name_original": "Jacques Romain Georges Brel",
+      "dates": "1929–1978",
+      "origin": "Schaerbeek, Belgique",
+      "lang": "fr",
+      "bio": "Chanteur belge, poète de la chair et du désespoir. Il quitta la cartonnerie familiale pour Paris, échoua, puis triompha. Amsterdam, Ne me quitte pas, La Quête — il brûlait sur scène. À 37 ans, il arrêta tout pour naviguer aux Marquises. Cancer du poumon. Il revint mourir à Paris, laissant un dernier album enregistré entre les chimios.",
+      "works": ["brel-chansons"],
+      "tags": ["chanson", "belgique", "passion"]
+    },
+    {
+      "id": "brassens",
+      "name": "Georges Brassens",
+      "name_original": "Georges Charles Brassens",
+      "dates": "1921–1981",
+      "origin": "Sète, France",
+      "lang": "fr",
+      "bio": "Chanteur français, anarchiste tendre. Fils de maçon, il monta à Paris, vécut dans une impasse pendant 22 ans chez Jeanne, sa logeuse. Moustache, pipe, guitare — il chantait la mort, les putains, les curés, avec une langue ciselée. Jamais marié, jamais propriétaire. « Le temps ne fait rien à l'affaire / Quand on est con, on est con. »",
+      "works": ["brassens-chansons"],
+      "tags": ["chanson", "anarchisme", "poésie"]
+    },
+    {
+      "id": "ferre",
+      "name": "Léo Ferré",
+      "name_original": "Léo Albert Charles Antoine Ferré",
+      "dates": "1916–1993",
+      "origin": "Monaco",
+      "lang": "fr",
+      "bio": "Chanteur français, anarchiste furieux. Il mit Rimbaud, Verlaine, Aragon en musique. Avec le temps reste son testament. Trois mariages, une guenon nommée Pépée qu'il traita comme sa fille. Il finit ses jours en Toscane, misanthrope et tendre, orchestrant ses propres symphonies. « La poésie est une clameur. Elle doit être entendue comme la musique. »",
+      "works": ["ferre-chansons"],
+      "tags": ["chanson", "anarchisme", "poésie"]
+    },
+    {
+      "id": "lorca",
+      "name": "Federico García Lorca",
+      "name_original": "Federico del Sagrado Corazón de Jesús García Lorca",
+      "dates": "1898–1936",
+      "origin": "Fuente Vaqueros, Espagne",
+      "lang": "es",
+      "bio": "Poète et dramaturge espagnol, âme du duende. Romancero gitano, Noces de sang — il chanta l'Andalousie, la mort, le désir interdit. Homosexuel dans l'Espagne catholique, ami de Dalí et Buñuel. Les nationalistes le fusillèrent à Grenade au début de la guerre civile. Son corps n'a jamais été retrouvé. Il avait 38 ans.",
+      "works": ["lorca-romancero"],
+      "tags": ["poésie", "théâtre", "guerre civile"]
+    },
+    {
+      "id": "biermann",
+      "name": "Wolf Biermann",
+      "name_original": "Karl Wolf Biermann",
+      "dates": "1936–",
+      "origin": "Hambourg, Allemagne",
+      "lang": "de",
+      "bio": "Chanteur est-allemand, fils de communiste mort à Auschwitz. Il choisit la RDA à 17 ans, puis la critiqua — interdit de scène pendant 11 ans. En 1976, pendant une tournée à l'Ouest, le régime lui retira sa citoyenneté. Il resta à l'Ouest, chantant toujours contre les murs, jusqu'à leur chute. Encore vivant, encore mordant.",
+      "works": ["biermann-chansons"],
+      "tags": ["barde", "dissident", "rda"]
     }
   ]
 }

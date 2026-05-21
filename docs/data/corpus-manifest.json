@@ -929,6 +929,42 @@
           "tags": ["political philosophy", "justice", "ideal state"]
         },
         {
+          "id": "plato-symposium",
+          "title": "Symposium",
+          "author": "Plato",
+          "period": "classical",
+          "year": -385,
+          "languages": {
+            "grc": { "source": "perseus", "title": "Συμπόσιον" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1600 }
+          },
+          "tags": ["love", "eros", "beauty", "socrates", "dialogue"]
+        },
+        {
+          "id": "plato-apology",
+          "title": "Apology",
+          "author": "Plato",
+          "period": "classical",
+          "year": -399,
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἀπολογία Σωκράτους" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1656 }
+          },
+          "tags": ["trial", "socrates", "death", "philosophy", "virtue"]
+        },
+        {
+          "id": "plato-phaedo",
+          "title": "Phaedo",
+          "author": "Plato",
+          "period": "classical",
+          "year": -360,
+          "languages": {
+            "grc": { "source": "perseus", "title": "Φαίδων" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1658 }
+          },
+          "tags": ["soul", "immortality", "death", "socrates", "forms"]
+        },
+        {
           "id": "aristotle-politics",
           "title": "Politics",
           "author": "Aristotle",
@@ -938,6 +974,30 @@
             "en": { "source": "gutenberg", "gutenberg_id": 6762 }
           },
           "tags": ["political philosophy", "state", "citizenship"]
+        },
+        {
+          "id": "aristotle-ethics",
+          "title": "Nicomachean Ethics",
+          "author": "Aristotle",
+          "period": "classical",
+          "year": -340,
+          "languages": {
+            "grc": { "source": "perseus", "title": "Ἠθικὰ Νικομάχεια" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8438 }
+          },
+          "tags": ["ethics", "virtue", "happiness", "eudaimonia", "golden mean"]
+        },
+        {
+          "id": "aristotle-poetics",
+          "title": "Poetics",
+          "author": "Aristotle",
+          "period": "classical",
+          "year": -335,
+          "languages": {
+            "grc": { "source": "perseus", "title": "Περὶ ποιητικῆς" },
+            "en": { "source": "gutenberg", "gutenberg_id": 1974 }
+          },
+          "tags": ["tragedy", "mimesis", "catharsis", "drama", "literary theory"]
         },
         {
           "id": "marcus-aurelius-meditations",
@@ -1531,6 +1591,45 @@
             "fr": { "source": "archive", "title": "Discours sur l'histoire universelle" }
           },
           "tags": ["history", "sociology", "islamic philosophy", "asabiyyah", "cyclical theory"]
+        },
+        {
+          "id": "book-of-job",
+          "title": "Book of Job",
+          "author": "Anonymous",
+          "period": "classical",
+          "year": -600,
+          "languages": {
+            "he": { "source": "sefaria", "title": "אִיּוֹב" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
+            "la": { "source": "vulgate", "title": "Liber Iob" }
+          },
+          "tags": ["theodicy", "suffering", "wisdom", "hebrew bible", "dialogue"]
+        },
+        {
+          "id": "ecclesiastes",
+          "title": "Ecclesiastes",
+          "author": "Qoheleth",
+          "period": "classical",
+          "year": -300,
+          "languages": {
+            "he": { "source": "sefaria", "title": "קֹהֶלֶת" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
+            "la": { "source": "vulgate", "title": "Ecclesiastes" }
+          },
+          "tags": ["vanity", "wisdom", "time", "hebrew bible", "philosophy"]
+        },
+        {
+          "id": "song-of-songs",
+          "title": "Song of Songs",
+          "author": "Solomon",
+          "period": "classical",
+          "year": -950,
+          "languages": {
+            "he": { "source": "sefaria", "title": "שִׁיר הַשִּׁירִים" },
+            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
+            "la": { "source": "vulgate", "title": "Canticum Canticorum" }
+          },
+          "tags": ["love", "poetry", "allegory", "hebrew bible", "mysticism"]
         }
       ]
     },
@@ -1618,6 +1717,18 @@
           "year": -470,
           "languages": { "en": { "source": "gutenberg", "gutenberg_id": 10717 } },
           "tags": ["lyric poetry", "victory odes", "olympic games", "mythology"]
+        },
+        {
+          "id": "sappho-fragments",
+          "title": "Fragments",
+          "author": "Sappho",
+          "period": "classical",
+          "year": -600,
+          "languages": {
+            "grc": { "source": "perseus", "title": "Σαπφώ" },
+            "en": { "source": "gutenberg", "gutenberg_id": 36785 }
+          },
+          "tags": ["lyric poetry", "love", "lesbos", "women", "fragments"]
         },
         {
           "id": "euripides-medea",
@@ -2118,6 +2229,30 @@
           "year": 1010,
           "languages": { "en": { "source": "gutenberg", "gutenberg_id": 6540 } },
           "tags": ["japanese", "heian", "novel", "court life", "mono no aware"]
+        },
+        {
+          "id": "kojiki",
+          "title": "Kojiki",
+          "author": "Ō no Yasumaro",
+          "period": "ancient",
+          "year": 712,
+          "languages": {
+            "ja": { "source": "archive", "title": "古事記" },
+            "en": { "source": "gutenberg", "gutenberg_id": 48260 }
+          },
+          "tags": ["japanese mythology", "shinto", "creation", "gods", "imperial lineage"]
+        },
+        {
+          "id": "hagakure",
+          "title": "Hagakure",
+          "author": "Yamamoto Tsunetomo",
+          "period": "early_modern",
+          "year": 1716,
+          "languages": {
+            "ja": { "source": "archive", "title": "葉隠" },
+            "en": { "source": "archive" }
+          },
+          "tags": ["bushido", "samurai", "death", "honor", "japan"]
         },
         {
           "id": "zhuangzi",

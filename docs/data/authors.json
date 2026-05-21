@@ -688,6 +688,182 @@
       "bio": "Philosophe marxiste français, figure majeure du structuralisme. Pour Marx et Lire le Capital renouvellent la lecture de Marx par une « coupure épistémologique ». Interné à plusieurs reprises pour dépression, il étrangla son épouse Hélène en 1980 lors d'une crise. Déclaré irresponsable, il passa ses dernières années dans l'ombre, écrivant L'avenir dure longtemps, confession posthume.",
       "works": ["althusser-marx"],
       "tags": ["marxisme", "structuralisme", "idéologie"]
+    },
+    {
+      "id": "foucault",
+      "name": "Michel Foucault",
+      "name_original": "Paul-Michel Foucault",
+      "dates": "1926–1984",
+      "origin": "Poitiers, France",
+      "lang": "fr",
+      "bio": "Philosophe français, théoricien du pouvoir et de la sexualité. Surveiller et punir et Histoire de la sexualité analysent les mécanismes de contrôle social. Homosexuel à une époque répressive, il explora les marges de l'expérience. Mort du sida, il fut l'une des premières figures publiques emportées par l'épidémie.",
+      "works": ["foucault-surveiller"],
+      "tags": ["pouvoir", "sexualité", "biopolitique"]
+    },
+    {
+      "id": "debord",
+      "name": "Guy Debord",
+      "name_original": "Guy Ernest Debord",
+      "dates": "1931–1994",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Théoricien révolutionnaire, fondateur de l'Internationale situationniste. La Société du spectacle dénonce l'aliénation par l'image et la marchandise. Alcoolique revendiqué, il vécut dans une marginalité voulue. Il se suicida d'une balle dans le cœur, refusant la déchéance physique.",
+      "works": ["debord-spectacle"],
+      "tags": ["situationnisme", "spectacle", "révolution"]
+    },
+    {
+      "id": "simone-weil",
+      "name": "Simone Weil",
+      "name_original": "Simone Adolphine Weil",
+      "dates": "1909–1943",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Philosophe et mystique française. Agrégée brillante, elle travailla en usine pour comprendre la condition ouvrière. Ses écrits spirituels, publiés après sa mort, explorent le malheur et la grâce. Elle mourut à 34 ans en Angleterre, refusant de manger plus que les rations de la France occupée.",
+      "works": ["weil-pesanteur"],
+      "tags": ["mystique", "travail", "malheur"]
+    },
+    {
+      "id": "benjamin",
+      "name": "Walter Benjamin",
+      "name_original": "Walter Bendix Schönflies Benjamin",
+      "dates": "1892–1940",
+      "origin": "Berlin, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe et critique allemand, penseur inclassable entre marxisme et mysticisme juif. L'Œuvre d'art à l'époque de sa reproductibilité technique est un texte fondateur. Fuyant les nazis, bloqué à la frontière espagnole, il se suicida à Portbou plutôt que d'être livré à la Gestapo.",
+      "works": ["benjamin-oeuvre-art"],
+      "tags": ["critique", "aura", "messianisme"]
+    },
+    {
+      "id": "artaud",
+      "name": "Antonin Artaud",
+      "name_original": "Antoine Marie Joseph Artaud",
+      "dates": "1896–1948",
+      "origin": "Marseille, France",
+      "lang": "fr",
+      "bio": "Poète, acteur et théoricien du théâtre de la cruauté. Son œuvre explore la folie, le corps et le langage dans leur violence. Interné neuf ans à Rodez, soumis à des électrochocs, il en sortit détruit mais écrivant encore. Van Gogh le suicidé de la société est un cri contre la psychiatrie.",
+      "works": ["artaud-theatre-cruaute"],
+      "tags": ["théâtre", "folie", "cruauté"]
+    },
+    {
+      "id": "deleuze",
+      "name": "Gilles Deleuze",
+      "name_original": "Gilles Deleuze",
+      "dates": "1925–1995",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Philosophe français, penseur de la différence et du devenir. L'Anti-Œdipe et Mille Plateaux, écrits avec Guattari, révolutionnent la pensée du désir. Atteint d'une insuffisance respiratoire qui l'empêchait d'écrire, il se jeta par la fenêtre de son appartement parisien.",
+      "works": ["deleuze-anti-oedipe"],
+      "tags": ["rhizome", "désir", "immanence"]
+    },
+    {
+      "id": "genet",
+      "name": "Jean Genet",
+      "name_original": "Jean Genet",
+      "dates": "1910–1986",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Écrivain et dramaturge français. Enfant abandonné, voleur, prostitué, il passa sa jeunesse en prison où il commença à écrire. Notre-Dame-des-Fleurs et Le Journal du voleur transfigurent la marginalité en poésie. Sartre lui consacra Saint Genet, comédien et martyr.",
+      "works": ["genet-journal-voleur"],
+      "tags": ["marginalité", "homosexualité", "crime"]
+    },
+    {
+      "id": "celine",
+      "name": "Louis-Ferdinand Céline",
+      "name_original": "Louis Ferdinand Destouches",
+      "dates": "1894–1961",
+      "origin": "Courbevoie, France",
+      "lang": "fr",
+      "bio": "Écrivain français au style révolutionnaire. Voyage au bout de la nuit pulvérise la syntaxe littéraire. Médecin des pauvres, héros de 14-18, il sombra dans un antisémitisme délirant et collabora avec les nazis. Exilé, condamné, amnistié, il mourut paria, génie maudit de la littérature.",
+      "works": ["celine-voyage"],
+      "tags": ["argot", "misanthropie", "collaboration"]
+    },
+    {
+      "id": "cioran",
+      "name": "Emil Cioran",
+      "name_original": "Emil Mihai Cioran",
+      "dates": "1911–1995",
+      "origin": "Rășinari, Roumanie",
+      "lang": "fr",
+      "bio": "Philosophe roumain écrivant en français, styliste du désespoir. De l'inconvénient d'être né et Syllogismes de l'amertume cultivent un nihilisme élégant. Dans sa jeunesse roumaine, il flirta avec le fascisme, honte qu'il porta silencieusement. Il vécut pauvrement à Paris, insomniaque perpétuel.",
+      "works": ["cioran-inconvenient"],
+      "tags": ["nihilisme", "aphorisme", "insomnie"]
+    },
+    {
+      "id": "bataille",
+      "name": "Georges Bataille",
+      "name_original": "Georges Albert Maurice Victor Bataille",
+      "dates": "1897–1962",
+      "origin": "Billom, France",
+      "lang": "fr",
+      "bio": "Écrivain et penseur de la transgression. Histoire de l'œil et L'Érotisme explorent la mort, l'excès et le sacré. Bibliothécaire le jour, il fréquentait les bordels et écrivait sur la dépense improductive. Son père, aveugle et syphilitique, mourut fou — traumatisme fondateur de son œuvre.",
+      "works": ["bataille-erotisme"],
+      "tags": ["transgression", "érotisme", "sacré"]
+    },
+    {
+      "id": "heidegger",
+      "name": "Martin Heidegger",
+      "name_original": "Martin Heidegger",
+      "dates": "1889–1976",
+      "origin": "Messkirch, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe allemand, penseur de l'Être. Être et Temps révolutionne l'ontologie. Recteur de Fribourg en 1933, il adhéra au parti nazi et prononça un discours tristement célèbre. Il ne s'en expliqua jamais vraiment. Ses Cahiers noirs, publiés récemment, révèlent un antisémitisme profond.",
+      "works": ["heidegger-etre-temps"],
+      "tags": ["ontologie", "dasein", "nazisme"]
+    },
+    {
+      "id": "mishima",
+      "name": "Yukio Mishima",
+      "name_original": "三島由紀夫",
+      "dates": "1925–1970",
+      "origin": "Tokyo, Japon",
+      "lang": "ja",
+      "bio": "Écrivain japonais, esthète obsédé par la mort et la beauté. Le Pavillon d'or et la tétralogie La Mer de la fertilité sont des chefs-d'œuvre. Nationaliste, il fonda une milice privée. Après un coup d'État raté, il se fit seppuku en direct, décapité par son amant selon le rituel.",
+      "works": ["mishima-pavillon"],
+      "tags": ["esthétique", "nationalisme", "seppuku"]
+    },
+    {
+      "id": "pasolini",
+      "name": "Pier Paolo Pasolini",
+      "name_original": "Pier Paolo Pasolini",
+      "dates": "1922–1975",
+      "origin": "Bologne, Italie",
+      "lang": "it",
+      "bio": "Poète, romancier et cinéaste italien. Ses films — Accattone, Salò — scandalisent par leur crudité. Marxiste et catholique, homosexuel dans une Italie hostile, il dénonçait le consumérisme. Il fut assassiné sur une plage d'Ostie, battu à mort ; les circonstances restent troubles.",
+      "works": ["pasolini-ragazzi"],
+      "tags": ["cinéma", "marxisme", "scandale"]
+    },
+    {
+      "id": "sade",
+      "name": "Marquis de Sade",
+      "name_original": "Donatien Alphonse François de Sade",
+      "dates": "1740–1814",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Écrivain français, philosophe du libertinage absolu. Les 120 Journées de Sodome et Justine explorent le mal radical et la jouissance sans limite. Il passa 27 ans de sa vie en prison ou à l'asile pour ses écrits et ses actes. Son nom donna le mot « sadisme ».",
+      "works": ["sade-justine"],
+      "tags": ["libertinage", "transgression", "enfermement"]
+    },
+    {
+      "id": "rimbaud",
+      "name": "Arthur Rimbaud",
+      "name_original": "Jean Nicolas Arthur Rimbaud",
+      "dates": "1854–1891",
+      "origin": "Charleville, France",
+      "lang": "fr",
+      "bio": "Poète français, météore de la littérature. Une saison en enfer et les Illuminations révolutionnent la poésie avant ses vingt ans. Liaison tumultueuse avec Verlaine, qui lui tire dessus. À 21 ans, il abandonne l'écriture pour le commerce en Afrique. Mort à 37 ans d'un cancer, jambe amputée.",
+      "works": ["rimbaud-saison"],
+      "tags": ["voyant", "fugue", "silence"]
+    },
+    {
+      "id": "woolf",
+      "name": "Virginia Woolf",
+      "name_original": "Adeline Virginia Woolf",
+      "dates": "1882–1941",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Romancière anglaise, pionnière du flux de conscience. Mrs Dalloway et Les Vagues réinventent le roman. Abusée enfant par ses demi-frères, elle lutta toute sa vie contre la dépression. Elle se noya dans l'Ouse, les poches remplies de pierres, laissant une lettre à son mari Leonard.",
+      "works": ["woolf-dalloway"],
+      "tags": ["modernisme", "féminisme", "intériorité"]
     }
   ]
 }

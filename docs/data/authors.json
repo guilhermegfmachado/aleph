@@ -1370,6 +1370,182 @@
       "bio": "Écrivain uruguayen, chroniqueur de l'Amérique pillée. Les Veines ouvertes de l'Amérique latine devint la bible de la gauche continentale. Exilé par les dictatures, il vécut en Argentine puis en Espagne. Plus tard, il renia son livre le plus célèbre, le trouvant trop lourd. Il mourut d'un cancer du poumon, aimé des peuples.",
       "works": ["galeano-veines"],
       "tags": ["amérique latine", "pillage", "mémoire"]
+    },
+    {
+      "id": "austen",
+      "name": "Jane Austen",
+      "name_original": "Jane Austen",
+      "dates": "1775–1817",
+      "origin": "Steventon, Angleterre",
+      "lang": "en",
+      "bio": "Romancière anglaise, maîtresse de l'ironie domestique. Orgueil et Préjugés et Emma dissèquent la gentry avec un humour impeccable. Elle vécut paisiblement entre sa famille et l'écriture, jamais mariée, publiant anonymement. Morte à 41 ans d'une maladie inconnue, elle ne connut pas sa gloire posthume.",
+      "works": ["austen-orgueil"],
+      "tags": ["ironie", "mariage", "gentry"]
+    },
+    {
+      "id": "tolstoy",
+      "name": "Léon Tolstoï",
+      "name_original": "Лев Николаевич Толстой",
+      "dates": "1828–1910",
+      "origin": "Iasnaïa Poliana, Russie",
+      "lang": "ru",
+      "bio": "Romancier russe, titan de la littérature mondiale. Guerre et Paix et Anna Karénine sont des cathédrales. Comte devenu apôtre de la non-violence, il renonça à ses droits d'auteur et prôna la simplicité. Son mariage avec Sophie se dégrada en guerre. Il mourut dans une gare, en fuite de sa propre maison.",
+      "works": ["tolstoy-guerre", "tolstoy-anna"],
+      "tags": ["épopée", "morale", "conversion"]
+    },
+    {
+      "id": "marquez",
+      "name": "Gabriel García Márquez",
+      "name_original": "Gabriel José de la Concordia García Márquez",
+      "dates": "1927–2014",
+      "origin": "Aracataca, Colombie",
+      "lang": "es",
+      "bio": "Romancier colombien, magicien du réalisme magique. Cent Ans de solitude enchante le monde. Journaliste, ami de Fidel Castro, Prix Nobel 1982. Il vécut entre Mexico et Carthagène, aimé de tous. La démence effaça ses dernières années. « La vie n'est pas ce que l'on a vécu, mais ce dont on se souvient. »",
+      "works": ["marquez-cent-ans"],
+      "tags": ["macondo", "réalisme magique", "solitude"]
+    },
+    {
+      "id": "morrison",
+      "name": "Toni Morrison",
+      "name_original": "Chloe Anthony Wofford Morrison",
+      "dates": "1931–2019",
+      "origin": "Lorain, États-Unis",
+      "lang": "en",
+      "bio": "Romancière américaine, voix de l'expérience noire. Beloved exhume les fantômes de l'esclavage. Éditrice chez Random House, elle ouvrit les portes à toute une génération d'écrivains noirs. Prix Nobel 1993. Elle écrivit jusqu'au bout, entourée de ses fils, et mourut paisiblement à 88 ans.",
+      "works": ["morrison-beloved"],
+      "tags": ["mémoire", "esclavage", "maternité"]
+    },
+    {
+      "id": "le-guin",
+      "name": "Ursula K. Le Guin",
+      "name_original": "Ursula Kroeber Le Guin",
+      "dates": "1929–2018",
+      "origin": "Berkeley, États-Unis",
+      "lang": "en",
+      "bio": "Écrivaine américaine, grande dame de la science-fiction et fantasy. La Main gauche de la nuit et Terremer explorent le genre et l'anarchie. Fille d'anthropologues, mariée cinquante ans, elle vécut à Portland, écrivant avec régularité. Elle défendit les bibliothèques et les droits des auteurs jusqu'à sa mort paisible.",
+      "works": ["le-guin-main-gauche"],
+      "tags": ["science-fiction", "anarchie", "genre"]
+    },
+    {
+      "id": "calvino",
+      "name": "Italo Calvino",
+      "name_original": "Italo Giovanni Calvino Mameli",
+      "dates": "1923–1985",
+      "origin": "Santiago de Las Vegas, Cuba / Italie",
+      "lang": "it",
+      "bio": "Écrivain italien, jongleur de formes. Si par une nuit d'hiver un voyageur et Les Villes invisibles réinventent le récit. Résistant, éditeur chez Einaudi, membre de l'Oulipo. Il vécut entre Rome et Paris avec sa femme traductrice. Une hémorragie cérébrale l'emporta à 61 ans, trop tôt pour le Nobel qu'il méritait.",
+      "works": ["calvino-baron"],
+      "tags": ["combinatoire", "légèreté", "oulipo"]
+    },
+    {
+      "id": "eco",
+      "name": "Umberto Eco",
+      "name_original": "Umberto Eco",
+      "dates": "1932–2016",
+      "origin": "Alexandrie, Italie",
+      "lang": "it",
+      "bio": "Sémiologue et romancier italien. Le Nom de la rose marie érudition médiévale et polar. Professeur à Bologne, collectionneur de livres anciens, il écrivit sur tout : signes, laideur, fascisme, listes. Marié à une enseignante d'art, deux enfants, il mourut à 84 ans dans son appartement milanais rempli de 30 000 livres.",
+      "works": ["eco-nom-rose"],
+      "tags": ["sémiotique", "médiéval", "érudition"]
+    },
+    {
+      "id": "tagore",
+      "name": "Rabindranath Tagore",
+      "name_original": "রবীন্দ্রনাথ ঠাকুর",
+      "dates": "1861–1941",
+      "origin": "Calcutta, Inde",
+      "lang": "bn",
+      "bio": "Poète bengali, premier non-Européen Prix Nobel de littérature (1913). Gitanjali offre des chants mystiques. Peintre, compositeur, il écrivit les hymnes nationaux de l'Inde et du Bangladesh. Il fonda une université à Santiniketan. Ami de Gandhi, il vécut vénéré, patriarche des arts indiens.",
+      "works": ["tagore-gitanjali"],
+      "tags": ["bengali", "mystique", "nobel"]
+    },
+    {
+      "id": "proust",
+      "name": "Marcel Proust",
+      "name_original": "Valentin Louis Georges Eugène Marcel Proust",
+      "dates": "1871–1922",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Romancier français, archéologue de la mémoire. À la recherche du temps perdu, cathédrale de prose, explore le souvenir et le désir. Asthmatique, reclus dans sa chambre tapissée de liège, il écrivit la nuit, nourri de café et de croissants. Il mourut d'une pneumonie, corrigeant ses épreuves jusqu'au bout.",
+      "works": ["proust-temps-perdu"],
+      "tags": ["mémoire", "temps", "mondanité"]
+    },
+    {
+      "id": "joyce",
+      "name": "James Joyce",
+      "name_original": "James Augustine Aloysius Joyce",
+      "dates": "1882–1941",
+      "origin": "Dublin, Irlande",
+      "lang": "en",
+      "bio": "Écrivain irlandais, révolutionnaire de la prose. Ulysse et Finnegans Wake pulvérisent le langage. Exilé volontaire, il vécut à Trieste, Zurich, Paris, ne revenant jamais en Irlande. Presque aveugle, il dicta ses œuvres. Marié à Nora Barnacle, compagne de toujours. Il mourut à Zurich d'un ulcère perforé.",
+      "works": ["joyce-ulysse"],
+      "tags": ["dublin", "flux", "exil"]
+    },
+    {
+      "id": "chekhov",
+      "name": "Anton Tchekhov",
+      "name_original": "Антон Павлович Чехов",
+      "dates": "1860–1904",
+      "origin": "Taganrog, Russie",
+      "lang": "ru",
+      "bio": "Dramaturge et nouvelliste russe, maître du sous-entendu. La Cerisaie et La Dame au petit chien capturent les vies qui passent. Médecin, il soigna les pauvres gratuitement. Tuberculeux, il s'exila en Crimée. Il mourut à 44 ans à Badenweiler, disant « Ich sterbe » et buvant un dernier verre de champagne.",
+      "works": ["chekhov-cerisaie"],
+      "tags": ["nouvelle", "théâtre", "médecine"]
+    },
+    {
+      "id": "dickens",
+      "name": "Charles Dickens",
+      "name_original": "Charles John Huffam Dickens",
+      "dates": "1812–1870",
+      "origin": "Portsmouth, Angleterre",
+      "lang": "en",
+      "bio": "Romancier anglais, conteur populaire par excellence. Oliver Twist et David Copperfield dénoncent l'injustice victorienne. Enfant mis au travail quand son père fut emprisonné pour dettes, il n'oublia jamais. Célébrité mondiale, il quitta sa femme pour une actrice. Il mourut d'une attaque, épuisé par ses lectures publiques.",
+      "works": ["dickens-copperfield"],
+      "tags": ["victorien", "social", "feuilleton"]
+    },
+    {
+      "id": "twain",
+      "name": "Mark Twain",
+      "name_original": "Samuel Langhorne Clemens",
+      "dates": "1835–1910",
+      "origin": "Florida, Missouri, États-Unis",
+      "lang": "en",
+      "bio": "Écrivain américain, humoriste national. Les Aventures de Huckleberry Finn est le grand roman américain. Pilote de bateau à vapeur, chercheur d'or, conférencier, il fit et perdit des fortunes. La mort de sa femme et de ses filles l'assombrit. Il prédit qu'il mourrait au retour de la comète de Halley — ce fut le cas.",
+      "works": ["twain-huckleberry"],
+      "tags": ["humour", "mississippi", "amérique"]
+    },
+    {
+      "id": "amado",
+      "name": "Jorge Amado",
+      "name_original": "Jorge Leal Amado de Faria",
+      "dates": "1912–2001",
+      "origin": "Itabuna, Brésil",
+      "lang": "pt",
+      "bio": "Romancier brésilien, chantre de Bahia. Gabriela, girofle et cannelle et Dona Flor célèbrent la sensualité et le métissage. Communiste exilé sous la dictature, il revint et vécut aimé du peuple. Marié cinquante ans à Zélia, il écrivit dans sa maison de Salvador. L'un des auteurs les plus lus au monde.",
+      "works": ["amado-gabriela"],
+      "tags": ["bahia", "sensualité", "peuple"]
+    },
+    {
+      "id": "allende",
+      "name": "Isabel Allende",
+      "name_original": "Isabel Allende Llona",
+      "dates": "1942–",
+      "origin": "Lima, Pérou / Chili",
+      "lang": "es",
+      "bio": "Romancière chilienne, nièce de Salvador Allende. La Maison aux esprits mêle saga familiale et histoire. Exilée après le coup d'État de Pinochet, elle vécut au Venezuela puis en Californie. La mort de sa fille Paula inspira un livre-deuil. Elle continue d'écrire, bestseller mondial, féministe engagée.",
+      "works": ["allende-maison"],
+      "tags": ["saga", "féminisme", "exil"]
+    },
+    {
+      "id": "kundera",
+      "name": "Milan Kundera",
+      "name_original": "Milan Kundera",
+      "dates": "1929–2023",
+      "origin": "Brno, Tchécoslovaquie",
+      "lang": "cs",
+      "bio": "Romancier tchèque puis français. L'Insoutenable Légèreté de l'être explore l'amour et l'histoire. Exclu du Parti après 1968, ses livres interdits, il s'exila en France. Il y resta, écrivant en français, refusant les interviews. Discret, marié à Věra, il mourut à Paris à 94 ans, loin de la Bohême natale.",
+      "works": ["kundera-legerete"],
+      "tags": ["légèreté", "kitsch", "exil"]
     }
   ]
 }

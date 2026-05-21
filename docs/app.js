@@ -569,12 +569,15 @@ function renderHomePage() {
 
 function renderReadingLists() {
     const container = document.getElementById('listsGrid');
-    if (!container || !state.readingLists?.lists) return;
+    if (!container || !state.readingLists?.lists) {
+        console.log('Reading lists not ready:', { container: !!container, lists: state.readingLists?.lists });
+        return;
+    }
 
     container.innerHTML = state.readingLists.lists.map(list => {
         const textCount = list.texts.filter(id => state.bookIndex[id]).length;
         return `
-            <button class="list-card" onclick="openReadingList('${list.id}')">
+            <button class="list-card" data-list-id="${list.id}">
                 <span class="list-icon">${list.icon}</span>
                 <div class="list-info">
                     <h3 class="list-name">${escapeHtml(list.name)}</h3>
@@ -584,11 +587,26 @@ function renderReadingLists() {
             </button>
         `;
     }).join('');
+
+    // Add click handlers via event delegation (only once)
+    if (!container.dataset.listenersAdded) {
+        container.dataset.listenersAdded = 'true';
+        container.addEventListener('click', (e) => {
+            const card = e.target.closest('.list-card');
+            if (card && card.dataset.listId) {
+                openReadingList(card.dataset.listId);
+            }
+        });
+    }
 }
 
 function openReadingList(listId) {
+    console.log('Opening reading list:', listId);
     const list = state.readingLists?.lists?.find(l => l.id === listId);
-    if (!list) return;
+    if (!list) {
+        console.log('List not found:', listId);
+        return;
+    }
 
     state.currentList = list;
     state.browseFilter = '';

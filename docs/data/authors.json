@@ -2294,6 +2294,28 @@
       "bio": "Philosophe allemand, « rabbin communiste ». Il convertit Engels au communisme et influença Marx. Mais il rompit avec eux pour défendre le nationalisme juif — son Rome et Jérusalem (1862) est un texte fondateur du sionisme. Oublié de son vivant entre socialistes et sionistes, il fut réhabilité par les deux camps après sa mort.",
       "works": ["hess-rome-jerusalem"],
       "tags": ["socialisme", "sionisme", "hegel"]
+    },
+    {
+      "id": "goga",
+      "name": "Octavian Goga",
+      "name_original": "Octavian Goga",
+      "dates": "1881–1938",
+      "origin": "Rășinari, Transylvanie",
+      "lang": "ro",
+      "bio": "Poète et homme politique roumain, voix du nationalisme transylvain. Ses vers célébraient les paysans et la terre — lyrisme puissant, âme torturée. Mais la politique le dévora : Premier ministre en 1937, il promulgua des lois antisémites. Quarante-quatre jours plus tard, le roi le congédia. Il mourut quelques mois après, poète oublié sous le politicien maudit.",
+      "works": ["goga-poesii"],
+      "tags": ["poésie", "nationalisme", "roumanie"]
+    },
+    {
+      "id": "lassalle",
+      "name": "Ferdinand Lassalle",
+      "name_original": "Ferdinand Lassalle",
+      "dates": "1825–1864",
+      "origin": "Breslau, Prusse",
+      "lang": "de",
+      "bio": "Socialiste allemand, fondateur du mouvement ouvrier. Juif flamboyant, orateur magnétique, il créa l'Association générale des travailleurs allemands. Marx le méprisait et l'admirait. À 39 ans, il mourut en duel pour une femme — Hélène von Dönniges, dont le père refusait le mariage. Trois jours d'agonie. Le mouvement ouvrier perdit son tribun.",
+      "works": ["lassalle-programme-ouvriers"],
+      "tags": ["socialisme", "mouvement ouvrier", "duel"]
     }
   ]
 }

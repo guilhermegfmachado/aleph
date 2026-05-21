@@ -2096,6 +2096,138 @@
       "bio": "Sociologue allemand, architecte de la théorie des systèmes. Systèmes sociaux propose une théorie universelle de la société. Fonctionnaire puis professeur à Bielefeld, il écrivit 70 livres grâce à son légendaire fichier de notes (Zettelkasten). Quand on lui demanda son projet, il répondit : « Théorie de la société. Durée : 30 ans. Coût : zéro. »",
       "works": ["luhmann-systemes"],
       "tags": ["systèmes", "complexité", "sociologie"]
+    },
+    {
+      "id": "walshe",
+      "name": "Maurice Walshe",
+      "name_original": "Maurice O'Connell Walshe",
+      "dates": "1911–1998",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Germaniste et traducteur bouddhiste britannique. Il traduisit les sermons de Maître Eckhart en anglais, révélant le mystique rhénan au monde anglophone. Converti au bouddhisme Theravāda, il traduisit ensuite le Dīgha Nikāya (Longs Discours du Bouddha). Professeur à Londres, il vécut entre deux traditions contemplatives, discret et érudit.",
+      "works": ["walshe-eckhart", "walshe-digha"],
+      "tags": ["traduction", "bouddhisme", "eckhart"]
+    },
+    {
+      "id": "grothendieck",
+      "name": "Alexander Grothendieck",
+      "name_original": "Alexander Grothendieck",
+      "dates": "1928–2014",
+      "origin": "Berlin, Allemagne",
+      "lang": "fr",
+      "bio": "Mathématicien français d'origine allemande, révolutionnaire de la géométrie algébrique. Apatride, fils d'anarchistes (son père mourut à Auschwitz), il refonda les mathématiques sur de nouvelles bases. En 1970, il quitta l'IHÉS pour des raisons politiques. Il devint ermite, écrivant des milliers de pages mystiques dans un village des Pyrénées. Il brûla ses manuscrits et mourut seul, refusant le monde.",
+      "works": ["grothendieck-ega"],
+      "tags": ["géométrie", "anarchie", "ermite"]
+    },
+    {
+      "id": "godel",
+      "name": "Kurt Gödel",
+      "name_original": "Kurt Friedrich Gödel",
+      "dates": "1906–1978",
+      "origin": "Brno, Moravie",
+      "lang": "de",
+      "bio": "Logicien austro-américain, destructeur des certitudes. Ses théorèmes d'incomplétude prouvent qu'aucun système cohérent ne peut prouver sa propre cohérence. Ami d'Einstein à Princeton, il croyait en Dieu et aux fantômes. Paranoïaque, il craignait d'être empoisonné et ne mangeait que ce que préparait sa femme. Quand elle fut hospitalisée, il se laissa mourir de faim.",
+      "works": ["godel-incompletude"],
+      "tags": ["logique", "incomplétude", "paranoïa"]
+    },
+    {
+      "id": "cantor",
+      "name": "Georg Cantor",
+      "name_original": "Georg Ferdinand Ludwig Philipp Cantor",
+      "dates": "1845–1918",
+      "origin": "Saint-Pétersbourg, Russie",
+      "lang": "de",
+      "bio": "Mathématicien allemand, créateur de la théorie des ensembles. Il prouva l'existence de différentes tailles d'infini — révolution que Kronecker, son ennemi, combattit férocement. Dépressif, il passa ses dernières années dans des sanatoriums. Il mourut dans un asile pendant la guerre, affamé, oublié, ses idées triomphantes.",
+      "works": ["cantor-ensembles"],
+      "tags": ["infini", "ensembles", "folie"]
+    },
+    {
+      "id": "galois",
+      "name": "Évariste Galois",
+      "name_original": "Évariste Galois",
+      "dates": "1811–1832",
+      "origin": "Bourg-la-Reine, France",
+      "lang": "fr",
+      "bio": "Mathématicien français, génie foudroyé. Il fonda la théorie des groupes à 17 ans — travaux rejetés par l'Académie. Républicain ardent, emprisonné, il fut tué en duel à 20 ans pour une obscure affaire de cœur. La nuit précédente, il écrivit fiévreusement ses théorèmes, griffonnant « je n'ai pas le temps ». Ils changèrent les mathématiques.",
+      "works": ["galois-memoires"],
+      "tags": ["groupes", "duel", "précocité"]
+    },
+    {
+      "id": "ramanujan",
+      "name": "Srinivasa Ramanujan",
+      "name_original": "ஸ்ரீனிவாஸ ராமானுஜன்",
+      "dates": "1887–1920",
+      "origin": "Erode, Inde",
+      "lang": "ta",
+      "bio": "Mathématicien indien autodidacte, prodige des formules. Sans formation formelle, il découvrit des milliers de résultats, certains encore inexpliqués. Hardy le fit venir à Cambridge. Végétarien strict en Angleterre en guerre, il tomba malade. De retour en Inde, il mourut à 32 ans. Ses carnets continuent de livrer des trésors.",
+      "works": ["ramanujan-carnets"],
+      "tags": ["formules", "intuition", "prodige"]
+    },
+    {
+      "id": "turing",
+      "name": "Alan Turing",
+      "name_original": "Alan Mathison Turing",
+      "dates": "1912–1954",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Mathématicien britannique, père de l'informatique. Sa machine de Turing fonde la théorie du calcul. Il brisa le code Enigma et sauva des millions de vies. Homosexuel, il fut condamné à la castration chimique. On le trouva mort, une pomme croquée à côté de lui — probablement cyanure. Gracié à titre posthume en 2013.",
+      "works": ["turing-calculables"],
+      "tags": ["calcul", "enigma", "persécution"]
+    },
+    {
+      "id": "nash",
+      "name": "John Nash",
+      "name_original": "John Forbes Nash Jr.",
+      "dates": "1928–2015",
+      "origin": "Bluefield, États-Unis",
+      "lang": "en",
+      "bio": "Mathématicien américain, génie et schizophrène. L'équilibre de Nash révolutionna la théorie des jeux. À 30 ans, la schizophrénie le frappa — il crut recevoir des messages extraterrestres. Décennies d'errance puis lente guérison. Prix Nobel 1994. Il mourut avec sa femme dans un accident de taxi, rentrant de recevoir le prix Abel.",
+      "works": ["nash-jeux"],
+      "tags": ["jeux", "schizophrénie", "nobel"]
+    },
+    {
+      "id": "erdos",
+      "name": "Paul Erdős",
+      "name_original": "Erdős Pál",
+      "dates": "1913–1996",
+      "origin": "Budapest, Hongrie",
+      "lang": "hu",
+      "bio": "Mathématicien hongrois, nomade de la pensée. Il publia plus de 1 500 articles, collaborant avec des centaines de mathématiciens (le « nombre d'Erdős » mesure la distance à lui). Sans domicile fixe, il vivait de conférences en conférences, ses affaires dans une valise. Sous amphétamines, il travaillait 19 heures par jour. Il mourut à une conférence à Varsovie.",
+      "works": ["erdos-nombres"],
+      "tags": ["collaboration", "nomade", "problèmes"]
+    },
+    {
+      "id": "noether",
+      "name": "Emmy Noether",
+      "name_original": "Amalie Emmy Noether",
+      "dates": "1882–1935",
+      "origin": "Erlangen, Allemagne",
+      "lang": "de",
+      "bio": "Mathématicienne allemande, mère de l'algèbre abstraite. Le théorème de Noether lie symétries et lois de conservation — Einstein l'admirait. Femme dans un monde d'hommes, elle enseigna d'abord sans salaire. Juive, chassée par les nazis, elle s'exila à Bryn Mawr. Elle mourut d'une opération à 53 ans, enterrée dans un cloître quaker.",
+      "works": ["noether-algebre"],
+      "tags": ["algèbre", "symétrie", "femme"]
+    },
+    {
+      "id": "weil-andre",
+      "name": "André Weil",
+      "name_original": "André Weil",
+      "dates": "1906–1998",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Mathématicien français, fondateur de Bourbaki. Frère de Simone Weil, il révolutionna la géométrie algébrique. Pacifiste, il refusa de servir en 1939 et fut emprisonné en Finlande puis en France. Il s'exila aux États-Unis et enseigna à Princeton. Autobiographie d'un mathématicien raconte une vie vouée aux nombres. Il mourut à 92 ans.",
+      "works": ["weil-autobiographie"],
+      "tags": ["bourbaki", "géométrie", "prison"]
+    },
+    {
+      "id": "kovalevskaya",
+      "name": "Sofia Kovalevskaya",
+      "name_original": "Софья Васильевна Ковалевская",
+      "dates": "1850–1891",
+      "origin": "Moscou, Russie",
+      "lang": "ru",
+      "bio": "Mathématicienne russe, première femme professeure en Europe du Nord. Elle épousa un ami pour quitter la Russie (les femmes ne pouvaient voyager seules). À Göttingen, elle obtint son doctorat sans même assister aux cours. Professeure à Stockholm, prix Bordin à Paris. Elle mourut de grippe à 41 ans, laissant une fille et des mémoires romanesques.",
+      "works": ["kovalevskaya-memoires"],
+      "tags": ["femme", "analyse", "russie"]
     }
   ]
 }

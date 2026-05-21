@@ -1974,7 +1974,7 @@
       "lang": "fr",
       "bio": "Métaphysicien suisse, héritier de Guénon. De l'unité transcendante des religions fonde la philosophia perennis moderne. Soufi initié en Algérie, il fonda sa propre tarîqa, mêlant islam et spiritualité amérindienne. Des accusations de comportement inapproprié entachèrent ses dernières années en Indiana. Il peignait des nus sacrés et mourut entouré de disciples.",
       "works": ["schuon-unite"],
-      "tags": ["sophia perennis", "soufisme", "ésotérisme"]
+      "tags": ["tradition", "soufisme", "sophia perennis"]
     },
     {
       "id": "evola",
@@ -3118,7 +3118,7 @@
       "lang": "en",
       "bio": "Théologien et traducteur britannique, orthodoxe de Grèce. Il traduisit les poètes grecs modernes — Cavafy, Séféris, Elytis — et défendit la théologie byzantine contre l'Occident. Installé en Eubée, il vécut en ermite orthodoxe, écrivant sur l'écologie sacrée. L'homme, la nature et Dieu : inséparables.",
       "works": ["sherrard-grece-sacree"],
-      "tags": ["orthodoxie", "grèce", "écologie"]
+      "tags": ["tradition", "orthodoxie", "grèce"]
     },
     {
       "id": "raine",
@@ -3151,7 +3151,7 @@
       "lang": "en",
       "bio": "Philosophe américain des religions, vulgarisateur de la sagesse. Né en Chine de missionnaires méthodistes, il explora toutes les voies : hindouisme, bouddhisme, islam, chamanisme. The World's Religions reste le manuel. Il pratiqua chaque tradition qu'il enseigna. Mort à 97 ans, toujours émerveillé.",
       "works": ["smith-religions-monde"],
-      "tags": ["religions", "pérennialisme", "sagesse"]
+      "tags": ["tradition", "religions", "pérennialisme"]
     },
     {
       "id": "wolfgang-smith",

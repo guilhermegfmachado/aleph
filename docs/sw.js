@@ -1,17 +1,17 @@
 const CACHE_NAME = 'aleph-v1';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js',
-  '/search-engine.js',
-  '/favicon.svg',
-  '/data/corpus-manifest.json',
-  '/data/glossary.json',
-  '/data/references.json',
-  '/data/crosslinks.json',
-  '/data/reading-lists.json',
-  '/data/authors.json'
+  './',
+  './index.html',
+  './style.css',
+  './app.js',
+  './search-engine.js',
+  './favicon.svg',
+  './data/corpus-manifest.json',
+  './data/glossary.json',
+  './data/references.json',
+  './data/crosslinks.json',
+  './data/reading-lists.json',
+  './data/authors.json'
 ];
 
 // Install: cache static assets

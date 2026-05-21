@@ -23253,6 +23253,590 @@
       ],
       "definition": "A window into eternity—Pavel Florensky's definition of icons. Not representation but presence. The saint looks out at us; we look through into the Kingdom. Reverse perspective: heaven sees us.",
       "related": ["Iconostasis", "Theosis"]
+    },
+    {
+      "id": "samsara",
+      "term": "संसार",
+      "lang": "sa",
+      "category": ["bouddhisme", "hindouisme"],
+      "definition": "The cycle of death and rebirth. Suffering's wheel—craving, becoming, dying, being reborn to crave again. Liberation (moksha, nirvana) is escape from samsara. The axle is ignorance.",
+      "related": ["Nirvana", "Karma", "Moksha"]
+    },
+    {
+      "id": "nirvana",
+      "term": "निर्वाण",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "Extinction—the blowing out of craving, aversion, delusion. Not annihilation, not heaven: the end of suffering, the end of becoming. The Buddha's silence when asked what nirvana is. Beyond concepts.",
+      "related": ["Samsara", "Bodhi", "Moksha"]
+    },
+    {
+      "id": "dharma",
+      "term": "धर्म",
+      "lang": "sa",
+      "category": ["bouddhisme", "hindouisme"],
+      "definition": "Cosmic law, teaching, duty, truth—no English word contains it. In Buddhism: the Buddha's teaching, also the constituents of reality. In Hinduism: righteous conduct, one's role in cosmic order. The word itself is a teaching.",
+      "related": ["Karma", "Sangha", "Buddha"]
+    },
+    {
+      "id": "karma",
+      "term": "कर्म",
+      "lang": "sa",
+      "category": ["bouddhisme", "hindouisme"],
+      "definition": "Action and its fruit. Not fate but consequence: intentional acts leave traces that ripen into future experience. Good karma, bad karma—both bind. Liberation is acting without attachment to results.",
+      "related": ["Samsara", "Dharma", "Moksha"]
+    },
+    {
+      "id": "bodhi",
+      "term": "बोधि",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "Awakening, enlightenment. Not knowledge but direct seeing—reality as it is, empty of self. The Buddha sat under the Bodhi tree and woke up. The possibility that all beings can awaken.",
+      "related": ["Nirvana", "Prajna", "Satori"]
+    },
+    {
+      "id": "prajna",
+      "term": "प्रज्ञा",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "Wisdom, discriminating insight. Not conceptual knowledge but direct perception of emptiness (sunyata). The Prajnaparamita sutras: perfection of wisdom, the heart of Mahayana. Form is emptiness, emptiness is form.",
+      "related": ["Sunyata", "Bodhi", "Karuna"]
+    },
+    {
+      "id": "sunyata",
+      "term": "शून्यता",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "Emptiness—not nothingness but absence of inherent existence. All phenomena arise dependently, lack self-nature. Nagarjuna's Madhyamaka: even emptiness is empty. The medicine that cures grasping.",
+      "related": ["Prajna", "Pratityasamutpada"]
+    },
+    {
+      "id": "karuna",
+      "term": "करुणा",
+      "lang": "sa",
+      "category": ["bouddhisme", "éthique"],
+      "definition": "Compassion—active concern for others' suffering. One of the four divine abodes. In Mahayana: the bodhisattva's motivation, inseparable from wisdom. Wisdom without compassion is cold; compassion without wisdom is sentimental.",
+      "related": ["Metta", "Bodhisattva", "Prajna"]
+    },
+    {
+      "id": "metta",
+      "term": "मैत्री",
+      "lang": "sa",
+      "category": ["bouddhisme", "éthique"],
+      "definition": "Loving-kindness, benevolence. The wish for all beings to be happy. First of the four divine abodes. Metta meditation: radiating goodwill outward in expanding circles—self, loved ones, neutral beings, enemies, all beings everywhere.",
+      "related": ["Karuna", "Mudita", "Upekkha"]
+    },
+    {
+      "id": "bodhisattva",
+      "term": "बोधिसत्त्व",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "An awakening being—one who postpones final nirvana to help all sentient beings. The Mahayana ideal. Avalokiteshvara hears the world's cries. The bodhisattva vow: may I not attain buddhahood until all beings are free.",
+      "related": ["Bodhi", "Karuna", "Prajna"]
+    },
+    {
+      "id": "maya",
+      "term": "माया",
+      "lang": "sa",
+      "category": ["hindouisme", "philosophie"],
+      "definition": "Illusion, creative power, the veil. In Advaita: the world appears real but is neither real nor unreal. Brahman plays at being many. The magician's art—we're enchanted, taking the snake for the rope.",
+      "related": ["Brahman", "Avidya", "Lila"]
+    },
+    {
+      "id": "atman",
+      "term": "आत्मन्",
+      "lang": "sa",
+      "category": ["hindouisme", "philosophie"],
+      "definition": "The self, the soul. In Advaita: Atman is Brahman—the individual self is the universal self. You are that (tat tvam asi). The Upanishadic teaching: neti neti—not this, not that—until only atman remains.",
+      "related": ["Brahman", "Maya", "Moksha"]
+    },
+    {
+      "id": "brahman",
+      "term": "ब्रह्मन्",
+      "lang": "sa",
+      "category": ["hindouisme", "philosophie"],
+      "definition": "The ultimate reality, the ground of being. Not a god but that from which gods arise. Sat-chit-ananda: being-consciousness-bliss. The Upanishads: Brahman cannot be known, only be. Brahman is the knower.",
+      "related": ["Atman", "Maya", "Moksha"]
+    },
+    {
+      "id": "moksha",
+      "term": "मोक्ष",
+      "lang": "sa",
+      "category": ["hindouisme", "philosophie"],
+      "definition": "Liberation, release. Freedom from samsara, from karma, from the wheel. The fourth aim of life, beyond duty (dharma), wealth (artha), pleasure (kama). Realizing atman is Brahman. Not going somewhere: seeing you never left.",
+      "related": ["Atman", "Brahman", "Samsara", "Nirvana"]
+    },
+    {
+      "id": "phoneme",
+      "term": "Phonème",
+      "lang": "fr",
+      "category": ["linguistique", "phonologie"],
+      "definition": "The minimal unit of sound that distinguishes meaning. /p/ vs /b/: 'pat' vs 'bat.' Not a physical sound but an abstract category. Trubetzkoy's Prague School: phonology studies differences, not substances.",
+      "related": ["Morpheme", "Phonologie"]
+    },
+    {
+      "id": "morpheme",
+      "term": "Morphème",
+      "lang": "fr",
+      "category": ["linguistique", "morphologie"],
+      "definition": "The minimal unit of meaning. 'Un-break-able': three morphemes. Free (can stand alone: 'break') or bound (require another: 'un-', '-able'). The atom of grammar.",
+      "related": ["Phoneme", "Lexeme"]
+    },
+    {
+      "id": "signifiant",
+      "term": "Signifiant",
+      "lang": "fr",
+      "category": ["linguistique", "sémiotique"],
+      "definition": "The signifier—the sound-image, the material side of the sign. Saussure's dyad: signifiant/signifié. The word 'tree' as sound or letters, not the concept or the object. Arbitrary relation to the signified.",
+      "related": ["Signifié", "Signe"]
+    },
+    {
+      "id": "signifie",
+      "term": "Signifié",
+      "lang": "fr",
+      "category": ["linguistique", "sémiotique"],
+      "definition": "The signified—the concept, the mental image. Not the referent (the actual tree) but the idea 'tree.' Together with the signifiant, forms the sign. The structure is psychological, not a label on a thing.",
+      "related": ["Signifiant", "Signe"]
+    },
+    {
+      "id": "langue-parole",
+      "term": "Langue/Parole",
+      "lang": "fr",
+      "category": ["linguistique", "théorie"],
+      "definition": "Saussure's distinction: langue is the system, the abstract structure shared by speakers; parole is its use, the actual speech acts. Linguistics studies langue—the social fact, the grammar, the rules. Parole is individual, contingent.",
+      "related": ["Synchronie", "Diachronie"]
+    },
+    {
+      "id": "synchronie",
+      "term": "Synchronie",
+      "lang": "fr",
+      "category": ["linguistique", "théorie"],
+      "definition": "The study of language at a single point in time—structure, not history. Saussure's revolution: describe the system as speakers know it, not its evolution. A chess position, not the history of moves.",
+      "related": ["Diachronie", "Langue-Parole"]
+    },
+    {
+      "id": "diachronie",
+      "term": "Diachronie",
+      "lang": "fr",
+      "category": ["linguistique", "théorie"],
+      "definition": "The study of language through time—historical change, etymology, sound shifts. 19th-century linguistics was diachronic; Saussure privileged synchrony. Both are necessary; neither is complete.",
+      "related": ["Synchronie", "Langue-Parole"]
+    },
+    {
+      "id": "performatif",
+      "term": "Performatif",
+      "lang": "fr",
+      "category": ["linguistique", "pragmatique"],
+      "definition": "Austin's discovery: some utterances don't describe—they do. 'I pronounce you married': saying makes it so. Constatives are true or false; performatives are felicitous or infelicitous. All language is performative in some degree.",
+      "related": ["Acte-illocutoire"]
+    },
+    {
+      "id": "acte-illocutoire",
+      "term": "Acte illocutoire",
+      "lang": "fr",
+      "category": ["linguistique", "pragmatique"],
+      "definition": "What you do in saying something—promising, warning, commanding, questioning. Austin and Searle's speech act theory. Locutionary act: the words themselves. Illocutionary act: the force. Perlocutionary act: the effect.",
+      "related": ["Performatif"]
+    },
+    {
+      "id": "deixis",
+      "term": "Deixis",
+      "lang": "el",
+      "category": ["linguistique", "pragmatique"],
+      "definition": "Pointing in language—words whose meaning depends on context. 'I,' 'here,' 'now,' 'this': empty until spoken. Benveniste: language creates the subject through deixis. Every utterance has its origo—the here-now-I.",
+      "related": ["Énonciation"]
+    },
+    {
+      "id": "enonciation",
+      "term": "Énonciation",
+      "lang": "fr",
+      "category": ["linguistique", "pragmatique"],
+      "definition": "The act of uttering—not the utterance (énoncé) but its production. Benveniste: language contains marks of its own enunciation. Who speaks? To whom? When? The I in the sentence, the you implied.",
+      "related": ["Deixis", "Performatif"]
+    },
+    {
+      "id": "unbewusste",
+      "term": "Das Unbewusste",
+      "lang": "de",
+      "category": ["psychanalyse", "psychologie"],
+      "definition": "The unconscious—Freud's revolutionary discovery. Not 'subconscious' but actively unknown, dynamically repressed. It knows no time, no negation, no contradiction. Dreams and slips are its speech. The true psychical reality.",
+      "related": ["Verdraengung", "Es"]
+    },
+    {
+      "id": "verdraengung",
+      "term": "Verdrängung",
+      "lang": "de",
+      "category": ["psychanalyse", "défense"],
+      "definition": "Repression—the cornerstone of psychoanalysis. Unacceptable thoughts, wishes, memories pushed from consciousness. But what's repressed returns—in symptoms, dreams, slips. The work of analysis: making unconscious conscious.",
+      "related": ["Unbewusste", "Wiederkehr"]
+    },
+    {
+      "id": "trieb",
+      "term": "Trieb",
+      "lang": "de",
+      "category": ["psychanalyse", "métapsychologie"],
+      "definition": "Drive—mistranslated as 'instinct.' The psychical representative of bodily excitation, the pressure demanding work. Eros (life) vs Thanatos (death). The drive has source, aim, object—but the object is variable, the most variable element.",
+      "related": ["Libido", "Thanatos"]
+    },
+    {
+      "id": "es-ich-ueberich",
+      "term": "Es/Ich/Über-Ich",
+      "lang": "de",
+      "category": ["psychanalyse", "métapsychologie"],
+      "definition": "Id, ego, superego—Freud's structural model. The Es: the primal reservoir of drives. The Ich: negotiating reality, defense, synthesis. The Über-Ich: internalized authority, conscience, guilt. The ego is not master in its own house.",
+      "related": ["Unbewusste", "Trieb"]
+    },
+    {
+      "id": "uebertragung",
+      "term": "Übertragung",
+      "lang": "de",
+      "category": ["psychanalyse", "clinique"],
+      "definition": "Transference—the patient projects past relationships onto the analyst. The mother, the father, the beloved—ghosts in the consulting room. Resistance and royal road: analysis happens through transference, not despite it.",
+      "related": ["Widerstand", "Gegenübertragung"]
+    },
+    {
+      "id": "gegenubertragung",
+      "term": "Gegenübertragung",
+      "lang": "de",
+      "category": ["psychanalyse", "clinique"],
+      "definition": "Countertransference—the analyst's unconscious response to the patient. Once considered obstacle; now, diagnostic tool. What the patient evokes reveals what the patient disavows. The analyst's feelings as data.",
+      "related": ["Übertragung", "Unbewusste"]
+    },
+    {
+      "id": "widerstand",
+      "term": "Widerstand",
+      "lang": "de",
+      "category": ["psychanalyse", "clinique"],
+      "definition": "Resistance—anything that opposes the analytic work. Coming late, forgetting, changing subjects. The ego protects repression. The harder the work, the closer to the wound. Resistance is the map.",
+      "related": ["Verdraengung", "Übertragung"]
+    },
+    {
+      "id": "wiederkehr",
+      "term": "Wiederkehr des Verdrängten",
+      "lang": "de",
+      "category": ["psychanalyse", "théorie"],
+      "definition": "The return of the repressed. What's pushed away comes back—distorted, displaced, disguised. Symptoms, dreams, slips, repetitions. Repression never fully succeeds; the unconscious insists. The repressed doesn't forget.",
+      "related": ["Verdraengung", "Symptom"]
+    },
+    {
+      "id": "unheimlich",
+      "term": "Das Unheimliche",
+      "lang": "de",
+      "category": ["psychanalyse", "esthétique"],
+      "definition": "The uncanny—the familiar made strange, the homely become unhomely. Doubles, automata, déjà vu. Freud: the uncanny is the return of something repressed or surmounted. Heimlich and unheimlich coincide: the secret at home.",
+      "related": ["Wiederkehr", "Angst"]
+    },
+    {
+      "id": "angst",
+      "term": "Angst",
+      "lang": "de",
+      "category": ["psychanalyse", "affect"],
+      "definition": "Anxiety—not fear of something but objectless dread. Freud evolved: first, dammed-up libido; later, signal of danger. Existential angst: Heidegger's Sein-zum-Tode, Kierkegaard's dizziness of freedom. The affect that reveals.",
+      "related": ["Trieb", "Es-Ich-Ueberich"]
+    },
+    {
+      "id": "spaltung",
+      "term": "Spaltung",
+      "lang": "de",
+      "category": ["psychanalyse", "clinique"],
+      "definition": "Splitting—the ego divides to survive. Good object, bad object; idealized, devalued. Klein: primitive defense. Fetishism: 'I know but nevertheless.' The subject knows and doesn't know simultaneously.",
+      "related": ["Abwehr", "Es-Ich-Ueberich"]
+    },
+    {
+      "id": "objet-a",
+      "term": "Objet petit a",
+      "lang": "fr",
+      "category": ["psychanalyse", "lacanisme"],
+      "definition": "Lacan's invention: the object-cause of desire. Not what you desire but what makes you desire. Unattainable, lost from the start. The breast, the gaze, the voice—partial objects, forever missing. The hole around which desire circulates.",
+      "related": ["Désir", "Manque"]
+    },
+    {
+      "id": "habeas-corpus",
+      "term": "Habeas corpus",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "You shall have the body. The great writ: bring the prisoner before the court, justify detention. Magna Carta's seed, liberty's guardian. No imprisonment without legal cause. The body belongs to law, not to arbitrary power.",
+      "related": ["In-dubio-pro-reo"]
+    },
+    {
+      "id": "in-dubio-pro-reo",
+      "term": "In dubio pro reo",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "When in doubt, for the accused. Presumption of innocence's maxim. The prosecution must prove beyond reasonable doubt; doubt acquits. Better ten guilty go free than one innocent suffer.",
+      "related": ["Habeas-corpus", "Nullum-crimen"]
+    },
+    {
+      "id": "nullum-crimen",
+      "term": "Nullum crimen sine lege",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "No crime without law. You cannot be punished for what wasn't illegal when you did it. Against retroactive criminal law, against arbitrary punishment. The principle of legality: the state must declare crimes first.",
+      "related": ["Nulla-poena", "In-dubio-pro-reo"]
+    },
+    {
+      "id": "nulla-poena",
+      "term": "Nulla poena sine lege",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "No punishment without law. The penalty must be prescribed before the act. Judges apply, don't create. Enlightenment principle: Beccaria, Feuerbach. Certainty of law over judicial discretion.",
+      "related": ["Nullum-crimen"]
+    },
+    {
+      "id": "pacta-sunt-servanda",
+      "term": "Pacta sunt servanda",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "Agreements must be kept. Foundation of contract law and international treaties. Once you promise, you're bound. Good faith, reliability, the social fabric. Without this, no commerce, no diplomacy, no civilization.",
+      "related": ["Bona-fide"]
+    },
+    {
+      "id": "bona-fide",
+      "term": "Bona fide",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "In good faith. Acting honestly, without fraud or deceit. The bona fide purchaser: bought without knowing of defects in title. Good faith: the lubricant of legal transactions, the presumption until proven otherwise.",
+      "related": ["Pacta-sunt-servanda", "Mala-fide"]
+    },
+    {
+      "id": "res-judicata",
+      "term": "Res judicata",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "A matter judged. Once finally decided, a case cannot be relitigated. The principle of finality: litigation must end. Different from stare decisis (precedent): res judicata binds the parties, not all future courts.",
+      "related": ["Stare-decisis"]
+    },
+    {
+      "id": "stare-decisis",
+      "term": "Stare decisis",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "To stand by things decided. The doctrine of precedent: courts follow prior rulings. Common law's engine. Not absolute—courts can overturn—but presumptively binding. Law grows by accretion.",
+      "related": ["Res-judicata"]
+    },
+    {
+      "id": "lex-talionis",
+      "term": "Lex talionis",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "The law of retaliation. Eye for eye, tooth for tooth. Hammurabi, Exodus. Not revenge but proportionality: the punishment fits the crime, no more. A limit on vendetta. Primitive justice or eternal principle?",
+      "related": ["Jus-naturale"]
+    },
+    {
+      "id": "jus-naturale",
+      "term": "Jus naturale",
+      "lang": "la",
+      "category": ["droit", "philosophie"],
+      "definition": "Natural law—law derived from nature or reason, not human convention. Stoics, Aquinas, Grotius. Rights precede states; unjust laws aren't law. The basis of human rights discourse. Nature or reason? Theology or secularism?",
+      "related": ["Jus-gentium", "Lex-talionis"]
+    },
+    {
+      "id": "jus-gentium",
+      "term": "Jus gentium",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "Law of nations. Roman law for non-citizens, based on common practice. Later: international law, law between sovereigns. Grotius, Vattel, the UN. The fiction of a law above nations.",
+      "related": ["Jus-naturale"]
+    },
+    {
+      "id": "ultra-vires",
+      "term": "Ultra vires",
+      "lang": "la",
+      "category": ["droit", "latin juridique"],
+      "definition": "Beyond the powers. An act exceeding legal authority is void. Corporate law: acts outside the charter. Administrative law: agencies can't exceed their mandate. The limit on delegated power.",
+      "related": ["Intra-vires"]
+    },
+    {
+      "id": "modus-ponens",
+      "term": "Modus ponens",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "The mode of affirming. If P then Q; P; therefore Q. The basic rule of deduction. Aristotle's syllogism distilled. Affirm the antecedent, derive the consequent. So obvious it seems trivial—until logic examines it.",
+      "related": ["Modus-tollens", "Syllogisme"]
+    },
+    {
+      "id": "modus-tollens",
+      "term": "Modus tollens",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "The mode of denying. If P then Q; not-Q; therefore not-P. Deny the consequent, derive the negation of the antecedent. Falsification's logic: one counterexample refutes a universal claim. Popper's engine.",
+      "related": ["Modus-ponens", "Syllogisme"]
+    },
+    {
+      "id": "reductio",
+      "term": "Reductio ad absurdum",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "Reduction to absurdity. Assume the opposite, derive a contradiction, conclude the original. Euclid's proof of infinite primes. Zeno's paradoxes. The most powerful tool in the logician's kit.",
+      "related": ["Modus-tollens", "Contradiction"]
+    },
+    {
+      "id": "tertium-non-datur",
+      "term": "Tertium non datur",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "A third is not given. The law of excluded middle: P or not-P, no middle option. Classical logic's pillar. Intuitionists reject it: you must construct a proof, not just exclude alternatives. Controversy still burns.",
+      "related": ["Non-contradictio"]
+    },
+    {
+      "id": "non-contradictio",
+      "term": "Principium contradictionis",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "The principle of non-contradiction. Nothing can be both P and not-P in the same respect at the same time. Aristotle: the firmest of all principles. Deny it, and you can prove anything. The ground of reason.",
+      "related": ["Tertium-non-datur", "Identitas"]
+    },
+    {
+      "id": "quod-erat-demonstrandum",
+      "term": "Q.E.D.",
+      "lang": "la",
+      "category": ["logique", "mathématiques"],
+      "definition": "That which was to be demonstrated. The proof is complete, the theorem established. Euclid's triumphant stamp. Mathematicians still write it; some use a tombstone (∎). The satisfaction of closure.",
+      "related": ["Reductio"]
+    },
+    {
+      "id": "a-priori",
+      "term": "A priori",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "From what comes before—knowledge independent of experience. Mathematical truths, logical necessities. Kant: synthetic a priori (space, time, causality). Rationalism's domain. The opposite: a posteriori, from experience.",
+      "related": ["A-posteriori"]
+    },
+    {
+      "id": "a-posteriori",
+      "term": "A posteriori",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "From what comes after—knowledge derived from experience. Empirical truths: water boils at 100°C. Hume: all knowledge of matters of fact. Empiricism's domain. Necessary vs contingent: a priori vs a posteriori.",
+      "related": ["A-priori"]
+    },
+    {
+      "id": "petitio-principii",
+      "term": "Petitio principii",
+      "lang": "la",
+      "category": ["logique", "rhétorique"],
+      "definition": "Begging the question. Assuming what you're trying to prove. The conclusion hides in the premises. Circular reasoning dressed up. 'The Bible is true because it's God's word, and God's word is true because it's in the Bible.'",
+      "related": ["Fallacia"]
+    },
+    {
+      "id": "occams-razor",
+      "term": "Novacula Occami",
+      "lang": "la",
+      "category": ["logique", "philosophie"],
+      "definition": "Ockham's razor: entities should not be multiplied beyond necessity. Prefer the simpler explanation. Not a proof but a heuristic. William of Ockham didn't quite say it this way. Parsimony: the scientist's aesthetic.",
+      "related": ["Pluralitas"]
+    },
+    {
+      "id": "axioma",
+      "term": "Axioma",
+      "lang": "el",
+      "category": ["logique", "mathématiques"],
+      "definition": "A self-evident truth, taken without proof. Euclid's axioms grounded geometry. Hilbert formalized: axioms are starting points, consistent, independent. Gödel: no system can prove its own consistency. The ground trembles.",
+      "related": ["Theorema", "Postulatum"]
+    },
+    {
+      "id": "calcination",
+      "term": "Calcinatio",
+      "lang": "la",
+      "category": ["alchimie", "transformation"],
+      "definition": "Calcination—heating to powder, burning away impurities. The soul's trial by fire. Psychologically: confronting ego, burning illusions. The first operation in some sequences. From calcis, lime: what remains when fire has done its work.",
+      "related": ["Nigredo", "Solutio"]
+    },
+    {
+      "id": "solutio",
+      "term": "Solutio",
+      "lang": "la",
+      "category": ["alchimie", "transformation"],
+      "definition": "Dissolution—dissolving the calcined matter in liquid. Return to prima materia, the undifferentiated. Psychologically: letting go of rigid structures, the ego dissolving in the unconscious. Solve: the first half of 'solve et coagula.'",
+      "related": ["Coagulatio", "Prima-materia"]
+    },
+    {
+      "id": "coagulatio",
+      "term": "Coagulatio",
+      "lang": "la",
+      "category": ["alchimie", "transformation"],
+      "definition": "Coagulation—solidifying what was dissolved. New form from chaos. Psychologically: integrating insights, ego reconstituting at a higher level. Coagula: the second half of the great work. The one becomes the many becomes the one.",
+      "related": ["Solutio", "Coniunctio"]
+    },
+    {
+      "id": "sublimatio",
+      "term": "Sublimatio",
+      "lang": "la",
+      "category": ["alchimie", "transformation"],
+      "definition": "Sublimation—solid to vapor without liquid stage. The gross becomes subtle, earth becomes air. Psychologically: elevating base instincts, spiritualizing matter. Freud borrowed the term. Rising: what was below ascends.",
+      "related": ["Calcinatio", "Volatilis"]
+    },
+    {
+      "id": "putrefactio",
+      "term": "Putrefactio",
+      "lang": "la",
+      "category": ["alchimie", "transformation"],
+      "definition": "Putrefaction—decay, rotting, decomposition. Part of nigredo: the death that precedes rebirth. Psychologically: depression, the collapse of old structures. The compost from which new life grows. To make gold, first make garbage.",
+      "related": ["Nigredo", "Mortificatio"]
+    },
+    {
+      "id": "coniunctio",
+      "term": "Coniunctio",
+      "lang": "la",
+      "category": ["alchimie", "philosophie"],
+      "definition": "Conjunction—the marriage of opposites. Sol and Luna, sulphur and mercury, king and queen. The chemical wedding. Jung's individuation: integrating anima/animus, conscious/unconscious. The mysterium coniunctionis: totality.",
+      "related": ["Rebis", "Albedo"]
+    },
+    {
+      "id": "albedo",
+      "term": "Albedo",
+      "lang": "la",
+      "category": ["alchimie", "philosophie"],
+      "definition": "Whitening—the second stage after nigredo. Purification, washing. The moon rises, the feminine emerges. Psychologically: reflection, insight after dark night. Dawn after death. Not yet gold, but silver: the mirror that sees.",
+      "related": ["Nigredo", "Rubedo"]
+    },
+    {
+      "id": "rubedo",
+      "term": "Rubedo",
+      "lang": "la",
+      "category": ["alchimie", "philosophie"],
+      "definition": "Reddening—the final stage. The Philosopher's Stone achieved, gold accomplished. Sun after moon. Psychologically: wholeness, the Self realized. The mystic marriage consummated. Red: blood, passion, life returned to full intensity.",
+      "related": ["Albedo", "Lapis"]
+    },
+    {
+      "id": "lapis-philosophorum",
+      "term": "Lapis philosophorum",
+      "lang": "la",
+      "category": ["alchimie", "philosophie"],
+      "definition": "The Philosopher's Stone. Goal of the magnum opus: transmutes lead to gold, grants immortality, cures all ills. Never found—or found only within. Jung: the Self, the impossible totality we asymptotically approach. The stone that is no stone.",
+      "related": ["Rubedo", "Magnus-opus"]
+    },
+    {
+      "id": "aqua-vitae",
+      "term": "Aqua vitae",
+      "lang": "la",
+      "category": ["alchimie", "médecine"],
+      "definition": "Water of life. Distilled alcohol, the fifth essence, the universal medicine. Alchemists sought the elixir; they found whiskey. Spiritual meaning: the living water, grace, the spirit that revives. Also: aquavit, eau-de-vie, whisky (uisce beatha).",
+      "related": ["Elixir", "Quinta-essentia"]
+    },
+    {
+      "id": "quinta-essentia",
+      "term": "Quinta essentia",
+      "lang": "la",
+      "category": ["alchimie", "philosophie"],
+      "definition": "The fifth essence—beyond earth, water, air, fire. Aristotle's aether, the heavenly element. Alchemically: the extract, the spirit, the purest form. Quintessential: the most perfect example. What remains when all impurity is removed.",
+      "related": ["Aqua-vitae", "Prima-materia"]
+    },
+    {
+      "id": "aurum-potabile",
+      "term": "Aurum potabile",
+      "lang": "la",
+      "category": ["alchimie", "médecine"],
+      "definition": "Drinkable gold—the universal panacea. Gold dissolved, made assimilable by the body. Supposed to cure all disease, prolong life. Actual preparations: colloidal gold, gold chloride. The eternal metal consumed, incorporated, immortalizing.",
+      "related": ["Lapis-philosophorum", "Elixir"]
+    },
+    {
+      "id": "opus-magnum",
+      "term": "Magnum opus",
+      "lang": "la",
+      "category": ["alchimie", "philosophie"],
+      "definition": "The great work—the alchemical project entire. From prima materia through nigredo, albedo, rubedo to the Stone. Years, lifetimes, impossible. Jung's reading: individuation, becoming who you are. The work that works on you.",
+      "related": ["Lapis-philosophorum", "Rubedo"]
     }
   ]
 }

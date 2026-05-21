@@ -17,7 +17,9 @@ const state = {
         type: null,
         category: null,
         query: '',
-        glossaryLang: ''
+        glossaryLang: '',
+        authorTag: null,
+        authorQuery: ''
     },
     sort: 'year',
     selectedTerm: null,
@@ -658,11 +660,73 @@ function renderFeaturedAuthors() {
 function renderAuthorsPage() {
     const container = document.getElementById('authorsGrid');
     const countEl = document.getElementById('authorCount');
+    const tagCloud = document.getElementById('authorsTagCloud');
+    const searchInput = document.getElementById('authorsSearch');
+    const resultsInfo = document.getElementById('authorsResultsInfo');
+
     if (!container || !state.authors?.authors) return;
+
+    // Collect all unique tags with counts
+    const tagCounts = {};
+    state.authors.authors.forEach(author => {
+        (author.tags || []).forEach(tag => {
+            tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+        });
+    });
+
+    // Sort tags by count (descending), then alphabetically
+    const sortedTags = Object.entries(tagCounts)
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+        .slice(0, 30); // Top 30 tags
+
+    // Render tag cloud
+    if (tagCloud) {
+        tagCloud.innerHTML = sortedTags.map(([tag, count]) =>
+            `<button class="authors-tag-pill${state.filters.authorTag === tag ? ' active' : ''}" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)} <span style="opacity:0.6">${count}</span></button>`
+        ).join('');
+
+        tagCloud.querySelectorAll('.authors-tag-pill').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tag = btn.dataset.tag;
+                state.filters.authorTag = state.filters.authorTag === tag ? null : tag;
+                renderAuthorsPage();
+            });
+        });
+    }
+
+    // Setup search
+    if (searchInput && !searchInput.dataset.bound) {
+        searchInput.dataset.bound = 'true';
+        searchInput.addEventListener('input', () => {
+            state.filters.authorQuery = searchInput.value.toLowerCase();
+            renderAuthorsPage();
+        });
+    }
+
+    // Filter authors
+    const filtered = state.authors.authors.filter(author => {
+        const matchesTag = !state.filters.authorTag || (author.tags || []).includes(state.filters.authorTag);
+        const query = state.filters.authorQuery;
+        const matchesQuery = !query ||
+            author.name.toLowerCase().includes(query) ||
+            (author.name_original || '').toLowerCase().includes(query) ||
+            author.bio.toLowerCase().includes(query) ||
+            author.origin.toLowerCase().includes(query) ||
+            (author.tags || []).some(t => t.toLowerCase().includes(query));
+        return matchesTag && matchesQuery;
+    });
 
     if (countEl) countEl.textContent = state.authors.authors.length;
 
-    container.innerHTML = state.authors.authors.map(author => {
+    if (resultsInfo) {
+        if (state.filters.authorTag || state.filters.authorQuery) {
+            resultsInfo.textContent = `${filtered.length} résultat${filtered.length > 1 ? 's' : ''}`;
+        } else {
+            resultsInfo.textContent = '';
+        }
+    }
+
+    container.innerHTML = filtered.map(author => {
         const workCount = author.works.filter(id => state.bookIndex[id]).length;
         return `
             <article class="author-card" id="author-${author.id}">
@@ -684,12 +748,19 @@ function renderAuthorsPage() {
                     }).filter(Boolean).join(' · ')}
                 </div>
                 <div class="author-card-tags">
-                    ${author.tags.map(t => `<span class="author-tag">${escapeHtml(t)}</span>`).join('')}
+                    ${(author.tags || []).map(t => `<button class="author-tag" onclick="filterAuthorsByTag('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('')}
                 </div>
             </article>
         `;
     }).join('');
 }
+
+function filterAuthorsByTag(tag) {
+    state.filters.authorTag = state.filters.authorTag === tag ? null : tag;
+    renderAuthorsPage();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+window.filterAuthorsByTag = filterAuthorsByTag;
 
 function openAuthorPage(authorId) {
     navigateTo('authors');

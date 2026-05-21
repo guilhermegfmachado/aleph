@@ -8,8 +8,15 @@
       "origin": "Grèce (Ionie)",
       "lang": "grc",
       "bio": "Poète épique grec légendaire, considéré comme l'auteur de l'Iliade et l'Odyssée. Ces œuvres fondatrices de la littérature occidentale racontent la guerre de Troie et le retour d'Ulysse. La « question homérique » débat encore de l'existence historique d'Homère.",
-      "works": ["homer-iliad", "homer-odyssey"],
-      "tags": ["épique", "grec ancien", "mythologie"]
+      "works": [
+        "homer-iliad",
+        "homer-odyssey"
+      ],
+      "tags": [
+        "épique",
+        "grec ancien",
+        "mythologie"
+      ]
     },
     {
       "id": "plato",
@@ -19,8 +26,14 @@
       "origin": "Athènes, Grèce",
       "lang": "grc",
       "bio": "Philosophe athénien, fondateur de l'Académie. Élève de Socrate et maître d'Aristote. Ses dialogues explorent la justice, la beauté, l'égalité, et introduisent la théorie des Formes. La République reste son œuvre la plus influente.",
-      "works": ["plato-republic"],
-      "tags": ["philosophie", "idéalisme", "politique"]
+      "works": [
+        "plato-republic"
+      ],
+      "tags": [
+        "philosophie",
+        "idéalisme",
+        "politique"
+      ]
     },
     {
       "id": "aristotle",
@@ -30,8 +43,14 @@
       "origin": "Stagire, Macédoine",
       "lang": "grc",
       "bio": "Philosophe et scientifique grec, élève de Platon et précepteur d'Alexandre le Grand. Fondateur du Lycée, il a écrit sur la logique, la métaphysique, l'éthique, la politique, la biologie. Son influence sur la pensée occidentale est incommensurable.",
-      "works": ["aristotle-politics"],
-      "tags": ["philosophie", "logique", "science"]
+      "works": [
+        "aristotle-politics"
+      ],
+      "tags": [
+        "philosophie",
+        "logique",
+        "science"
+      ]
     },
     {
       "id": "marcus-aurelius",
@@ -41,8 +60,14 @@
       "origin": "Rome",
       "lang": "la",
       "bio": "Empereur romain (161-180) et philosophe stoïcien. Ses Pensées pour moi-même, journal intime écrit en grec pendant ses campagnes, offrent une méditation profonde sur la vertu, le devoir et l'acceptation du destin.",
-      "works": ["marcus-aurelius-meditations"],
-      "tags": ["stoïcisme", "philosophie", "empereur"]
+      "works": [
+        "marcus-aurelius-meditations"
+      ],
+      "tags": [
+        "stoïcisme",
+        "philosophie",
+        "empereur"
+      ]
     },
     {
       "id": "seneca",
@@ -52,8 +77,14 @@
       "origin": "Cordoue, Hispanie",
       "lang": "la",
       "bio": "Philosophe stoïcien, dramaturge et homme d'État romain. Tuteur puis conseiller de Néron. Ses Lettres à Lucilius sont un chef-d'œuvre de sagesse pratique. Contraint au suicide par Néron.",
-      "works": ["seneca-letters"],
-      "tags": ["stoïcisme", "lettres", "tragédie"]
+      "works": [
+        "seneca-letters"
+      ],
+      "tags": [
+        "stoïcisme",
+        "lettres",
+        "tragédie"
+      ]
     },
     {
       "id": "epictetus",
@@ -63,8 +94,15 @@
       "origin": "Hiérapolis, Phrygie",
       "lang": "grc",
       "bio": "Philosophe stoïcien né esclave. Affranchi, il enseigna à Rome puis à Nicopolis. Son Manuel (Enchiridion) et ses Entretiens, transcrits par Arrien, enseignent la distinction entre ce qui dépend de nous et ce qui n'en dépend pas.",
-      "works": ["epictetus-enchiridion", "epictetus-discourses"],
-      "tags": ["stoïcisme", "éthique", "liberté"]
+      "works": [
+        "epictetus-enchiridion",
+        "epictetus-discourses"
+      ],
+      "tags": [
+        "stoïcisme",
+        "éthique",
+        "liberté"
+      ]
     },
     {
       "id": "virgil",
@@ -74,8 +112,14 @@
       "origin": "Mantoue, Gaule cisalpine",
       "lang": "la",
       "bio": "Poète romain majeur de l'époque augustéenne. L'Énéide, épopée nationale romaine, raconte les origines troyennes de Rome. Ses Bucoliques et Géorgiques célèbrent la vie pastorale et agricole.",
-      "works": ["virgil-aeneid"],
-      "tags": ["épique", "poésie", "Rome"]
+      "works": [
+        "virgil-aeneid"
+      ],
+      "tags": [
+        "épique",
+        "poésie",
+        "Rome"
+      ]
     },
     {
       "id": "ovid",
@@ -85,8 +129,15 @@
       "origin": "Sulmone, Italie",
       "lang": "la",
       "bio": "Poète romain célèbre pour ses Métamorphoses, encyclopédie mythologique en vers. L'Art d'aimer lui valut l'exil par Auguste. Son style élégant et son humour ont influencé toute la littérature occidentale.",
-      "works": ["ovid-metamorphoses", "ovid-art-love"],
-      "tags": ["mythologie", "poésie", "amour"]
+      "works": [
+        "ovid-metamorphoses",
+        "ovid-art-love"
+      ],
+      "tags": [
+        "mythologie",
+        "poésie",
+        "amour"
+      ]
     },
     {
       "id": "cicero",
@@ -96,8 +147,15 @@
       "origin": "Arpinum, Italie",
       "lang": "la",
       "bio": "Orateur, homme politique et philosophe romain. Consul en 63 av. J.-C., il défendit la République contre Catilina. Ses traités philosophiques ont transmis la pensée grecque à l'Occident latin.",
-      "works": ["cicero-offices", "cicero-tusculan"],
-      "tags": ["rhétorique", "philosophie", "politique"]
+      "works": [
+        "cicero-offices",
+        "cicero-tusculan"
+      ],
+      "tags": [
+        "rhétorique",
+        "philosophie",
+        "politique"
+      ]
     },
     {
       "id": "dante",
@@ -106,8 +164,14 @@
       "origin": "Florence, Italie",
       "lang": "it",
       "bio": "Poète florentin, père de la langue italienne. La Divine Comédie, voyage allégorique à travers l'Enfer, le Purgatoire et le Paradis, est considérée comme le plus grand poème de la littérature italienne.",
-      "works": ["dante-divine-comedy"],
-      "tags": ["poésie", "allégorie", "médiéval"]
+      "works": [
+        "dante-divine-comedy"
+      ],
+      "tags": [
+        "poésie",
+        "allégorie",
+        "médiéval"
+      ]
     },
     {
       "id": "shakespeare",
@@ -116,8 +180,15 @@
       "origin": "Stratford-upon-Avon, Angleterre",
       "lang": "en",
       "bio": "Dramaturge et poète anglais, le plus grand écrivain de langue anglaise. Ses tragédies (Hamlet, Macbeth, Othello, Le Roi Lear) et comédies explorent toute la gamme de l'expérience humaine.",
-      "works": ["shakespeare-hamlet", "shakespeare-king-lear"],
-      "tags": ["théâtre", "tragédie", "Renaissance"]
+      "works": [
+        "shakespeare-hamlet",
+        "shakespeare-king-lear"
+      ],
+      "tags": [
+        "théâtre",
+        "tragédie",
+        "Renaissance"
+      ]
     },
     {
       "id": "montaigne",
@@ -126,8 +197,14 @@
       "origin": "Château de Montaigne, Guyenne",
       "lang": "fr",
       "bio": "Philosophe et écrivain français, inventeur de l'essai comme genre littéraire. Ses Essais, exploration de soi et de la condition humaine, prônent la tolérance et le scepticisme face aux certitudes.",
-      "works": ["montaigne-essays"],
-      "tags": ["essai", "humanisme", "scepticisme"]
+      "works": [
+        "montaigne-essays"
+      ],
+      "tags": [
+        "essai",
+        "humanisme",
+        "scepticisme"
+      ]
     },
     {
       "id": "nietzsche",
@@ -136,8 +213,15 @@
       "origin": "Röcken, Prusse",
       "lang": "de",
       "bio": "Philosophe allemand, critique radical de la morale et de la religion. Ainsi parlait Zarathoustra proclame la mort de Dieu et l'avènement du Surhomme. Son style poétique et aphoristique a révolutionné la philosophie.",
-      "works": ["nietzsche-zarathustra", "nietzsche-beyond-good-evil"],
-      "tags": ["philosophie", "nihilisme", "existentialisme"]
+      "works": [
+        "nietzsche-zarathustra",
+        "nietzsche-beyond-good-evil"
+      ],
+      "tags": [
+        "philosophie",
+        "nihilisme",
+        "existentialisme"
+      ]
     },
     {
       "id": "kant",
@@ -147,8 +231,14 @@
       "origin": "Königsberg, Prusse",
       "lang": "de",
       "bio": "Philosophe allemand, figure centrale des Lumières. La Critique de la raison pure établit les limites de la connaissance humaine. Son éthique du devoir et son cosmopolitisme restent fondamentaux.",
-      "works": ["kant-critique-pure-reason"],
-      "tags": ["philosophie", "Lumières", "métaphysique"]
+      "works": [
+        "kant-critique-pure-reason"
+      ],
+      "tags": [
+        "philosophie",
+        "Lumières",
+        "métaphysique"
+      ]
     },
     {
       "id": "lao-tzu",
@@ -158,8 +248,14 @@
       "origin": "Chine",
       "lang": "zh",
       "bio": "Sage chinois légendaire, fondateur présumé du taoïsme. Le Tao Te King, attribué à Lao Tseu, enseigne le wu wei (non-agir) et l'harmonie avec le Tao, la voie naturelle de l'univers.",
-      "works": ["tao-te-ching"],
-      "tags": ["taoïsme", "sagesse", "Chine"]
+      "works": [
+        "tao-te-ching"
+      ],
+      "tags": [
+        "taoïsme",
+        "sagesse",
+        "Chine"
+      ]
     },
     {
       "id": "confucius",
@@ -169,8 +265,14 @@
       "origin": "Lu, Chine",
       "lang": "zh",
       "bio": "Philosophe et éducateur chinois, fondateur du confucianisme. Les Entretiens compilent ses enseignements sur l'éthique, la vertu et l'harmonie sociale. Sa pensée a façonné la civilisation d'Asie de l'Est.",
-      "works": ["analects-confucius"],
-      "tags": ["confucianisme", "éthique", "Chine"]
+      "works": [
+        "analects-confucius"
+      ],
+      "tags": [
+        "confucianisme",
+        "éthique",
+        "Chine"
+      ]
     },
     {
       "id": "rumi",
@@ -180,8 +282,14 @@
       "origin": "Balkh (actuel Afghanistan)",
       "lang": "fa",
       "bio": "Poète mystique persan, fondateur de l'ordre des derviches tourneurs. Son Masnavi, épopée spirituelle de 25 000 vers, explore l'amour divin et l'union mystique. L'un des poètes les plus lus au monde.",
-      "works": ["rumi-masnavi"],
-      "tags": ["soufisme", "poésie", "mystique"]
+      "works": [
+        "rumi-masnavi"
+      ],
+      "tags": [
+        "soufisme",
+        "poésie",
+        "mystique"
+      ]
     },
     {
       "id": "omar-khayyam",
@@ -191,8 +299,14 @@
       "origin": "Nichapur, Perse",
       "lang": "fa",
       "bio": "Mathématicien, astronome et poète persan. Ses Rubaiyat (quatrains) célèbrent les plaisirs de la vie face à l'incertitude de l'existence. La traduction de FitzGerald en fit un classique en Occident.",
-      "works": ["rubaiyat-khayyam"],
-      "tags": ["poésie", "mathématiques", "Perse"]
+      "works": [
+        "rubaiyat-khayyam"
+      ],
+      "tags": [
+        "poésie",
+        "mathématiques",
+        "Perse"
+      ]
     },
     {
       "id": "augustine",
@@ -202,8 +316,14 @@
       "origin": "Thagaste, Numidie",
       "lang": "la",
       "bio": "Théologien et philosophe, Père de l'Église. Ses Confessions, première autobiographie spirituelle, racontent sa conversion au christianisme. La Cité de Dieu défend le christianisme contre le paganisme.",
-      "works": ["augustine-confessions"],
-      "tags": ["théologie", "autobiographie", "patristique"]
+      "works": [
+        "augustine-confessions"
+      ],
+      "tags": [
+        "théologie",
+        "autobiographie",
+        "patristique"
+      ]
     },
     {
       "id": "aquinas",
@@ -213,8 +333,14 @@
       "origin": "Roccasecca, Italie",
       "lang": "la",
       "bio": "Théologien et philosophe dominicain, Docteur de l'Église. Sa Somme théologique synthétise la philosophie aristotélicienne et la foi chrétienne. Le thomisme reste la philosophie officielle de l'Église catholique.",
-      "works": ["aquinas-summa"],
-      "tags": ["scolastique", "théologie", "philosophie"]
+      "works": [
+        "aquinas-summa"
+      ],
+      "tags": [
+        "scolastique",
+        "théologie",
+        "philosophie"
+      ]
     },
     {
       "id": "sophocles",
@@ -224,8 +350,15 @@
       "origin": "Colone, Athènes",
       "lang": "grc",
       "bio": "Dramaturge athénien, maître de la tragédie grecque. Œdipe roi est considéré comme le chef-d'œuvre du genre. Il introduit le troisième acteur et réduit le rôle du chœur, créant des personnages plus complexes et humains.",
-      "works": ["sophocles-oedipus-rex", "sophocles-antigone"],
-      "tags": ["tragédie", "théâtre", "mythologie"]
+      "works": [
+        "sophocles-oedipus-rex",
+        "sophocles-antigone"
+      ],
+      "tags": [
+        "tragédie",
+        "théâtre",
+        "mythologie"
+      ]
     },
     {
       "id": "aeschylus",
@@ -235,8 +368,15 @@
       "origin": "Éleusis, Athènes",
       "lang": "grc",
       "bio": "Père de la tragédie grecque. Combattant à Marathon et Salamine, il introduit le deuxième acteur et les décors. L'Orestie, seule trilogie complète conservée, explore la justice, la vengeance et la naissance du droit.",
-      "works": ["aeschylus-oresteia", "aeschylus-prometheus-bound"],
-      "tags": ["tragédie", "théâtre", "mythologie"]
+      "works": [
+        "aeschylus-oresteia",
+        "aeschylus-prometheus-bound"
+      ],
+      "tags": [
+        "tragédie",
+        "théâtre",
+        "mythologie"
+      ]
     },
     {
       "id": "euripides",
@@ -246,8 +386,15 @@
       "origin": "Salamine, Grèce",
       "lang": "grc",
       "bio": "Dernier des trois grands tragiques athéniens. Plus psychologue que ses prédécesseurs, il humanise les héros et donne voix aux marginaux : femmes, esclaves, barbares. Médée et Les Bacchantes restent des œuvres majeures.",
-      "works": ["euripides-medea", "euripides-bacchae"],
-      "tags": ["tragédie", "théâtre", "psychologie"]
+      "works": [
+        "euripides-medea",
+        "euripides-bacchae"
+      ],
+      "tags": [
+        "tragédie",
+        "théâtre",
+        "psychologie"
+      ]
     },
     {
       "id": "herodotus",
@@ -257,8 +404,14 @@
       "origin": "Halicarnasse, Carie",
       "lang": "grc",
       "bio": "« Père de l'histoire » selon Cicéron. Ses Histoires racontent les guerres médiques mais explorent aussi les cultures égyptienne, perse et scythe. Premier à enquêter systématiquement sur le passé.",
-      "works": ["herodotus-histories"],
-      "tags": ["histoire", "ethnographie", "récit"]
+      "works": [
+        "herodotus-histories"
+      ],
+      "tags": [
+        "histoire",
+        "ethnographie",
+        "récit"
+      ]
     },
     {
       "id": "thucydides",
@@ -268,8 +421,14 @@
       "origin": "Athènes",
       "lang": "grc",
       "bio": "Historien athénien, général exilé pendant la guerre du Péloponnèse qu'il raconte. Son approche rigoureuse, sans intervention divine, fonde l'histoire politique. Ses analyses du pouvoir influencent encore les relations internationales.",
-      "works": ["thucydides-peloponnesian"],
-      "tags": ["histoire", "politique", "guerre"]
+      "works": [
+        "thucydides-peloponnesian"
+      ],
+      "tags": [
+        "histoire",
+        "politique",
+        "guerre"
+      ]
     },
     {
       "id": "sun-tzu",
@@ -279,8 +438,14 @@
       "origin": "État de Qi, Chine",
       "lang": "zh",
       "bio": "Général et stratège chinois, auteur présumé de L'Art de la guerre. Ce traité militaire, le plus ancien connu, transcende la guerre pour enseigner la stratégie en toute situation. « Connais-toi toi-même, connais ton ennemi. »",
-      "works": ["sun-tzu-art-of-war"],
-      "tags": ["stratégie", "militaire", "philosophie"]
+      "works": [
+        "sun-tzu-art-of-war"
+      ],
+      "tags": [
+        "stratégie",
+        "militaire",
+        "philosophie"
+      ]
     },
     {
       "id": "murasaki",
@@ -290,8 +455,14 @@
       "origin": "Kyoto, Japon",
       "lang": "ja",
       "bio": "Dame de cour japonaise de l'époque Heian. Le Dit du Genji, récit de la vie à la cour impériale, est considéré comme le premier roman psychologique de l'histoire. Chef-d'œuvre de la littérature mondiale.",
-      "works": ["tale-of-genji"],
-      "tags": ["roman", "cour", "psychologie"]
+      "works": [
+        "tale-of-genji"
+      ],
+      "tags": [
+        "roman",
+        "cour",
+        "psychologie"
+      ]
     },
     {
       "id": "valmiki",
@@ -301,8 +472,14 @@
       "origin": "Inde",
       "lang": "sa",
       "bio": "Sage légendaire, « premier poète » (Ādikavi). Le Rāmāyaṇa, qu'il aurait composé, narre l'épopée du prince Rāma. Cette œuvre fondatrice de la culture indienne influence l'Asie du Sud-Est entière.",
-      "works": ["ramayana"],
-      "tags": ["épique", "sanskrit", "mythologie"]
+      "works": [
+        "ramayana"
+      ],
+      "tags": [
+        "épique",
+        "sanskrit",
+        "mythologie"
+      ]
     },
     {
       "id": "kalidasa",
@@ -312,8 +489,14 @@
       "origin": "Inde (époque Gupta)",
       "lang": "sa",
       "bio": "Le « Shakespeare indien », plus grand poète et dramaturge classique sanskrit. Śakuntalā raconte un amour maudit par l'oubli. Ses métaphores et sa maîtrise du vers restent inégalées dans la tradition indienne.",
-      "works": ["kalidasa-shakuntala"],
-      "tags": ["drame", "poésie", "sanskrit"]
+      "works": [
+        "kalidasa-shakuntala"
+      ],
+      "tags": [
+        "drame",
+        "poésie",
+        "sanskrit"
+      ]
     },
     {
       "id": "cervantes",
@@ -323,8 +506,14 @@
       "origin": "Alcalá de Henares, Espagne",
       "lang": "es",
       "bio": "Écrivain espagnol, créateur du roman moderne. Don Quichotte, satire des romans de chevalerie, explore la tension entre idéal et réalité. Soldat à Lépante, captif à Alger, sa vie fut aussi aventureuse que son œuvre.",
-      "works": ["cervantes-don-quixote"],
-      "tags": ["roman", "satire", "chevalerie"]
+      "works": [
+        "cervantes-don-quixote"
+      ],
+      "tags": [
+        "roman",
+        "satire",
+        "chevalerie"
+      ]
     },
     {
       "id": "machiavelli",
@@ -334,8 +523,14 @@
       "origin": "Florence, Italie",
       "lang": "it",
       "bio": "Diplomate et penseur politique florentin. Le Prince, traité sur l'acquisition et le maintien du pouvoir, rompt avec la philosophie politique morale. Son réalisme cru a fait de son nom un adjectif.",
-      "works": ["machiavelli-prince"],
-      "tags": ["politique", "réalisme", "renaissance"]
+      "works": [
+        "machiavelli-prince"
+      ],
+      "tags": [
+        "politique",
+        "réalisme",
+        "renaissance"
+      ]
     },
     {
       "id": "locke",
@@ -345,8 +540,14 @@
       "origin": "Wrington, Angleterre",
       "lang": "en",
       "bio": "Philosophe anglais, père du libéralisme. Ses Traités du gouvernement civil fondent la théorie du contrat social et des droits naturels. Son influence sur les Lumières et les révolutions américaine et française est immense.",
-      "works": ["locke-government"],
-      "tags": ["empirisme", "libéralisme", "politique"]
+      "works": [
+        "locke-government"
+      ],
+      "tags": [
+        "empirisme",
+        "libéralisme",
+        "politique"
+      ]
     },
     {
       "id": "descartes",
@@ -356,8 +557,14 @@
       "origin": "La Haye en Touraine, France",
       "lang": "fr",
       "bio": "Philosophe et mathématicien français, père de la philosophie moderne. « Je pense, donc je suis » — les Méditations métaphysiques fondent la connaissance sur le doute méthodique et la certitude du cogito.",
-      "works": ["descartes-meditations"],
-      "tags": ["rationalisme", "métaphysique", "méthode"]
+      "works": [
+        "descartes-meditations"
+      ],
+      "tags": [
+        "rationalisme",
+        "métaphysique",
+        "méthode"
+      ]
     },
     {
       "id": "spinoza",
@@ -367,8 +574,14 @@
       "origin": "Amsterdam, Pays-Bas",
       "lang": "la",
       "bio": "Philosophe rationaliste d'origine juive portugaise. L'Éthique, écrite more geometrico, propose un monisme radical : Dieu et la Nature sont une même substance. Excommunié pour ses idées, il vécut en polissant des lentilles.",
-      "works": ["spinoza-ethics"],
-      "tags": ["rationalisme", "panthéisme", "éthique"]
+      "works": [
+        "spinoza-ethics"
+      ],
+      "tags": [
+        "rationalisme",
+        "panthéisme",
+        "éthique"
+      ]
     },
     {
       "id": "hume",
@@ -378,8 +591,14 @@
       "origin": "Édimbourg, Écosse",
       "lang": "en",
       "bio": "Philosophe empiriste et historien écossais. Son scepticisme radical remet en question la causalité et l'identité personnelle. L'Enquête sur l'entendement humain reste une œuvre majeure des Lumières britanniques.",
-      "works": ["hume-enquiry"],
-      "tags": ["empirisme", "scepticisme", "lumières"]
+      "works": [
+        "hume-enquiry"
+      ],
+      "tags": [
+        "empirisme",
+        "scepticisme",
+        "lumières"
+      ]
     },
     {
       "id": "goethe",
@@ -389,8 +608,14 @@
       "origin": "Francfort, Allemagne",
       "lang": "de",
       "bio": "Poète, dramaturge et savant allemand, figure centrale du Sturm und Drang puis du classicisme de Weimar. Faust, son chef-d'œuvre, explore la quête de connaissance et le pacte avec le diable.",
-      "works": ["goethe-faust"],
-      "tags": ["romantisme", "drame", "poésie"]
+      "works": [
+        "goethe-faust"
+      ],
+      "tags": [
+        "romantisme",
+        "drame",
+        "poésie"
+      ]
     },
     {
       "id": "milton",
@@ -400,8 +625,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Poète et pamphlétaire anglais. Paradise Lost, épopée de la Chute, rivalise avec les grands classiques. Aveugle à la fin de sa vie, il dicta cette œuvre monumentale qui réinterprète la Genèse.",
-      "works": ["milton-paradise-lost"],
-      "tags": ["épique", "religion", "renaissance"]
+      "works": [
+        "milton-paradise-lost"
+      ],
+      "tags": [
+        "épique",
+        "religion",
+        "renaissance"
+      ]
     },
     {
       "id": "lucretius",
@@ -411,8 +642,14 @@
       "origin": "Rome",
       "lang": "la",
       "bio": "Poète et philosophe épicurien romain. De rerum natura expose en vers la physique atomiste et la morale épicurienne, visant à libérer l'humanité de la peur des dieux et de la mort.",
-      "works": ["lucretius-natura"],
-      "tags": ["épicurisme", "atomisme", "poésie didactique"]
+      "works": [
+        "lucretius-natura"
+      ],
+      "tags": [
+        "épicurisme",
+        "atomisme",
+        "poésie didactique"
+      ]
     },
     {
       "id": "chaucer",
@@ -422,8 +659,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Poète anglais, « père de la littérature anglaise ». Les Contes de Canterbury, récits variés de pèlerins, offrent un portrait vivant de la société médiévale anglaise dans toute sa diversité.",
-      "works": ["chaucer-canterbury"],
-      "tags": ["moyen âge", "contes", "satire"]
+      "works": [
+        "chaucer-canterbury"
+      ],
+      "tags": [
+        "moyen âge",
+        "contes",
+        "satire"
+      ]
     },
     {
       "id": "pascal",
@@ -433,8 +676,14 @@
       "origin": "Clermont-Ferrand, France",
       "lang": "fr",
       "bio": "Mathématicien, physicien et philosophe français. Les Pensées, fragments d'une apologie du christianisme, explorent la condition humaine avec une intensité rare. « Le cœur a ses raisons que la raison ne connaît point. »",
-      "works": ["pascal-pensees"],
-      "tags": ["apologétique", "philosophie", "mathématiques"]
+      "works": [
+        "pascal-pensees"
+      ],
+      "tags": [
+        "apologétique",
+        "philosophie",
+        "mathématiques"
+      ]
     },
     {
       "id": "more",
@@ -444,8 +693,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Humaniste anglais, Lord Chancelier d'Henri VIII. L'Utopie décrit une société idéale sur une île imaginaire, critiquant l'Angleterre de son temps. Décapité pour avoir refusé l'Acte de Suprématie, il fut canonisé.",
-      "works": ["more-utopia"],
-      "tags": ["humanisme", "utopie", "renaissance"]
+      "works": [
+        "more-utopia"
+      ],
+      "tags": [
+        "humanisme",
+        "utopie",
+        "renaissance"
+      ]
     },
     {
       "id": "boethius",
@@ -455,8 +710,14 @@
       "origin": "Rome",
       "lang": "la",
       "bio": "Philosophe et homme d'État romain, pont entre l'Antiquité et le Moyen Âge. Emprisonné par Théodoric, il écrit La Consolation de Philosophie, dialogue avec Dame Philosophie sur le bonheur et le destin.",
-      "works": ["boethius-consolation"],
-      "tags": ["philosophie", "néoplatonisme", "prison"]
+      "works": [
+        "boethius-consolation"
+      ],
+      "tags": [
+        "philosophie",
+        "néoplatonisme",
+        "prison"
+      ]
     },
     {
       "id": "plotinus",
@@ -466,8 +727,14 @@
       "origin": "Lycopolis, Égypte",
       "lang": "grc",
       "bio": "Fondateur du néoplatonisme. Ses Ennéades, rédigées par son disciple Porphyre, développent une métaphysique de l'Un, source ineffable de toute réalité. Son influence traverse la philosophie médiévale et la Renaissance.",
-      "works": ["plotinus-enneads"],
-      "tags": ["néoplatonisme", "métaphysique", "mystique"]
+      "works": [
+        "plotinus-enneads"
+      ],
+      "tags": [
+        "néoplatonisme",
+        "métaphysique",
+        "mystique"
+      ]
     },
     {
       "id": "diogenes-laertius",
@@ -477,8 +744,14 @@
       "origin": "Laërte, Cilicie",
       "lang": "grc",
       "bio": "Biographe des philosophes grecs. Ses Vies et doctrines des philosophes illustres sont notre source principale sur de nombreux penseurs antiques. Anecdotes, citations et doctrines s'y mêlent.",
-      "works": ["diogenes-lives"],
-      "tags": ["biographie", "doxographie", "histoire"]
+      "works": [
+        "diogenes-lives"
+      ],
+      "tags": [
+        "biographie",
+        "doxographie",
+        "histoire"
+      ]
     },
     {
       "id": "plutarch",
@@ -488,8 +761,14 @@
       "origin": "Chéronée, Béotie",
       "lang": "grc",
       "bio": "Historien et moraliste grec. Les Vies parallèles comparent Grecs et Romains illustres. Les Œuvres morales traitent d'éthique, de religion et de philosophie. Source majeure pour l'Antiquité.",
-      "works": ["plutarch-lives"],
-      "tags": ["biographie", "morale", "histoire"]
+      "works": [
+        "plutarch-lives"
+      ],
+      "tags": [
+        "biographie",
+        "morale",
+        "histoire"
+      ]
     },
     {
       "id": "xenophon",
@@ -499,8 +778,15 @@
       "origin": "Athènes",
       "lang": "grc",
       "bio": "Historien, philosophe et général athénien, élève de Socrate. L'Anabase raconte la retraite des Dix Mille. Ses écrits socratiques offrent un portrait de Socrate différent de celui de Platon.",
-      "works": ["xenophon-anabasis", "xenophon-memorabilia"],
-      "tags": ["histoire", "mémoires", "socratique"]
+      "works": [
+        "xenophon-anabasis",
+        "xenophon-memorabilia"
+      ],
+      "tags": [
+        "histoire",
+        "mémoires",
+        "socratique"
+      ]
     },
     {
       "id": "livy",
@@ -510,8 +796,14 @@
       "origin": "Padoue, Italie",
       "lang": "la",
       "bio": "Historien romain, auteur de l'Ab Urbe Condita, histoire monumentale de Rome depuis sa fondation. Seuls 35 des 142 livres nous sont parvenus. Style éloquent, patriotisme assumé.",
-      "works": ["livy-rome"],
-      "tags": ["histoire", "rome", "république"]
+      "works": [
+        "livy-rome"
+      ],
+      "tags": [
+        "histoire",
+        "rome",
+        "république"
+      ]
     },
     {
       "id": "tacitus",
@@ -521,8 +813,15 @@
       "origin": "Gaule narbonnaise",
       "lang": "la",
       "bio": "Historien et sénateur romain. Les Annales et les Histoires décrivent l'Empire avec une lucidité amère. La Germanie est notre principale source sur les peuples germaniques. Style concis et mordant.",
-      "works": ["tacitus-annals", "tacitus-germania"],
-      "tags": ["histoire", "empire", "barbares"]
+      "works": [
+        "tacitus-annals",
+        "tacitus-germania"
+      ],
+      "tags": [
+        "histoire",
+        "empire",
+        "barbares"
+      ]
     },
     {
       "id": "suetonius",
@@ -532,8 +831,14 @@
       "origin": "Hippone, Afrique",
       "lang": "la",
       "bio": "Biographe romain, secrétaire d'Hadrien. Les Vies des douze Césars, de César à Domitien, mêlent histoire politique et anecdotes privées. Source précieuse mais parfois scandaleuse.",
-      "works": ["suetonius-caesars"],
-      "tags": ["biographie", "empereurs", "rome"]
+      "works": [
+        "suetonius-caesars"
+      ],
+      "tags": [
+        "biographie",
+        "empereurs",
+        "rome"
+      ]
     },
     {
       "id": "apuleius",
@@ -543,8 +848,14 @@
       "origin": "Madaure, Numidie",
       "lang": "la",
       "bio": "Écrivain et philosophe platonicien africain. L'Âne d'or (Métamorphoses), seul roman latin complet conservé, raconte les aventures de Lucius transformé en âne, incluant le conte de Psyché.",
-      "works": ["apuleius-golden-ass"],
-      "tags": ["roman", "métamorphose", "mystères"]
+      "works": [
+        "apuleius-golden-ass"
+      ],
+      "tags": [
+        "roman",
+        "métamorphose",
+        "mystères"
+      ]
     },
     {
       "id": "julian-norwich",
@@ -554,8 +865,14 @@
       "origin": "Norwich, Angleterre",
       "lang": "en",
       "bio": "Mystique anglaise, première femme auteur en anglais. Ses Révélations de l'amour divin, visions reçues lors d'une maladie, offrent une théologie optimiste : « Tout sera bien, et tout sera bien. »",
-      "works": ["julian-norwich"],
-      "tags": ["mystique", "théologie", "visions"]
+      "works": [
+        "julian-norwich"
+      ],
+      "tags": [
+        "mystique",
+        "théologie",
+        "visions"
+      ]
     },
     {
       "id": "meister-eckhart",
@@ -565,8 +882,14 @@
       "origin": "Hochheim, Thuringe",
       "lang": "de",
       "bio": "Théologien et mystique dominicain. Ses sermons en allemand explorent le détachement et la naissance de Dieu dans l'âme. Condamné pour hérésie après sa mort, il influence la mystique rhénane.",
-      "works": ["meister-eckhart"],
-      "tags": ["mystique", "dominicain", "détachement"]
+      "works": [
+        "meister-eckhart"
+      ],
+      "tags": [
+        "mystique",
+        "dominicain",
+        "détachement"
+      ]
     },
     {
       "id": "hildegard",
@@ -576,8 +899,14 @@
       "origin": "Bermersheim, Allemagne",
       "lang": "la",
       "bio": "Abbesse bénédictine, mystique, compositrice et naturaliste. Le Scivias décrit ses visions cosmiques. Correspondante des papes et des rois, elle fut déclarée Docteur de l'Église en 2012.",
-      "works": ["hildegard-scivias"],
-      "tags": ["mystique", "visions", "musique"]
+      "works": [
+        "hildegard-scivias"
+      ],
+      "tags": [
+        "mystique",
+        "visions",
+        "musique"
+      ]
     },
     {
       "id": "chrétien-troyes",
@@ -587,8 +916,14 @@
       "origin": "Troyes, Champagne",
       "lang": "fr",
       "bio": "Poète français, inventeur du roman courtois. Ses récits arthuriens — Lancelot, Perceval — établissent les codes de la littérature chevaleresque : quête, amour courtois, aventure merveilleuse.",
-      "works": ["chretien-perceval"],
-      "tags": ["roman courtois", "arthurien", "graal"]
+      "works": [
+        "chretien-perceval"
+      ],
+      "tags": [
+        "roman courtois",
+        "arthurien",
+        "graal"
+      ]
     },
     {
       "id": "marie-france",
@@ -598,8 +933,14 @@
       "origin": "France / Angleterre",
       "lang": "fr",
       "bio": "Poétesse médiévale, probablement à la cour d'Henri II. Ses Lais, courts récits en vers, mêlent amour et merveilleux celtique. Première femme poète connue de langue française.",
-      "works": ["marie-france-lais"],
-      "tags": ["lais", "féerique", "amour courtois"]
+      "works": [
+        "marie-france-lais"
+      ],
+      "tags": [
+        "lais",
+        "féerique",
+        "amour courtois"
+      ]
     },
     {
       "id": "petrarch",
@@ -609,8 +950,14 @@
       "origin": "Arezzo, Italie",
       "lang": "it",
       "bio": "Poète et humaniste italien, « père de l'humanisme ». Le Canzoniere, sonnets à Laure, révolutionne la poésie amoureuse. Il redécouvre des textes antiques et dialogue avec Cicéron et Augustin.",
-      "works": ["petrarch-canzoniere"],
-      "tags": ["sonnet", "humanisme", "laure"]
+      "works": [
+        "petrarch-canzoniere"
+      ],
+      "tags": [
+        "sonnet",
+        "humanisme",
+        "laure"
+      ]
     },
     {
       "id": "boccaccio",
@@ -620,8 +967,14 @@
       "origin": "Certaldo, Italie",
       "lang": "it",
       "bio": "Écrivain italien, ami de Pétrarque. Le Décaméron, cent nouvelles racontées pendant la peste de Florence, offre un tableau vivant et souvent licencieux de la société médiévale.",
-      "works": ["boccaccio-decameron"],
-      "tags": ["nouvelles", "peste", "réalisme"]
+      "works": [
+        "boccaccio-decameron"
+      ],
+      "tags": [
+        "nouvelles",
+        "peste",
+        "réalisme"
+      ]
     },
     {
       "id": "sappho",
@@ -631,8 +984,14 @@
       "origin": "Lesbos, Grèce",
       "lang": "grc",
       "bio": "Poétesse grecque de Lesbos, « dixième Muse » selon Platon. De ses neuf livres de poésie lyrique, il ne reste que des fragments. Sa poésie d'amour, d'intensité brûlante, influence toute la tradition occidentale.",
-      "works": ["sappho-fragments"],
-      "tags": ["lyrique", "amour", "fragments"]
+      "works": [
+        "sappho-fragments"
+      ],
+      "tags": [
+        "lyrique",
+        "amour",
+        "fragments"
+      ]
     },
     {
       "id": "hafez",
@@ -642,8 +1001,14 @@
       "origin": "Chiraz, Perse",
       "lang": "fa",
       "bio": "Poète persan, maître du ghazal. Son Divân, recueil de poésie mystique et amoureuse, est lu en Iran comme un oracle. Goethe le considérait comme son « jumeau » spirituel.",
-      "works": ["hafez-divan"],
-      "tags": ["ghazal", "soufi", "vin"]
+      "works": [
+        "hafez-divan"
+      ],
+      "tags": [
+        "ghazal",
+        "soufi",
+        "vin"
+      ]
     },
     {
       "id": "attar",
@@ -653,8 +1018,14 @@
       "origin": "Nishapur, Perse",
       "lang": "fa",
       "bio": "Poète mystique persan. La Conférence des oiseaux, allégorie soufie, raconte le voyage de trente oiseaux vers leur roi, le Simorgh, découvrant qu'ils sont eux-mêmes ce qu'ils cherchaient.",
-      "works": ["attar-birds"],
-      "tags": ["soufi", "allégorie", "quête"]
+      "works": [
+        "attar-birds"
+      ],
+      "tags": [
+        "soufi",
+        "allégorie",
+        "quête"
+      ]
     },
     {
       "id": "sei-shonagon",
@@ -664,8 +1035,14 @@
       "origin": "Kyoto, Japon",
       "lang": "ja",
       "bio": "Dame de cour japonaise, rivale de Murasaki Shikibu. Les Notes de chevet, recueil de listes, observations et anecdotes, capturent l'esthétique raffinée de la cour Heian avec esprit et ironie.",
-      "works": ["sei-shonagon-pillow"],
-      "tags": ["zuihitsu", "listes", "cour"]
+      "works": [
+        "sei-shonagon-pillow"
+      ],
+      "tags": [
+        "zuihitsu",
+        "listes",
+        "cour"
+      ]
     },
     {
       "id": "basho",
@@ -675,8 +1052,14 @@
       "origin": "Iga, Japon",
       "lang": "ja",
       "bio": "Poète japonais, maître du haïku. Ses carnets de voyage, dont La Sente étroite du Bout-du-Monde, mêlent prose et poésie. Il élève le haïku de divertissement à art contemplatif.",
-      "works": ["basho-narrow-road"],
-      "tags": ["haïku", "voyage", "zen"]
+      "works": [
+        "basho-narrow-road"
+      ],
+      "tags": [
+        "haïku",
+        "voyage",
+        "zen"
+      ]
     },
     {
       "id": "althusser",
@@ -686,8 +1069,14 @@
       "origin": "Birmandreis, Algérie française",
       "lang": "fr",
       "bio": "Philosophe marxiste français, figure majeure du structuralisme. Pour Marx et Lire le Capital renouvellent la lecture de Marx par une « coupure épistémologique ». Interné à plusieurs reprises pour dépression, il étrangla son épouse Hélène en 1980 lors d'une crise. Déclaré irresponsable, il passa ses dernières années dans l'ombre, écrivant L'avenir dure longtemps, confession posthume.",
-      "works": ["althusser-marx"],
-      "tags": ["marxisme", "structuralisme", "idéologie"]
+      "works": [
+        "althusser-marx"
+      ],
+      "tags": [
+        "marxisme",
+        "structuralisme",
+        "idéologie"
+      ]
     },
     {
       "id": "foucault",
@@ -697,8 +1086,14 @@
       "origin": "Poitiers, France",
       "lang": "fr",
       "bio": "Philosophe français, théoricien du pouvoir et de la sexualité. Surveiller et punir et Histoire de la sexualité analysent les mécanismes de contrôle social. Homosexuel à une époque répressive, il explora les marges de l'expérience. Mort du sida, il fut l'une des premières figures publiques emportées par l'épidémie.",
-      "works": ["foucault-surveiller"],
-      "tags": ["pouvoir", "sexualité", "biopolitique"]
+      "works": [
+        "foucault-surveiller"
+      ],
+      "tags": [
+        "pouvoir",
+        "sexualité",
+        "biopolitique"
+      ]
     },
     {
       "id": "debord",
@@ -708,8 +1103,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Théoricien révolutionnaire, fondateur de l'Internationale situationniste. La Société du spectacle dénonce l'aliénation par l'image et la marchandise. Alcoolique revendiqué, il vécut dans une marginalité voulue. Il se suicida d'une balle dans le cœur, refusant la déchéance physique.",
-      "works": ["debord-spectacle"],
-      "tags": ["situationnisme", "spectacle", "révolution"]
+      "works": [
+        "debord-spectacle"
+      ],
+      "tags": [
+        "situationnisme",
+        "spectacle",
+        "révolution"
+      ]
     },
     {
       "id": "simone-weil",
@@ -719,8 +1120,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Philosophe et mystique française. Agrégée brillante, elle travailla en usine pour comprendre la condition ouvrière. Ses écrits spirituels, publiés après sa mort, explorent le malheur et la grâce. Elle mourut à 34 ans en Angleterre, refusant de manger plus que les rations de la France occupée.",
-      "works": ["weil-pesanteur"],
-      "tags": ["mystique", "travail", "malheur"]
+      "works": [
+        "weil-pesanteur"
+      ],
+      "tags": [
+        "mystique",
+        "travail",
+        "malheur"
+      ]
     },
     {
       "id": "benjamin",
@@ -730,8 +1137,14 @@
       "origin": "Berlin, Allemagne",
       "lang": "de",
       "bio": "Philosophe et critique allemand, penseur inclassable entre marxisme et mysticisme juif. L'Œuvre d'art à l'époque de sa reproductibilité technique est un texte fondateur. Fuyant les nazis, bloqué à la frontière espagnole, il se suicida à Portbou plutôt que d'être livré à la Gestapo.",
-      "works": ["benjamin-oeuvre-art"],
-      "tags": ["critique", "aura", "messianisme"]
+      "works": [
+        "benjamin-oeuvre-art"
+      ],
+      "tags": [
+        "critique",
+        "aura",
+        "messianisme"
+      ]
     },
     {
       "id": "artaud",
@@ -741,8 +1154,14 @@
       "origin": "Marseille, France",
       "lang": "fr",
       "bio": "Poète, acteur et théoricien du théâtre de la cruauté. Son œuvre explore la folie, le corps et le langage dans leur violence. Interné neuf ans à Rodez, soumis à des électrochocs, il en sortit détruit mais écrivant encore. Van Gogh le suicidé de la société est un cri contre la psychiatrie.",
-      "works": ["artaud-theatre-cruaute"],
-      "tags": ["théâtre", "folie", "cruauté"]
+      "works": [
+        "artaud-theatre-cruaute"
+      ],
+      "tags": [
+        "théâtre",
+        "folie",
+        "cruauté"
+      ]
     },
     {
       "id": "deleuze",
@@ -752,8 +1171,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Philosophe français, penseur de la différence et du devenir. L'Anti-Œdipe et Mille Plateaux, écrits avec Guattari, révolutionnent la pensée du désir. Atteint d'une insuffisance respiratoire qui l'empêchait d'écrire, il se jeta par la fenêtre de son appartement parisien.",
-      "works": ["deleuze-anti-oedipe"],
-      "tags": ["rhizome", "désir", "immanence"]
+      "works": [
+        "deleuze-anti-oedipe"
+      ],
+      "tags": [
+        "rhizome",
+        "désir",
+        "immanence"
+      ]
     },
     {
       "id": "genet",
@@ -763,8 +1188,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Écrivain et dramaturge français. Enfant abandonné, voleur, prostitué, il passa sa jeunesse en prison où il commença à écrire. Notre-Dame-des-Fleurs et Le Journal du voleur transfigurent la marginalité en poésie. Sartre lui consacra Saint Genet, comédien et martyr.",
-      "works": ["genet-journal-voleur"],
-      "tags": ["marginalité", "homosexualité", "crime"]
+      "works": [
+        "genet-journal-voleur"
+      ],
+      "tags": [
+        "marginalité",
+        "homosexualité",
+        "crime"
+      ]
     },
     {
       "id": "celine",
@@ -774,8 +1205,14 @@
       "origin": "Courbevoie, France",
       "lang": "fr",
       "bio": "Écrivain français au style révolutionnaire. Voyage au bout de la nuit pulvérise la syntaxe littéraire. Médecin des pauvres, héros de 14-18, il sombra dans un antisémitisme délirant et collabora avec les nazis. Exilé, condamné, amnistié, il mourut paria, génie maudit de la littérature.",
-      "works": ["celine-voyage"],
-      "tags": ["argot", "misanthropie", "collaboration"]
+      "works": [
+        "celine-voyage"
+      ],
+      "tags": [
+        "argot",
+        "misanthropie",
+        "collaboration"
+      ]
     },
     {
       "id": "cioran",
@@ -785,8 +1222,14 @@
       "origin": "Rășinari, Roumanie",
       "lang": "fr",
       "bio": "Philosophe roumain écrivant en français, styliste du désespoir. De l'inconvénient d'être né et Syllogismes de l'amertume cultivent un nihilisme élégant. Dans sa jeunesse roumaine, il flirta avec le fascisme, honte qu'il porta silencieusement. Il vécut pauvrement à Paris, insomniaque perpétuel.",
-      "works": ["cioran-inconvenient"],
-      "tags": ["nihilisme", "aphorisme", "insomnie"]
+      "works": [
+        "cioran-inconvenient"
+      ],
+      "tags": [
+        "nihilisme",
+        "aphorisme",
+        "insomnie"
+      ]
     },
     {
       "id": "bataille",
@@ -796,8 +1239,14 @@
       "origin": "Billom, France",
       "lang": "fr",
       "bio": "Écrivain et penseur de la transgression. Histoire de l'œil et L'Érotisme explorent la mort, l'excès et le sacré. Bibliothécaire le jour, il fréquentait les bordels et écrivait sur la dépense improductive. Son père, aveugle et syphilitique, mourut fou — traumatisme fondateur de son œuvre.",
-      "works": ["bataille-erotisme"],
-      "tags": ["transgression", "érotisme", "sacré"]
+      "works": [
+        "bataille-erotisme"
+      ],
+      "tags": [
+        "transgression",
+        "érotisme",
+        "sacré"
+      ]
     },
     {
       "id": "heidegger",
@@ -807,8 +1256,14 @@
       "origin": "Messkirch, Allemagne",
       "lang": "de",
       "bio": "Philosophe allemand, penseur de l'Être. Être et Temps révolutionne l'ontologie. Recteur de Fribourg en 1933, il adhéra au parti nazi et prononça un discours tristement célèbre. Il ne s'en expliqua jamais vraiment. Ses Cahiers noirs, publiés récemment, révèlent un antisémitisme profond.",
-      "works": ["heidegger-etre-temps"],
-      "tags": ["ontologie", "dasein", "nazisme"]
+      "works": [
+        "heidegger-etre-temps"
+      ],
+      "tags": [
+        "ontologie",
+        "dasein",
+        "nazisme"
+      ]
     },
     {
       "id": "mishima",
@@ -818,8 +1273,14 @@
       "origin": "Tokyo, Japon",
       "lang": "ja",
       "bio": "Écrivain japonais, esthète obsédé par la mort et la beauté. Le Pavillon d'or et la tétralogie La Mer de la fertilité sont des chefs-d'œuvre. Nationaliste, il fonda une milice privée. Après un coup d'État raté, il se fit seppuku en direct, décapité par son amant selon le rituel.",
-      "works": ["mishima-pavillon"],
-      "tags": ["esthétique", "nationalisme", "seppuku"]
+      "works": [
+        "mishima-pavillon"
+      ],
+      "tags": [
+        "esthétique",
+        "nationalisme",
+        "seppuku"
+      ]
     },
     {
       "id": "pasolini",
@@ -829,8 +1290,14 @@
       "origin": "Bologne, Italie",
       "lang": "it",
       "bio": "Poète, romancier et cinéaste italien. Ses films — Accattone, Salò — scandalisent par leur crudité. Marxiste et catholique, homosexuel dans une Italie hostile, il dénonçait le consumérisme. Il fut assassiné sur une plage d'Ostie, battu à mort ; les circonstances restent troubles.",
-      "works": ["pasolini-ragazzi"],
-      "tags": ["cinéma", "marxisme", "scandale"]
+      "works": [
+        "pasolini-ragazzi"
+      ],
+      "tags": [
+        "cinéma",
+        "marxisme",
+        "scandale"
+      ]
     },
     {
       "id": "sade",
@@ -840,8 +1307,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Écrivain français, philosophe du libertinage absolu. Les 120 Journées de Sodome et Justine explorent le mal radical et la jouissance sans limite. Il passa 27 ans de sa vie en prison ou à l'asile pour ses écrits et ses actes. Son nom donna le mot « sadisme ».",
-      "works": ["sade-justine"],
-      "tags": ["libertinage", "transgression", "enfermement"]
+      "works": [
+        "sade-justine"
+      ],
+      "tags": [
+        "libertinage",
+        "transgression",
+        "enfermement"
+      ]
     },
     {
       "id": "rimbaud",
@@ -851,8 +1324,14 @@
       "origin": "Charleville, France",
       "lang": "fr",
       "bio": "Poète français, météore de la littérature. Une saison en enfer et les Illuminations révolutionnent la poésie avant ses vingt ans. Liaison tumultueuse avec Verlaine, qui lui tire dessus. À 21 ans, il abandonne l'écriture pour le commerce en Afrique. Mort à 37 ans d'un cancer, jambe amputée.",
-      "works": ["rimbaud-saison"],
-      "tags": ["voyant", "fugue", "silence"]
+      "works": [
+        "rimbaud-saison"
+      ],
+      "tags": [
+        "voyant",
+        "fugue",
+        "silence"
+      ]
     },
     {
       "id": "woolf",
@@ -862,8 +1341,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Romancière anglaise, pionnière du flux de conscience. Mrs Dalloway et Les Vagues réinventent le roman. Abusée enfant par ses demi-frères, elle lutta toute sa vie contre la dépression. Elle se noya dans l'Ouse, les poches remplies de pierres, laissant une lettre à son mari Leonard.",
-      "works": ["woolf-dalloway"],
-      "tags": ["modernisme", "féminisme", "intériorité"]
+      "works": [
+        "woolf-dalloway"
+      ],
+      "tags": [
+        "modernisme",
+        "féminisme",
+        "intériorité"
+      ]
     },
     {
       "id": "kafka",
@@ -873,19 +1358,15 @@
       "origin": "Prague, Bohême",
       "lang": "de",
       "bio": "Écrivain pragois de langue allemande. Le Procès et La Métamorphose incarnent l'aliénation moderne. Juif dans un monde hostile, fils écrasé par un père tyrannique, fiancé trois fois sans jamais se marier. Il demanda à Max Brod de brûler ses manuscrits ; Brod désobéit. Mort de tuberculose à 40 ans.",
-      "works": ["kafka-proces", "kafka-metamorphose"],
-      "tags": ["absurde", "aliénation", "bureaucratie"]
-    },
-    {
-      "id": "celan",
-      "name": "Paul Celan",
-      "name_original": "Paul Antschel",
-      "dates": "1920–1970",
-      "origin": "Cernăuți, Roumanie",
-      "lang": "de",
-      "bio": "Poète juif de langue allemande. Ses parents furent assassinés par les nazis ; lui survécut aux camps de travail. Todesfuge est le poème de la Shoah. Écrire en allemand, la langue des bourreaux, fut son tourment. Il se jeta dans la Seine à Paris, corps retrouvé dix jours plus tard.",
-      "works": ["celan-pavot"],
-      "tags": ["shoah", "poésie", "langue"]
+      "works": [
+        "kafka-proces",
+        "kafka-metamorphose"
+      ],
+      "tags": [
+        "absurde",
+        "aliénation",
+        "bureaucratie"
+      ]
     },
     {
       "id": "zweig",
@@ -895,19 +1376,14 @@
       "origin": "Vienne, Autriche",
       "lang": "de",
       "bio": "Écrivain autrichien, biographe et nouvelliste. Le Monde d'hier pleure l'Europe cosmopolite détruite par les nationalismes. Juif, pacifiste, il s'exila au Brésil. Désespéré par la victoire apparente du nazisme, il se suicida avec sa femme à Petrópolis, laissant un mot serein.",
-      "works": ["zweig-monde-hier"],
-      "tags": ["vienne", "exil", "biographie"]
-    },
-    {
-      "id": "bruno-schulz",
-      "name": "Bruno Schulz",
-      "name_original": "Bruno Schulz",
-      "dates": "1892–1942",
-      "origin": "Drohobych, Galicie",
-      "lang": "pl",
-      "bio": "Écrivain et artiste polonais juif. Les Boutiques de cannelle transfigurent la province galicienne en univers mythique. Professeur de dessin timide, il ne publia que deux livres. Un officier SS le tua d'une balle dans la tête dans le ghetto, par rivalité avec un autre nazi qui le « protégeait ».",
-      "works": ["schulz-boutiques"],
-      "tags": ["mythologie", "père", "ghetto"]
+      "works": [
+        "zweig-monde-hier"
+      ],
+      "tags": [
+        "vienne",
+        "exil",
+        "biographie"
+      ]
     },
     {
       "id": "levi",
@@ -917,30 +1393,14 @@
       "origin": "Turin, Italie",
       "lang": "it",
       "bio": "Chimiste et écrivain italien, survivant d'Auschwitz. Si c'est un homme témoigne avec une clarté terrible de la déshumanisation. Il porta ce poids toute sa vie. Quarante ans après, il tomba dans la cage d'escalier de son immeuble — accident ou suicide, nul ne sait. Elie Wiesel dit : « Il est mort à Auschwitz quarante ans plus tard. »",
-      "works": ["levi-homme"],
-      "tags": ["shoah", "témoignage", "chimie"]
-    },
-    {
-      "id": "mandelstam",
-      "name": "Ossip Mandelstam",
-      "name_original": "Осип Эмильевич Мандельштам",
-      "dates": "1891–1938",
-      "origin": "Varsovie, Pologne",
-      "lang": "ru",
-      "bio": "Poète russe, l'un des plus grands du XXᵉ siècle. Un poème contre Staline — « le montagnard du Kremlin » — scella son sort. Arrêté, exilé, arrêté encore, il mourut dans un camp de transit près de Vladivostok. Sa femme Nadejda mémorisa ses poèmes pour les sauver.",
-      "works": ["mandelstam-poemes"],
-      "tags": ["acméisme", "staline", "goulag"]
-    },
-    {
-      "id": "tsvetaeva",
-      "name": "Marina Tsvetaïeva",
-      "name_original": "Марина Ивановна Цветаева",
-      "dates": "1892–1941",
-      "origin": "Moscou, Russie",
-      "lang": "ru",
-      "bio": "Poétesse russe d'une intensité brûlante. Exilée après la révolution, elle vécut dans la misère à Paris. Revenue en URSS en 1939, son mari fut fusillé, sa fille déportée. Évacuée à Ielabouga pendant la guerre, seule et sans ressources, elle se pendit. Son fils mourut au front peu après.",
-      "works": ["tsvetaeva-poemes"],
-      "tags": ["passion", "exil", "solitude"]
+      "works": [
+        "levi-homme"
+      ],
+      "tags": [
+        "shoah",
+        "témoignage",
+        "chimie"
+      ]
     },
     {
       "id": "bulgakov",
@@ -950,8 +1410,14 @@
       "origin": "Kiev, Ukraine",
       "lang": "ru",
       "bio": "Écrivain russe, médecin morphinomane dans sa jeunesse. Le Maître et Marguerite, satire fantastique du Moscou stalinien, ne parut que 26 ans après sa mort. Ses pièces interdites, surveillé par le NKVD, il écrivit à Staline qui l'appela au téléphone — et ne fit rien. Il mourut aveugle, roman inachevé.",
-      "works": ["bulgakov-maitre"],
-      "tags": ["satire", "diable", "censure"]
+      "works": [
+        "bulgakov-maitre"
+      ],
+      "tags": [
+        "satire",
+        "diable",
+        "censure"
+      ]
     },
     {
       "id": "lu-xun",
@@ -961,8 +1427,14 @@
       "origin": "Shaoxing, Chine",
       "lang": "zh",
       "bio": "Père de la littérature chinoise moderne. La Véritable Histoire d'Ah Q et Le Journal d'un fou dénoncent le féodalisme et l'aliénation. Médecin formé au Japon, il choisit la littérature pour « soigner l'âme » chinoise. Amer, sarcastique, il mourut de tuberculose, canonisé ensuite par Mao.",
-      "works": ["lu-xun-ah-q"],
-      "tags": ["nouvelle", "satire", "révolution"]
+      "works": [
+        "lu-xun-ah-q"
+      ],
+      "tags": [
+        "nouvelle",
+        "satire",
+        "révolution"
+      ]
     },
     {
       "id": "lao-she",
@@ -972,8 +1444,14 @@
       "origin": "Pékin, Chine",
       "lang": "zh",
       "bio": "Romancier et dramaturge chinois. Le Tireur de pousse-pousse dépeint les bas-fonds pékinois. Revenu de l'étranger par patriotisme, il fut humilié par les Gardes rouges au début de la Révolution culturelle. On retrouva son corps dans un lac de Pékin — suicide ou meurtre, la vérité reste ensevelie.",
-      "works": ["lao-she-pousse"],
-      "tags": ["pékin", "réalisme", "révolution culturelle"]
+      "works": [
+        "lao-she-pousse"
+      ],
+      "tags": [
+        "pékin",
+        "réalisme",
+        "révolution culturelle"
+      ]
     },
     {
       "id": "gu-cheng",
@@ -983,8 +1461,14 @@
       "origin": "Pékin, Chine",
       "lang": "zh",
       "bio": "Poète chinois de la génération « obscure ». Ses vers lyriques contrastent avec la fin atroce. Exilé en Nouvelle-Zélande avec sa femme Xie Ye, il la tua à coups de hache quand elle voulut le quitter, puis se pendit. Leur fils de cinq ans dormait dans la pièce voisine.",
-      "works": ["gu-cheng-poemes"],
-      "tags": ["poésie obscure", "exil", "meurtre"]
+      "works": [
+        "gu-cheng-poemes"
+      ],
+      "tags": [
+        "poésie obscure",
+        "exil",
+        "meurtre"
+      ]
     },
     {
       "id": "quiroga",
@@ -994,8 +1478,14 @@
       "origin": "Salto, Uruguay",
       "lang": "es",
       "bio": "Conteur uruguayen, maître du récit d'horreur latino-américain. La jungle du Misiones hante ses Contes d'amour, de folie et de mort. La mort le cerna : père accident de chasse, beau-père suicide, lui-même tua accidentellement son ami, deux épouses se suicidèrent. Atteint d'un cancer, il but du cyanure.",
-      "works": ["quiroga-cuentos"],
-      "tags": ["jungle", "mort", "conte"]
+      "works": [
+        "quiroga-cuentos"
+      ],
+      "tags": [
+        "jungle",
+        "mort",
+        "conte"
+      ]
     },
     {
       "id": "storni",
@@ -1005,8 +1495,14 @@
       "origin": "Sala Capriasca, Suisse / Argentine",
       "lang": "es",
       "bio": "Poétesse argentine, voix féministe dans un monde machiste. Mère célibataire, elle enseigna et écrivit pour survivre. Atteinte d'un cancer du sein, elle prit le train pour Mar del Plata et marcha dans la mer. Son dernier poème, envoyé au journal, s'intitulait « Je vais dormir ».",
-      "works": ["storni-poemas"],
-      "tags": ["féminisme", "mer", "solitude"]
+      "works": [
+        "storni-poemas"
+      ],
+      "tags": [
+        "féminisme",
+        "mer",
+        "solitude"
+      ]
     },
     {
       "id": "pizarnik",
@@ -1016,8 +1512,14 @@
       "origin": "Buenos Aires, Argentine",
       "lang": "es",
       "bio": "Poétesse argentine d'origine juive ukrainienne. Son œuvre, brève et intense, explore la nuit, le silence et l'impossible. Elle vécut à Paris, amie de Cortázar et Paz. Dépressive, anorexique, elle passa par les cliniques. Un week-end de permission, elle avala cinquante barbituriques. Elle avait 36 ans.",
-      "works": ["pizarnik-arbol"],
-      "tags": ["nuit", "silence", "corps"]
+      "works": [
+        "pizarnik-arbol"
+      ],
+      "tags": [
+        "nuit",
+        "silence",
+        "corps"
+      ]
     },
     {
       "id": "bolano",
@@ -1027,8 +1529,14 @@
       "origin": "Santiago, Chili",
       "lang": "es",
       "bio": "Écrivain chilien, nomade et marginal. Les Détectives sauvages et 2666 révolutionnent le roman latino-américain. Poète fauché pendant vingt ans, il ne connut le succès qu'avant de mourir. Héroïnomane repenti, son foie le lâcha à 50 ans, sur liste d'attente pour une greffe qu'il n'obtint jamais.",
-      "works": ["bolano-detectives"],
-      "tags": ["détective", "mal", "littérature"]
+      "works": [
+        "bolano-detectives"
+      ],
+      "tags": [
+        "détective",
+        "mal",
+        "littérature"
+      ]
     },
     {
       "id": "arenas",
@@ -1038,8 +1546,14 @@
       "origin": "Holguín, Cuba",
       "lang": "es",
       "bio": "Écrivain cubain, persécuté pour son homosexualité. Emprisonné, censuré, il fit sortir ses manuscrits clandestinement. Il s'échappa par Mariel en 1980. Avant que la nuit tombe raconte son odyssée. Atteint du sida, il se suicida à New York, laissant une lettre accusant Castro de tous ses maux.",
-      "works": ["arenas-nuit"],
-      "tags": ["cuba", "homosexualité", "exil"]
+      "works": [
+        "arenas-nuit"
+      ],
+      "tags": [
+        "cuba",
+        "homosexualité",
+        "exil"
+      ]
     },
     {
       "id": "dazai",
@@ -1049,8 +1563,14 @@
       "origin": "Kanagi, Japon",
       "lang": "ja",
       "bio": "Écrivain japonais de la décadence. La Déchéance d'un homme est une confession d'aliénation totale. Aristocrate honteux, morphinomane, il tenta de se suicider quatre fois — une fois avec une serveuse qui mourut seule. La cinquième tentative réussit : noyade avec sa maîtresse dans le canal Tamagawa.",
-      "works": ["dazai-decheance"],
-      "tags": ["décadence", "confession", "suicide"]
+      "works": [
+        "dazai-decheance"
+      ],
+      "tags": [
+        "décadence",
+        "confession",
+        "suicide"
+      ]
     },
     {
       "id": "akutagawa",
@@ -1060,8 +1580,14 @@
       "origin": "Tokyo, Japon",
       "lang": "ja",
       "bio": "Nouvelliste japonais, maître du récit bref. Rashōmon et Dans le fourré inspirèrent Kurosawa. Sa mère devint folle quand il était enfant — il craignit toujours de sombrer à son tour. À 35 ans, il avala du véronal, invoquant « une vague inquiétude ». Le prix littéraire le plus prestigieux du Japon porte son nom.",
-      "works": ["akutagawa-rashomon"],
-      "tags": ["nouvelle", "folie", "inquiétude"]
+      "works": [
+        "akutagawa-rashomon"
+      ],
+      "tags": [
+        "nouvelle",
+        "folie",
+        "inquiétude"
+      ]
     },
     {
       "id": "kawabata",
@@ -1071,8 +1597,14 @@
       "origin": "Osaka, Japon",
       "lang": "ja",
       "bio": "Romancier japonais, Prix Nobel 1968. Pays de neige et Les Belles Endormies explorent la beauté et l'éphémère. Orphelin à deux ans, il perdit tous ses proches avant quinze ans. Deux ans après le suicide de Mishima, son ami, il se gaza dans son appartement de Zushi. Aucune explication.",
-      "works": ["kawabata-neige"],
-      "tags": ["beauté", "solitude", "nobel"]
+      "works": [
+        "kawabata-neige"
+      ],
+      "tags": [
+        "beauté",
+        "solitude",
+        "nobel"
+      ]
     },
     {
       "id": "hedayat",
@@ -1082,8 +1614,14 @@
       "origin": "Téhéran, Iran",
       "lang": "fa",
       "bio": "Écrivain iranien, père de la prose moderne persane. La Chouette aveugle, récit halluciné, est un chef-d'œuvre du désespoir. Francophile, il vécut à Paris par intermittence. Athée dans un pays religieux, célibataire, dépressif, il ouvrit le gaz dans son appartement parisien. Son corps fut rapatrié en Iran.",
-      "works": ["hedayat-chouette"],
-      "tags": ["modernisme", "hallucination", "solitude"]
+      "works": [
+        "hedayat-chouette"
+      ],
+      "tags": [
+        "modernisme",
+        "hallucination",
+        "solitude"
+      ]
     },
     {
       "id": "mahfouz",
@@ -1093,8 +1631,14 @@
       "origin": "Le Caire, Égypte",
       "lang": "ar",
       "bio": "Romancier égyptien, Prix Nobel 1988. La Trilogie du Caire dépeint trois générations d'une famille égyptienne. Les Fils de la médina, allégorie religieuse, lui valut une fatwa. En 1994, un islamiste le poignarda au cou devant chez lui. Il survécut, main droite paralysée, et écrivit encore onze ans.",
-      "works": ["mahfouz-trilogie"],
-      "tags": ["caire", "famille", "fatwa"]
+      "works": [
+        "mahfouz-trilogie"
+      ],
+      "tags": [
+        "caire",
+        "famille",
+        "fatwa"
+      ]
     },
     {
       "id": "clarice",
@@ -1104,8 +1648,14 @@
       "origin": "Tchetchelnik, Ukraine / Brésil",
       "lang": "pt",
       "bio": "Écrivaine brésilienne d'origine ukrainienne juive. La Passion selon G.H. explore l'épiphanie d'une femme face à un cafard. Famille fuie des pogroms, mère morte quand elle avait neuf ans. Un incendie en 1966 la laissa gravement brûlée, main droite atrophiée. Elle mourut d'un cancer la veille de ses 57 ans.",
-      "works": ["lispector-passion"],
-      "tags": ["épiphanie", "corps", "écriture"]
+      "works": [
+        "lispector-passion"
+      ],
+      "tags": [
+        "épiphanie",
+        "corps",
+        "écriture"
+      ]
     },
     {
       "id": "borges",
@@ -1115,8 +1665,14 @@
       "origin": "Buenos Aires, Argentine",
       "lang": "es",
       "bio": "Écrivain argentin, maître du labyrinthe et de l'infini. Fictions et L'Aleph réinventent le conte métaphysique. Aveugle comme son père avant lui, il dirigea la Bibliothèque nationale qu'il ne pouvait plus lire. Son soutien à des dictatures militaires reste controversé. Il mourut à Genève, loin de l'Argentine.",
-      "works": ["borges-fictions"],
-      "tags": ["labyrinthe", "infini", "cécité"]
+      "works": [
+        "borges-fictions"
+      ],
+      "tags": [
+        "labyrinthe",
+        "infini",
+        "cécité"
+      ]
     },
     {
       "id": "plath",
@@ -1126,8 +1682,14 @@
       "origin": "Boston, États-Unis",
       "lang": "en",
       "bio": "Poétesse américaine d'une intensité incandescente. Ariel, publié après sa mort, brûle de rage et de douleur. Mariée au poète Ted Hughes, elle le quitta après ses infidélités. Un matin d'hiver à Londres, elle scella la cuisine, ouvrit le gaz et posa sa tête dans le four. Ses enfants dormaient à l'étage.",
-      "works": ["plath-ariel"],
-      "tags": ["confession", "rage", "féminisme"]
+      "works": [
+        "plath-ariel"
+      ],
+      "tags": [
+        "confession",
+        "rage",
+        "féminisme"
+      ]
     },
     {
       "id": "hemingway",
@@ -1137,8 +1699,14 @@
       "origin": "Oak Park, États-Unis",
       "lang": "en",
       "bio": "Romancier américain, Prix Nobel 1954. Le Vieil Homme et la Mer et L'Adieu aux armes forgent un style dépouillé. Ambulancier en 14-18, correspondant de guerre, chasseur de gros gibier, quatre mariages. Alcoolique, dépressif, paranoïaque, traité par électrochocs, il se tira un coup de fusil comme son père avant lui.",
-      "works": ["hemingway-adieu"],
-      "tags": ["virilité", "guerre", "concision"]
+      "works": [
+        "hemingway-adieu"
+      ],
+      "tags": [
+        "virilité",
+        "guerre",
+        "concision"
+      ]
     },
     {
       "id": "burroughs",
@@ -1148,8 +1716,14 @@
       "origin": "Saint-Louis, États-Unis",
       "lang": "en",
       "bio": "Écrivain américain de la Beat Generation. Le Festin nu, hallucinogène, révolutionne la forme romanesque. Héritier des machines à calculer, héroïnomane perpétuel. À Mexico en 1951, jouant à Guillaume Tell ivre, il tua sa femme Joan d'une balle dans la tête. Il dit que cet acte fit de lui un écrivain.",
-      "works": ["burroughs-festin"],
-      "tags": ["beat", "drogue", "cut-up"]
+      "works": [
+        "burroughs-festin"
+      ],
+      "tags": [
+        "beat",
+        "drogue",
+        "cut-up"
+      ]
     },
     {
       "id": "poe",
@@ -1159,8 +1733,14 @@
       "origin": "Boston, États-Unis",
       "lang": "en",
       "bio": "Écrivain américain, inventeur du récit policier et maître de l'horreur. Le Corbeau et La Chute de la maison Usher hantent la littérature. Orphelin, pauvre, alcoolique, il épousa sa cousine de treize ans. On le trouva délirant dans une rue de Baltimore ; il mourut quatre jours plus tard. La cause reste un mystère.",
-      "works": ["poe-histoires"],
-      "tags": ["gothique", "horreur", "poésie"]
+      "works": [
+        "poe-histoires"
+      ],
+      "tags": [
+        "gothique",
+        "horreur",
+        "poésie"
+      ]
     },
     {
       "id": "fitzgerald",
@@ -1170,8 +1750,14 @@
       "origin": "Saint Paul, États-Unis",
       "lang": "en",
       "bio": "Romancier américain, chroniqueur de l'âge du jazz. Gatsby le Magnifique capture le rêve américain et sa corruption. Lui et Zelda incarnèrent les années folles avant de sombrer — elle dans la folie, lui dans l'alcool. Il mourut oublié à Hollywood d'une crise cardiaque, convaincu d'être un raté.",
-      "works": ["fitzgerald-gatsby"],
-      "tags": ["jazz age", "décadence", "échec"]
+      "works": [
+        "fitzgerald-gatsby"
+      ],
+      "tags": [
+        "jazz age",
+        "décadence",
+        "échec"
+      ]
     },
     {
       "id": "kerouac",
@@ -1181,8 +1767,14 @@
       "origin": "Lowell, États-Unis",
       "lang": "en",
       "bio": "Écrivain américain, roi des Beats. Sur la route, écrit en trois semaines sur un rouleau de papier, définit une génération. Franco-américain, catholique, il finit ses jours alcoolique chez sa mère en Floride, loin des routes, regardant la télévision. Il mourut d'une hémorragie interne à 47 ans.",
-      "works": ["kerouac-route"],
-      "tags": ["beat", "route", "spontané"]
+      "works": [
+        "kerouac-route"
+      ],
+      "tags": [
+        "beat",
+        "route",
+        "spontané"
+      ]
     },
     {
       "id": "wallace",
@@ -1192,8 +1784,14 @@
       "origin": "Ithaca, États-Unis",
       "lang": "en",
       "bio": "Écrivain américain, génie anxieux du postmodernisme. L'Infinie Comédie, mille pages de virtuosité, dissèque le divertissement et l'addiction. Dépressif depuis l'adolescence, il essaya tous les traitements. Quand les médicaments cessèrent de fonctionner, il se pendit dans son garage. Sa femme trouva le corps.",
-      "works": ["wallace-infinite"],
-      "tags": ["postmodernisme", "addiction", "ironie"]
+      "works": [
+        "wallace-infinite"
+      ],
+      "tags": [
+        "postmodernisme",
+        "addiction",
+        "ironie"
+      ]
     },
     {
       "id": "pavese",
@@ -1203,19 +1801,14 @@
       "origin": "Santo Stefano Belbo, Italie",
       "lang": "it",
       "bio": "Écrivain et traducteur italien, introducteur de la littérature américaine en Italie. La Lune et les Feux mêle mythe et réalisme. Exilé par les fascistes, il aima des femmes qui ne l'aimaient pas. Prix Strega en juin, mort en août : barbituriques dans une chambre d'hôtel à Turin. « Pas de paroles. Un geste. Je n'écrirai plus. »",
-      "works": ["pavese-lune"],
-      "tags": ["mythe", "solitude", "journal"]
-    },
-    {
-      "id": "lorca",
-      "name": "Federico García Lorca",
-      "name_original": "Federico del Sagrado Corazón de Jesús García Lorca",
-      "dates": "1898–1936",
-      "origin": "Fuente Vaqueros, Espagne",
-      "lang": "es",
-      "bio": "Poète et dramaturge espagnol, âme du duende. Romancero gitano et Noces de sang chantent l'Andalousie tragique. Homosexuel, ami de Dalí et Buñuel, il ne s'exila pas malgré les menaces. Les nationalistes le fusillèrent au début de la guerre civile. Son corps n'a jamais été retrouvé.",
-      "works": ["lorca-romancero"],
-      "tags": ["duende", "andalousie", "assassinat"]
+      "works": [
+        "pavese-lune"
+      ],
+      "tags": [
+        "mythe",
+        "solitude",
+        "journal"
+      ]
     },
     {
       "id": "walser",
@@ -1225,8 +1818,14 @@
       "origin": "Bienne, Suisse",
       "lang": "de",
       "bio": "Écrivain suisse, miniaturiste de l'effacement. Les Enfants Tanner et L'Institut Benjamenta sont des merveilles d'ironie douce. Il passa ses vingt dernières années en asile psychiatrique, n'écrivant plus. On le retrouva mort dans la neige le jour de Noël, lors d'une de ses promenades solitaires.",
-      "works": ["walser-tanner"],
-      "tags": ["promenade", "effacement", "asile"]
+      "works": [
+        "walser-tanner"
+      ],
+      "tags": [
+        "promenade",
+        "effacement",
+        "asile"
+      ]
     },
     {
       "id": "pessoa",
@@ -1236,8 +1835,14 @@
       "origin": "Lisbonne, Portugal",
       "lang": "pt",
       "bio": "Poète portugais aux identités multiples. Il créa des dizaines d'hétéronymes — Caeiro, Campos, Reis — chacun avec sa biographie et son style. Employé de bureau, il vécut seul, but trop, publia peu. Le Livre de l'intranquillité parut cinquante ans après sa mort. Il mourut d'une crise hépatique, une valise pleine de manuscrits.",
-      "works": ["pessoa-intranquillite"],
-      "tags": ["hétéronymes", "lisbonne", "mélancolie"]
+      "works": [
+        "pessoa-intranquillite"
+      ],
+      "tags": [
+        "hétéronymes",
+        "lisbonne",
+        "mélancolie"
+      ]
     },
     {
       "id": "bernhard",
@@ -1247,8 +1852,14 @@
       "origin": "Heerlen, Pays-Bas / Autriche",
       "lang": "de",
       "bio": "Écrivain autrichien, imprécateur furieux. Extinction et Maîtres anciens déversent une rage ininterrompue contre l'Autriche, l'art, l'humanité. Tuberculeux à vie, orphelin de père, maltraité, il haïssait son pays natal. Son testament interdit toute représentation de ses œuvres en Autriche. Il mourut seul dans sa ferme.",
-      "works": ["bernhard-extinction"],
-      "tags": ["rage", "autriche", "monologue"]
+      "works": [
+        "bernhard-extinction"
+      ],
+      "tags": [
+        "rage",
+        "autriche",
+        "monologue"
+      ]
     },
     {
       "id": "bachmann",
@@ -1258,8 +1869,14 @@
       "origin": "Klagenfurt, Autriche",
       "lang": "de",
       "bio": "Poétesse et romancière autrichienne. Malina explore la destruction féminine par l'amour. Liaison destructrice avec Max Frisch, qui la portraitura cruellement. Dépendante aux barbituriques, elle mourut dans l'incendie de son appartement romain — cigarette oubliée. Le feu comme métaphore finale.",
-      "works": ["bachmann-malina"],
-      "tags": ["féminisme", "amour", "destruction"]
+      "works": [
+        "bachmann-malina"
+      ],
+      "tags": [
+        "féminisme",
+        "amour",
+        "destruction"
+      ]
     },
     {
       "id": "trakl",
@@ -1269,8 +1886,14 @@
       "origin": "Salzbourg, Autriche",
       "lang": "de",
       "bio": "Poète autrichien expressionniste, voix de la décomposition. Ses vers crépusculaires hantent. Pharmacien, il avait accès aux drogues ; cocaïne et chloroforme furent ses compagnons. Relation incestueuse présumée avec sa sœur. Infirmier en 14-18, il craqua après Gródek et s'empoisonna à la cocaïne.",
-      "works": ["trakl-poemes"],
-      "tags": ["expressionnisme", "automne", "décomposition"]
+      "works": [
+        "trakl-poemes"
+      ],
+      "tags": [
+        "expressionnisme",
+        "automne",
+        "décomposition"
+      ]
     },
     {
       "id": "manto",
@@ -1280,8 +1903,14 @@
       "origin": "Ludhiana, Inde britannique",
       "lang": "ur",
       "bio": "Nouvelliste ourdou, chroniqueur impitoyable de la Partition. Toba Tek Singh dépeint la folie du déplacement. Six fois jugé pour obscénité, jamais condamné. Alcoolique, il but jusqu'à la cirrhose. « Voici un homme qui gît enterré... sous lequel repose tout l'art de la nouvelle. »",
-      "works": ["manto-nouvelles"],
-      "tags": ["partition", "obscénité", "vérité"]
+      "works": [
+        "manto-nouvelles"
+      ],
+      "tags": [
+        "partition",
+        "obscénité",
+        "vérité"
+      ]
     },
     {
       "id": "pramoedya",
@@ -1291,8 +1920,14 @@
       "origin": "Blora, Indonésie",
       "lang": "id",
       "bio": "Romancier indonésien, voix des sans-voix. Le Quatuor de Buru, écrit en captivité, raconte l'éveil national indonésien. Emprisonné par les Hollandais, par Sukarno, puis quatorze ans sur l'île-bagne de Buru par Suharto. Ses livres furent interdits, ses manuscrits détruits. Il dicta ses romans à ses codétenus.",
-      "works": ["pramoedya-terre"],
-      "tags": ["colonialisme", "prison", "résistance"]
+      "works": [
+        "pramoedya-terre"
+      ],
+      "tags": [
+        "colonialisme",
+        "prison",
+        "résistance"
+      ]
     },
     {
       "id": "yun-dong-ju",
@@ -1302,8 +1937,14 @@
       "origin": "Longjing, Mandchourie",
       "lang": "ko",
       "bio": "Poète coréen de la résistance à l'occupation japonaise. Ciel, vent, étoiles et poésie chante la honte et l'espoir. Étudiant au Japon, il fut arrêté pour activités indépendantistes. Il mourut dans la prison de Fukuoka, peut-être cobaye d'expériences médicales. Il avait 27 ans. La Corée le vénère comme un martyr.",
-      "works": ["yun-dong-ju-ciel"],
-      "tags": ["résistance", "honte", "martyr"]
+      "works": [
+        "yun-dong-ju-ciel"
+      ],
+      "tags": [
+        "résistance",
+        "honte",
+        "martyr"
+      ]
     },
     {
       "id": "marechera",
@@ -1313,8 +1954,14 @@
       "origin": "Rusape, Rhodésie",
       "lang": "en",
       "bio": "Écrivain zimbabwéen, enfant terrible des lettres africaines. La Maison de la faim explose les conventions. Expulsé d'Oxford pour comportement erratique, il vécut dans les rues de Londres, dormant sous les ponts. De retour au Zimbabwe, il resta marginal, alcoolique. Mort du sida à 35 ans, enterré dans une tombe anonyme.",
-      "works": ["marechera-faim"],
-      "tags": ["rage", "exil", "marginalité"]
+      "works": [
+        "marechera-faim"
+      ],
+      "tags": [
+        "rage",
+        "exil",
+        "marginalité"
+      ]
     },
     {
       "id": "saro-wiwa",
@@ -1324,8 +1971,14 @@
       "origin": "Bori, Nigeria",
       "lang": "en",
       "bio": "Écrivain et activiste nigérian, défenseur du peuple Ogoni contre Shell et la dictature militaire. Sozaboy raconte la guerre du Biafra en pidgin. Il fonda le MOSOP pour protéger son peuple de la pollution pétrolière. Arrêté, jugé par un tribunal fantoche, il fut pendu avec huit autres. Le monde regarda sans agir.",
-      "works": ["saro-wiwa-sozaboy"],
-      "tags": ["ogoni", "pétrole", "pendaison"]
+      "works": [
+        "saro-wiwa-sozaboy"
+      ],
+      "tags": [
+        "ogoni",
+        "pétrole",
+        "pendaison"
+      ]
     },
     {
       "id": "arguedas",
@@ -1335,8 +1988,14 @@
       "origin": "Andahuaylas, Pérou",
       "lang": "es",
       "bio": "Écrivain péruvien, pont entre le monde andin et l'espagnol. Les Fleuves profonds traduit l'âme quechua. Orphelin élevé par des Indiens, il porta en lui deux cultures qui ne se réconciliaient pas. Après plusieurs tentatives, il se tira une balle dans la tête dans son bureau de l'université. Il laissa une lettre et un roman inachevé.",
-      "works": ["arguedas-fleuves"],
-      "tags": ["andin", "quechua", "déchirement"]
+      "works": [
+        "arguedas-fleuves"
+      ],
+      "tags": [
+        "andin",
+        "quechua",
+        "déchirement"
+      ]
     },
     {
       "id": "violeta-parra",
@@ -1346,8 +2005,14 @@
       "origin": "San Fabián de Alico, Chili",
       "lang": "es",
       "bio": "Chanteuse, compositrice et artiste chilienne, mère de la nueva canción. Gracias a la vida est son chant d'adieu. Elle parcourut le Chili rural, recueillant le folklore oublié. Après une rupture amoureuse, elle se tira une balle dans la tête sous sa tente à Santiago. Sa chanson d'amour à la vie fut son testament.",
-      "works": ["parra-canciones"],
-      "tags": ["folklore", "chanson", "suicide"]
+      "works": [
+        "parra-canciones"
+      ],
+      "tags": [
+        "folklore",
+        "chanson",
+        "suicide"
+      ]
     },
     {
       "id": "darwish",
@@ -1357,8 +2022,14 @@
       "origin": "Al-Birwa, Palestine",
       "lang": "ar",
       "bio": "Poète palestinien, voix de l'exil. Identité, je défie quiconque devint un hymne. Son village natal fut détruit en 1948 ; il grandit « présent-absent » dans son propre pays. Exilé au Liban, en Égypte, à Paris, il ne revint qu'à Ramallah. Il mourut à Houston après une opération du cœur, enterré sur une colline de Ramallah.",
-      "works": ["darwish-poemes"],
-      "tags": ["palestine", "exil", "identité"]
+      "works": [
+        "darwish-poemes"
+      ],
+      "tags": [
+        "palestine",
+        "exil",
+        "identité"
+      ]
     },
     {
       "id": "galeano",
@@ -1368,8 +2039,14 @@
       "origin": "Montevideo, Uruguay",
       "lang": "es",
       "bio": "Écrivain uruguayen, chroniqueur de l'Amérique pillée. Les Veines ouvertes de l'Amérique latine devint la bible de la gauche continentale. Exilé par les dictatures, il vécut en Argentine puis en Espagne. Plus tard, il renia son livre le plus célèbre, le trouvant trop lourd. Il mourut d'un cancer du poumon, aimé des peuples.",
-      "works": ["galeano-veines"],
-      "tags": ["amérique latine", "pillage", "mémoire"]
+      "works": [
+        "galeano-veines"
+      ],
+      "tags": [
+        "amérique latine",
+        "pillage",
+        "mémoire"
+      ]
     },
     {
       "id": "austen",
@@ -1379,8 +2056,14 @@
       "origin": "Steventon, Angleterre",
       "lang": "en",
       "bio": "Romancière anglaise, maîtresse de l'ironie domestique. Orgueil et Préjugés et Emma dissèquent la gentry avec un humour impeccable. Elle vécut paisiblement entre sa famille et l'écriture, jamais mariée, publiant anonymement. Morte à 41 ans d'une maladie inconnue, elle ne connut pas sa gloire posthume.",
-      "works": ["austen-orgueil"],
-      "tags": ["ironie", "mariage", "gentry"]
+      "works": [
+        "austen-orgueil"
+      ],
+      "tags": [
+        "ironie",
+        "mariage",
+        "gentry"
+      ]
     },
     {
       "id": "tolstoy",
@@ -1390,8 +2073,15 @@
       "origin": "Iasnaïa Poliana, Russie",
       "lang": "ru",
       "bio": "Romancier russe, titan de la littérature mondiale. Guerre et Paix et Anna Karénine sont des cathédrales. Comte devenu apôtre de la non-violence, il renonça à ses droits d'auteur et prôna la simplicité. Son mariage avec Sophie se dégrada en guerre. Il mourut dans une gare, en fuite de sa propre maison.",
-      "works": ["tolstoy-guerre", "tolstoy-anna"],
-      "tags": ["épopée", "morale", "conversion"]
+      "works": [
+        "tolstoy-guerre",
+        "tolstoy-anna"
+      ],
+      "tags": [
+        "épopée",
+        "morale",
+        "conversion"
+      ]
     },
     {
       "id": "marquez",
@@ -1401,8 +2091,14 @@
       "origin": "Aracataca, Colombie",
       "lang": "es",
       "bio": "Romancier colombien, magicien du réalisme magique. Cent Ans de solitude enchante le monde. Journaliste, ami de Fidel Castro, Prix Nobel 1982. Il vécut entre Mexico et Carthagène, aimé de tous. La démence effaça ses dernières années. « La vie n'est pas ce que l'on a vécu, mais ce dont on se souvient. »",
-      "works": ["marquez-cent-ans"],
-      "tags": ["macondo", "réalisme magique", "solitude"]
+      "works": [
+        "marquez-cent-ans"
+      ],
+      "tags": [
+        "macondo",
+        "réalisme magique",
+        "solitude"
+      ]
     },
     {
       "id": "morrison",
@@ -1412,8 +2108,14 @@
       "origin": "Lorain, États-Unis",
       "lang": "en",
       "bio": "Romancière américaine, voix de l'expérience noire. Beloved exhume les fantômes de l'esclavage. Éditrice chez Random House, elle ouvrit les portes à toute une génération d'écrivains noirs. Prix Nobel 1993. Elle écrivit jusqu'au bout, entourée de ses fils, et mourut paisiblement à 88 ans.",
-      "works": ["morrison-beloved"],
-      "tags": ["mémoire", "esclavage", "maternité"]
+      "works": [
+        "morrison-beloved"
+      ],
+      "tags": [
+        "mémoire",
+        "esclavage",
+        "maternité"
+      ]
     },
     {
       "id": "le-guin",
@@ -1423,8 +2125,14 @@
       "origin": "Berkeley, États-Unis",
       "lang": "en",
       "bio": "Écrivaine américaine, grande dame de la science-fiction et fantasy. La Main gauche de la nuit et Terremer explorent le genre et l'anarchie. Fille d'anthropologues, mariée cinquante ans, elle vécut à Portland, écrivant avec régularité. Elle défendit les bibliothèques et les droits des auteurs jusqu'à sa mort paisible.",
-      "works": ["le-guin-main-gauche"],
-      "tags": ["science-fiction", "anarchie", "genre"]
+      "works": [
+        "le-guin-main-gauche"
+      ],
+      "tags": [
+        "science-fiction",
+        "anarchie",
+        "genre"
+      ]
     },
     {
       "id": "calvino",
@@ -1434,8 +2142,14 @@
       "origin": "Santiago de Las Vegas, Cuba / Italie",
       "lang": "it",
       "bio": "Écrivain italien, jongleur de formes. Si par une nuit d'hiver un voyageur et Les Villes invisibles réinventent le récit. Résistant, éditeur chez Einaudi, membre de l'Oulipo. Il vécut entre Rome et Paris avec sa femme traductrice. Une hémorragie cérébrale l'emporta à 61 ans, trop tôt pour le Nobel qu'il méritait.",
-      "works": ["calvino-baron"],
-      "tags": ["combinatoire", "légèreté", "oulipo"]
+      "works": [
+        "calvino-baron"
+      ],
+      "tags": [
+        "combinatoire",
+        "légèreté",
+        "oulipo"
+      ]
     },
     {
       "id": "eco",
@@ -1445,8 +2159,14 @@
       "origin": "Alexandrie, Italie",
       "lang": "it",
       "bio": "Sémiologue et romancier italien. Le Nom de la rose marie érudition médiévale et polar. Professeur à Bologne, collectionneur de livres anciens, il écrivit sur tout : signes, laideur, fascisme, listes. Marié à une enseignante d'art, deux enfants, il mourut à 84 ans dans son appartement milanais rempli de 30 000 livres.",
-      "works": ["eco-nom-rose"],
-      "tags": ["sémiotique", "médiéval", "érudition"]
+      "works": [
+        "eco-nom-rose"
+      ],
+      "tags": [
+        "sémiotique",
+        "médiéval",
+        "érudition"
+      ]
     },
     {
       "id": "tagore",
@@ -1456,8 +2176,14 @@
       "origin": "Calcutta, Inde",
       "lang": "bn",
       "bio": "Poète bengali, premier non-Européen Prix Nobel de littérature (1913). Gitanjali offre des chants mystiques. Peintre, compositeur, il écrivit les hymnes nationaux de l'Inde et du Bangladesh. Il fonda une université à Santiniketan. Ami de Gandhi, il vécut vénéré, patriarche des arts indiens.",
-      "works": ["tagore-gitanjali"],
-      "tags": ["bengali", "mystique", "nobel"]
+      "works": [
+        "tagore-gitanjali"
+      ],
+      "tags": [
+        "bengali",
+        "mystique",
+        "nobel"
+      ]
     },
     {
       "id": "proust",
@@ -1467,8 +2193,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Romancier français, archéologue de la mémoire. À la recherche du temps perdu, cathédrale de prose, explore le souvenir et le désir. Asthmatique, reclus dans sa chambre tapissée de liège, il écrivit la nuit, nourri de café et de croissants. Il mourut d'une pneumonie, corrigeant ses épreuves jusqu'au bout.",
-      "works": ["proust-temps-perdu"],
-      "tags": ["mémoire", "temps", "mondanité"]
+      "works": [
+        "proust-temps-perdu"
+      ],
+      "tags": [
+        "mémoire",
+        "temps",
+        "mondanité"
+      ]
     },
     {
       "id": "joyce",
@@ -1478,8 +2210,14 @@
       "origin": "Dublin, Irlande",
       "lang": "en",
       "bio": "Écrivain irlandais, révolutionnaire de la prose. Ulysse et Finnegans Wake pulvérisent le langage. Exilé volontaire, il vécut à Trieste, Zurich, Paris, ne revenant jamais en Irlande. Presque aveugle, il dicta ses œuvres. Marié à Nora Barnacle, compagne de toujours. Il mourut à Zurich d'un ulcère perforé.",
-      "works": ["joyce-ulysse"],
-      "tags": ["dublin", "flux", "exil"]
+      "works": [
+        "joyce-ulysse"
+      ],
+      "tags": [
+        "dublin",
+        "flux",
+        "exil"
+      ]
     },
     {
       "id": "chekhov",
@@ -1489,8 +2227,14 @@
       "origin": "Taganrog, Russie",
       "lang": "ru",
       "bio": "Dramaturge et nouvelliste russe, maître du sous-entendu. La Cerisaie et La Dame au petit chien capturent les vies qui passent. Médecin, il soigna les pauvres gratuitement. Tuberculeux, il s'exila en Crimée. Il mourut à 44 ans à Badenweiler, disant « Ich sterbe » et buvant un dernier verre de champagne.",
-      "works": ["chekhov-cerisaie"],
-      "tags": ["nouvelle", "théâtre", "médecine"]
+      "works": [
+        "chekhov-cerisaie"
+      ],
+      "tags": [
+        "nouvelle",
+        "théâtre",
+        "médecine"
+      ]
     },
     {
       "id": "dickens",
@@ -1500,8 +2244,14 @@
       "origin": "Portsmouth, Angleterre",
       "lang": "en",
       "bio": "Romancier anglais, conteur populaire par excellence. Oliver Twist et David Copperfield dénoncent l'injustice victorienne. Enfant mis au travail quand son père fut emprisonné pour dettes, il n'oublia jamais. Célébrité mondiale, il quitta sa femme pour une actrice. Il mourut d'une attaque, épuisé par ses lectures publiques.",
-      "works": ["dickens-copperfield"],
-      "tags": ["victorien", "social", "feuilleton"]
+      "works": [
+        "dickens-copperfield"
+      ],
+      "tags": [
+        "victorien",
+        "social",
+        "feuilleton"
+      ]
     },
     {
       "id": "twain",
@@ -1511,8 +2261,14 @@
       "origin": "Florida, Missouri, États-Unis",
       "lang": "en",
       "bio": "Écrivain américain, humoriste national. Les Aventures de Huckleberry Finn est le grand roman américain. Pilote de bateau à vapeur, chercheur d'or, conférencier, il fit et perdit des fortunes. La mort de sa femme et de ses filles l'assombrit. Il prédit qu'il mourrait au retour de la comète de Halley — ce fut le cas.",
-      "works": ["twain-huckleberry"],
-      "tags": ["humour", "mississippi", "amérique"]
+      "works": [
+        "twain-huckleberry"
+      ],
+      "tags": [
+        "humour",
+        "mississippi",
+        "amérique"
+      ]
     },
     {
       "id": "amado",
@@ -1522,8 +2278,14 @@
       "origin": "Itabuna, Brésil",
       "lang": "pt",
       "bio": "Romancier brésilien, chantre de Bahia. Gabriela, girofle et cannelle et Dona Flor célèbrent la sensualité et le métissage. Communiste exilé sous la dictature, il revint et vécut aimé du peuple. Marié cinquante ans à Zélia, il écrivit dans sa maison de Salvador. L'un des auteurs les plus lus au monde.",
-      "works": ["amado-gabriela"],
-      "tags": ["bahia", "sensualité", "peuple"]
+      "works": [
+        "amado-gabriela"
+      ],
+      "tags": [
+        "bahia",
+        "sensualité",
+        "peuple"
+      ]
     },
     {
       "id": "allende",
@@ -1533,8 +2295,14 @@
       "origin": "Lima, Pérou / Chili",
       "lang": "es",
       "bio": "Romancière chilienne, nièce de Salvador Allende. La Maison aux esprits mêle saga familiale et histoire. Exilée après le coup d'État de Pinochet, elle vécut au Venezuela puis en Californie. La mort de sa fille Paula inspira un livre-deuil. Elle continue d'écrire, bestseller mondial, féministe engagée.",
-      "works": ["allende-maison"],
-      "tags": ["saga", "féminisme", "exil"]
+      "works": [
+        "allende-maison"
+      ],
+      "tags": [
+        "saga",
+        "féminisme",
+        "exil"
+      ]
     },
     {
       "id": "kundera",
@@ -1544,8 +2312,14 @@
       "origin": "Brno, Tchécoslovaquie",
       "lang": "cs",
       "bio": "Romancier tchèque puis français. L'Insoutenable Légèreté de l'être explore l'amour et l'histoire. Exclu du Parti après 1968, ses livres interdits, il s'exila en France. Il y resta, écrivant en français, refusant les interviews. Discret, marié à Věra, il mourut à Paris à 94 ans, loin de la Bohême natale.",
-      "works": ["kundera-legerete"],
-      "tags": ["légèreté", "kitsch", "exil"]
+      "works": [
+        "kundera-legerete"
+      ],
+      "tags": [
+        "légèreté",
+        "kitsch",
+        "exil"
+      ]
     },
     {
       "id": "gogol",
@@ -1555,8 +2329,14 @@
       "origin": "Sorochintsy, Ukraine",
       "lang": "ru",
       "bio": "Écrivain russe d'origine ukrainienne, génie du grotesque. Les Âmes mortes et Le Manteau fondent la prose russe. Mystique tourmenté, il brûla la suite des Âmes mortes dix jours avant sa mort. Il se laissa mourir de faim sur les conseils d'un prêtre fanatique, persuadé d'être damné.",
-      "works": ["gogol-ames"],
-      "tags": ["grotesque", "russie", "folie"]
+      "works": [
+        "gogol-ames"
+      ],
+      "tags": [
+        "grotesque",
+        "russie",
+        "folie"
+      ]
     },
     {
       "id": "pushkin",
@@ -1566,8 +2346,14 @@
       "origin": "Moscou, Russie",
       "lang": "ru",
       "bio": "Poète russe, fondateur de la littérature moderne russe. Eugène Onéguine est un roman en vers parfait. Descendant d'un Africain anobli par Pierre le Grand, il vécut entre exils et duels. Des rumeurs sur sa femme le poussèrent à provoquer son beau-frère. Il mourut de sa blessure à 37 ans.",
-      "works": ["pushkin-oneguine"],
-      "tags": ["poésie", "duel", "russie"]
+      "works": [
+        "pushkin-oneguine"
+      ],
+      "tags": [
+        "poésie",
+        "duel",
+        "russie"
+      ]
     },
     {
       "id": "balzac",
@@ -1577,8 +2363,14 @@
       "origin": "Tours, France",
       "lang": "fr",
       "bio": "Romancier français, bâtisseur de La Comédie humaine. Le Père Goriot et Illusions perdues dissèquent la société. Endetté chronique, il travaillait seize heures par jour, alimenté de café noir. Il épousa enfin son amour polonais, Mme Hańska, et mourut trois mois plus tard, épuisé.",
-      "works": ["balzac-goriot"],
-      "tags": ["réalisme", "société", "dette"]
+      "works": [
+        "balzac-goriot"
+      ],
+      "tags": [
+        "réalisme",
+        "société",
+        "dette"
+      ]
     },
     {
       "id": "flaubert",
@@ -1588,8 +2380,14 @@
       "origin": "Rouen, France",
       "lang": "fr",
       "bio": "Romancier français, martyr du style. Madame Bovary lui valut un procès pour outrage aux mœurs. Ermite de Croisset, il passa des semaines sur une phrase. Syphilitique, épileptique, il vécut avec sa mère puis sa nièce. Il mourut d'une hémorragie cérébrale, à son bureau, Bouvard et Pécuchet inachevé.",
-      "works": ["flaubert-bovary"],
-      "tags": ["style", "bêtise", "procès"]
+      "works": [
+        "flaubert-bovary"
+      ],
+      "tags": [
+        "style",
+        "bêtise",
+        "procès"
+      ]
     },
     {
       "id": "zola",
@@ -1599,8 +2397,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Romancier français, chef du naturalisme. Les Rougon-Macquart, vingt romans, dissèquent le Second Empire. « J'accuse » défendit Dreyfus et le força à l'exil. Il mourut asphyxié chez lui, cheminée bouchée — accident ou assassinat par des antidreyfusards, le doute persiste.",
-      "works": ["zola-germinal"],
-      "tags": ["naturalisme", "dreyfus", "vérité"]
+      "works": [
+        "zola-germinal"
+      ],
+      "tags": [
+        "naturalisme",
+        "dreyfus",
+        "vérité"
+      ]
     },
     {
       "id": "maupassant",
@@ -1610,8 +2414,14 @@
       "origin": "Tourville-sur-Arques, France",
       "lang": "fr",
       "bio": "Nouvelliste français, maître du récit bref. Boule de Suif et Le Horla capturent la cruauté sociale et la folie. Protégé de Flaubert, il connut un succès immense. La syphilis le rattrapa : hallucinations, tentative de suicide, internement. Il mourut fou à 42 ans, rongé par la paralysie générale.",
-      "works": ["maupassant-nouvelles"],
-      "tags": ["nouvelle", "normandie", "folie"]
+      "works": [
+        "maupassant-nouvelles"
+      ],
+      "tags": [
+        "nouvelle",
+        "normandie",
+        "folie"
+      ]
     },
     {
       "id": "swift",
@@ -1621,8 +2431,14 @@
       "origin": "Dublin, Irlande",
       "lang": "en",
       "bio": "Satiriste irlandais, doyen de Saint-Patrick. Les Voyages de Gulliver déguisent en conte une misanthropie féroce. Il défendit l'Irlande contre l'Angleterre. Ses dernières années furent assombries par la démence — syndrome de Ménière peut-être. Il légua sa fortune pour fonder un asile d'aliénés.",
-      "works": ["swift-gulliver"],
-      "tags": ["satire", "irlande", "misanthropie"]
+      "works": [
+        "swift-gulliver"
+      ],
+      "tags": [
+        "satire",
+        "irlande",
+        "misanthropie"
+      ]
     },
     {
       "id": "voltaire",
@@ -1632,8 +2448,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Philosophe et écrivain français, prince des Lumières. Candide moque l'optimisme avec une ironie mortelle. Embastillé, exilé, il régna depuis Ferney sur l'Europe intellectuelle. Défenseur de Calas, ennemi de l'Infâme, il revint mourir à Paris, triomphant. « Écrasons l'infâme. »",
-      "works": ["voltaire-candide"],
-      "tags": ["lumières", "ironie", "tolérance"]
+      "works": [
+        "voltaire-candide"
+      ],
+      "tags": [
+        "lumières",
+        "ironie",
+        "tolérance"
+      ]
     },
     {
       "id": "diderot",
@@ -1643,8 +2465,14 @@
       "origin": "Langres, France",
       "lang": "fr",
       "bio": "Philosophe français, maître d'œuvre de l'Encyclopédie. Jacques le fataliste et Le Neveu de Rameau jouent avec la fiction. Emprisonné pour ses écrits, il travailla vingt ans à l'Encyclopédie. Catherine de Russie acheta sa bibliothèque et le pensionna. Bon vivant, il mourut paisiblement à table.",
-      "works": ["diderot-neveu"],
-      "tags": ["encyclopédie", "dialogue", "matérialisme"]
+      "works": [
+        "diderot-neveu"
+      ],
+      "tags": [
+        "encyclopédie",
+        "dialogue",
+        "matérialisme"
+      ]
     },
     {
       "id": "stendhal",
@@ -1654,8 +2482,14 @@
       "origin": "Grenoble, France",
       "lang": "fr",
       "bio": "Romancier français, égotiste et romantique. Le Rouge et le Noir et La Chartreuse de Parme dissèquent l'ambition et la passion. Officier sous Napoléon, consul à Civitavecchia, il aima l'Italie plus que la France. « J'ai été, je suis, je serai », écrivit-il sur sa tombe — en italien.",
-      "works": ["stendhal-rouge"],
-      "tags": ["égotisme", "italie", "passion"]
+      "works": [
+        "stendhal-rouge"
+      ],
+      "tags": [
+        "égotisme",
+        "italie",
+        "passion"
+      ]
     },
     {
       "id": "thomas-mann",
@@ -1665,8 +2499,14 @@
       "origin": "Lübeck, Allemagne",
       "lang": "de",
       "bio": "Romancier allemand, Prix Nobel 1929. Les Buddenbrook et La Montagne magique explorent la décadence bourgeoise. Exilé par les nazis, il dénonça Hitler depuis la Suisse puis l'Amérique. Marié, père de six enfants dont deux se suicidèrent. Il mourut à Zurich, patriarche des lettres allemandes.",
-      "works": ["mann-montagne"],
-      "tags": ["bourgeoisie", "exil", "ironie"]
+      "works": [
+        "mann-montagne"
+      ],
+      "tags": [
+        "bourgeoisie",
+        "exil",
+        "ironie"
+      ]
     },
     {
       "id": "hesse",
@@ -1676,8 +2516,14 @@
       "origin": "Calw, Allemagne",
       "lang": "de",
       "bio": "Romancier allemand, Prix Nobel 1946. Siddhartha et Le Loup des steppes cherchent la sagesse. Fils de missionnaires, il s'enfuit du séminaire. Pacifiste en 14-18, il s'installa en Suisse. Il peignait, jardinait à Montagnola, lu par les hippies du monde entier. Il mourut dans son sommeil à 85 ans.",
-      "works": ["hesse-siddhartha"],
-      "tags": ["orient", "quête", "pacifisme"]
+      "works": [
+        "hesse-siddhartha"
+      ],
+      "tags": [
+        "orient",
+        "quête",
+        "pacifisme"
+      ]
     },
     {
       "id": "achebe",
@@ -1687,8 +2533,14 @@
       "origin": "Ogidi, Nigeria",
       "lang": "en",
       "bio": "Romancier nigérian, père de la littérature africaine moderne. Le Monde s'effondre répond au regard colonial. Il critiqua Conrad et son « cœur des ténèbres ». La guerre du Biafra le marqua profondément. Paralysé par un accident de voiture, il enseigna aux États-Unis. Il mourut à Boston, vénéré.",
-      "works": ["achebe-monde"],
-      "tags": ["nigeria", "colonialisme", "igbo"]
+      "works": [
+        "achebe-monde"
+      ],
+      "tags": [
+        "nigeria",
+        "colonialisme",
+        "igbo"
+      ]
     },
     {
       "id": "rushdie",
@@ -1698,8 +2550,14 @@
       "origin": "Bombay, Inde",
       "lang": "en",
       "bio": "Romancier britannique d'origine indienne. Les Versets sataniques lui valurent une fatwa de Khomeini en 1989. Il vécut caché dix ans sous protection policière. En 2022, un homme lui creva un œil et lui paralysa une main sur scène à New York. Il continue d'écrire, défenseur de la liberté d'expression.",
-      "works": ["rushdie-enfants"],
-      "tags": ["fatwa", "migration", "liberté"]
+      "works": [
+        "rushdie-enfants"
+      ],
+      "tags": [
+        "fatwa",
+        "migration",
+        "liberté"
+      ]
     },
     {
       "id": "soyinka",
@@ -1709,8 +2567,14 @@
       "origin": "Abeokuta, Nigeria",
       "lang": "en",
       "bio": "Dramaturge nigérian, premier Africain Prix Nobel de littérature (1986). La Danse de la forêt mêle tradition yoruba et modernité. Il fut emprisonné deux ans pendant la guerre du Biafra, en isolement. Exilé sous la dictature d'Abacha, il continue de tonner contre la tyrannie, vieux lion indomptable.",
-      "works": ["soyinka-danse"],
-      "tags": ["yoruba", "prison", "théâtre"]
+      "works": [
+        "soyinka-danse"
+      ],
+      "tags": [
+        "yoruba",
+        "prison",
+        "théâtre"
+      ]
     },
     {
       "id": "walcott",
@@ -1720,8 +2584,14 @@
       "origin": "Castries, Sainte-Lucie",
       "lang": "en",
       "bio": "Poète et dramaturge antillais, Prix Nobel 1992. Omeros réinvente Homère sous les tropiques. Métis dans une île coloniale, il fit de cette blessure une force. Il enseigna à Boston, peignait, écrivait à l'aube. Marié trois fois, il mourut chez lui à Sainte-Lucie, face à la mer qu'il avait tant chantée.",
-      "works": ["walcott-omeros"],
-      "tags": ["caraïbes", "homère", "créole"]
+      "works": [
+        "walcott-omeros"
+      ],
+      "tags": [
+        "caraïbes",
+        "homère",
+        "créole"
+      ]
     },
     {
       "id": "heaney",
@@ -1731,8 +2601,14 @@
       "origin": "Castledawson, Irlande du Nord",
       "lang": "en",
       "bio": "Poète irlandais, Prix Nobel 1995. Mort d'un naturaliste creuse la terre d'Ulster. Catholique d'Irlande du Nord, il traversa les Troubles sans prendre les armes, armé de mots seulement. Il traduisit Beowulf. Son dernier texto à sa femme, juste avant de mourir, fut : « Noli timere » — n'aie pas peur.",
-      "works": ["heaney-naturaliste"],
-      "tags": ["irlande", "tourbières", "terre"]
+      "works": [
+        "heaney-naturaliste"
+      ],
+      "tags": [
+        "irlande",
+        "tourbières",
+        "terre"
+      ]
     },
     {
       "id": "murakami",
@@ -1742,8 +2618,14 @@
       "origin": "Kyoto, Japon",
       "lang": "ja",
       "bio": "Romancier japonais, phénomène mondial. Kafka sur le rivage et 1Q84 mêlent quotidien et fantastique. Ancien tenancier de bar de jazz, il écrit chaque matin, court des marathons, traduit de l'américain. Éternel candidat au Nobel, il vit discrètement près de Tokyo, chat à ses côtés.",
-      "works": ["murakami-kafka"],
-      "tags": ["solitude", "jazz", "fantastique"]
+      "works": [
+        "murakami-kafka"
+      ],
+      "tags": [
+        "solitude",
+        "jazz",
+        "fantastique"
+      ]
     },
     {
       "id": "pamuk",
@@ -1753,8 +2635,14 @@
       "origin": "Istanbul, Turquie",
       "lang": "tr",
       "bio": "Romancier turc, Prix Nobel 2006. Mon nom est Rouge et Neige explorent l'identité turque entre Orient et Occident. Poursuivi pour avoir évoqué le génocide arménien, il incarne l'intellectuel engagé. Divorcé, il vit à Istanbul et New York, dans un appartement rempli de livres face au Bosphore.",
-      "works": ["pamuk-rouge"],
-      "tags": ["istanbul", "orient-occident", "miniature"]
+      "works": [
+        "pamuk-rouge"
+      ],
+      "tags": [
+        "istanbul",
+        "orient-occident",
+        "miniature"
+      ]
     },
     {
       "id": "ngugi",
@@ -1764,8 +2652,14 @@
       "origin": "Kamĩrĩĩthũ, Kenya",
       "lang": "sw",
       "bio": "Écrivain kenyan, défenseur des langues africaines. Après des romans en anglais, il choisit d'écrire en kikuyu. Emprisonné un an sans procès par le régime Moi pour une pièce de théâtre villageoise. Exilé, il enseigne en Californie. À plus de 80 ans, il reste le champion de la décolonisation des esprits.",
-      "works": ["ngugi-riviere"],
-      "tags": ["décolonisation", "kikuyu", "prison"]
+      "works": [
+        "ngugi-riviere"
+      ],
+      "tags": [
+        "décolonisation",
+        "kikuyu",
+        "prison"
+      ]
     },
     {
       "id": "gordimer",
@@ -1775,8 +2669,14 @@
       "origin": "Springs, Afrique du Sud",
       "lang": "en",
       "bio": "Romancière sud-africaine, Prix Nobel 1991. Ceux de July et Le Conservateur explorent l'apartheid. Blanche, elle lutta aux côtés de l'ANC, cachant des militants chez elle. Amie de Mandela, elle témoigna à son procès. Elle écrivit jusqu'au bout, morte paisiblement à Johannesburg après la libération.",
-      "works": ["gordimer-july"],
-      "tags": ["apartheid", "conscience", "afrique du sud"]
+      "works": [
+        "gordimer-july"
+      ],
+      "tags": [
+        "apartheid",
+        "conscience",
+        "afrique du sud"
+      ]
     },
     {
       "id": "coetzee",
@@ -1786,8 +2686,14 @@
       "origin": "Le Cap, Afrique du Sud",
       "lang": "en",
       "bio": "Romancier sud-africain, Prix Nobel 2003. Disgrâce et En attendant les barbares dissèquent la violence coloniale. Mathématicien de formation, végétarien strict, il vit reclus en Australie. Deux fois Booker Prize. Ses rares interviews sont des exercices d'esquive. Le silence comme éthique.",
-      "works": ["coetzee-disgrace"],
-      "tags": ["honte", "animaux", "silence"]
+      "works": [
+        "coetzee-disgrace"
+      ],
+      "tags": [
+        "honte",
+        "animaux",
+        "silence"
+      ]
     },
     {
       "id": "rabelais",
@@ -1797,8 +2703,14 @@
       "origin": "Chinon, France",
       "lang": "fr",
       "bio": "Écrivain français, moine puis médecin. Gargantua et Pantagruel débordent de verve, d'obscénité et de savoir. Moine franciscain, bénédictin, puis prêtre séculier, médecin à Lyon, il fuyait la Sorbonne qui condamnait ses livres. « Tirez le rideau, la farce est jouée » — ses derniers mots peut-être apocryphes.",
-      "works": ["rabelais-gargantua"],
-      "tags": ["rire", "corps", "humanisme"]
+      "works": [
+        "rabelais-gargantua"
+      ],
+      "tags": [
+        "rire",
+        "corps",
+        "humanisme"
+      ]
     },
     {
       "id": "borne",
@@ -1808,8 +2720,14 @@
       "origin": "Francfort, Allemagne",
       "lang": "de",
       "bio": "Écrivain et journaliste allemand, pionnier du feuilleton politique. Né Löb Baruch dans le ghetto de Francfort, il se convertit au protestantisme pour obtenir des droits civiques. Ses Lettres de Paris enflammèrent la jeunesse libérale allemande. Exilé, il mourut à Paris. Heine écrivit sur lui un livre cruel et fasciné.",
-      "works": ["borne-lettres"],
-      "tags": ["journalisme", "liberté", "exil"]
+      "works": [
+        "borne-lettres"
+      ],
+      "tags": [
+        "journalisme",
+        "liberté",
+        "exil"
+      ]
     },
     {
       "id": "eminescu",
@@ -1819,8 +2737,14 @@
       "origin": "Botoșani, Moldavie",
       "lang": "ro",
       "bio": "Poète national roumain, romantique tardif au lyrisme cosmique. Luceafărul (L'Étoile du soir) est un sommet de la poésie européenne. Journaliste conservateur, amoureux malheureux de Veronica Micle, il sombra dans la folie à 33 ans — syphilis ou maladie mentale. Il mourut à l'asile, indigent et oublié, avant d'être sanctifié.",
-      "works": ["eminescu-poemes"],
-      "tags": ["romantisme", "roumanie", "folie"]
+      "works": [
+        "eminescu-poemes"
+      ],
+      "tags": [
+        "romantisme",
+        "roumanie",
+        "folie"
+      ]
     },
     {
       "id": "ionesco",
@@ -1830,8 +2754,14 @@
       "origin": "Slatina, Roumanie",
       "lang": "fr",
       "bio": "Dramaturge franco-roumain, père du théâtre de l'absurde. La Cantatrice chauve et Rhinocéros démontent le langage et le conformisme. Fuyant la Roumanie fasciste puis communiste, il s'installa à Paris. Académicien français, angoissé par la mort, il mourut paisiblement, absurde jusqu'au bout.",
-      "works": ["ionesco-rhinoceros"],
-      "tags": ["absurde", "langage", "académie"]
+      "works": [
+        "ionesco-rhinoceros"
+      ],
+      "tags": [
+        "absurde",
+        "langage",
+        "académie"
+      ]
     },
     {
       "id": "eliade",
@@ -1841,8 +2771,14 @@
       "origin": "Bucarest, Roumanie",
       "lang": "ro",
       "bio": "Historien des religions et romancier roumain. Le Sacré et le Profane et Le Mythe de l'éternel retour fondent l'étude comparée des religions. Dans sa jeunesse, il flirta avec la Garde de Fer fasciste — tache qu'il n'effaça jamais. Professeur à Chicago, il mourut vénéré des universitaires, suspect des historiens.",
-      "works": ["eliade-sacre"],
-      "tags": ["religion", "mythe", "fascisme"]
+      "works": [
+        "eliade-sacre"
+      ],
+      "tags": [
+        "religion",
+        "mythe",
+        "fascisme"
+      ]
     },
     {
       "id": "creanga",
@@ -1852,8 +2788,14 @@
       "origin": "Humulești, Moldavie",
       "lang": "ro",
       "bio": "Conteur roumain, voix de la paysannerie moldave. Les Souvenirs d'enfance et ses contes (Harap-Alb, Dănilă Prepeleac) capturent l'âme du village. Diacre défroqué pour avoir fréquenté le théâtre, instituteur ami d'Eminescu, il vécut modestement. Il mourut de la même maladie qu'Eminescu, un an après lui.",
-      "works": ["creanga-souvenirs"],
-      "tags": ["conte", "village", "enfance"]
+      "works": [
+        "creanga-souvenirs"
+      ],
+      "tags": [
+        "conte",
+        "village",
+        "enfance"
+      ]
     },
     {
       "id": "caragiale",
@@ -1863,8 +2805,14 @@
       "origin": "Haimanale, Roumanie",
       "lang": "ro",
       "bio": "Dramaturge roumain, maître de la satire. Une Lettre perdue et Une Nuit orageuse moquent la politique et la bourgeoisie roumaines. Journaliste mordant, il s'attira tant d'ennemis qu'il s'exila à Berlin. Il y mourut, loin du pays qu'il avait disséqué. La Roumanie rit toujours de ses personnages.",
-      "works": ["caragiale-lettre"],
-      "tags": ["satire", "théâtre", "politique"]
+      "works": [
+        "caragiale-lettre"
+      ],
+      "tags": [
+        "satire",
+        "théâtre",
+        "politique"
+      ]
     },
     {
       "id": "heine",
@@ -1874,8 +2822,14 @@
       "origin": "Düsseldorf, Allemagne",
       "lang": "de",
       "bio": "Poète et essayiste allemand, dernier romantique et premier moderne. Le Livre des chants inspira Schubert et Schumann. Juif converti par pragmatisme, exilé à Paris, il attaqua tout le monde avec un esprit dévastateur. Cloué huit ans dans sa « tombe de matelas » par la syphilis, il écrivit jusqu'au bout.",
-      "works": ["heine-chants"],
-      "tags": ["romantisme", "ironie", "exil"]
+      "works": [
+        "heine-chants"
+      ],
+      "tags": [
+        "romantisme",
+        "ironie",
+        "exil"
+      ]
     },
     {
       "id": "lessing",
@@ -1885,8 +2839,14 @@
       "origin": "Kamenz, Saxe",
       "lang": "de",
       "bio": "Dramaturge et critique allemand, phare des Lumières. Nathan le Sage plaide pour la tolérance religieuse. Il révolutionna la critique théâtrale et libéra le théâtre allemand de l'imitation française. Bibliothécaire à Wolfenbüttel, il perdit sa femme et son fils en couches. Il mourut endetté, vénéré mais seul.",
-      "works": ["lessing-nathan"],
-      "tags": ["lumières", "tolérance", "critique"]
+      "works": [
+        "lessing-nathan"
+      ],
+      "tags": [
+        "lumières",
+        "tolérance",
+        "critique"
+      ]
     },
     {
       "id": "schiller",
@@ -1896,8 +2856,14 @@
       "origin": "Marbach, Wurtemberg",
       "lang": "de",
       "bio": "Poète et dramaturge allemand, compagnon de Goethe. Les Brigands, Don Carlos et l'Ode à la joie (reprise par Beethoven) enflammèrent l'Europe. Médecin militaire en fuite, professeur d'histoire, ami de Goethe à Weimar. Tuberculeux, il travailla jusqu'à l'épuisement. Il mourut à 45 ans, Goethe inconsolable.",
-      "works": ["schiller-brigands"],
-      "tags": ["idéalisme", "liberté", "weimar"]
+      "works": [
+        "schiller-brigands"
+      ],
+      "tags": [
+        "idéalisme",
+        "liberté",
+        "weimar"
+      ]
     },
     {
       "id": "holderlin",
@@ -1907,8 +2873,14 @@
       "origin": "Lauffen, Wurtemberg",
       "lang": "de",
       "bio": "Poète allemand, visionnaire solitaire. Hypérion et ses hymnes tardifs atteignent une intensité mystique inégalée. Amoureux de Diotima (Susette Gontard, femme de son employeur), il ne s'en remit jamais. À 36 ans, il sombra dans la folie et passa ses 36 dernières années dans une tour à Tübingen, soigné par un menuisier.",
-      "works": ["holderlin-hyperion"],
-      "tags": ["grèce", "folie", "hymne"]
+      "works": [
+        "holderlin-hyperion"
+      ],
+      "tags": [
+        "grèce",
+        "folie",
+        "hymne"
+      ]
     },
     {
       "id": "kleist",
@@ -1918,8 +2890,14 @@
       "origin": "Francfort-sur-l'Oder, Prusse",
       "lang": "de",
       "bio": "Dramaturge et nouvelliste allemand, météore foudroyé. Le Prince de Hombourg et Michael Kohlhaas explorent la justice et la démesure. Incompris de Goethe, rejeté par tous, il proposa le double suicide à plusieurs femmes. Henriette Vogel, atteinte d'un cancer, accepta. Il la tua d'une balle puis se suicida au bord du Wannsee.",
-      "works": ["kleist-kohlhaas"],
-      "tags": ["passion", "justice", "suicide"]
+      "works": [
+        "kleist-kohlhaas"
+      ],
+      "tags": [
+        "passion",
+        "justice",
+        "suicide"
+      ]
     },
     {
       "id": "buchner",
@@ -1929,8 +2907,14 @@
       "origin": "Goddelau, Hesse",
       "lang": "de",
       "bio": "Dramaturge allemand, révolutionnaire mort à 23 ans. Woyzeck et La Mort de Danton anticipent le théâtre moderne d'un siècle. Étudiant en médecine, il écrivit un pamphlet révolutionnaire et dut fuir en Suisse. Le typhus l'emporta à Zurich. Trois pièces, un récit, et l'impression d'un génie à peine entrevu.",
-      "works": ["buchner-woyzeck"],
-      "tags": ["révolution", "folie", "précocité"]
+      "works": [
+        "buchner-woyzeck"
+      ],
+      "tags": [
+        "révolution",
+        "folie",
+        "précocité"
+      ]
     },
     {
       "id": "schnitzler",
@@ -1940,8 +2924,14 @@
       "origin": "Vienne, Autriche",
       "lang": "de",
       "bio": "Dramaturge et nouvelliste autrichien, explorateur de l'inconscient viennois. La Ronde scandalisa par sa franchise sexuelle. Médecin, il nota ses rêves avant Freud, qui le considérait comme son double. Sa fille se suicida ; lui mourut d'une hémorragie cérébrale, Vienne s'effondrant autour de lui.",
-      "works": ["schnitzler-ronde"],
-      "tags": ["vienne", "éros", "inconscient"]
+      "works": [
+        "schnitzler-ronde"
+      ],
+      "tags": [
+        "vienne",
+        "éros",
+        "inconscient"
+      ]
     },
     {
       "id": "musil",
@@ -1951,8 +2941,14 @@
       "origin": "Klagenfurt, Autriche",
       "lang": "de",
       "bio": "Romancier autrichien, architecte de l'inachevé. L'Homme sans qualités, fleuve de 1 700 pages, resta incomplet. Ingénieur, soldat décoré en 14-18, il vécut dans l'oubli et la pauvreté à Genève pendant la guerre. Une attaque l'emporta dans son bain. Sa femme trouva le corps. Presque personne à l'enterrement.",
-      "works": ["musil-homme"],
-      "tags": ["vienne", "ironie", "inachevé"]
+      "works": [
+        "musil-homme"
+      ],
+      "tags": [
+        "vienne",
+        "ironie",
+        "inachevé"
+      ]
     },
     {
       "id": "guenon",
@@ -1962,8 +2958,14 @@
       "origin": "Blois, France",
       "lang": "fr",
       "bio": "Métaphysicien français, fondateur du traditionalisme. La Crise du monde moderne dénonce l'Occident dégénéré. Il chercha la Tradition primordiale dans l'hindouisme, puis se convertit à l'islam soufi. Il s'installa au Caire, prit le nom d'Abd al-Wahid Yahya, épousa une Égyptienne, et ne revint jamais. Il mourut en invoquant Allah.",
-      "works": ["guenon-crise"],
-      "tags": ["tradition", "métaphysique", "islam"]
+      "works": [
+        "guenon-crise"
+      ],
+      "tags": [
+        "tradition",
+        "métaphysique",
+        "islam"
+      ]
     },
     {
       "id": "schuon",
@@ -1973,8 +2975,14 @@
       "origin": "Bâle, Suisse",
       "lang": "fr",
       "bio": "Métaphysicien suisse, héritier de Guénon. De l'unité transcendante des religions fonde la philosophia perennis moderne. Soufi initié en Algérie, il fonda sa propre tarîqa, mêlant islam et spiritualité amérindienne. Des accusations de comportement inapproprié entachèrent ses dernières années en Indiana. Il peignait des nus sacrés et mourut entouré de disciples.",
-      "works": ["schuon-unite"],
-      "tags": ["tradition", "soufisme", "sophia perennis"]
+      "works": [
+        "schuon-unite"
+      ],
+      "tags": [
+        "tradition",
+        "soufisme",
+        "sophia perennis"
+      ]
     },
     {
       "id": "evola",
@@ -1984,8 +2992,14 @@
       "origin": "Rome, Italie",
       "lang": "it",
       "bio": "Philosophe italien, penseur de la Tradition et théoricien de l'extrême droite. Révolte contre le monde moderne prône un retour aux castes et à la virilité guerrière. Dadaïste puis ésotériste, il collabora avec le fascisme sans y adhérer pleinement. Paralysé par un bombardement à Vienne en 1945, il écrivit depuis son fauteuil roulant, lu par les néofascistes du monde entier.",
-      "works": ["evola-revolte"],
-      "tags": ["tradition", "fascisme", "virilité"]
+      "works": [
+        "evola-revolte"
+      ],
+      "tags": [
+        "tradition",
+        "fascisme",
+        "virilité"
+      ]
     },
     {
       "id": "coomaraswamy",
@@ -1995,8 +3009,14 @@
       "origin": "Colombo, Ceylan",
       "lang": "en",
       "bio": "Historien de l'art et métaphysicien cinghalais, pont entre Orient et Occident. La Danse de Shiva révéla l'art indien au monde. Géologue de formation, il devint conservateur au Museum of Fine Arts de Boston. Marié quatre fois, il mourut d'une crise cardiaque à 70 ans, respecté des traditionalistes et des universitaires.",
-      "works": ["coomaraswamy-danse"],
-      "tags": ["art indien", "tradition", "métaphysique"]
+      "works": [
+        "coomaraswamy-danse"
+      ],
+      "tags": [
+        "art indien",
+        "tradition",
+        "métaphysique"
+      ]
     },
     {
       "id": "corbin",
@@ -2006,8 +3026,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Philosophe et iranologue français, explorateur de l'islam spirituel. L'Imagination créatrice dans le soufisme d'Ibn Arabi ouvre le mundus imaginalis. Premier traducteur de Heidegger en français, il se tourna vers l'Iran et Suhrawardî. Professeur à Téhéran et à l'EPHE, il mourut à Paris, laissant une œuvre immense sur l'ésotérisme islamique.",
-      "works": ["corbin-imagination"],
-      "tags": ["iran", "soufisme", "imagination"]
+      "works": [
+        "corbin-imagination"
+      ],
+      "tags": [
+        "iran",
+        "soufisme",
+        "imagination"
+      ]
     },
     {
       "id": "junger",
@@ -2017,8 +3043,14 @@
       "origin": "Heidelberg, Allemagne",
       "lang": "de",
       "bio": "Écrivain allemand, esthète de la guerre et de la drogue. Orages d'acier glorifie l'expérience des tranchées. Héros décoré, il refusa de collaborer avec les nazis tout en les côtoyant. Il expérimenta le LSD avec Hofmann. Il vécut 102 ans, se convertit au catholicisme, et mourut légendaire et controversé.",
-      "works": ["junger-orages"],
-      "tags": ["guerre", "drogue", "longévité"]
+      "works": [
+        "junger-orages"
+      ],
+      "tags": [
+        "guerre",
+        "drogue",
+        "longévité"
+      ]
     },
     {
       "id": "schmitt",
@@ -2028,8 +3060,14 @@
       "origin": "Plettenberg, Allemagne",
       "lang": "de",
       "bio": "Juriste et philosophe politique allemand, théoricien de l'exception. La Notion de politique définit le politique par la distinction ami-ennemi. Il rejoignit le parti nazi en 1933 et justifia les purges. Interné après-guerre, il ne se repentit jamais, écrivant depuis son village natal. Maudit et lu par la gauche comme la droite.",
-      "works": ["schmitt-politique"],
-      "tags": ["souveraineté", "exception", "nazisme"]
+      "works": [
+        "schmitt-politique"
+      ],
+      "tags": [
+        "souveraineté",
+        "exception",
+        "nazisme"
+      ]
     },
     {
       "id": "spengler",
@@ -2039,8 +3077,14 @@
       "origin": "Blankenburg, Allemagne",
       "lang": "de",
       "bio": "Philosophe de l'histoire allemand, prophète du déclin. Le Déclin de l'Occident annonça la mort de la culture faustienne. Professeur raté, il vécut de peu, écrivant dans la solitude. Les nazis le courtisèrent mais il les méprisa. Il mourut d'une crise cardiaque, amer, convaincu que l'Europe sombrait.",
-      "works": ["spengler-declin"],
-      "tags": ["déclin", "culture", "prophétie"]
+      "works": [
+        "spengler-declin"
+      ],
+      "tags": [
+        "déclin",
+        "culture",
+        "prophétie"
+      ]
     },
     {
       "id": "weininger",
@@ -2050,8 +3094,14 @@
       "origin": "Vienne, Autriche",
       "lang": "de",
       "bio": "Philosophe autrichien, météore autodestucteur. Sexe et Caractère, misogyne et antisémite (lui-même juif converti), fascina Wittgenstein et Strindberg. À 23 ans, il loua la chambre où Beethoven était mort et se tira une balle dans le cœur. Son suicide fit de son livre un best-seller.",
-      "works": ["weininger-sexe"],
-      "tags": ["sexe", "antisémitisme", "suicide"]
+      "works": [
+        "weininger-sexe"
+      ],
+      "tags": [
+        "sexe",
+        "antisémitisme",
+        "suicide"
+      ]
     },
     {
       "id": "kraus",
@@ -2061,8 +3111,14 @@
       "origin": "Jičín, Bohême",
       "lang": "de",
       "bio": "Satiriste autrichien, imprécateur de la presse. Die Fackel, sa revue, attaqua pendant 37 ans le journalisme, la corruption, la guerre. Juif sorti du judaïsme, catholique sorti du catholicisme, il n'épargna personne. Les Derniers Jours de l'humanité fait de la guerre 14-18 une apocalypse. Il mourut d'une crise cardiaque, Vienne s'effondrant.",
-      "works": ["kraus-derniers"],
-      "tags": ["satire", "presse", "vienne"]
+      "works": [
+        "kraus-derniers"
+      ],
+      "tags": [
+        "satire",
+        "presse",
+        "vienne"
+      ]
     },
     {
       "id": "gunther",
@@ -2072,8 +3128,14 @@
       "origin": "Arnsdorf, Allemagne",
       "lang": "de",
       "bio": "Philosophe et logicien germano-américain, penseur de la cybernétique. Il développa une logique polycontexturale dépassant le bivalent aristotélicien. Fuyant les nazis (sa femme était juive), il s'installa aux États-Unis et travailla avec Heinz von Foerster. Ses écrits de science-fiction précédèrent ses travaux logiques. Penseur marginal, redécouvert par les théoriciens des systèmes.",
-      "works": ["gunther-conscience"],
-      "tags": ["logique", "cybernétique", "polycontexture"]
+      "works": [
+        "gunther-conscience"
+      ],
+      "tags": [
+        "logique",
+        "cybernétique",
+        "polycontexture"
+      ]
     },
     {
       "id": "blumenberg",
@@ -2083,8 +3145,14 @@
       "origin": "Lübeck, Allemagne",
       "lang": "de",
       "bio": "Philosophe allemand, penseur de la métaphorologie. La Légitimité des temps modernes défend la modernité contre ses critiques. Demi-juif sous le nazisme, il survécut caché. Professeur à Münster, il refusait les interviews et ne voyageait jamais. Œuvre immense sur le mythe, la technique, la curiosité. Il mourut reclus, travaillant jusqu'au bout.",
-      "works": ["blumenberg-legitimite"],
-      "tags": ["métaphore", "modernité", "mythe"]
+      "works": [
+        "blumenberg-legitimite"
+      ],
+      "tags": [
+        "métaphore",
+        "modernité",
+        "mythe"
+      ]
     },
     {
       "id": "luhmann",
@@ -2094,8 +3162,14 @@
       "origin": "Lunebourg, Allemagne",
       "lang": "de",
       "bio": "Sociologue allemand, architecte de la théorie des systèmes. Systèmes sociaux propose une théorie universelle de la société. Fonctionnaire puis professeur à Bielefeld, il écrivit 70 livres grâce à son légendaire fichier de notes (Zettelkasten). Quand on lui demanda son projet, il répondit : « Théorie de la société. Durée : 30 ans. Coût : zéro. »",
-      "works": ["luhmann-systemes"],
-      "tags": ["systèmes", "complexité", "sociologie"]
+      "works": [
+        "luhmann-systemes"
+      ],
+      "tags": [
+        "systèmes",
+        "complexité",
+        "sociologie"
+      ]
     },
     {
       "id": "walshe",
@@ -2105,8 +3179,15 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Germaniste et traducteur bouddhiste britannique. Il traduisit les sermons de Maître Eckhart en anglais, révélant le mystique rhénan au monde anglophone. Converti au bouddhisme Theravāda, il traduisit ensuite le Dīgha Nikāya (Longs Discours du Bouddha). Professeur à Londres, il vécut entre deux traditions contemplatives, discret et érudit.",
-      "works": ["walshe-eckhart", "walshe-digha"],
-      "tags": ["traduction", "bouddhisme", "eckhart"]
+      "works": [
+        "walshe-eckhart",
+        "walshe-digha"
+      ],
+      "tags": [
+        "traduction",
+        "bouddhisme",
+        "eckhart"
+      ]
     },
     {
       "id": "grothendieck",
@@ -2116,8 +3197,14 @@
       "origin": "Berlin, Allemagne",
       "lang": "fr",
       "bio": "Mathématicien français d'origine allemande, révolutionnaire de la géométrie algébrique. Apatride, fils d'anarchistes (son père mourut à Auschwitz), il refonda les mathématiques sur de nouvelles bases. En 1970, il quitta l'IHÉS pour des raisons politiques. Il devint ermite, écrivant des milliers de pages mystiques dans un village des Pyrénées. Il brûla ses manuscrits et mourut seul, refusant le monde.",
-      "works": ["grothendieck-ega"],
-      "tags": ["géométrie", "anarchie", "ermite"]
+      "works": [
+        "grothendieck-ega"
+      ],
+      "tags": [
+        "géométrie",
+        "anarchie",
+        "ermite"
+      ]
     },
     {
       "id": "godel",
@@ -2127,8 +3214,14 @@
       "origin": "Brno, Moravie",
       "lang": "de",
       "bio": "Logicien austro-américain, destructeur des certitudes. Ses théorèmes d'incomplétude prouvent qu'aucun système cohérent ne peut prouver sa propre cohérence. Ami d'Einstein à Princeton, il croyait en Dieu et aux fantômes. Paranoïaque, il craignait d'être empoisonné et ne mangeait que ce que préparait sa femme. Quand elle fut hospitalisée, il se laissa mourir de faim.",
-      "works": ["godel-incompletude"],
-      "tags": ["logique", "incomplétude", "paranoïa"]
+      "works": [
+        "godel-incompletude"
+      ],
+      "tags": [
+        "logique",
+        "incomplétude",
+        "paranoïa"
+      ]
     },
     {
       "id": "cantor",
@@ -2138,8 +3231,14 @@
       "origin": "Saint-Pétersbourg, Russie",
       "lang": "de",
       "bio": "Mathématicien allemand, créateur de la théorie des ensembles. Il prouva l'existence de différentes tailles d'infini — révolution que Kronecker, son ennemi, combattit férocement. Dépressif, il passa ses dernières années dans des sanatoriums. Il mourut dans un asile pendant la guerre, affamé, oublié, ses idées triomphantes.",
-      "works": ["cantor-ensembles"],
-      "tags": ["infini", "ensembles", "folie"]
+      "works": [
+        "cantor-ensembles"
+      ],
+      "tags": [
+        "infini",
+        "ensembles",
+        "folie"
+      ]
     },
     {
       "id": "galois",
@@ -2149,8 +3248,14 @@
       "origin": "Bourg-la-Reine, France",
       "lang": "fr",
       "bio": "Mathématicien français, génie foudroyé. Il fonda la théorie des groupes à 17 ans — travaux rejetés par l'Académie. Républicain ardent, emprisonné, il fut tué en duel à 20 ans pour une obscure affaire de cœur. La nuit précédente, il écrivit fiévreusement ses théorèmes, griffonnant « je n'ai pas le temps ». Ils changèrent les mathématiques.",
-      "works": ["galois-memoires"],
-      "tags": ["groupes", "duel", "précocité"]
+      "works": [
+        "galois-memoires"
+      ],
+      "tags": [
+        "groupes",
+        "duel",
+        "précocité"
+      ]
     },
     {
       "id": "ramanujan",
@@ -2160,8 +3265,14 @@
       "origin": "Erode, Inde",
       "lang": "ta",
       "bio": "Mathématicien indien autodidacte, prodige des formules. Sans formation formelle, il découvrit des milliers de résultats, certains encore inexpliqués. Hardy le fit venir à Cambridge. Végétarien strict en Angleterre en guerre, il tomba malade. De retour en Inde, il mourut à 32 ans. Ses carnets continuent de livrer des trésors.",
-      "works": ["ramanujan-carnets"],
-      "tags": ["formules", "intuition", "prodige"]
+      "works": [
+        "ramanujan-carnets"
+      ],
+      "tags": [
+        "formules",
+        "intuition",
+        "prodige"
+      ]
     },
     {
       "id": "turing",
@@ -2171,8 +3282,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Mathématicien britannique, père de l'informatique. Sa machine de Turing fonde la théorie du calcul. Il brisa le code Enigma et sauva des millions de vies. Homosexuel, il fut condamné à la castration chimique. On le trouva mort, une pomme croquée à côté de lui — probablement cyanure. Gracié à titre posthume en 2013.",
-      "works": ["turing-calculables"],
-      "tags": ["calcul", "enigma", "persécution"]
+      "works": [
+        "turing-calculables"
+      ],
+      "tags": [
+        "calcul",
+        "enigma",
+        "persécution"
+      ]
     },
     {
       "id": "nash",
@@ -2182,8 +3299,14 @@
       "origin": "Bluefield, États-Unis",
       "lang": "en",
       "bio": "Mathématicien américain, génie et schizophrène. L'équilibre de Nash révolutionna la théorie des jeux. À 30 ans, la schizophrénie le frappa — il crut recevoir des messages extraterrestres. Décennies d'errance puis lente guérison. Prix Nobel 1994. Il mourut avec sa femme dans un accident de taxi, rentrant de recevoir le prix Abel.",
-      "works": ["nash-jeux"],
-      "tags": ["jeux", "schizophrénie", "nobel"]
+      "works": [
+        "nash-jeux"
+      ],
+      "tags": [
+        "jeux",
+        "schizophrénie",
+        "nobel"
+      ]
     },
     {
       "id": "erdos",
@@ -2193,8 +3316,14 @@
       "origin": "Budapest, Hongrie",
       "lang": "hu",
       "bio": "Mathématicien hongrois, nomade de la pensée. Il publia plus de 1 500 articles, collaborant avec des centaines de mathématiciens (le « nombre d'Erdős » mesure la distance à lui). Sans domicile fixe, il vivait de conférences en conférences, ses affaires dans une valise. Sous amphétamines, il travaillait 19 heures par jour. Il mourut à une conférence à Varsovie.",
-      "works": ["erdos-nombres"],
-      "tags": ["collaboration", "nomade", "problèmes"]
+      "works": [
+        "erdos-nombres"
+      ],
+      "tags": [
+        "collaboration",
+        "nomade",
+        "problèmes"
+      ]
     },
     {
       "id": "noether",
@@ -2204,8 +3333,14 @@
       "origin": "Erlangen, Allemagne",
       "lang": "de",
       "bio": "Mathématicienne allemande, mère de l'algèbre abstraite. Le théorème de Noether lie symétries et lois de conservation — Einstein l'admirait. Femme dans un monde d'hommes, elle enseigna d'abord sans salaire. Juive, chassée par les nazis, elle s'exila à Bryn Mawr. Elle mourut d'une opération à 53 ans, enterrée dans un cloître quaker.",
-      "works": ["noether-algebre"],
-      "tags": ["algèbre", "symétrie", "femme"]
+      "works": [
+        "noether-algebre"
+      ],
+      "tags": [
+        "algèbre",
+        "symétrie",
+        "femme"
+      ]
     },
     {
       "id": "weil-andre",
@@ -2215,8 +3350,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Mathématicien français, fondateur de Bourbaki. Frère de Simone Weil, il révolutionna la géométrie algébrique. Pacifiste, il refusa de servir en 1939 et fut emprisonné en Finlande puis en France. Il s'exila aux États-Unis et enseigna à Princeton. Autobiographie d'un mathématicien raconte une vie vouée aux nombres. Il mourut à 92 ans.",
-      "works": ["weil-autobiographie"],
-      "tags": ["bourbaki", "géométrie", "prison"]
+      "works": [
+        "weil-autobiographie"
+      ],
+      "tags": [
+        "bourbaki",
+        "géométrie",
+        "prison"
+      ]
     },
     {
       "id": "kovalevskaya",
@@ -2226,8 +3367,14 @@
       "origin": "Moscou, Russie",
       "lang": "ru",
       "bio": "Mathématicienne russe, première femme professeure en Europe du Nord. Elle épousa un ami pour quitter la Russie (les femmes ne pouvaient voyager seules). À Göttingen, elle obtint son doctorat sans même assister aux cours. Professeure à Stockholm, prix Bordin à Paris. Elle mourut de grippe à 41 ans, laissant une fille et des mémoires romanesques.",
-      "works": ["kovalevskaya-memoires"],
-      "tags": ["femme", "analyse", "russie"]
+      "works": [
+        "kovalevskaya-memoires"
+      ],
+      "tags": [
+        "femme",
+        "analyse",
+        "russie"
+      ]
     },
     {
       "id": "bauer",
@@ -2237,8 +3384,15 @@
       "origin": "Eisenberg, Allemagne",
       "lang": "de",
       "bio": "Philosophe et théologien allemand, figure centrale des Jeunes Hégéliens. Sa critique radicale des Évangiles — il nia l'existence historique de Jésus — lui coûta sa chaire à Bonn en 1842. Ami puis rival de Marx, il influença profondément la gauche hégélienne. Ruiné, il finit ses jours dans l'obscurité, tenant une boutique de tabac à Rixdorf, oublié de tous sauf de Nietzsche qui le salua.",
-      "works": ["bauer-christianisme"],
-      "tags": ["théologie", "hegel", "athéisme"]
+      "works": [
+        "bauer-christianisme"
+      ],
+      "tags": [
+        "théologie",
+        "hegel",
+        "athéisme",
+        "hégélianisme"
+      ]
     },
     {
       "id": "feuerbach",
@@ -2248,8 +3402,15 @@
       "origin": "Landshut, Bavière",
       "lang": "de",
       "bio": "Philosophe allemand, père de l'athéisme moderne. L'Essence du christianisme (1841) retourna Hegel : Dieu n'est que l'homme projeté dans l'infini. Marx et Engels en furent bouleversés. Exclu de l'université pour athéisme, il vécut retiré à la campagne avec sa femme. Ruiné par la faillite de la porcelainerie familiale, il mourut pauvre, soutenu par les socialistes.",
-      "works": ["feuerbach-essence-christianisme"],
-      "tags": ["athéisme", "hegel", "matérialisme"]
+      "works": [
+        "feuerbach-essence-christianisme"
+      ],
+      "tags": [
+        "athéisme",
+        "hegel",
+        "matérialisme",
+        "hégélianisme"
+      ]
     },
     {
       "id": "stirner",
@@ -2259,8 +3420,15 @@
       "origin": "Bayreuth, Bavière",
       "lang": "de",
       "bio": "Philosophe allemand, prophète de l'égoïsme radical. L'Unique et sa propriété (1844) rejette tout — Dieu, État, humanité, morale — au profit du Moi souverain. Marx le réfuta dans 300 pages furieuses. Stirner vécut misérablement : deux mariages ratés, prison pour dettes, mort oublié dans une mansarde berlinoise. Les anarchistes le redécouvrirent.",
-      "works": ["stirner-unique"],
-      "tags": ["anarchisme", "égoïsme", "nihilisme"]
+      "works": [
+        "stirner-unique"
+      ],
+      "tags": [
+        "anarchisme",
+        "égoïsme",
+        "nihilisme",
+        "hégélianisme"
+      ]
     },
     {
       "id": "strauss",
@@ -2270,8 +3438,15 @@
       "origin": "Ludwigsburg, Wurtemberg",
       "lang": "de",
       "bio": "Théologien allemand qui fit scandale. Sa Vie de Jésus (1835) traita les Évangiles comme des mythes — pas des mensonges, mais des créations poétiques inconscientes. Carrière universitaire brisée à 27 ans. Mariage désastreux avec une cantatrice. Nietzsche l'attaqua comme « philistin de la culture ». Il mourut amer, convaincu d'avoir eu raison trop tôt.",
-      "works": ["strauss-vie-jesus"],
-      "tags": ["théologie", "mythologie", "critique biblique"]
+      "works": [
+        "strauss-vie-jesus"
+      ],
+      "tags": [
+        "théologie",
+        "mythologie",
+        "critique biblique",
+        "hégélianisme"
+      ]
     },
     {
       "id": "ruge",
@@ -2281,8 +3456,15 @@
       "origin": "Bergen auf Rügen, Prusse",
       "lang": "de",
       "bio": "Philosophe et journaliste allemand, organisateur des Jeunes Hégéliens. Il édita les Annales allemandes puis les Annales franco-allemandes avec Marx à Paris — avant de se brouiller avec lui. Emprisonné six ans pour activités révolutionnaires dans sa jeunesse. Exilé après 1848, il finit ses jours à Brighton, écrivant ses mémoires que personne ne lut.",
-      "works": ["ruge-annales"],
-      "tags": ["journalisme", "hegel", "révolution"]
+      "works": [
+        "ruge-annales"
+      ],
+      "tags": [
+        "journalisme",
+        "hegel",
+        "révolution",
+        "hégélianisme"
+      ]
     },
     {
       "id": "hess",
@@ -2292,8 +3474,15 @@
       "origin": "Bonn, Allemagne",
       "lang": "de",
       "bio": "Philosophe allemand, « rabbin communiste ». Il convertit Engels au communisme et influença Marx. Mais il rompit avec eux pour défendre le nationalisme juif — son Rome et Jérusalem (1862) est un texte fondateur du sionisme. Oublié de son vivant entre socialistes et sionistes, il fut réhabilité par les deux camps après sa mort.",
-      "works": ["hess-rome-jerusalem"],
-      "tags": ["socialisme", "sionisme", "hegel"]
+      "works": [
+        "hess-rome-jerusalem"
+      ],
+      "tags": [
+        "socialisme",
+        "sionisme",
+        "hegel",
+        "hégélianisme"
+      ]
     },
     {
       "id": "goga",
@@ -2303,8 +3492,14 @@
       "origin": "Rășinari, Transylvanie",
       "lang": "ro",
       "bio": "Poète et homme politique roumain, voix du nationalisme transylvain. Ses vers célébraient les paysans et la terre — lyrisme puissant, âme torturée. Mais la politique le dévora : Premier ministre en 1937, il promulgua des lois antisémites. Quarante-quatre jours plus tard, le roi le congédia. Il mourut quelques mois après, poète oublié sous le politicien maudit.",
-      "works": ["goga-poesii"],
-      "tags": ["poésie", "nationalisme", "roumanie"]
+      "works": [
+        "goga-poesii"
+      ],
+      "tags": [
+        "poésie",
+        "nationalisme",
+        "roumanie"
+      ]
     },
     {
       "id": "lassalle",
@@ -2314,8 +3509,14 @@
       "origin": "Breslau, Prusse",
       "lang": "de",
       "bio": "Socialiste allemand, fondateur du mouvement ouvrier. Juif flamboyant, orateur magnétique, il créa l'Association générale des travailleurs allemands. Marx le méprisait et l'admirait. À 39 ans, il mourut en duel pour une femme — Hélène von Dönniges, dont le père refusait le mariage. Trois jours d'agonie. Le mouvement ouvrier perdit son tribun.",
-      "works": ["lassalle-programme-ouvriers"],
-      "tags": ["socialisme", "mouvement ouvrier", "duel"]
+      "works": [
+        "lassalle-programme-ouvriers"
+      ],
+      "tags": [
+        "socialisme",
+        "mouvement ouvrier",
+        "duel"
+      ]
     },
     {
       "id": "okudzhava",
@@ -2325,8 +3526,15 @@
       "origin": "Moscou, URSS",
       "lang": "ru",
       "bio": "Barde soviétique, père de la chanson d'auteur russe. Fils de communistes géorgiens fusillés par Staline, il survécut à la guerre puis chanta la tendresse et l'absurdité. Sa guitare et sa voix douce contournaient la censure. Arbat, son quartier, devint synonyme de poésie intime. Il mourut à Paris, exilé volontaire d'un pays qui n'existait plus.",
-      "works": ["okudzhava-chansons"],
-      "tags": ["barde", "chanson", "moscou"]
+      "works": [
+        "okudzhava-chansons"
+      ],
+      "tags": [
+        "barde",
+        "chanson",
+        "moscou",
+        "poésie russe"
+      ]
     },
     {
       "id": "vysotsky",
@@ -2336,8 +3544,15 @@
       "origin": "Moscou, URSS",
       "lang": "ru",
       "bio": "Acteur et barde soviétique, voix rauque d'une génération. Ses chansons circulaient sur cassettes pirates — le pouvoir ne pouvait ni le publier ni le faire taire. Alcool, drogues, trois mariages dont Marina Vlady. Il mourut à 42 ans pendant les JO de Moscou. Des milliers vinrent à ses funérailles que le régime voulait discrètes.",
-      "works": ["vysotsky-chansons"],
-      "tags": ["barde", "théâtre", "samizdat"]
+      "works": [
+        "vysotsky-chansons"
+      ],
+      "tags": [
+        "barde",
+        "théâtre",
+        "samizdat",
+        "poésie russe"
+      ]
     },
     {
       "id": "akhmatova",
@@ -2347,8 +3562,15 @@
       "origin": "Odessa, Empire russe",
       "lang": "ru",
       "bio": "Poétesse russe, voix de la souffrance. Premier mari fusillé, fils au goulag, elle-même interdite de publication pendant des décennies. Requiem, son chef-d'œuvre sur la Terreur, circula en secret — elle le récitait à des amis qui le mémorisaient. Jamais elle ne quitta la Russie. « J'étais avec mon peuple, là où mon peuple, pour son malheur, se trouvait. »",
-      "works": ["akhmatova-requiem"],
-      "tags": ["poésie", "terreur", "mémoire"]
+      "works": [
+        "akhmatova-requiem"
+      ],
+      "tags": [
+        "poésie",
+        "terreur",
+        "mémoire",
+        "poésie russe"
+      ]
     },
     {
       "id": "mandelstam",
@@ -2358,8 +3580,15 @@
       "origin": "Varsovie, Empire russe",
       "lang": "ru",
       "bio": "Poète russe, martyr de la poésie. Son épigramme contre Staline — « ses doigts gras comme des vers » — le condamna. Arrêté, exilé, arrêté encore, il mourut dans un camp de transit près de Vladivostok, fou, fouillant les ordures. Sa femme Nadejda passa sa vie à préserver ses vers par cœur. « La poésie est le pouvoir. »",
-      "works": ["mandelstam-poemes"],
-      "tags": ["poésie", "goulag", "acméisme"]
+      "works": [
+        "mandelstam-poemes"
+      ],
+      "tags": [
+        "poésie",
+        "goulag",
+        "acméisme",
+        "poésie russe"
+      ]
     },
     {
       "id": "tsvetaeva",
@@ -2369,8 +3598,15 @@
       "origin": "Moscou, Empire russe",
       "lang": "ru",
       "bio": "Poétesse russe, flamme dévorante. Émigration à Prague et Paris, misère, retour en URSS en 1939 — désastre. Mari fusillé, fille au goulag, elle-même évacuée à Ielabouga pendant la guerre. Elle se pendit dans une isba. Personne ne sait où elle est enterrée. Pasternak : « Elle avait une âme masculine, résolue, indomptable. »",
-      "works": ["tsvetaeva-poemes"],
-      "tags": ["poésie", "émigration", "suicide"]
+      "works": [
+        "tsvetaeva-poemes"
+      ],
+      "tags": [
+        "poésie",
+        "émigration",
+        "suicide",
+        "poésie russe"
+      ]
     },
     {
       "id": "brodsky",
@@ -2380,8 +3616,15 @@
       "origin": "Leningrad, URSS",
       "lang": "ru",
       "bio": "Poète russo-américain, Nobel 1987. Autodidacte, juif, il fut jugé pour « parasitisme social » à 24 ans — son procès devint célèbre. Exilé en 1972, il s'installa à New York et écrivit aussi en anglais. Cœur fragile, il mourut à 55 ans dans son appartement de Brooklyn. Enterré à Venise, sa ville adorée.",
-      "works": ["brodsky-poemes"],
-      "tags": ["poésie", "exil", "nobel"]
+      "works": [
+        "brodsky-poemes"
+      ],
+      "tags": [
+        "poésie",
+        "exil",
+        "nobel",
+        "poésie russe"
+      ]
     },
     {
       "id": "celan",
@@ -2391,8 +3634,14 @@
       "origin": "Cernăuți, Roumanie",
       "lang": "de",
       "bio": "Poète roumain de langue allemande, survivant de la Shoah. Ses parents périrent dans les camps ; lui survécut au travail forcé. Todesfuge (Fugue de mort) est le poème de l'Holocauste. Installé à Paris, il traduisit, enseigna, sombra dans la dépression. Il se jeta dans la Seine depuis le pont Mirabeau. Écrire après Auschwitz — il essaya.",
-      "works": ["celan-pavot-memoire"],
-      "tags": ["shoah", "poésie", "allemand"]
+      "works": [
+        "celan-pavot-memoire"
+      ],
+      "tags": [
+        "shoah",
+        "poésie",
+        "allemand"
+      ]
     },
     {
       "id": "milosz",
@@ -2402,8 +3651,14 @@
       "origin": "Šeteniai, Lituanie",
       "lang": "pl",
       "bio": "Poète polonais, Nobel 1980. Résistant à Varsovie, diplomate communiste, puis dissident exilé à Paris et Berkeley. La Pensée captive analysa la séduction du stalinisme sur les intellectuels. Il rentra en Pologne après 1989, héros national. « Ce qui est trop grand pour la raison se réfugie dans la poésie. »",
-      "works": ["milosz-pensee-captive"],
-      "tags": ["poésie", "exil", "nobel"]
+      "works": [
+        "milosz-pensee-captive"
+      ],
+      "tags": [
+        "poésie",
+        "exil",
+        "nobel"
+      ]
     },
     {
       "id": "szymborska",
@@ -2413,8 +3668,14 @@
       "origin": "Kórnik, Pologne",
       "lang": "pl",
       "bio": "Poétesse polonaise, Nobel 1996. Discrète, ironique, elle écrivait peu — 350 poèmes en 60 ans. Stalinienne repentie, elle trouva sa voix dans le doute et l'émerveillement quotidien. « Je ne sais pas » était sa devise. Elle vécut à Cracovie, refusa les honneurs, resta fidèle à son petit appartement et à ses chats.",
-      "works": ["szymborska-poemes"],
-      "tags": ["poésie", "ironie", "nobel"]
+      "works": [
+        "szymborska-poemes"
+      ],
+      "tags": [
+        "poésie",
+        "ironie",
+        "nobel"
+      ]
     },
     {
       "id": "brel",
@@ -2424,8 +3685,14 @@
       "origin": "Schaerbeek, Belgique",
       "lang": "fr",
       "bio": "Chanteur belge, poète de la chair et du désespoir. Il quitta la cartonnerie familiale pour Paris, échoua, puis triompha. Amsterdam, Ne me quitte pas, La Quête — il brûlait sur scène. À 37 ans, il arrêta tout pour naviguer aux Marquises. Cancer du poumon. Il revint mourir à Paris, laissant un dernier album enregistré entre les chimios.",
-      "works": ["brel-chansons"],
-      "tags": ["chanson", "belgique", "passion"]
+      "works": [
+        "brel-chansons"
+      ],
+      "tags": [
+        "chanson",
+        "belgique",
+        "passion"
+      ]
     },
     {
       "id": "brassens",
@@ -2435,8 +3702,14 @@
       "origin": "Sète, France",
       "lang": "fr",
       "bio": "Chanteur français, anarchiste tendre. Fils de maçon, il monta à Paris, vécut dans une impasse pendant 22 ans chez Jeanne, sa logeuse. Moustache, pipe, guitare — il chantait la mort, les putains, les curés, avec une langue ciselée. Jamais marié, jamais propriétaire. « Le temps ne fait rien à l'affaire / Quand on est con, on est con. »",
-      "works": ["brassens-chansons"],
-      "tags": ["chanson", "anarchisme", "poésie"]
+      "works": [
+        "brassens-chansons"
+      ],
+      "tags": [
+        "chanson",
+        "anarchisme",
+        "poésie"
+      ]
     },
     {
       "id": "ferre",
@@ -2446,8 +3719,14 @@
       "origin": "Monaco",
       "lang": "fr",
       "bio": "Chanteur français, anarchiste furieux. Il mit Rimbaud, Verlaine, Aragon en musique. Avec le temps reste son testament. Trois mariages, une guenon nommée Pépée qu'il traita comme sa fille. Il finit ses jours en Toscane, misanthrope et tendre, orchestrant ses propres symphonies. « La poésie est une clameur. Elle doit être entendue comme la musique. »",
-      "works": ["ferre-chansons"],
-      "tags": ["chanson", "anarchisme", "poésie"]
+      "works": [
+        "ferre-chansons"
+      ],
+      "tags": [
+        "chanson",
+        "anarchisme",
+        "poésie"
+      ]
     },
     {
       "id": "lorca",
@@ -2457,8 +3736,14 @@
       "origin": "Fuente Vaqueros, Espagne",
       "lang": "es",
       "bio": "Poète et dramaturge espagnol, âme du duende. Romancero gitano, Noces de sang — il chanta l'Andalousie, la mort, le désir interdit. Homosexuel dans l'Espagne catholique, ami de Dalí et Buñuel. Les nationalistes le fusillèrent à Grenade au début de la guerre civile. Son corps n'a jamais été retrouvé. Il avait 38 ans.",
-      "works": ["lorca-romancero"],
-      "tags": ["poésie", "théâtre", "guerre civile"]
+      "works": [
+        "lorca-romancero"
+      ],
+      "tags": [
+        "poésie",
+        "théâtre",
+        "guerre civile"
+      ]
     },
     {
       "id": "biermann",
@@ -2468,8 +3753,14 @@
       "origin": "Hambourg, Allemagne",
       "lang": "de",
       "bio": "Chanteur est-allemand, fils de communiste mort à Auschwitz. Il choisit la RDA à 17 ans, puis la critiqua — interdit de scène pendant 11 ans. En 1976, pendant une tournée à l'Ouest, le régime lui retira sa citoyenneté. Il resta à l'Ouest, chantant toujours contre les murs, jusqu'à leur chute. Encore vivant, encore mordant.",
-      "works": ["biermann-chansons"],
-      "tags": ["barde", "dissident", "rda"]
+      "works": [
+        "biermann-chansons"
+      ],
+      "tags": [
+        "barde",
+        "dissident",
+        "rda"
+      ]
     },
     {
       "id": "teilhard",
@@ -2479,8 +3770,15 @@
       "origin": "Orcines, France",
       "lang": "fr",
       "bio": "Jésuite, paléontologue et mystique français. Il découvrit l'Homme de Pékin, puis écrivit Le Phénomène humain — vision de l'évolution convergeant vers le Point Oméga, Christ cosmique. Rome interdit ses œuvres ; il mourut exilé à New York. Publié après sa mort, il devint prophète de la noosphère, encensé et condamné.",
-      "works": ["teilhard-phenomene-humain"],
-      "tags": ["noosphère", "évolution", "mystique"]
+      "works": [
+        "teilhard-phenomene-humain"
+      ],
+      "tags": [
+        "noosphère",
+        "évolution",
+        "mystique",
+        "cosmisme"
+      ]
     },
     {
       "id": "vernadsky",
@@ -2490,8 +3788,15 @@
       "origin": "Saint-Pétersbourg, Russie",
       "lang": "ru",
       "bio": "Géochimiste russe, père de la biosphère. Il vit la vie comme force géologique, transformant la Terre. Avec Teilhard, il forgea le concept de noosphère — la pensée humaine comme nouvelle couche planétaire. Respecté par les Soviétiques malgré ses origines nobles, il mourut en pleine guerre, visionnaire ignoré en Occident.",
-      "works": ["vernadsky-biosphere"],
-      "tags": ["biosphère", "noosphère", "géochimie"]
+      "works": [
+        "vernadsky-biosphere"
+      ],
+      "tags": [
+        "biosphère",
+        "noosphère",
+        "géochimie",
+        "cosmisme"
+      ]
     },
     {
       "id": "fedorov",
@@ -2501,8 +3806,14 @@
       "origin": "Klioutchi, Russie",
       "lang": "ru",
       "bio": "Bibliothécaire et philosophe russe, père du cosmisme. Son projet : ressusciter tous les morts par la science et coloniser l'univers pour les loger. Tolstoï et Dostoïevski l'admiraient. Il refusait de publier, vivait en ascète, donnait son salaire. Ses disciples construisirent des fusées.",
-      "works": ["fedorov-philosophie-oeuvre-commune"],
-      "tags": ["cosmisme", "résurrection", "utopie"]
+      "works": [
+        "fedorov-philosophie-oeuvre-commune"
+      ],
+      "tags": [
+        "cosmisme",
+        "résurrection",
+        "utopie"
+      ]
     },
     {
       "id": "tsiolkovsky",
@@ -2512,8 +3823,14 @@
       "origin": "Ijevsk, Russie",
       "lang": "ru",
       "bio": "Instituteur sourd et visionnaire, père de l'astronautique. Dans sa cabane de Kalouga, il calcula les équations des fusées et rêva de colonies spatiales. Disciple de Fiodorov : l'humanité doit quitter son berceau. Il mourut avant Spoutnik, mais les Soviétiques le célébrèrent comme prophète.",
-      "works": ["tsiolkovsky-fusees"],
-      "tags": ["cosmisme", "astronautique", "visionnaire"]
+      "works": [
+        "tsiolkovsky-fusees"
+      ],
+      "tags": [
+        "cosmisme",
+        "astronautique",
+        "visionnaire"
+      ]
     },
     {
       "id": "bergson",
@@ -2523,8 +3840,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Philosophe français, Nobel 1927. L'Évolution créatrice opposa l'élan vital au mécanisme darwinien. Star intellectuelle de la Belle Époque, il remplissait des amphithéâtres. Juif, il refusa les exemptions de Vichy et fit la queue pour se faire recenser. Il mourut d'une pneumonie contractée dans cette file.",
-      "works": ["bergson-evolution-creatrice"],
-      "tags": ["élan vital", "durée", "intuition"]
+      "works": [
+        "bergson-evolution-creatrice"
+      ],
+      "tags": [
+        "élan vital",
+        "durée",
+        "intuition"
+      ]
     },
     {
       "id": "whitehead",
@@ -2534,8 +3857,14 @@
       "origin": "Ramsgate, Angleterre",
       "lang": "en",
       "bio": "Mathématicien et philosophe britannique. Avec Russell, il écrivit Principia Mathematica. À 63 ans, il partit pour Harvard et inventa la philosophie du processus : la réalité n'est pas faite de choses mais d'événements. Dieu lui-même devient. Obscur et profond, il reste le philosophe des philosophes.",
-      "works": ["whitehead-process-reality"],
-      "tags": ["processus", "métaphysique", "mathématiques"]
+      "works": [
+        "whitehead-process-reality"
+      ],
+      "tags": [
+        "processus",
+        "métaphysique",
+        "mathématiques"
+      ]
     },
     {
       "id": "lovelock",
@@ -2545,8 +3874,14 @@
       "origin": "Letchworth, Angleterre",
       "lang": "en",
       "bio": "Scientifique indépendant britannique, père de l'hypothèse Gaïa. Travaillant pour la NASA, il comprit que la Terre régule elle-même son climat — organisme vivant, pas machine. Les scientifiques rirent, puis réfléchirent. Il vécut jusqu'à 103 ans, ermite dans le Devon, Cassandre du climat.",
-      "works": ["lovelock-gaia"],
-      "tags": ["gaïa", "écologie", "climat"]
+      "works": [
+        "lovelock-gaia"
+      ],
+      "tags": [
+        "gaïa",
+        "écologie",
+        "climat"
+      ]
     },
     {
       "id": "margulis",
@@ -2556,8 +3891,14 @@
       "origin": "Chicago, États-Unis",
       "lang": "en",
       "bio": "Biologiste américaine, révolutionnaire de l'évolution. Sa théorie de l'endosymbiose — les mitochondries furent des bactéries libres — fut rejetée 15 fois avant publication. Elle prouva que la coopération, pas seulement la compétition, crée la complexité. Mariée à Sagan, elle le quitta pour la science.",
-      "works": ["margulis-symbiotic-planet"],
-      "tags": ["symbiose", "évolution", "gaïa"]
+      "works": [
+        "margulis-symbiotic-planet"
+      ],
+      "tags": [
+        "symbiose",
+        "évolution",
+        "gaïa"
+      ]
     },
     {
       "id": "bateson",
@@ -2567,8 +3908,14 @@
       "origin": "Grantchester, Angleterre",
       "lang": "en",
       "bio": "Anthropologue, cybernéticien, écologiste de l'esprit. Fils de généticien, mari de Margaret Mead, il pensa les systèmes, les patterns, les doubles contraintes. Steps to an Ecology of Mind : un livre-labyrinthe. Il mourut en Californie, gourou involontaire du New Age, penseur inclassable.",
-      "works": ["bateson-ecology-mind"],
-      "tags": ["cybernétique", "systèmes", "écologie"]
+      "works": [
+        "bateson-ecology-mind"
+      ],
+      "tags": [
+        "cybernétique",
+        "systèmes",
+        "écologie"
+      ]
     },
     {
       "id": "varela",
@@ -2578,8 +3925,15 @@
       "origin": "Talcahuano, Chili",
       "lang": "es",
       "bio": "Biologiste et philosophe chilien, co-inventeur de l'autopoïèse. Avec Maturana, il définit la vie comme auto-création. Exilé après Pinochet, il s'installa à Paris, dialogua avec le Dalaï-Lama sur neuroscience et méditation. Greffé du foie, il mourut à 54 ans, pont entre science et conscience.",
-      "works": ["varela-embodied-mind"],
-      "tags": ["autopoïèse", "cognition", "bouddhisme"]
+      "works": [
+        "varela-embodied-mind"
+      ],
+      "tags": [
+        "autopoïèse",
+        "cognition",
+        "bouddhisme",
+        "phénoménologie"
+      ]
     },
     {
       "id": "prigogine",
@@ -2589,8 +3943,14 @@
       "origin": "Moscou, Russie",
       "lang": "fr",
       "bio": "Physicien belge d'origine russe, Nobel 1977. Il découvrit les structures dissipatives : l'ordre naissant du chaos, la flèche du temps irréversible. La fin des certitudes : contre le déterminisme, pour la créativité de la nature. De Bruxelles, il réconcilia physique et devenir.",
-      "works": ["prigogine-fin-certitudes"],
-      "tags": ["complexité", "thermodynamique", "temps"]
+      "works": [
+        "prigogine-fin-certitudes"
+      ],
+      "tags": [
+        "complexité",
+        "thermodynamique",
+        "temps"
+      ]
     },
     {
       "id": "fuller",
@@ -2600,8 +3960,14 @@
       "origin": "Milton, États-Unis",
       "lang": "en",
       "bio": "Inventeur et visionnaire américain. Dômes géodésiques, Dymaxion, Spaceship Earth — il pensa l'humanité comme équipage d'un vaisseau. Deux fois renvoyé de Harvard, il faillit se suicider, puis décida de se faire cobaye d'une expérience : sa vie. 28 doctorats honorifiques. Un verbe à lui seul.",
-      "works": ["fuller-operating-manual"],
-      "tags": ["design", "synergie", "utopie"]
+      "works": [
+        "fuller-operating-manual"
+      ],
+      "tags": [
+        "design",
+        "synergie",
+        "utopie"
+      ]
     },
     {
       "id": "mcluhan",
@@ -2611,8 +3977,14 @@
       "origin": "Edmonton, Canada",
       "lang": "en",
       "bio": "Théoricien canadien des médias. « Le medium est le message » — il prédit Internet, le village global, l'extension de nos sens. Star médiatique des années 60, incompris des universitaires. Catholique fervent, il voyait la technologie comme prolongement mystique. Mort d'un AVC, ressuscité par l'ère numérique.",
-      "works": ["mcluhan-understanding-media"],
-      "tags": ["médias", "communication", "village global"]
+      "works": [
+        "mcluhan-understanding-media"
+      ],
+      "tags": [
+        "médias",
+        "communication",
+        "village global"
+      ]
     },
     {
       "id": "morin",
@@ -2622,8 +3994,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Sociologue et philosophe français, penseur de la complexité. Résistant, communiste puis exclu, il écrivit La Méthode en six tomes — contre la pensée fragmentée, pour relier. À plus de 100 ans, il pense encore : l'incertitude, la Terre-Patrie, l'aventure humaine. Inépuisable.",
-      "works": ["morin-methode"],
-      "tags": ["complexité", "systèmes", "humanisme"]
+      "works": [
+        "morin-methode"
+      ],
+      "tags": [
+        "complexité",
+        "systèmes",
+        "humanisme"
+      ]
     },
     {
       "id": "read",
@@ -2633,8 +4011,14 @@
       "origin": "Kirkbymoorside, Angleterre",
       "lang": "en",
       "bio": "Critique d'art, poète et anarchiste britannique. Fils de fermier du Yorkshire, traumatisé par les tranchées, il devint le champion de l'art moderne en Angleterre — surréalisme, Henry Moore, Barbara Hepworth. Education Through Art : l'imagination contre la machine. Anarchiste paisible, il accepta le titre de chevalier et s'en excusa auprès des camarades.",
-      "works": ["read-education-art"],
-      "tags": ["art", "anarchisme", "éducation"]
+      "works": [
+        "read-education-art"
+      ],
+      "tags": [
+        "art",
+        "anarchisme",
+        "éducation"
+      ]
     },
     {
       "id": "ruskin",
@@ -2644,8 +4028,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Critique d'art et réformateur social victorien. Il défendit Turner, les Préraphaélites, l'architecture gothique — et attaqua le capitalisme industriel. Unto This Last inspira Gandhi. Mariage non consommé, annulé, scandale. Il sombra dans la folie, reclus à Brantwood. Prophète de la beauté comme éthique.",
-      "works": ["ruskin-stones-venice"],
-      "tags": ["art", "socialisme", "esthétique"]
+      "works": [
+        "ruskin-stones-venice"
+      ],
+      "tags": [
+        "art",
+        "socialisme",
+        "esthétique"
+      ]
     },
     {
       "id": "morris",
@@ -2655,8 +4045,14 @@
       "origin": "Walthamstow, Angleterre",
       "lang": "en",
       "bio": "Poète, designer et socialiste britannique. Il fonda le mouvement Arts and Crafts contre la laideur industrielle — papiers peints, tapisseries, livres. News from Nowhere : utopie médiévale-socialiste. Riche héritier devenu marxiste, il fabriquait de belles choses pour les riches en rêvant de révolution.",
-      "works": ["morris-news-nowhere"],
-      "tags": ["art", "socialisme", "artisanat"]
+      "works": [
+        "morris-news-nowhere"
+      ],
+      "tags": [
+        "art",
+        "socialisme",
+        "artisanat"
+      ]
     },
     {
       "id": "gill",
@@ -2666,8 +4062,14 @@
       "origin": "Brighton, Angleterre",
       "lang": "en",
       "bio": "Sculpteur et typographe britannique. Gill Sans, Perpetua — ses polices sont partout. Catholique médiévaliste, il sculpta des stations de chemin de croix et des nus érotiques. Après sa mort, ses journaux révélèrent inceste et zoophilie. L'œuvre demeure ; l'homme est irrécupérable.",
-      "works": ["gill-essay-typography"],
-      "tags": ["typographie", "sculpture", "scandale"]
+      "works": [
+        "gill-essay-typography"
+      ],
+      "tags": [
+        "typographie",
+        "sculpture",
+        "scandale"
+      ]
     },
     {
       "id": "david-jones",
@@ -2677,8 +4079,14 @@
       "origin": "Brockley, Angleterre",
       "lang": "en",
       "bio": "Poète et peintre britannique, vétéran de la Somme. In Parenthesis : épopée des tranchées, mêlant l'argot des soldats à Malory et au Mabinogion. Catholique converti, il vécut pauvre et reclus, peignant des inscriptions celtiques et romaines. Neurasthénique à vie, il refusa la gloire.",
-      "works": ["jones-in-parenthesis"],
-      "tags": ["poésie", "guerre", "celtisme"]
+      "works": [
+        "jones-in-parenthesis"
+      ],
+      "tags": [
+        "poésie",
+        "guerre",
+        "celtisme"
+      ]
     },
     {
       "id": "comfort",
@@ -2688,8 +4096,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Médecin, poète et anarchiste britannique. Objecteur de conscience pendant la guerre, il écrivit sur la mort, le vieillissement, la liberté sexuelle. Puis en 1972 : The Joy of Sex — best-seller planétaire aux illustrations poilues. Le penseur sérieux devint l'apôtre du plaisir. Il n'en eut pas honte.",
-      "works": ["comfort-joy-sex"],
-      "tags": ["anarchisme", "sexualité", "gérontologie"]
+      "works": [
+        "comfort-joy-sex"
+      ],
+      "tags": [
+        "anarchisme",
+        "sexualité",
+        "gérontologie"
+      ]
     },
     {
       "id": "woodcock",
@@ -2699,8 +4113,14 @@
       "origin": "Winnipeg, Canada",
       "lang": "en",
       "bio": "Écrivain et anarchiste canadien. Il édita des revues avec Herbert Read et Marie-Louise Berneri, puis écrivit l'histoire définitive de l'anarchisme. Biographe d'Orwell, de Gandhi, des Doukhobors. Retourné au Canada, il fonda Canadian Literature. Pacifiste infatigable, voyageur, jardinier.",
-      "works": ["woodcock-anarchism"],
-      "tags": ["anarchisme", "histoire", "canada"]
+      "works": [
+        "woodcock-anarchism"
+      ],
+      "tags": [
+        "anarchisme",
+        "histoire",
+        "canada"
+      ]
     },
     {
       "id": "goodman",
@@ -2710,8 +4130,14 @@
       "origin": "New York, États-Unis",
       "lang": "en",
       "bio": "Écrivain et anarchiste américain, penseur de l'éducation. Growing Up Absurd critiqua la société de masse ; il devint gourou involontaire de la Nouvelle Gauche. Bisexuel ouvert, il scandalisa les radicaux respectables. Poète, romancier, thérapeute gestalt — il toucha à tout et mourut oublié.",
-      "works": ["goodman-growing-up-absurd"],
-      "tags": ["anarchisme", "éducation", "critique sociale"]
+      "works": [
+        "goodman-growing-up-absurd"
+      ],
+      "tags": [
+        "anarchisme",
+        "éducation",
+        "critique sociale"
+      ]
     },
     {
       "id": "szewc",
@@ -2721,8 +4147,14 @@
       "origin": "Zamość, Pologne",
       "lang": "pl",
       "bio": "Écrivain polonais, archéologue de la mémoire. Zagłada (Annihilation) : un jour d'été 1934 dans une petite ville polonaise — juifs, catholiques, vie ordinaire avant l'abîme. Prose poétique, temps suspendu. Il écrit peu, lentement, creusant ce qui a disparu.",
-      "works": ["szewc-zaglada"],
-      "tags": ["mémoire", "shoah", "pologne"]
+      "works": [
+        "szewc-zaglada"
+      ],
+      "tags": [
+        "mémoire",
+        "shoah",
+        "pologne"
+      ]
     },
     {
       "id": "schulz",
@@ -2732,8 +4164,14 @@
       "origin": "Drohobycz, Galicie",
       "lang": "pl",
       "bio": "Écrivain et dessinateur polonais, génie du fantastique. Les Boutiques de cannelle : Drohobycz transfigurée en labyrinthe onirique, le père métamorphosé en cafard ou oiseau. Professeur de dessin timide, il fut abattu dans le ghetto par un SS. Son roman perdu, Le Messie, hante les chercheurs.",
-      "works": ["schulz-boutiques-cannelle"],
-      "tags": ["fantastique", "shoah", "galicie"]
+      "works": [
+        "schulz-boutiques-cannelle"
+      ],
+      "tags": [
+        "fantastique",
+        "shoah",
+        "galicie"
+      ]
     },
     {
       "id": "borowski",
@@ -2743,8 +4181,14 @@
       "origin": "Jitomir, Ukraine",
       "lang": "pl",
       "bio": "Poète et nouvelliste polonais, survivant d'Auschwitz. Ses récits du camp — Le Monde de pierre — décrivent l'horreur sans pathos, avec une ironie glacée. Le narrateur est complice : pour survivre, on devient fonctionnaire de la mort. Trois jours après la naissance de sa fille, il ouvrit le gaz. Il avait 28 ans.",
-      "works": ["borowski-monde-pierre"],
-      "tags": ["shoah", "auschwitz", "suicide"]
+      "works": [
+        "borowski-monde-pierre"
+      ],
+      "tags": [
+        "shoah",
+        "auschwitz",
+        "suicide"
+      ]
     },
     {
       "id": "herbert-zbigniew",
@@ -2754,8 +4198,14 @@
       "origin": "Lwów, Pologne",
       "lang": "pl",
       "bio": "Poète polonais, moraliste stoïcien. Monsieur Cogito : un personnage qui pense, doute, résiste. Il refusa de collaborer sous le communisme, vécut dans la pauvreté, voyagea en Occident. Ses vers classiques, ironiques, défendent la dignité contre l'histoire. « Il faut aller là où vont ceux qui ont choisi l'abîme. »",
-      "works": ["herbert-monsieur-cogito"],
-      "tags": ["poésie", "résistance", "morale"]
+      "works": [
+        "herbert-monsieur-cogito"
+      ],
+      "tags": [
+        "poésie",
+        "résistance",
+        "morale"
+      ]
     },
     {
       "id": "gombrowicz",
@@ -2765,8 +4215,14 @@
       "origin": "Małoszyce, Pologne",
       "lang": "pl",
       "bio": "Romancier et dramaturge polonais, maître de l'absurde. Ferdydurke : un homme ramené à l'enfance, prisonnier des formes imposées. En 1939, il partit pour l'Argentine et n'en revint jamais — 24 ans d'exil obscur avant la gloire tardive. « L'homme est créé par la forme, et il crée la forme. »",
-      "works": ["gombrowicz-ferdydurke"],
-      "tags": ["absurde", "forme", "exil"]
+      "works": [
+        "gombrowicz-ferdydurke"
+      ],
+      "tags": [
+        "absurde",
+        "forme",
+        "exil"
+      ]
     },
     {
       "id": "kis",
@@ -2776,8 +4232,14 @@
       "origin": "Subotica, Yougoslavie",
       "lang": "sr",
       "bio": "Écrivain yougoslave, juif hongrois de Voïvodine. Un tombeau pour Boris Davidovitch : nouvelles sur les victimes de Staline. On l'accusa de plagiat — il répondit par un essai dévastateur. Père disparu à Auschwitz, il passa sa vie à écrire contre l'oubli. Mort d'un cancer à Paris, amer et admiré.",
-      "works": ["kis-tombeau-boris"],
-      "tags": ["mémoire", "stalinisme", "yougoslavie"]
+      "works": [
+        "kis-tombeau-boris"
+      ],
+      "tags": [
+        "mémoire",
+        "stalinisme",
+        "yougoslavie"
+      ]
     },
     {
       "id": "hrabal",
@@ -2787,8 +4249,14 @@
       "origin": "Brno, Tchécoslovaquie",
       "lang": "cs",
       "bio": "Écrivain tchèque, conteur des marges. Trains étroitement surveillés, Une trop bruyante solitude — ses héros sont ouvriers, piloneurs de livres, bavards de brasserie. Sous le communisme, il publia en samizdat puis signa une rétractation — honte dont il ne se remit pas. Il tomba d'une fenêtre d'hôpital en nourrissant des pigeons.",
-      "works": ["hrabal-solitude"],
-      "tags": ["absurde", "prague", "brasserie"]
+      "works": [
+        "hrabal-solitude"
+      ],
+      "tags": [
+        "absurde",
+        "prague",
+        "brasserie"
+      ]
     },
     {
       "id": "marai",
@@ -2798,8 +4266,14 @@
       "origin": "Košice, Hongrie",
       "lang": "hu",
       "bio": "Romancier hongrois, chroniqueur de la bourgeoisie disparue. Les Braises : deux vieillards, un secret de 40 ans, une nuit de vérité. Exilé après 1948, il erra de Naples à New York, oublié. Sa femme mourut, son fils aussi. Il se tira une balle à San Diego. La Hongrie postcommuniste le redécouvrit.",
-      "works": ["marai-braises"],
-      "tags": ["exil", "bourgeoisie", "suicide"]
+      "works": [
+        "marai-braises"
+      ],
+      "tags": [
+        "exil",
+        "bourgeoisie",
+        "suicide"
+      ]
     },
     {
       "id": "csath",
@@ -2809,8 +4283,14 @@
       "origin": "Subotica, Hongrie",
       "lang": "hu",
       "bio": "Écrivain et psychiatre hongrois, météore de la décadence. Ses nouvelles explorent la folie, l'enfance, le désir — Schnitzler avec de la morphine. Il devint morphinomane, tua sa femme, tenta de tuer ses enfants, se suicida à la frontière en fuyant. Il avait 32 ans. Redécouvert un siècle plus tard.",
-      "works": ["csath-nouvelles"],
-      "tags": ["décadence", "morphine", "meurtre"]
+      "works": [
+        "csath-nouvelles"
+      ],
+      "tags": [
+        "décadence",
+        "morphine",
+        "meurtre"
+      ]
     },
     {
       "id": "zagajewski",
@@ -2820,8 +4300,14 @@
       "origin": "Lwów, Pologne",
       "lang": "pl",
       "bio": "Poète polonais, voix de l'exil et de l'émerveillement. Né à Lwów cédée à l'URSS, il grandit à Gliwice, ville allemande devenue polonaise — double déracinement. Essayiste de la beauté, il vécut à Paris, Houston, Cracovie. Try to Praise the Mutilated World parut le 24 septembre 2001. Il mourut à Cracovie.",
-      "works": ["zagajewski-poemes"],
-      "tags": ["poésie", "exil", "beauté"]
+      "works": [
+        "zagajewski-poemes"
+      ],
+      "tags": [
+        "poésie",
+        "exil",
+        "beauté"
+      ]
     },
     {
       "id": "marion",
@@ -2831,8 +4317,14 @@
       "origin": "Meudon, France",
       "lang": "fr",
       "bio": "Philosophe français, phénoménologue du don et de la saturation. Dieu sans l'être : penser Dieu au-delà de la métaphysique, comme amour plutôt qu'être. Élève de Derrida, successeur de Ricœur à Chicago, membre de l'Académie française. Catholique qui philosophe en tremblant devant l'excès du phénomène.",
-      "works": ["marion-dieu-sans-etre"],
-      "tags": ["phénoménologie", "théologie", "donation"]
+      "works": [
+        "marion-dieu-sans-etre"
+      ],
+      "tags": [
+        "phénoménologie",
+        "théologie",
+        "donation"
+      ]
     },
     {
       "id": "levinas",
@@ -2842,8 +4334,14 @@
       "origin": "Kaunas, Lituanie",
       "lang": "fr",
       "bio": "Philosophe franco-lituanien, penseur du visage. L'éthique comme philosophie première : avant l'être, la responsabilité pour autrui. Juif formé à Fribourg sous Husserl et Heidegger, prisonnier de guerre, famille massacrée. Le visage de l'autre dit « Tu ne tueras point ». Talmudiste le samedi, phénoménologue la semaine.",
-      "works": ["levinas-totalite-infini"],
-      "tags": ["phénoménologie", "éthique", "altérité"]
+      "works": [
+        "levinas-totalite-infini"
+      ],
+      "tags": [
+        "phénoménologie",
+        "éthique",
+        "altérité"
+      ]
     },
     {
       "id": "ricoeur",
@@ -2853,8 +4351,15 @@
       "origin": "Valence, France",
       "lang": "fr",
       "bio": "Philosophe français, herméneute du sens. De Freud à la Bible, il interpréta les symboles, les récits, les textes — le détour par l'autre pour se comprendre soi-même. Protestant discret, prisonnier de guerre, doyen à Nanterre pendant Mai 68. Il réconcilia conflits et traditions, médiateur infatigable.",
-      "works": ["ricoeur-soi-meme-autre"],
-      "tags": ["herméneutique", "récit", "éthique"]
+      "works": [
+        "ricoeur-soi-meme-autre"
+      ],
+      "tags": [
+        "herméneutique",
+        "récit",
+        "éthique",
+        "phénoménologie"
+      ]
     },
     {
       "id": "henry",
@@ -2864,19 +4369,14 @@
       "origin": "Haïphong, Indochine",
       "lang": "fr",
       "bio": "Philosophe français, phénoménologue de la vie. Contre Husserl : la conscience ne vise pas le monde mais s'éprouve elle-même dans l'affect. L'Essence de la manifestation, puis des romans, puis une christologie radicale : le Christ révèle la Vie absolue. Reclus à Montpellier, ignoré puis redécouvert.",
-      "works": ["henry-essence-manifestation"],
-      "tags": ["phénoménologie", "vie", "affectivité"]
-    },
-    {
-      "id": "weil-simone",
-      "name": "Simone Weil",
-      "name_original": "Simone Weil",
-      "dates": "1909–1943",
-      "origin": "Paris, France",
-      "lang": "fr",
-      "bio": "Philosophe et mystique française. Agrégée, ouvrière en usine, combattante en Espagne, elle chercha Dieu dans le malheur. La Pesanteur et la Grâce : aphorismes d'une intensité brûlante. Juive attirée par le Christ, elle refusa le baptême pour rester avec les exclus. Elle se laissa mourir à Londres, solidaire des affamés.",
-      "works": ["weil-pesanteur-grace"],
-      "tags": ["mystique", "malheur", "attention"]
+      "works": [
+        "henry-essence-manifestation"
+      ],
+      "tags": [
+        "phénoménologie",
+        "vie",
+        "affectivité"
+      ]
     },
     {
       "id": "stein",
@@ -2886,8 +4386,14 @@
       "origin": "Breslau, Allemagne",
       "lang": "de",
       "bio": "Philosophe allemande, carmélite et martyre. Assistante de Husserl, elle se convertit en lisant Thérèse d'Avila. Entrée au Carmel comme Thérèse-Bénédicte de la Croix, elle fut déportée en représailles contre les évêques néerlandais. Gazée à Auschwitz. Canonisée en 1998, co-patronne de l'Europe.",
-      "works": ["stein-empathie"],
-      "tags": ["phénoménologie", "carmel", "shoah"]
+      "works": [
+        "stein-empathie"
+      ],
+      "tags": [
+        "phénoménologie",
+        "carmel",
+        "shoah"
+      ]
     },
     {
       "id": "balthasar",
@@ -2897,8 +4403,14 @@
       "origin": "Lucerne, Suisse",
       "lang": "de",
       "bio": "Théologien suisse, géant de l'esthétique théologique. La Gloire et la Croix : le beau comme voie vers Dieu. Jésuite défroqué pour suivre la mystique Adrienne von Speyr, il fut réhabilité par Jean-Paul II. Trilogie monumentale : esthétique, dramatique, logique. Il mourut deux jours avant de recevoir le chapeau de cardinal.",
-      "works": ["balthasar-gloire-croix"],
-      "tags": ["théologie", "esthétique", "dramatique"]
+      "works": [
+        "balthasar-gloire-croix"
+      ],
+      "tags": [
+        "théologie",
+        "esthétique",
+        "dramatique"
+      ]
     },
     {
       "id": "brague",
@@ -2908,8 +4420,14 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Philosophe français, médiéviste et penseur de l'Europe. Europe, la voie romaine : l'identité européenne comme transmission de l'étranger — Athènes, Jérusalem, Rome. Spécialiste de la philosophie arabe médiévale, il défend une anthropologie de la créature. Catholique ironique et érudit.",
-      "works": ["brague-europe-voie-romaine"],
-      "tags": ["europe", "médiéval", "anthropologie"]
+      "works": [
+        "brague-europe-voie-romaine"
+      ],
+      "tags": [
+        "europe",
+        "médiéval",
+        "anthropologie"
+      ]
     },
     {
       "id": "florensky",
@@ -2919,8 +4437,14 @@
       "origin": "Ievlakh, Azerbaïdjan",
       "lang": "ru",
       "bio": "Prêtre, mathématicien et philosophe russe, « Léonard de Vinci russe ». La Colonne et le Fondement de la Vérité : théologie de l'amitié et de l'icône. Il refusa d'émigrer, servit les Soviets comme ingénieur électricien, fut envoyé au goulag, fusillé. Ses manuscrits survécurent dans des valises.",
-      "works": ["florensky-colonne-verite"],
-      "tags": ["orthodoxie", "icône", "goulag"]
+      "works": [
+        "florensky-colonne-verite"
+      ],
+      "tags": [
+        "orthodoxie",
+        "icône",
+        "goulag"
+      ]
     },
     {
       "id": "lossky",
@@ -2930,19 +4454,31 @@
       "origin": "Göttingen, Allemagne",
       "lang": "fr",
       "bio": "Théologien orthodoxe russe, exilé à Paris. Essai sur la théologie mystique de l'Église d'Orient : il révéla aux Occidentaux la tradition apophatique, la théosis, l'énergie divine. Fils du philosophe Nicolas Lossky, il forma des générations à l'Institut Saint-Serge. Mort jeune, il reste le passeur.",
-      "works": ["lossky-theologie-mystique"],
-      "tags": ["orthodoxie", "apophatique", "théosis"]
+      "works": [
+        "lossky-theologie-mystique"
+      ],
+      "tags": [
+        "orthodoxie",
+        "apophatique",
+        "théosis"
+      ]
     },
     {
-      "id": "bulgakov",
+      "id": "bulgakov-sergei",
       "name": "Sergueï Boulgakov",
       "name_original": "Сергей Николаевич Булгаков",
       "dates": "1871–1944",
       "origin": "Livny, Russie",
       "lang": "ru",
       "bio": "Économiste devenu prêtre, théologien de la Sophia. Marxiste converti, ordonné en 1918, expulsé par Lénine en 1922. À Paris, il dirigea l'Institut Saint-Serge et développa la sophiologie — la Sagesse divine comme quatrième hypostase. Condamné par Moscou, défendu par personne, il reste sulfureux et fascinant.",
-      "works": ["bulgakov-agneau-dieu"],
-      "tags": ["orthodoxie", "sophiologie", "exil"]
+      "works": [
+        "bulgakov-agneau-dieu"
+      ],
+      "tags": [
+        "orthodoxie",
+        "sophiologie",
+        "exil"
+      ]
     },
     {
       "id": "noica",
@@ -2952,8 +4488,14 @@
       "origin": "Vitănești, Roumanie",
       "lang": "ro",
       "bio": "Philosophe roumain, ermite des Carpates. Ami de jeunesse d'Eliade et Cioran, il resta en Roumanie quand les autres partirent. Six ans de prison sous les communistes. Libéré, il se retira à Păltiniș et forma une génération de disciples dans sa cabane de montagne. Penseur de l'être roumain, traducteur de Platon, il mourut en maître vénéré.",
-      "works": ["noica-devenir-etre"],
-      "tags": ["ontologie", "roumanie", "résistance"]
+      "works": [
+        "noica-devenir-etre"
+      ],
+      "tags": [
+        "ontologie",
+        "roumanie",
+        "résistance"
+      ]
     },
     {
       "id": "wazyk",
@@ -2963,8 +4505,14 @@
       "origin": "Varsovie, Pologne",
       "lang": "pl",
       "bio": "Poète polonais, du stalinisme au dégel. Avant-gardiste dans les années 20, communiste convaincu après la guerre, il chanta le régime — puis se réveilla. Son Poème pour adultes (1955) dénonça la misère et le mensonge : « Ils ont couru vers nous en criant : Sous le socialisme / un homme de la jeunesse ne sera pas seul. » Le poème déclencha l'Octobre polonais. Rédemption par la vérité.",
-      "works": ["wazyk-poeme-adultes"],
-      "tags": ["poésie", "dégel", "dissidence"]
+      "works": [
+        "wazyk-poeme-adultes"
+      ],
+      "tags": [
+        "poésie",
+        "dégel",
+        "dissidence"
+      ]
     },
     {
       "id": "venner",
@@ -2974,8 +4522,15 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Historien et militant français, samouraï de la droite. OAS pendant la guerre d'Algérie, prison, puis historien des armes et de l'Europe. Il dirigea la Nouvelle Revue d'Histoire. Le 21 mai 2013, il se tira une balle dans la bouche devant l'autel de Notre-Dame — geste sacrificiel contre le « grand remplacement ». Sa mort fit plus de bruit que ses livres.",
-      "works": ["venner-coeur-rebelle"],
-      "tags": ["histoire", "europe", "suicide"]
+      "works": [
+        "venner-coeur-rebelle"
+      ],
+      "tags": [
+        "histoire",
+        "europe",
+        "suicide",
+        "nouvelle droite"
+      ]
     },
     {
       "id": "faye",
@@ -2985,8 +4540,15 @@
       "origin": "Angoulême, France",
       "lang": "fr",
       "bio": "Essayiste français, prophète de l'archéofuturisme. Figure de la Nouvelle Droite puis dissident, il prônait un retour aux valeurs archaïques combiné à la technoscience. Provocateur, excommunié par Benoist, il poussa la logique identitaire jusqu'au bout. Mort oublié des médias qu'il avait tant méprisés.",
-      "works": ["faye-archeofuturisme"],
-      "tags": ["identitaire", "futurisme", "europe"]
+      "works": [
+        "faye-archeofuturisme"
+      ],
+      "tags": [
+        "identitaire",
+        "futurisme",
+        "europe",
+        "nouvelle droite"
+      ]
     },
     {
       "id": "benoist",
@@ -2996,8 +4558,14 @@
       "origin": "Saint-Symphorien, France",
       "lang": "fr",
       "bio": "Philosophe français, pape de la Nouvelle Droite. Il fonda GRECE en 1968 — « gramscisme de droite », guerre culturelle contre l'égalitarisme. Païen, anti-américain, anti-libéral, inclassable. Des dizaines de livres, des centaines de pseudonymes. La gauche le diabolise, la droite s'en méfie. Il pense toujours.",
-      "works": ["benoist-vu-droite"],
-      "tags": ["nouvelle droite", "paganisme", "métapolitique"]
+      "works": [
+        "benoist-vu-droite"
+      ],
+      "tags": [
+        "nouvelle droite",
+        "paganisme",
+        "métapolitique"
+      ]
     },
     {
       "id": "raspail",
@@ -3007,8 +4575,15 @@
       "origin": "Chemillé-sur-Dême, France",
       "lang": "fr",
       "bio": "Romancier et voyageur français, consul de Patagonie. Explorateur des peuples oubliés — Indiens, Alakalufs, royaumes perdus. Le Camp des saints (1973) imaginait l'invasion migratoire de l'Europe. Prophétie ou fantasme ? Le livre revient hanter chaque crise. Royaliste excentrique, il mourut fidèle à ses chimères.",
-      "works": ["raspail-camp-saints"],
-      "tags": ["roman", "prophétie", "patagonie"]
+      "works": [
+        "raspail-camp-saints"
+      ],
+      "tags": [
+        "roman",
+        "prophétie",
+        "patagonie",
+        "nouvelle droite"
+      ]
     },
     {
       "id": "brasillach",
@@ -3018,8 +4593,14 @@
       "origin": "Perpignan, France",
       "lang": "fr",
       "bio": "Écrivain et journaliste français, fasciste fusillé. Normalien brillant, critique au Je suis partout, il choisit la collaboration avec enthousiasme — « nous avons couché avec l'Allemagne ». Condamné à mort, refusé la grâce par de Gaulle malgré Mauriac. 35 ans. Son talent n'excuse rien mais complique tout.",
-      "works": ["brasillach-poemes"],
-      "tags": ["collaboration", "poésie", "fascisme"]
+      "works": [
+        "brasillach-poemes"
+      ],
+      "tags": [
+        "collaboration",
+        "poésie",
+        "fascisme"
+      ]
     },
     {
       "id": "drieu",
@@ -3029,8 +4610,15 @@
       "origin": "Paris, France",
       "lang": "fr",
       "bio": "Écrivain français, fasciste désespéré. Dandy de l'entre-deux-guerres, il chercha une foi — communisme, fascisme, Europe. Directeur de la NRF sous l'Occupation, il rêvait d'un homme nouveau qui ne vint jamais. À la Libération, il se suicida à la troisième tentative. Gilles reste son autoportrait impitoyable.",
-      "works": ["drieu-gilles"],
-      "tags": ["fascisme", "décadence", "suicide"]
+      "works": [
+        "drieu-gilles"
+      ],
+      "tags": [
+        "fascisme",
+        "décadence",
+        "suicide",
+        "collaboration"
+      ]
     },
     {
       "id": "rebatet",
@@ -3040,8 +4628,14 @@
       "origin": "Moras-en-Valloire, France",
       "lang": "fr",
       "bio": "Écrivain et journaliste français, collaborateur virulent. Les Décombres (1942) : pamphlet antisémite, best-seller de l'Occupation. Condamné à mort, gracié, il écrivit en prison Les Deux Étendards — chef-d'œuvre ignoré. Critique musical exquis, homme politique ignoble. La postérité ne sait qu'en faire.",
-      "works": ["rebatet-deux-etendards"],
-      "tags": ["collaboration", "musique", "antisémitisme"]
+      "works": [
+        "rebatet-deux-etendards"
+      ],
+      "tags": [
+        "collaboration",
+        "musique",
+        "antisémitisme"
+      ]
     },
     {
       "id": "bardeche",
@@ -3051,8 +4645,15 @@
       "origin": "Dun-sur-Auron, France",
       "lang": "fr",
       "bio": "Critique littéraire et essayiste français, fasciste impénitent. Beau-frère de Brasillach, il défendit sa mémoire et le fascisme jusqu'au bout — Nuremberg ou la Terre promise lui valut la prison. Spécialiste de Balzac et Stendhal, négationniste avant l'heure. Il vécut assez vieux pour voir ses idées renaître.",
-      "works": ["bardeche-fascisme"],
-      "tags": ["fascisme", "critique", "négationnisme"]
+      "works": [
+        "bardeche-fascisme"
+      ],
+      "tags": [
+        "fascisme",
+        "critique",
+        "négationnisme",
+        "collaboration"
+      ]
     },
     {
       "id": "burckhardt",
@@ -3062,8 +4663,14 @@
       "origin": "Florence, Italie",
       "lang": "de",
       "bio": "Métaphysicien suisse, maître de l'art sacré. Neveu de l'historien Jacob Burckhardt, disciple de Guénon et ami de Schuon. Il vécut à Fès, devint musulman, étudia l'alchimie et l'art islamique. Ses livres sur Chartres, Sienne, Fès révèlent le symbolisme des formes. Discret, savant, il mourut à Lausanne en paix.",
-      "works": ["burckhardt-art-sacre"],
-      "tags": ["tradition", "art sacré", "islam"]
+      "works": [
+        "burckhardt-art-sacre"
+      ],
+      "tags": [
+        "tradition",
+        "art sacré",
+        "islam"
+      ]
     },
     {
       "id": "lings",
@@ -3073,8 +4680,14 @@
       "origin": "Burnage, Angleterre",
       "lang": "en",
       "bio": "Islamologue britannique, gardien des manuscrits. Élève de Guénon au Caire, initié par Schuon, il devint conservateur au British Museum. Sa biographie du Prophète reste un classique. Il écrivit aussi sur Shakespeare comme voyant. À 96 ans, il priait encore cinq fois par jour, pont entre Oxford et La Mecque.",
-      "works": ["lings-muhammad"],
-      "tags": ["tradition", "islam", "shakespeare"]
+      "works": [
+        "lings-muhammad"
+      ],
+      "tags": [
+        "tradition",
+        "islam",
+        "shakespeare"
+      ]
     },
     {
       "id": "nasr",
@@ -3084,8 +4697,14 @@
       "origin": "Téhéran, Iran",
       "lang": "fa",
       "bio": "Philosophe irano-américain, voix de l'islam traditionnel. Formé au MIT et Harvard, recteur d'université sous le Shah, exilé après 1979. À Washington, il enseigne la philosophie islamique et la crise du monde moderne. Plus de 50 livres, infatigable. Le dernier géant de l'école traditionnelle, toujours vivant.",
-      "works": ["nasr-connaissance-sacre"],
-      "tags": ["tradition", "islam", "philosophie"]
+      "works": [
+        "nasr-connaissance-sacre"
+      ],
+      "tags": [
+        "tradition",
+        "islam",
+        "philosophie"
+      ]
     },
     {
       "id": "pallis",
@@ -3095,8 +4714,14 @@
       "origin": "Liverpool, Angleterre",
       "lang": "en",
       "bio": "Alpiniste et musicien gréco-britannique, pèlerin du Tibet. Il monta des expéditions himalayennes, découvrit le bouddhisme tibétain, devint luthiste et compositeur. Peaks and Lamas : voyage spirituel autant que montagnard. Ami de Guénon et Schuon, il resta discret, jouant du luth jusqu'à la fin.",
-      "works": ["pallis-peaks-lamas"],
-      "tags": ["tradition", "tibet", "musique"]
+      "works": [
+        "pallis-peaks-lamas"
+      ],
+      "tags": [
+        "tradition",
+        "tibet",
+        "musique"
+      ]
     },
     {
       "id": "perry",
@@ -3106,8 +4731,14 @@
       "origin": "New York, États-Unis",
       "lang": "en",
       "bio": "Éditeur américain, compilateur de la sagesse. Disciple de Schuon, il vécut des décennies en Suisse. Son Treasury of Traditional Wisdom rassemble des milliers de citations de toutes traditions — somme de la philosophia perennis. Travail monumental, presque anonyme.",
-      "works": ["perry-treasury"],
-      "tags": ["tradition", "anthologie", "sagesse"]
+      "works": [
+        "perry-treasury"
+      ],
+      "tags": [
+        "tradition",
+        "anthologie",
+        "sagesse"
+      ]
     },
     {
       "id": "sherrard",
@@ -3117,8 +4748,14 @@
       "origin": "Oxford, Angleterre",
       "lang": "en",
       "bio": "Théologien et traducteur britannique, orthodoxe de Grèce. Il traduisit les poètes grecs modernes — Cavafy, Séféris, Elytis — et défendit la théologie byzantine contre l'Occident. Installé en Eubée, il vécut en ermite orthodoxe, écrivant sur l'écologie sacrée. L'homme, la nature et Dieu : inséparables.",
-      "works": ["sherrard-grece-sacree"],
-      "tags": ["tradition", "orthodoxie", "grèce"]
+      "works": [
+        "sherrard-grece-sacree"
+      ],
+      "tags": [
+        "tradition",
+        "orthodoxie",
+        "grèce"
+      ]
     },
     {
       "id": "raine",
@@ -3128,8 +4765,14 @@
       "origin": "Londres, Angleterre",
       "lang": "en",
       "bio": "Poétesse et critique britannique, prêtresse de Blake. Elle fonda Temenos, revue de l'imagination sacrée, et la Temenos Academy. Trois mariages malheureux, un amour impossible pour Gavin Maxwell. Ses poèmes célèbrent la nature comme théophanie. À 95 ans, elle récitait encore Blake par cœur.",
-      "works": ["raine-blake-tradition"],
-      "tags": ["poésie", "blake", "tradition"]
+      "works": [
+        "raine-blake-tradition"
+      ],
+      "tags": [
+        "poésie",
+        "blake",
+        "tradition"
+      ]
     },
     {
       "id": "borella",
@@ -3139,8 +4782,14 @@
       "origin": "Nancy, France",
       "lang": "fr",
       "bio": "Philosophe français, métaphysicien chrétien. Professeur à Nancy, il repensa l'ésotérisme chrétien contre Guénon — la Tradition existe, mais le christianisme n'en est pas une branche : il est le centre. La Charité profanée critique la religion moderne. Discret, rigoureux, encore vivant.",
-      "works": ["borella-charite"],
-      "tags": ["tradition", "christianisme", "métaphysique"]
+      "works": [
+        "borella-charite"
+      ],
+      "tags": [
+        "tradition",
+        "christianisme",
+        "métaphysique"
+      ]
     },
     {
       "id": "huston-smith",
@@ -3150,8 +4799,14 @@
       "origin": "Suzhou, Chine",
       "lang": "en",
       "bio": "Philosophe américain des religions, vulgarisateur de la sagesse. Né en Chine de missionnaires méthodistes, il explora toutes les voies : hindouisme, bouddhisme, islam, chamanisme. The World's Religions reste le manuel. Il pratiqua chaque tradition qu'il enseigna. Mort à 97 ans, toujours émerveillé.",
-      "works": ["smith-religions-monde"],
-      "tags": ["tradition", "religions", "pérennialisme"]
+      "works": [
+        "smith-religions-monde"
+      ],
+      "tags": [
+        "tradition",
+        "religions",
+        "pérennialisme"
+      ]
     },
     {
       "id": "wolfgang-smith",
@@ -3161,8 +4816,14 @@
       "origin": "Vienne, Autriche",
       "lang": "en",
       "bio": "Mathématicien et philosophe austro-américain. Physicien à Bell Labs, pionnier de la rentrée atmosphérique, il se tourna vers la métaphysique. Contre le scientisme, il défend les niveaux de réalité et la cosmologie traditionnelle. Toujours vivant à plus de 90 ans, il publie encore.",
-      "works": ["smith-cosmos-transcendance"],
-      "tags": ["tradition", "physique", "cosmologie"]
+      "works": [
+        "smith-cosmos-transcendance"
+      ],
+      "tags": [
+        "tradition",
+        "physique",
+        "cosmologie"
+      ]
     }
   ]
 }

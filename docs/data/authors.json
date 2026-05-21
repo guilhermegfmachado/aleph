@@ -2954,6 +2954,17 @@
       "bio": "Philosophe roumain, ermite des Carpates. Ami de jeunesse d'Eliade et Cioran, il resta en Roumanie quand les autres partirent. Six ans de prison sous les communistes. Libéré, il se retira à Păltiniș et forma une génération de disciples dans sa cabane de montagne. Penseur de l'être roumain, traducteur de Platon, il mourut en maître vénéré.",
       "works": ["noica-devenir-etre"],
       "tags": ["ontologie", "roumanie", "résistance"]
+    },
+    {
+      "id": "wazyk",
+      "name": "Adam Ważyk",
+      "name_original": "Adam Ważyk",
+      "dates": "1905–1982",
+      "origin": "Varsovie, Pologne",
+      "lang": "pl",
+      "bio": "Poète polonais, du stalinisme au dégel. Avant-gardiste dans les années 20, communiste convaincu après la guerre, il chanta le régime — puis se réveilla. Son Poème pour adultes (1955) dénonça la misère et le mensonge : « Ils ont couru vers nous en criant : Sous le socialisme / un homme de la jeunesse ne sera pas seul. » Le poème déclencha l'Octobre polonais. Rédemption par la vérité.",
+      "works": ["wazyk-poeme-adultes"],
+      "tags": ["poésie", "dégel", "dissidence"]
     }
   ]
 }

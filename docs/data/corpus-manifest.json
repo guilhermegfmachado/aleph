@@ -1672,6 +1672,24 @@
           "year": -411,
           "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7700 } },
           "tags": ["comedy", "war", "women", "sex strike", "peace"]
+        },
+        {
+          "id": "sophocles-antigone",
+          "title": "Antigone",
+          "author": "Sophocles",
+          "period": "classical",
+          "year": -441,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 31 } },
+          "tags": ["tragedy", "thebes", "civil disobedience", "burial", "fate"]
+        },
+        {
+          "id": "aeschylus-prometheus-bound",
+          "title": "Prometheus Bound",
+          "author": "Aeschylus",
+          "period": "classical",
+          "year": -430,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 27458 } },
+          "tags": ["tragedy", "titan", "fire", "defiance", "zeus"]
         }
       ]
     },
@@ -2159,6 +2177,15 @@
           "year": -400,
           "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7864 } },
           "tags": ["sanskrit", "epic", "kurukshetra", "dharma", "hindu"]
+        },
+        {
+          "id": "kalidasa-shakuntala",
+          "title": "Shakuntala",
+          "author": "Kalidasa",
+          "period": "ancient",
+          "year": 400,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 16659 } },
+          "tags": ["sanskrit", "drama", "romance", "nature", "memory", "recognition"]
         }
       ]
     },

@@ -224,7 +224,7 @@
       "origin": "Colone, Athènes",
       "lang": "grc",
       "bio": "Dramaturge athénien, maître de la tragédie grecque. Œdipe roi est considéré comme le chef-d'œuvre du genre. Il introduit le troisième acteur et réduit le rôle du chœur, créant des personnages plus complexes et humains.",
-      "works": ["sophocles-oedipus", "sophocles-antigone"],
+      "works": ["sophocles-oedipus-rex", "sophocles-antigone"],
       "tags": ["tragédie", "théâtre", "mythologie"]
     },
     {
@@ -235,7 +235,7 @@
       "origin": "Éleusis, Athènes",
       "lang": "grc",
       "bio": "Père de la tragédie grecque. Combattant à Marathon et Salamine, il introduit le deuxième acteur et les décors. L'Orestie, seule trilogie complète conservée, explore la justice, la vengeance et la naissance du droit.",
-      "works": ["aeschylus-oresteia", "aeschylus-prometheus"],
+      "works": ["aeschylus-oresteia", "aeschylus-prometheus-bound"],
       "tags": ["tragédie", "théâtre", "mythologie"]
     },
     {
@@ -290,7 +290,7 @@
       "origin": "Kyoto, Japon",
       "lang": "ja",
       "bio": "Dame de cour japonaise de l'époque Heian. Le Dit du Genji, récit de la vie à la cour impériale, est considéré comme le premier roman psychologique de l'histoire. Chef-d'œuvre de la littérature mondiale.",
-      "works": ["murasaki-genji"],
+      "works": ["tale-of-genji"],
       "tags": ["roman", "cour", "psychologie"]
     },
     {
@@ -301,7 +301,7 @@
       "origin": "Inde",
       "lang": "sa",
       "bio": "Sage légendaire, « premier poète » (Ādikavi). Le Rāmāyaṇa, qu'il aurait composé, narre l'épopée du prince Rāma. Cette œuvre fondatrice de la culture indienne influence l'Asie du Sud-Est entière.",
-      "works": ["valmiki-ramayana"],
+      "works": ["ramayana"],
       "tags": ["épique", "sanskrit", "mythologie"]
     },
     {
@@ -323,8 +323,129 @@
       "origin": "Alcalá de Henares, Espagne",
       "lang": "es",
       "bio": "Écrivain espagnol, créateur du roman moderne. Don Quichotte, satire des romans de chevalerie, explore la tension entre idéal et réalité. Soldat à Lépante, captif à Alger, sa vie fut aussi aventureuse que son œuvre.",
-      "works": ["cervantes-quixote"],
+      "works": ["cervantes-don-quixote"],
       "tags": ["roman", "satire", "chevalerie"]
+    },
+    {
+      "id": "machiavelli",
+      "name": "Nicolas Machiavel",
+      "name_original": "Niccolò Machiavelli",
+      "dates": "1469–1527",
+      "origin": "Florence, Italie",
+      "lang": "it",
+      "bio": "Diplomate et penseur politique florentin. Le Prince, traité sur l'acquisition et le maintien du pouvoir, rompt avec la philosophie politique morale. Son réalisme cru a fait de son nom un adjectif.",
+      "works": ["machiavelli-prince"],
+      "tags": ["politique", "réalisme", "renaissance"]
+    },
+    {
+      "id": "locke",
+      "name": "John Locke",
+      "name_original": "John Locke",
+      "dates": "1632–1704",
+      "origin": "Wrington, Angleterre",
+      "lang": "en",
+      "bio": "Philosophe anglais, père du libéralisme. Ses Traités du gouvernement civil fondent la théorie du contrat social et des droits naturels. Son influence sur les Lumières et les révolutions américaine et française est immense.",
+      "works": ["locke-government"],
+      "tags": ["empirisme", "libéralisme", "politique"]
+    },
+    {
+      "id": "descartes",
+      "name": "René Descartes",
+      "name_original": "Renatus Cartesius",
+      "dates": "1596–1650",
+      "origin": "La Haye en Touraine, France",
+      "lang": "fr",
+      "bio": "Philosophe et mathématicien français, père de la philosophie moderne. « Je pense, donc je suis » — les Méditations métaphysiques fondent la connaissance sur le doute méthodique et la certitude du cogito.",
+      "works": ["descartes-meditations"],
+      "tags": ["rationalisme", "métaphysique", "méthode"]
+    },
+    {
+      "id": "spinoza",
+      "name": "Baruch Spinoza",
+      "name_original": "Baruch de Spinoza",
+      "dates": "1632–1677",
+      "origin": "Amsterdam, Pays-Bas",
+      "lang": "la",
+      "bio": "Philosophe rationaliste d'origine juive portugaise. L'Éthique, écrite more geometrico, propose un monisme radical : Dieu et la Nature sont une même substance. Excommunié pour ses idées, il vécut en polissant des lentilles.",
+      "works": ["spinoza-ethics"],
+      "tags": ["rationalisme", "panthéisme", "éthique"]
+    },
+    {
+      "id": "hume",
+      "name": "David Hume",
+      "name_original": "David Hume",
+      "dates": "1711–1776",
+      "origin": "Édimbourg, Écosse",
+      "lang": "en",
+      "bio": "Philosophe empiriste et historien écossais. Son scepticisme radical remet en question la causalité et l'identité personnelle. L'Enquête sur l'entendement humain reste une œuvre majeure des Lumières britanniques.",
+      "works": ["hume-enquiry"],
+      "tags": ["empirisme", "scepticisme", "lumières"]
+    },
+    {
+      "id": "goethe",
+      "name": "Johann Wolfgang von Goethe",
+      "name_original": "Johann Wolfgang von Goethe",
+      "dates": "1749–1832",
+      "origin": "Francfort, Allemagne",
+      "lang": "de",
+      "bio": "Poète, dramaturge et savant allemand, figure centrale du Sturm und Drang puis du classicisme de Weimar. Faust, son chef-d'œuvre, explore la quête de connaissance et le pacte avec le diable.",
+      "works": ["goethe-faust"],
+      "tags": ["romantisme", "drame", "poésie"]
+    },
+    {
+      "id": "milton",
+      "name": "John Milton",
+      "name_original": "John Milton",
+      "dates": "1608–1674",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Poète et pamphlétaire anglais. Paradise Lost, épopée de la Chute, rivalise avec les grands classiques. Aveugle à la fin de sa vie, il dicta cette œuvre monumentale qui réinterprète la Genèse.",
+      "works": ["milton-paradise-lost"],
+      "tags": ["épique", "religion", "renaissance"]
+    },
+    {
+      "id": "lucretius",
+      "name": "Lucrèce",
+      "name_original": "Titus Lucretius Carus",
+      "dates": "c. 99–55 av. J.-C.",
+      "origin": "Rome",
+      "lang": "la",
+      "bio": "Poète et philosophe épicurien romain. De rerum natura expose en vers la physique atomiste et la morale épicurienne, visant à libérer l'humanité de la peur des dieux et de la mort.",
+      "works": ["lucretius-natura"],
+      "tags": ["épicurisme", "atomisme", "poésie didactique"]
+    },
+    {
+      "id": "chaucer",
+      "name": "Geoffrey Chaucer",
+      "name_original": "Geoffrey Chaucer",
+      "dates": "c. 1343–1400",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Poète anglais, « père de la littérature anglaise ». Les Contes de Canterbury, récits variés de pèlerins, offrent un portrait vivant de la société médiévale anglaise dans toute sa diversité.",
+      "works": ["chaucer-canterbury"],
+      "tags": ["moyen âge", "contes", "satire"]
+    },
+    {
+      "id": "pascal",
+      "name": "Blaise Pascal",
+      "name_original": "Blaise Pascal",
+      "dates": "1623–1662",
+      "origin": "Clermont-Ferrand, France",
+      "lang": "fr",
+      "bio": "Mathématicien, physicien et philosophe français. Les Pensées, fragments d'une apologie du christianisme, explorent la condition humaine avec une intensité rare. « Le cœur a ses raisons que la raison ne connaît point. »",
+      "works": ["pascal-pensees"],
+      "tags": ["apologétique", "philosophie", "mathématiques"]
+    },
+    {
+      "id": "more",
+      "name": "Thomas More",
+      "name_original": "Thomas Morus",
+      "dates": "1478–1535",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Humaniste anglais, Lord Chancelier d'Henri VIII. L'Utopie décrit une société idéale sur une île imaginaire, critiquant l'Angleterre de son temps. Décapité pour avoir refusé l'Acte de Suprématie, il fut canonisé.",
+      "works": ["more-utopia"],
+      "tags": ["humanisme", "utopie", "renaissance"]
     }
   ]
 }

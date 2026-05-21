@@ -677,6 +677,17 @@
       "bio": "Poète japonais, maître du haïku. Ses carnets de voyage, dont La Sente étroite du Bout-du-Monde, mêlent prose et poésie. Il élève le haïku de divertissement à art contemplatif.",
       "works": ["basho-narrow-road"],
       "tags": ["haïku", "voyage", "zen"]
+    },
+    {
+      "id": "althusser",
+      "name": "Louis Althusser",
+      "name_original": "Louis Pierre Althusser",
+      "dates": "1918–1990",
+      "origin": "Birmandreis, Algérie française",
+      "lang": "fr",
+      "bio": "Philosophe marxiste français, figure majeure du structuralisme. Pour Marx et Lire le Capital renouvellent la lecture de Marx par une « coupure épistémologique ». Interné à plusieurs reprises pour dépression, il étrangla son épouse Hélène en 1980 lors d'une crise. Déclaré irresponsable, il passa ses dernières années dans l'ombre, écrivant L'avenir dure longtemps, confession posthume.",
+      "works": ["althusser-marx"],
+      "tags": ["marxisme", "structuralisme", "idéologie"]
     }
   ]
 }

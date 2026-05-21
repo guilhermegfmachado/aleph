@@ -2228,6 +2228,17 @@
       "bio": "Mathématicienne russe, première femme professeure en Europe du Nord. Elle épousa un ami pour quitter la Russie (les femmes ne pouvaient voyager seules). À Göttingen, elle obtint son doctorat sans même assister aux cours. Professeure à Stockholm, prix Bordin à Paris. Elle mourut de grippe à 41 ans, laissant une fille et des mémoires romanesques.",
       "works": ["kovalevskaya-memoires"],
       "tags": ["femme", "analyse", "russie"]
+    },
+    {
+      "id": "bauer",
+      "name": "Bruno Bauer",
+      "name_original": "Bruno Bauer",
+      "dates": "1809–1882",
+      "origin": "Eisenberg, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe et théologien allemand, figure centrale des Jeunes Hégéliens. Sa critique radicale des Évangiles — il nia l'existence historique de Jésus — lui coûta sa chaire à Bonn en 1842. Ami puis rival de Marx, il influença profondément la gauche hégélienne. Ruiné, il finit ses jours dans l'obscurité, tenant une boutique de tabac à Rixdorf, oublié de tous sauf de Nietzsche qui le salua.",
+      "works": ["bauer-christianisme"],
+      "tags": ["théologie", "hegel", "athéisme"]
     }
   ]
 }

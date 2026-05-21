@@ -2624,6 +2624,17 @@
       "bio": "Sociologue et philosophe français, penseur de la complexité. Résistant, communiste puis exclu, il écrivit La Méthode en six tomes — contre la pensée fragmentée, pour relier. À plus de 100 ans, il pense encore : l'incertitude, la Terre-Patrie, l'aventure humaine. Inépuisable.",
       "works": ["morin-methode"],
       "tags": ["complexité", "systèmes", "humanisme"]
+    },
+    {
+      "id": "read",
+      "name": "Herbert Read",
+      "name_original": "Sir Herbert Edward Read",
+      "dates": "1893–1968",
+      "origin": "Kirkbymoorside, Angleterre",
+      "lang": "en",
+      "bio": "Critique d'art, poète et anarchiste britannique. Fils de fermier du Yorkshire, traumatisé par les tranchées, il devint le champion de l'art moderne en Angleterre — surréalisme, Henry Moore, Barbara Hepworth. Education Through Art : l'imagination contre la machine. Anarchiste paisible, il accepta le titre de chevalier et s'en excusa auprès des camarades.",
+      "works": ["read-education-art"],
+      "tags": ["art", "anarchisme", "éducation"]
     }
   ]
 }

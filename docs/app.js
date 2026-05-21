@@ -623,7 +623,17 @@ function openReadingList(listId) {
     if (countEl) countEl.textContent = filteredBooks.length;
     if (totalEl) totalEl.innerHTML = `<em>${escapeHtml(list.name)}</em>`;
 
-    container.innerHTML = filteredBooks.map(renderBookCard).join('');
+    container.innerHTML = filteredBooks.map(b => `
+        <a href="#reader" class="book-card" data-id="${b.id}" onclick="openReader('${b.id}'); return false;">
+            <div class="book-cover" data-lang="${b.lang}">
+                <span class="book-cover-code">${escapeHtml(b.code)}</span>
+                <span class="book-cover-lang">${b.lang.toUpperCase()}</span>
+            </div>
+            <h3 class="book-title">${escapeHtml(b.title)}</h3>
+            <p class="book-author">${escapeHtml(b.author)}</p>
+            <p class="book-meta">${b.year || '—'}${b.langs.length > 1 ? ` · ${b.langs.length} langues` : ''}</p>
+        </a>
+    `).join('');
 
     navigateTo('browse');
 }

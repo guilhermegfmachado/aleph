@@ -2470,6 +2470,160 @@
       "bio": "Chanteur est-allemand, fils de communiste mort à Auschwitz. Il choisit la RDA à 17 ans, puis la critiqua — interdit de scène pendant 11 ans. En 1976, pendant une tournée à l'Ouest, le régime lui retira sa citoyenneté. Il resta à l'Ouest, chantant toujours contre les murs, jusqu'à leur chute. Encore vivant, encore mordant.",
       "works": ["biermann-chansons"],
       "tags": ["barde", "dissident", "rda"]
+    },
+    {
+      "id": "teilhard",
+      "name": "Pierre Teilhard de Chardin",
+      "name_original": "Pierre Teilhard de Chardin",
+      "dates": "1881–1955",
+      "origin": "Orcines, France",
+      "lang": "fr",
+      "bio": "Jésuite, paléontologue et mystique français. Il découvrit l'Homme de Pékin, puis écrivit Le Phénomène humain — vision de l'évolution convergeant vers le Point Oméga, Christ cosmique. Rome interdit ses œuvres ; il mourut exilé à New York. Publié après sa mort, il devint prophète de la noosphère, encensé et condamné.",
+      "works": ["teilhard-phenomene-humain"],
+      "tags": ["noosphère", "évolution", "mystique"]
+    },
+    {
+      "id": "vernadsky",
+      "name": "Vladimir Vernadsky",
+      "name_original": "Владимир Иванович Вернадский",
+      "dates": "1863–1945",
+      "origin": "Saint-Pétersbourg, Russie",
+      "lang": "ru",
+      "bio": "Géochimiste russe, père de la biosphère. Il vit la vie comme force géologique, transformant la Terre. Avec Teilhard, il forgea le concept de noosphère — la pensée humaine comme nouvelle couche planétaire. Respecté par les Soviétiques malgré ses origines nobles, il mourut en pleine guerre, visionnaire ignoré en Occident.",
+      "works": ["vernadsky-biosphere"],
+      "tags": ["biosphère", "noosphère", "géochimie"]
+    },
+    {
+      "id": "fedorov",
+      "name": "Nikolaï Fiodorov",
+      "name_original": "Николай Фёдорович Фёдоров",
+      "dates": "1829–1903",
+      "origin": "Klioutchi, Russie",
+      "lang": "ru",
+      "bio": "Bibliothécaire et philosophe russe, père du cosmisme. Son projet : ressusciter tous les morts par la science et coloniser l'univers pour les loger. Tolstoï et Dostoïevski l'admiraient. Il refusait de publier, vivait en ascète, donnait son salaire. Ses disciples construisirent des fusées.",
+      "works": ["fedorov-philosophie-oeuvre-commune"],
+      "tags": ["cosmisme", "résurrection", "utopie"]
+    },
+    {
+      "id": "tsiolkovsky",
+      "name": "Constantin Tsiolkovski",
+      "name_original": "Константин Эдуардович Циолковский",
+      "dates": "1857–1935",
+      "origin": "Ijevsk, Russie",
+      "lang": "ru",
+      "bio": "Instituteur sourd et visionnaire, père de l'astronautique. Dans sa cabane de Kalouga, il calcula les équations des fusées et rêva de colonies spatiales. Disciple de Fiodorov : l'humanité doit quitter son berceau. Il mourut avant Spoutnik, mais les Soviétiques le célébrèrent comme prophète.",
+      "works": ["tsiolkovsky-fusees"],
+      "tags": ["cosmisme", "astronautique", "visionnaire"]
+    },
+    {
+      "id": "bergson",
+      "name": "Henri Bergson",
+      "name_original": "Henri-Louis Bergson",
+      "dates": "1859–1941",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Philosophe français, Nobel 1927. L'Évolution créatrice opposa l'élan vital au mécanisme darwinien. Star intellectuelle de la Belle Époque, il remplissait des amphithéâtres. Juif, il refusa les exemptions de Vichy et fit la queue pour se faire recenser. Il mourut d'une pneumonie contractée dans cette file.",
+      "works": ["bergson-evolution-creatrice"],
+      "tags": ["élan vital", "durée", "intuition"]
+    },
+    {
+      "id": "whitehead",
+      "name": "Alfred North Whitehead",
+      "name_original": "Alfred North Whitehead",
+      "dates": "1861–1947",
+      "origin": "Ramsgate, Angleterre",
+      "lang": "en",
+      "bio": "Mathématicien et philosophe britannique. Avec Russell, il écrivit Principia Mathematica. À 63 ans, il partit pour Harvard et inventa la philosophie du processus : la réalité n'est pas faite de choses mais d'événements. Dieu lui-même devient. Obscur et profond, il reste le philosophe des philosophes.",
+      "works": ["whitehead-process-reality"],
+      "tags": ["processus", "métaphysique", "mathématiques"]
+    },
+    {
+      "id": "lovelock",
+      "name": "James Lovelock",
+      "name_original": "James Ephraim Lovelock",
+      "dates": "1919–2022",
+      "origin": "Letchworth, Angleterre",
+      "lang": "en",
+      "bio": "Scientifique indépendant britannique, père de l'hypothèse Gaïa. Travaillant pour la NASA, il comprit que la Terre régule elle-même son climat — organisme vivant, pas machine. Les scientifiques rirent, puis réfléchirent. Il vécut jusqu'à 103 ans, ermite dans le Devon, Cassandre du climat.",
+      "works": ["lovelock-gaia"],
+      "tags": ["gaïa", "écologie", "climat"]
+    },
+    {
+      "id": "margulis",
+      "name": "Lynn Margulis",
+      "name_original": "Lynn Petra Alexander",
+      "dates": "1938–2011",
+      "origin": "Chicago, États-Unis",
+      "lang": "en",
+      "bio": "Biologiste américaine, révolutionnaire de l'évolution. Sa théorie de l'endosymbiose — les mitochondries furent des bactéries libres — fut rejetée 15 fois avant publication. Elle prouva que la coopération, pas seulement la compétition, crée la complexité. Mariée à Sagan, elle le quitta pour la science.",
+      "works": ["margulis-symbiotic-planet"],
+      "tags": ["symbiose", "évolution", "gaïa"]
+    },
+    {
+      "id": "bateson",
+      "name": "Gregory Bateson",
+      "name_original": "Gregory Bateson",
+      "dates": "1904–1980",
+      "origin": "Grantchester, Angleterre",
+      "lang": "en",
+      "bio": "Anthropologue, cybernéticien, écologiste de l'esprit. Fils de généticien, mari de Margaret Mead, il pensa les systèmes, les patterns, les doubles contraintes. Steps to an Ecology of Mind : un livre-labyrinthe. Il mourut en Californie, gourou involontaire du New Age, penseur inclassable.",
+      "works": ["bateson-ecology-mind"],
+      "tags": ["cybernétique", "systèmes", "écologie"]
+    },
+    {
+      "id": "varela",
+      "name": "Francisco Varela",
+      "name_original": "Francisco Javier Varela García",
+      "dates": "1946–2001",
+      "origin": "Talcahuano, Chili",
+      "lang": "es",
+      "bio": "Biologiste et philosophe chilien, co-inventeur de l'autopoïèse. Avec Maturana, il définit la vie comme auto-création. Exilé après Pinochet, il s'installa à Paris, dialogua avec le Dalaï-Lama sur neuroscience et méditation. Greffé du foie, il mourut à 54 ans, pont entre science et conscience.",
+      "works": ["varela-embodied-mind"],
+      "tags": ["autopoïèse", "cognition", "bouddhisme"]
+    },
+    {
+      "id": "prigogine",
+      "name": "Ilya Prigogine",
+      "name_original": "Илья Романович Пригожин",
+      "dates": "1917–2003",
+      "origin": "Moscou, Russie",
+      "lang": "fr",
+      "bio": "Physicien belge d'origine russe, Nobel 1977. Il découvrit les structures dissipatives : l'ordre naissant du chaos, la flèche du temps irréversible. La fin des certitudes : contre le déterminisme, pour la créativité de la nature. De Bruxelles, il réconcilia physique et devenir.",
+      "works": ["prigogine-fin-certitudes"],
+      "tags": ["complexité", "thermodynamique", "temps"]
+    },
+    {
+      "id": "fuller",
+      "name": "Buckminster Fuller",
+      "name_original": "Richard Buckminster Fuller",
+      "dates": "1895–1983",
+      "origin": "Milton, États-Unis",
+      "lang": "en",
+      "bio": "Inventeur et visionnaire américain. Dômes géodésiques, Dymaxion, Spaceship Earth — il pensa l'humanité comme équipage d'un vaisseau. Deux fois renvoyé de Harvard, il faillit se suicider, puis décida de se faire cobaye d'une expérience : sa vie. 28 doctorats honorifiques. Un verbe à lui seul.",
+      "works": ["fuller-operating-manual"],
+      "tags": ["design", "synergie", "utopie"]
+    },
+    {
+      "id": "mcluhan",
+      "name": "Marshall McLuhan",
+      "name_original": "Herbert Marshall McLuhan",
+      "dates": "1911–1980",
+      "origin": "Edmonton, Canada",
+      "lang": "en",
+      "bio": "Théoricien canadien des médias. « Le medium est le message » — il prédit Internet, le village global, l'extension de nos sens. Star médiatique des années 60, incompris des universitaires. Catholique fervent, il voyait la technologie comme prolongement mystique. Mort d'un AVC, ressuscité par l'ère numérique.",
+      "works": ["mcluhan-understanding-media"],
+      "tags": ["médias", "communication", "village global"]
+    },
+    {
+      "id": "morin",
+      "name": "Edgar Morin",
+      "name_original": "Edgar Nahoum",
+      "dates": "1921–",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Sociologue et philosophe français, penseur de la complexité. Résistant, communiste puis exclu, il écrivit La Méthode en six tomes — contre la pensée fragmentée, pour relier. À plus de 100 ans, il pense encore : l'incertitude, la Terre-Patrie, l'aventure humaine. Inépuisable.",
+      "works": ["morin-methode"],
+      "tags": ["complexité", "systèmes", "humanisme"]
     }
   ]
 }

@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2084
+    "count": 2111
   },
   "terms": [
     {
@@ -22461,6 +22461,300 @@
         "vexillologie"
       ],
       "definition": "The material from which flags are made, or festive decorations of flag-like strips. Dressed overall in bunting."
+    },
+    {
+      "id": "noosphere",
+      "term": "Noosphère",
+      "lang": "fr",
+      "category": [
+        "philosophie",
+        "écologie"
+      ],
+      "definition": "The sphere of human thought enveloping the Earth. Coined by Vernadsky and Teilhard de Chardin—mind as geological force, transforming the biosphere into a thinking layer.",
+      "related": ["Biosphère", "Technosphère", "Point Oméga"]
+    },
+    {
+      "id": "biosphere",
+      "term": "Biosphère",
+      "lang": "fr",
+      "category": [
+        "écologie",
+        "science"
+      ],
+      "definition": "The zone of life on Earth—from deep ocean vents to the stratosphere. Vernadsky saw it as a geological force, living matter reshaping the planet.",
+      "related": ["Noosphère", "Gaïa"]
+    },
+    {
+      "id": "technosphere",
+      "term": "Technosphère",
+      "lang": "fr",
+      "category": [
+        "écologie",
+        "philosophie"
+      ],
+      "definition": "The total mass of human-made objects—cities, machines, plastics, roads. Now estimated at 30 trillion tons, outweighing all living biomass.",
+      "related": ["Noosphère", "Anthropocène"]
+    },
+    {
+      "id": "anthropocene",
+      "term": "Anthropocène",
+      "lang": "fr",
+      "category": [
+        "écologie",
+        "géologie"
+      ],
+      "definition": "The proposed geological epoch defined by human impact—nuclear fallout, plastic layers, mass extinction. When did it begin? The debate continues.",
+      "related": ["Technosphère", "Gaïa"]
+    },
+    {
+      "id": "gaia",
+      "term": "Gaïa",
+      "lang": "el",
+      "category": [
+        "écologie",
+        "mythologie"
+      ],
+      "definition": "Earth as a self-regulating organism. Lovelock's hypothesis: life and environment co-evolve, maintaining conditions for life. Named for the Greek goddess.",
+      "related": ["Biosphère", "Noosphère"]
+    },
+    {
+      "id": "umwelt",
+      "term": "Umwelt",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "biologie"
+      ],
+      "definition": "An organism's self-centered world—what it perceives and acts upon. A tick's Umwelt: body heat, butyric acid, hair. Von Uexküll's key concept: every creature inhabits its own universe.",
+      "related": ["Lebenswelt", "Weltanschauung"]
+    },
+    {
+      "id": "lebenswelt",
+      "term": "Lebenswelt",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "phénoménologie"
+      ],
+      "definition": "The lived world of immediate experience, prior to scientific abstraction. Husserl's term for the pre-theoretical ground we all share.",
+      "related": ["Umwelt", "Dasein"]
+    },
+    {
+      "id": "cosmisme",
+      "term": "Космизм",
+      "lang": "ru",
+      "category": [
+        "philosophie",
+        "science"
+      ],
+      "definition": "Russian Cosmism—the vision of humanity conquering death and colonizing the cosmos. Fedorov dreamed of resurrecting all ancestors; his students built rockets.",
+      "related": ["Noosphère", "Point Oméga"]
+    },
+    {
+      "id": "sobornost",
+      "term": "Соборность",
+      "lang": "ru",
+      "category": [
+        "philosophie",
+        "religion"
+      ],
+      "definition": "Spiritual community transcending individualism and collectivism. Unity in freedom, freedom in unity. The Slavophile ideal: the organic wholeness of the Russian soul.",
+      "related": ["Cosmisme"]
+    },
+    {
+      "id": "omega-point",
+      "term": "Point Oméga",
+      "lang": "fr",
+      "category": [
+        "philosophie",
+        "religion"
+      ],
+      "definition": "Teilhard de Chardin's vision: evolution converging toward a final state of maximum complexity and consciousness—Christ-Omega, the divine attractor pulling creation forward.",
+      "related": ["Noosphère", "Cosmisme"]
+    },
+    {
+      "id": "collective-unconscious",
+      "term": "Kollektives Unbewusstes",
+      "lang": "de",
+      "category": [
+        "psychologie",
+        "philosophie"
+      ],
+      "definition": "Jung's deepest layer of the psyche—shared by all humanity, containing archetypes inherited from ancestral experience. The common dream.",
+      "related": ["Archétype", "Noosphère"]
+    },
+    {
+      "id": "morphic-resonance",
+      "term": "Morphic Resonance",
+      "lang": "en",
+      "category": [
+        "science",
+        "philosophie"
+      ],
+      "definition": "Sheldrake's controversial hypothesis: patterns of behavior or form spread across species via non-local memory fields. Nature's habits, not laws.",
+      "related": ["Noosphère", "Collective Unconscious"]
+    },
+    {
+      "id": "meme",
+      "term": "Mème",
+      "lang": "fr",
+      "category": [
+        "science",
+        "culture"
+      ],
+      "definition": "A unit of cultural transmission—ideas, tunes, fashions that replicate like genes. Dawkins' coinage: culture evolving by selection. Now: internet joke formats.",
+      "related": ["Noosphère", "Zeitgeist"]
+    },
+    {
+      "id": "zeitgeist",
+      "term": "Zeitgeist",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "histoire"
+      ],
+      "definition": "The spirit of the age—the intellectual and cultural climate of an era. Hegel's World Spirit manifesting in history. You cannot escape your Zeitgeist.",
+      "related": ["Weltanschauung", "Weltgeist"]
+    },
+    {
+      "id": "weltgeist",
+      "term": "Weltgeist",
+      "lang": "de",
+      "category": [
+        "philosophie"
+      ],
+      "definition": "World Spirit—Hegel's Absolute unfolding through history. Napoleon on horseback: 'I saw the World Spirit riding through the streets.'",
+      "related": ["Zeitgeist", "Geist"]
+    },
+    {
+      "id": "geist",
+      "term": "Geist",
+      "lang": "de",
+      "category": [
+        "philosophie"
+      ],
+      "definition": "Spirit, mind, intellect—all at once. Untranslatable because it fuses what English separates. The animating force of culture and consciousness.",
+      "related": ["Weltgeist", "Zeitgeist"]
+    },
+    {
+      "id": "weltanschauung",
+      "term": "Weltanschauung",
+      "lang": "de",
+      "category": [
+        "philosophie"
+      ],
+      "definition": "A comprehensive worldview—the framework through which one sees everything. More than opinion: the glasses you can't take off.",
+      "related": ["Zeitgeist", "Lebenswelt"]
+    },
+    {
+      "id": "bildung",
+      "term": "Bildung",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "éducation"
+      ],
+      "definition": "Self-cultivation through culture—not mere education but the formation of character through engagement with art, literature, philosophy. The German humanist ideal.",
+      "related": ["Paideia", "Kultur"]
+    },
+    {
+      "id": "vernadsky-living-matter",
+      "term": "Живое вещество",
+      "lang": "ru",
+      "category": [
+        "science",
+        "écologie"
+      ],
+      "definition": "Living matter as a geological force. Vernadsky: life is not on Earth but of Earth—a planetary phenomenon transforming atmosphere, oceans, rocks.",
+      "related": ["Biosphère", "Noosphère"]
+    },
+    {
+      "id": "panspermia",
+      "term": "Panspermia",
+      "lang": "el",
+      "category": [
+        "science",
+        "cosmologie"
+      ],
+      "definition": "The hypothesis that life spreads through the cosmos via meteorites, comets, or cosmic dust. Earth seeded from elsewhere; we are all extraterrestrials.",
+      "related": ["Cosmisme", "Biosphère"]
+    },
+    {
+      "id": "symbiogenesis",
+      "term": "Symbiogenèse",
+      "lang": "fr",
+      "category": [
+        "biologie",
+        "écologie"
+      ],
+      "definition": "Evolution through merger, not just competition. Margulis: mitochondria were once free bacteria; we are walking colonies. Cooperation as evolutionary force.",
+      "related": ["Gaïa", "Biosphère"]
+    },
+    {
+      "id": "autopoiesis",
+      "term": "Autopoïèse",
+      "lang": "fr",
+      "category": [
+        "biologie",
+        "philosophie"
+      ],
+      "definition": "Self-making: a system that produces and maintains itself. Maturana and Varela's definition of life: the cell creates its own boundary, which creates the cell.",
+      "related": ["Gaïa", "Symbiogenèse"]
+    },
+    {
+      "id": "entelechy",
+      "term": "Entelecheia",
+      "lang": "el-anc",
+      "category": [
+        "philosophie",
+        "biologie"
+      ],
+      "definition": "Aristotle's 'having one's end within'—the vital force driving an organism toward its complete form. The acorn's entelecheia is the oak.",
+      "related": ["Télos", "Élan vital"]
+    },
+    {
+      "id": "elan-vital",
+      "term": "Élan vital",
+      "lang": "fr",
+      "category": [
+        "philosophie",
+        "biologie"
+      ],
+      "definition": "Bergson's vital impulse—the creative force driving evolution beyond mere mechanism. Life as invention, not repetition. Unfashionable now, but unforgotten.",
+      "related": ["Entelecheia", "Devenir"]
+    },
+    {
+      "id": "holobiont",
+      "term": "Holobionte",
+      "lang": "fr",
+      "category": [
+        "biologie",
+        "écologie"
+      ],
+      "definition": "An organism plus all its microbial symbionts. You are not one but many—a coral reef of bacteria, fungi, viruses. The individual dissolves.",
+      "related": ["Symbiogenèse", "Autopoïèse"]
+    },
+    {
+      "id": "technics",
+      "term": "Technik",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "technologie"
+      ],
+      "definition": "More than technology—the entire human relationship with tools and making. Heidegger: modern Technik 'enframes' nature as standing reserve. We become resources too.",
+      "related": ["Technosphère", "Gestell"]
+    },
+    {
+      "id": "gestell",
+      "term": "Gestell",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "technologie"
+      ],
+      "definition": "Heidegger's 'enframing'—the essence of modern technology that reveals everything as resource to be optimized. The Rhine becomes hydroelectric potential.",
+      "related": ["Technik", "Dasein"]
     }
   ]
 }

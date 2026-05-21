@@ -1953,6 +1953,149 @@
       "bio": "Romancier autrichien, architecte de l'inachevé. L'Homme sans qualités, fleuve de 1 700 pages, resta incomplet. Ingénieur, soldat décoré en 14-18, il vécut dans l'oubli et la pauvreté à Genève pendant la guerre. Une attaque l'emporta dans son bain. Sa femme trouva le corps. Presque personne à l'enterrement.",
       "works": ["musil-homme"],
       "tags": ["vienne", "ironie", "inachevé"]
+    },
+    {
+      "id": "guenon",
+      "name": "René Guénon",
+      "name_original": "René Jean Marie Joseph Guénon",
+      "dates": "1886–1951",
+      "origin": "Blois, France",
+      "lang": "fr",
+      "bio": "Métaphysicien français, fondateur du traditionalisme. La Crise du monde moderne dénonce l'Occident dégénéré. Il chercha la Tradition primordiale dans l'hindouisme, puis se convertit à l'islam soufi. Il s'installa au Caire, prit le nom d'Abd al-Wahid Yahya, épousa une Égyptienne, et ne revint jamais. Il mourut en invoquant Allah.",
+      "works": ["guenon-crise"],
+      "tags": ["tradition", "métaphysique", "islam"]
+    },
+    {
+      "id": "schuon",
+      "name": "Frithjof Schuon",
+      "name_original": "Frithjof Schuon",
+      "dates": "1907–1998",
+      "origin": "Bâle, Suisse",
+      "lang": "fr",
+      "bio": "Métaphysicien suisse, héritier de Guénon. De l'unité transcendante des religions fonde la philosophia perennis moderne. Soufi initié en Algérie, il fonda sa propre tarîqa, mêlant islam et spiritualité amérindienne. Des accusations de comportement inapproprié entachèrent ses dernières années en Indiana. Il peignait des nus sacrés et mourut entouré de disciples.",
+      "works": ["schuon-unite"],
+      "tags": ["sophia perennis", "soufisme", "ésotérisme"]
+    },
+    {
+      "id": "evola",
+      "name": "Julius Evola",
+      "name_original": "Giulio Cesare Andrea Evola",
+      "dates": "1898–1974",
+      "origin": "Rome, Italie",
+      "lang": "it",
+      "bio": "Philosophe italien, penseur de la Tradition et théoricien de l'extrême droite. Révolte contre le monde moderne prône un retour aux castes et à la virilité guerrière. Dadaïste puis ésotériste, il collabora avec le fascisme sans y adhérer pleinement. Paralysé par un bombardement à Vienne en 1945, il écrivit depuis son fauteuil roulant, lu par les néofascistes du monde entier.",
+      "works": ["evola-revolte"],
+      "tags": ["tradition", "fascisme", "virilité"]
+    },
+    {
+      "id": "coomaraswamy",
+      "name": "Ananda Coomaraswamy",
+      "name_original": "Ananda Kentish Coomaraswamy",
+      "dates": "1877–1947",
+      "origin": "Colombo, Ceylan",
+      "lang": "en",
+      "bio": "Historien de l'art et métaphysicien cinghalais, pont entre Orient et Occident. La Danse de Shiva révéla l'art indien au monde. Géologue de formation, il devint conservateur au Museum of Fine Arts de Boston. Marié quatre fois, il mourut d'une crise cardiaque à 70 ans, respecté des traditionalistes et des universitaires.",
+      "works": ["coomaraswamy-danse"],
+      "tags": ["art indien", "tradition", "métaphysique"]
+    },
+    {
+      "id": "corbin",
+      "name": "Henry Corbin",
+      "name_original": "Henry Corbin",
+      "dates": "1903–1978",
+      "origin": "Paris, France",
+      "lang": "fr",
+      "bio": "Philosophe et iranologue français, explorateur de l'islam spirituel. L'Imagination créatrice dans le soufisme d'Ibn Arabi ouvre le mundus imaginalis. Premier traducteur de Heidegger en français, il se tourna vers l'Iran et Suhrawardî. Professeur à Téhéran et à l'EPHE, il mourut à Paris, laissant une œuvre immense sur l'ésotérisme islamique.",
+      "works": ["corbin-imagination"],
+      "tags": ["iran", "soufisme", "imagination"]
+    },
+    {
+      "id": "junger",
+      "name": "Ernst Jünger",
+      "name_original": "Ernst Jünger",
+      "dates": "1895–1998",
+      "origin": "Heidelberg, Allemagne",
+      "lang": "de",
+      "bio": "Écrivain allemand, esthète de la guerre et de la drogue. Orages d'acier glorifie l'expérience des tranchées. Héros décoré, il refusa de collaborer avec les nazis tout en les côtoyant. Il expérimenta le LSD avec Hofmann. Il vécut 102 ans, se convertit au catholicisme, et mourut légendaire et controversé.",
+      "works": ["junger-orages"],
+      "tags": ["guerre", "drogue", "longévité"]
+    },
+    {
+      "id": "schmitt",
+      "name": "Carl Schmitt",
+      "name_original": "Carl Schmitt",
+      "dates": "1888–1985",
+      "origin": "Plettenberg, Allemagne",
+      "lang": "de",
+      "bio": "Juriste et philosophe politique allemand, théoricien de l'exception. La Notion de politique définit le politique par la distinction ami-ennemi. Il rejoignit le parti nazi en 1933 et justifia les purges. Interné après-guerre, il ne se repentit jamais, écrivant depuis son village natal. Maudit et lu par la gauche comme la droite.",
+      "works": ["schmitt-politique"],
+      "tags": ["souveraineté", "exception", "nazisme"]
+    },
+    {
+      "id": "spengler",
+      "name": "Oswald Spengler",
+      "name_original": "Oswald Arnold Gottfried Spengler",
+      "dates": "1880–1936",
+      "origin": "Blankenburg, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe de l'histoire allemand, prophète du déclin. Le Déclin de l'Occident annonça la mort de la culture faustienne. Professeur raté, il vécut de peu, écrivant dans la solitude. Les nazis le courtisèrent mais il les méprisa. Il mourut d'une crise cardiaque, amer, convaincu que l'Europe sombrait.",
+      "works": ["spengler-declin"],
+      "tags": ["déclin", "culture", "prophétie"]
+    },
+    {
+      "id": "weininger",
+      "name": "Otto Weininger",
+      "name_original": "Otto Weininger",
+      "dates": "1880–1903",
+      "origin": "Vienne, Autriche",
+      "lang": "de",
+      "bio": "Philosophe autrichien, météore autodestucteur. Sexe et Caractère, misogyne et antisémite (lui-même juif converti), fascina Wittgenstein et Strindberg. À 23 ans, il loua la chambre où Beethoven était mort et se tira une balle dans le cœur. Son suicide fit de son livre un best-seller.",
+      "works": ["weininger-sexe"],
+      "tags": ["sexe", "antisémitisme", "suicide"]
+    },
+    {
+      "id": "kraus",
+      "name": "Karl Kraus",
+      "name_original": "Karl Kraus",
+      "dates": "1874–1936",
+      "origin": "Jičín, Bohême",
+      "lang": "de",
+      "bio": "Satiriste autrichien, imprécateur de la presse. Die Fackel, sa revue, attaqua pendant 37 ans le journalisme, la corruption, la guerre. Juif sorti du judaïsme, catholique sorti du catholicisme, il n'épargna personne. Les Derniers Jours de l'humanité fait de la guerre 14-18 une apocalypse. Il mourut d'une crise cardiaque, Vienne s'effondrant.",
+      "works": ["kraus-derniers"],
+      "tags": ["satire", "presse", "vienne"]
+    },
+    {
+      "id": "gunther",
+      "name": "Gotthard Günther",
+      "name_original": "Gotthard Günther",
+      "dates": "1900–1984",
+      "origin": "Arnsdorf, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe et logicien germano-américain, penseur de la cybernétique. Il développa une logique polycontexturale dépassant le bivalent aristotélicien. Fuyant les nazis (sa femme était juive), il s'installa aux États-Unis et travailla avec Heinz von Foerster. Ses écrits de science-fiction précédèrent ses travaux logiques. Penseur marginal, redécouvert par les théoriciens des systèmes.",
+      "works": ["gunther-conscience"],
+      "tags": ["logique", "cybernétique", "polycontexture"]
+    },
+    {
+      "id": "blumenberg",
+      "name": "Hans Blumenberg",
+      "name_original": "Hans Blumenberg",
+      "dates": "1920–1996",
+      "origin": "Lübeck, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe allemand, penseur de la métaphorologie. La Légitimité des temps modernes défend la modernité contre ses critiques. Demi-juif sous le nazisme, il survécut caché. Professeur à Münster, il refusait les interviews et ne voyageait jamais. Œuvre immense sur le mythe, la technique, la curiosité. Il mourut reclus, travaillant jusqu'au bout.",
+      "works": ["blumenberg-legitimite"],
+      "tags": ["métaphore", "modernité", "mythe"]
+    },
+    {
+      "id": "luhmann",
+      "name": "Niklas Luhmann",
+      "name_original": "Niklas Luhmann",
+      "dates": "1927–1998",
+      "origin": "Lunebourg, Allemagne",
+      "lang": "de",
+      "bio": "Sociologue allemand, architecte de la théorie des systèmes. Systèmes sociaux propose une théorie universelle de la société. Fonctionnaire puis professeur à Bielefeld, il écrivit 70 livres grâce à son légendaire fichier de notes (Zettelkasten). Quand on lui demanda son projet, il répondit : « Théorie de la société. Durée : 30 ans. Coût : zéro. »",
+      "works": ["luhmann-systemes"],
+      "tags": ["systèmes", "complexité", "sociologie"]
     }
   ]
 }

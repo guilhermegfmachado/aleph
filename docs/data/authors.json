@@ -2239,6 +2239,61 @@
       "bio": "Philosophe et théologien allemand, figure centrale des Jeunes Hégéliens. Sa critique radicale des Évangiles — il nia l'existence historique de Jésus — lui coûta sa chaire à Bonn en 1842. Ami puis rival de Marx, il influença profondément la gauche hégélienne. Ruiné, il finit ses jours dans l'obscurité, tenant une boutique de tabac à Rixdorf, oublié de tous sauf de Nietzsche qui le salua.",
       "works": ["bauer-christianisme"],
       "tags": ["théologie", "hegel", "athéisme"]
+    },
+    {
+      "id": "feuerbach",
+      "name": "Ludwig Feuerbach",
+      "name_original": "Ludwig Andreas Feuerbach",
+      "dates": "1804–1872",
+      "origin": "Landshut, Bavière",
+      "lang": "de",
+      "bio": "Philosophe allemand, père de l'athéisme moderne. L'Essence du christianisme (1841) retourna Hegel : Dieu n'est que l'homme projeté dans l'infini. Marx et Engels en furent bouleversés. Exclu de l'université pour athéisme, il vécut retiré à la campagne avec sa femme. Ruiné par la faillite de la porcelainerie familiale, il mourut pauvre, soutenu par les socialistes.",
+      "works": ["feuerbach-essence-christianisme"],
+      "tags": ["athéisme", "hegel", "matérialisme"]
+    },
+    {
+      "id": "stirner",
+      "name": "Max Stirner",
+      "name_original": "Johann Kaspar Schmidt",
+      "dates": "1806–1856",
+      "origin": "Bayreuth, Bavière",
+      "lang": "de",
+      "bio": "Philosophe allemand, prophète de l'égoïsme radical. L'Unique et sa propriété (1844) rejette tout — Dieu, État, humanité, morale — au profit du Moi souverain. Marx le réfuta dans 300 pages furieuses. Stirner vécut misérablement : deux mariages ratés, prison pour dettes, mort oublié dans une mansarde berlinoise. Les anarchistes le redécouvrirent.",
+      "works": ["stirner-unique"],
+      "tags": ["anarchisme", "égoïsme", "nihilisme"]
+    },
+    {
+      "id": "strauss",
+      "name": "David Strauss",
+      "name_original": "David Friedrich Strauss",
+      "dates": "1808–1874",
+      "origin": "Ludwigsburg, Wurtemberg",
+      "lang": "de",
+      "bio": "Théologien allemand qui fit scandale. Sa Vie de Jésus (1835) traita les Évangiles comme des mythes — pas des mensonges, mais des créations poétiques inconscientes. Carrière universitaire brisée à 27 ans. Mariage désastreux avec une cantatrice. Nietzsche l'attaqua comme « philistin de la culture ». Il mourut amer, convaincu d'avoir eu raison trop tôt.",
+      "works": ["strauss-vie-jesus"],
+      "tags": ["théologie", "mythologie", "critique biblique"]
+    },
+    {
+      "id": "ruge",
+      "name": "Arnold Ruge",
+      "name_original": "Arnold Ruge",
+      "dates": "1802–1880",
+      "origin": "Bergen auf Rügen, Prusse",
+      "lang": "de",
+      "bio": "Philosophe et journaliste allemand, organisateur des Jeunes Hégéliens. Il édita les Annales allemandes puis les Annales franco-allemandes avec Marx à Paris — avant de se brouiller avec lui. Emprisonné six ans pour activités révolutionnaires dans sa jeunesse. Exilé après 1848, il finit ses jours à Brighton, écrivant ses mémoires que personne ne lut.",
+      "works": ["ruge-annales"],
+      "tags": ["journalisme", "hegel", "révolution"]
+    },
+    {
+      "id": "hess",
+      "name": "Moses Hess",
+      "name_original": "Moses Hess",
+      "dates": "1812–1875",
+      "origin": "Bonn, Allemagne",
+      "lang": "de",
+      "bio": "Philosophe allemand, « rabbin communiste ». Il convertit Engels au communisme et influença Marx. Mais il rompit avec eux pour défendre le nationalisme juif — son Rome et Jérusalem (1862) est un texte fondateur du sionisme. Oublié de son vivant entre socialistes et sionistes, il fut réhabilité par les deux camps après sa mort.",
+      "works": ["hess-rome-jerusalem"],
+      "tags": ["socialisme", "sionisme", "hegel"]
     }
   ]
 }

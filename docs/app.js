@@ -1598,7 +1598,7 @@ function renderSourcesToc() {
 
     container.innerHTML = sections.map(sec => {
         const count = sec.groups.reduce((sum, g) => sum + g.resources.length, 0);
-        return `<a href="#section-${sec.id}" class="sources-toc-pill" onclick="scrollToSourceSection('${sec.id}'); return false;">${escapeHtml(sec.name)}<span class="count">${count}</span></a>`;
+        return `<button type="button" class="sources-toc-pill" onclick="scrollToSourceSection('${sec.id}')">${escapeHtml(sec.name)}<span class="count">${count}</span></button>`;
     }).join('');
 }
 

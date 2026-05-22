@@ -1576,7 +1576,9 @@ main {
   letter-spacing: 0.05em;
   padding: 0.35rem 0.6rem;
   border: 1px solid var(--rule);
+  background: transparent;
   color: var(--ink-3);
+  cursor: pointer;
   transition: all 0.15s;
   text-transform: lowercase;
 }

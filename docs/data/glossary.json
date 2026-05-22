@@ -22471,7 +22471,11 @@
         "écologie"
       ],
       "definition": "The sphere of human thought enveloping the Earth. Coined by Vernadsky and Teilhard de Chardin—mind as geological force, transforming the biosphere into a thinking layer.",
-      "related": ["Biosphère", "Technosphère", "Point Oméga"]
+      "related": [
+        "Biosphère",
+        "Technosphère",
+        "Point Oméga"
+      ]
     },
     {
       "id": "biosphere",
@@ -22482,7 +22486,10 @@
         "science"
       ],
       "definition": "The zone of life on Earth—from deep ocean vents to the stratosphere. Vernadsky saw it as a geological force, living matter reshaping the planet.",
-      "related": ["Noosphère", "Gaïa"]
+      "related": [
+        "Noosphère",
+        "Gaïa"
+      ]
     },
     {
       "id": "technosphere",
@@ -22493,7 +22500,10 @@
         "philosophie"
       ],
       "definition": "The total mass of human-made objects—cities, machines, plastics, roads. Now estimated at 30 trillion tons, outweighing all living biomass.",
-      "related": ["Noosphère", "Anthropocène"]
+      "related": [
+        "Noosphère",
+        "Anthropocène"
+      ]
     },
     {
       "id": "anthropocene",
@@ -22504,7 +22514,10 @@
         "géologie"
       ],
       "definition": "The proposed geological epoch defined by human impact—nuclear fallout, plastic layers, mass extinction. When did it begin? The debate continues.",
-      "related": ["Technosphère", "Gaïa"]
+      "related": [
+        "Technosphère",
+        "Gaïa"
+      ]
     },
     {
       "id": "gaia",
@@ -22515,29 +22528,10 @@
         "mythologie"
       ],
       "definition": "Earth as a self-regulating organism. Lovelock's hypothesis: life and environment co-evolve, maintaining conditions for life. Named for the Greek goddess.",
-      "related": ["Biosphère", "Noosphère"]
-    },
-    {
-      "id": "umwelt",
-      "term": "Umwelt",
-      "lang": "de",
-      "category": [
-        "philosophie",
-        "biologie"
-      ],
-      "definition": "An organism's self-centered world—what it perceives and acts upon. A tick's Umwelt: body heat, butyric acid, hair. Von Uexküll's key concept: every creature inhabits its own universe.",
-      "related": ["Lebenswelt", "Weltanschauung"]
-    },
-    {
-      "id": "lebenswelt",
-      "term": "Lebenswelt",
-      "lang": "de",
-      "category": [
-        "philosophie",
-        "phénoménologie"
-      ],
-      "definition": "The lived world of immediate experience, prior to scientific abstraction. Husserl's term for the pre-theoretical ground we all share.",
-      "related": ["Umwelt", "Dasein"]
+      "related": [
+        "Biosphère",
+        "Noosphère"
+      ]
     },
     {
       "id": "cosmisme",
@@ -22548,18 +22542,10 @@
         "science"
       ],
       "definition": "Russian Cosmism—the vision of humanity conquering death and colonizing the cosmos. Fedorov dreamed of resurrecting all ancestors; his students built rockets.",
-      "related": ["Noosphère", "Point Oméga"]
-    },
-    {
-      "id": "sobornost",
-      "term": "Соборность",
-      "lang": "ru",
-      "category": [
-        "philosophie",
-        "religion"
-      ],
-      "definition": "Spiritual community transcending individualism and collectivism. Unity in freedom, freedom in unity. The Slavophile ideal: the organic wholeness of the Russian soul.",
-      "related": ["Cosmisme"]
+      "related": [
+        "Noosphère",
+        "Point Oméga"
+      ]
     },
     {
       "id": "omega-point",
@@ -22570,7 +22556,10 @@
         "religion"
       ],
       "definition": "Teilhard de Chardin's vision: evolution converging toward a final state of maximum complexity and consciousness—Christ-Omega, the divine attractor pulling creation forward.",
-      "related": ["Noosphère", "Cosmisme"]
+      "related": [
+        "Noosphère",
+        "Cosmisme"
+      ]
     },
     {
       "id": "collective-unconscious",
@@ -22581,7 +22570,10 @@
         "philosophie"
       ],
       "definition": "Jung's deepest layer of the psyche—shared by all humanity, containing archetypes inherited from ancestral experience. The common dream.",
-      "related": ["Archétype", "Noosphère"]
+      "related": [
+        "Archétype",
+        "Noosphère"
+      ]
     },
     {
       "id": "morphic-resonance",
@@ -22592,7 +22584,10 @@
         "philosophie"
       ],
       "definition": "Sheldrake's controversial hypothesis: patterns of behavior or form spread across species via non-local memory fields. Nature's habits, not laws.",
-      "related": ["Noosphère", "Collective Unconscious"]
+      "related": [
+        "Noosphère",
+        "Collective Unconscious"
+      ]
     },
     {
       "id": "meme",
@@ -22603,18 +22598,10 @@
         "culture"
       ],
       "definition": "A unit of cultural transmission—ideas, tunes, fashions that replicate like genes. Dawkins' coinage: culture evolving by selection. Now: internet joke formats.",
-      "related": ["Noosphère", "Zeitgeist"]
-    },
-    {
-      "id": "zeitgeist",
-      "term": "Zeitgeist",
-      "lang": "de",
-      "category": [
-        "philosophie",
-        "histoire"
-      ],
-      "definition": "The spirit of the age—the intellectual and cultural climate of an era. Hegel's World Spirit manifesting in history. You cannot escape your Zeitgeist.",
-      "related": ["Weltanschauung", "Weltgeist"]
+      "related": [
+        "Noosphère",
+        "Zeitgeist"
+      ]
     },
     {
       "id": "weltgeist",
@@ -22624,7 +22611,10 @@
         "philosophie"
       ],
       "definition": "World Spirit—Hegel's Absolute unfolding through history. Napoleon on horseback: 'I saw the World Spirit riding through the streets.'",
-      "related": ["Zeitgeist", "Geist"]
+      "related": [
+        "Zeitgeist",
+        "Geist"
+      ]
     },
     {
       "id": "geist",
@@ -22634,28 +22624,10 @@
         "philosophie"
       ],
       "definition": "Spirit, mind, intellect—all at once. Untranslatable because it fuses what English separates. The animating force of culture and consciousness.",
-      "related": ["Weltgeist", "Zeitgeist"]
-    },
-    {
-      "id": "weltanschauung",
-      "term": "Weltanschauung",
-      "lang": "de",
-      "category": [
-        "philosophie"
-      ],
-      "definition": "A comprehensive worldview—the framework through which one sees everything. More than opinion: the glasses you can't take off.",
-      "related": ["Zeitgeist", "Lebenswelt"]
-    },
-    {
-      "id": "bildung",
-      "term": "Bildung",
-      "lang": "de",
-      "category": [
-        "philosophie",
-        "éducation"
-      ],
-      "definition": "Self-cultivation through culture—not mere education but the formation of character through engagement with art, literature, philosophy. The German humanist ideal.",
-      "related": ["Paideia", "Kultur"]
+      "related": [
+        "Weltgeist",
+        "Zeitgeist"
+      ]
     },
     {
       "id": "vernadsky-living-matter",
@@ -22666,7 +22638,10 @@
         "écologie"
       ],
       "definition": "Living matter as a geological force. Vernadsky: life is not on Earth but of Earth—a planetary phenomenon transforming atmosphere, oceans, rocks.",
-      "related": ["Biosphère", "Noosphère"]
+      "related": [
+        "Biosphère",
+        "Noosphère"
+      ]
     },
     {
       "id": "panspermia",
@@ -22677,7 +22652,10 @@
         "cosmologie"
       ],
       "definition": "The hypothesis that life spreads through the cosmos via meteorites, comets, or cosmic dust. Earth seeded from elsewhere; we are all extraterrestrials.",
-      "related": ["Cosmisme", "Biosphère"]
+      "related": [
+        "Cosmisme",
+        "Biosphère"
+      ]
     },
     {
       "id": "symbiogenesis",
@@ -22688,7 +22666,10 @@
         "écologie"
       ],
       "definition": "Evolution through merger, not just competition. Margulis: mitochondria were once free bacteria; we are walking colonies. Cooperation as evolutionary force.",
-      "related": ["Gaïa", "Biosphère"]
+      "related": [
+        "Gaïa",
+        "Biosphère"
+      ]
     },
     {
       "id": "autopoiesis",
@@ -22699,7 +22680,10 @@
         "philosophie"
       ],
       "definition": "Self-making: a system that produces and maintains itself. Maturana and Varela's definition of life: the cell creates its own boundary, which creates the cell.",
-      "related": ["Gaïa", "Symbiogenèse"]
+      "related": [
+        "Gaïa",
+        "Symbiogenèse"
+      ]
     },
     {
       "id": "entelechy",
@@ -22710,18 +22694,10 @@
         "biologie"
       ],
       "definition": "Aristotle's 'having one's end within'—the vital force driving an organism toward its complete form. The acorn's entelecheia is the oak.",
-      "related": ["Télos", "Élan vital"]
-    },
-    {
-      "id": "elan-vital",
-      "term": "Élan vital",
-      "lang": "fr",
-      "category": [
-        "philosophie",
-        "biologie"
-      ],
-      "definition": "Bergson's vital impulse—the creative force driving evolution beyond mere mechanism. Life as invention, not repetition. Unfashionable now, but unforgotten.",
-      "related": ["Entelecheia", "Devenir"]
+      "related": [
+        "Télos",
+        "Élan vital"
+      ]
     },
     {
       "id": "holobiont",
@@ -22732,7 +22708,10 @@
         "écologie"
       ],
       "definition": "An organism plus all its microbial symbionts. You are not one but many—a coral reef of bacteria, fungi, viruses. The individual dissolves.",
-      "related": ["Symbiogenèse", "Autopoïèse"]
+      "related": [
+        "Symbiogenèse",
+        "Autopoïèse"
+      ]
     },
     {
       "id": "technics",
@@ -22743,7 +22722,10 @@
         "technologie"
       ],
       "definition": "More than technology—the entire human relationship with tools and making. Heidegger: modern Technik 'enframes' nature as standing reserve. We become resources too.",
-      "related": ["Technosphère", "Gestell"]
+      "related": [
+        "Technosphère",
+        "Gestell"
+      ]
     },
     {
       "id": "gestell",
@@ -22754,7 +22736,10 @@
         "technologie"
       ],
       "definition": "Heidegger's 'enframing'—the essence of modern technology that reveals everything as resource to be optimized. The Rhine becomes hydroelectric potential.",
-      "related": ["Technik", "Dasein"]
+      "related": [
+        "Technik",
+        "Dasein"
+      ]
     },
     {
       "id": "deep-time",
@@ -22765,7 +22750,10 @@
         "philosophie"
       ],
       "definition": "Geological time—millions and billions of years. John McPhee's term for the vertigo of comprehending Earth's 4.5 billion year history. Human civilization: the last eyeblink.",
-      "related": ["Stratigraphy", "Anthropocène"]
+      "related": [
+        "Stratigraphy",
+        "Anthropocène"
+      ]
     },
     {
       "id": "precambrian",
@@ -22775,7 +22763,10 @@
         "géologie"
       ],
       "definition": "The first 4 billion years—88% of Earth's history. Mostly microbial, mostly mysterious. Ends with the Cambrian explosion. The long slow fuse.",
-      "related": ["Cambrian Explosion", "Deep Time"]
+      "related": [
+        "Cambrian Explosion",
+        "Deep Time"
+      ]
     },
     {
       "id": "cambrian-explosion",
@@ -22786,7 +22777,10 @@
         "biologie"
       ],
       "definition": "541 million years ago: suddenly, complex animals with shells, eyes, legs. In 20 million years, most major body plans appear. Darwin's dilemma, still debated.",
-      "related": ["Précambrien", "Paléozoïque"]
+      "related": [
+        "Précambrien",
+        "Paléozoïque"
+      ]
     },
     {
       "id": "paleozoic",
@@ -22796,7 +22790,10 @@
         "géologie"
       ],
       "definition": "The 'ancient life' era—541 to 252 million years ago. Trilobites, fish, amphibians, the first forests. Ends with the Great Dying: 96% of species gone.",
-      "related": ["Mésozoïque", "Extinction permienne"]
+      "related": [
+        "Mésozoïque",
+        "Extinction permienne"
+      ]
     },
     {
       "id": "mesozoic",
@@ -22806,7 +22803,11 @@
         "géologie"
       ],
       "definition": "The 'middle life' era—252 to 66 million years ago. Age of dinosaurs: Triassic, Jurassic, Cretaceous. Ends with the asteroid. Mammals inherit the Earth.",
-      "related": ["Paléozoïque", "Cénozoïque", "K-Pg"]
+      "related": [
+        "Paléozoïque",
+        "Cénozoïque",
+        "K-Pg"
+      ]
     },
     {
       "id": "triassic",
@@ -22816,7 +22817,10 @@
         "géologie"
       ],
       "definition": "First period of the Mesozoic—252 to 201 million years ago. Recovery from the Great Dying. First dinosaurs, first mammals. Pangaea intact.",
-      "related": ["Jurassique", "Mésozoïque"]
+      "related": [
+        "Jurassique",
+        "Mésozoïque"
+      ]
     },
     {
       "id": "jurassic",
@@ -22826,7 +22830,10 @@
         "géologie"
       ],
       "definition": "Middle Mesozoic—201 to 145 million years ago. Giant sauropods, Archaeopteryx. Pangaea breaks apart. Named for the Jura Mountains.",
-      "related": ["Trias", "Crétacé"]
+      "related": [
+        "Trias",
+        "Crétacé"
+      ]
     },
     {
       "id": "cretaceous",
@@ -22836,7 +22843,10 @@
         "géologie"
       ],
       "definition": "Last period of the dinosaurs—145 to 66 million years ago. T. rex, Triceratops, flowering plants explode. Named for chalk (creta). Ends with impact.",
-      "related": ["Jurassique", "K-Pg"]
+      "related": [
+        "Jurassique",
+        "K-Pg"
+      ]
     },
     {
       "id": "k-pg",
@@ -22847,7 +22857,10 @@
         "extinction"
       ],
       "definition": "The Cretaceous-Paleogene boundary—66 million years ago. Chicxulub asteroid, nuclear winter, 76% of species extinct. The dinosaurs' last day. Mammals' first dawn.",
-      "related": ["Crétacé", "Cénozoïque"]
+      "related": [
+        "Crétacé",
+        "Cénozoïque"
+      ]
     },
     {
       "id": "cenozoic",
@@ -22857,7 +22870,10 @@
         "géologie"
       ],
       "definition": "The 'recent life' era—66 million years ago to now. Age of mammals, birds, grasses. Ice ages, primates, us. We live in the Cenozoic's latest heartbeat.",
-      "related": ["Mésozoïque", "Anthropocène"]
+      "related": [
+        "Mésozoïque",
+        "Anthropocène"
+      ]
     },
     {
       "id": "permian-extinction",
@@ -22868,7 +22884,10 @@
         "extinction"
       ],
       "definition": "The Great Dying—252 million years ago. 96% of marine species, 70% of land species. Siberian volcanism, ocean acidification, runaway warming. Earth nearly sterilized.",
-      "related": ["Paléozoïque", "Mésozoïque"]
+      "related": [
+        "Paléozoïque",
+        "Mésozoïque"
+      ]
     },
     {
       "id": "pangaea",
@@ -22878,7 +22897,10 @@
         "géologie"
       ],
       "definition": "The supercontinent—all lands joined, 335 to 175 million years ago. From Greek 'all earth.' Its breakup shaped our world: Atlantic opens, India crashes into Asia.",
-      "related": ["Gondwana", "Laurasia"]
+      "related": [
+        "Gondwana",
+        "Laurasia"
+      ]
     },
     {
       "id": "gondwana",
@@ -22888,7 +22910,10 @@
         "géologie"
       ],
       "definition": "The southern supercontinent—South America, Africa, Antarctica, India, Australia joined. Named for the Gond people of India. Its fossils match across oceans.",
-      "related": ["Pangée", "Laurasia"]
+      "related": [
+        "Pangée",
+        "Laurasia"
+      ]
     },
     {
       "id": "laurasia",
@@ -22898,7 +22923,10 @@
         "géologie"
       ],
       "definition": "The northern supercontinent—North America, Europe, Asia. Split from Pangaea, drifted north. Named from Laurentia + Eurasia.",
-      "related": ["Pangée", "Gondwana"]
+      "related": [
+        "Pangée",
+        "Gondwana"
+      ]
     },
     {
       "id": "stratigraphy",
@@ -22908,7 +22936,10 @@
         "géologie"
       ],
       "definition": "Reading Earth's history in rock layers. Oldest below, youngest above. Each stratum a page, each unconformity a chapter missing. The autobiography of stone.",
-      "related": ["Deep Time", "Fossil"]
+      "related": [
+        "Deep Time",
+        "Fossil"
+      ]
     },
     {
       "id": "fossil",
@@ -22919,7 +22950,10 @@
         "biologie"
       ],
       "definition": "From Latin 'dug up'—traces of ancient life preserved in stone. Bones, shells, footprints, even chemical traces. Messages from the dead, written in rock.",
-      "related": ["Stratigraphie", "Paléontologie"]
+      "related": [
+        "Stratigraphie",
+        "Paléontologie"
+      ]
     },
     {
       "id": "uniformitarianism",
@@ -22930,7 +22964,10 @@
         "philosophie"
       ],
       "definition": "Lyell's principle: the present is the key to the past. Same processes, same rates, over deep time. No catastrophes needed—just patience. Geology's founding assumption.",
-      "related": ["Catastrophisme", "Deep Time"]
+      "related": [
+        "Catastrophisme",
+        "Deep Time"
+      ]
     },
     {
       "id": "catastrophism",
@@ -22941,7 +22978,10 @@
         "philosophie"
       ],
       "definition": "Earth shaped by sudden disasters—floods, extinctions, impacts. Once dismissed for uniformitarianism, now partly rehabilitated. Chicxulub proved: sometimes catastrophe wins.",
-      "related": ["Uniformitarisme", "K-Pg"]
+      "related": [
+        "Uniformitarisme",
+        "K-Pg"
+      ]
     },
     {
       "id": "plate-tectonics",
@@ -22951,7 +22991,10 @@
         "géologie"
       ],
       "definition": "Earth's crust broken into moving plates—continents drift, oceans open and close, mountains rise. Wegener guessed; it took 50 years to prove. The planet breathes.",
-      "related": ["Pangée", "Subduction"]
+      "related": [
+        "Pangée",
+        "Subduction"
+      ]
     },
     {
       "id": "subduction",
@@ -22961,7 +23004,9 @@
         "géologie"
       ],
       "definition": "One tectonic plate diving beneath another—into the mantle, recycled. Creates volcanoes, earthquakes, trenches. The Ring of Fire: subduction's signature.",
-      "related": ["Tectonique des plaques"]
+      "related": [
+        "Tectonique des plaques"
+      ]
     },
     {
       "id": "orogeny",
@@ -22971,7 +23016,10 @@
         "géologie"
       ],
       "definition": "Mountain-building—continents collide, crust crumples, peaks rise. The Himalayas: India ramming into Asia for 50 million years. Slow-motion violence.",
-      "related": ["Tectonique des plaques", "Subduction"]
+      "related": [
+        "Tectonique des plaques",
+        "Subduction"
+      ]
     },
     {
       "id": "holocene",
@@ -22981,7 +23029,10 @@
         "géologie"
       ],
       "definition": "Our current epoch—11,700 years of warm stability after the ice age. Agriculture, cities, civilization: all Holocene. Now ending, say some, in the Anthropocene.",
-      "related": ["Anthropocène", "Pléistocène"]
+      "related": [
+        "Anthropocène",
+        "Pléistocène"
+      ]
     },
     {
       "id": "pleistocene",
@@ -22991,7 +23042,10 @@
         "géologie"
       ],
       "definition": "The Ice Age epoch—2.6 million to 11,700 years ago. Glaciers advanced and retreated; mammoths, saber-tooths, early humans. We are ice age creatures in an interglacial.",
-      "related": ["Holocène", "Cénozoïque"]
+      "related": [
+        "Holocène",
+        "Cénozoïque"
+      ]
     },
     {
       "id": "extinction",
@@ -23002,7 +23056,10 @@
         "géologie"
       ],
       "definition": "The end of a species—forever. Background rate: a few per million years. Mass extinctions: 75%+ gone. We are now causing the sixth.",
-      "related": ["K-Pg", "Extinction permienne"]
+      "related": [
+        "K-Pg",
+        "Extinction permienne"
+      ]
     },
     {
       "id": "lazarus-taxon",
@@ -23013,7 +23070,10 @@
         "paléontologie"
       ],
       "definition": "A species thought extinct, then found alive—risen from the fossil record. The coelacanth: 66 million years missing, then caught off South Africa in 1938.",
-      "related": ["Fossil", "Extinction"]
+      "related": [
+        "Fossil",
+        "Extinction"
+      ]
     },
     {
       "id": "living-fossil",
@@ -23023,7 +23083,10 @@
         "biologie"
       ],
       "definition": "A species unchanged for millions of years—horseshoe crabs, ginkgos, nautiluses. Darwin's term, now controversial: nothing truly stops evolving.",
-      "related": ["Taxon Lazare", "Évolution"]
+      "related": [
+        "Taxon Lazare",
+        "Évolution"
+      ]
     },
     {
       "id": "convergent-evolution",
@@ -23033,7 +23096,10 @@
         "biologie"
       ],
       "definition": "Unrelated species evolving similar solutions—eyes invented 40+ times, wings at least 4 times. Different ancestors, same problems, same answers.",
-      "related": ["Évolution", "Homologie"]
+      "related": [
+        "Évolution",
+        "Homologie"
+      ]
     },
     {
       "id": "radiometric-dating",
@@ -23044,7 +23110,10 @@
         "physique"
       ],
       "definition": "Reading time from radioactive decay—uranium to lead, potassium to argon. Each isotope a clock ticking at its own rate. How we know Earth is 4.5 billion years old.",
-      "related": ["Deep Time", "Stratigraphie"]
+      "related": [
+        "Deep Time",
+        "Stratigraphie"
+      ]
     },
     {
       "id": "supercontinent-cycle",
@@ -23054,7 +23123,10 @@
         "géologie"
       ],
       "definition": "Continents assemble, break apart, reassemble—every 400-600 million years. Rodinia, Pangaea, and in 250 million years: Pangaea Proxima. Earth's slow heartbeat.",
-      "related": ["Pangée", "Tectonique des plaques"]
+      "related": [
+        "Pangée",
+        "Tectonique des plaques"
+      ]
     },
     {
       "id": "hodogetria",
@@ -23065,7 +23137,11 @@
         "religion"
       ],
       "definition": "She Who Shows the Way—Byzantine icon type where Mary points to Christ on her arm. The child is the path; she indicates. Original in Constantinople, lost in 1453. Countless copies became miracle-workers.",
-      "related": ["Theotokos", "Eleusa", "Pantocrator"]
+      "related": [
+        "Theotokos",
+        "Eleusa",
+        "Pantocrator"
+      ]
     },
     {
       "id": "theotokos",
@@ -23076,7 +23152,10 @@
         "iconographie"
       ],
       "definition": "God-bearer—Mary's title affirmed at Ephesus 431. Not merely Christ-bearer (Christotokos): she bore God himself. The Nestorians disagreed; the Council did not. The title shaped all Marian iconography.",
-      "related": ["Hodogetria", "Eleusa"]
+      "related": [
+        "Hodogetria",
+        "Eleusa"
+      ]
     },
     {
       "id": "eleusa",
@@ -23087,7 +23166,10 @@
         "religion"
       ],
       "definition": "The Tender Mercy—icon type where Mary and Christ press cheek to cheek. Intimacy, foreshadowed grief. The Vladimir Mother of God: Eleusa that shaped Russian piety for nine centuries.",
-      "related": ["Hodogetria", "Theotokos"]
+      "related": [
+        "Hodogetria",
+        "Theotokos"
+      ]
     },
     {
       "id": "pantocrator",
@@ -23098,7 +23180,10 @@
         "religion"
       ],
       "definition": "The Almighty—Christ enthroned, one hand blessing, the other holding the Gospel. Eyes that follow you in every Byzantine dome. Judge and Savior, terror and hope in one gaze.",
-      "related": ["Deesis", "Mandylion"]
+      "related": [
+        "Deesis",
+        "Mandylion"
+      ]
     },
     {
       "id": "deesis",
@@ -23109,7 +23194,10 @@
         "religion"
       ],
       "definition": "The Entreaty—Christ flanked by Mary and John the Baptist, both interceding for humanity. Central to the iconostasis. We cannot approach the Judge alone; we need advocates.",
-      "related": ["Pantocrator", "Iconostasis"]
+      "related": [
+        "Pantocrator",
+        "Iconostasis"
+      ]
     },
     {
       "id": "mandylion",
@@ -23120,7 +23208,10 @@
         "religion"
       ],
       "definition": "The Holy Face—image of Christ 'not made by hands' (acheiropoieta). Legend: Christ pressed a cloth to his face for King Abgar. The original, lost, spawned infinite copies. Icon of icons.",
-      "related": ["Pantocrator", "Acheiropoieton"]
+      "related": [
+        "Pantocrator",
+        "Acheiropoieton"
+      ]
     },
     {
       "id": "acheiropoieton",
@@ -23131,18 +23222,10 @@
         "religion"
       ],
       "definition": "Not made by human hands—miraculous images: the Mandylion, the Shroud, icons that painted themselves. The iconoclasts asked: how can we depict God? Answer: God depicted himself first.",
-      "related": ["Mandylion", "Iconoclasm"]
-    },
-    {
-      "id": "iconostasis",
-      "term": "Εἰκονοστάσιον",
-      "lang": "el",
-      "category": [
-        "iconographie",
-        "architecture"
-      ],
-      "definition": "The icon screen separating nave from sanctuary in Orthodox churches. Not a wall but a window: icons reveal what the altar hides. The visible makes the invisible present.",
-      "related": ["Deesis", "Pantocrator"]
+      "related": [
+        "Mandylion",
+        "Iconoclasm"
+      ]
     },
     {
       "id": "iconoclasm",
@@ -23153,7 +23236,10 @@
         "histoire"
       ],
       "definition": "Image-breaking—the Byzantine controversy (726-843): can we depict Christ? Emperors smashed icons; monks died defending them. The iconodules won: images participate in what they represent.",
-      "related": ["Acheiropoieton", "Iconostasis"]
+      "related": [
+        "Acheiropoieton",
+        "Iconostasis"
+      ]
     },
     {
       "id": "hesychasm",
@@ -23164,7 +23250,10 @@
         "mystique"
       ],
       "definition": "The stillness—Orthodox mystical practice: repetition of the Jesus Prayer, breath control, inner silence. Gregory Palamas defended it: the monks on Athos truly see uncreated light. Theosis through prayer.",
-      "related": ["Theosis", "Philokalia"]
+      "related": [
+        "Theosis",
+        "Philokalia"
+      ]
     },
     {
       "id": "theosis",
@@ -23175,7 +23264,10 @@
         "mystique"
       ],
       "definition": "Deification—the Orthodox goal: God became human so humans might become God. Not identity but participation in divine nature. Athanasius's formula, the East's answer to Western atonement theories.",
-      "related": ["Hesychasm", "Philokalia"]
+      "related": [
+        "Hesychasm",
+        "Philokalia"
+      ]
     },
     {
       "id": "philokalia",
@@ -23186,7 +23278,10 @@
         "mystique"
       ],
       "definition": "Love of the Beautiful—the anthology of Eastern Christian mystical texts compiled on Athos (1782). Teachings on prayer, stillness, theosis. The pilgrim's guidebook to inner transformation.",
-      "related": ["Hesychasm", "Theosis"]
+      "related": [
+        "Hesychasm",
+        "Theosis"
+      ]
     },
     {
       "id": "anastasis",
@@ -23197,18 +23292,10 @@
         "religion"
       ],
       "definition": "The Resurrection—Byzantine icon showing Christ descending to Hades, pulling Adam and Eve from their tombs. Not the Western empty tomb: he goes down to bring everyone up. Harrowing of Hell.",
-      "related": ["Pantocrator", "Deesis"]
-    },
-    {
-      "id": "kenosis",
-      "term": "Κένωσις",
-      "lang": "el",
-      "category": [
-        "religion",
-        "philosophie"
-      ],
-      "definition": "Self-emptying—Christ's descent from divine glory to human flesh (Philippians 2). God pours himself out, becomes nothing, dies. The mystery at the heart of incarnation. Simone Weil's favorite concept.",
-      "related": ["Theosis", "Incarnation"]
+      "related": [
+        "Pantocrator",
+        "Deesis"
+      ]
     },
     {
       "id": "apophatic",
@@ -23219,7 +23306,10 @@
         "philosophie"
       ],
       "definition": "The negative way—theology by denial. God is not this, not that, not anything we can say. Pseudo-Dionysius: the divine darkness beyond all concepts. We know God by unknowing.",
-      "related": ["Cataphatic", "Theosis"]
+      "related": [
+        "Cataphatic",
+        "Theosis"
+      ]
     },
     {
       "id": "cataphatic",
@@ -23230,7 +23320,9 @@
         "philosophie"
       ],
       "definition": "The affirmative way—theology by positive statements. God is good, beautiful, true. Necessary but insufficient: every affirmation must be negated, then the negation negated. Dialectic of the sacred.",
-      "related": ["Apophatic"]
+      "related": [
+        "Apophatic"
+      ]
     },
     {
       "id": "orans",
@@ -23241,7 +23333,10 @@
         "religion"
       ],
       "definition": "The praying figure—arms raised, palms outward. Oldest Christian posture, from the catacombs. Mary as Orans: the Church at prayer, arms open to heaven and humanity.",
-      "related": ["Theotokos", "Hodogetria"]
+      "related": [
+        "Theotokos",
+        "Hodogetria"
+      ]
     },
     {
       "id": "icon-window",
@@ -23252,2287 +23347,2643 @@
         "religion"
       ],
       "definition": "A window into eternity—Pavel Florensky's definition of icons. Not representation but presence. The saint looks out at us; we look through into the Kingdom. Reverse perspective: heaven sees us.",
-      "related": ["Iconostasis", "Theosis"]
-    },
-    {
-      "id": "samsara",
-      "term": "संसार",
-      "lang": "sa",
-      "category": ["bouddhisme", "hindouisme"],
-      "definition": "The cycle of death and rebirth. Suffering's wheel—craving, becoming, dying, being reborn to crave again. Liberation (moksha, nirvana) is escape from samsara. The axle is ignorance.",
-      "related": ["Nirvana", "Karma", "Moksha"]
+      "related": [
+        "Iconostasis",
+        "Theosis"
+      ]
     },
     {
       "id": "nirvana",
       "term": "निर्वाण",
       "lang": "sa",
-      "category": ["bouddhisme", "philosophie"],
+      "category": [
+        "bouddhisme",
+        "philosophie"
+      ],
       "definition": "Extinction—the blowing out of craving, aversion, delusion. Not annihilation, not heaven: the end of suffering, the end of becoming. The Buddha's silence when asked what nirvana is. Beyond concepts.",
-      "related": ["Samsara", "Bodhi", "Moksha"]
-    },
-    {
-      "id": "dharma",
-      "term": "धर्म",
-      "lang": "sa",
-      "category": ["bouddhisme", "hindouisme"],
-      "definition": "Cosmic law, teaching, duty, truth—no English word contains it. In Buddhism: the Buddha's teaching, also the constituents of reality. In Hinduism: righteous conduct, one's role in cosmic order. The word itself is a teaching.",
-      "related": ["Karma", "Sangha", "Buddha"]
+      "related": [
+        "Samsara",
+        "Bodhi",
+        "Moksha"
+      ]
     },
     {
       "id": "karma",
       "term": "कर्म",
       "lang": "sa",
-      "category": ["bouddhisme", "hindouisme"],
+      "category": [
+        "bouddhisme",
+        "hindouisme"
+      ],
       "definition": "Action and its fruit. Not fate but consequence: intentional acts leave traces that ripen into future experience. Good karma, bad karma—both bind. Liberation is acting without attachment to results.",
-      "related": ["Samsara", "Dharma", "Moksha"]
+      "related": [
+        "Samsara",
+        "Dharma",
+        "Moksha"
+      ]
     },
     {
       "id": "bodhi",
       "term": "बोधि",
       "lang": "sa",
-      "category": ["bouddhisme", "philosophie"],
+      "category": [
+        "bouddhisme",
+        "philosophie"
+      ],
       "definition": "Awakening, enlightenment. Not knowledge but direct seeing—reality as it is, empty of self. The Buddha sat under the Bodhi tree and woke up. The possibility that all beings can awaken.",
-      "related": ["Nirvana", "Prajna", "Satori"]
+      "related": [
+        "Nirvana",
+        "Prajna",
+        "Satori"
+      ]
     },
     {
       "id": "prajna",
       "term": "प्रज्ञा",
       "lang": "sa",
-      "category": ["bouddhisme", "philosophie"],
+      "category": [
+        "bouddhisme",
+        "philosophie"
+      ],
       "definition": "Wisdom, discriminating insight. Not conceptual knowledge but direct perception of emptiness (sunyata). The Prajnaparamita sutras: perfection of wisdom, the heart of Mahayana. Form is emptiness, emptiness is form.",
-      "related": ["Sunyata", "Bodhi", "Karuna"]
+      "related": [
+        "Sunyata",
+        "Bodhi",
+        "Karuna"
+      ]
     },
     {
       "id": "sunyata",
       "term": "शून्यता",
       "lang": "sa",
-      "category": ["bouddhisme", "philosophie"],
+      "category": [
+        "bouddhisme",
+        "philosophie"
+      ],
       "definition": "Emptiness—not nothingness but absence of inherent existence. All phenomena arise dependently, lack self-nature. Nagarjuna's Madhyamaka: even emptiness is empty. The medicine that cures grasping.",
-      "related": ["Prajna", "Pratityasamutpada"]
+      "related": [
+        "Prajna",
+        "Pratityasamutpada"
+      ]
     },
     {
       "id": "karuna",
       "term": "करुणा",
       "lang": "sa",
-      "category": ["bouddhisme", "éthique"],
+      "category": [
+        "bouddhisme",
+        "éthique"
+      ],
       "definition": "Compassion—active concern for others' suffering. One of the four divine abodes. In Mahayana: the bodhisattva's motivation, inseparable from wisdom. Wisdom without compassion is cold; compassion without wisdom is sentimental.",
-      "related": ["Metta", "Bodhisattva", "Prajna"]
+      "related": [
+        "Metta",
+        "Bodhisattva",
+        "Prajna"
+      ]
     },
     {
       "id": "metta",
       "term": "मैत्री",
       "lang": "sa",
-      "category": ["bouddhisme", "éthique"],
+      "category": [
+        "bouddhisme",
+        "éthique"
+      ],
       "definition": "Loving-kindness, benevolence. The wish for all beings to be happy. First of the four divine abodes. Metta meditation: radiating goodwill outward in expanding circles—self, loved ones, neutral beings, enemies, all beings everywhere.",
-      "related": ["Karuna", "Mudita", "Upekkha"]
+      "related": [
+        "Karuna",
+        "Mudita",
+        "Upekkha"
+      ]
     },
     {
       "id": "bodhisattva",
       "term": "बोधिसत्त्व",
       "lang": "sa",
-      "category": ["bouddhisme", "philosophie"],
+      "category": [
+        "bouddhisme",
+        "philosophie"
+      ],
       "definition": "An awakening being—one who postpones final nirvana to help all sentient beings. The Mahayana ideal. Avalokiteshvara hears the world's cries. The bodhisattva vow: may I not attain buddhahood until all beings are free.",
-      "related": ["Bodhi", "Karuna", "Prajna"]
-    },
-    {
-      "id": "maya",
-      "term": "माया",
-      "lang": "sa",
-      "category": ["hindouisme", "philosophie"],
-      "definition": "Illusion, creative power, the veil. In Advaita: the world appears real but is neither real nor unreal. Brahman plays at being many. The magician's art—we're enchanted, taking the snake for the rope.",
-      "related": ["Brahman", "Avidya", "Lila"]
+      "related": [
+        "Bodhi",
+        "Karuna",
+        "Prajna"
+      ]
     },
     {
       "id": "atman",
       "term": "आत्मन्",
       "lang": "sa",
-      "category": ["hindouisme", "philosophie"],
+      "category": [
+        "hindouisme",
+        "philosophie"
+      ],
       "definition": "The self, the soul. In Advaita: Atman is Brahman—the individual self is the universal self. You are that (tat tvam asi). The Upanishadic teaching: neti neti—not this, not that—until only atman remains.",
-      "related": ["Brahman", "Maya", "Moksha"]
+      "related": [
+        "Brahman",
+        "Maya",
+        "Moksha"
+      ]
     },
     {
       "id": "brahman",
       "term": "ब्रह्मन्",
       "lang": "sa",
-      "category": ["hindouisme", "philosophie"],
+      "category": [
+        "hindouisme",
+        "philosophie"
+      ],
       "definition": "The ultimate reality, the ground of being. Not a god but that from which gods arise. Sat-chit-ananda: being-consciousness-bliss. The Upanishads: Brahman cannot be known, only be. Brahman is the knower.",
-      "related": ["Atman", "Maya", "Moksha"]
+      "related": [
+        "Atman",
+        "Maya",
+        "Moksha"
+      ]
     },
     {
       "id": "moksha",
       "term": "मोक्ष",
       "lang": "sa",
-      "category": ["hindouisme", "philosophie"],
+      "category": [
+        "hindouisme",
+        "philosophie"
+      ],
       "definition": "Liberation, release. Freedom from samsara, from karma, from the wheel. The fourth aim of life, beyond duty (dharma), wealth (artha), pleasure (kama). Realizing atman is Brahman. Not going somewhere: seeing you never left.",
-      "related": ["Atman", "Brahman", "Samsara", "Nirvana"]
-    },
-    {
-      "id": "phoneme",
-      "term": "Phonème",
-      "lang": "fr",
-      "category": ["linguistique", "phonologie"],
-      "definition": "The minimal unit of sound that distinguishes meaning. /p/ vs /b/: 'pat' vs 'bat.' Not a physical sound but an abstract category. Trubetzkoy's Prague School: phonology studies differences, not substances.",
-      "related": ["Morpheme", "Phonologie"]
-    },
-    {
-      "id": "morpheme",
-      "term": "Morphème",
-      "lang": "fr",
-      "category": ["linguistique", "morphologie"],
-      "definition": "The minimal unit of meaning. 'Un-break-able': three morphemes. Free (can stand alone: 'break') or bound (require another: 'un-', '-able'). The atom of grammar.",
-      "related": ["Phoneme", "Lexeme"]
+      "related": [
+        "Atman",
+        "Brahman",
+        "Samsara",
+        "Nirvana"
+      ]
     },
     {
       "id": "signifiant",
       "term": "Signifiant",
       "lang": "fr",
-      "category": ["linguistique", "sémiotique"],
+      "category": [
+        "linguistique",
+        "sémiotique"
+      ],
       "definition": "The signifier—the sound-image, the material side of the sign. Saussure's dyad: signifiant/signifié. The word 'tree' as sound or letters, not the concept or the object. Arbitrary relation to the signified.",
-      "related": ["Signifié", "Signe"]
+      "related": [
+        "Signifié",
+        "Signe"
+      ]
     },
     {
       "id": "signifie",
       "term": "Signifié",
       "lang": "fr",
-      "category": ["linguistique", "sémiotique"],
+      "category": [
+        "linguistique",
+        "sémiotique"
+      ],
       "definition": "The signified—the concept, the mental image. Not the referent (the actual tree) but the idea 'tree.' Together with the signifiant, forms the sign. The structure is psychological, not a label on a thing.",
-      "related": ["Signifiant", "Signe"]
+      "related": [
+        "Signifiant",
+        "Signe"
+      ]
     },
     {
       "id": "langue-parole",
       "term": "Langue/Parole",
       "lang": "fr",
-      "category": ["linguistique", "théorie"],
+      "category": [
+        "linguistique",
+        "théorie"
+      ],
       "definition": "Saussure's distinction: langue is the system, the abstract structure shared by speakers; parole is its use, the actual speech acts. Linguistics studies langue—the social fact, the grammar, the rules. Parole is individual, contingent.",
-      "related": ["Synchronie", "Diachronie"]
+      "related": [
+        "Synchronie",
+        "Diachronie"
+      ]
     },
     {
       "id": "synchronie",
       "term": "Synchronie",
       "lang": "fr",
-      "category": ["linguistique", "théorie"],
+      "category": [
+        "linguistique",
+        "théorie"
+      ],
       "definition": "The study of language at a single point in time—structure, not history. Saussure's revolution: describe the system as speakers know it, not its evolution. A chess position, not the history of moves.",
-      "related": ["Diachronie", "Langue-Parole"]
+      "related": [
+        "Diachronie",
+        "Langue-Parole"
+      ]
     },
     {
       "id": "diachronie",
       "term": "Diachronie",
       "lang": "fr",
-      "category": ["linguistique", "théorie"],
+      "category": [
+        "linguistique",
+        "théorie"
+      ],
       "definition": "The study of language through time—historical change, etymology, sound shifts. 19th-century linguistics was diachronic; Saussure privileged synchrony. Both are necessary; neither is complete.",
-      "related": ["Synchronie", "Langue-Parole"]
+      "related": [
+        "Synchronie",
+        "Langue-Parole"
+      ]
     },
     {
       "id": "performatif",
       "term": "Performatif",
       "lang": "fr",
-      "category": ["linguistique", "pragmatique"],
+      "category": [
+        "linguistique",
+        "pragmatique"
+      ],
       "definition": "Austin's discovery: some utterances don't describe—they do. 'I pronounce you married': saying makes it so. Constatives are true or false; performatives are felicitous or infelicitous. All language is performative in some degree.",
-      "related": ["Acte-illocutoire"]
+      "related": [
+        "Acte-illocutoire"
+      ]
     },
     {
       "id": "acte-illocutoire",
       "term": "Acte illocutoire",
       "lang": "fr",
-      "category": ["linguistique", "pragmatique"],
+      "category": [
+        "linguistique",
+        "pragmatique"
+      ],
       "definition": "What you do in saying something—promising, warning, commanding, questioning. Austin and Searle's speech act theory. Locutionary act: the words themselves. Illocutionary act: the force. Perlocutionary act: the effect.",
-      "related": ["Performatif"]
-    },
-    {
-      "id": "deixis",
-      "term": "Deixis",
-      "lang": "el",
-      "category": ["linguistique", "pragmatique"],
-      "definition": "Pointing in language—words whose meaning depends on context. 'I,' 'here,' 'now,' 'this': empty until spoken. Benveniste: language creates the subject through deixis. Every utterance has its origo—the here-now-I.",
-      "related": ["Énonciation"]
+      "related": [
+        "Performatif"
+      ]
     },
     {
       "id": "enonciation",
       "term": "Énonciation",
       "lang": "fr",
-      "category": ["linguistique", "pragmatique"],
+      "category": [
+        "linguistique",
+        "pragmatique"
+      ],
       "definition": "The act of uttering—not the utterance (énoncé) but its production. Benveniste: language contains marks of its own enunciation. Who speaks? To whom? When? The I in the sentence, the you implied.",
-      "related": ["Deixis", "Performatif"]
+      "related": [
+        "Deixis",
+        "Performatif"
+      ]
     },
     {
       "id": "unbewusste",
       "term": "Das Unbewusste",
       "lang": "de",
-      "category": ["psychanalyse", "psychologie"],
+      "category": [
+        "psychanalyse",
+        "psychologie"
+      ],
       "definition": "The unconscious—Freud's revolutionary discovery. Not 'subconscious' but actively unknown, dynamically repressed. It knows no time, no negation, no contradiction. Dreams and slips are its speech. The true psychical reality.",
-      "related": ["Verdraengung", "Es"]
+      "related": [
+        "Verdraengung",
+        "Es"
+      ]
     },
     {
       "id": "verdraengung",
       "term": "Verdrängung",
       "lang": "de",
-      "category": ["psychanalyse", "défense"],
+      "category": [
+        "psychanalyse",
+        "défense"
+      ],
       "definition": "Repression—the cornerstone of psychoanalysis. Unacceptable thoughts, wishes, memories pushed from consciousness. But what's repressed returns—in symptoms, dreams, slips. The work of analysis: making unconscious conscious.",
-      "related": ["Unbewusste", "Wiederkehr"]
+      "related": [
+        "Unbewusste",
+        "Wiederkehr"
+      ]
     },
     {
       "id": "trieb",
       "term": "Trieb",
       "lang": "de",
-      "category": ["psychanalyse", "métapsychologie"],
+      "category": [
+        "psychanalyse",
+        "métapsychologie"
+      ],
       "definition": "Drive—mistranslated as 'instinct.' The psychical representative of bodily excitation, the pressure demanding work. Eros (life) vs Thanatos (death). The drive has source, aim, object—but the object is variable, the most variable element.",
-      "related": ["Libido", "Thanatos"]
+      "related": [
+        "Libido",
+        "Thanatos"
+      ]
     },
     {
       "id": "es-ich-ueberich",
       "term": "Es/Ich/Über-Ich",
       "lang": "de",
-      "category": ["psychanalyse", "métapsychologie"],
+      "category": [
+        "psychanalyse",
+        "métapsychologie"
+      ],
       "definition": "Id, ego, superego—Freud's structural model. The Es: the primal reservoir of drives. The Ich: negotiating reality, defense, synthesis. The Über-Ich: internalized authority, conscience, guilt. The ego is not master in its own house.",
-      "related": ["Unbewusste", "Trieb"]
+      "related": [
+        "Unbewusste",
+        "Trieb"
+      ]
     },
     {
       "id": "uebertragung",
       "term": "Übertragung",
       "lang": "de",
-      "category": ["psychanalyse", "clinique"],
+      "category": [
+        "psychanalyse",
+        "clinique"
+      ],
       "definition": "Transference—the patient projects past relationships onto the analyst. The mother, the father, the beloved—ghosts in the consulting room. Resistance and royal road: analysis happens through transference, not despite it.",
-      "related": ["Widerstand", "Gegenübertragung"]
+      "related": [
+        "Widerstand",
+        "Gegenübertragung"
+      ]
     },
     {
       "id": "gegenubertragung",
       "term": "Gegenübertragung",
       "lang": "de",
-      "category": ["psychanalyse", "clinique"],
+      "category": [
+        "psychanalyse",
+        "clinique"
+      ],
       "definition": "Countertransference—the analyst's unconscious response to the patient. Once considered obstacle; now, diagnostic tool. What the patient evokes reveals what the patient disavows. The analyst's feelings as data.",
-      "related": ["Übertragung", "Unbewusste"]
+      "related": [
+        "Übertragung",
+        "Unbewusste"
+      ]
     },
     {
       "id": "widerstand",
       "term": "Widerstand",
       "lang": "de",
-      "category": ["psychanalyse", "clinique"],
+      "category": [
+        "psychanalyse",
+        "clinique"
+      ],
       "definition": "Resistance—anything that opposes the analytic work. Coming late, forgetting, changing subjects. The ego protects repression. The harder the work, the closer to the wound. Resistance is the map.",
-      "related": ["Verdraengung", "Übertragung"]
+      "related": [
+        "Verdraengung",
+        "Übertragung"
+      ]
     },
     {
       "id": "wiederkehr",
       "term": "Wiederkehr des Verdrängten",
       "lang": "de",
-      "category": ["psychanalyse", "théorie"],
+      "category": [
+        "psychanalyse",
+        "théorie"
+      ],
       "definition": "The return of the repressed. What's pushed away comes back—distorted, displaced, disguised. Symptoms, dreams, slips, repetitions. Repression never fully succeeds; the unconscious insists. The repressed doesn't forget.",
-      "related": ["Verdraengung", "Symptom"]
+      "related": [
+        "Verdraengung",
+        "Symptom"
+      ]
     },
     {
       "id": "unheimlich",
       "term": "Das Unheimliche",
       "lang": "de",
-      "category": ["psychanalyse", "esthétique"],
+      "category": [
+        "psychanalyse",
+        "esthétique"
+      ],
       "definition": "The uncanny—the familiar made strange, the homely become unhomely. Doubles, automata, déjà vu. Freud: the uncanny is the return of something repressed or surmounted. Heimlich and unheimlich coincide: the secret at home.",
-      "related": ["Wiederkehr", "Angst"]
+      "related": [
+        "Wiederkehr",
+        "Angst"
+      ]
     },
     {
       "id": "angst",
       "term": "Angst",
       "lang": "de",
-      "category": ["psychanalyse", "affect"],
+      "category": [
+        "psychanalyse",
+        "affect"
+      ],
       "definition": "Anxiety—not fear of something but objectless dread. Freud evolved: first, dammed-up libido; later, signal of danger. Existential angst: Heidegger's Sein-zum-Tode, Kierkegaard's dizziness of freedom. The affect that reveals.",
-      "related": ["Trieb", "Es-Ich-Ueberich"]
+      "related": [
+        "Trieb",
+        "Es-Ich-Ueberich"
+      ]
     },
     {
       "id": "spaltung",
       "term": "Spaltung",
       "lang": "de",
-      "category": ["psychanalyse", "clinique"],
+      "category": [
+        "psychanalyse",
+        "clinique"
+      ],
       "definition": "Splitting—the ego divides to survive. Good object, bad object; idealized, devalued. Klein: primitive defense. Fetishism: 'I know but nevertheless.' The subject knows and doesn't know simultaneously.",
-      "related": ["Abwehr", "Es-Ich-Ueberich"]
+      "related": [
+        "Abwehr",
+        "Es-Ich-Ueberich"
+      ]
     },
     {
       "id": "objet-a",
       "term": "Objet petit a",
       "lang": "fr",
-      "category": ["psychanalyse", "lacanisme"],
+      "category": [
+        "psychanalyse",
+        "lacanisme"
+      ],
       "definition": "Lacan's invention: the object-cause of desire. Not what you desire but what makes you desire. Unattainable, lost from the start. The breast, the gaze, the voice—partial objects, forever missing. The hole around which desire circulates.",
-      "related": ["Désir", "Manque"]
-    },
-    {
-      "id": "habeas-corpus",
-      "term": "Habeas corpus",
-      "lang": "la",
-      "category": ["droit", "latin juridique"],
-      "definition": "You shall have the body. The great writ: bring the prisoner before the court, justify detention. Magna Carta's seed, liberty's guardian. No imprisonment without legal cause. The body belongs to law, not to arbitrary power.",
-      "related": ["In-dubio-pro-reo"]
+      "related": [
+        "Désir",
+        "Manque"
+      ]
     },
     {
       "id": "in-dubio-pro-reo",
       "term": "In dubio pro reo",
       "lang": "la",
-      "category": ["droit", "latin juridique"],
+      "category": [
+        "droit",
+        "latin juridique"
+      ],
       "definition": "When in doubt, for the accused. Presumption of innocence's maxim. The prosecution must prove beyond reasonable doubt; doubt acquits. Better ten guilty go free than one innocent suffer.",
-      "related": ["Habeas-corpus", "Nullum-crimen"]
+      "related": [
+        "Habeas-corpus",
+        "Nullum-crimen"
+      ]
     },
     {
       "id": "nullum-crimen",
       "term": "Nullum crimen sine lege",
       "lang": "la",
-      "category": ["droit", "latin juridique"],
+      "category": [
+        "droit",
+        "latin juridique"
+      ],
       "definition": "No crime without law. You cannot be punished for what wasn't illegal when you did it. Against retroactive criminal law, against arbitrary punishment. The principle of legality: the state must declare crimes first.",
-      "related": ["Nulla-poena", "In-dubio-pro-reo"]
+      "related": [
+        "Nulla-poena",
+        "In-dubio-pro-reo"
+      ]
     },
     {
       "id": "nulla-poena",
       "term": "Nulla poena sine lege",
       "lang": "la",
-      "category": ["droit", "latin juridique"],
+      "category": [
+        "droit",
+        "latin juridique"
+      ],
       "definition": "No punishment without law. The penalty must be prescribed before the act. Judges apply, don't create. Enlightenment principle: Beccaria, Feuerbach. Certainty of law over judicial discretion.",
-      "related": ["Nullum-crimen"]
+      "related": [
+        "Nullum-crimen"
+      ]
     },
     {
       "id": "pacta-sunt-servanda",
       "term": "Pacta sunt servanda",
       "lang": "la",
-      "category": ["droit", "latin juridique"],
+      "category": [
+        "droit",
+        "latin juridique"
+      ],
       "definition": "Agreements must be kept. Foundation of contract law and international treaties. Once you promise, you're bound. Good faith, reliability, the social fabric. Without this, no commerce, no diplomacy, no civilization.",
-      "related": ["Bona-fide"]
-    },
-    {
-      "id": "bona-fide",
-      "term": "Bona fide",
-      "lang": "la",
-      "category": ["droit", "latin juridique"],
-      "definition": "In good faith. Acting honestly, without fraud or deceit. The bona fide purchaser: bought without knowing of defects in title. Good faith: the lubricant of legal transactions, the presumption until proven otherwise.",
-      "related": ["Pacta-sunt-servanda", "Mala-fide"]
+      "related": [
+        "Bona-fide"
+      ]
     },
     {
       "id": "res-judicata",
       "term": "Res judicata",
       "lang": "la",
-      "category": ["droit", "latin juridique"],
+      "category": [
+        "droit",
+        "latin juridique"
+      ],
       "definition": "A matter judged. Once finally decided, a case cannot be relitigated. The principle of finality: litigation must end. Different from stare decisis (precedent): res judicata binds the parties, not all future courts.",
-      "related": ["Stare-decisis"]
-    },
-    {
-      "id": "stare-decisis",
-      "term": "Stare decisis",
-      "lang": "la",
-      "category": ["droit", "latin juridique"],
-      "definition": "To stand by things decided. The doctrine of precedent: courts follow prior rulings. Common law's engine. Not absolute—courts can overturn—but presumptively binding. Law grows by accretion.",
-      "related": ["Res-judicata"]
-    },
-    {
-      "id": "lex-talionis",
-      "term": "Lex talionis",
-      "lang": "la",
-      "category": ["droit", "latin juridique"],
-      "definition": "The law of retaliation. Eye for eye, tooth for tooth. Hammurabi, Exodus. Not revenge but proportionality: the punishment fits the crime, no more. A limit on vendetta. Primitive justice or eternal principle?",
-      "related": ["Jus-naturale"]
+      "related": [
+        "Stare-decisis"
+      ]
     },
     {
       "id": "jus-naturale",
       "term": "Jus naturale",
       "lang": "la",
-      "category": ["droit", "philosophie"],
+      "category": [
+        "droit",
+        "philosophie"
+      ],
       "definition": "Natural law—law derived from nature or reason, not human convention. Stoics, Aquinas, Grotius. Rights precede states; unjust laws aren't law. The basis of human rights discourse. Nature or reason? Theology or secularism?",
-      "related": ["Jus-gentium", "Lex-talionis"]
+      "related": [
+        "Jus-gentium",
+        "Lex-talionis"
+      ]
     },
     {
       "id": "jus-gentium",
       "term": "Jus gentium",
       "lang": "la",
-      "category": ["droit", "latin juridique"],
+      "category": [
+        "droit",
+        "latin juridique"
+      ],
       "definition": "Law of nations. Roman law for non-citizens, based on common practice. Later: international law, law between sovereigns. Grotius, Vattel, the UN. The fiction of a law above nations.",
-      "related": ["Jus-naturale"]
+      "related": [
+        "Jus-naturale"
+      ]
     },
     {
       "id": "ultra-vires",
       "term": "Ultra vires",
       "lang": "la",
-      "category": ["droit", "latin juridique"],
+      "category": [
+        "droit",
+        "latin juridique"
+      ],
       "definition": "Beyond the powers. An act exceeding legal authority is void. Corporate law: acts outside the charter. Administrative law: agencies can't exceed their mandate. The limit on delegated power.",
-      "related": ["Intra-vires"]
-    },
-    {
-      "id": "modus-ponens",
-      "term": "Modus ponens",
-      "lang": "la",
-      "category": ["logique", "philosophie"],
-      "definition": "The mode of affirming. If P then Q; P; therefore Q. The basic rule of deduction. Aristotle's syllogism distilled. Affirm the antecedent, derive the consequent. So obvious it seems trivial—until logic examines it.",
-      "related": ["Modus-tollens", "Syllogisme"]
-    },
-    {
-      "id": "modus-tollens",
-      "term": "Modus tollens",
-      "lang": "la",
-      "category": ["logique", "philosophie"],
-      "definition": "The mode of denying. If P then Q; not-Q; therefore not-P. Deny the consequent, derive the negation of the antecedent. Falsification's logic: one counterexample refutes a universal claim. Popper's engine.",
-      "related": ["Modus-ponens", "Syllogisme"]
+      "related": [
+        "Intra-vires"
+      ]
     },
     {
       "id": "reductio",
       "term": "Reductio ad absurdum",
       "lang": "la",
-      "category": ["logique", "philosophie"],
+      "category": [
+        "logique",
+        "philosophie"
+      ],
       "definition": "Reduction to absurdity. Assume the opposite, derive a contradiction, conclude the original. Euclid's proof of infinite primes. Zeno's paradoxes. The most powerful tool in the logician's kit.",
-      "related": ["Modus-tollens", "Contradiction"]
+      "related": [
+        "Modus-tollens",
+        "Contradiction"
+      ]
     },
     {
       "id": "tertium-non-datur",
       "term": "Tertium non datur",
       "lang": "la",
-      "category": ["logique", "philosophie"],
+      "category": [
+        "logique",
+        "philosophie"
+      ],
       "definition": "A third is not given. The law of excluded middle: P or not-P, no middle option. Classical logic's pillar. Intuitionists reject it: you must construct a proof, not just exclude alternatives. Controversy still burns.",
-      "related": ["Non-contradictio"]
+      "related": [
+        "Non-contradictio"
+      ]
     },
     {
       "id": "non-contradictio",
       "term": "Principium contradictionis",
       "lang": "la",
-      "category": ["logique", "philosophie"],
+      "category": [
+        "logique",
+        "philosophie"
+      ],
       "definition": "The principle of non-contradiction. Nothing can be both P and not-P in the same respect at the same time. Aristotle: the firmest of all principles. Deny it, and you can prove anything. The ground of reason.",
-      "related": ["Tertium-non-datur", "Identitas"]
+      "related": [
+        "Tertium-non-datur",
+        "Identitas"
+      ]
     },
     {
       "id": "quod-erat-demonstrandum",
       "term": "Q.E.D.",
       "lang": "la",
-      "category": ["logique", "mathématiques"],
+      "category": [
+        "logique",
+        "mathématiques"
+      ],
       "definition": "That which was to be demonstrated. The proof is complete, the theorem established. Euclid's triumphant stamp. Mathematicians still write it; some use a tombstone (∎). The satisfaction of closure.",
-      "related": ["Reductio"]
-    },
-    {
-      "id": "a-priori",
-      "term": "A priori",
-      "lang": "la",
-      "category": ["logique", "philosophie"],
-      "definition": "From what comes before—knowledge independent of experience. Mathematical truths, logical necessities. Kant: synthetic a priori (space, time, causality). Rationalism's domain. The opposite: a posteriori, from experience.",
-      "related": ["A-posteriori"]
-    },
-    {
-      "id": "a-posteriori",
-      "term": "A posteriori",
-      "lang": "la",
-      "category": ["logique", "philosophie"],
-      "definition": "From what comes after—knowledge derived from experience. Empirical truths: water boils at 100°C. Hume: all knowledge of matters of fact. Empiricism's domain. Necessary vs contingent: a priori vs a posteriori.",
-      "related": ["A-priori"]
+      "related": [
+        "Reductio"
+      ]
     },
     {
       "id": "petitio-principii",
       "term": "Petitio principii",
       "lang": "la",
-      "category": ["logique", "rhétorique"],
+      "category": [
+        "logique",
+        "rhétorique"
+      ],
       "definition": "Begging the question. Assuming what you're trying to prove. The conclusion hides in the premises. Circular reasoning dressed up. 'The Bible is true because it's God's word, and God's word is true because it's in the Bible.'",
-      "related": ["Fallacia"]
+      "related": [
+        "Fallacia"
+      ]
     },
     {
       "id": "occams-razor",
       "term": "Novacula Occami",
       "lang": "la",
-      "category": ["logique", "philosophie"],
+      "category": [
+        "logique",
+        "philosophie"
+      ],
       "definition": "Ockham's razor: entities should not be multiplied beyond necessity. Prefer the simpler explanation. Not a proof but a heuristic. William of Ockham didn't quite say it this way. Parsimony: the scientist's aesthetic.",
-      "related": ["Pluralitas"]
+      "related": [
+        "Pluralitas"
+      ]
     },
     {
       "id": "axioma",
       "term": "Axioma",
       "lang": "el",
-      "category": ["logique", "mathématiques"],
+      "category": [
+        "logique",
+        "mathématiques"
+      ],
       "definition": "A self-evident truth, taken without proof. Euclid's axioms grounded geometry. Hilbert formalized: axioms are starting points, consistent, independent. Gödel: no system can prove its own consistency. The ground trembles.",
-      "related": ["Theorema", "Postulatum"]
-    },
-    {
-      "id": "calcination",
-      "term": "Calcinatio",
-      "lang": "la",
-      "category": ["alchimie", "transformation"],
-      "definition": "Calcination—heating to powder, burning away impurities. The soul's trial by fire. Psychologically: confronting ego, burning illusions. The first operation in some sequences. From calcis, lime: what remains when fire has done its work.",
-      "related": ["Nigredo", "Solutio"]
+      "related": [
+        "Theorema",
+        "Postulatum"
+      ]
     },
     {
       "id": "solutio",
       "term": "Solutio",
       "lang": "la",
-      "category": ["alchimie", "transformation"],
+      "category": [
+        "alchimie",
+        "transformation"
+      ],
       "definition": "Dissolution—dissolving the calcined matter in liquid. Return to prima materia, the undifferentiated. Psychologically: letting go of rigid structures, the ego dissolving in the unconscious. Solve: the first half of 'solve et coagula.'",
-      "related": ["Coagulatio", "Prima-materia"]
+      "related": [
+        "Coagulatio",
+        "Prima-materia"
+      ]
     },
     {
       "id": "coagulatio",
       "term": "Coagulatio",
       "lang": "la",
-      "category": ["alchimie", "transformation"],
+      "category": [
+        "alchimie",
+        "transformation"
+      ],
       "definition": "Coagulation—solidifying what was dissolved. New form from chaos. Psychologically: integrating insights, ego reconstituting at a higher level. Coagula: the second half of the great work. The one becomes the many becomes the one.",
-      "related": ["Solutio", "Coniunctio"]
+      "related": [
+        "Solutio",
+        "Coniunctio"
+      ]
     },
     {
       "id": "sublimatio",
       "term": "Sublimatio",
       "lang": "la",
-      "category": ["alchimie", "transformation"],
+      "category": [
+        "alchimie",
+        "transformation"
+      ],
       "definition": "Sublimation—solid to vapor without liquid stage. The gross becomes subtle, earth becomes air. Psychologically: elevating base instincts, spiritualizing matter. Freud borrowed the term. Rising: what was below ascends.",
-      "related": ["Calcinatio", "Volatilis"]
+      "related": [
+        "Calcinatio",
+        "Volatilis"
+      ]
     },
     {
       "id": "putrefactio",
       "term": "Putrefactio",
       "lang": "la",
-      "category": ["alchimie", "transformation"],
+      "category": [
+        "alchimie",
+        "transformation"
+      ],
       "definition": "Putrefaction—decay, rotting, decomposition. Part of nigredo: the death that precedes rebirth. Psychologically: depression, the collapse of old structures. The compost from which new life grows. To make gold, first make garbage.",
-      "related": ["Nigredo", "Mortificatio"]
+      "related": [
+        "Nigredo",
+        "Mortificatio"
+      ]
     },
     {
       "id": "coniunctio",
       "term": "Coniunctio",
       "lang": "la",
-      "category": ["alchimie", "philosophie"],
+      "category": [
+        "alchimie",
+        "philosophie"
+      ],
       "definition": "Conjunction—the marriage of opposites. Sol and Luna, sulphur and mercury, king and queen. The chemical wedding. Jung's individuation: integrating anima/animus, conscious/unconscious. The mysterium coniunctionis: totality.",
-      "related": ["Rebis", "Albedo"]
-    },
-    {
-      "id": "albedo",
-      "term": "Albedo",
-      "lang": "la",
-      "category": ["alchimie", "philosophie"],
-      "definition": "Whitening—the second stage after nigredo. Purification, washing. The moon rises, the feminine emerges. Psychologically: reflection, insight after dark night. Dawn after death. Not yet gold, but silver: the mirror that sees.",
-      "related": ["Nigredo", "Rubedo"]
-    },
-    {
-      "id": "rubedo",
-      "term": "Rubedo",
-      "lang": "la",
-      "category": ["alchimie", "philosophie"],
-      "definition": "Reddening—the final stage. The Philosopher's Stone achieved, gold accomplished. Sun after moon. Psychologically: wholeness, the Self realized. The mystic marriage consummated. Red: blood, passion, life returned to full intensity.",
-      "related": ["Albedo", "Lapis"]
-    },
-    {
-      "id": "lapis-philosophorum",
-      "term": "Lapis philosophorum",
-      "lang": "la",
-      "category": ["alchimie", "philosophie"],
-      "definition": "The Philosopher's Stone. Goal of the magnum opus: transmutes lead to gold, grants immortality, cures all ills. Never found—or found only within. Jung: the Self, the impossible totality we asymptotically approach. The stone that is no stone.",
-      "related": ["Rubedo", "Magnus-opus"]
+      "related": [
+        "Rebis",
+        "Albedo"
+      ]
     },
     {
       "id": "aqua-vitae",
       "term": "Aqua vitae",
       "lang": "la",
-      "category": ["alchimie", "médecine"],
+      "category": [
+        "alchimie",
+        "médecine"
+      ],
       "definition": "Water of life. Distilled alcohol, the fifth essence, the universal medicine. Alchemists sought the elixir; they found whiskey. Spiritual meaning: the living water, grace, the spirit that revives. Also: aquavit, eau-de-vie, whisky (uisce beatha).",
-      "related": ["Elixir", "Quinta-essentia"]
+      "related": [
+        "Elixir",
+        "Quinta-essentia"
+      ]
     },
     {
       "id": "quinta-essentia",
       "term": "Quinta essentia",
       "lang": "la",
-      "category": ["alchimie", "philosophie"],
+      "category": [
+        "alchimie",
+        "philosophie"
+      ],
       "definition": "The fifth essence—beyond earth, water, air, fire. Aristotle's aether, the heavenly element. Alchemically: the extract, the spirit, the purest form. Quintessential: the most perfect example. What remains when all impurity is removed.",
-      "related": ["Aqua-vitae", "Prima-materia"]
-    },
-    {
-      "id": "aurum-potabile",
-      "term": "Aurum potabile",
-      "lang": "la",
-      "category": ["alchimie", "médecine"],
-      "definition": "Drinkable gold—the universal panacea. Gold dissolved, made assimilable by the body. Supposed to cure all disease, prolong life. Actual preparations: colloidal gold, gold chloride. The eternal metal consumed, incorporated, immortalizing.",
-      "related": ["Lapis-philosophorum", "Elixir"]
+      "related": [
+        "Aqua-vitae",
+        "Prima-materia"
+      ]
     },
     {
       "id": "opus-magnum",
       "term": "Magnum opus",
       "lang": "la",
-      "category": ["alchimie", "philosophie"],
+      "category": [
+        "alchimie",
+        "philosophie"
+      ],
       "definition": "The great work—the alchemical project entire. From prima materia through nigredo, albedo, rubedo to the Stone. Years, lifetimes, impossible. Jung's reading: individuation, becoming who you are. The work that works on you.",
-      "related": ["Lapis-philosophorum", "Rubedo"]
-    },
-    {
-      "id": "eudaimonia",
-      "term": "Εὐδαιμονία",
-      "lang": "el",
-      "category": ["philosophie", "éthique"],
-      "definition": "Flourishing, well-being, happiness—but deeper than 'happiness.' The good life, life lived well. Aristotle's telos for humans. Not feeling good but being good. Activity of the soul in accordance with virtue. The aim of ethics.",
-      "related": ["Arete", "Phronesis"]
-    },
-    {
-      "id": "arete",
-      "term": "Ἀρετή",
-      "lang": "el",
-      "category": ["philosophie", "éthique"],
-      "definition": "Excellence, virtue. Not moral virtue alone but excellence at being what you are. The arete of a knife is sharpness; of a human, living well. Homer's warriors had arete; Socrates redefined it as knowledge. The goal of Greek ethics.",
-      "related": ["Eudaimonia", "Phronesis"]
-    },
-    {
-      "id": "phronesis",
-      "term": "Φρόνησις",
-      "lang": "el",
-      "category": ["philosophie", "éthique"],
-      "definition": "Practical wisdom—knowing how to act in particular situations. Not theoretical knowledge but judgment, discernment. Aristotle: you can't learn it from books, only from experience. The virtue that governs virtues.",
-      "related": ["Eudaimonia", "Arete", "Sophia"]
+      "related": [
+        "Lapis-philosophorum",
+        "Rubedo"
+      ]
     },
     {
       "id": "sophia",
       "term": "Σοφία",
       "lang": "el",
-      "category": ["philosophie", "théologie"],
+      "category": [
+        "philosophie",
+        "théologie"
+      ],
       "definition": "Wisdom—theoretical, contemplative, divine. Higher than phronesis: knowledge of first principles, eternal truths. Philosophia: love of sophia. In Christianity, personified as divine Wisdom, identified with Christ or the Spirit.",
-      "related": ["Phronesis", "Logos", "Nous"]
-    },
-    {
-      "id": "logos",
-      "term": "Λόγος",
-      "lang": "el",
-      "category": ["philosophie", "théologie"],
-      "definition": "Word, reason, principle, account. Heraclitus: the cosmic law. Stoics: divine reason pervading all. John's Gospel: 'In the beginning was the Logos.' The word that creates and explains. Untranslatable: every translation betrays.",
-      "related": ["Sophia", "Nous"]
+      "related": [
+        "Phronesis",
+        "Logos",
+        "Nous"
+      ]
     },
     {
       "id": "nous",
       "term": "Νοῦς",
       "lang": "el",
-      "category": ["philosophie", "métaphysique"],
+      "category": [
+        "philosophie",
+        "métaphysique"
+      ],
       "definition": "Mind, intellect, understanding. Anaxagoras: cosmic Mind ordering chaos. Aristotle: the divine element in us. Plotinus: the second hypostasis, thinking Being. The faculty that grasps eternal truths. Not discursive but intuitive.",
-      "related": ["Logos", "Sophia", "Psyche"]
+      "related": [
+        "Logos",
+        "Sophia",
+        "Psyche"
+      ]
     },
     {
       "id": "psyche",
       "term": "Ψυχή",
       "lang": "el",
-      "category": ["philosophie", "psychologie"],
+      "category": [
+        "philosophie",
+        "psychologie"
+      ],
       "definition": "Soul, life, breath. Homer: shade of the dead. Plato: immortal, tripartite (reason, spirit, appetite). Aristotle: form of the body. Psychology's root, but psyche meant more: the animating principle, what makes living things live.",
-      "related": ["Nous", "Soma"]
-    },
-    {
-      "id": "techne",
-      "term": "Τέχνη",
-      "lang": "el",
-      "category": ["philosophie", "art"],
-      "definition": "Craft, art, skill. Knowing how to make something. Includes both 'art' and 'technology'—the Greek didn't separate them. Plato worried about techne vs episteme; Aristotle analyzed productive knowledge. The root of 'technique.'",
-      "related": ["Episteme", "Poiesis"]
+      "related": [
+        "Nous",
+        "Soma"
+      ]
     },
     {
       "id": "episteme",
       "term": "Ἐπιστήμη",
       "lang": "el",
-      "category": ["philosophie", "épistémologie"],
+      "category": [
+        "philosophie",
+        "épistémologie"
+      ],
       "definition": "Knowledge, science. Not opinion (doxa) but certain knowledge of causes. Aristotle: demonstrative, universal, necessary. Epistemology's root. Foucault's épistème: the unconscious structure of knowledge in an era.",
-      "related": ["Doxa", "Techne", "Gnosis"]
-    },
-    {
-      "id": "doxa",
-      "term": "Δόξα",
-      "lang": "el",
-      "category": ["philosophie", "épistémologie"],
-      "definition": "Opinion, belief, appearance. What seems to be. Parmenides opposed it to truth. Plato: knowledge of the visible, not the Forms. Also: glory, reputation (hence 'doxology'). The epistemological and the social intertwined.",
-      "related": ["Episteme", "Aletheia"]
-    },
-    {
-      "id": "aletheia",
-      "term": "Ἀλήθεια",
-      "lang": "el",
-      "category": ["philosophie", "métaphysique"],
-      "definition": "Truth—literally, 'un-concealment.' Heidegger made much of the etymology: truth as disclosure, unconcealment of Being. Not correspondence but revelation. The Greeks named truth by what it overcomes: forgetting, hiding.",
-      "related": ["Doxa", "Logos"]
-    },
-    {
-      "id": "aporia",
-      "term": "Ἀπορία",
-      "lang": "el",
-      "category": ["philosophie", "rhétorique"],
-      "definition": "Impasse, puzzle, perplexity. Literally: no way through. Socratic dialogues end in aporia—the interlocutor realizes he doesn't know. Not failure but beginning: aporia clears the ground. Derrida revived the term.",
-      "related": ["Elenchus"]
+      "related": [
+        "Doxa",
+        "Techne",
+        "Gnosis"
+      ]
     },
     {
       "id": "elenchus",
       "term": "Ἔλεγχος",
       "lang": "el",
-      "category": ["philosophie", "logique"],
+      "category": [
+        "philosophie",
+        "logique"
+      ],
       "definition": "Refutation, cross-examination. The Socratic method: question beliefs until they contradict. Not teaching but unlearning. The midwife of truth delivers by showing what's false. Constructive destruction.",
-      "related": ["Aporia", "Maieutique"]
-    },
-    {
-      "id": "catharsis",
-      "term": "Κάθαρσις",
-      "lang": "el",
-      "category": ["esthétique", "psychologie"],
-      "definition": "Purification, purgation, cleansing. Aristotle on tragedy: catharsis of pity and fear. Medical metaphor: discharge of excess emotion. Psychoanalytic abreaction. The dark feelings, felt and released. Art heals.",
-      "related": ["Mimesis", "Pathos"]
-    },
-    {
-      "id": "mimesis",
-      "term": "Μίμησις",
-      "lang": "el",
-      "category": ["esthétique", "philosophie"],
-      "definition": "Imitation, representation. Plato condemned art as mimesis of mimesis—copy of a copy. Aristotle redeemed it: mimesis is natural, pleasurable, instructive. The oldest theory of art. Auerbach's Mimesis: Western representation traced.",
-      "related": ["Catharsis", "Poiesis"]
+      "related": [
+        "Aporia",
+        "Maieutique"
+      ]
     },
     {
       "id": "poiesis",
       "term": "Ποίησις",
       "lang": "el",
-      "category": ["esthétique", "philosophie"],
+      "category": [
+        "esthétique",
+        "philosophie"
+      ],
       "definition": "Making, bringing-forth, creation. Root of 'poetry'—the poet is a maker. Heidegger: poiesis as unconcealment, techne as a mode of aletheia. Art and craft united before modernity split them.",
-      "related": ["Techne", "Mimesis"]
-    },
-    {
-      "id": "kairos",
-      "term": "Καιρός",
-      "lang": "el",
-      "category": ["rhétorique", "théologie"],
-      "definition": "The right moment, the opportune time. Not chronos (clock time) but the moment that matters. Rhetoric: knowing when to speak. Theology: God's decisive intervention. Kairos has a forelock—seize it or miss it forever.",
-      "related": ["Chronos"]
-    },
-    {
-      "id": "wabi-sabi",
-      "term": "侘寂",
-      "lang": "ja",
-      "category": ["esthétique", "philosophie"],
-      "definition": "Beauty in imperfection, impermanence, incompleteness. Wabi: rustic simplicity, understated elegance. Sabi: patina of age, beauty of wear. The cracked tea bowl, the weathered wood. Japanese aesthetics distilled: less, older, quieter.",
-      "related": ["Mono-no-aware", "Yugen"]
-    },
-    {
-      "id": "mono-no-aware",
-      "term": "物の哀れ",
-      "lang": "ja",
-      "category": ["esthétique", "littérature"],
-      "definition": "The pathos of things—bittersweet awareness of transience. Cherry blossoms fall; autumn leaves redden; beauty intensifies because it passes. Motoori Norinaga named it as the heart of Japanese literature. Sensitivity to ephemerality.",
-      "related": ["Wabi-sabi", "Yugen", "Mujo"]
-    },
-    {
-      "id": "yugen",
-      "term": "幽玄",
-      "lang": "ja",
-      "category": ["esthétique", "poésie"],
-      "definition": "Mysterious depth, profound grace. Originally Buddhist: the profound, the dark. In Noh: what lies beneath the surface, suggested not shown. The wild geese in the mist, the moon behind clouds. Beauty that conceals more than it reveals.",
-      "related": ["Mono-no-aware", "Wabi-sabi"]
-    },
-    {
-      "id": "ma",
-      "term": "間",
-      "lang": "ja",
-      "category": ["esthétique", "art"],
-      "definition": "Interval, gap, negative space. The pause between notes, the emptiness in a room. Ma is not nothing but pregnant space—what makes the rest meaningful. Japanese architecture, music, conversation depend on ma. Less is not nothing.",
-      "related": ["Wabi-sabi", "Mu"]
+      "related": [
+        "Techne",
+        "Mimesis"
+      ]
     },
     {
       "id": "mu",
       "term": "無",
       "lang": "ja",
-      "category": ["philosophie", "bouddhisme"],
+      "category": [
+        "philosophie",
+        "bouddhisme"
+      ],
       "definition": "Nothing, non-being, no. Zen's most famous answer: 'Does a dog have Buddha-nature?' 'Mu.' Not yes, not no—the question itself is rejected. Meditate on mu until concepts dissolve. The gateless gate.",
-      "related": ["Sunyata", "Ma", "Koan"]
+      "related": [
+        "Sunyata",
+        "Ma",
+        "Koan"
+      ]
     },
     {
       "id": "koan",
       "term": "公案",
       "lang": "ja",
-      "category": ["bouddhisme", "zen"],
+      "category": [
+        "bouddhisme",
+        "zen"
+      ],
       "definition": "A Zen riddle, a case to crack. 'What is the sound of one hand clapping?' Not solved by logic but by direct insight that explodes categories. The teacher watches the student struggle until breakthrough. Enlightenment by paradox.",
-      "related": ["Mu", "Satori"]
-    },
-    {
-      "id": "satori",
-      "term": "悟り",
-      "lang": "ja",
-      "category": ["bouddhisme", "zen"],
-      "definition": "Awakening, enlightenment—sudden, intuitive seeing. Not gradual cultivation but immediate recognition. The ox seen, the ox caught, the self forgotten. Japanese Zen's word for what the Buddha had under the Bodhi tree. A flash, then everything changed.",
-      "related": ["Bodhi", "Koan", "Kensho"]
-    },
-    {
-      "id": "ikigai",
-      "term": "生き甲斐",
-      "lang": "ja",
-      "category": ["philosophie", "éthique"],
-      "definition": "Reason for being, what makes life worth living. The intersection of passion, mission, vocation, profession. Okinawan longevity secret, Western self-help appropriation. Deeper in Japanese: the small daily joys that sustain existence.",
-      "related": ["Eudaimonia"]
+      "related": [
+        "Mu",
+        "Satori"
+      ]
     },
     {
       "id": "wu-wei",
       "term": "無為",
       "lang": "zh",
-      "category": ["taoïsme", "philosophie"],
+      "category": [
+        "taoïsme",
+        "philosophie"
+      ],
       "definition": "Non-action, effortless action. Not inaction but acting without forcing, without ego. Water flows to the lowest place—that's wu wei. The sage rules by not ruling. Laozi's paradox: do nothing, and nothing is undone.",
-      "related": ["Dao", "Ziran"]
+      "related": [
+        "Dao",
+        "Ziran"
+      ]
     },
     {
       "id": "dao",
       "term": "道",
       "lang": "zh",
-      "category": ["taoïsme", "philosophie"],
+      "category": [
+        "taoïsme",
+        "philosophie"
+      ],
       "definition": "The Way—but the Way that can be spoken is not the eternal Way. Source of all, pattern of all, beyond name and form. Laozi's first word, Confucius's path of virtue. The character: a head walking, knowledge in motion.",
-      "related": ["Wu-wei", "De"]
+      "related": [
+        "Wu-wei",
+        "De"
+      ]
     },
     {
       "id": "de",
       "term": "德",
       "lang": "zh",
-      "category": ["taoïsme", "confucianisme"],
+      "category": [
+        "taoïsme",
+        "confucianisme"
+      ],
       "definition": "Virtue, power, inner nature. The Dao within, individualized. Confucian moral virtue; Taoist natural potency. The Daodejing: classic of Dao and De. The charismatic force of the sage that transforms without commanding.",
-      "related": ["Dao", "Ren"]
+      "related": [
+        "Dao",
+        "Ren"
+      ]
     },
     {
       "id": "ren",
       "term": "仁",
       "lang": "zh",
-      "category": ["confucianisme", "éthique"],
+      "category": [
+        "confucianisme",
+        "éthique"
+      ],
       "definition": "Benevolence, humaneness, goodness. The cardinal Confucian virtue. The character: 'person' plus 'two'—humanity is relational. The junzi embodies ren. Mencius: innate, a sprout to be cultivated. The heart that cannot bear others' suffering.",
-      "related": ["Li-rite", "Junzi"]
+      "related": [
+        "Li-rite",
+        "Junzi"
+      ]
     },
     {
       "id": "li-rite",
       "term": "禮",
       "lang": "zh",
-      "category": ["confucianisme", "éthique"],
+      "category": [
+        "confucianisme",
+        "éthique"
+      ],
       "definition": "Ritual, propriety, ceremony. Not empty formalism but the forms that shape virtue. Confucius: ren is substance, li is form. Bowing, sacrificing, mourning—the body learns reverence. Civilization is ritual internalized.",
-      "related": ["Ren", "Junzi"]
-    },
-    {
-      "id": "junzi",
-      "term": "君子",
-      "lang": "zh",
-      "category": ["confucianisme", "éthique"],
-      "definition": "The exemplary person, the gentleman. Originally 'lord's son'—Confucius democratized it: anyone can become a junzi through cultivation. Contrasted with xiaoren (small person). The ethical ideal, always learning, always improving.",
-      "related": ["Ren", "Li-rite", "De"]
-    },
-    {
-      "id": "qi",
-      "term": "氣",
-      "lang": "zh",
-      "category": ["philosophie", "médecine"],
-      "definition": "Vital energy, breath, matter-energy. Not quite matter, not quite spirit—the stuff of reality before that split. Acupuncture moves qi. Cultivation refines qi. The cosmos is qi in motion. Untranslatable: 'energy' flattens it.",
-      "related": ["Yin-yang", "Li-principe"]
+      "related": [
+        "Ren",
+        "Junzi"
+      ]
     },
     {
       "id": "li-principe",
       "term": "理",
       "lang": "zh",
-      "category": ["néoconfucianisme", "philosophie"],
+      "category": [
+        "néoconfucianisme",
+        "philosophie"
+      ],
       "definition": "Principle, pattern, reason. The inherent order of things. Neo-Confucian metaphysics: li is form, qi is matter. Zhu Xi: investigate things to grasp their li. The grain in wood, the logic in things. Cosmic rationality.",
-      "related": ["Qi", "Dao"]
-    },
-    {
-      "id": "yin-yang",
-      "term": "陰陽",
-      "lang": "zh",
-      "category": ["philosophie", "cosmologie"],
-      "definition": "The primal pair: dark/light, female/male, passive/active, cold/hot. Not opposites but complements, each containing the seed of the other. The taiji diagram: eternal interplay. Chinese cosmology's fundamental rhythm.",
-      "related": ["Qi", "Dao"]
+      "related": [
+        "Qi",
+        "Dao"
+      ]
     },
     {
       "id": "ethos",
       "term": "Ἦθος",
       "lang": "el",
-      "category": ["rhétorique", "éthique"],
+      "category": [
+        "rhétorique",
+        "éthique"
+      ],
       "definition": "Character, credibility, the speaker's moral appeal. Aristotle's three proofs: ethos, pathos, logos. You trust the speaker because of who they are. Ethics derives from ethos: character shapes conduct. The voice behind the words.",
-      "related": ["Pathos", "Logos-rhetorique"]
+      "related": [
+        "Pathos",
+        "Logos-rhetorique"
+      ]
     },
     {
       "id": "pathos",
       "term": "Πάθος",
       "lang": "el",
-      "category": ["rhétorique", "esthétique"],
+      "category": [
+        "rhétorique",
+        "esthétique"
+      ],
       "definition": "Suffering, emotion, passion. Rhetorical pathos: moving the audience emotionally. Aristotle: pathos completes ethos and logos. Pathetic (original sense): capable of evoking pity. From passive to powerful—felt, not argued.",
-      "related": ["Ethos", "Catharsis"]
-    },
-    {
-      "id": "chiasmus",
-      "term": "Chiasmus",
-      "lang": "la",
-      "category": ["rhétorique", "littérature"],
-      "definition": "Cross-shaped reversal: ABBA structure. 'Ask not what your country can do for you—ask what you can do for your country.' The mirror pattern, elegant reversal. Named for chi (X). Memory aid, emphasis, wit.",
-      "related": ["Antithesis"]
-    },
-    {
-      "id": "antithesis",
-      "term": "Antithesis",
-      "lang": "la",
-      "category": ["rhétorique", "littérature"],
-      "definition": "Contrast, opposition of ideas in parallel structure. 'It was the best of times, it was the worst of times.' Hegel's triad: thesis, antithesis, synthesis. The rhetoric of opposition, the dialectic of thought.",
-      "related": ["Chiasmus", "Dialectique"]
-    },
-    {
-      "id": "anaphora",
-      "term": "Anaphora",
-      "lang": "la",
-      "category": ["rhétorique", "littérature"],
-      "definition": "Repetition at the beginning of successive clauses. 'I have a dream... I have a dream...' Builds rhythm, emphasis, momentum. The hammer stroke of rhetoric. Also liturgical: the eucharistic prayer. Repetition as power.",
-      "related": ["Epistrophe"]
-    },
-    {
-      "id": "kenosis",
-      "term": "Κένωσις",
-      "lang": "el",
-      "category": ["théologie", "philosophie"],
-      "definition": "Self-emptying. Philippians 2: Christ 'emptied himself' (ekenosen), taking the form of a slave. God's descent, the divine humiliation. Mystical theology: empty yourself of self to be filled with God. The fullness of emptiness.",
-      "related": ["Theosis", "Incarnation"]
-    },
-    {
-      "id": "theosis",
-      "term": "Θέωσις",
-      "lang": "el",
-      "category": ["théologie", "mystique"],
-      "definition": "Deification, divinization. Eastern Orthodox goal: 'God became man that man might become God' (Athanasius). Not absorption but participation in divine nature. Grace transforms, doesn't destroy. The creature ascends; the Creator descends. Meeting.",
-      "related": ["Kenosis", "Hesychasm"]
-    },
-    {
-      "id": "hesychasm",
-      "term": "Ἡσυχασμός",
-      "lang": "el",
-      "category": ["mystique", "théologie"],
-      "definition": "Stillness, inner quiet. Eastern Orthodox contemplative tradition. The Jesus Prayer repeated: 'Lord Jesus Christ, Son of God, have mercy on me, a sinner.' The uncreated light of Tabor. Gregory Palamas defended it. The body prays: breath, posture, heartbeat.",
-      "related": ["Theosis", "Prière"]
-    },
-    {
-      "id": "apophatic",
-      "term": "Ἀποφατικός",
-      "lang": "el",
-      "category": ["théologie", "philosophie"],
-      "definition": "The negative way—theology by negation. God is not this, not that. Every affirmation fails; only denial approaches. Pseudo-Dionysius: the divine darkness beyond light. What God is not is more true than what God is. The cloud of unknowing.",
-      "related": ["Cataphatic", "Via-negativa"]
+      "related": [
+        "Ethos",
+        "Catharsis"
+      ]
     },
     {
       "id": "eschatology",
       "term": "Ἐσχατολογία",
       "lang": "el",
-      "category": ["théologie", "philosophie"],
+      "category": [
+        "théologie",
+        "philosophie"
+      ],
       "definition": "Study of last things: death, judgment, heaven, hell, the end of the world. Christian: the Kingdom coming, parousia, resurrection. Realized eschatology: the end is now. Apocalyptic: the end is near. History has a direction.",
-      "related": ["Parousia", "Apocalypse"]
+      "related": [
+        "Parousia",
+        "Apocalypse"
+      ]
     },
     {
       "id": "parousia",
       "term": "Παρουσία",
       "lang": "el",
-      "category": ["théologie", "eschatologie"],
+      "category": [
+        "théologie",
+        "eschatologie"
+      ],
       "definition": "Presence, arrival—specifically, Christ's second coming. The early church waited; two millennia later, still waiting. Maranatha: come, Lord. The tension between 'already' and 'not yet.' The hope that shapes time.",
-      "related": ["Eschatology", "Apocalypse"]
+      "related": [
+        "Eschatology",
+        "Apocalypse"
+      ]
     },
     {
       "id": "agape",
       "term": "Ἀγάπη",
       "lang": "el",
-      "category": ["théologie", "éthique"],
+      "category": [
+        "théologie",
+        "éthique"
+      ],
       "definition": "Divine love, unconditional love. Not eros (desire) or philia (friendship) but self-giving love. 'God is agape' (1 John). The love feast, the eucharist. Nygren: agape descends; eros ascends. The love that loves the unlovable.",
-      "related": ["Eros", "Caritas"]
+      "related": [
+        "Eros",
+        "Caritas"
+      ]
     },
     {
       "id": "eros",
       "term": "Ἔρως",
       "lang": "el",
-      "category": ["philosophie", "théologie"],
+      "category": [
+        "philosophie",
+        "théologie"
+      ],
       "definition": "Desire, longing, passionate love. Plato's Symposium: eros as ascent to Beauty. Freud: the life drive. Anders Nygren opposed it to agape; others (Pseudo-Dionysius, Dante) united them. The force that moves the sun and other stars.",
-      "related": ["Agape", "Philia"]
+      "related": [
+        "Agape",
+        "Philia"
+      ]
     },
     {
       "id": "hypostasis",
       "term": "Ὑπόστασις",
       "lang": "el",
-      "category": ["théologie", "métaphysique"],
+      "category": [
+        "théologie",
+        "métaphysique"
+      ],
       "definition": "Substance, person, underlying reality. Trinitarian theology: one ousia (essence), three hypostases (persons). Plotinus: three hypostases—One, Intellect, Soul. The word that made the Trinity speakable, barely.",
-      "related": ["Ousia", "Trinitas"]
+      "related": [
+        "Ousia",
+        "Trinitas"
+      ]
     },
     {
       "id": "ousia",
       "term": "Οὐσία",
       "lang": "el",
-      "category": ["philosophie", "théologie"],
+      "category": [
+        "philosophie",
+        "théologie"
+      ],
       "definition": "Being, essence, substance. Aristotle's primary ousia: the individual thing. Secondary: species, genus. Nicaea: Father and Son are homoousios—same substance. Metaphysics' most fought-over word. What something really is.",
-      "related": ["Hypostasis", "Essence"]
-    },
-    {
-      "id": "duende",
-      "term": "Duende",
-      "lang": "es",
-      "category": ["esthétique", "art"],
-      "definition": "The dark spirit of art, Lorca's term. Not angel (inspiration from above) or muse (external guidance) but duende: earth-force, aware of death. Flamenco's edge, bullfighting's moment. Art that risks, that bleeds. 'All that has black sounds has duende.'",
-      "related": ["Pathos", "Catharsis"]
+      "related": [
+        "Hypostasis",
+        "Essence"
+      ]
     },
     {
       "id": "saudade",
       "term": "Saudade",
       "lang": "pt",
-      "category": ["esthétique", "psychologie"],
+      "category": [
+        "esthétique",
+        "psychologie"
+      ],
       "definition": "Longing, melancholy, nostalgia for the absent. Portuguese soul-word, untranslatable. Missing someone, something, someplace, sometime—or nothing specific. Fado's feeling. The presence of absence, the pleasure of melancholy. The heart of lusophone identity.",
-      "related": ["Sehnsucht", "Mono-no-aware"]
+      "related": [
+        "Sehnsucht",
+        "Mono-no-aware"
+      ]
     },
     {
       "id": "sehnsucht",
       "term": "Sehnsucht",
       "lang": "de",
-      "category": ["philosophie", "romantisme"],
+      "category": [
+        "philosophie",
+        "romantisme"
+      ],
       "definition": "Longing, yearning—especially for something unattainable. The Romantics' word. C.S. Lewis: 'inconsolable longing' for we know not what. Homesickness for a home we've never seen. The desire that proves another world.",
-      "related": ["Saudade", "Fernweh"]
-    },
-    {
-      "id": "fernweh",
-      "term": "Fernweh",
-      "lang": "de",
-      "category": ["psychologie", "romantisme"],
-      "definition": "Far-sickness—the opposite of homesickness. Longing for distant places, for the elsewhere. Wanderlust's melancholy twin. The horizon calls. German Romanticism's restlessness, the affliction of those who belong nowhere, everywhere.",
-      "related": ["Sehnsucht", "Wanderlust"]
+      "related": [
+        "Saudade",
+        "Fernweh"
+      ]
     },
     {
       "id": "weltschmerz",
       "term": "Weltschmerz",
       "lang": "de",
-      "category": ["philosophie", "romantisme"],
+      "category": [
+        "philosophie",
+        "romantisme"
+      ],
       "definition": "World-pain, world-weariness. The gap between the ideal and the real, felt as ache. Heine coined it. Romantic malady: the world disappoints the soul. Existential dissatisfaction, cosmic sadness. The sensitive suffer the world's imperfection.",
-      "related": ["Sehnsucht", "Angst"]
-    },
-    {
-      "id": "bildung",
-      "term": "Bildung",
-      "lang": "de",
-      "category": ["philosophie", "éducation"],
-      "definition": "Formation, cultivation, self-development. Not just education but the shaping of character through culture. The Bildungsroman: novel of formation. Hegel, Humboldt: the individual becomes universal through Bildung. German humanism's ideal.",
-      "related": ["Paideia", "Erziehung"]
-    },
-    {
-      "id": "zeitgeist",
-      "term": "Zeitgeist",
-      "lang": "de",
-      "category": ["philosophie", "histoire"],
-      "definition": "Spirit of the age. Hegel: history moves through epochs, each with its spirit. The invisible climate of an era, its assumptions, its sense of possibility. To grasp one's Zeitgeist is to understand one's limits and leverage.",
-      "related": ["Weltanschauung"]
-    },
-    {
-      "id": "weltanschauung",
-      "term": "Weltanschauung",
-      "lang": "de",
-      "category": ["philosophie", "épistémologie"],
-      "definition": "Worldview—comprehensive vision of reality. Not just opinions but the frame within which opinions form. Dilthey: Weltanschauungen are the glasses through which we see. Philosophy articulates what life already assumes.",
-      "related": ["Zeitgeist", "Paradigm"]
-    },
-    {
-      "id": "sprezzatura",
-      "term": "Sprezzatura",
-      "lang": "it",
-      "category": ["esthétique", "éthique"],
-      "definition": "Studied carelessness, effortless grace. Castiglione's Courtier: conceal effort, appear natural. The art that hides art. Aristocratic ease, rehearsed spontaneity. The opposite of striving. Nonchalance masking mastery.",
-      "related": ["Arete", "Wu-wei"]
-    },
-    {
-      "id": "chiaroscuro",
-      "term": "Chiaroscuro",
-      "lang": "it",
-      "category": ["art", "esthétique"],
-      "definition": "Light-dark—the dramatic contrast of light and shadow. Caravaggio, Rembrandt. Not just technique but metaphysics: illumination emerges from darkness. Moral ambiguity painted. The visible carved from the invisible.",
-      "related": ["Tenebrism"]
+      "related": [
+        "Sehnsucht",
+        "Angst"
+      ]
     },
     {
       "id": "terribilita",
       "term": "Terribilità",
       "lang": "it",
-      "category": ["art", "esthétique"],
+      "category": [
+        "art",
+        "esthétique"
+      ],
       "definition": "Terrifying grandeur, awe-inspiring power. Vasari on Michelangelo: his art inspires terror. The sublime before Burke named it. Moses' horns, the Last Judgment's Christ. Art that overwhelms, that makes you tremble. Greatness that frightens.",
-      "related": ["Sublime", "Pathos"]
-    },
-    {
-      "id": "fugue",
-      "term": "Fuga",
-      "lang": "la",
-      "category": ["musique", "forme"],
-      "definition": "Flight—the voices chase each other. Subject, answer, countersubject, episodes, stretto. Bach's Art of Fugue: the form perfected. Polyphonic unity in diversity. The fugue thinks: logic made audible, time structured by imitation.",
-      "related": ["Contrepoint", "Canon"]
-    },
-    {
-      "id": "counterpoint",
-      "term": "Contrapunctus",
-      "lang": "la",
-      "category": ["musique", "technique"],
-      "definition": "Point against point—note against note. The art of combining melodies. Species counterpoint: pedagogical rules. Bach: freedom within law. Polyphony's grammar. Western music's unique achievement: simultaneous independent voices.",
-      "related": ["Fugue", "Polyphonie"]
+      "related": [
+        "Sublime",
+        "Pathos"
+      ]
     },
     {
       "id": "leitmotiv",
       "term": "Leitmotiv",
       "lang": "de",
-      "category": ["musique", "opéra"],
+      "category": [
+        "musique",
+        "opéra"
+      ],
       "definition": "Leading motive—a musical phrase representing a person, idea, or thing. Wagner perfected it: the Ring's web of motives. Memory in music: the past returns transformed. Film scores inherit the technique. Music that means.",
-      "related": ["Motiv"]
-    },
-    {
-      "id": "sfumato",
-      "term": "Sfumato",
-      "lang": "it",
-      "category": ["art", "technique"],
-      "definition": "Smoky, vanished—Leonardo's technique. Tones blend imperceptibly, edges dissolve. The Mona Lisa's smile: sfumato makes it ambiguous. No lines in nature; sfumato paints the truth. The visible emerging from shadow.",
-      "related": ["Chiaroscuro"]
-    },
-    {
-      "id": "contrapposto",
-      "term": "Contrapposto",
-      "lang": "it",
-      "category": ["art", "sculpture"],
-      "definition": "Counterpose—the body's weight on one leg, the other relaxed. Greek invention, Renaissance revival. Michelangelo's David. The figure lives: asymmetry, tension, implied movement. The posed body escaping the pose.",
-      "related": ["Figura-serpentinata"]
+      "related": [
+        "Motiv"
+      ]
     },
     {
       "id": "figura-serpentinata",
       "term": "Figura serpentinata",
       "lang": "it",
-      "category": ["art", "mannerisme"],
+      "category": [
+        "art",
+        "mannerisme"
+      ],
       "definition": "Serpentine figure—the body spiraling, twisting upward like flame. Mannerist ideal: Michelangelo, Giambologna. Viewed from all sides, the form keeps moving. Grace and tension, elegance and strain. The body as arabesque.",
-      "related": ["Contrapposto", "Manierisme"]
-    },
-    {
-      "id": "memento-mori",
-      "term": "Memento mori",
-      "lang": "la",
-      "category": ["art", "philosophie"],
-      "definition": "Remember you must die. The skull in the painting, the hourglass, the wilting flower. Vanitas: all is vanity. Roman triumphs: a slave whispering it to the general. Art's dark reminder: your time is finite. Live accordingly.",
-      "related": ["Vanitas", "Carpe-diem"]
-    },
-    {
-      "id": "carpe-diem",
-      "term": "Carpe diem",
-      "lang": "la",
-      "category": ["poésie", "philosophie"],
-      "definition": "Seize the day. Horace's ode: don't trust tomorrow. Epicurean, not hedonistic—enjoy wisely because life is short. Renaissance lyric, marvell's 'To His Coy Mistress.' Mortality as motive. The present is all we have.",
-      "related": ["Memento-mori"]
-    },
-    {
-      "id": "vanitas",
-      "term": "Vanitas",
-      "lang": "la",
-      "category": ["art", "philosophie"],
-      "definition": "Vanity, emptiness—'Vanitas vanitatum, omnia vanitas.' Dutch still life: skull, candle, mirror, flowers, fruit rotting. Ecclesiastes painted. Wealth, beauty, knowledge—all pass. The genre of disillusion.",
-      "related": ["Memento-mori"]
-    },
-    {
-      "id": "trompe-loeil",
-      "term": "Trompe-l'œil",
-      "lang": "fr",
-      "category": ["art", "technique"],
-      "definition": "Deceive the eye. Painting so realistic it fools: the fly on the frame, the niche in the wall. Zeuxis's grapes that birds pecked. Art as illusion, illusion as art. The pleasure of being fooled, the wonder at skill.",
-      "related": ["Mimesis"]
-    },
-    {
-      "id": "pentimento",
-      "term": "Pentimento",
-      "lang": "it",
-      "category": ["art", "technique"],
-      "definition": "Repentance—the artist's correction showing through. X-rays reveal what the painter changed: a moved arm, a deleted face. The ghost of the first thought. Art's palimpsest: process visible beneath finish.",
-      "related": ["Sfumato"]
+      "related": [
+        "Contrapposto",
+        "Manierisme"
+      ]
     },
     {
       "id": "golden-ratio",
       "term": "Sectio aurea",
       "lang": "la",
-      "category": ["mathématiques", "esthétique"],
+      "category": [
+        "mathématiques",
+        "esthétique"
+      ],
       "definition": "The golden section, phi (φ ≈ 1.618). A to B as B is to A+B. Euclid, Fibonacci, the Parthenon (maybe), the nautilus shell (maybe). Divine proportion, the math of beauty. Mystified or real: it haunts aesthetics.",
-      "related": ["Harmonie"]
+      "related": [
+        "Harmonie"
+      ]
     },
     {
       "id": "horror-vacui",
       "term": "Horror vacui",
       "lang": "la",
-      "category": ["art", "philosophie"],
+      "category": [
+        "art",
+        "philosophie"
+      ],
       "definition": "Fear of emptiness. Aristotle: nature abhors a vacuum. In art: filling every surface—Islamic ornament, Victorian clutter, Baroque detail. The opposite of minimalism. The urge to decorate, the anxiety of blankness.",
-      "related": ["Ma"]
+      "related": [
+        "Ma"
+      ]
     },
     {
       "id": "gestalt",
       "term": "Gestalt",
       "lang": "de",
-      "category": ["psychologie", "philosophie"],
+      "category": [
+        "psychologie",
+        "philosophie"
+      ],
       "definition": "Form, shape, configuration. Gestalt psychology: the whole is other than the sum of parts. We perceive patterns, not fragments. Closure, proximity, similarity—the mind organizes. Köhler, Koffka, Wertheimer. Perception creates reality.",
-      "related": ["Perception"]
+      "related": [
+        "Perception"
+      ]
     },
     {
       "id": "einfuhlung",
       "term": "Einfühlung",
       "lang": "de",
-      "category": ["esthétique", "psychologie"],
+      "category": [
+        "esthétique",
+        "psychologie"
+      ],
       "definition": "Feeling-into—the origin of 'empathy.' Vischer, Lipps: we project our feelings into objects. The willow 'weeps,' the column 'soars.' Aesthetic experience as self-objectification. Later: empathy with persons, not just things.",
-      "related": ["Empathie", "Pathetic-fallacy"]
+      "related": [
+        "Empathie",
+        "Pathetic-fallacy"
+      ]
     },
     {
       "id": "sublime",
       "term": "Sublime",
       "lang": "fr",
-      "category": ["esthétique", "philosophie"],
+      "category": [
+        "esthétique",
+        "philosophie"
+      ],
       "definition": "Longinus: elevation of style. Burke: terror at a safe distance—the infinite, the powerful, the obscure. Kant: the mind's triumph over nature's overwhelm. Not beauty (bounded, harmonious) but the unbounded, the terrifying, the great.",
-      "related": ["Terribilita", "Pathos"]
+      "related": [
+        "Terribilita",
+        "Pathos"
+      ]
     },
     {
       "id": "kitsch",
       "term": "Kitsch",
       "lang": "de",
-      "category": ["esthétique", "culture"],
+      "category": [
+        "esthétique",
+        "culture"
+      ],
       "definition": "Cheap sentiment, fake art. Broch: kitsch as evil, substituting formula for feeling. Kundera: the denial of shit. Garden gnomes, velvet Elvises, Hallmark wisdom. But also: why do we need the word? What are we defending?",
-      "related": ["Avantgarde"]
+      "related": [
+        "Avantgarde"
+      ]
     },
     {
       "id": "avantgarde",
       "term": "Avant-garde",
       "lang": "fr",
-      "category": ["art", "culture"],
+      "category": [
+        "art",
+        "culture"
+      ],
       "definition": "The vanguard—military term for artistic rebels. Always ahead, always attacking. Modernism's self-image: break with the past, shock the bourgeois. But the avant-garde ages too. Yesterday's revolution is today's museum.",
-      "related": ["Kitsch", "Modernisme"]
+      "related": [
+        "Kitsch",
+        "Modernisme"
+      ]
     },
     {
       "id": "genius-loci",
       "term": "Genius loci",
       "lang": "la",
-      "category": ["architecture", "mythologie"],
+      "category": [
+        "architecture",
+        "mythologie"
+      ],
       "definition": "Spirit of the place. Roman: every place has its guardian spirit. In architecture: designing with the site, responding to context. Norberg-Schulz: dwelling requires genius loci. Place is not abstract space; it has character, demands respect.",
-      "related": ["Topos"]
+      "related": [
+        "Topos"
+      ]
     },
     {
       "id": "enfilade",
       "term": "Enfilade",
       "lang": "fr",
-      "category": ["architecture", "baroque"],
+      "category": [
+        "architecture",
+        "baroque"
+      ],
       "definition": "Rooms aligned, doors aligned—you see through the whole sequence. Baroque spatial drama: Versailles's long vistas. Military origin: sweeping fire. Architectural: sweeping sight. Power announced by perspective.",
-      "related": ["Perspective"]
+      "related": [
+        "Perspective"
+      ]
     },
     {
       "id": "baldachin",
       "term": "Baldacchino",
       "lang": "it",
-      "category": ["architecture", "liturgie"],
+      "category": [
+        "architecture",
+        "liturgie"
+      ],
       "definition": "Canopy over altar or throne. Bernini's bronze giant at St. Peter's. From Baldacco: Baghdad, where the silk came from. Marks sacred space, frames the holy. Portable for processions, fixed for majesty.",
-      "related": ["Tabernacle"]
-    },
-    {
-      "id": "entasis",
-      "term": "Ἔντασις",
-      "lang": "el",
-      "category": ["architecture", "classique"],
-      "definition": "Tension—the slight swelling in Greek columns. Not straight but subtly curved, as if under load. Optical refinement: fights the illusion of concavity. The column breathes, works, lives. Perfection requires correction.",
-      "related": ["Ordre"]
-    },
-    {
-      "id": "rustication",
-      "term": "Rustication",
-      "lang": "en",
-      "category": ["architecture", "renaissance"],
-      "definition": "Rough-cut stone, deliberately rustic. Florentine palazzi: fortress-like bases, elegant upper floors. Pitti, Medici-Riccardi. Power displayed through massiveness. The refined pretending to be raw.",
-      "related": ["Bossage"]
-    },
-    {
-      "id": "hubris",
-      "term": "Ὕβρις",
-      "lang": "el",
-      "category": ["tragédie", "éthique"],
-      "definition": "Pride, arrogance, overreaching. The tragic flaw that invites nemesis. Oedipus solving the riddle, Icarus flying too high. The gods punish hubris; Greek tragedy warns against it. Know thyself; know your limits.",
-      "related": ["Hamartia", "Nemesis"]
-    },
-    {
-      "id": "hamartia",
-      "term": "Ἁμαρτία",
-      "lang": "el",
-      "category": ["tragédie", "éthique"],
-      "definition": "Error, missing the mark. Aristotle's tragic 'flaw'—but not necessarily moral. Oedipus's hamartia: not knowing who he is. The good person undone by one fatal mistake. Also Christian: sin as missing the target.",
-      "related": ["Hubris", "Peripeteia"]
-    },
-    {
-      "id": "peripeteia",
-      "term": "Περιπέτεια",
-      "lang": "el",
-      "category": ["tragédie", "dramaturgie"],
-      "definition": "Reversal—fortune's sudden turn. Aristotle's Poetics: the action swings to its opposite. Oedipus discovering the truth. The messenger meant to comfort brings doom. Drama's hinge, the pivot that changes everything.",
-      "related": ["Anagnorisis", "Hamartia"]
-    },
-    {
-      "id": "anagnorisis",
-      "term": "Ἀναγνώρισις",
-      "lang": "el",
-      "category": ["tragédie", "dramaturgie"],
-      "definition": "Recognition—the moment of discovery. Aristotle: best when joined with peripeteia. Oedipus recognizes himself. The lost child returns. Ignorance becomes knowledge, usually too late. Drama's cognitive climax.",
-      "related": ["Peripeteia", "Catharsis"]
-    },
-    {
-      "id": "nemesis",
-      "term": "Νέμεσις",
-      "lang": "el",
-      "category": ["mythologie", "éthique"],
-      "definition": "Divine retribution, righteous anger. The goddess who punishes hubris. Balance restored: those who rise too high must fall. Not revenge but justice. The Greeks feared excessive good fortune—nemesis watched.",
-      "related": ["Hubris", "Moira"]
+      "related": [
+        "Tabernacle"
+      ]
     },
     {
       "id": "moira",
       "term": "Μοῖρα",
       "lang": "el",
-      "category": ["mythologie", "philosophie"],
+      "category": [
+        "mythologie",
+        "philosophie"
+      ],
       "definition": "Fate, portion, lot. The three Moirai: Clotho spins, Lachesis measures, Atropos cuts. Even Zeus bows to Moira. Your portion is assigned; struggle is futile but noble. The Greek sense that life is bounded.",
-      "related": ["Nemesis", "Heimarmene"]
-    },
-    {
-      "id": "daimon",
-      "term": "Δαίμων",
-      "lang": "el",
-      "category": ["philosophie", "mythologie"],
-      "definition": "Divine spirit, guiding force. Socrates's daimonion: inner voice that warned him. Not quite god, not quite ghost. Later: demon (demonized). Your daimon is your fate, your genius, your calling. Eudaimonia: good-daimoned.",
-      "related": ["Eudaimonia", "Genius"]
+      "related": [
+        "Nemesis",
+        "Heimarmene"
+      ]
     },
     {
       "id": "physis",
       "term": "Φύσις",
       "lang": "el",
-      "category": ["philosophie", "métaphysique"],
+      "category": [
+        "philosophie",
+        "métaphysique"
+      ],
       "definition": "Nature—from 'to grow.' The nature of a thing, its essence. Presocratic question: what is the physis of all things? Aristotle: nature as internal principle of motion. Opposed to nomos (convention). Physics studies physis.",
-      "related": ["Nomos", "Ousia"]
-    },
-    {
-      "id": "nomos",
-      "term": "Νόμος",
-      "lang": "el",
-      "category": ["philosophie", "politique"],
-      "definition": "Law, custom, convention. Opposed to physis: what's natural vs. what's made up. Sophists exploited the distinction. Is justice natural or conventional? Autonomy: self-law. The debate shapes political philosophy.",
-      "related": ["Physis", "Dikē"]
+      "related": [
+        "Nomos",
+        "Ousia"
+      ]
     },
     {
       "id": "polis",
       "term": "Πόλις",
       "lang": "el",
-      "category": ["politique", "histoire"],
+      "category": [
+        "politique",
+        "histoire"
+      ],
       "definition": "The city-state—Athens, Sparta, Corinth. Not just city but political community. Aristotle: man is a political animal, meant for the polis. Small enough for citizens to know each other. Politics, police, polite—all from polis.",
-      "related": ["Politeia", "Agora"]
+      "related": [
+        "Politeia",
+        "Agora"
+      ]
     },
     {
       "id": "agora",
       "term": "Ἀγορά",
       "lang": "el",
-      "category": ["politique", "architecture"],
+      "category": [
+        "politique",
+        "architecture"
+      ],
       "definition": "The gathering place, the market, the public square. Athens's agora: democracy's stage. Commerce, conversation, philosophy happened there. Socrates argued in the agora. Public space makes public life. The polis needs its agora.",
-      "related": ["Polis", "Forum"]
+      "related": [
+        "Polis",
+        "Forum"
+      ]
     },
     {
       "id": "stoa",
       "term": "Στοά",
       "lang": "el",
-      "category": ["architecture", "philosophie"],
+      "category": [
+        "architecture",
+        "philosophie"
+      ],
       "definition": "Covered walkway, portico. The Stoa Poikile (painted porch) in Athens: where Zeno taught, hence 'Stoicism.' Shelter for philosophers, shoppers, citizens. Architecture enabling thought. The porch that named a philosophy.",
-      "related": ["Stoïcisme", "Agora"]
-    },
-    {
-      "id": "acedia",
-      "term": "Ἀκηδία",
-      "lang": "el",
-      "category": ["théologie", "psychologie"],
-      "definition": "Spiritual torpor, the noonday demon. Desert fathers' affliction: listlessness, inability to pray. Medieval: one of the deadly sins (sloth). Modern: depression's ancestor. The soul that cannot care, the will that cannot will.",
-      "related": ["Mélancolie", "Tristitia"]
+      "related": [
+        "Stoïcisme",
+        "Agora"
+      ]
     },
     {
       "id": "melancholia",
       "term": "Μελαγχολία",
       "lang": "el",
-      "category": ["psychologie", "médecine"],
+      "category": [
+        "psychologie",
+        "médecine"
+      ],
       "definition": "Black bile—the humor causing sadness. Hippocratic medicine, Dürer's engraving, Burton's Anatomy. Creative melancholy: the artist's temperament. Saturn's children. Depression's noble ancestor, when sadness had dignity.",
-      "related": ["Acedia", "Humeur"]
-    },
-    {
-      "id": "pharmakon",
-      "term": "Φάρμακον",
-      "lang": "el",
-      "category": ["philosophie", "médecine"],
-      "definition": "Poison and cure—the same word for both. Plato's Phaedrus: writing is a pharmakon. Derrida made much of the ambiguity. The drug that heals kills; the scapegoat (pharmakos) cleanses. Ambivalence at the root of remedy.",
-      "related": ["Katharsis"]
+      "related": [
+        "Acedia",
+        "Humeur"
+      ]
     },
     {
       "id": "clinamen",
       "term": "Clinamen",
       "lang": "la",
-      "category": ["philosophie", "physique"],
+      "category": [
+        "philosophie",
+        "physique"
+      ],
       "definition": "The swerve—Lucretius's term for atoms' random deviation. Epicurean physics: without the clinamen, atoms fall parallel forever, no world forms. Free will's atomic basis. Harold Bloom: poetic influence as clinamen. The deviation that creates.",
-      "related": ["Atome"]
+      "related": [
+        "Atome"
+      ]
     },
     {
       "id": "conatus",
       "term": "Conatus",
       "lang": "la",
-      "category": ["philosophie", "métaphysique"],
+      "category": [
+        "philosophie",
+        "métaphysique"
+      ],
       "definition": "Striving, endeavor. Spinoza: every being strives to persist in its being. Leibniz: the monad's inner tendency. Not will but inherent momentum. Life as conatus: the push to exist, to continue, to become.",
-      "related": ["Substance"]
-    },
-    {
-      "id": "differance",
-      "term": "Différance",
-      "lang": "fr",
-      "category": ["philosophie", "déconstruction"],
-      "definition": "Derrida's coinage—differs from and defers. Meaning never arrives; it's always elsewhere, later. The 'a' is silent: you can't hear the difference, only read it. The trace that precedes presence. Deconstruction's keyword.",
-      "related": ["Trace", "Logocentrisme"]
-    },
-    {
-      "id": "jouissance",
-      "term": "Jouissance",
-      "lang": "fr",
-      "category": ["psychanalyse", "philosophie"],
-      "definition": "Enjoyment beyond pleasure, painful bliss. Lacan: jouissance is what the pleasure principle forbids. Orgasmic but also agonizing. The death drive's pleasure. Barthes: the text of jouissance vs. the text of pleasure.",
-      "related": ["Plaisir", "Pulsion"]
-    },
-    {
-      "id": "bricolage",
-      "term": "Bricolage",
-      "lang": "fr",
-      "category": ["anthropologie", "philosophie"],
-      "definition": "Tinkering, making-do with what's at hand. Lévi-Strauss: mythical thought as bricolage vs. engineering. The bricoleur uses whatever tools exist; the engineer designs from scratch. Postmodernism embraced bricolage: recycling, sampling, remix.",
-      "related": ["Mythologie"]
+      "related": [
+        "Substance"
+      ]
     },
     {
       "id": "palimpsest",
       "term": "Palimpsestus",
       "lang": "la",
-      "category": ["littérature", "manuscrit"],
+      "category": [
+        "littérature",
+        "manuscrit"
+      ],
       "definition": "Scraped again—parchment reused, earlier text showing through. Medieval economy: erase and rewrite. Now recovered by imaging. Metaphor: everything is palimpsest, layered with earlier meanings. The past beneath the present.",
-      "related": ["Pentimento"]
+      "related": [
+        "Pentimento"
+      ]
     },
     {
       "id": "heterotopia",
       "term": "Hétérotopie",
       "lang": "fr",
-      "category": ["philosophie", "architecture"],
+      "category": [
+        "philosophie",
+        "architecture"
+      ],
       "definition": "Other place—Foucault's term. Real places that are elsewhere: the cemetery, the ship, the brothel, the colony. Utopia is nowhere; heterotopia is somewhere that negates all places. Counter-sites, mirrors, inversions.",
-      "related": ["Utopie", "Topos"]
+      "related": [
+        "Utopie",
+        "Topos"
+      ]
     },
     {
       "id": "panopticon",
       "term": "Panopticon",
       "lang": "el",
-      "category": ["philosophie", "architecture"],
+      "category": [
+        "philosophie",
+        "architecture"
+      ],
       "definition": "All-seeing—Bentham's prison design. Cells circle a central tower; guards see all, prisoners see nothing. Foucault's Discipline and Punish: the panopticon as model of modern power. Surveillance internalized; we watch ourselves.",
-      "related": ["Surveillance"]
+      "related": [
+        "Surveillance"
+      ]
     },
     {
       "id": "simulacrum",
       "term": "Simulacrum",
       "lang": "la",
-      "category": ["philosophie", "culture"],
+      "category": [
+        "philosophie",
+        "culture"
+      ],
       "definition": "Image, copy, likeness. Plato: copies of copies, ever further from truth. Baudrillard: simulation precedes reality; there is no original. Disneyland, the Gulf War, hyperreality. The map precedes the territory.",
-      "related": ["Mimesis", "Hyperréalité"]
-    },
-    {
-      "id": "apeiron",
-      "term": "Ἄπειρον",
-      "lang": "el",
-      "category": ["philosophie", "présocratique"],
-      "definition": "The unlimited, the boundless. Anaximander's arche: not water or fire but the indefinite. All things emerge from and return to the apeiron. More abstract than Thales, more mysterious. The infinite source.",
-      "related": ["Arche", "Physis"]
+      "related": [
+        "Mimesis",
+        "Hyperréalité"
+      ]
     },
     {
       "id": "arche",
       "term": "Ἀρχή",
       "lang": "el",
-      "category": ["philosophie", "présocratique"],
+      "category": [
+        "philosophie",
+        "présocratique"
+      ],
       "definition": "Beginning, principle, origin, rule. The Presocratic question: what is the arche of all things? Thales: water. Anaximenes: air. Heraclitus: fire. Also: power, government (monarchy, anarchy). First in time and first in authority.",
-      "related": ["Apeiron", "Physis"]
+      "related": [
+        "Apeiron",
+        "Physis"
+      ]
     },
     {
       "id": "henosis",
       "term": "Ἕνωσις",
       "lang": "el",
-      "category": ["mystique", "néoplatonisme"],
+      "category": [
+        "mystique",
+        "néoplatonisme"
+      ],
       "definition": "Union, oneness. Plotinus: the soul's return to the One. Mystical union, the goal of contemplation. The many becoming one, the individual dissolved. Henosis is rare: Plotinus achieved it four times. The flight of the alone to the Alone.",
-      "related": ["To-hen", "Theosis"]
+      "related": [
+        "To-hen",
+        "Theosis"
+      ]
     },
     {
       "id": "to-hen",
       "term": "Τὸ Ἕν",
       "lang": "el",
-      "category": ["philosophie", "néoplatonisme"],
+      "category": [
+        "philosophie",
+        "néoplatonisme"
+      ],
       "definition": "The One—Plotinus's first principle. Beyond being, beyond thought, beyond language. From the One emanates Nous, from Nous Soul, from Soul matter. The source that never diminishes. Mystical apex, philosophical limit.",
-      "related": ["Henosis", "Nous"]
-    },
-    {
-      "id": "toska",
-      "term": "Тоска",
-      "lang": "ru",
-      "category": ["psychologie", "littérature"],
-      "definition": "Russian anguish, spiritual longing. Nabokov: 'No single English word renders all the shades.' Not quite nostalgia, not quite melancholy—a dull ache without object. Chekhov's characters feel toska. The Russian soul's signature ache.",
-      "related": ["Saudade", "Sehnsucht"]
-    },
-    {
-      "id": "poshlost",
-      "term": "Пошлость",
-      "lang": "ru",
-      "category": ["esthétique", "éthique"],
-      "definition": "Vulgar banality, self-satisfied philistinism. Nabokov's crusade: poshlost is worse than evil, it's fake refinement, pretentious emptiness. Gogol saw it everywhere. The smug, the sentimental, the fraudulently deep. Kitsch's Russian cousin.",
-      "related": ["Kitsch", "Banalité"]
-    },
-    {
-      "id": "intelligentsia",
-      "term": "Интеллигенция",
-      "lang": "ru",
-      "category": ["sociologie", "politique"],
-      "definition": "The educated class with a conscience. Russian coinage: not just intellectuals but those who feel responsible for society. Turgenev, Dostoevsky, the revolutionaries. Guilt-ridden, idealistic, ineffective. The class that made and unmade Russia.",
-      "related": ["Nihilisme"]
-    },
-    {
-      "id": "sobornost",
-      "term": "Соборность",
-      "lang": "ru",
-      "category": ["théologie", "philosophie"],
-      "definition": "Spiritual community, conciliarity. Khomiakov's ideal: not Western individualism, not Eastern despotism, but organic unity in the Church. The assembly (sobor) as model. Slavophile dream: Russia's special path. Orthodox ecclesiology's gift.",
-      "related": ["Communitas"]
-    },
-    {
-      "id": "bytie",
-      "term": "Бытие",
-      "lang": "ru",
-      "category": ["philosophie", "ontologie"],
-      "definition": "Being, existence. Russian philosophy's central term. Heidegger's Sein translated. But also Genesis in Church Slavonic. The question of what it means to be. Berdyaev, Shestov, Frank wrestled with bytie. Russian existentialism's ground.",
-      "related": ["Dasein", "Ousia"]
+      "related": [
+        "Henosis",
+        "Nous"
+      ]
     },
     {
       "id": "chutzpah",
       "term": "חוצפה",
       "lang": "he",
-      "category": ["éthique", "culture"],
+      "category": [
+        "éthique",
+        "culture"
+      ],
       "definition": "Audacity, nerve, gall. The man who kills his parents then pleads for mercy as an orphan—that's chutzpah. Pejorative in Yiddish, ambivalent in Israeli culture. Sometimes admired: boldness against authority. The audacity to argue with God.",
-      "related": ["Hubris"]
+      "related": [
+        "Hubris"
+      ]
     },
     {
       "id": "mensch",
       "term": "מענטש",
       "lang": "yi",
-      "category": ["éthique", "culture"],
+      "category": [
+        "éthique",
+        "culture"
+      ],
       "definition": "A human being—but more: a decent person, upright, compassionate. 'Be a mensch.' The Yiddish ideal: not a saint, just reliably good. Opposite of shmuck or nudnik. Ethics distilled: act like a mensch.",
-      "related": ["Junzi", "Arete"]
-    },
-    {
-      "id": "tikkun-olam",
-      "term": "תיקון עולם",
-      "lang": "he",
-      "category": ["théologie", "éthique"],
-      "definition": "Repair of the world. Lurianic Kabbalah: divine sparks scattered, we gather them. Now: social justice, making the world better. Every mitzvah repairs. The cosmos is broken; we are the repairers. Jewish optimism: fixing is possible.",
-      "related": ["Mitzvah"]
+      "related": [
+        "Junzi",
+        "Arete"
+      ]
     },
     {
       "id": "mitzvah",
       "term": "מצווה",
       "lang": "he",
-      "category": ["religion", "éthique"],
+      "category": [
+        "religion",
+        "éthique"
+      ],
       "definition": "Commandment, good deed. 613 in the Torah. Not optional: obligation. But also: the joy of doing good. Bar mitzvah: son of commandment. The structure of Jewish life: mitzvot create the world we should live in.",
-      "related": ["Tikkun-olam", "Halakha"]
+      "related": [
+        "Tikkun-olam",
+        "Halakha"
+      ]
     },
     {
       "id": "halakha",
       "term": "הלכה",
       "lang": "he",
-      "category": ["religion", "droit"],
+      "category": [
+        "religion",
+        "droit"
+      ],
       "definition": "The way, Jewish law. From 'walk': halakha is how to walk through life. Talmudic debates, rabbinic rulings, codes. Not just ritual: civil law, ethics, daily life. The path one treads. Judaism lived.",
-      "related": ["Mitzvah", "Talmud"]
-    },
-    {
-      "id": "tzimtzum",
-      "term": "צמצום",
-      "lang": "he",
-      "category": ["kabbale", "théologie"],
-      "definition": "Contraction, withdrawal. Luria: God contracted to make room for creation. The infinite withdrew so the finite could exist. Divine absence as gift. Atheism's theological precondition? The void that enables.",
-      "related": ["Kenosis", "Tikkun-olam"]
-    },
-    {
-      "id": "devekut",
-      "term": "דבקות",
-      "lang": "he",
-      "category": ["kabbale", "mystique"],
-      "definition": "Cleaving, communion with God. Hasidic goal: constant attachment to the divine. Not mystic union but intimate relationship. In prayer, in daily life, in joy. The soul clings. Presence maintained.",
-      "related": ["Henosis", "Theosis"]
-    },
-    {
-      "id": "ahimsa",
-      "term": "अहिंसा",
-      "lang": "sa",
-      "category": ["éthique", "hindouisme"],
-      "definition": "Non-violence, non-harm. Jain absolute; Hindu and Buddhist principle. Gandhi's satyagraha. Not just refraining from killing but positive love. Ahimsa paramo dharma: non-violence is the highest duty. The ethic that changes history.",
-      "related": ["Satyagraha", "Karuna"]
+      "related": [
+        "Mitzvah",
+        "Talmud"
+      ]
     },
     {
       "id": "satyagraha",
       "term": "सत्याग्रह",
       "lang": "sa",
-      "category": ["politique", "éthique"],
+      "category": [
+        "politique",
+        "éthique"
+      ],
       "definition": "Truth-force, soul-force. Gandhi's invention: nonviolent resistance. Not passive but active suffering. The Salt March, civil disobedience. Satya (truth) + agraha (insistence). The weapon that defeated an empire.",
-      "related": ["Ahimsa"]
+      "related": [
+        "Ahimsa"
+      ]
     },
     {
       "id": "bhakti",
       "term": "भक्ति",
       "lang": "sa",
-      "category": ["hindouisme", "religion"],
+      "category": [
+        "hindouisme",
+        "religion"
+      ],
       "definition": "Devotion, loving worship. The bhakti movement: saints singing to Krishna, Shiva, the Goddess. Not Vedic ritual but personal love. Mirabai, Kabir, Tukaram. The heart's path to liberation. God loved, not just known.",
-      "related": ["Agape", "Eros"]
-    },
-    {
-      "id": "rasa",
-      "term": "रस",
-      "lang": "sa",
-      "category": ["esthétique", "théâtre"],
-      "definition": "Flavor, essence, aesthetic emotion. Indian aesthetics: art evokes rasas. Nine: love, mirth, wonder, peace, fury, terror, disgust, sorrow, heroism. Bharata's Natyashastra. The audience tastes the rasa. Emotion universalized, purified.",
-      "related": ["Catharsis", "Pathos"]
+      "related": [
+        "Agape",
+        "Eros"
+      ]
     },
     {
       "id": "darshan",
       "term": "दर्शन",
       "lang": "sa",
-      "category": ["hindouisme", "philosophie"],
+      "category": [
+        "hindouisme",
+        "philosophie"
+      ],
       "definition": "Seeing, vision—especially of the divine. You go to the temple for darshan: to see and be seen by the deity. The god's gaze blesses. Philosophy is also darshan: ways of seeing reality. Sight as communion.",
-      "related": ["Theoria", "Epiphanie"]
+      "related": [
+        "Theoria",
+        "Epiphanie"
+      ]
     },
     {
       "id": "avatar",
       "term": "अवतार",
       "lang": "sa",
-      "category": ["hindouisme", "mythologie"],
+      "category": [
+        "hindouisme",
+        "mythologie"
+      ],
       "definition": "Descent—God descending into the world. Vishnu's ten avatars: fish, tortoise, boar, Narasimha, Vamana, Rama, Krishna, Buddha, Kalki. Divine intervention. Now: your digital persona. The ancient made current.",
-      "related": ["Incarnation"]
-    },
-    {
-      "id": "prana",
-      "term": "प्राण",
-      "lang": "sa",
-      "category": ["yoga", "médecine"],
-      "definition": "Breath, life-force, vital energy. Pranayama: breath control. Prana flows in nadis. Chinese qi's Indian cousin. The breath that animates, that connects body and cosmos. Yoga's first lesson: breathe consciously.",
-      "related": ["Qi", "Pneuma"]
+      "related": [
+        "Incarnation"
+      ]
     },
     {
       "id": "chakra",
       "term": "चक्र",
       "lang": "sa",
-      "category": ["yoga", "tantra"],
+      "category": [
+        "yoga",
+        "tantra"
+      ],
       "definition": "Wheel, energy center. Seven chakras along the spine: root to crown. Kundalini rises through them. Colors, sounds, elements assigned. Western appropriation: crystals, auras. The subtle body mapped.",
-      "related": ["Kundalini", "Prana"]
+      "related": [
+        "Kundalini",
+        "Prana"
+      ]
     },
     {
       "id": "tantra",
       "term": "तन्त्र",
       "lang": "sa",
-      "category": ["hindouisme", "bouddhisme"],
+      "category": [
+        "hindouisme",
+        "bouddhisme"
+      ],
       "definition": "Loom, technique, esoteric practice. Tantra: using desire, body, world for liberation. Not renunciation but transformation. Mantra, mandala, mudra. Left-hand path: ritual transgression. Western fantasy: tantric sex. The reality: complex, dangerous, profound.",
-      "related": ["Mantra", "Mandala"]
+      "related": [
+        "Mantra",
+        "Mandala"
+      ]
     },
     {
       "id": "mantra",
       "term": "मन्त्र",
       "lang": "sa",
-      "category": ["hindouisme", "bouddhisme"],
+      "category": [
+        "hindouisme",
+        "bouddhisme"
+      ],
       "definition": "Sacred utterance, sound-formula. Om mani padme hum. Gayatri mantra. Repetition transforms: japa. The sound is the deity; to chant is to invoke. Protection, meditation, magic. The word that works.",
-      "related": ["Om", "Tantra"]
+      "related": [
+        "Om",
+        "Tantra"
+      ]
     },
     {
       "id": "mandala",
       "term": "मण्डल",
       "lang": "sa",
-      "category": ["art", "bouddhisme"],
+      "category": [
+        "art",
+        "bouddhisme"
+      ],
       "definition": "Circle, sacred diagram. Tibetan sand mandalas: the cosmos in colored sand, then swept away. Jung: mandalas in patients' dreams—wholeness symbolized. The center holds. Geometry as meditation.",
-      "related": ["Yantra", "Tantra"]
-    },
-    {
-      "id": "lebenswelt",
-      "term": "Lebenswelt",
-      "lang": "de",
-      "category": ["phénoménologie", "philosophie"],
-      "definition": "Life-world—Husserl's term for the pre-theoretical world of everyday experience. Before science abstracts, we live in the Lebenswelt. Phenomenology returns to it. The ground science forgets. The world as lived.",
-      "related": ["Dasein", "Phenomenologie"]
-    },
-    {
-      "id": "dasein",
-      "term": "Dasein",
-      "lang": "de",
-      "category": ["phénoménologie", "existentialisme"],
-      "definition": "Being-there—Heidegger's term for human existence. Not a subject, not consciousness: the being for whom Being is a question. Dasein is always already in the world, thrown, falling, projecting. Existence analyzed.",
-      "related": ["Sein", "Geworfenheit"]
+      "related": [
+        "Yantra",
+        "Tantra"
+      ]
     },
     {
       "id": "geworfenheit",
       "term": "Geworfenheit",
       "lang": "de",
-      "category": ["existentialisme", "philosophie"],
+      "category": [
+        "existentialisme",
+        "philosophie"
+      ],
       "definition": "Thrownness—Heidegger's term. We don't choose our birth, our culture, our body. We are thrown into existence. Facticity: the given. Starting from the middle, with no choice about the beginning.",
-      "related": ["Dasein", "Faktizität"]
+      "related": [
+        "Dasein",
+        "Faktizität"
+      ]
     },
     {
       "id": "sorge",
       "term": "Sorge",
       "lang": "de",
-      "category": ["existentialisme", "philosophie"],
+      "category": [
+        "existentialisme",
+        "philosophie"
+      ],
       "definition": "Care, concern. Heidegger: care is Dasein's fundamental structure. We care about things, about ourselves, about Being. Ahead-of-itself, being-already-in, being-alongside. The unity of existence. We are our concern.",
-      "related": ["Dasein", "Angst"]
+      "related": [
+        "Dasein",
+        "Angst"
+      ]
     },
     {
       "id": "mitsein",
       "term": "Mitsein",
       "lang": "de",
-      "category": ["phénoménologie", "existentialisme"],
+      "category": [
+        "phénoménologie",
+        "existentialisme"
+      ],
       "definition": "Being-with—Heidegger's term for our fundamental being-with-others. We are never alone; even solitude presupposes others. The social is primordial. But also: das Man—the 'they' that we fall into. With and yet lost.",
-      "related": ["Dasein", "Das-Man"]
+      "related": [
+        "Dasein",
+        "Das-Man"
+      ]
     },
     {
       "id": "aufhebung",
       "term": "Aufhebung",
       "lang": "de",
-      "category": ["philosophie", "dialectique"],
+      "category": [
+        "philosophie",
+        "dialectique"
+      ],
       "definition": "Sublation—Hegel's untranslatable term. Three meanings: cancel, preserve, elevate. Thesis and antithesis are aufgehoben in synthesis: negated yet preserved at a higher level. Dialectic's engine. The word that does the work.",
-      "related": ["Dialectique", "Synthese"]
-    },
-    {
-      "id": "entfremdung",
-      "term": "Entfremdung",
-      "lang": "de",
-      "category": ["philosophie", "sociologie"],
-      "definition": "Alienation, estrangement. Hegel: spirit alienated in objectivity. Marx: the worker alienated from product, process, species-being, fellow workers. Modernity's disease: we don't recognize ourselves in our world.",
-      "related": ["Verfremdung", "Reification"]
-    },
-    {
-      "id": "verfremdung",
-      "term": "Verfremdungseffekt",
-      "lang": "de",
-      "category": ["théâtre", "esthétique"],
-      "definition": "Alienation effect, estrangement effect. Brecht's technique: break illusion, remind the audience it's watching a play. Placards, songs, direct address. Don't feel—think. Theater as pedagogy, not catharsis.",
-      "related": ["Entfremdung", "Distanciation"]
-    },
-    {
-      "id": "gesamtkunstwerk",
-      "term": "Gesamtkunstwerk",
-      "lang": "de",
-      "category": ["art", "opéra"],
-      "definition": "Total work of art—Wagner's ideal. Opera uniting music, drama, poetry, visual spectacle. Bayreuth: the temple. All arts synthesized, the audience immersed. The dream of unity. Modernism's other: fragmentation.",
-      "related": ["Synthese"]
-    },
-    {
-      "id": "ursprung",
-      "term": "Ursprung",
-      "lang": "de",
-      "category": ["philosophie", "esthétique"],
-      "definition": "Origin, primal leap. Benjamin: the origin is not the beginning but the eddy in the stream of becoming. Art's Ursprung is revealed in criticism. Not historical source but essential emergence. The original that keeps originating.",
-      "related": ["Arche"]
+      "related": [
+        "Dialectique",
+        "Synthese"
+      ]
     },
     {
       "id": "stimmung",
       "term": "Stimmung",
       "lang": "de",
-      "category": ["philosophie", "esthétique"],
+      "category": [
+        "philosophie",
+        "esthétique"
+      ],
       "definition": "Mood, atmosphere, attunement. Heidegger: Stimmung discloses the world. Angst, boredom, joy—each reveals differently. Art creates Stimmungen. Not subjective feeling but how being appears. The world's tone.",
-      "related": ["Angst", "Atmosphère"]
-    },
-    {
-      "id": "ennui",
-      "term": "Ennui",
-      "lang": "fr",
-      "category": ["psychologie", "littérature"],
-      "definition": "Boredom, world-weariness—but more refined than English 'boredom.' Baudelaire's spleen, Flaubert's mal. The French sickness: too much civilization, too little meaning. The sophisticated form of despair.",
-      "related": ["Acedia", "Spleen"]
+      "related": [
+        "Angst",
+        "Atmosphère"
+      ]
     },
     {
       "id": "flaneur",
       "term": "Flâneur",
       "lang": "fr",
-      "category": ["culture", "modernité"],
+      "category": [
+        "culture",
+        "modernité"
+      ],
       "definition": "The stroller, the urban observer. Baudelaire, Benjamin: the flâneur walks the arcades, reads the city. Anonymous in the crowd, he sees all. Modernity's detective. Now impossible: no one strolls; everyone hurries.",
-      "related": ["Modernité"]
-    },
-    {
-      "id": "ecriture",
-      "term": "Écriture",
-      "lang": "fr",
-      "category": ["littérature", "philosophie"],
-      "definition": "Writing—but for Barthes, Derrida, more than that. The materiality of text, the trace, the différance. Écriture vs parole. Literature as écriture: not expression but production. The text writes itself.",
-      "related": ["Différance", "Trace"]
+      "related": [
+        "Modernité"
+      ]
     },
     {
       "id": "regard",
       "term": "Regard",
       "lang": "fr",
-      "category": ["philosophie", "psychanalyse"],
+      "category": [
+        "philosophie",
+        "psychanalyse"
+      ],
       "definition": "The gaze, the look. Sartre: under the Other's gaze, I become an object. Lacan: the gaze as objet petit a. Foucault: the medical gaze, the disciplinary gaze. Power looks. We are seen before we see.",
-      "related": ["Objet-a", "Panopticon"]
+      "related": [
+        "Objet-a",
+        "Panopticon"
+      ]
     },
     {
       "id": "alterite",
       "term": "Altérité",
       "lang": "fr",
-      "category": ["philosophie", "éthique"],
+      "category": [
+        "philosophie",
+        "éthique"
+      ],
       "definition": "Otherness, alterity. Levinas: the face of the Other commands me before I choose. Ethics as first philosophy. Not sameness, not totality: the Other's absolute difference. Responsibility precedes freedom.",
-      "related": ["Visage", "Éthique"]
+      "related": [
+        "Visage",
+        "Éthique"
+      ]
     },
     {
       "id": "depense",
       "term": "Dépense",
       "lang": "fr",
-      "category": ["économie", "bataille"],
+      "category": [
+        "économie",
+        "bataille"
+      ],
       "definition": "Unproductive expenditure—Bataille's counter-economics. Against utility: sacrifice, potlatch, eroticism, art. The accursed share must be spent or it destroys. The sun gives without return. Excess, not scarcity, is the problem.",
-      "related": ["Part-maudite", "Potlatch"]
+      "related": [
+        "Part-maudite",
+        "Potlatch"
+      ]
     },
     {
       "id": "part-maudite",
       "term": "La Part maudite",
       "lang": "fr",
-      "category": ["économie", "bataille"],
+      "category": [
+        "économie",
+        "bataille"
+      ],
       "definition": "The accursed share—the surplus energy that must be squandered. Bataille: every society produces excess. Spend it on pyramids, cathedrals, wars, or orgies. Accumulation leads to catastrophe. General economy vs. restricted economy.",
-      "related": ["Dépense", "Potlatch"]
+      "related": [
+        "Dépense",
+        "Potlatch"
+      ]
     },
     {
       "id": "heterologie",
       "term": "Hétérologie",
       "lang": "fr",
-      "category": ["philosophie", "bataille"],
+      "category": [
+        "philosophie",
+        "bataille"
+      ],
       "definition": "Science of the wholly other—Bataille's never-completed project. Study what reason excludes: waste, madness, eroticism, death. The formless (informe), the base materialism. Philosophy as excremental vision.",
-      "related": ["Informe", "Transgression"]
+      "related": [
+        "Informe",
+        "Transgression"
+      ]
     },
     {
       "id": "informe",
       "term": "Informe",
       "lang": "fr",
-      "category": ["esthétique", "bataille"],
+      "category": [
+        "esthétique",
+        "bataille"
+      ],
       "definition": "Formless—not absence of form but active un-forming. Bataille's anti-aesthetic: spit, crushed spider, universe as decay. Declassifying, lowering. Rosalind Krauss and Yve-Alain Bois revived it. Art that undoes itself.",
-      "related": ["Hétérologie", "Base-materialisme"]
+      "related": [
+        "Hétérologie",
+        "Base-materialisme"
+      ]
     },
     {
       "id": "desoeuvrement",
       "term": "Désœuvrement",
       "lang": "fr",
-      "category": ["littérature", "blanchot"],
+      "category": [
+        "littérature",
+        "blanchot"
+      ],
       "definition": "Worklessness, unworking, inoperativity. Blanchot: literature as the work's undoing. Agamben: potential not actualized. Nancy: community without work. The action that suspends action. Inoperative but not inactive.",
-      "related": ["Neutre", "Inoperosita"]
+      "related": [
+        "Neutre",
+        "Inoperosita"
+      ]
     },
     {
       "id": "neutre",
       "term": "Le Neutre",
       "lang": "fr",
-      "category": ["littérature", "blanchot"],
+      "category": [
+        "littérature",
+        "blanchot"
+      ],
       "definition": "The neutral—neither this nor that, suspending opposition. Blanchot: writing as approach to the neutral. Barthes's last course. Not indifference but vigilance. The third term that refuses dialectics.",
-      "related": ["Désœuvrement", "Dehors"]
+      "related": [
+        "Désœuvrement",
+        "Dehors"
+      ]
     },
     {
       "id": "dehors",
       "term": "Le Dehors",
       "lang": "fr",
-      "category": ["philosophie", "blanchot"],
+      "category": [
+        "philosophie",
+        "blanchot"
+      ],
       "definition": "The outside—Blanchot and Foucault's term. Thought's other: not interiority but exposure. Literature opens onto the dehors. Madness, death, language itself. The space where the subject dissolves.",
-      "related": ["Neutre", "Limite"]
+      "related": [
+        "Neutre",
+        "Limite"
+      ]
     },
     {
       "id": "homo-sacer",
       "term": "Homo sacer",
       "lang": "la",
-      "category": ["biopolitique", "agamben"],
+      "category": [
+        "biopolitique",
+        "agamben"
+      ],
       "definition": "Sacred man—who may be killed but not sacrificed. Agamben: archaic Roman figure for modern biopolitics. The banned, the refugee, the detainee. Bare life exposed to sovereign violence. The exception as paradigm.",
-      "related": ["Vie-nue", "État-exception"]
+      "related": [
+        "Vie-nue",
+        "État-exception"
+      ]
     },
     {
       "id": "vie-nue",
       "term": "Nuda vita",
       "lang": "la",
-      "category": ["biopolitique", "agamben"],
+      "category": [
+        "biopolitique",
+        "agamben"
+      ],
       "definition": "Bare life—life stripped of political qualification. Zoē vs bios. Agamben: modernity includes bare life in politics by excluding it. The camp as biopolitical space. The body as site of sovereignty.",
-      "related": ["Homo-sacer", "Biopolitique"]
+      "related": [
+        "Homo-sacer",
+        "Biopolitique"
+      ]
     },
     {
       "id": "etat-exception",
       "term": "État d'exception",
       "lang": "fr",
-      "category": ["politique", "agamben"],
+      "category": [
+        "politique",
+        "agamben"
+      ],
       "definition": "State of exception—Schmitt's Ausnahmezustand. Agamben: exception becomes the rule. Emergency powers, camps, indefinite detention. Law suspended in the name of law. The paradigm of contemporary government.",
-      "related": ["Homo-sacer", "Souveraineté"]
+      "related": [
+        "Homo-sacer",
+        "Souveraineté"
+      ]
     },
     {
       "id": "inoperosita",
       "term": "Inoperosità",
       "lang": "it",
-      "category": ["politique", "agamben"],
+      "category": [
+        "politique",
+        "agamben"
+      ],
       "definition": "Inoperativity, worklessness. Agamben's positive concept: not laziness but deactivation of function. The sabbath, contemplation, play. Politics without work. Human potential resting in itself.",
-      "related": ["Désœuvrement", "Potenza"]
+      "related": [
+        "Désœuvrement",
+        "Potenza"
+      ]
     },
     {
       "id": "qualunque",
       "term": "Quodlibet",
       "lang": "la",
-      "category": ["ontologie", "agamben"],
+      "category": [
+        "ontologie",
+        "agamben"
+      ],
       "definition": "Whatever, whichever you please. Agamben: the coming community is of whatever singularities. Not identity, not indifference: being such that it always matters. The singularity that has no identity to claim.",
-      "related": ["Singularité"]
+      "related": [
+        "Singularité"
+      ]
     },
     {
       "id": "immunitas",
       "term": "Immunitas",
       "lang": "la",
-      "category": ["biopolitique", "esposito"],
+      "category": [
+        "biopolitique",
+        "esposito"
+      ],
       "definition": "Immunity—Esposito's paradigm. Exempt from munus (obligation). The community (communitas) demands giving; immunity protects against it. Modern politics as immunization. Protection that threatens what it protects.",
-      "related": ["Communitas", "Biopolitique"]
+      "related": [
+        "Communitas",
+        "Biopolitique"
+      ]
     },
     {
       "id": "communitas",
       "term": "Communitas",
       "lang": "la",
-      "category": ["anthropologie", "philosophie"],
+      "category": [
+        "anthropologie",
+        "philosophie"
+      ],
       "definition": "Community as shared obligation (munus). Turner: liminal togetherness. Esposito: community exposes, makes vulnerable. Not identity but debt. The common as wound, not property.",
-      "related": ["Immunitas", "Liminalité"]
+      "related": [
+        "Immunitas",
+        "Liminalité"
+      ]
     },
     {
       "id": "transindividuel",
       "term": "Transindividuel",
       "lang": "fr",
-      "category": ["philosophie", "simondon"],
+      "category": [
+        "philosophie",
+        "simondon"
+      ],
       "definition": "Transindividual—Simondon's term for the collective dimension of individuation. Neither individual nor social: the relation that constitutes both. Psychic and collective individuations are one process. Beyond the I/we split.",
-      "related": ["Individuation", "Préindividuel"]
+      "related": [
+        "Individuation",
+        "Préindividuel"
+      ]
     },
     {
       "id": "preindividuel",
       "term": "Préindividuel",
       "lang": "fr",
-      "category": ["philosophie", "simondon"],
+      "category": [
+        "philosophie",
+        "simondon"
+      ],
       "definition": "Preindividual—the metastable field from which individuals emerge. Simondon: being is not substance but process. The preindividual is potential, tension, not-yet. Individuation never exhausts the preindividual.",
-      "related": ["Individuation", "Transindividuel"]
+      "related": [
+        "Individuation",
+        "Transindividuel"
+      ]
     },
     {
       "id": "transduction",
       "term": "Transduction",
       "lang": "fr",
-      "category": ["philosophie", "simondon"],
+      "category": [
+        "philosophie",
+        "simondon"
+      ],
       "definition": "Transduction—operation where activity propagates, structuring a domain. Simondon: neither induction nor deduction. Crystal growth, embryogenesis, invention. Process that creates its own structure as it proceeds.",
-      "related": ["Individuation", "Métastabilité"]
+      "related": [
+        "Individuation",
+        "Métastabilité"
+      ]
     },
     {
       "id": "metastabilite",
       "term": "Métastabilité",
       "lang": "fr",
-      "category": ["physique", "simondon"],
+      "category": [
+        "physique",
+        "simondon"
+      ],
       "definition": "Metastability—supersaturated state with potential energy. Simondon: being is metastable, not stable. Equilibrium is death. The preindividual field holds tensions. A trigger, and individuation cascades.",
-      "related": ["Préindividuel", "Transduction"]
+      "related": [
+        "Préindividuel",
+        "Transduction"
+      ]
     },
     {
       "id": "correlationisme",
       "term": "Corrélationnisme",
       "lang": "fr",
-      "category": ["philosophie", "meillassoux"],
+      "category": [
+        "philosophie",
+        "meillassoux"
+      ],
       "definition": "Correlationism—Meillassoux's diagnosis. Since Kant: we only access the correlation of thought and being, never being itself. Finitude as prison. Speculative realism breaks the correlational circle.",
-      "related": ["Ancestralité", "Réalisme-spéculatif"]
+      "related": [
+        "Ancestralité",
+        "Réalisme-spéculatif"
+      ]
     },
     {
       "id": "ancestralite",
       "term": "Ancestralité",
       "lang": "fr",
-      "category": ["philosophie", "meillassoux"],
+      "category": [
+        "philosophie",
+        "meillassoux"
+      ],
       "definition": "Ancestrality—events before consciousness. Meillassoux: the arche-fossil (radioactive decay, cosmic background) proves a world without witness. Correlationism cannot think 4.5 billion years ago. The ancestral refutes finitude.",
-      "related": ["Corrélationnisme", "Arche-fossile"]
+      "related": [
+        "Corrélationnisme",
+        "Arche-fossile"
+      ]
     },
     {
       "id": "hyperchaos",
       "term": "Hyperchaos",
       "lang": "fr",
-      "category": ["ontologie", "meillassoux"],
+      "category": [
+        "ontologie",
+        "meillassoux"
+      ],
       "definition": "Hyperchaos—Meillassoux's absolute. Not disorder but absolute contingency: even the laws of nature could change for no reason. No necessary being, no sufficient reason. The only necessity is contingency itself.",
-      "related": ["Contingence", "Factualité"]
+      "related": [
+        "Contingence",
+        "Factualité"
+      ]
     },
     {
       "id": "retrait",
       "term": "Withdrawal",
       "lang": "en",
-      "category": ["ontologie", "OOO"],
+      "category": [
+        "ontologie",
+        "OOO"
+      ],
       "definition": "Withdrawal—Harman's key claim. Objects withdraw from all relations, never fully accessible. Heidegger's tool-being generalized. Every object has a dark volcanic core. Even fire doesn't exhaust cotton.",
-      "related": ["OOO", "Real-object"]
+      "related": [
+        "OOO",
+        "Real-object"
+      ]
     },
     {
       "id": "ooo",
       "term": "Object-Oriented Ontology",
       "lang": "en",
-      "category": ["ontologie", "réalisme spéculatif"],
+      "category": [
+        "ontologie",
+        "réalisme spéculatif"
+      ],
       "definition": "OOO—Harman's position. Objects are primary, not subjects or matter. All objects are equally real: quarks, armies, fictions. Flat ontology. Against correlationism and undermining/overmining. Things in themselves.",
-      "related": ["Withdrawal", "Flat-ontology"]
+      "related": [
+        "Withdrawal",
+        "Flat-ontology"
+      ]
     },
     {
       "id": "hyperstition",
       "term": "Hyperstition",
       "lang": "en",
-      "category": ["théorie", "CCRU"],
+      "category": [
+        "théorie",
+        "CCRU"
+      ],
       "definition": "Hyperstition—fictions that make themselves real. CCRU: ideas that function as time-traveling viruses. Capitalism as hyperstition. The future causing the past. Narrative as sorcery. Belief becomes fact.",
-      "related": ["CCRU", "Accélérationnisme"]
+      "related": [
+        "CCRU",
+        "Accélérationnisme"
+      ]
     },
     {
       "id": "accelerationnisme",
       "term": "Accélérationnisme",
       "lang": "fr",
-      "category": ["politique", "théorie"],
+      "category": [
+        "politique",
+        "théorie"
+      ],
       "definition": "Accelerationism—don't resist capitalism, accelerate it. Land: meltdown, inhuman capital. Left accelerationism: repurpose technology for liberation. Right: let it collapse. Controversial, influential. Speed as strategy.",
-      "related": ["Hyperstition", "CCRU"]
+      "related": [
+        "Hyperstition",
+        "CCRU"
+      ]
     },
     {
       "id": "hauntologie",
       "term": "Hauntologie",
       "lang": "fr",
-      "category": ["philosophie", "culture"],
+      "category": [
+        "philosophie",
+        "culture"
+      ],
       "definition": "Hauntology—Derrida's pun (hantologie = ontologie). Specters of Marx: the ghost is neither present nor absent. Mark Fisher: culture haunted by lost futures. Retromania, the inability to escape the past. The future that didn't happen.",
-      "related": ["Spectre", "Futur-antérieur"]
+      "related": [
+        "Spectre",
+        "Futur-antérieur"
+      ]
     },
     {
       "id": "realisme-capitaliste",
       "term": "Capitalist Realism",
       "lang": "en",
-      "category": ["politique", "fisher"],
+      "category": [
+        "politique",
+        "fisher"
+      ],
       "definition": "Capitalist realism—Fisher's term. Easier to imagine the end of the world than the end of capitalism. Ideology as nature, alternatives unthinkable. The mental health crisis as political. The dominant mood of late capitalism.",
-      "related": ["Hauntologie", "Accélérationnisme"]
+      "related": [
+        "Hauntologie",
+        "Accélérationnisme"
+      ]
     },
     {
       "id": "weird-eerie",
       "term": "Weird/Eerie",
       "lang": "en",
-      "category": ["esthétique", "fisher"],
+      "category": [
+        "esthétique",
+        "fisher"
+      ],
       "definition": "The weird and the eerie—Fisher's aesthetics. Weird: wrong presence, thing that shouldn't be there. Eerie: wrong absence, something missing. Lovecraft, Tarkovsky, Burial. Affects of the outside. The strange at the edge.",
-      "related": ["Unheimlich", "Hauntologie"]
+      "related": [
+        "Unheimlich",
+        "Hauntologie"
+      ]
     },
     {
       "id": "grammatisation",
       "term": "Grammatisation",
       "lang": "fr",
-      "category": ["technique", "stiegler"],
+      "category": [
+        "technique",
+        "stiegler"
+      ],
       "definition": "Grammatization—Stiegler's term. The process by which mental and bodily flows become discrete, reproducible units. Writing, recording, code. Tertiary retention. Technical memory externalizing, transforming us. The pharmakon again.",
-      "related": ["Rétention-tertiaire", "Prolétarisation"]
+      "related": [
+        "Rétention-tertiaire",
+        "Prolétarisation"
+      ]
     },
     {
       "id": "retention-tertiaire",
       "term": "Rétention tertiaire",
       "lang": "fr",
-      "category": ["technique", "stiegler"],
+      "category": [
+        "technique",
+        "stiegler"
+      ],
       "definition": "Tertiary retention—Stiegler extending Husserl. Primary: present. Secondary: memory. Tertiary: technical supports (writing, recording). We are constituted by our tertiary retentions. External memory shapes internal time.",
-      "related": ["Grammatisation", "Épiphylogénèse"]
+      "related": [
+        "Grammatisation",
+        "Épiphylogénèse"
+      ]
     },
     {
       "id": "epiphylogenese",
       "term": "Épiphylogénèse",
       "lang": "fr",
-      "category": ["anthropologie", "stiegler"],
+      "category": [
+        "anthropologie",
+        "stiegler"
+      ],
       "definition": "Epiphylogenesis—Stiegler's term. Evolution continued by other means: not genes but technics. Tools, writing, institutions constitute the human. We inherit acquired characteristics—not biologically but technically. Leroi-Gourhan extended.",
-      "related": ["Rétention-tertiaire", "Grammatisation"]
+      "related": [
+        "Rétention-tertiaire",
+        "Grammatisation"
+      ]
     },
     {
       "id": "spherologie",
       "term": "Sphérologie",
       "lang": "fr",
-      "category": ["philosophie", "sloterdijk"],
+      "category": [
+        "philosophie",
+        "sloterdijk"
+      ],
       "definition": "Spherology—Sloterdijk's grand project. Humans live in spheres: bubbles (intimate), globes (metaphysical), foams (modern plural). Immunitary architecture. Being-in as being-in-spheres. Where are we? In protected space.",
-      "related": ["Immunité", "Anthropotechnique"]
+      "related": [
+        "Immunité",
+        "Anthropotechnique"
+      ]
     },
     {
       "id": "anthropotechnique",
       "term": "Anthropotechnique",
       "lang": "fr",
-      "category": ["philosophie", "sloterdijk"],
+      "category": [
+        "philosophie",
+        "sloterdijk"
+      ],
       "definition": "Anthropotechnics—Sloterdijk's term. Humans as self-cultivating animals. Exercise, training, asceticism: techniques of producing humans. From ancient askēsis to biopolitics. We make ourselves through practice. The return of the vertical.",
-      "related": ["Sphérologie", "Exercice"]
+      "related": [
+        "Sphérologie",
+        "Exercice"
+      ]
     },
     {
       "id": "autopoiese",
       "term": "Autopoïèse",
       "lang": "fr",
-      "category": ["biologie", "systèmes"],
+      "category": [
+        "biologie",
+        "systèmes"
+      ],
       "definition": "Autopoiesis—self-making. Maturana and Varela: living systems produce their own components. Operationally closed, structurally coupled. Luhmann applied it to society: communication produces communication. Systems that make themselves.",
-      "related": ["Système", "Couplage-structurel"]
+      "related": [
+        "Système",
+        "Couplage-structurel"
+      ]
     },
     {
       "id": "double-bind",
       "term": "Double Bind",
       "lang": "en",
-      "category": ["psychiatrie", "bateson"],
+      "category": [
+        "psychiatrie",
+        "bateson"
+      ],
       "definition": "Double bind—Bateson's schizogenesis. Contradictory injunctions with no escape: 'Be spontaneous!' Damned if you do, damned if you don't. The context forbids recognizing the contradiction. Madness as logical response to impossible situation.",
-      "related": ["Schismogenèse", "Méta-communication"]
+      "related": [
+        "Schismogenèse",
+        "Méta-communication"
+      ]
     },
     {
       "id": "schismogenese",
       "term": "Schismogenèse",
       "lang": "fr",
-      "category": ["anthropologie", "bateson"],
+      "category": [
+        "anthropologie",
+        "bateson"
+      ],
       "definition": "Schismogenesis—Bateson's term for escalating differentiation. Symmetrical: rivalry spirals (arms race). Complementary: roles reinforce (dominance/submission). Social fission generated by interaction patterns. How relationships break.",
-      "related": ["Double-bind", "Feedback"]
+      "related": [
+        "Double-bind",
+        "Feedback"
+      ]
     },
     {
       "id": "ungrund",
       "term": "Ungrund",
       "lang": "de",
-      "category": ["théosophie", "böhme"],
+      "category": [
+        "théosophie",
+        "böhme"
+      ],
       "definition": "Ungrund—the groundless ground. Böhme: before God, there is the Ungrund—dark, empty, pure will without object. God emerges from the Ungrund through Sehnsucht. The abyss behind divinity. Schelling, Heidegger heard echoes.",
-      "related": ["Théosophie", "Abîme"]
+      "related": [
+        "Théosophie",
+        "Abîme"
+      ]
     },
     {
       "id": "correspondances",
       "term": "Correspondances",
       "lang": "fr",
-      "category": ["ésotérisme", "swedenborg"],
+      "category": [
+        "ésotérisme",
+        "swedenborg"
+      ],
       "definition": "Correspondences—Swedenborg's doctrine. Everything material corresponds to something spiritual. As above, so below—systematized. Baudelaire's poem, Symbolist theory. The world as network of hidden meanings.",
-      "related": ["Analogie", "Symbolisme"]
+      "related": [
+        "Analogie",
+        "Symbolisme"
+      ]
     },
     {
       "id": "mundus-imaginalis",
       "term": "Mundus imaginalis",
       "lang": "la",
-      "category": ["soufisme", "corbin"],
+      "category": [
+        "soufisme",
+        "corbin"
+      ],
       "definition": "Mundus imaginalis—Corbin's term for the imaginal world. Not imaginary (unreal) but a distinct ontological realm. Alam al-mithal in Arabic. Where angels are seen, visions occur. Between matter and intellect. Iran's gift to ontology.",
-      "related": ["Imaginal", "Hûrqalyâ"]
+      "related": [
+        "Imaginal",
+        "Hûrqalyâ"
+      ]
     },
     {
       "id": "ta-wil",
       "term": "Ta'wīl",
       "lang": "ar",
-      "category": ["herméneutique", "soufisme"],
+      "category": [
+        "herméneutique",
+        "soufisme"
+      ],
       "definition": "Ta'wīl—esoteric interpretation. Returning the text to its origin. Beyond literal (zahir) to hidden (batin). Corbin: spiritual hermeneutics. The angel of interpretation. Every text has an inside. Reading as ascent.",
-      "related": ["Bâtin", "Zâhir"]
+      "related": [
+        "Bâtin",
+        "Zâhir"
+      ]
     },
     {
       "id": "tsimtsum",
       "term": "Tsimtsoum",
       "lang": "he",
-      "category": ["kabbale", "luria"],
+      "category": [
+        "kabbale",
+        "luria"
+      ],
       "definition": "Tsimtsum—contraction, withdrawal. Isaac Luria: God contracted to make space for creation. The infinite withdrew into itself. Exile as cosmogony. The vacuum theology creates. Scholem: myth of exile as creation.",
-      "related": ["Shevirat-kelim", "Tikkun"]
+      "related": [
+        "Shevirat-kelim",
+        "Tikkun"
+      ]
     },
     {
       "id": "shevirat-kelim",
       "term": "Shevírat ha-Kelím",
       "lang": "he",
-      "category": ["kabbale", "luria"],
+      "category": [
+        "kabbale",
+        "luria"
+      ],
       "definition": "Breaking of the vessels—Luria's catastrophe. Divine light poured into vessels; they shattered. Sparks fell, trapped in shells (kelipot). Creation as disaster. Tikkun gathers the sparks. Redemption as repair. Exile built into ontology.",
-      "related": ["Tsimtsum", "Tikkun-olam"]
+      "related": [
+        "Tsimtsum",
+        "Tikkun-olam"
+      ]
     },
     {
       "id": "pleroma",
       "term": "Πλήρωμα",
       "lang": "el",
-      "category": ["gnosticisme", "théologie"],
+      "category": [
+        "gnosticisme",
+        "théologie"
+      ],
       "definition": "Pleroma—the fullness, the divine totality. Gnostic: the realm of aeons before the fall. Jung: the collective unconscious. Against the kenoma (emptiness). The wholeness we fell from, the wholeness we seek.",
-      "related": ["Aeon", "Sophia"]
+      "related": [
+        "Aeon",
+        "Sophia"
+      ]
     },
     {
       "id": "demiurge",
       "term": "Δημιουργός",
       "lang": "el",
-      "category": ["gnosticisme", "philosophie"],
+      "category": [
+        "gnosticisme",
+        "philosophie"
+      ],
       "definition": "Demiurge—the craftsman god. Plato's Timaeus: good, forms the cosmos. Gnosticism: ignorant or evil, created this prison world. Yaldabaoth, the lion-headed archon. The god who thinks he's God. The maker who doesn't know.",
-      "related": ["Archonte", "Pleroma"]
+      "related": [
+        "Archonte",
+        "Pleroma"
+      ]
     },
     {
       "id": "energeia-ousia",
       "term": "Ἐνέργεια/Οὐσία",
       "lang": "el",
-      "category": ["théologie byzantine", "palamas"],
+      "category": [
+        "théologie byzantine",
+        "palamas"
+      ],
       "definition": "Essence/energies distinction—Palamas's defense. We participate in divine energies (uncreated grace, light of Tabor), not divine essence. Real deification, not created effects. Orthodox answer to Barlaam. The light is God but God is more.",
-      "related": ["Théosis", "Hésychasme"]
+      "related": [
+        "Théosis",
+        "Hésychasme"
+      ]
     },
     {
       "id": "perichoresis",
       "term": "Περιχώρησις",
       "lang": "el",
-      "category": ["théologie", "trinité"],
+      "category": [
+        "théologie",
+        "trinité"
+      ],
       "definition": "Perichoresis—mutual indwelling. The Trinity: Father, Son, Spirit interpenetrate without confusion. Latin: circumincessio. Each in each. The dance of three-in-one. Relational ontology at the heart of God.",
-      "related": ["Trinité", "Hypostase"]
+      "related": [
+        "Trinité",
+        "Hypostase"
+      ]
     },
     {
       "id": "theandric",
       "term": "Θεανδρικός",
       "lang": "el",
-      "category": ["christologie", "byzantin"],
+      "category": [
+        "christologie",
+        "byzantin"
+      ],
       "definition": "Theandric—divine-human. Pseudo-Dionysius: Christ's actions are theandric, neither purely divine nor purely human. The hyphenated being. Chalcedon in a word: two natures, one person, new kind of operation.",
-      "related": ["Hypostase", "Énergie"]
+      "related": [
+        "Hypostase",
+        "Énergie"
+      ]
     },
     {
       "id": "enhypostasia",
       "term": "Ἐνυπόστασις",
       "lang": "el",
-      "category": ["christologie", "byzantin"],
+      "category": [
+        "christologie",
+        "byzantin"
+      ],
       "definition": "Enhypostasia—Christ's human nature exists 'in' the divine hypostasis. No human person, but fully human nature. Leontius of Byzantium's solution. Against Apollinarianism and Nestorianism. The human assumed into the divine person.",
-      "related": ["Hypostase", "Christologie"]
+      "related": [
+        "Hypostase",
+        "Christologie"
+      ]
     },
     {
       "id": "logoi",
       "term": "Λόγοι",
       "lang": "el",
-      "category": ["théologie byzantine", "maxime"],
+      "category": [
+        "théologie byzantine",
+        "maxime"
+      ],
       "definition": "Logoi—divine reasons, principles, wills. Maximus: every creature has its logos in the Logos. Participation in Christ's creative ideas. Natural contemplation discovers logoi. The world as text of God. Theophany everywhere.",
-      "related": ["Logos", "Theoria"]
+      "related": [
+        "Logos",
+        "Theoria"
+      ]
     },
     {
       "id": "tropos",
       "term": "Τρόπος",
       "lang": "el",
-      "category": ["théologie byzantine", "maxime"],
+      "category": [
+        "théologie byzantine",
+        "maxime"
+      ],
       "definition": "Tropos—mode, manner of existence. Maximus: logos is what a thing is, tropos is how it exists. Sin perverts tropos, not logos. Redemption restores proper mode. The modal flexibility of creaturely being.",
-      "related": ["Logoi", "Gnomi"]
+      "related": [
+        "Logoi",
+        "Gnomi"
+      ]
     },
     {
       "id": "sophiologie",
       "term": "Sophiologie",
       "lang": "fr",
-      "category": ["théologie russe", "soloviev"],
+      "category": [
+        "théologie russe",
+        "soloviev"
+      ],
       "definition": "Sophiology—the wisdom theology. Soloviev, Bulgakov, Florensky: Sophia as divine-creaturely link. Fourth hypostasis? World-soul? Church? Controversial, condemned. The feminine face of God. Russia's strange gift to theology.",
-      "related": ["Sophia", "Unitotalité"]
+      "related": [
+        "Sophia",
+        "Unitotalité"
+      ]
     },
     {
       "id": "unitotalite",
       "term": "Всеединство",
       "lang": "ru",
-      "category": ["philosophie russe", "soloviev"],
+      "category": [
+        "philosophie russe",
+        "soloviev"
+      ],
       "definition": "All-unity, unitotality—Soloviev's principle. Not monism, not pluralism: all in one, one in all. Positive all-unity: love, not force, unites. The differents remain, the whole holds. Russia's answer to German idealism.",
-      "related": ["Sophiologie", "Sobornost"]
+      "related": [
+        "Sophiologie",
+        "Sobornost"
+      ]
     },
     {
       "id": "bogochelovechestvo",
       "term": "Богочеловечество",
       "lang": "ru",
-      "category": ["philosophie russe", "soloviev"],
+      "category": [
+        "philosophie russe",
+        "soloviev"
+      ],
       "definition": "Godmanhood, divine humanity—Soloviev's christological anthropology. Not just Christ: the whole human vocation. We are to become God-men. Theosis as collective project. The divinization of humanity.",
-      "related": ["Théosis", "Unitotalité"]
+      "related": [
+        "Théosis",
+        "Unitotalité"
+      ]
     },
     {
       "id": "meon",
       "term": "Μή ὄν",
       "lang": "el",
-      "category": ["ontologie", "philosophie russe"],
+      "category": [
+        "ontologie",
+        "philosophie russe"
+      ],
       "definition": "Meon—relative non-being, not absolute nothing (ouk on). Plato's Sophist. Russian thought: Berdyaev's meonic freedom—uncreated, prior to God's act. Freedom from the nothing. The abyss that isn't simply null.",
-      "related": ["Ungrund", "Liberté"]
+      "related": [
+        "Ungrund",
+        "Liberté"
+      ]
     },
     {
       "id": "antinomie",
       "term": "Antinomie",
       "lang": "fr",
-      "category": ["logique", "théologie"],
+      "category": [
+        "logique",
+        "théologie"
+      ],
       "definition": "Antinomy—Kant: reason's self-contradictions. Florensky radicalized: truth is antinomical. Contradiction is the form of truth, not its failure. Hold both sides. Crucifixion of logic. Russian antirationalism.",
-      "related": ["Paradoxe", "Coïncidentia-oppositorum"]
+      "related": [
+        "Paradoxe",
+        "Coïncidentia-oppositorum"
+      ]
     },
     {
       "id": "coincidentia-oppositorum",
       "term": "Coincidentia oppositorum",
       "lang": "la",
-      "category": ["philosophie", "nicolas de cues"],
+      "category": [
+        "philosophie",
+        "nicolas de cues"
+      ],
       "definition": "Coincidence of opposites—Nicholas of Cusa's principle. God beyond contradiction: maximum and minimum coincide. Learned ignorance reaches the unthinkable. The wall of paradise where opposites meet. Mystical logic.",
-      "related": ["Docte-ignorance", "Antinomie"]
+      "related": [
+        "Docte-ignorance",
+        "Antinomie"
+      ]
     },
     {
       "id": "docte-ignorance",
       "term": "Docta ignorantia",
       "lang": "la",
-      "category": ["philosophie", "nicolas de cues"],
+      "category": [
+        "philosophie",
+        "nicolas de cues"
+      ],
       "definition": "Learned ignorance—knowing that we don't know. Socrates Christianized. Cusanus: the more we know, the more we know we can't know. Negative theology as epistemology. Ignorance as achievement, not failure.",
-      "related": ["Apophatique", "Coincidentia-oppositorum"]
+      "related": [
+        "Apophatique",
+        "Coincidentia-oppositorum"
+      ]
     },
     {
       "id": "decalage-prometheen",
       "term": "Décalage prométhéen",
       "lang": "fr",
-      "category": ["technique", "anders"],
+      "category": [
+        "technique",
+        "anders"
+      ],
       "definition": "Promethean gap—Anders's diagnosis. We can make what we cannot imagine or feel. The bomb: we know millions will die, but can't feel it. Capacities exceed faculties. Technical shame: obsolescence of the human.",
-      "related": ["Technique", "Obsolescence"]
+      "related": [
+        "Technique",
+        "Obsolescence"
+      ]
     },
     {
       "id": "mimesis-desirsocial",
       "term": "Désir mimétique",
       "lang": "fr",
-      "category": ["anthropologie", "girard"],
+      "category": [
+        "anthropologie",
+        "girard"
+      ],
       "definition": "Mimetic desire—Girard's key. We desire what others desire. The model is also rival. Triangular desire, not autonomous. Mimesis generates conflict, rivalry, violence. The sacrificial mechanism manages it. Culture is founded on murder.",
-      "related": ["Bouc-émissaire", "Violence-fondatrice"]
+      "related": [
+        "Bouc-émissaire",
+        "Violence-fondatrice"
+      ]
     },
     {
       "id": "bouc-emissaire",
       "term": "Bouc émissaire",
       "lang": "fr",
-      "category": ["anthropologie", "girard"],
+      "category": [
+        "anthropologie",
+        "girard"
+      ],
       "definition": "Scapegoat—Girard's mechanism. Mimetic crisis resolved by unanimous violence against one victim. The victim becomes sacred: cause of crisis and cure. Myth hides this; Gospels reveal it. The truth of religion is its lie.",
-      "related": ["Désir-mimétique", "Sacrifice"]
+      "related": [
+        "Désir-mimétique",
+        "Sacrifice"
+      ]
     },
     {
       "id": "contre-productivite",
       "term": "Contre-productivité",
       "lang": "fr",
-      "category": ["critique", "illich"],
+      "category": [
+        "critique",
+        "illich"
+      ],
       "definition": "Counterproductivity—Illich's concept. Beyond a threshold, institutions produce the opposite of their aim. Schools make people stupid, medicine makes them sick, transport immobilizes. Radical thresholds. The institution as nemesis.",
-      "related": ["Convivialité", "Seuil"]
+      "related": [
+        "Convivialité",
+        "Seuil"
+      ]
     },
     {
       "id": "convivialite",
       "term": "Convivialité",
       "lang": "fr",
-      "category": ["politique", "illich"],
+      "category": [
+        "politique",
+        "illich"
+      ],
       "definition": "Conviviality—Illich's alternative. Tools for autonomous, creative use. Bicycles not cars, libraries not schools. Low-energy, high-communication. The good society is convivial. Against industrial intensity. The alternative that was refused.",
-      "related": ["Contre-productivité", "Autonomie"]
+      "related": [
+        "Contre-productivité",
+        "Autonomie"
+      ]
     }
   ]
 }

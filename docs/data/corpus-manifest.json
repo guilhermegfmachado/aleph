@@ -27,16 +27,37 @@
           "year": 1992,
           "celex": "12012M/TXT",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "es": { "source": "eurlex" },
-            "it": { "source": "eurlex" },
-            "nl": { "source": "eurlex" },
-            "pt": { "source": "eurlex" },
-            "pl": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            },
+            "es": {
+              "source": "eurlex"
+            },
+            "it": {
+              "source": "eurlex"
+            },
+            "nl": {
+              "source": "eurlex"
+            },
+            "pt": {
+              "source": "eurlex"
+            },
+            "pl": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "treaty", "constitutional", "maastricht"]
+          "tags": [
+            "eu",
+            "treaty",
+            "constitutional",
+            "maastricht"
+          ]
         },
         {
           "id": "eu-tfeu",
@@ -45,16 +66,37 @@
           "period": "contemporary",
           "celex": "12012E/TXT",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "es": { "source": "eurlex" },
-            "it": { "source": "eurlex" },
-            "nl": { "source": "eurlex" },
-            "pt": { "source": "eurlex" },
-            "pl": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            },
+            "es": {
+              "source": "eurlex"
+            },
+            "it": {
+              "source": "eurlex"
+            },
+            "nl": {
+              "source": "eurlex"
+            },
+            "pt": {
+              "source": "eurlex"
+            },
+            "pl": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "treaty", "institutions", "internal market"]
+          "tags": [
+            "eu",
+            "treaty",
+            "institutions",
+            "internal market"
+          ]
         },
         {
           "id": "eu-charter-fundamental",
@@ -64,13 +106,28 @@
           "year": 2000,
           "celex": "12012P/TXT",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "es": { "source": "eurlex" },
-            "it": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            },
+            "es": {
+              "source": "eurlex"
+            },
+            "it": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "human rights", "fundamental rights", "charter"]
+          "tags": [
+            "eu",
+            "human rights",
+            "fundamental rights",
+            "charter"
+          ]
         }
       ]
     },
@@ -85,16 +142,38 @@
           "year": 2016,
           "celex": "32016R0679",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" },
-            "es": { "source": "eurlex" },
-            "it": { "source": "eurlex" },
-            "pt": { "source": "eurlex" },
-            "nl": { "source": "eurlex" },
-            "pl": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            },
+            "es": {
+              "source": "eurlex"
+            },
+            "it": {
+              "source": "eurlex"
+            },
+            "pt": {
+              "source": "eurlex"
+            },
+            "nl": {
+              "source": "eurlex"
+            },
+            "pl": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "privacy", "data protection", "regulation", "gdpr"]
+          "tags": [
+            "eu",
+            "privacy",
+            "data protection",
+            "regulation",
+            "gdpr"
+          ]
         },
         {
           "id": "eu-ai-act",
@@ -104,11 +183,23 @@
           "year": 2024,
           "celex": "32024R1689",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "ai", "regulation", "technology", "risk-based"]
+          "tags": [
+            "eu",
+            "ai",
+            "regulation",
+            "technology",
+            "risk-based"
+          ]
         },
         {
           "id": "eu-dsa",
@@ -118,11 +209,23 @@
           "year": 2022,
           "celex": "32022R2065",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "digital", "platforms", "content moderation", "intermediaries"]
+          "tags": [
+            "eu",
+            "digital",
+            "platforms",
+            "content moderation",
+            "intermediaries"
+          ]
         },
         {
           "id": "eu-dma",
@@ -132,11 +235,23 @@
           "year": 2022,
           "celex": "32022R1925",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "competition", "gatekeepers", "big tech", "antitrust"]
+          "tags": [
+            "eu",
+            "competition",
+            "gatekeepers",
+            "big tech",
+            "antitrust"
+          ]
         },
         {
           "id": "eu-data-act",
@@ -146,11 +261,23 @@
           "year": 2023,
           "celex": "32023R2854",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "data sharing", "iot", "cloud", "data economy"]
+          "tags": [
+            "eu",
+            "data sharing",
+            "iot",
+            "cloud",
+            "data economy"
+          ]
         },
         {
           "id": "eu-data-governance",
@@ -160,11 +287,22 @@
           "year": 2022,
           "celex": "32022R0868",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "data governance", "data intermediaries", "data altruism"]
+          "tags": [
+            "eu",
+            "data governance",
+            "data intermediaries",
+            "data altruism"
+          ]
         }
       ]
     },
@@ -179,11 +317,22 @@
           "year": 2014,
           "celex": "32014L0065",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "financial markets", "investment services", "investor protection"]
+          "tags": [
+            "eu",
+            "financial markets",
+            "investment services",
+            "investor protection"
+          ]
         },
         {
           "id": "eu-mifir",
@@ -193,11 +342,22 @@
           "year": 2014,
           "celex": "32014R0600",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "trading", "transparency", "financial markets"]
+          "tags": [
+            "eu",
+            "trading",
+            "transparency",
+            "financial markets"
+          ]
         },
         {
           "id": "eu-emir",
@@ -207,11 +367,23 @@
           "year": 2012,
           "celex": "32012R0648",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "derivatives", "clearing", "otc", "counterparty risk"]
+          "tags": [
+            "eu",
+            "derivatives",
+            "clearing",
+            "otc",
+            "counterparty risk"
+          ]
         },
         {
           "id": "eu-mar",
@@ -221,11 +393,22 @@
           "year": 2014,
           "celex": "32014R0596",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "market abuse", "insider trading", "manipulation"]
+          "tags": [
+            "eu",
+            "market abuse",
+            "insider trading",
+            "manipulation"
+          ]
         },
         {
           "id": "eu-ucits",
@@ -235,11 +418,22 @@
           "year": 2009,
           "celex": "32009L0065",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "investment funds", "asset management", "ucits"]
+          "tags": [
+            "eu",
+            "investment funds",
+            "asset management",
+            "ucits"
+          ]
         },
         {
           "id": "eu-aifmd",
@@ -249,11 +443,22 @@
           "year": 2011,
           "celex": "32011L0061",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "hedge funds", "private equity", "aifm"]
+          "tags": [
+            "eu",
+            "hedge funds",
+            "private equity",
+            "aifm"
+          ]
         },
         {
           "id": "eu-psd2",
@@ -263,11 +468,22 @@
           "year": 2015,
           "celex": "32015L2366",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "payments", "open banking", "fintech"]
+          "tags": [
+            "eu",
+            "payments",
+            "open banking",
+            "fintech"
+          ]
         },
         {
           "id": "eu-mica",
@@ -277,11 +493,23 @@
           "year": 2023,
           "celex": "32023R1114",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "crypto", "digital assets", "stablecoins", "defi"]
+          "tags": [
+            "eu",
+            "crypto",
+            "digital assets",
+            "stablecoins",
+            "defi"
+          ]
         },
         {
           "id": "eu-dora",
@@ -291,11 +519,22 @@
           "year": 2022,
           "celex": "32022R2554",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "cybersecurity", "financial sector", "ict risk"]
+          "tags": [
+            "eu",
+            "cybersecurity",
+            "financial sector",
+            "ict risk"
+          ]
         }
       ]
     },
@@ -310,11 +549,23 @@
           "year": 2022,
           "celex": "32022L2464",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "esg", "sustainability", "reporting", "disclosure"]
+          "tags": [
+            "eu",
+            "esg",
+            "sustainability",
+            "reporting",
+            "disclosure"
+          ]
         },
         {
           "id": "eu-csddd",
@@ -324,11 +575,23 @@
           "year": 2024,
           "celex": "32024L1760",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "due diligence", "supply chain", "human rights", "environment"]
+          "tags": [
+            "eu",
+            "due diligence",
+            "supply chain",
+            "human rights",
+            "environment"
+          ]
         },
         {
           "id": "eu-taxonomy",
@@ -338,11 +601,22 @@
           "year": 2020,
           "celex": "32020R0852",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "green finance", "sustainability", "classification"]
+          "tags": [
+            "eu",
+            "green finance",
+            "sustainability",
+            "classification"
+          ]
         },
         {
           "id": "eu-sfdr",
@@ -352,11 +626,22 @@
           "year": 2019,
           "celex": "32019R2088",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "esg", "disclosure", "sustainable investment"]
+          "tags": [
+            "eu",
+            "esg",
+            "disclosure",
+            "sustainable investment"
+          ]
         },
         {
           "id": "eu-shareholder-rights",
@@ -366,11 +651,22 @@
           "year": 2017,
           "celex": "32017L0828",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "corporate governance", "shareholder rights", "engagement"]
+          "tags": [
+            "eu",
+            "corporate governance",
+            "shareholder rights",
+            "engagement"
+          ]
         }
       ]
     },
@@ -385,11 +681,22 @@
           "year": 2018,
           "celex": "32018L1673",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "aml", "money laundering", "criminal law"]
+          "tags": [
+            "eu",
+            "aml",
+            "money laundering",
+            "criminal law"
+          ]
         },
         {
           "id": "eu-amlr",
@@ -399,11 +706,23 @@
           "year": 2024,
           "celex": "32024R1624",
           "languages": {
-            "en": { "source": "eurlex" },
-            "fr": { "source": "eurlex" },
-            "de": { "source": "eurlex" }
+            "en": {
+              "source": "eurlex"
+            },
+            "fr": {
+              "source": "eurlex"
+            },
+            "de": {
+              "source": "eurlex"
+            }
           },
-          "tags": ["eu", "aml", "beneficial ownership", "kyc", "single rulebook"]
+          "tags": [
+            "eu",
+            "aml",
+            "beneficial ownership",
+            "kyc",
+            "single rulebook"
+          ]
         }
       ]
     },
@@ -417,14 +736,32 @@
           "period": "contemporary",
           "year": 1980,
           "languages": {
-            "en": { "source": "uncitral" },
-            "fr": { "source": "uncitral" },
-            "es": { "source": "uncitral" },
-            "ar": { "source": "uncitral" },
-            "zh": { "source": "uncitral" },
-            "ru": { "source": "uncitral" }
+            "en": {
+              "source": "uncitral"
+            },
+            "fr": {
+              "source": "uncitral"
+            },
+            "es": {
+              "source": "uncitral"
+            },
+            "ar": {
+              "source": "uncitral"
+            },
+            "zh": {
+              "source": "uncitral"
+            },
+            "ru": {
+              "source": "uncitral"
+            }
           },
-          "tags": ["international", "trade", "contracts", "sale of goods", "cisg"]
+          "tags": [
+            "international",
+            "trade",
+            "contracts",
+            "sale of goods",
+            "cisg"
+          ]
         },
         {
           "id": "uncitral-model-arbitration",
@@ -433,11 +770,22 @@
           "period": "contemporary",
           "year": 1985,
           "languages": {
-            "en": { "source": "uncitral" },
-            "fr": { "source": "uncitral" },
-            "es": { "source": "uncitral" }
+            "en": {
+              "source": "uncitral"
+            },
+            "fr": {
+              "source": "uncitral"
+            },
+            "es": {
+              "source": "uncitral"
+            }
           },
-          "tags": ["international", "arbitration", "dispute resolution", "model law"]
+          "tags": [
+            "international",
+            "arbitration",
+            "dispute resolution",
+            "model law"
+          ]
         },
         {
           "id": "new-york-convention",
@@ -446,11 +794,22 @@
           "period": "contemporary",
           "year": 1958,
           "languages": {
-            "en": { "source": "un" },
-            "fr": { "source": "un" },
-            "es": { "source": "un" }
+            "en": {
+              "source": "un"
+            },
+            "fr": {
+              "source": "un"
+            },
+            "es": {
+              "source": "un"
+            }
           },
-          "tags": ["international", "arbitration", "enforcement", "convention"]
+          "tags": [
+            "international",
+            "arbitration",
+            "enforcement",
+            "convention"
+          ]
         },
         {
           "id": "wto-gatt",
@@ -459,11 +818,22 @@
           "period": "contemporary",
           "year": 1947,
           "languages": {
-            "en": { "source": "wto" },
-            "fr": { "source": "wto" },
-            "es": { "source": "wto" }
+            "en": {
+              "source": "wto"
+            },
+            "fr": {
+              "source": "wto"
+            },
+            "es": {
+              "source": "wto"
+            }
           },
-          "tags": ["wto", "trade", "tariffs", "gatt"]
+          "tags": [
+            "wto",
+            "trade",
+            "tariffs",
+            "gatt"
+          ]
         },
         {
           "id": "wto-gats",
@@ -472,11 +842,22 @@
           "period": "contemporary",
           "year": 1995,
           "languages": {
-            "en": { "source": "wto" },
-            "fr": { "source": "wto" },
-            "es": { "source": "wto" }
+            "en": {
+              "source": "wto"
+            },
+            "fr": {
+              "source": "wto"
+            },
+            "es": {
+              "source": "wto"
+            }
           },
-          "tags": ["wto", "services", "trade", "gats"]
+          "tags": [
+            "wto",
+            "services",
+            "trade",
+            "gats"
+          ]
         },
         {
           "id": "wto-trips",
@@ -485,11 +866,23 @@
           "period": "contemporary",
           "year": 1994,
           "languages": {
-            "en": { "source": "wto" },
-            "fr": { "source": "wto" },
-            "es": { "source": "wto" }
+            "en": {
+              "source": "wto"
+            },
+            "fr": {
+              "source": "wto"
+            },
+            "es": {
+              "source": "wto"
+            }
           },
-          "tags": ["wto", "intellectual property", "patents", "copyright", "trips"]
+          "tags": [
+            "wto",
+            "intellectual property",
+            "patents",
+            "copyright",
+            "trips"
+          ]
         },
         {
           "id": "icsid-convention",
@@ -498,11 +891,22 @@
           "period": "contemporary",
           "year": 1965,
           "languages": {
-            "en": { "source": "worldbank" },
-            "fr": { "source": "worldbank" },
-            "es": { "source": "worldbank" }
+            "en": {
+              "source": "worldbank"
+            },
+            "fr": {
+              "source": "worldbank"
+            },
+            "es": {
+              "source": "worldbank"
+            }
           },
-          "tags": ["investment", "arbitration", "isds", "icsid"]
+          "tags": [
+            "investment",
+            "arbitration",
+            "isds",
+            "icsid"
+          ]
         }
       ]
     },
@@ -516,14 +920,30 @@
           "period": "contemporary",
           "year": 1948,
           "languages": {
-            "en": { "source": "un" },
-            "fr": { "source": "un" },
-            "es": { "source": "un" },
-            "ar": { "source": "un" },
-            "zh": { "source": "un" },
-            "ru": { "source": "un" }
+            "en": {
+              "source": "un"
+            },
+            "fr": {
+              "source": "un"
+            },
+            "es": {
+              "source": "un"
+            },
+            "ar": {
+              "source": "un"
+            },
+            "zh": {
+              "source": "un"
+            },
+            "ru": {
+              "source": "un"
+            }
           },
-          "tags": ["human rights", "un", "declaration"]
+          "tags": [
+            "human rights",
+            "un",
+            "declaration"
+          ]
         },
         {
           "id": "iccpr",
@@ -532,11 +952,22 @@
           "period": "contemporary",
           "year": 1966,
           "languages": {
-            "en": { "source": "un" },
-            "fr": { "source": "un" },
-            "es": { "source": "un" }
+            "en": {
+              "source": "un"
+            },
+            "fr": {
+              "source": "un"
+            },
+            "es": {
+              "source": "un"
+            }
           },
-          "tags": ["human rights", "civil rights", "political rights", "covenant"]
+          "tags": [
+            "human rights",
+            "civil rights",
+            "political rights",
+            "covenant"
+          ]
         },
         {
           "id": "icescr",
@@ -545,11 +976,22 @@
           "period": "contemporary",
           "year": 1966,
           "languages": {
-            "en": { "source": "un" },
-            "fr": { "source": "un" },
-            "es": { "source": "un" }
+            "en": {
+              "source": "un"
+            },
+            "fr": {
+              "source": "un"
+            },
+            "es": {
+              "source": "un"
+            }
           },
-          "tags": ["human rights", "economic rights", "social rights", "covenant"]
+          "tags": [
+            "human rights",
+            "economic rights",
+            "social rights",
+            "covenant"
+          ]
         },
         {
           "id": "echr",
@@ -558,10 +1000,19 @@
           "period": "contemporary",
           "year": 1950,
           "languages": {
-            "en": { "source": "echr" },
-            "fr": { "source": "echr" }
+            "en": {
+              "source": "echr"
+            },
+            "fr": {
+              "source": "echr"
+            }
           },
-          "tags": ["human rights", "europe", "convention", "echr"]
+          "tags": [
+            "human rights",
+            "europe",
+            "convention",
+            "echr"
+          ]
         }
       ]
     },
@@ -575,10 +1026,19 @@
           "period": "modern",
           "year": 1787,
           "languages": {
-            "en": { "source": "avalon" },
-            "es": { "source": "congress.gov" }
+            "en": {
+              "source": "avalon"
+            },
+            "es": {
+              "source": "congress.gov"
+            }
           },
-          "tags": ["constitutional", "us", "federalism", "bill of rights"]
+          "tags": [
+            "constitutional",
+            "us",
+            "federalism",
+            "bill of rights"
+          ]
         },
         {
           "id": "us-securities-act-1933",
@@ -587,9 +1047,16 @@
           "period": "contemporary",
           "year": 1933,
           "languages": {
-            "en": { "source": "sec" }
+            "en": {
+              "source": "sec"
+            }
           },
-          "tags": ["us", "securities", "registration", "disclosure"]
+          "tags": [
+            "us",
+            "securities",
+            "registration",
+            "disclosure"
+          ]
         },
         {
           "id": "us-securities-exchange-act-1934",
@@ -598,9 +1065,17 @@
           "period": "contemporary",
           "year": 1934,
           "languages": {
-            "en": { "source": "sec" }
+            "en": {
+              "source": "sec"
+            }
           },
-          "tags": ["us", "securities", "sec", "exchanges", "reporting"]
+          "tags": [
+            "us",
+            "securities",
+            "sec",
+            "exchanges",
+            "reporting"
+          ]
         },
         {
           "id": "us-sarbanes-oxley",
@@ -609,9 +1084,17 @@
           "period": "contemporary",
           "year": 2002,
           "languages": {
-            "en": { "source": "sec" }
+            "en": {
+              "source": "sec"
+            }
           },
-          "tags": ["us", "corporate governance", "audit", "sox", "accounting"]
+          "tags": [
+            "us",
+            "corporate governance",
+            "audit",
+            "sox",
+            "accounting"
+          ]
         },
         {
           "id": "us-dodd-frank",
@@ -620,9 +1103,16 @@
           "period": "contemporary",
           "year": 2010,
           "languages": {
-            "en": { "source": "sec" }
+            "en": {
+              "source": "sec"
+            }
           },
-          "tags": ["us", "financial regulation", "systemic risk", "consumer protection"]
+          "tags": [
+            "us",
+            "financial regulation",
+            "systemic risk",
+            "consumer protection"
+          ]
         },
         {
           "id": "us-fcpa",
@@ -631,9 +1121,16 @@
           "period": "contemporary",
           "year": 1977,
           "languages": {
-            "en": { "source": "doj" }
+            "en": {
+              "source": "doj"
+            }
           },
-          "tags": ["us", "anti-corruption", "bribery", "fcpa"]
+          "tags": [
+            "us",
+            "anti-corruption",
+            "bribery",
+            "fcpa"
+          ]
         }
       ]
     },
@@ -647,10 +1144,20 @@
           "period": "medieval",
           "year": 1215,
           "languages": {
-            "la": { "source": "avalon", "title": "Magna Carta Libertatum" },
-            "en": { "source": "avalon" }
+            "la": {
+              "source": "avalon",
+              "title": "Magna Carta Libertatum"
+            },
+            "en": {
+              "source": "avalon"
+            }
           },
-          "tags": ["constitutional", "uk", "liberty", "rights"]
+          "tags": [
+            "constitutional",
+            "uk",
+            "liberty",
+            "rights"
+          ]
         },
         {
           "id": "uk-companies-act-2006",
@@ -659,9 +1166,16 @@
           "period": "contemporary",
           "year": 2006,
           "languages": {
-            "en": { "source": "legislation.gov.uk" }
+            "en": {
+              "source": "legislation.gov.uk"
+            }
           },
-          "tags": ["uk", "company law", "directors duties", "corporate governance"]
+          "tags": [
+            "uk",
+            "company law",
+            "directors duties",
+            "corporate governance"
+          ]
         },
         {
           "id": "uk-bribery-act",
@@ -670,9 +1184,16 @@
           "period": "contemporary",
           "year": 2010,
           "languages": {
-            "en": { "source": "legislation.gov.uk" }
+            "en": {
+              "source": "legislation.gov.uk"
+            }
           },
-          "tags": ["uk", "anti-corruption", "bribery", "criminal law"]
+          "tags": [
+            "uk",
+            "anti-corruption",
+            "bribery",
+            "criminal law"
+          ]
         },
         {
           "id": "uk-modern-slavery",
@@ -681,9 +1202,16 @@
           "period": "contemporary",
           "year": 2015,
           "languages": {
-            "en": { "source": "legislation.gov.uk" }
+            "en": {
+              "source": "legislation.gov.uk"
+            }
           },
-          "tags": ["uk", "human rights", "supply chain", "transparency"]
+          "tags": [
+            "uk",
+            "human rights",
+            "supply chain",
+            "transparency"
+          ]
         },
         {
           "id": "uk-corporate-governance",
@@ -692,9 +1220,16 @@
           "period": "contemporary",
           "year": 2024,
           "languages": {
-            "en": { "source": "frc.org.uk" }
+            "en": {
+              "source": "frc.org.uk"
+            }
           },
-          "tags": ["uk", "corporate governance", "board", "comply or explain"]
+          "tags": [
+            "uk",
+            "corporate governance",
+            "board",
+            "comply or explain"
+          ]
         }
       ]
     },
@@ -707,10 +1242,20 @@
           "author": "Hammurabi",
           "period": "ancient",
           "languages": {
-            "akk": { "source": "yale", "title": "𒁺𒄩𒈬𒊏𒁉" },
-            "en": { "source": "avalon" }
+            "akk": {
+              "source": "yale",
+              "title": "𒁺𒄩𒈬𒊏𒁉"
+            },
+            "en": {
+              "source": "avalon"
+            }
           },
-          "tags": ["law", "ancient", "babylon", "code"]
+          "tags": [
+            "law",
+            "ancient",
+            "babylon",
+            "code"
+          ]
         },
         {
           "id": "justinian-institutes",
@@ -718,10 +1263,19 @@
           "author": "Justinian I",
           "period": "classical",
           "languages": {
-            "la": { "source": "latin-library", "title": "Institutiones" },
-            "en": { "source": "constitution.org" }
+            "la": {
+              "source": "latin-library",
+              "title": "Institutiones"
+            },
+            "en": {
+              "source": "constitution.org"
+            }
           },
-          "tags": ["roman law", "civil law", "legal education"]
+          "tags": [
+            "roman law",
+            "civil law",
+            "legal education"
+          ]
         },
         {
           "id": "declaration-rights-man",
@@ -730,11 +1284,23 @@
           "period": "modern",
           "year": 1789,
           "languages": {
-            "fr": { "source": "wikisource", "title": "Déclaration des droits de l'homme et du citoyen de 1789" },
-            "en": { "source": "avalon" },
-            "de": { "source": "wikisource" }
+            "fr": {
+              "source": "wikisource",
+              "title": "Déclaration des droits de l'homme et du citoyen de 1789"
+            },
+            "en": {
+              "source": "avalon"
+            },
+            "de": {
+              "source": "wikisource"
+            }
           },
-          "tags": ["human rights", "revolution", "constitutional", "france"]
+          "tags": [
+            "human rights",
+            "revolution",
+            "constitutional",
+            "france"
+          ]
         }
       ]
     },
@@ -748,10 +1314,19 @@
           "period": "contemporary",
           "year": 2023,
           "languages": {
-            "en": { "source": "oecd" },
-            "fr": { "source": "oecd" }
+            "en": {
+              "source": "oecd"
+            },
+            "fr": {
+              "source": "oecd"
+            }
           },
-          "tags": ["corporate governance", "oecd", "principles", "best practice"]
+          "tags": [
+            "corporate governance",
+            "oecd",
+            "principles",
+            "best practice"
+          ]
         },
         {
           "id": "un-global-compact",
@@ -760,11 +1335,22 @@
           "period": "contemporary",
           "year": 2000,
           "languages": {
-            "en": { "source": "un" },
-            "fr": { "source": "un" },
-            "es": { "source": "un" }
+            "en": {
+              "source": "un"
+            },
+            "fr": {
+              "source": "un"
+            },
+            "es": {
+              "source": "un"
+            }
           },
-          "tags": ["corporate responsibility", "un", "sustainability", "principles"]
+          "tags": [
+            "corporate responsibility",
+            "un",
+            "sustainability",
+            "principles"
+          ]
         },
         {
           "id": "un-guiding-principles",
@@ -773,11 +1359,22 @@
           "period": "contemporary",
           "year": 2011,
           "languages": {
-            "en": { "source": "un" },
-            "fr": { "source": "un" },
-            "es": { "source": "un" }
+            "en": {
+              "source": "un"
+            },
+            "fr": {
+              "source": "un"
+            },
+            "es": {
+              "source": "un"
+            }
           },
-          "tags": ["human rights", "business", "due diligence", "ruggie"]
+          "tags": [
+            "human rights",
+            "business",
+            "due diligence",
+            "ruggie"
+          ]
         },
         {
           "id": "oecd-mne-guidelines",
@@ -786,10 +1383,19 @@
           "period": "contemporary",
           "year": 2023,
           "languages": {
-            "en": { "source": "oecd" },
-            "fr": { "source": "oecd" }
+            "en": {
+              "source": "oecd"
+            },
+            "fr": {
+              "source": "oecd"
+            }
           },
-          "tags": ["mne", "corporate responsibility", "oecd", "guidelines"]
+          "tags": [
+            "mne",
+            "corporate responsibility",
+            "oecd",
+            "guidelines"
+          ]
         }
       ]
     },
@@ -803,9 +1409,16 @@
           "period": "contemporary",
           "year": 2017,
           "languages": {
-            "en": { "source": "bis" }
+            "en": {
+              "source": "bis"
+            }
           },
-          "tags": ["banking", "capital", "liquidity", "basel"]
+          "tags": [
+            "banking",
+            "capital",
+            "liquidity",
+            "basel"
+          ]
         },
         {
           "id": "ifrs-conceptual",
@@ -814,9 +1427,16 @@
           "period": "contemporary",
           "year": 2018,
           "languages": {
-            "en": { "source": "ifrs.org" }
+            "en": {
+              "source": "ifrs.org"
+            }
           },
-          "tags": ["accounting", "ifrs", "financial reporting", "framework"]
+          "tags": [
+            "accounting",
+            "ifrs",
+            "financial reporting",
+            "framework"
+          ]
         },
         {
           "id": "tcfd-recommendations",
@@ -825,9 +1445,16 @@
           "period": "contemporary",
           "year": 2017,
           "languages": {
-            "en": { "source": "fsb-tcfd.org" }
+            "en": {
+              "source": "fsb-tcfd.org"
+            }
           },
-          "tags": ["climate", "disclosure", "risk", "tcfd"]
+          "tags": [
+            "climate",
+            "disclosure",
+            "risk",
+            "tcfd"
+          ]
         },
         {
           "id": "issb-s1",
@@ -836,9 +1463,16 @@
           "period": "contemporary",
           "year": 2023,
           "languages": {
-            "en": { "source": "ifrs.org" }
+            "en": {
+              "source": "ifrs.org"
+            }
           },
-          "tags": ["sustainability", "disclosure", "issb", "reporting"]
+          "tags": [
+            "sustainability",
+            "disclosure",
+            "issb",
+            "reporting"
+          ]
         },
         {
           "id": "issb-s2",
@@ -847,9 +1481,16 @@
           "period": "contemporary",
           "year": 2023,
           "languages": {
-            "en": { "source": "ifrs.org" }
+            "en": {
+              "source": "ifrs.org"
+            }
           },
-          "tags": ["climate", "disclosure", "issb", "reporting"]
+          "tags": [
+            "climate",
+            "disclosure",
+            "issb",
+            "reporting"
+          ]
         }
       ]
     },
@@ -863,9 +1504,17 @@
           "period": "modern",
           "year": 1776,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 3300 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 3300
+            }
           },
-          "tags": ["economics", "capitalism", "free market", "classical"]
+          "tags": [
+            "economics",
+            "capitalism",
+            "free market",
+            "classical"
+          ]
         },
         {
           "id": "ricardo-political-economy",
@@ -874,9 +1523,17 @@
           "period": "modern",
           "year": 1817,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 33310 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 33310
+            }
           },
-          "tags": ["economics", "trade", "comparative advantage", "classical"]
+          "tags": [
+            "economics",
+            "trade",
+            "comparative advantage",
+            "classical"
+          ]
         },
         {
           "id": "mill-political-economy",
@@ -885,9 +1542,17 @@
           "period": "modern",
           "year": 1848,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 30107 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 30107
+            }
           },
-          "tags": ["economics", "utilitarianism", "classical", "liberalism"]
+          "tags": [
+            "economics",
+            "utilitarianism",
+            "classical",
+            "liberalism"
+          ]
         },
         {
           "id": "keynes-general-theory",
@@ -896,9 +1561,17 @@
           "period": "modern",
           "year": 1936,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 15776 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 15776
+            }
           },
-          "tags": ["economics", "keynesian", "macroeconomics", "monetary"]
+          "tags": [
+            "economics",
+            "keynesian",
+            "macroeconomics",
+            "monetary"
+          ]
         },
         {
           "id": "hayek-road-serfdom",
@@ -907,9 +1580,16 @@
           "period": "modern",
           "year": 1944,
           "languages": {
-            "en": { "source": "archive" }
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["economics", "liberty", "socialism", "austrian"]
+          "tags": [
+            "economics",
+            "liberty",
+            "socialism",
+            "austrian"
+          ]
         }
       ]
     },
@@ -922,11 +1602,24 @@
           "author": "Plato",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Πολιτεία" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1497 },
-            "fr": { "source": "wikisource", "title": "La République" }
+            "grc": {
+              "source": "perseus",
+              "title": "Πολιτεία"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1497
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "La République"
+            }
           },
-          "tags": ["political philosophy", "justice", "ideal state"]
+          "tags": [
+            "political philosophy",
+            "justice",
+            "ideal state"
+          ]
         },
         {
           "id": "plato-symposium",
@@ -935,10 +1628,22 @@
           "period": "classical",
           "year": -385,
           "languages": {
-            "grc": { "source": "perseus", "title": "Συμπόσιον" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1600 }
+            "grc": {
+              "source": "perseus",
+              "title": "Συμπόσιον"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1600
+            }
           },
-          "tags": ["love", "eros", "beauty", "socrates", "dialogue"]
+          "tags": [
+            "love",
+            "eros",
+            "beauty",
+            "socrates",
+            "dialogue"
+          ]
         },
         {
           "id": "plato-apology",
@@ -947,10 +1652,22 @@
           "period": "classical",
           "year": -399,
           "languages": {
-            "grc": { "source": "perseus", "title": "Ἀπολογία Σωκράτους" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1656 }
+            "grc": {
+              "source": "perseus",
+              "title": "Ἀπολογία Σωκράτους"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1656
+            }
           },
-          "tags": ["trial", "socrates", "death", "philosophy", "virtue"]
+          "tags": [
+            "trial",
+            "socrates",
+            "death",
+            "philosophy",
+            "virtue"
+          ]
         },
         {
           "id": "plato-phaedo",
@@ -959,10 +1676,22 @@
           "period": "classical",
           "year": -360,
           "languages": {
-            "grc": { "source": "perseus", "title": "Φαίδων" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1658 }
+            "grc": {
+              "source": "perseus",
+              "title": "Φαίδων"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1658
+            }
           },
-          "tags": ["soul", "immortality", "death", "socrates", "forms"]
+          "tags": [
+            "soul",
+            "immortality",
+            "death",
+            "socrates",
+            "forms"
+          ]
         },
         {
           "id": "aristotle-politics",
@@ -970,10 +1699,20 @@
           "author": "Aristotle",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Πολιτικά" },
-            "en": { "source": "gutenberg", "gutenberg_id": 6762 }
+            "grc": {
+              "source": "perseus",
+              "title": "Πολιτικά"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 6762
+            }
           },
-          "tags": ["political philosophy", "state", "citizenship"]
+          "tags": [
+            "political philosophy",
+            "state",
+            "citizenship"
+          ]
         },
         {
           "id": "aristotle-ethics",
@@ -982,10 +1721,22 @@
           "period": "classical",
           "year": -340,
           "languages": {
-            "grc": { "source": "perseus", "title": "Ἠθικὰ Νικομάχεια" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8438 }
+            "grc": {
+              "source": "perseus",
+              "title": "Ἠθικὰ Νικομάχεια"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8438
+            }
           },
-          "tags": ["ethics", "virtue", "happiness", "eudaimonia", "golden mean"]
+          "tags": [
+            "ethics",
+            "virtue",
+            "happiness",
+            "eudaimonia",
+            "golden mean"
+          ]
         },
         {
           "id": "aristotle-poetics",
@@ -994,10 +1745,22 @@
           "period": "classical",
           "year": -335,
           "languages": {
-            "grc": { "source": "perseus", "title": "Περὶ ποιητικῆς" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1974 }
+            "grc": {
+              "source": "perseus",
+              "title": "Περὶ ποιητικῆς"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1974
+            }
           },
-          "tags": ["tragedy", "mimesis", "catharsis", "drama", "literary theory"]
+          "tags": [
+            "tragedy",
+            "mimesis",
+            "catharsis",
+            "drama",
+            "literary theory"
+          ]
         },
         {
           "id": "marcus-aurelius-meditations",
@@ -1005,10 +1768,20 @@
           "author": "Marcus Aurelius",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Τὰ εἰς ἑαυτόν" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2680 }
+            "grc": {
+              "source": "perseus",
+              "title": "Τὰ εἰς ἑαυτόν"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2680
+            }
           },
-          "tags": ["stoicism", "self-reflection", "ethics"]
+          "tags": [
+            "stoicism",
+            "self-reflection",
+            "ethics"
+          ]
         },
         {
           "id": "machiavelli-prince",
@@ -1017,10 +1790,21 @@
           "period": "early_modern",
           "year": 1532,
           "languages": {
-            "it": { "source": "wikisource", "title": "Il Principe" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1232 }
+            "it": {
+              "source": "wikisource",
+              "title": "Il Principe"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1232
+            }
           },
-          "tags": ["political philosophy", "power", "statecraft", "realism"]
+          "tags": [
+            "political philosophy",
+            "power",
+            "statecraft",
+            "realism"
+          ]
         },
         {
           "id": "locke-government",
@@ -1029,9 +1813,17 @@
           "period": "early_modern",
           "year": 1689,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 7370 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7370
+            }
           },
-          "tags": ["political philosophy", "liberalism", "natural rights", "social contract"]
+          "tags": [
+            "political philosophy",
+            "liberalism",
+            "natural rights",
+            "social contract"
+          ]
         },
         {
           "id": "hobbes-leviathan",
@@ -1040,9 +1832,17 @@
           "period": "early_modern",
           "year": 1651,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 3207 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 3207
+            }
           },
-          "tags": ["political philosophy", "sovereignty", "social contract", "state"]
+          "tags": [
+            "political philosophy",
+            "sovereignty",
+            "social contract",
+            "state"
+          ]
         }
       ]
     },
@@ -1056,11 +1856,25 @@
           "period": "early_modern",
           "year": 1641,
           "languages": {
-            "la": { "source": "gutenberg", "title": "Meditationes de Prima Philosophia" },
-            "en": { "source": "gutenberg", "gutenberg_id": 59 },
-            "fr": { "source": "wikisource", "title": "Méditations métaphysiques" }
+            "la": {
+              "source": "gutenberg",
+              "title": "Meditationes de Prima Philosophia"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 59
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Méditations métaphysiques"
+            }
           },
-          "tags": ["rationalism", "cogito", "dualism", "epistemology"]
+          "tags": [
+            "rationalism",
+            "cogito",
+            "dualism",
+            "epistemology"
+          ]
         },
         {
           "id": "spinoza-ethics",
@@ -1069,10 +1883,21 @@
           "period": "early_modern",
           "year": 1677,
           "languages": {
-            "la": { "source": "gutenberg", "title": "Ethica" },
-            "en": { "source": "gutenberg", "gutenberg_id": 3800 }
+            "la": {
+              "source": "gutenberg",
+              "title": "Ethica"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 3800
+            }
           },
-          "tags": ["pantheism", "determinism", "monism", "geometric method"]
+          "tags": [
+            "pantheism",
+            "determinism",
+            "monism",
+            "geometric method"
+          ]
         },
         {
           "id": "hume-enquiry",
@@ -1081,9 +1906,17 @@
           "period": "modern",
           "year": 1748,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 9662 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 9662
+            }
           },
-          "tags": ["empiricism", "causality", "scepticism", "induction"]
+          "tags": [
+            "empiricism",
+            "causality",
+            "scepticism",
+            "induction"
+          ]
         },
         {
           "id": "kant-critique-pure-reason",
@@ -1092,10 +1925,22 @@
           "period": "modern",
           "year": 1781,
           "languages": {
-            "de": { "source": "gutenberg", "title": "Kritik der reinen Vernunft" },
-            "en": { "source": "gutenberg", "gutenberg_id": 4280 }
+            "de": {
+              "source": "gutenberg",
+              "title": "Kritik der reinen Vernunft"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 4280
+            }
           },
-          "tags": ["transcendental idealism", "synthetic a priori", "space", "time", "categories"]
+          "tags": [
+            "transcendental idealism",
+            "synthetic a priori",
+            "space",
+            "time",
+            "categories"
+          ]
         },
         {
           "id": "hegel-phenomenology",
@@ -1104,11 +1949,25 @@
           "period": "modern",
           "year": 1807,
           "languages": {
-            "de": { "source": "gutenberg", "title": "Phänomenologie des Geistes" },
-            "en": { "source": "archive" },
-            "fr": { "source": "wikisource", "title": "Phénoménologie de l'Esprit" }
+            "de": {
+              "source": "gutenberg",
+              "title": "Phänomenologie des Geistes"
+            },
+            "en": {
+              "source": "archive"
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Phénoménologie de l'Esprit"
+            }
           },
-          "tags": ["dialectic", "absolute idealism", "consciousness", "spirit", "master-slave"]
+          "tags": [
+            "dialectic",
+            "absolute idealism",
+            "consciousness",
+            "spirit",
+            "master-slave"
+          ]
         },
         {
           "id": "schopenhauer-world-will",
@@ -1117,10 +1976,22 @@
           "period": "modern",
           "year": 1818,
           "languages": {
-            "de": { "source": "gutenberg", "title": "Die Welt als Wille und Vorstellung" },
-            "en": { "source": "gutenberg", "gutenberg_id": 38427 }
+            "de": {
+              "source": "gutenberg",
+              "title": "Die Welt als Wille und Vorstellung"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 38427
+            }
           },
-          "tags": ["pessimism", "will", "aesthetics", "asceticism", "representation"]
+          "tags": [
+            "pessimism",
+            "will",
+            "aesthetics",
+            "asceticism",
+            "representation"
+          ]
         },
         {
           "id": "nietzsche-beyond-good-evil",
@@ -1129,11 +2000,25 @@
           "period": "modern",
           "year": 1886,
           "languages": {
-            "de": { "source": "gutenberg", "title": "Jenseits von Gut und Böse" },
-            "en": { "source": "gutenberg", "gutenberg_id": 4363 },
-            "fr": { "source": "wikisource", "title": "Par-delà bien et mal" }
+            "de": {
+              "source": "gutenberg",
+              "title": "Jenseits von Gut und Böse"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 4363
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Par-delà bien et mal"
+            }
           },
-          "tags": ["will to power", "master morality", "perspectivism", "übermensch"]
+          "tags": [
+            "will to power",
+            "master morality",
+            "perspectivism",
+            "übermensch"
+          ]
         },
         {
           "id": "nietzsche-zarathustra",
@@ -1142,11 +2027,25 @@
           "period": "modern",
           "year": 1883,
           "languages": {
-            "de": { "source": "gutenberg", "title": "Also sprach Zarathustra" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1998 },
-            "fr": { "source": "wikisource", "title": "Ainsi parlait Zarathoustra" }
+            "de": {
+              "source": "gutenberg",
+              "title": "Also sprach Zarathustra"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1998
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Ainsi parlait Zarathoustra"
+            }
           },
-          "tags": ["eternal recurrence", "übermensch", "nihilism", "literary philosophy"]
+          "tags": [
+            "eternal recurrence",
+            "übermensch",
+            "nihilism",
+            "literary philosophy"
+          ]
         },
         {
           "id": "marx-communist-manifesto",
@@ -1155,11 +2054,25 @@
           "period": "modern",
           "year": 1848,
           "languages": {
-            "de": { "source": "gutenberg", "title": "Manifest der Kommunistischen Partei" },
-            "en": { "source": "gutenberg", "gutenberg_id": 61 },
-            "fr": { "source": "wikisource", "title": "Manifeste du Parti communiste" }
+            "de": {
+              "source": "gutenberg",
+              "title": "Manifest der Kommunistischen Partei"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 61
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Manifeste du Parti communiste"
+            }
           },
-          "tags": ["communism", "class struggle", "historical materialism", "proletariat"]
+          "tags": [
+            "communism",
+            "class struggle",
+            "historical materialism",
+            "proletariat"
+          ]
         }
       ]
     },
@@ -1172,11 +2085,26 @@
           "author": "Homer",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Ἰλιάς" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2199 },
-            "fr": { "source": "wikisource", "title": "L'Iliade" }
+            "grc": {
+              "source": "perseus",
+              "title": "Ἰλιάς"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2199
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "L'Iliade"
+            }
           },
-          "tags": ["epic", "trojan war", "achilles", "greek mythology", "oral tradition"]
+          "tags": [
+            "epic",
+            "trojan war",
+            "achilles",
+            "greek mythology",
+            "oral tradition"
+          ]
         },
         {
           "id": "homer-odyssey",
@@ -1184,11 +2112,26 @@
           "author": "Homer",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Ὀδύσσεια" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1727 },
-            "fr": { "source": "wikisource", "title": "L'Odyssée" }
+            "grc": {
+              "source": "perseus",
+              "title": "Ὀδύσσεια"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1727
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "L'Odyssée"
+            }
           },
-          "tags": ["epic", "odysseus", "nostos", "greek mythology", "journey"]
+          "tags": [
+            "epic",
+            "odysseus",
+            "nostos",
+            "greek mythology",
+            "journey"
+          ]
         },
         {
           "id": "virgil-aeneid",
@@ -1196,11 +2139,26 @@
           "author": "Virgil",
           "period": "classical",
           "languages": {
-            "la": { "source": "perseus", "title": "Aeneis" },
-            "en": { "source": "gutenberg", "gutenberg_id": 227 },
-            "fr": { "source": "wikisource", "title": "L'Énéide" }
+            "la": {
+              "source": "perseus",
+              "title": "Aeneis"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 227
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "L'Énéide"
+            }
           },
-          "tags": ["epic", "rome", "trojan war", "founding myth", "latin poetry"]
+          "tags": [
+            "epic",
+            "rome",
+            "trojan war",
+            "founding myth",
+            "latin poetry"
+          ]
         },
         {
           "id": "dante-divine-comedy",
@@ -1209,12 +2167,30 @@
           "period": "medieval",
           "year": 1320,
           "languages": {
-            "it": { "source": "wikisource", "title": "Divina Commedia" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8800 },
-            "fr": { "source": "wikisource", "title": "La Divine Comédie" },
-            "la": { "source": "archive" }
+            "it": {
+              "source": "wikisource",
+              "title": "Divina Commedia"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8800
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "La Divine Comédie"
+            },
+            "la": {
+              "source": "archive"
+            }
           },
-          "tags": ["allegory", "afterlife", "hell", "purgatory", "paradise", "scholasticism"]
+          "tags": [
+            "allegory",
+            "afterlife",
+            "hell",
+            "purgatory",
+            "paradise",
+            "scholasticism"
+          ]
         },
         {
           "id": "cervantes-don-quixote",
@@ -1223,11 +2199,26 @@
           "period": "early_modern",
           "year": 1605,
           "languages": {
-            "es": { "source": "gutenberg", "title": "Don Quijote de la Mancha" },
-            "en": { "source": "gutenberg", "gutenberg_id": 996 },
-            "fr": { "source": "wikisource", "title": "Don Quichotte" }
+            "es": {
+              "source": "gutenberg",
+              "title": "Don Quijote de la Mancha"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 996
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Don Quichotte"
+            }
           },
-          "tags": ["novel", "chivalry", "satire", "reality vs illusion", "first modern novel"]
+          "tags": [
+            "novel",
+            "chivalry",
+            "satire",
+            "reality vs illusion",
+            "first modern novel"
+          ]
         },
         {
           "id": "goethe-faust",
@@ -1236,11 +2227,25 @@
           "period": "modern",
           "year": 1808,
           "languages": {
-            "de": { "source": "gutenberg", "gutenberg_id": 2229 },
-            "en": { "source": "gutenberg", "gutenberg_id": 14591 },
-            "fr": { "source": "wikisource" }
+            "de": {
+              "source": "gutenberg",
+              "gutenberg_id": 2229
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14591
+            },
+            "fr": {
+              "source": "wikisource"
+            }
           },
-          "tags": ["tragedy", "pact with devil", "striving", "knowledge", "german classicism"]
+          "tags": [
+            "tragedy",
+            "pact with devil",
+            "striving",
+            "knowledge",
+            "german classicism"
+          ]
         },
         {
           "id": "milton-paradise-lost",
@@ -1249,9 +2254,18 @@
           "period": "early_modern",
           "year": 1667,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 26 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 26
+            }
           },
-          "tags": ["epic", "fall of man", "satan", "epic poetry", "puritanism"]
+          "tags": [
+            "epic",
+            "fall of man",
+            "satan",
+            "epic poetry",
+            "puritanism"
+          ]
         }
       ]
     },
@@ -1264,11 +2278,26 @@
           "author": "Sophocles",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Οἰδίπους Τύραννος" },
-            "en": { "source": "gutenberg", "gutenberg_id": 31 },
-            "fr": { "source": "wikisource", "title": "Œdipe Roi" }
+            "grc": {
+              "source": "perseus",
+              "title": "Οἰδίπους Τύραννος"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 31
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Œdipe Roi"
+            }
           },
-          "tags": ["tragedy", "fate", "prophecy", "recognition", "greek drama"]
+          "tags": [
+            "tragedy",
+            "fate",
+            "prophecy",
+            "recognition",
+            "greek drama"
+          ]
         },
         {
           "id": "aeschylus-oresteia",
@@ -1276,11 +2305,25 @@
           "author": "Aeschylus",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Ὀρέστεια" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8713 },
-            "fr": { "source": "wikisource" }
+            "grc": {
+              "source": "perseus",
+              "title": "Ὀρέστεια"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8713
+            },
+            "fr": {
+              "source": "wikisource"
+            }
           },
-          "tags": ["tragedy", "justice", "vengeance", "greek drama", "atrides"]
+          "tags": [
+            "tragedy",
+            "justice",
+            "vengeance",
+            "greek drama",
+            "atrides"
+          ]
         },
         {
           "id": "shakespeare-hamlet",
@@ -1289,11 +2332,24 @@
           "period": "early_modern",
           "year": 1603,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 1524 },
-            "fr": { "source": "wikisource" },
-            "de": { "source": "wikisource" }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1524
+            },
+            "fr": {
+              "source": "wikisource"
+            },
+            "de": {
+              "source": "wikisource"
+            }
           },
-          "tags": ["tragedy", "revenge", "madness", "mortality", "theatre"]
+          "tags": [
+            "tragedy",
+            "revenge",
+            "madness",
+            "mortality",
+            "theatre"
+          ]
         },
         {
           "id": "shakespeare-king-lear",
@@ -1302,10 +2358,22 @@
           "period": "early_modern",
           "year": 1606,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 1532 },
-            "fr": { "source": "wikisource" }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1532
+            },
+            "fr": {
+              "source": "wikisource"
+            }
           },
-          "tags": ["tragedy", "power", "old age", "family", "madness", "theatre"]
+          "tags": [
+            "tragedy",
+            "power",
+            "old age",
+            "family",
+            "madness",
+            "theatre"
+          ]
         },
         {
           "id": "moliere-tartuffe",
@@ -1314,10 +2382,21 @@
           "period": "early_modern",
           "year": 1664,
           "languages": {
-            "fr": { "source": "wikisource" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2027 }
+            "fr": {
+              "source": "wikisource"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2027
+            }
           },
-          "tags": ["comedy", "hypocrisy", "religion", "satire", "french classicism"]
+          "tags": [
+            "comedy",
+            "hypocrisy",
+            "religion",
+            "satire",
+            "french classicism"
+          ]
         },
         {
           "id": "ibsen-hedda-gabler",
@@ -1326,12 +2405,27 @@
           "period": "modern",
           "year": 1890,
           "languages": {
-            "no": { "source": "gutenberg" },
-            "en": { "source": "gutenberg", "gutenberg_id": 4093 },
-            "fr": { "source": "wikisource" },
-            "de": { "source": "gutenberg" }
+            "no": {
+              "source": "gutenberg"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 4093
+            },
+            "fr": {
+              "source": "wikisource"
+            },
+            "de": {
+              "source": "gutenberg"
+            }
           },
-          "tags": ["realism", "feminism", "bourgeois society", "freedom", "drama"]
+          "tags": [
+            "realism",
+            "feminism",
+            "bourgeois society",
+            "freedom",
+            "drama"
+          ]
         }
       ]
     },
@@ -1344,10 +2438,22 @@
           "author": "Euclid",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Στοιχεῖα" },
-            "en": { "source": "gutenberg", "gutenberg_id": 21076 }
+            "grc": {
+              "source": "perseus",
+              "title": "Στοιχεῖα"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 21076
+            }
           },
-          "tags": ["geometry", "mathematics", "axioms", "proof", "number theory"]
+          "tags": [
+            "geometry",
+            "mathematics",
+            "axioms",
+            "proof",
+            "number theory"
+          ]
         },
         {
           "id": "copernicus-revolutions",
@@ -1356,10 +2462,20 @@
           "period": "early_modern",
           "year": 1543,
           "languages": {
-            "la": { "source": "archive", "title": "De revolutionibus orbium coelestium" },
-            "en": { "source": "archive" }
+            "la": {
+              "source": "archive",
+              "title": "De revolutionibus orbium coelestium"
+            },
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["heliocentrism", "astronomy", "scientific revolution", "cosmology"]
+          "tags": [
+            "heliocentrism",
+            "astronomy",
+            "scientific revolution",
+            "cosmology"
+          ]
         },
         {
           "id": "galileo-dialogues",
@@ -1368,10 +2484,20 @@
           "period": "early_modern",
           "year": 1632,
           "languages": {
-            "it": { "source": "archive", "title": "Dialogo sopra i due massimi sistemi del mondo" },
-            "en": { "source": "archive" }
+            "it": {
+              "source": "archive",
+              "title": "Dialogo sopra i due massimi sistemi del mondo"
+            },
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["heliocentrism", "inquisition", "mechanics", "scientific method"]
+          "tags": [
+            "heliocentrism",
+            "inquisition",
+            "mechanics",
+            "scientific method"
+          ]
         },
         {
           "id": "newton-principia",
@@ -1380,10 +2506,22 @@
           "period": "early_modern",
           "year": 1687,
           "languages": {
-            "la": { "source": "archive", "title": "Philosophiæ Naturalis Principia Mathematica" },
-            "en": { "source": "gutenberg", "gutenberg_id": 28233 }
+            "la": {
+              "source": "archive",
+              "title": "Philosophiæ Naturalis Principia Mathematica"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 28233
+            }
           },
-          "tags": ["gravity", "mechanics", "calculus", "laws of motion", "scientific revolution"]
+          "tags": [
+            "gravity",
+            "mechanics",
+            "calculus",
+            "laws of motion",
+            "scientific revolution"
+          ]
         },
         {
           "id": "darwin-origin-species",
@@ -1392,11 +2530,26 @@
           "period": "modern",
           "year": 1859,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 1228 },
-            "fr": { "source": "wikisource", "title": "De l'origine des espèces" },
-            "de": { "source": "gutenberg", "title": "Die Entstehung der Arten" }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1228
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "De l'origine des espèces"
+            },
+            "de": {
+              "source": "gutenberg",
+              "title": "Die Entstehung der Arten"
+            }
           },
-          "tags": ["evolution", "natural selection", "biology", "adaptation", "species"]
+          "tags": [
+            "evolution",
+            "natural selection",
+            "biology",
+            "adaptation",
+            "species"
+          ]
         },
         {
           "id": "darwin-descent-man",
@@ -1405,9 +2558,17 @@
           "period": "modern",
           "year": 1871,
           "languages": {
-            "en": { "source": "gutenberg", "gutenberg_id": 2300 }
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2300
+            }
           },
-          "tags": ["evolution", "human origins", "sexual selection", "anthropology"]
+          "tags": [
+            "evolution",
+            "human origins",
+            "sexual selection",
+            "anthropology"
+          ]
         },
         {
           "id": "freud-interpretation-dreams",
@@ -1416,11 +2577,24 @@
           "period": "modern",
           "year": 1899,
           "languages": {
-            "de": { "source": "archive", "title": "Die Traumdeutung" },
-            "en": { "source": "archive" },
-            "fr": { "source": "archive", "title": "L'Interprétation des rêves" }
+            "de": {
+              "source": "archive",
+              "title": "Die Traumdeutung"
+            },
+            "en": {
+              "source": "archive"
+            },
+            "fr": {
+              "source": "archive",
+              "title": "L'Interprétation des rêves"
+            }
           },
-          "tags": ["psychoanalysis", "unconscious", "dream symbolism", "wish fulfillment"]
+          "tags": [
+            "psychoanalysis",
+            "unconscious",
+            "dream symbolism",
+            "wish fulfillment"
+          ]
         }
       ]
     },
@@ -1433,11 +2607,26 @@
           "author": "Herodotus",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Ἱστορίαι" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2456 },
-            "fr": { "source": "wikisource", "title": "Histoires" }
+            "grc": {
+              "source": "perseus",
+              "title": "Ἱστορίαι"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2456
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Histoires"
+            }
           },
-          "tags": ["ancient history", "persian wars", "ethnography", "inquiry", "father of history"]
+          "tags": [
+            "ancient history",
+            "persian wars",
+            "ethnography",
+            "inquiry",
+            "father of history"
+          ]
         },
         {
           "id": "thucydides-peloponnesian",
@@ -1445,11 +2634,26 @@
           "author": "Thucydides",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus" },
-            "en": { "source": "gutenberg", "gutenberg_id": 7142 },
-            "fr": { "source": "wikisource", "title": "La Guerre du Péloponnèse" }
+            "grc": {
+              "source": "perseus"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7142
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "La Guerre du Péloponnèse"
+            }
           },
-          "tags": ["ancient history", "athens", "sparta", "war", "realism", "power politics"]
+          "tags": [
+            "ancient history",
+            "athens",
+            "sparta",
+            "war",
+            "realism",
+            "power politics"
+          ]
         },
         {
           "id": "caesar-gallic-wars",
@@ -1457,11 +2661,26 @@
           "author": "Julius Caesar",
           "period": "classical",
           "languages": {
-            "la": { "source": "perseus", "title": "Commentarii de Bello Gallico" },
-            "en": { "source": "gutenberg", "gutenberg_id": 10657 },
-            "fr": { "source": "wikisource", "title": "La Guerre des Gaules" }
+            "la": {
+              "source": "perseus",
+              "title": "Commentarii de Bello Gallico"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 10657
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "La Guerre des Gaules"
+            }
           },
-          "tags": ["roman history", "gaul", "military", "autobiography", "conquest"]
+          "tags": [
+            "roman history",
+            "gaul",
+            "military",
+            "autobiography",
+            "conquest"
+          ]
         },
         {
           "id": "tacitus-annals",
@@ -1469,11 +2688,25 @@
           "author": "Tacitus",
           "period": "classical",
           "languages": {
-            "la": { "source": "perseus", "title": "Annales" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2395 },
-            "fr": { "source": "wikisource" }
+            "la": {
+              "source": "perseus",
+              "title": "Annales"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2395
+            },
+            "fr": {
+              "source": "wikisource"
+            }
           },
-          "tags": ["roman empire", "emperors", "tyranny", "historiography", "latin prose"]
+          "tags": [
+            "roman empire",
+            "emperors",
+            "tyranny",
+            "historiography",
+            "latin prose"
+          ]
         },
         {
           "id": "plutarch-parallel-lives",
@@ -1481,11 +2714,25 @@
           "author": "Plutarch",
           "period": "classical",
           "languages": {
-            "grc": { "source": "perseus", "title": "Βίοι Παράλληλοι" },
-            "en": { "source": "gutenberg", "gutenberg_id": 674 },
-            "fr": { "source": "wikisource", "title": "Vies parallèles" }
+            "grc": {
+              "source": "perseus",
+              "title": "Βίοι Παράλληλοι"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 674
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Vies parallèles"
+            }
           },
-          "tags": ["biography", "greek and roman heroes", "moral philosophy", "comparative"]
+          "tags": [
+            "biography",
+            "greek and roman heroes",
+            "moral philosophy",
+            "comparative"
+          ]
         },
         {
           "id": "sun-tzu-art-of-war",
@@ -1493,11 +2740,26 @@
           "author": "Sun Tzu",
           "period": "classical",
           "languages": {
-            "zh": { "source": "ctext", "title": "孫子兵法" },
-            "en": { "source": "gutenberg", "gutenberg_id": 132 },
-            "fr": { "source": "wikisource", "title": "L'Art de la guerre" }
+            "zh": {
+              "source": "ctext",
+              "title": "孫子兵法"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 132
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "L'Art de la guerre"
+            }
           },
-          "tags": ["strategy", "military", "chinese classics", "deception", "leadership"]
+          "tags": [
+            "strategy",
+            "military",
+            "chinese classics",
+            "deception",
+            "leadership"
+          ]
         }
       ]
     },
@@ -1510,12 +2772,29 @@
           "author": "Laozi",
           "period": "classical",
           "languages": {
-            "zh": { "source": "ctext", "title": "道德經" },
-            "en": { "source": "gutenberg", "gutenberg_id": 216 },
-            "fr": { "source": "wikisource", "title": "Tao Te King" },
-            "de": { "source": "gutenberg" }
+            "zh": {
+              "source": "ctext",
+              "title": "道德經"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 216
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Tao Te King"
+            },
+            "de": {
+              "source": "gutenberg"
+            }
           },
-          "tags": ["taoism", "wu wei", "nature", "simplicity", "chinese philosophy"]
+          "tags": [
+            "taoism",
+            "wu wei",
+            "nature",
+            "simplicity",
+            "chinese philosophy"
+          ]
         },
         {
           "id": "analects-confucius",
@@ -1523,11 +2802,26 @@
           "author": "Confucius",
           "period": "classical",
           "languages": {
-            "zh": { "source": "ctext", "title": "論語" },
-            "en": { "source": "gutenberg", "gutenberg_id": 4094 },
-            "fr": { "source": "wikisource", "title": "Entretiens de Confucius" }
+            "zh": {
+              "source": "ctext",
+              "title": "論語"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 4094
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Entretiens de Confucius"
+            }
           },
-          "tags": ["confucianism", "virtue", "rites", "humaneness", "chinese philosophy"]
+          "tags": [
+            "confucianism",
+            "virtue",
+            "rites",
+            "humaneness",
+            "chinese philosophy"
+          ]
         },
         {
           "id": "bhagavad-gita",
@@ -1535,11 +2829,27 @@
           "author": "Vyasa",
           "period": "classical",
           "languages": {
-            "sa": { "source": "archive", "title": "भगवद्गीता" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2388 },
-            "fr": { "source": "wikisource", "title": "Bhagavad-Gîtâ" }
+            "sa": {
+              "source": "archive",
+              "title": "भगवद्गीता"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2388
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Bhagavad-Gîtâ"
+            }
           },
-          "tags": ["hinduism", "duty", "yoga", "dharma", "moksha", "vedanta"]
+          "tags": [
+            "hinduism",
+            "duty",
+            "yoga",
+            "dharma",
+            "moksha",
+            "vedanta"
+          ]
         },
         {
           "id": "dhammapada",
@@ -1547,11 +2857,26 @@
           "author": "Buddha",
           "period": "classical",
           "languages": {
-            "pi": { "source": "archive", "title": "Dhammapada" },
-            "en": { "source": "gutenberg", "gutenberg_id": 2017 },
-            "fr": { "source": "wikisource" }
+            "pi": {
+              "source": "archive",
+              "title": "Dhammapada"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2017
+            },
+            "fr": {
+              "source": "wikisource"
+            }
           },
-          "tags": ["buddhism", "ethics", "mind", "karma", "suffering", "pali canon"]
+          "tags": [
+            "buddhism",
+            "ethics",
+            "mind",
+            "karma",
+            "suffering",
+            "pali canon"
+          ]
         },
         {
           "id": "augustine-confessions",
@@ -1560,11 +2885,26 @@
           "period": "classical",
           "year": 401,
           "languages": {
-            "la": { "source": "gutenberg", "title": "Confessiones" },
-            "en": { "source": "gutenberg", "gutenberg_id": 3296 },
-            "fr": { "source": "wikisource", "title": "Confessions" }
+            "la": {
+              "source": "gutenberg",
+              "title": "Confessiones"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 3296
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "Confessions"
+            }
           },
-          "tags": ["christianity", "autobiography", "theology", "neoplatonism", "conversion"]
+          "tags": [
+            "christianity",
+            "autobiography",
+            "theology",
+            "neoplatonism",
+            "conversion"
+          ]
         },
         {
           "id": "kempis-imitation-christ",
@@ -1573,11 +2913,26 @@
           "period": "medieval",
           "year": 1418,
           "languages": {
-            "la": { "source": "gutenberg", "title": "De Imitatione Christi" },
-            "en": { "source": "gutenberg", "gutenberg_id": 1653 },
-            "fr": { "source": "wikisource", "title": "L'Imitation de Jésus-Christ" }
+            "la": {
+              "source": "gutenberg",
+              "title": "De Imitatione Christi"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1653
+            },
+            "fr": {
+              "source": "wikisource",
+              "title": "L'Imitation de Jésus-Christ"
+            }
           },
-          "tags": ["christianity", "mysticism", "devotion", "humility", "medieval spirituality"]
+          "tags": [
+            "christianity",
+            "mysticism",
+            "devotion",
+            "humility",
+            "medieval spirituality"
+          ]
         },
         {
           "id": "ibn-khaldun-muqaddimah",
@@ -1586,11 +2941,25 @@
           "period": "medieval",
           "year": 1377,
           "languages": {
-            "ar": { "source": "archive", "title": "مقدمة ابن خلدون" },
-            "en": { "source": "archive" },
-            "fr": { "source": "archive", "title": "Discours sur l'histoire universelle" }
+            "ar": {
+              "source": "archive",
+              "title": "مقدمة ابن خلدون"
+            },
+            "en": {
+              "source": "archive"
+            },
+            "fr": {
+              "source": "archive",
+              "title": "Discours sur l'histoire universelle"
+            }
           },
-          "tags": ["history", "sociology", "islamic philosophy", "asabiyyah", "cyclical theory"]
+          "tags": [
+            "history",
+            "sociology",
+            "islamic philosophy",
+            "asabiyyah",
+            "cyclical theory"
+          ]
         },
         {
           "id": "book-of-job",
@@ -1599,11 +2968,26 @@
           "period": "classical",
           "year": -600,
           "languages": {
-            "he": { "source": "sefaria", "title": "אִיּוֹב" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
-            "la": { "source": "vulgate", "title": "Liber Iob" }
+            "he": {
+              "source": "sefaria",
+              "title": "אִיּוֹב"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8001
+            },
+            "la": {
+              "source": "vulgate",
+              "title": "Liber Iob"
+            }
           },
-          "tags": ["theodicy", "suffering", "wisdom", "hebrew bible", "dialogue"]
+          "tags": [
+            "theodicy",
+            "suffering",
+            "wisdom",
+            "hebrew bible",
+            "dialogue"
+          ]
         },
         {
           "id": "ecclesiastes",
@@ -1612,11 +2996,26 @@
           "period": "classical",
           "year": -300,
           "languages": {
-            "he": { "source": "sefaria", "title": "קֹהֶלֶת" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
-            "la": { "source": "vulgate", "title": "Ecclesiastes" }
+            "he": {
+              "source": "sefaria",
+              "title": "קֹהֶלֶת"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8001
+            },
+            "la": {
+              "source": "vulgate",
+              "title": "Ecclesiastes"
+            }
           },
-          "tags": ["vanity", "wisdom", "time", "hebrew bible", "philosophy"]
+          "tags": [
+            "vanity",
+            "wisdom",
+            "time",
+            "hebrew bible",
+            "philosophy"
+          ]
         },
         {
           "id": "song-of-songs",
@@ -1625,11 +3024,26 @@
           "period": "classical",
           "year": -950,
           "languages": {
-            "he": { "source": "sefaria", "title": "שִׁיר הַשִּׁירִים" },
-            "en": { "source": "gutenberg", "gutenberg_id": 8001 },
-            "la": { "source": "vulgate", "title": "Canticum Canticorum" }
+            "he": {
+              "source": "sefaria",
+              "title": "שִׁיר הַשִּׁירִים"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8001
+            },
+            "la": {
+              "source": "vulgate",
+              "title": "Canticum Canticorum"
+            }
           },
-          "tags": ["love", "poetry", "allegory", "hebrew bible", "mysticism"]
+          "tags": [
+            "love",
+            "poetry",
+            "allegory",
+            "hebrew bible",
+            "mysticism"
+          ]
         }
       ]
     },
@@ -1642,8 +3056,19 @@
           "author": "Anonymous",
           "period": "ancient",
           "year": -2100,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 11000 } },
-          "tags": ["epic", "mesopotamia", "sumerian", "flood myth", "immortality"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 11000
+            }
+          },
+          "tags": [
+            "epic",
+            "mesopotamia",
+            "sumerian",
+            "flood myth",
+            "immortality"
+          ]
         },
         {
           "id": "book-of-dead",
@@ -1651,8 +3076,19 @@
           "author": "Anonymous",
           "period": "ancient",
           "year": -1550,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7145 } },
-          "tags": ["egyptian", "afterlife", "funerary", "spells", "osiris"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7145
+            }
+          },
+          "tags": [
+            "egyptian",
+            "afterlife",
+            "funerary",
+            "spells",
+            "osiris"
+          ]
         }
       ]
     },
@@ -1665,8 +3101,18 @@
           "author": "Epictetus",
           "period": "classical",
           "year": 125,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 45109 } },
-          "tags": ["stoicism", "ethics", "manual", "practical philosophy"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 45109
+            }
+          },
+          "tags": [
+            "stoicism",
+            "ethics",
+            "manual",
+            "practical philosophy"
+          ]
         },
         {
           "id": "epictetus-discourses",
@@ -1674,8 +3120,18 @@
           "author": "Epictetus",
           "period": "classical",
           "year": 108,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 10661 } },
-          "tags": ["stoicism", "ethics", "lectures", "arrian"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 10661
+            }
+          },
+          "tags": [
+            "stoicism",
+            "ethics",
+            "lectures",
+            "arrian"
+          ]
         },
         {
           "id": "diogenes-laertius",
@@ -1683,8 +3139,18 @@
           "author": "Diogenes Laërtius",
           "period": "classical",
           "year": 230,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 57342 } },
-          "tags": ["biography", "philosophy", "doxography", "anecdotes"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 57342
+            }
+          },
+          "tags": [
+            "biography",
+            "philosophy",
+            "doxography",
+            "anecdotes"
+          ]
         },
         {
           "id": "plotinus-enneads",
@@ -1692,8 +3158,18 @@
           "author": "Plotinus",
           "period": "classical",
           "year": 270,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 37903 } },
-          "tags": ["neoplatonism", "metaphysics", "the one", "emanation"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 37903
+            }
+          },
+          "tags": [
+            "neoplatonism",
+            "metaphysics",
+            "the one",
+            "emanation"
+          ]
         }
       ]
     },
@@ -1706,8 +3182,18 @@
           "author": "Hesiod",
           "period": "classical",
           "year": -700,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 348 } },
-          "tags": ["cosmogony", "greek mythology", "didactic poetry", "ages of man"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 348
+            }
+          },
+          "tags": [
+            "cosmogony",
+            "greek mythology",
+            "didactic poetry",
+            "ages of man"
+          ]
         },
         {
           "id": "pindar-odes",
@@ -1715,8 +3201,18 @@
           "author": "Pindar",
           "period": "classical",
           "year": -470,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 10717 } },
-          "tags": ["lyric poetry", "victory odes", "olympic games", "mythology"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 10717
+            }
+          },
+          "tags": [
+            "lyric poetry",
+            "victory odes",
+            "olympic games",
+            "mythology"
+          ]
         },
         {
           "id": "sappho-fragments",
@@ -1725,10 +3221,22 @@
           "period": "classical",
           "year": -600,
           "languages": {
-            "grc": { "source": "perseus", "title": "Σαπφώ" },
-            "en": { "source": "gutenberg", "gutenberg_id": 36785 }
+            "grc": {
+              "source": "perseus",
+              "title": "Σαπφώ"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 36785
+            }
           },
-          "tags": ["lyric poetry", "love", "lesbos", "women", "fragments"]
+          "tags": [
+            "lyric poetry",
+            "love",
+            "lesbos",
+            "women",
+            "fragments"
+          ]
         },
         {
           "id": "euripides-medea",
@@ -1736,8 +3244,19 @@
           "author": "Euripides",
           "period": "classical",
           "year": -431,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 35451 } },
-          "tags": ["tragedy", "revenge", "women", "infanticide", "jason"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 35451
+            }
+          },
+          "tags": [
+            "tragedy",
+            "revenge",
+            "women",
+            "infanticide",
+            "jason"
+          ]
         },
         {
           "id": "euripides-bacchae",
@@ -1745,8 +3264,19 @@
           "author": "Euripides",
           "period": "classical",
           "year": -405,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5793 } },
-          "tags": ["tragedy", "dionysus", "ecstasy", "madness", "ritual"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5793
+            }
+          },
+          "tags": [
+            "tragedy",
+            "dionysus",
+            "ecstasy",
+            "madness",
+            "ritual"
+          ]
         },
         {
           "id": "euripides-hippolytus",
@@ -1754,8 +3284,19 @@
           "author": "Euripides",
           "period": "classical",
           "year": -428,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14337 } },
-          "tags": ["tragedy", "phaedra", "passion", "artemis", "aphrodite"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14337
+            }
+          },
+          "tags": [
+            "tragedy",
+            "phaedra",
+            "passion",
+            "artemis",
+            "aphrodite"
+          ]
         },
         {
           "id": "aristophanes-clouds",
@@ -1763,8 +3304,19 @@
           "author": "Aristophanes",
           "period": "classical",
           "year": -423,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2562 } },
-          "tags": ["comedy", "socrates", "satire", "sophistry", "education"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2562
+            }
+          },
+          "tags": [
+            "comedy",
+            "socrates",
+            "satire",
+            "sophistry",
+            "education"
+          ]
         },
         {
           "id": "aristophanes-birds",
@@ -1772,8 +3324,19 @@
           "author": "Aristophanes",
           "period": "classical",
           "year": -414,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 3013 } },
-          "tags": ["comedy", "utopia", "fantasy", "politics", "satire"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 3013
+            }
+          },
+          "tags": [
+            "comedy",
+            "utopia",
+            "fantasy",
+            "politics",
+            "satire"
+          ]
         },
         {
           "id": "aristophanes-lysistrata",
@@ -1781,8 +3344,19 @@
           "author": "Aristophanes",
           "period": "classical",
           "year": -411,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7700 } },
-          "tags": ["comedy", "war", "women", "sex strike", "peace"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7700
+            }
+          },
+          "tags": [
+            "comedy",
+            "war",
+            "women",
+            "sex strike",
+            "peace"
+          ]
         },
         {
           "id": "sophocles-antigone",
@@ -1790,8 +3364,19 @@
           "author": "Sophocles",
           "period": "classical",
           "year": -441,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 31 } },
-          "tags": ["tragedy", "thebes", "civil disobedience", "burial", "fate"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 31
+            }
+          },
+          "tags": [
+            "tragedy",
+            "thebes",
+            "civil disobedience",
+            "burial",
+            "fate"
+          ]
         },
         {
           "id": "aeschylus-prometheus-bound",
@@ -1799,8 +3384,19 @@
           "author": "Aeschylus",
           "period": "classical",
           "year": -430,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 27458 } },
-          "tags": ["tragedy", "titan", "fire", "defiance", "zeus"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 27458
+            }
+          },
+          "tags": [
+            "tragedy",
+            "titan",
+            "fire",
+            "defiance",
+            "zeus"
+          ]
         }
       ]
     },
@@ -1813,8 +3409,19 @@
           "author": "Xenophon",
           "period": "classical",
           "year": -370,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1170 } },
-          "tags": ["history", "ten thousand", "persia", "mercenaries", "march"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1170
+            }
+          },
+          "tags": [
+            "history",
+            "ten thousand",
+            "persia",
+            "mercenaries",
+            "march"
+          ]
         },
         {
           "id": "xenophon-memorabilia",
@@ -1822,8 +3429,18 @@
           "author": "Xenophon",
           "period": "classical",
           "year": -371,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1177 } },
-          "tags": ["socrates", "dialogues", "ethics", "biography"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1177
+            }
+          },
+          "tags": [
+            "socrates",
+            "dialogues",
+            "ethics",
+            "biography"
+          ]
         },
         {
           "id": "xenophon-cyropaedia",
@@ -1831,8 +3448,19 @@
           "author": "Xenophon",
           "period": "classical",
           "year": -370,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2085 } },
-          "tags": ["cyrus", "persia", "education", "leadership", "political philosophy"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2085
+            }
+          },
+          "tags": [
+            "cyrus",
+            "persia",
+            "education",
+            "leadership",
+            "political philosophy"
+          ]
         },
         {
           "id": "lucian-dialogues",
@@ -1840,8 +3468,19 @@
           "author": "Lucian",
           "period": "classical",
           "year": 165,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 6829 } },
-          "tags": ["satire", "afterlife", "philosophy", "wit", "menippean"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 6829
+            }
+          },
+          "tags": [
+            "satire",
+            "afterlife",
+            "philosophy",
+            "wit",
+            "menippean"
+          ]
         },
         {
           "id": "longus-daphnis",
@@ -1849,8 +3488,18 @@
           "author": "Longus",
           "period": "classical",
           "year": 200,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2629 } },
-          "tags": ["pastoral", "romance", "love", "greek novel"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2629
+            }
+          },
+          "tags": [
+            "pastoral",
+            "romance",
+            "love",
+            "greek novel"
+          ]
         }
       ]
     },
@@ -1863,8 +3512,18 @@
           "author": "Cicero",
           "period": "classical",
           "year": -44,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 47001 } },
-          "tags": ["ethics", "duty", "stoicism", "practical wisdom"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 47001
+            }
+          },
+          "tags": [
+            "ethics",
+            "duty",
+            "stoicism",
+            "practical wisdom"
+          ]
         },
         {
           "id": "cicero-tusculan",
@@ -1872,8 +3531,19 @@
           "author": "Cicero",
           "period": "classical",
           "year": -45,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14988 } },
-          "tags": ["philosophy", "death", "pain", "grief", "emotions"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14988
+            }
+          },
+          "tags": [
+            "philosophy",
+            "death",
+            "pain",
+            "grief",
+            "emotions"
+          ]
         },
         {
           "id": "lucretius-natura",
@@ -1881,8 +3551,19 @@
           "author": "Lucretius",
           "period": "classical",
           "year": -55,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 785 } },
-          "tags": ["epicureanism", "atomism", "physics", "didactic poetry", "death"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 785
+            }
+          },
+          "tags": [
+            "epicureanism",
+            "atomism",
+            "physics",
+            "didactic poetry",
+            "death"
+          ]
         },
         {
           "id": "seneca-letters",
@@ -1890,8 +3571,19 @@
           "author": "Seneca",
           "period": "classical",
           "year": 65,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 56075 } },
-          "tags": ["stoicism", "ethics", "letters", "practical philosophy", "death"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 56075
+            }
+          },
+          "tags": [
+            "stoicism",
+            "ethics",
+            "letters",
+            "practical philosophy",
+            "death"
+          ]
         },
         {
           "id": "boethius-consolation",
@@ -1899,8 +3591,19 @@
           "author": "Boethius",
           "period": "late_antique",
           "year": 524,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14328 } },
-          "tags": ["philosophy", "fortune", "free will", "theodicy", "prison"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14328
+            }
+          },
+          "tags": [
+            "philosophy",
+            "fortune",
+            "free will",
+            "theodicy",
+            "prison"
+          ]
         }
       ]
     },
@@ -1913,8 +3616,19 @@
           "author": "Ovid",
           "period": "classical",
           "year": 8,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 26073 } },
-          "tags": ["mythology", "transformation", "epic", "love", "gods"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 26073
+            }
+          },
+          "tags": [
+            "mythology",
+            "transformation",
+            "epic",
+            "love",
+            "gods"
+          ]
         },
         {
           "id": "ovid-art-love",
@@ -1922,8 +3636,19 @@
           "author": "Ovid",
           "period": "classical",
           "year": 2,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5765 } },
-          "tags": ["love", "seduction", "didactic", "wit", "elegiac"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5765
+            }
+          },
+          "tags": [
+            "love",
+            "seduction",
+            "didactic",
+            "wit",
+            "elegiac"
+          ]
         },
         {
           "id": "horace-odes",
@@ -1931,8 +3656,19 @@
           "author": "Horace",
           "period": "classical",
           "year": -23,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 9175 } },
-          "tags": ["lyric poetry", "carpe diem", "wine", "friendship", "golden mean"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 9175
+            }
+          },
+          "tags": [
+            "lyric poetry",
+            "carpe diem",
+            "wine",
+            "friendship",
+            "golden mean"
+          ]
         },
         {
           "id": "horace-satires",
@@ -1940,8 +3676,18 @@
           "author": "Horace",
           "period": "classical",
           "year": -35,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14020 } },
-          "tags": ["satire", "ethics", "self-mockery", "horatian satire"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14020
+            }
+          },
+          "tags": [
+            "satire",
+            "ethics",
+            "self-mockery",
+            "horatian satire"
+          ]
         },
         {
           "id": "juvenal-satires",
@@ -1949,8 +3695,19 @@
           "author": "Juvenal",
           "period": "classical",
           "year": 127,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 50848 } },
-          "tags": ["satire", "indignation", "rome", "corruption", "women"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 50848
+            }
+          },
+          "tags": [
+            "satire",
+            "indignation",
+            "rome",
+            "corruption",
+            "women"
+          ]
         },
         {
           "id": "catullus-poems",
@@ -1958,8 +3715,19 @@
           "author": "Catullus",
           "period": "classical",
           "year": -54,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 24122 } },
-          "tags": ["love poetry", "lesbia", "lyric", "invective", "neoteric"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 24122
+            }
+          },
+          "tags": [
+            "love poetry",
+            "lesbia",
+            "lyric",
+            "invective",
+            "neoteric"
+          ]
         }
       ]
     },
@@ -1972,8 +3740,19 @@
           "author": "Livy",
           "period": "classical",
           "year": -27,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 19725 } },
-          "tags": ["history", "rome", "republic", "founding myths", "exempla"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 19725
+            }
+          },
+          "tags": [
+            "history",
+            "rome",
+            "republic",
+            "founding myths",
+            "exempla"
+          ]
         },
         {
           "id": "suetonius-caesars",
@@ -1981,8 +3760,19 @@
           "author": "Suetonius",
           "period": "classical",
           "year": 121,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 6386 } },
-          "tags": ["biography", "emperors", "gossip", "anecdotes", "rome"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 6386
+            }
+          },
+          "tags": [
+            "biography",
+            "emperors",
+            "gossip",
+            "anecdotes",
+            "rome"
+          ]
         },
         {
           "id": "pliny-letters",
@@ -1990,8 +3780,18 @@
           "author": "Pliny the Younger",
           "period": "classical",
           "year": 109,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2811 } },
-          "tags": ["letters", "eruption vesuvius", "roman life", "trajan"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2811
+            }
+          },
+          "tags": [
+            "letters",
+            "eruption vesuvius",
+            "roman life",
+            "trajan"
+          ]
         },
         {
           "id": "petronius-satyricon",
@@ -1999,8 +3799,19 @@
           "author": "Petronius",
           "period": "classical",
           "year": 65,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5225 } },
-          "tags": ["novel", "satire", "picaresque", "feast trimalchio", "decadence"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5225
+            }
+          },
+          "tags": [
+            "novel",
+            "satire",
+            "picaresque",
+            "feast trimalchio",
+            "decadence"
+          ]
         },
         {
           "id": "apuleius-golden-ass",
@@ -2008,8 +3819,19 @@
           "author": "Apuleius",
           "period": "classical",
           "year": 170,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1666 } },
-          "tags": ["novel", "metamorphosis", "cupid psyche", "isis", "magic"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1666
+            }
+          },
+          "tags": [
+            "novel",
+            "metamorphosis",
+            "cupid psyche",
+            "isis",
+            "magic"
+          ]
         }
       ]
     },
@@ -2022,8 +3844,19 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 1000,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 16328 } },
-          "tags": ["old english", "epic", "monsters", "anglo-saxon", "heroism"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 16328
+            }
+          },
+          "tags": [
+            "old english",
+            "epic",
+            "monsters",
+            "anglo-saxon",
+            "heroism"
+          ]
         },
         {
           "id": "poetic-edda",
@@ -2031,8 +3864,19 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 1270,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14726 } },
-          "tags": ["norse mythology", "old norse", "ragnarok", "odin", "thor"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14726
+            }
+          },
+          "tags": [
+            "norse mythology",
+            "old norse",
+            "ragnarok",
+            "odin",
+            "thor"
+          ]
         },
         {
           "id": "song-roland",
@@ -2040,8 +3884,19 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 1100,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 391 } },
-          "tags": ["chanson de geste", "charlemagne", "chivalry", "crusades", "french epic"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 391
+            }
+          },
+          "tags": [
+            "chanson de geste",
+            "charlemagne",
+            "chivalry",
+            "crusades",
+            "french epic"
+          ]
         },
         {
           "id": "nibelungenlied",
@@ -2049,8 +3904,19 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 1200,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7321 } },
-          "tags": ["german epic", "siegfried", "kriemhild", "burgundy", "revenge"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7321
+            }
+          },
+          "tags": [
+            "german epic",
+            "siegfried",
+            "kriemhild",
+            "burgundy",
+            "revenge"
+          ]
         },
         {
           "id": "cid",
@@ -2058,8 +3924,19 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 1207,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 500 } },
-          "tags": ["spanish epic", "reconquista", "honor", "exile", "castile"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 500
+            }
+          },
+          "tags": [
+            "spanish epic",
+            "reconquista",
+            "honor",
+            "exile",
+            "castile"
+          ]
         },
         {
           "id": "gawain-green-knight",
@@ -2067,8 +3944,19 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 1375,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14568 } },
-          "tags": ["arthurian", "chivalry", "temptation", "beheading game", "alliterative"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14568
+            }
+          },
+          "tags": [
+            "arthurian",
+            "chivalry",
+            "temptation",
+            "beheading game",
+            "alliterative"
+          ]
         },
         {
           "id": "malory-morte-arthur",
@@ -2076,8 +3964,19 @@
           "author": "Thomas Malory",
           "period": "medieval",
           "year": 1485,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1251 } },
-          "tags": ["arthurian", "round table", "lancelot", "grail", "camelot"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1251
+            }
+          },
+          "tags": [
+            "arthurian",
+            "round table",
+            "lancelot",
+            "grail",
+            "camelot"
+          ]
         }
       ]
     },
@@ -2090,8 +3989,19 @@
           "author": "Giovanni Boccaccio",
           "period": "medieval",
           "year": 1353,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 23700 } },
-          "tags": ["frame narrative", "plague", "novella", "wit", "renaissance"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 23700
+            }
+          },
+          "tags": [
+            "frame narrative",
+            "plague",
+            "novella",
+            "wit",
+            "renaissance"
+          ]
         },
         {
           "id": "petrarch-canzoniere",
@@ -2099,8 +4009,19 @@
           "author": "Francesco Petrarca",
           "period": "medieval",
           "year": 1374,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 17650 } },
-          "tags": ["sonnets", "laura", "love poetry", "petrarchism", "vernacular"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 17650
+            }
+          },
+          "tags": [
+            "sonnets",
+            "laura",
+            "love poetry",
+            "petrarchism",
+            "vernacular"
+          ]
         },
         {
           "id": "chaucer-canterbury",
@@ -2108,8 +4029,18 @@
           "author": "Geoffrey Chaucer",
           "period": "medieval",
           "year": 1400,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2383 } },
-          "tags": ["pilgrimage", "estates satire", "frame narrative", "middle english"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2383
+            }
+          },
+          "tags": [
+            "pilgrimage",
+            "estates satire",
+            "frame narrative",
+            "middle english"
+          ]
         },
         {
           "id": "piers-plowman",
@@ -2117,8 +4048,18 @@
           "author": "William Langland",
           "period": "medieval",
           "year": 1370,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 43659 } },
-          "tags": ["allegory", "vision", "social criticism", "alliterative"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 43659
+            }
+          },
+          "tags": [
+            "allegory",
+            "vision",
+            "social criticism",
+            "alliterative"
+          ]
         },
         {
           "id": "margery-kempe",
@@ -2126,8 +4067,19 @@
           "author": "Margery Kempe",
           "period": "medieval",
           "year": 1438,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5196 } },
-          "tags": ["autobiography", "mysticism", "pilgrimage", "visions", "women"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5196
+            }
+          },
+          "tags": [
+            "autobiography",
+            "mysticism",
+            "pilgrimage",
+            "visions",
+            "women"
+          ]
         }
       ]
     },
@@ -2140,8 +4092,18 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 1375,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 30448 } },
-          "tags": ["mysticism", "contemplation", "apophatic", "prayer"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 30448
+            }
+          },
+          "tags": [
+            "mysticism",
+            "contemplation",
+            "apophatic",
+            "prayer"
+          ]
         },
         {
           "id": "julian-norwich",
@@ -2149,8 +4111,19 @@
           "author": "Julian of Norwich",
           "period": "medieval",
           "year": 1395,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 52958 } },
-          "tags": ["mysticism", "visions", "theodicy", "divine love", "anchoress"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 52958
+            }
+          },
+          "tags": [
+            "mysticism",
+            "visions",
+            "theodicy",
+            "divine love",
+            "anchoress"
+          ]
         },
         {
           "id": "aquinas-summa",
@@ -2158,8 +4131,19 @@
           "author": "Thomas Aquinas",
           "period": "medieval",
           "year": 1274,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 17611 } },
-          "tags": ["scholasticism", "theology", "five ways", "natural law", "thomism"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 17611
+            }
+          },
+          "tags": [
+            "scholasticism",
+            "theology",
+            "five ways",
+            "natural law",
+            "thomism"
+          ]
         },
         {
           "id": "meister-eckhart",
@@ -2167,8 +4151,19 @@
           "author": "Meister Eckhart",
           "period": "medieval",
           "year": 1328,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 39766 } },
-          "tags": ["mysticism", "german", "detachment", "ground of soul", "apophatic"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 39766
+            }
+          },
+          "tags": [
+            "mysticism",
+            "german",
+            "detachment",
+            "ground of soul",
+            "apophatic"
+          ]
         },
         {
           "id": "abelard-heloise",
@@ -2176,8 +4171,19 @@
           "author": "Peter Abelard & Heloise",
           "period": "medieval",
           "year": 1132,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 35977 } },
-          "tags": ["letters", "love", "philosophy", "monasticism", "tragedy"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 35977
+            }
+          },
+          "tags": [
+            "letters",
+            "love",
+            "philosophy",
+            "monasticism",
+            "tragedy"
+          ]
         }
       ]
     },
@@ -2190,8 +4196,19 @@
           "author": "Omar Khayyám",
           "period": "medieval",
           "year": 1120,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 246 } },
-          "tags": ["persian poetry", "quatrains", "carpe diem", "wine", "mortality"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 246
+            }
+          },
+          "tags": [
+            "persian poetry",
+            "quatrains",
+            "carpe diem",
+            "wine",
+            "mortality"
+          ]
         },
         {
           "id": "rumi-masnavi",
@@ -2199,8 +4216,19 @@
           "author": "Jalal ad-Din Rumi",
           "period": "medieval",
           "year": 1273,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 34903 } },
-          "tags": ["persian poetry", "sufi", "mysticism", "love", "parables"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 34903
+            }
+          },
+          "tags": [
+            "persian poetry",
+            "sufi",
+            "mysticism",
+            "love",
+            "parables"
+          ]
         }
       ]
     },
@@ -2213,8 +4241,18 @@
           "author": "Anonymous",
           "period": "medieval",
           "year": 850,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 128 } },
-          "tags": ["arabic", "frame narrative", "scheherazade", "folklore"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 128
+            }
+          },
+          "tags": [
+            "arabic",
+            "frame narrative",
+            "scheherazade",
+            "folklore"
+          ]
         }
       ]
     },
@@ -2227,8 +4265,19 @@
           "author": "Murasaki Shikibu",
           "period": "medieval",
           "year": 1010,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 6540 } },
-          "tags": ["japanese", "heian", "novel", "court life", "mono no aware"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 6540
+            }
+          },
+          "tags": [
+            "japanese",
+            "heian",
+            "novel",
+            "court life",
+            "mono no aware"
+          ]
         },
         {
           "id": "kojiki",
@@ -2237,10 +4286,22 @@
           "period": "ancient",
           "year": 712,
           "languages": {
-            "ja": { "source": "archive", "title": "古事記" },
-            "en": { "source": "gutenberg", "gutenberg_id": 48260 }
+            "ja": {
+              "source": "archive",
+              "title": "古事記"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 48260
+            }
           },
-          "tags": ["japanese mythology", "shinto", "creation", "gods", "imperial lineage"]
+          "tags": [
+            "japanese mythology",
+            "shinto",
+            "creation",
+            "gods",
+            "imperial lineage"
+          ]
         },
         {
           "id": "hagakure",
@@ -2249,10 +4310,21 @@
           "period": "early_modern",
           "year": 1716,
           "languages": {
-            "ja": { "source": "archive", "title": "葉隠" },
-            "en": { "source": "archive" }
+            "ja": {
+              "source": "archive",
+              "title": "葉隠"
+            },
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["bushido", "samurai", "death", "honor", "japan"]
+          "tags": [
+            "bushido",
+            "samurai",
+            "death",
+            "honor",
+            "japan"
+          ]
         },
         {
           "id": "zhuangzi",
@@ -2260,8 +4332,19 @@
           "author": "Zhuangzi",
           "period": "classical",
           "year": -300,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 17072 } },
-          "tags": ["taoism", "chinese philosophy", "wu wei", "relativism", "butterfly dream"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 17072
+            }
+          },
+          "tags": [
+            "taoism",
+            "chinese philosophy",
+            "wu wei",
+            "relativism",
+            "butterfly dream"
+          ]
         },
         {
           "id": "i-ching",
@@ -2269,8 +4352,19 @@
           "author": "Anonymous",
           "period": "ancient",
           "year": -1000,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 339 } },
-          "tags": ["divination", "chinese philosophy", "yin yang", "hexagrams", "wisdom"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 339
+            }
+          },
+          "tags": [
+            "divination",
+            "chinese philosophy",
+            "yin yang",
+            "hexagrams",
+            "wisdom"
+          ]
         },
         {
           "id": "mencius",
@@ -2278,8 +4372,18 @@
           "author": "Mencius",
           "period": "classical",
           "year": -300,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 56063 } },
-          "tags": ["confucianism", "human nature", "righteousness", "benevolence"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 56063
+            }
+          },
+          "tags": [
+            "confucianism",
+            "human nature",
+            "righteousness",
+            "benevolence"
+          ]
         }
       ]
     },
@@ -2292,8 +4396,19 @@
           "author": "Various",
           "period": "ancient",
           "year": -800,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 3283 } },
-          "tags": ["sanskrit", "hindu philosophy", "vedanta", "brahman", "atman"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 3283
+            }
+          },
+          "tags": [
+            "sanskrit",
+            "hindu philosophy",
+            "vedanta",
+            "brahman",
+            "atman"
+          ]
         },
         {
           "id": "ramayana",
@@ -2301,8 +4416,20 @@
           "author": "Valmiki",
           "period": "ancient",
           "year": -400,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 24869 } },
-          "tags": ["sanskrit", "epic", "rama", "sita", "dharma", "hindu"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 24869
+            }
+          },
+          "tags": [
+            "sanskrit",
+            "epic",
+            "rama",
+            "sita",
+            "dharma",
+            "hindu"
+          ]
         },
         {
           "id": "mahabharata-selections",
@@ -2310,8 +4437,19 @@
           "author": "Vyasa",
           "period": "ancient",
           "year": -400,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7864 } },
-          "tags": ["sanskrit", "epic", "kurukshetra", "dharma", "hindu"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7864
+            }
+          },
+          "tags": [
+            "sanskrit",
+            "epic",
+            "kurukshetra",
+            "dharma",
+            "hindu"
+          ]
         },
         {
           "id": "kalidasa-shakuntala",
@@ -2319,8 +4457,20 @@
           "author": "Kalidasa",
           "period": "ancient",
           "year": 400,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 16659 } },
-          "tags": ["sanskrit", "drama", "romance", "nature", "memory", "recognition"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 16659
+            }
+          },
+          "tags": [
+            "sanskrit",
+            "drama",
+            "romance",
+            "nature",
+            "memory",
+            "recognition"
+          ]
         }
       ]
     },
@@ -2333,8 +4483,18 @@
           "author": "Michel de Montaigne",
           "period": "early_modern",
           "year": 1580,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 3600 } },
-          "tags": ["essay", "skepticism", "self-examination", "humanism"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 3600
+            }
+          },
+          "tags": [
+            "essay",
+            "skepticism",
+            "self-examination",
+            "humanism"
+          ]
         },
         {
           "id": "pascal-pensees",
@@ -2342,8 +4502,18 @@
           "author": "Blaise Pascal",
           "period": "early_modern",
           "year": 1670,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 18269 } },
-          "tags": ["aphorisms", "christianity", "wagering", "human condition"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 18269
+            }
+          },
+          "tags": [
+            "aphorisms",
+            "christianity",
+            "wagering",
+            "human condition"
+          ]
         },
         {
           "id": "erasmus-folly",
@@ -2351,8 +4521,18 @@
           "author": "Erasmus",
           "period": "early_modern",
           "year": 1511,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 9371 } },
-          "tags": ["satire", "humanism", "church criticism", "wit"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 9371
+            }
+          },
+          "tags": [
+            "satire",
+            "humanism",
+            "church criticism",
+            "wit"
+          ]
         },
         {
           "id": "more-utopia",
@@ -2360,8 +4540,18 @@
           "author": "Thomas More",
           "period": "early_modern",
           "year": 1516,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2130 } },
-          "tags": ["utopia", "political philosophy", "humanism", "satire"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2130
+            }
+          },
+          "tags": [
+            "utopia",
+            "political philosophy",
+            "humanism",
+            "satire"
+          ]
         },
         {
           "id": "bacon-essays",
@@ -2369,8 +4559,18 @@
           "author": "Francis Bacon",
           "period": "early_modern",
           "year": 1625,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 575 } },
-          "tags": ["essays", "practical wisdom", "aphorisms", "science"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 575
+            }
+          },
+          "tags": [
+            "essays",
+            "practical wisdom",
+            "aphorisms",
+            "science"
+          ]
         }
       ]
     },
@@ -2383,8 +4583,18 @@
           "author": "Immanuel Kant",
           "period": "modern",
           "year": 1783,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 52821 } },
-          "tags": ["metaphysics", "critique", "epistemology", "a priori"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 52821
+            }
+          },
+          "tags": [
+            "metaphysics",
+            "critique",
+            "epistemology",
+            "a priori"
+          ]
         },
         {
           "id": "fichte-science-knowledge",
@@ -2392,8 +4602,17 @@
           "author": "Johann Gottlieb Fichte",
           "period": "modern",
           "year": 1794,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["idealism", "ego", "self-positing", "transcendental"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "idealism",
+            "ego",
+            "self-positing",
+            "transcendental"
+          ]
         },
         {
           "id": "schelling-transcendental-idealism",
@@ -2401,17 +4620,17 @@
           "author": "F.W.J. Schelling",
           "period": "modern",
           "year": 1800,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["idealism", "nature", "art", "absolute"]
-        },
-        {
-          "id": "schopenhauer-world-will",
-          "title": "The World as Will and Representation",
-          "author": "Arthur Schopenhauer",
-          "period": "modern",
-          "year": 1818,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 38427 } },
-          "tags": ["pessimism", "will", "representation", "suffering"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "idealism",
+            "nature",
+            "art",
+            "absolute"
+          ]
         }
       ]
     },
@@ -2424,8 +4643,17 @@
           "author": "Søren Kierkegaard",
           "period": "modern",
           "year": 1843,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["existentialism", "aesthetics", "ethics", "choice"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "existentialism",
+            "aesthetics",
+            "ethics",
+            "choice"
+          ]
         },
         {
           "id": "kierkegaard-fear-trembling",
@@ -2433,26 +4661,18 @@
           "author": "Søren Kierkegaard",
           "period": "modern",
           "year": 1843,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 61681 } },
-          "tags": ["existentialism", "faith", "abraham", "leap"]
-        },
-        {
-          "id": "nietzsche-zarathustra",
-          "title": "Thus Spoke Zarathustra",
-          "author": "Friedrich Nietzsche",
-          "period": "modern",
-          "year": 1883,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1998 } },
-          "tags": ["philosophy", "übermensch", "eternal recurrence", "nihilism"]
-        },
-        {
-          "id": "nietzsche-beyond-good-evil",
-          "title": "Beyond Good and Evil",
-          "author": "Friedrich Nietzsche",
-          "period": "modern",
-          "year": 1886,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4363 } },
-          "tags": ["philosophy", "morality", "will to power", "perspectivism"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 61681
+            }
+          },
+          "tags": [
+            "existentialism",
+            "faith",
+            "abraham",
+            "leap"
+          ]
         },
         {
           "id": "nietzsche-genealogy-morals",
@@ -2460,8 +4680,18 @@
           "author": "Friedrich Nietzsche",
           "period": "modern",
           "year": 1887,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 52319 } },
-          "tags": ["philosophy", "morality", "ressentiment", "guilt"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 52319
+            }
+          },
+          "tags": [
+            "philosophy",
+            "morality",
+            "ressentiment",
+            "guilt"
+          ]
         },
         {
           "id": "dostoevsky-notes-underground",
@@ -2469,8 +4699,18 @@
           "author": "Fyodor Dostoevsky",
           "period": "modern",
           "year": 1864,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 600 } },
-          "tags": ["existentialism", "psychology", "freedom", "underground man"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 600
+            }
+          },
+          "tags": [
+            "existentialism",
+            "psychology",
+            "freedom",
+            "underground man"
+          ]
         }
       ]
     },
@@ -2483,8 +4723,19 @@
           "author": "Fyodor Dostoevsky",
           "period": "modern",
           "year": 1880,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 28054 } },
-          "tags": ["novel", "theodicy", "faith", "psychology", "grand inquisitor"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 28054
+            }
+          },
+          "tags": [
+            "novel",
+            "theodicy",
+            "faith",
+            "psychology",
+            "grand inquisitor"
+          ]
         },
         {
           "id": "dostoevsky-crime-punishment",
@@ -2492,8 +4743,18 @@
           "author": "Fyodor Dostoevsky",
           "period": "modern",
           "year": 1866,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2554 } },
-          "tags": ["novel", "guilt", "redemption", "psychology"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2554
+            }
+          },
+          "tags": [
+            "novel",
+            "guilt",
+            "redemption",
+            "psychology"
+          ]
         },
         {
           "id": "dostoevsky-idiot",
@@ -2501,8 +4762,18 @@
           "author": "Fyodor Dostoevsky",
           "period": "modern",
           "year": 1869,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2638 } },
-          "tags": ["novel", "innocence", "epilepsy", "christ figure"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2638
+            }
+          },
+          "tags": [
+            "novel",
+            "innocence",
+            "epilepsy",
+            "christ figure"
+          ]
         },
         {
           "id": "dostoevsky-demons",
@@ -2510,8 +4781,18 @@
           "author": "Fyodor Dostoevsky",
           "period": "modern",
           "year": 1872,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 8117 } },
-          "tags": ["novel", "nihilism", "revolution", "terrorism"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8117
+            }
+          },
+          "tags": [
+            "novel",
+            "nihilism",
+            "revolution",
+            "terrorism"
+          ]
         },
         {
           "id": "tolstoy-war-peace",
@@ -2519,8 +4800,18 @@
           "author": "Leo Tolstoy",
           "period": "modern",
           "year": 1869,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2600 } },
-          "tags": ["epic", "napoleon", "history", "philosophy"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2600
+            }
+          },
+          "tags": [
+            "epic",
+            "napoleon",
+            "history",
+            "philosophy"
+          ]
         },
         {
           "id": "tolstoy-anna-karenina",
@@ -2528,8 +4819,18 @@
           "author": "Leo Tolstoy",
           "period": "modern",
           "year": 1877,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1399 } },
-          "tags": ["novel", "adultery", "society", "faith"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1399
+            }
+          },
+          "tags": [
+            "novel",
+            "adultery",
+            "society",
+            "faith"
+          ]
         },
         {
           "id": "tolstoy-death-ivan-ilyich",
@@ -2537,8 +4838,18 @@
           "author": "Leo Tolstoy",
           "period": "modern",
           "year": 1886,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 43424 } },
-          "tags": ["novella", "death", "meaning", "authentic life"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 43424
+            }
+          },
+          "tags": [
+            "novella",
+            "death",
+            "meaning",
+            "authentic life"
+          ]
         },
         {
           "id": "gogol-dead-souls",
@@ -2546,8 +4857,18 @@
           "author": "Nikolai Gogol",
           "period": "modern",
           "year": 1842,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1081 } },
-          "tags": ["novel", "satire", "russia", "chichikov"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1081
+            }
+          },
+          "tags": [
+            "novel",
+            "satire",
+            "russia",
+            "chichikov"
+          ]
         },
         {
           "id": "turgenev-fathers-sons",
@@ -2555,8 +4876,18 @@
           "author": "Ivan Turgenev",
           "period": "modern",
           "year": 1862,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 30723 } },
-          "tags": ["novel", "nihilism", "generations", "bazarov"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 30723
+            }
+          },
+          "tags": [
+            "novel",
+            "nihilism",
+            "generations",
+            "bazarov"
+          ]
         },
         {
           "id": "chekhov-stories",
@@ -2564,8 +4895,18 @@
           "author": "Anton Chekhov",
           "period": "modern",
           "year": 1898,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1732 } },
-          "tags": ["stories", "realism", "humanity", "russia"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1732
+            }
+          },
+          "tags": [
+            "stories",
+            "realism",
+            "humanity",
+            "russia"
+          ]
         },
         {
           "id": "pushkin-eugene-onegin",
@@ -2573,8 +4914,18 @@
           "author": "Alexander Pushkin",
           "period": "modern",
           "year": 1833,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 23997 } },
-          "tags": ["verse novel", "romanticism", "love", "superfluous man"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 23997
+            }
+          },
+          "tags": [
+            "verse novel",
+            "romanticism",
+            "love",
+            "superfluous man"
+          ]
         }
       ]
     },
@@ -2587,8 +4938,18 @@
           "author": "James Joyce",
           "period": "modern",
           "year": 1922,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4300 } },
-          "tags": ["modernism", "stream of consciousness", "dublin", "odyssey"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 4300
+            }
+          },
+          "tags": [
+            "modernism",
+            "stream of consciousness",
+            "dublin",
+            "odyssey"
+          ]
         },
         {
           "id": "joyce-portrait-artist",
@@ -2596,8 +4957,18 @@
           "author": "James Joyce",
           "period": "modern",
           "year": 1916,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4217 } },
-          "tags": ["modernism", "künstlerroman", "ireland", "epiphany"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 4217
+            }
+          },
+          "tags": [
+            "modernism",
+            "künstlerroman",
+            "ireland",
+            "epiphany"
+          ]
         },
         {
           "id": "joyce-dubliners",
@@ -2605,8 +4976,18 @@
           "author": "James Joyce",
           "period": "modern",
           "year": 1914,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2814 } },
-          "tags": ["stories", "paralysis", "dublin", "epiphany"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2814
+            }
+          },
+          "tags": [
+            "stories",
+            "paralysis",
+            "dublin",
+            "epiphany"
+          ]
         },
         {
           "id": "kafka-metamorphosis",
@@ -2614,8 +4995,18 @@
           "author": "Franz Kafka",
           "period": "modern",
           "year": 1915,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5200 } },
-          "tags": ["modernism", "alienation", "transformation", "absurd"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5200
+            }
+          },
+          "tags": [
+            "modernism",
+            "alienation",
+            "transformation",
+            "absurd"
+          ]
         },
         {
           "id": "kafka-trial",
@@ -2623,8 +5014,18 @@
           "author": "Franz Kafka",
           "period": "modern",
           "year": 1925,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7849 } },
-          "tags": ["modernism", "law", "guilt", "bureaucracy"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7849
+            }
+          },
+          "tags": [
+            "modernism",
+            "law",
+            "guilt",
+            "bureaucracy"
+          ]
         },
         {
           "id": "kafka-castle",
@@ -2632,8 +5033,17 @@
           "author": "Franz Kafka",
           "period": "modern",
           "year": 1926,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["modernism", "bureaucracy", "alienation", "labyrinth"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "modernism",
+            "bureaucracy",
+            "alienation",
+            "labyrinth"
+          ]
         },
         {
           "id": "woolf-mrs-dalloway",
@@ -2641,8 +5051,17 @@
           "author": "Virginia Woolf",
           "period": "modern",
           "year": 1925,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["modernism", "stream of consciousness", "time", "party"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "modernism",
+            "stream of consciousness",
+            "time",
+            "party"
+          ]
         },
         {
           "id": "woolf-lighthouse",
@@ -2650,8 +5069,17 @@
           "author": "Virginia Woolf",
           "period": "modern",
           "year": 1927,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["modernism", "time", "art", "family"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "modernism",
+            "time",
+            "art",
+            "family"
+          ]
         },
         {
           "id": "proust-swanns-way",
@@ -2659,8 +5087,18 @@
           "author": "Marcel Proust",
           "period": "modern",
           "year": 1913,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7178 } },
-          "tags": ["modernism", "memory", "time", "madeleine"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7178
+            }
+          },
+          "tags": [
+            "modernism",
+            "memory",
+            "time",
+            "madeleine"
+          ]
         },
         {
           "id": "mann-magic-mountain",
@@ -2668,8 +5106,17 @@
           "author": "Thomas Mann",
           "period": "modern",
           "year": 1924,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["modernism", "bildungsroman", "sanatorium", "time"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "modernism",
+            "bildungsroman",
+            "sanatorium",
+            "time"
+          ]
         },
         {
           "id": "mann-death-venice",
@@ -2677,8 +5124,18 @@
           "author": "Thomas Mann",
           "period": "modern",
           "year": 1912,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 12108 } },
-          "tags": ["novella", "beauty", "death", "apollonian dionysian"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 12108
+            }
+          },
+          "tags": [
+            "novella",
+            "beauty",
+            "death",
+            "apollonian dionysian"
+          ]
         },
         {
           "id": "hesse-steppenwolf",
@@ -2686,8 +5143,17 @@
           "author": "Hermann Hesse",
           "period": "modern",
           "year": 1927,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["modernism", "alienation", "duality", "magic theater"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "modernism",
+            "alienation",
+            "duality",
+            "magic theater"
+          ]
         },
         {
           "id": "hesse-siddhartha",
@@ -2695,8 +5161,18 @@
           "author": "Hermann Hesse",
           "period": "modern",
           "year": 1922,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2500 } },
-          "tags": ["spiritual", "buddhism", "self-discovery", "river"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2500
+            }
+          },
+          "tags": [
+            "spiritual",
+            "buddhism",
+            "self-discovery",
+            "river"
+          ]
         }
       ]
     },
@@ -2709,8 +5185,18 @@
           "author": "Herman Melville",
           "period": "modern",
           "year": 1851,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2701 } },
-          "tags": ["novel", "whale", "obsession", "maritime"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2701
+            }
+          },
+          "tags": [
+            "novel",
+            "whale",
+            "obsession",
+            "maritime"
+          ]
         },
         {
           "id": "melville-bartleby",
@@ -2718,8 +5204,18 @@
           "author": "Herman Melville",
           "period": "modern",
           "year": 1853,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 11231 } },
-          "tags": ["story", "refusal", "wall street", "prefer not to"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 11231
+            }
+          },
+          "tags": [
+            "story",
+            "refusal",
+            "wall street",
+            "prefer not to"
+          ]
         },
         {
           "id": "hawthorne-scarlet-letter",
@@ -2727,8 +5223,18 @@
           "author": "Nathaniel Hawthorne",
           "period": "modern",
           "year": 1850,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 25344 } },
-          "tags": ["novel", "puritanism", "sin", "guilt"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 25344
+            }
+          },
+          "tags": [
+            "novel",
+            "puritanism",
+            "sin",
+            "guilt"
+          ]
         },
         {
           "id": "poe-tales",
@@ -2736,8 +5242,18 @@
           "author": "Edgar Allan Poe",
           "period": "modern",
           "year": 1845,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2147 } },
-          "tags": ["gothic", "horror", "detective", "macabre"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2147
+            }
+          },
+          "tags": [
+            "gothic",
+            "horror",
+            "detective",
+            "macabre"
+          ]
         },
         {
           "id": "twain-huckleberry-finn",
@@ -2745,8 +5261,18 @@
           "author": "Mark Twain",
           "period": "modern",
           "year": 1884,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 76 } },
-          "tags": ["novel", "mississippi", "slavery", "vernacular"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 76
+            }
+          },
+          "tags": [
+            "novel",
+            "mississippi",
+            "slavery",
+            "vernacular"
+          ]
         },
         {
           "id": "whitman-leaves-grass",
@@ -2754,8 +5280,18 @@
           "author": "Walt Whitman",
           "period": "modern",
           "year": 1855,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1322 } },
-          "tags": ["poetry", "democracy", "body", "america"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1322
+            }
+          },
+          "tags": [
+            "poetry",
+            "democracy",
+            "body",
+            "america"
+          ]
         },
         {
           "id": "dickinson-poems",
@@ -2763,8 +5299,18 @@
           "author": "Emily Dickinson",
           "period": "modern",
           "year": 1890,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 12242 } },
-          "tags": ["poetry", "death", "immortality", "slant"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 12242
+            }
+          },
+          "tags": [
+            "poetry",
+            "death",
+            "immortality",
+            "slant"
+          ]
         },
         {
           "id": "emerson-essays",
@@ -2772,8 +5318,18 @@
           "author": "Ralph Waldo Emerson",
           "period": "modern",
           "year": 1841,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2944 } },
-          "tags": ["transcendentalism", "self-reliance", "nature", "over-soul"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2944
+            }
+          },
+          "tags": [
+            "transcendentalism",
+            "self-reliance",
+            "nature",
+            "over-soul"
+          ]
         },
         {
           "id": "thoreau-walden",
@@ -2781,8 +5337,18 @@
           "author": "Henry David Thoreau",
           "period": "modern",
           "year": 1854,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 205 } },
-          "tags": ["transcendentalism", "simplicity", "nature", "solitude"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 205
+            }
+          },
+          "tags": [
+            "transcendentalism",
+            "simplicity",
+            "nature",
+            "solitude"
+          ]
         },
         {
           "id": "thoreau-civil-disobedience",
@@ -2790,8 +5356,18 @@
           "author": "Henry David Thoreau",
           "period": "modern",
           "year": 1849,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 71 } },
-          "tags": ["essay", "resistance", "conscience", "government"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 71
+            }
+          },
+          "tags": [
+            "essay",
+            "resistance",
+            "conscience",
+            "government"
+          ]
         },
         {
           "id": "james-portrait-lady",
@@ -2799,8 +5375,18 @@
           "author": "Henry James",
           "period": "modern",
           "year": 1881,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2833 } },
-          "tags": ["novel", "americans abroad", "freedom", "consciousness"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2833
+            }
+          },
+          "tags": [
+            "novel",
+            "americans abroad",
+            "freedom",
+            "consciousness"
+          ]
         },
         {
           "id": "james-turn-screw",
@@ -2808,8 +5394,18 @@
           "author": "Henry James",
           "period": "modern",
           "year": 1898,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 209 } },
-          "tags": ["novella", "gothic", "ambiguity", "ghosts"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 209
+            }
+          },
+          "tags": [
+            "novella",
+            "gothic",
+            "ambiguity",
+            "ghosts"
+          ]
         }
       ]
     },
@@ -2823,10 +5419,20 @@
           "period": "modern",
           "year": 1857,
           "languages": {
-            "fr": { "source": "wikisource" },
-            "en": { "source": "gutenberg", "gutenberg_id": 6099 }
+            "fr": {
+              "source": "wikisource"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 6099
+            }
           },
-          "tags": ["poetry", "spleen", "modernity", "decadence"]
+          "tags": [
+            "poetry",
+            "spleen",
+            "modernity",
+            "decadence"
+          ]
         },
         {
           "id": "rimbaud-illuminations",
@@ -2835,10 +5441,20 @@
           "period": "modern",
           "year": 1886,
           "languages": {
-            "fr": { "source": "wikisource" },
-            "en": { "source": "gutenberg", "gutenberg_id": 60108 }
+            "fr": {
+              "source": "wikisource"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 60108
+            }
           },
-          "tags": ["poetry", "visionary", "symbolism", "prose poetry"]
+          "tags": [
+            "poetry",
+            "visionary",
+            "symbolism",
+            "prose poetry"
+          ]
         },
         {
           "id": "rimbaud-season-hell",
@@ -2847,10 +5463,20 @@
           "period": "modern",
           "year": 1873,
           "languages": {
-            "fr": { "source": "wikisource" },
-            "en": { "source": "gutenberg", "gutenberg_id": 60108 }
+            "fr": {
+              "source": "wikisource"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 60108
+            }
           },
-          "tags": ["poetry", "confession", "alchemy", "damnation"]
+          "tags": [
+            "poetry",
+            "confession",
+            "alchemy",
+            "damnation"
+          ]
         },
         {
           "id": "mallarme-poems",
@@ -2859,10 +5485,19 @@
           "period": "modern",
           "year": 1887,
           "languages": {
-            "fr": { "source": "wikisource" },
-            "en": { "source": "archive" }
+            "fr": {
+              "source": "wikisource"
+            },
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["poetry", "symbolism", "hermeticism", "pure poetry"]
+          "tags": [
+            "poetry",
+            "symbolism",
+            "hermeticism",
+            "pure poetry"
+          ]
         },
         {
           "id": "verlaine-poems",
@@ -2871,10 +5506,20 @@
           "period": "modern",
           "year": 1884,
           "languages": {
-            "fr": { "source": "wikisource" },
-            "en": { "source": "gutenberg", "gutenberg_id": 36098 }
+            "fr": {
+              "source": "wikisource"
+            },
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 36098
+            }
           },
-          "tags": ["poetry", "music", "symbolism", "melancholy"]
+          "tags": [
+            "poetry",
+            "music",
+            "symbolism",
+            "melancholy"
+          ]
         }
       ]
     },
@@ -2882,22 +5527,23 @@
       "name": "German Poetry & Romanticism",
       "documents": [
         {
-          "id": "goethe-faust",
-          "title": "Faust",
-          "author": "Johann Wolfgang von Goethe",
-          "period": "modern",
-          "year": 1832,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14591 } },
-          "tags": ["drama", "devil", "striving", "salvation"]
-        },
-        {
           "id": "goethe-sorrows-werther",
           "title": "The Sorrows of Young Werther",
           "author": "Johann Wolfgang von Goethe",
           "period": "modern",
           "year": 1774,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2527 } },
-          "tags": ["novel", "sensibility", "suicide", "sturm und drang"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2527
+            }
+          },
+          "tags": [
+            "novel",
+            "sensibility",
+            "suicide",
+            "sturm und drang"
+          ]
         },
         {
           "id": "holderlin-poems",
@@ -2906,10 +5552,19 @@
           "period": "modern",
           "year": 1826,
           "languages": {
-            "de": { "source": "gutenberg-de" },
-            "en": { "source": "archive" }
+            "de": {
+              "source": "gutenberg-de"
+            },
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["poetry", "greece", "gods", "madness"]
+          "tags": [
+            "poetry",
+            "greece",
+            "gods",
+            "madness"
+          ]
         },
         {
           "id": "novalis-hymns-night",
@@ -2917,8 +5572,18 @@
           "author": "Novalis",
           "period": "modern",
           "year": 1800,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5636 } },
-          "tags": ["poetry", "romanticism", "death", "night"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5636
+            }
+          },
+          "tags": [
+            "poetry",
+            "romanticism",
+            "death",
+            "night"
+          ]
         },
         {
           "id": "rilke-duino-elegies",
@@ -2927,10 +5592,19 @@
           "period": "modern",
           "year": 1923,
           "languages": {
-            "de": { "source": "gutenberg-de" },
-            "en": { "source": "archive" }
+            "de": {
+              "source": "gutenberg-de"
+            },
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["poetry", "angels", "transformation", "interiority"]
+          "tags": [
+            "poetry",
+            "angels",
+            "transformation",
+            "interiority"
+          ]
         },
         {
           "id": "rilke-sonnets-orpheus",
@@ -2939,10 +5613,19 @@
           "period": "modern",
           "year": 1923,
           "languages": {
-            "de": { "source": "gutenberg-de" },
-            "en": { "source": "archive" }
+            "de": {
+              "source": "gutenberg-de"
+            },
+            "en": {
+              "source": "archive"
+            }
           },
-          "tags": ["poetry", "orpheus", "transformation", "praise"]
+          "tags": [
+            "poetry",
+            "orpheus",
+            "transformation",
+            "praise"
+          ]
         }
       ]
     },
@@ -2955,8 +5638,17 @@
           "author": "Jakob Böhme",
           "period": "early_modern",
           "year": 1612,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["theosophy", "mysticism", "ungrund", "alchemy"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "theosophy",
+            "mysticism",
+            "ungrund",
+            "alchemy"
+          ]
         },
         {
           "id": "swedenborg-heaven-hell",
@@ -2964,8 +5656,18 @@
           "author": "Emanuel Swedenborg",
           "period": "early_modern",
           "year": 1758,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 36733 } },
-          "tags": ["visions", "correspondences", "afterlife", "angels"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 36733
+            }
+          },
+          "tags": [
+            "visions",
+            "correspondences",
+            "afterlife",
+            "angels"
+          ]
         },
         {
           "id": "eckhart-sermons",
@@ -2973,17 +5675,17 @@
           "author": "Meister Eckhart",
           "period": "medieval",
           "year": 1300,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["mysticism", "detachment", "ground of soul", "godhead"]
-        },
-        {
-          "id": "cloud-unknowing",
-          "title": "The Cloud of Unknowing",
-          "author": "Anonymous",
-          "period": "medieval",
-          "year": 1375,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 21600 } },
-          "tags": ["mysticism", "apophatic", "contemplation", "love"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "mysticism",
+            "detachment",
+            "ground of soul",
+            "godhead"
+          ]
         },
         {
           "id": "julian-revelations",
@@ -2991,8 +5693,18 @@
           "author": "Julian of Norwich",
           "period": "medieval",
           "year": 1395,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 52958 } },
-          "tags": ["mysticism", "visions", "optimism", "mother god"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 52958
+            }
+          },
+          "tags": [
+            "mysticism",
+            "visions",
+            "optimism",
+            "mother god"
+          ]
         },
         {
           "id": "john-cross-dark-night",
@@ -3000,8 +5712,18 @@
           "author": "John of the Cross",
           "period": "early_modern",
           "year": 1584,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 21947 } },
-          "tags": ["mysticism", "night", "purgation", "union"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 21947
+            }
+          },
+          "tags": [
+            "mysticism",
+            "night",
+            "purgation",
+            "union"
+          ]
         },
         {
           "id": "therese-interior-castle",
@@ -3009,8 +5731,18 @@
           "author": "Teresa of Ávila",
           "period": "early_modern",
           "year": 1577,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 36093 } },
-          "tags": ["mysticism", "mansions", "prayer", "spiritual marriage"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 36093
+            }
+          },
+          "tags": [
+            "mysticism",
+            "mansions",
+            "prayer",
+            "spiritual marriage"
+          ]
         }
       ]
     },
@@ -3023,17 +5755,18 @@
           "author": "Henrik Ibsen",
           "period": "modern",
           "year": 1879,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2542 } },
-          "tags": ["drama", "feminism", "marriage", "freedom"]
-        },
-        {
-          "id": "ibsen-hedda-gabler",
-          "title": "Hedda Gabler",
-          "author": "Henrik Ibsen",
-          "period": "modern",
-          "year": 1891,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4093 } },
-          "tags": ["drama", "psychology", "suicide", "boredom"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2542
+            }
+          },
+          "tags": [
+            "drama",
+            "feminism",
+            "marriage",
+            "freedom"
+          ]
         },
         {
           "id": "ibsen-peer-gynt",
@@ -3041,8 +5774,18 @@
           "author": "Henrik Ibsen",
           "period": "modern",
           "year": 1867,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5765 } },
-          "tags": ["drama", "fantasy", "identity", "trolls"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5765
+            }
+          },
+          "tags": [
+            "drama",
+            "fantasy",
+            "identity",
+            "trolls"
+          ]
         },
         {
           "id": "ibsen-ghosts",
@@ -3050,8 +5793,18 @@
           "author": "Henrik Ibsen",
           "period": "modern",
           "year": 1881,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 8121 } },
-          "tags": ["drama", "heredity", "duty", "syphilis"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8121
+            }
+          },
+          "tags": [
+            "drama",
+            "heredity",
+            "duty",
+            "syphilis"
+          ]
         },
         {
           "id": "strindberg-miss-julie",
@@ -3059,8 +5812,18 @@
           "author": "August Strindberg",
           "period": "modern",
           "year": 1888,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 8499 } },
-          "tags": ["drama", "naturalism", "class", "sexuality"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 8499
+            }
+          },
+          "tags": [
+            "drama",
+            "naturalism",
+            "class",
+            "sexuality"
+          ]
         },
         {
           "id": "strindberg-dream-play",
@@ -3068,8 +5831,17 @@
           "author": "August Strindberg",
           "period": "modern",
           "year": 1901,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["drama", "expressionism", "dream", "suffering"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "drama",
+            "expressionism",
+            "dream",
+            "suffering"
+          ]
         }
       ]
     },
@@ -3082,8 +5854,18 @@
           "author": "Miguel de Cervantes",
           "period": "early_modern",
           "year": 1605,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 996 } },
-          "tags": ["novel", "chivalry", "madness", "metafiction"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 996
+            }
+          },
+          "tags": [
+            "novel",
+            "chivalry",
+            "madness",
+            "metafiction"
+          ]
         },
         {
           "id": "cervantes-don-quixote-2",
@@ -3091,8 +5873,18 @@
           "author": "Miguel de Cervantes",
           "period": "early_modern",
           "year": 1615,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 997 } },
-          "tags": ["novel", "chivalry", "disenchantment", "death"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 997
+            }
+          },
+          "tags": [
+            "novel",
+            "chivalry",
+            "disenchantment",
+            "death"
+          ]
         },
         {
           "id": "calderon-life-dream",
@@ -3100,8 +5892,18 @@
           "author": "Calderón de la Barca",
           "period": "early_modern",
           "year": 1635,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7700 } },
-          "tags": ["drama", "dream", "fate", "free will"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 7700
+            }
+          },
+          "tags": [
+            "drama",
+            "dream",
+            "fate",
+            "free will"
+          ]
         },
         {
           "id": "lazarillo-tormes",
@@ -3109,8 +5911,18 @@
           "author": "Anonymous",
           "period": "early_modern",
           "year": 1554,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 35521 } },
-          "tags": ["picaresque", "satire", "poverty", "anticlericalism"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 35521
+            }
+          },
+          "tags": [
+            "picaresque",
+            "satire",
+            "poverty",
+            "anticlericalism"
+          ]
         }
       ]
     },
@@ -3118,31 +5930,23 @@
       "name": "Critical Theory & Continental Philosophy",
       "documents": [
         {
-          "id": "marx-communist-manifesto",
-          "title": "The Communist Manifesto",
-          "author": "Karl Marx & Friedrich Engels",
-          "period": "modern",
-          "year": 1848,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 61 } },
-          "tags": ["politics", "communism", "class struggle", "history"]
-        },
-        {
           "id": "marx-capital-v1",
           "title": "Capital, Volume I",
           "author": "Karl Marx",
           "period": "modern",
           "year": 1867,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 67243 } },
-          "tags": ["economics", "capitalism", "surplus value", "alienation"]
-        },
-        {
-          "id": "freud-interpretation-dreams",
-          "title": "The Interpretation of Dreams",
-          "author": "Sigmund Freud",
-          "period": "modern",
-          "year": 1899,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 66892 } },
-          "tags": ["psychoanalysis", "dreams", "unconscious", "wish fulfillment"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 67243
+            }
+          },
+          "tags": [
+            "economics",
+            "capitalism",
+            "surplus value",
+            "alienation"
+          ]
         },
         {
           "id": "freud-civilization-discontents",
@@ -3150,8 +5954,17 @@
           "author": "Sigmund Freud",
           "period": "modern",
           "year": 1930,
-          "languages": { "en": { "source": "archive" } },
-          "tags": ["psychoanalysis", "civilization", "aggression", "guilt"]
+          "languages": {
+            "en": {
+              "source": "archive"
+            }
+          },
+          "tags": [
+            "psychoanalysis",
+            "civilization",
+            "aggression",
+            "guilt"
+          ]
         },
         {
           "id": "wittgenstein-tractatus",
@@ -3159,8 +5972,18 @@
           "author": "Ludwig Wittgenstein",
           "period": "modern",
           "year": 1921,
-          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5740 } },
-          "tags": ["logic", "language", "limits", "silence"]
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5740
+            }
+          },
+          "tags": [
+            "logic",
+            "language",
+            "limits",
+            "silence"
+          ]
         }
       ]
     }
@@ -3198,6 +6021,29 @@
       "indian_extended": 3,
       "early_modern_philosophy": 5
     },
-    "languages": ["en", "fr", "de", "es", "it", "pt", "nl", "pl", "ru", "ar", "zh", "grc", "la", "he", "sa", "pi", "no", "akk", "fa", "ja", "ang", "non"]
+    "languages": [
+      "en",
+      "fr",
+      "de",
+      "es",
+      "it",
+      "pt",
+      "nl",
+      "pl",
+      "ru",
+      "ar",
+      "zh",
+      "grc",
+      "la",
+      "he",
+      "sa",
+      "pi",
+      "no",
+      "akk",
+      "fa",
+      "ja",
+      "ang",
+      "non"
+    ]
   }
 }

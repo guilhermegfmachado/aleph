@@ -24317,6 +24317,414 @@
       "category": ["art", "esthétique"],
       "definition": "Terrifying grandeur, awe-inspiring power. Vasari on Michelangelo: his art inspires terror. The sublime before Burke named it. Moses' horns, the Last Judgment's Christ. Art that overwhelms, that makes you tremble. Greatness that frightens.",
       "related": ["Sublime", "Pathos"]
+    },
+    {
+      "id": "fugue",
+      "term": "Fuga",
+      "lang": "la",
+      "category": ["musique", "forme"],
+      "definition": "Flight—the voices chase each other. Subject, answer, countersubject, episodes, stretto. Bach's Art of Fugue: the form perfected. Polyphonic unity in diversity. The fugue thinks: logic made audible, time structured by imitation.",
+      "related": ["Contrepoint", "Canon"]
+    },
+    {
+      "id": "counterpoint",
+      "term": "Contrapunctus",
+      "lang": "la",
+      "category": ["musique", "technique"],
+      "definition": "Point against point—note against note. The art of combining melodies. Species counterpoint: pedagogical rules. Bach: freedom within law. Polyphony's grammar. Western music's unique achievement: simultaneous independent voices.",
+      "related": ["Fugue", "Polyphonie"]
+    },
+    {
+      "id": "leitmotiv",
+      "term": "Leitmotiv",
+      "lang": "de",
+      "category": ["musique", "opéra"],
+      "definition": "Leading motive—a musical phrase representing a person, idea, or thing. Wagner perfected it: the Ring's web of motives. Memory in music: the past returns transformed. Film scores inherit the technique. Music that means.",
+      "related": ["Motiv"]
+    },
+    {
+      "id": "sfumato",
+      "term": "Sfumato",
+      "lang": "it",
+      "category": ["art", "technique"],
+      "definition": "Smoky, vanished—Leonardo's technique. Tones blend imperceptibly, edges dissolve. The Mona Lisa's smile: sfumato makes it ambiguous. No lines in nature; sfumato paints the truth. The visible emerging from shadow.",
+      "related": ["Chiaroscuro"]
+    },
+    {
+      "id": "contrapposto",
+      "term": "Contrapposto",
+      "lang": "it",
+      "category": ["art", "sculpture"],
+      "definition": "Counterpose—the body's weight on one leg, the other relaxed. Greek invention, Renaissance revival. Michelangelo's David. The figure lives: asymmetry, tension, implied movement. The posed body escaping the pose.",
+      "related": ["Figura-serpentinata"]
+    },
+    {
+      "id": "figura-serpentinata",
+      "term": "Figura serpentinata",
+      "lang": "it",
+      "category": ["art", "mannerisme"],
+      "definition": "Serpentine figure—the body spiraling, twisting upward like flame. Mannerist ideal: Michelangelo, Giambologna. Viewed from all sides, the form keeps moving. Grace and tension, elegance and strain. The body as arabesque.",
+      "related": ["Contrapposto", "Manierisme"]
+    },
+    {
+      "id": "memento-mori",
+      "term": "Memento mori",
+      "lang": "la",
+      "category": ["art", "philosophie"],
+      "definition": "Remember you must die. The skull in the painting, the hourglass, the wilting flower. Vanitas: all is vanity. Roman triumphs: a slave whispering it to the general. Art's dark reminder: your time is finite. Live accordingly.",
+      "related": ["Vanitas", "Carpe-diem"]
+    },
+    {
+      "id": "carpe-diem",
+      "term": "Carpe diem",
+      "lang": "la",
+      "category": ["poésie", "philosophie"],
+      "definition": "Seize the day. Horace's ode: don't trust tomorrow. Epicurean, not hedonistic—enjoy wisely because life is short. Renaissance lyric, marvell's 'To His Coy Mistress.' Mortality as motive. The present is all we have.",
+      "related": ["Memento-mori"]
+    },
+    {
+      "id": "vanitas",
+      "term": "Vanitas",
+      "lang": "la",
+      "category": ["art", "philosophie"],
+      "definition": "Vanity, emptiness—'Vanitas vanitatum, omnia vanitas.' Dutch still life: skull, candle, mirror, flowers, fruit rotting. Ecclesiastes painted. Wealth, beauty, knowledge—all pass. The genre of disillusion.",
+      "related": ["Memento-mori"]
+    },
+    {
+      "id": "trompe-loeil",
+      "term": "Trompe-l'œil",
+      "lang": "fr",
+      "category": ["art", "technique"],
+      "definition": "Deceive the eye. Painting so realistic it fools: the fly on the frame, the niche in the wall. Zeuxis's grapes that birds pecked. Art as illusion, illusion as art. The pleasure of being fooled, the wonder at skill.",
+      "related": ["Mimesis"]
+    },
+    {
+      "id": "pentimento",
+      "term": "Pentimento",
+      "lang": "it",
+      "category": ["art", "technique"],
+      "definition": "Repentance—the artist's correction showing through. X-rays reveal what the painter changed: a moved arm, a deleted face. The ghost of the first thought. Art's palimpsest: process visible beneath finish.",
+      "related": ["Sfumato"]
+    },
+    {
+      "id": "golden-ratio",
+      "term": "Sectio aurea",
+      "lang": "la",
+      "category": ["mathématiques", "esthétique"],
+      "definition": "The golden section, phi (φ ≈ 1.618). A to B as B is to A+B. Euclid, Fibonacci, the Parthenon (maybe), the nautilus shell (maybe). Divine proportion, the math of beauty. Mystified or real: it haunts aesthetics.",
+      "related": ["Harmonie"]
+    },
+    {
+      "id": "horror-vacui",
+      "term": "Horror vacui",
+      "lang": "la",
+      "category": ["art", "philosophie"],
+      "definition": "Fear of emptiness. Aristotle: nature abhors a vacuum. In art: filling every surface—Islamic ornament, Victorian clutter, Baroque detail. The opposite of minimalism. The urge to decorate, the anxiety of blankness.",
+      "related": ["Ma"]
+    },
+    {
+      "id": "gestalt",
+      "term": "Gestalt",
+      "lang": "de",
+      "category": ["psychologie", "philosophie"],
+      "definition": "Form, shape, configuration. Gestalt psychology: the whole is other than the sum of parts. We perceive patterns, not fragments. Closure, proximity, similarity—the mind organizes. Köhler, Koffka, Wertheimer. Perception creates reality.",
+      "related": ["Perception"]
+    },
+    {
+      "id": "einfuhlung",
+      "term": "Einfühlung",
+      "lang": "de",
+      "category": ["esthétique", "psychologie"],
+      "definition": "Feeling-into—the origin of 'empathy.' Vischer, Lipps: we project our feelings into objects. The willow 'weeps,' the column 'soars.' Aesthetic experience as self-objectification. Later: empathy with persons, not just things.",
+      "related": ["Empathie", "Pathetic-fallacy"]
+    },
+    {
+      "id": "sublime",
+      "term": "Sublime",
+      "lang": "fr",
+      "category": ["esthétique", "philosophie"],
+      "definition": "Longinus: elevation of style. Burke: terror at a safe distance—the infinite, the powerful, the obscure. Kant: the mind's triumph over nature's overwhelm. Not beauty (bounded, harmonious) but the unbounded, the terrifying, the great.",
+      "related": ["Terribilita", "Pathos"]
+    },
+    {
+      "id": "kitsch",
+      "term": "Kitsch",
+      "lang": "de",
+      "category": ["esthétique", "culture"],
+      "definition": "Cheap sentiment, fake art. Broch: kitsch as evil, substituting formula for feeling. Kundera: the denial of shit. Garden gnomes, velvet Elvises, Hallmark wisdom. But also: why do we need the word? What are we defending?",
+      "related": ["Avantgarde"]
+    },
+    {
+      "id": "avantgarde",
+      "term": "Avant-garde",
+      "lang": "fr",
+      "category": ["art", "culture"],
+      "definition": "The vanguard—military term for artistic rebels. Always ahead, always attacking. Modernism's self-image: break with the past, shock the bourgeois. But the avant-garde ages too. Yesterday's revolution is today's museum.",
+      "related": ["Kitsch", "Modernisme"]
+    },
+    {
+      "id": "genius-loci",
+      "term": "Genius loci",
+      "lang": "la",
+      "category": ["architecture", "mythologie"],
+      "definition": "Spirit of the place. Roman: every place has its guardian spirit. In architecture: designing with the site, responding to context. Norberg-Schulz: dwelling requires genius loci. Place is not abstract space; it has character, demands respect.",
+      "related": ["Topos"]
+    },
+    {
+      "id": "enfilade",
+      "term": "Enfilade",
+      "lang": "fr",
+      "category": ["architecture", "baroque"],
+      "definition": "Rooms aligned, doors aligned—you see through the whole sequence. Baroque spatial drama: Versailles's long vistas. Military origin: sweeping fire. Architectural: sweeping sight. Power announced by perspective.",
+      "related": ["Perspective"]
+    },
+    {
+      "id": "baldachin",
+      "term": "Baldacchino",
+      "lang": "it",
+      "category": ["architecture", "liturgie"],
+      "definition": "Canopy over altar or throne. Bernini's bronze giant at St. Peter's. From Baldacco: Baghdad, where the silk came from. Marks sacred space, frames the holy. Portable for processions, fixed for majesty.",
+      "related": ["Tabernacle"]
+    },
+    {
+      "id": "entasis",
+      "term": "Ἔντασις",
+      "lang": "el",
+      "category": ["architecture", "classique"],
+      "definition": "Tension—the slight swelling in Greek columns. Not straight but subtly curved, as if under load. Optical refinement: fights the illusion of concavity. The column breathes, works, lives. Perfection requires correction.",
+      "related": ["Ordre"]
+    },
+    {
+      "id": "rustication",
+      "term": "Rustication",
+      "lang": "en",
+      "category": ["architecture", "renaissance"],
+      "definition": "Rough-cut stone, deliberately rustic. Florentine palazzi: fortress-like bases, elegant upper floors. Pitti, Medici-Riccardi. Power displayed through massiveness. The refined pretending to be raw.",
+      "related": ["Bossage"]
+    },
+    {
+      "id": "hubris",
+      "term": "Ὕβρις",
+      "lang": "el",
+      "category": ["tragédie", "éthique"],
+      "definition": "Pride, arrogance, overreaching. The tragic flaw that invites nemesis. Oedipus solving the riddle, Icarus flying too high. The gods punish hubris; Greek tragedy warns against it. Know thyself; know your limits.",
+      "related": ["Hamartia", "Nemesis"]
+    },
+    {
+      "id": "hamartia",
+      "term": "Ἁμαρτία",
+      "lang": "el",
+      "category": ["tragédie", "éthique"],
+      "definition": "Error, missing the mark. Aristotle's tragic 'flaw'—but not necessarily moral. Oedipus's hamartia: not knowing who he is. The good person undone by one fatal mistake. Also Christian: sin as missing the target.",
+      "related": ["Hubris", "Peripeteia"]
+    },
+    {
+      "id": "peripeteia",
+      "term": "Περιπέτεια",
+      "lang": "el",
+      "category": ["tragédie", "dramaturgie"],
+      "definition": "Reversal—fortune's sudden turn. Aristotle's Poetics: the action swings to its opposite. Oedipus discovering the truth. The messenger meant to comfort brings doom. Drama's hinge, the pivot that changes everything.",
+      "related": ["Anagnorisis", "Hamartia"]
+    },
+    {
+      "id": "anagnorisis",
+      "term": "Ἀναγνώρισις",
+      "lang": "el",
+      "category": ["tragédie", "dramaturgie"],
+      "definition": "Recognition—the moment of discovery. Aristotle: best when joined with peripeteia. Oedipus recognizes himself. The lost child returns. Ignorance becomes knowledge, usually too late. Drama's cognitive climax.",
+      "related": ["Peripeteia", "Catharsis"]
+    },
+    {
+      "id": "nemesis",
+      "term": "Νέμεσις",
+      "lang": "el",
+      "category": ["mythologie", "éthique"],
+      "definition": "Divine retribution, righteous anger. The goddess who punishes hubris. Balance restored: those who rise too high must fall. Not revenge but justice. The Greeks feared excessive good fortune—nemesis watched.",
+      "related": ["Hubris", "Moira"]
+    },
+    {
+      "id": "moira",
+      "term": "Μοῖρα",
+      "lang": "el",
+      "category": ["mythologie", "philosophie"],
+      "definition": "Fate, portion, lot. The three Moirai: Clotho spins, Lachesis measures, Atropos cuts. Even Zeus bows to Moira. Your portion is assigned; struggle is futile but noble. The Greek sense that life is bounded.",
+      "related": ["Nemesis", "Heimarmene"]
+    },
+    {
+      "id": "daimon",
+      "term": "Δαίμων",
+      "lang": "el",
+      "category": ["philosophie", "mythologie"],
+      "definition": "Divine spirit, guiding force. Socrates's daimonion: inner voice that warned him. Not quite god, not quite ghost. Later: demon (demonized). Your daimon is your fate, your genius, your calling. Eudaimonia: good-daimoned.",
+      "related": ["Eudaimonia", "Genius"]
+    },
+    {
+      "id": "physis",
+      "term": "Φύσις",
+      "lang": "el",
+      "category": ["philosophie", "métaphysique"],
+      "definition": "Nature—from 'to grow.' The nature of a thing, its essence. Presocratic question: what is the physis of all things? Aristotle: nature as internal principle of motion. Opposed to nomos (convention). Physics studies physis.",
+      "related": ["Nomos", "Ousia"]
+    },
+    {
+      "id": "nomos",
+      "term": "Νόμος",
+      "lang": "el",
+      "category": ["philosophie", "politique"],
+      "definition": "Law, custom, convention. Opposed to physis: what's natural vs. what's made up. Sophists exploited the distinction. Is justice natural or conventional? Autonomy: self-law. The debate shapes political philosophy.",
+      "related": ["Physis", "Dikē"]
+    },
+    {
+      "id": "polis",
+      "term": "Πόλις",
+      "lang": "el",
+      "category": ["politique", "histoire"],
+      "definition": "The city-state—Athens, Sparta, Corinth. Not just city but political community. Aristotle: man is a political animal, meant for the polis. Small enough for citizens to know each other. Politics, police, polite—all from polis.",
+      "related": ["Politeia", "Agora"]
+    },
+    {
+      "id": "agora",
+      "term": "Ἀγορά",
+      "lang": "el",
+      "category": ["politique", "architecture"],
+      "definition": "The gathering place, the market, the public square. Athens's agora: democracy's stage. Commerce, conversation, philosophy happened there. Socrates argued in the agora. Public space makes public life. The polis needs its agora.",
+      "related": ["Polis", "Forum"]
+    },
+    {
+      "id": "stoa",
+      "term": "Στοά",
+      "lang": "el",
+      "category": ["architecture", "philosophie"],
+      "definition": "Covered walkway, portico. The Stoa Poikile (painted porch) in Athens: where Zeno taught, hence 'Stoicism.' Shelter for philosophers, shoppers, citizens. Architecture enabling thought. The porch that named a philosophy.",
+      "related": ["Stoïcisme", "Agora"]
+    },
+    {
+      "id": "acedia",
+      "term": "Ἀκηδία",
+      "lang": "el",
+      "category": ["théologie", "psychologie"],
+      "definition": "Spiritual torpor, the noonday demon. Desert fathers' affliction: listlessness, inability to pray. Medieval: one of the deadly sins (sloth). Modern: depression's ancestor. The soul that cannot care, the will that cannot will.",
+      "related": ["Mélancolie", "Tristitia"]
+    },
+    {
+      "id": "melancholia",
+      "term": "Μελαγχολία",
+      "lang": "el",
+      "category": ["psychologie", "médecine"],
+      "definition": "Black bile—the humor causing sadness. Hippocratic medicine, Dürer's engraving, Burton's Anatomy. Creative melancholy: the artist's temperament. Saturn's children. Depression's noble ancestor, when sadness had dignity.",
+      "related": ["Acedia", "Humeur"]
+    },
+    {
+      "id": "pharmakon",
+      "term": "Φάρμακον",
+      "lang": "el",
+      "category": ["philosophie", "médecine"],
+      "definition": "Poison and cure—the same word for both. Plato's Phaedrus: writing is a pharmakon. Derrida made much of the ambiguity. The drug that heals kills; the scapegoat (pharmakos) cleanses. Ambivalence at the root of remedy.",
+      "related": ["Katharsis"]
+    },
+    {
+      "id": "clinamen",
+      "term": "Clinamen",
+      "lang": "la",
+      "category": ["philosophie", "physique"],
+      "definition": "The swerve—Lucretius's term for atoms' random deviation. Epicurean physics: without the clinamen, atoms fall parallel forever, no world forms. Free will's atomic basis. Harold Bloom: poetic influence as clinamen. The deviation that creates.",
+      "related": ["Atome"]
+    },
+    {
+      "id": "conatus",
+      "term": "Conatus",
+      "lang": "la",
+      "category": ["philosophie", "métaphysique"],
+      "definition": "Striving, endeavor. Spinoza: every being strives to persist in its being. Leibniz: the monad's inner tendency. Not will but inherent momentum. Life as conatus: the push to exist, to continue, to become.",
+      "related": ["Substance"]
+    },
+    {
+      "id": "differance",
+      "term": "Différance",
+      "lang": "fr",
+      "category": ["philosophie", "déconstruction"],
+      "definition": "Derrida's coinage—differs from and defers. Meaning never arrives; it's always elsewhere, later. The 'a' is silent: you can't hear the difference, only read it. The trace that precedes presence. Deconstruction's keyword.",
+      "related": ["Trace", "Logocentrisme"]
+    },
+    {
+      "id": "jouissance",
+      "term": "Jouissance",
+      "lang": "fr",
+      "category": ["psychanalyse", "philosophie"],
+      "definition": "Enjoyment beyond pleasure, painful bliss. Lacan: jouissance is what the pleasure principle forbids. Orgasmic but also agonizing. The death drive's pleasure. Barthes: the text of jouissance vs. the text of pleasure.",
+      "related": ["Plaisir", "Pulsion"]
+    },
+    {
+      "id": "bricolage",
+      "term": "Bricolage",
+      "lang": "fr",
+      "category": ["anthropologie", "philosophie"],
+      "definition": "Tinkering, making-do with what's at hand. Lévi-Strauss: mythical thought as bricolage vs. engineering. The bricoleur uses whatever tools exist; the engineer designs from scratch. Postmodernism embraced bricolage: recycling, sampling, remix.",
+      "related": ["Mythologie"]
+    },
+    {
+      "id": "palimpsest",
+      "term": "Palimpsestus",
+      "lang": "la",
+      "category": ["littérature", "manuscrit"],
+      "definition": "Scraped again—parchment reused, earlier text showing through. Medieval economy: erase and rewrite. Now recovered by imaging. Metaphor: everything is palimpsest, layered with earlier meanings. The past beneath the present.",
+      "related": ["Pentimento"]
+    },
+    {
+      "id": "heterotopia",
+      "term": "Hétérotopie",
+      "lang": "fr",
+      "category": ["philosophie", "architecture"],
+      "definition": "Other place—Foucault's term. Real places that are elsewhere: the cemetery, the ship, the brothel, the colony. Utopia is nowhere; heterotopia is somewhere that negates all places. Counter-sites, mirrors, inversions.",
+      "related": ["Utopie", "Topos"]
+    },
+    {
+      "id": "panopticon",
+      "term": "Panopticon",
+      "lang": "el",
+      "category": ["philosophie", "architecture"],
+      "definition": "All-seeing—Bentham's prison design. Cells circle a central tower; guards see all, prisoners see nothing. Foucault's Discipline and Punish: the panopticon as model of modern power. Surveillance internalized; we watch ourselves.",
+      "related": ["Surveillance"]
+    },
+    {
+      "id": "simulacrum",
+      "term": "Simulacrum",
+      "lang": "la",
+      "category": ["philosophie", "culture"],
+      "definition": "Image, copy, likeness. Plato: copies of copies, ever further from truth. Baudrillard: simulation precedes reality; there is no original. Disneyland, the Gulf War, hyperreality. The map precedes the territory.",
+      "related": ["Mimesis", "Hyperréalité"]
+    },
+    {
+      "id": "apeiron",
+      "term": "Ἄπειρον",
+      "lang": "el",
+      "category": ["philosophie", "présocratique"],
+      "definition": "The unlimited, the boundless. Anaximander's arche: not water or fire but the indefinite. All things emerge from and return to the apeiron. More abstract than Thales, more mysterious. The infinite source.",
+      "related": ["Arche", "Physis"]
+    },
+    {
+      "id": "arche",
+      "term": "Ἀρχή",
+      "lang": "el",
+      "category": ["philosophie", "présocratique"],
+      "definition": "Beginning, principle, origin, rule. The Presocratic question: what is the arche of all things? Thales: water. Anaximenes: air. Heraclitus: fire. Also: power, government (monarchy, anarchy). First in time and first in authority.",
+      "related": ["Apeiron", "Physis"]
+    },
+    {
+      "id": "henosis",
+      "term": "Ἕνωσις",
+      "lang": "el",
+      "category": ["mystique", "néoplatonisme"],
+      "definition": "Union, oneness. Plotinus: the soul's return to the One. Mystical union, the goal of contemplation. The many becoming one, the individual dissolved. Henosis is rare: Plotinus achieved it four times. The flight of the alone to the Alone.",
+      "related": ["To-hen", "Theosis"]
+    },
+    {
+      "id": "to-hen",
+      "term": "Τὸ Ἕν",
+      "lang": "el",
+      "category": ["philosophie", "néoplatonisme"],
+      "definition": "The One—Plotinus's first principle. Beyond being, beyond thought, beyond language. From the One emanates Nous, from Nous Soul, from Soul matter. The source that never diminishes. Mystical apex, philosophical limit.",
+      "related": ["Henosis", "Nous"]
     }
   ]
 }

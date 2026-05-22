@@ -24725,6 +24725,318 @@
       "category": ["philosophie", "néoplatonisme"],
       "definition": "The One—Plotinus's first principle. Beyond being, beyond thought, beyond language. From the One emanates Nous, from Nous Soul, from Soul matter. The source that never diminishes. Mystical apex, philosophical limit.",
       "related": ["Henosis", "Nous"]
+    },
+    {
+      "id": "toska",
+      "term": "Тоска",
+      "lang": "ru",
+      "category": ["psychologie", "littérature"],
+      "definition": "Russian anguish, spiritual longing. Nabokov: 'No single English word renders all the shades.' Not quite nostalgia, not quite melancholy—a dull ache without object. Chekhov's characters feel toska. The Russian soul's signature ache.",
+      "related": ["Saudade", "Sehnsucht"]
+    },
+    {
+      "id": "poshlost",
+      "term": "Пошлость",
+      "lang": "ru",
+      "category": ["esthétique", "éthique"],
+      "definition": "Vulgar banality, self-satisfied philistinism. Nabokov's crusade: poshlost is worse than evil, it's fake refinement, pretentious emptiness. Gogol saw it everywhere. The smug, the sentimental, the fraudulently deep. Kitsch's Russian cousin.",
+      "related": ["Kitsch", "Banalité"]
+    },
+    {
+      "id": "intelligentsia",
+      "term": "Интеллигенция",
+      "lang": "ru",
+      "category": ["sociologie", "politique"],
+      "definition": "The educated class with a conscience. Russian coinage: not just intellectuals but those who feel responsible for society. Turgenev, Dostoevsky, the revolutionaries. Guilt-ridden, idealistic, ineffective. The class that made and unmade Russia.",
+      "related": ["Nihilisme"]
+    },
+    {
+      "id": "sobornost",
+      "term": "Соборность",
+      "lang": "ru",
+      "category": ["théologie", "philosophie"],
+      "definition": "Spiritual community, conciliarity. Khomiakov's ideal: not Western individualism, not Eastern despotism, but organic unity in the Church. The assembly (sobor) as model. Slavophile dream: Russia's special path. Orthodox ecclesiology's gift.",
+      "related": ["Communitas"]
+    },
+    {
+      "id": "bytie",
+      "term": "Бытие",
+      "lang": "ru",
+      "category": ["philosophie", "ontologie"],
+      "definition": "Being, existence. Russian philosophy's central term. Heidegger's Sein translated. But also Genesis in Church Slavonic. The question of what it means to be. Berdyaev, Shestov, Frank wrestled with bytie. Russian existentialism's ground.",
+      "related": ["Dasein", "Ousia"]
+    },
+    {
+      "id": "chutzpah",
+      "term": "חוצפה",
+      "lang": "he",
+      "category": ["éthique", "culture"],
+      "definition": "Audacity, nerve, gall. The man who kills his parents then pleads for mercy as an orphan—that's chutzpah. Pejorative in Yiddish, ambivalent in Israeli culture. Sometimes admired: boldness against authority. The audacity to argue with God.",
+      "related": ["Hubris"]
+    },
+    {
+      "id": "mensch",
+      "term": "מענטש",
+      "lang": "yi",
+      "category": ["éthique", "culture"],
+      "definition": "A human being—but more: a decent person, upright, compassionate. 'Be a mensch.' The Yiddish ideal: not a saint, just reliably good. Opposite of shmuck or nudnik. Ethics distilled: act like a mensch.",
+      "related": ["Junzi", "Arete"]
+    },
+    {
+      "id": "tikkun-olam",
+      "term": "תיקון עולם",
+      "lang": "he",
+      "category": ["théologie", "éthique"],
+      "definition": "Repair of the world. Lurianic Kabbalah: divine sparks scattered, we gather them. Now: social justice, making the world better. Every mitzvah repairs. The cosmos is broken; we are the repairers. Jewish optimism: fixing is possible.",
+      "related": ["Mitzvah"]
+    },
+    {
+      "id": "mitzvah",
+      "term": "מצווה",
+      "lang": "he",
+      "category": ["religion", "éthique"],
+      "definition": "Commandment, good deed. 613 in the Torah. Not optional: obligation. But also: the joy of doing good. Bar mitzvah: son of commandment. The structure of Jewish life: mitzvot create the world we should live in.",
+      "related": ["Tikkun-olam", "Halakha"]
+    },
+    {
+      "id": "halakha",
+      "term": "הלכה",
+      "lang": "he",
+      "category": ["religion", "droit"],
+      "definition": "The way, Jewish law. From 'walk': halakha is how to walk through life. Talmudic debates, rabbinic rulings, codes. Not just ritual: civil law, ethics, daily life. The path one treads. Judaism lived.",
+      "related": ["Mitzvah", "Talmud"]
+    },
+    {
+      "id": "tzimtzum",
+      "term": "צמצום",
+      "lang": "he",
+      "category": ["kabbale", "théologie"],
+      "definition": "Contraction, withdrawal. Luria: God contracted to make room for creation. The infinite withdrew so the finite could exist. Divine absence as gift. Atheism's theological precondition? The void that enables.",
+      "related": ["Kenosis", "Tikkun-olam"]
+    },
+    {
+      "id": "devekut",
+      "term": "דבקות",
+      "lang": "he",
+      "category": ["kabbale", "mystique"],
+      "definition": "Cleaving, communion with God. Hasidic goal: constant attachment to the divine. Not mystic union but intimate relationship. In prayer, in daily life, in joy. The soul clings. Presence maintained.",
+      "related": ["Henosis", "Theosis"]
+    },
+    {
+      "id": "ahimsa",
+      "term": "अहिंसा",
+      "lang": "sa",
+      "category": ["éthique", "hindouisme"],
+      "definition": "Non-violence, non-harm. Jain absolute; Hindu and Buddhist principle. Gandhi's satyagraha. Not just refraining from killing but positive love. Ahimsa paramo dharma: non-violence is the highest duty. The ethic that changes history.",
+      "related": ["Satyagraha", "Karuna"]
+    },
+    {
+      "id": "satyagraha",
+      "term": "सत्याग्रह",
+      "lang": "sa",
+      "category": ["politique", "éthique"],
+      "definition": "Truth-force, soul-force. Gandhi's invention: nonviolent resistance. Not passive but active suffering. The Salt March, civil disobedience. Satya (truth) + agraha (insistence). The weapon that defeated an empire.",
+      "related": ["Ahimsa"]
+    },
+    {
+      "id": "bhakti",
+      "term": "भक्ति",
+      "lang": "sa",
+      "category": ["hindouisme", "religion"],
+      "definition": "Devotion, loving worship. The bhakti movement: saints singing to Krishna, Shiva, the Goddess. Not Vedic ritual but personal love. Mirabai, Kabir, Tukaram. The heart's path to liberation. God loved, not just known.",
+      "related": ["Agape", "Eros"]
+    },
+    {
+      "id": "rasa",
+      "term": "रस",
+      "lang": "sa",
+      "category": ["esthétique", "théâtre"],
+      "definition": "Flavor, essence, aesthetic emotion. Indian aesthetics: art evokes rasas. Nine: love, mirth, wonder, peace, fury, terror, disgust, sorrow, heroism. Bharata's Natyashastra. The audience tastes the rasa. Emotion universalized, purified.",
+      "related": ["Catharsis", "Pathos"]
+    },
+    {
+      "id": "darshan",
+      "term": "दर्शन",
+      "lang": "sa",
+      "category": ["hindouisme", "philosophie"],
+      "definition": "Seeing, vision—especially of the divine. You go to the temple for darshan: to see and be seen by the deity. The god's gaze blesses. Philosophy is also darshan: ways of seeing reality. Sight as communion.",
+      "related": ["Theoria", "Epiphanie"]
+    },
+    {
+      "id": "avatar",
+      "term": "अवतार",
+      "lang": "sa",
+      "category": ["hindouisme", "mythologie"],
+      "definition": "Descent—God descending into the world. Vishnu's ten avatars: fish, tortoise, boar, Narasimha, Vamana, Rama, Krishna, Buddha, Kalki. Divine intervention. Now: your digital persona. The ancient made current.",
+      "related": ["Incarnation"]
+    },
+    {
+      "id": "prana",
+      "term": "प्राण",
+      "lang": "sa",
+      "category": ["yoga", "médecine"],
+      "definition": "Breath, life-force, vital energy. Pranayama: breath control. Prana flows in nadis. Chinese qi's Indian cousin. The breath that animates, that connects body and cosmos. Yoga's first lesson: breathe consciously.",
+      "related": ["Qi", "Pneuma"]
+    },
+    {
+      "id": "chakra",
+      "term": "चक्र",
+      "lang": "sa",
+      "category": ["yoga", "tantra"],
+      "definition": "Wheel, energy center. Seven chakras along the spine: root to crown. Kundalini rises through them. Colors, sounds, elements assigned. Western appropriation: crystals, auras. The subtle body mapped.",
+      "related": ["Kundalini", "Prana"]
+    },
+    {
+      "id": "tantra",
+      "term": "तन्त्र",
+      "lang": "sa",
+      "category": ["hindouisme", "bouddhisme"],
+      "definition": "Loom, technique, esoteric practice. Tantra: using desire, body, world for liberation. Not renunciation but transformation. Mantra, mandala, mudra. Left-hand path: ritual transgression. Western fantasy: tantric sex. The reality: complex, dangerous, profound.",
+      "related": ["Mantra", "Mandala"]
+    },
+    {
+      "id": "mantra",
+      "term": "मन्त्र",
+      "lang": "sa",
+      "category": ["hindouisme", "bouddhisme"],
+      "definition": "Sacred utterance, sound-formula. Om mani padme hum. Gayatri mantra. Repetition transforms: japa. The sound is the deity; to chant is to invoke. Protection, meditation, magic. The word that works.",
+      "related": ["Om", "Tantra"]
+    },
+    {
+      "id": "mandala",
+      "term": "मण्डल",
+      "lang": "sa",
+      "category": ["art", "bouddhisme"],
+      "definition": "Circle, sacred diagram. Tibetan sand mandalas: the cosmos in colored sand, then swept away. Jung: mandalas in patients' dreams—wholeness symbolized. The center holds. Geometry as meditation.",
+      "related": ["Yantra", "Tantra"]
+    },
+    {
+      "id": "lebenswelt",
+      "term": "Lebenswelt",
+      "lang": "de",
+      "category": ["phénoménologie", "philosophie"],
+      "definition": "Life-world—Husserl's term for the pre-theoretical world of everyday experience. Before science abstracts, we live in the Lebenswelt. Phenomenology returns to it. The ground science forgets. The world as lived.",
+      "related": ["Dasein", "Phenomenologie"]
+    },
+    {
+      "id": "dasein",
+      "term": "Dasein",
+      "lang": "de",
+      "category": ["phénoménologie", "existentialisme"],
+      "definition": "Being-there—Heidegger's term for human existence. Not a subject, not consciousness: the being for whom Being is a question. Dasein is always already in the world, thrown, falling, projecting. Existence analyzed.",
+      "related": ["Sein", "Geworfenheit"]
+    },
+    {
+      "id": "geworfenheit",
+      "term": "Geworfenheit",
+      "lang": "de",
+      "category": ["existentialisme", "philosophie"],
+      "definition": "Thrownness—Heidegger's term. We don't choose our birth, our culture, our body. We are thrown into existence. Facticity: the given. Starting from the middle, with no choice about the beginning.",
+      "related": ["Dasein", "Faktizität"]
+    },
+    {
+      "id": "sorge",
+      "term": "Sorge",
+      "lang": "de",
+      "category": ["existentialisme", "philosophie"],
+      "definition": "Care, concern. Heidegger: care is Dasein's fundamental structure. We care about things, about ourselves, about Being. Ahead-of-itself, being-already-in, being-alongside. The unity of existence. We are our concern.",
+      "related": ["Dasein", "Angst"]
+    },
+    {
+      "id": "mitsein",
+      "term": "Mitsein",
+      "lang": "de",
+      "category": ["phénoménologie", "existentialisme"],
+      "definition": "Being-with—Heidegger's term for our fundamental being-with-others. We are never alone; even solitude presupposes others. The social is primordial. But also: das Man—the 'they' that we fall into. With and yet lost.",
+      "related": ["Dasein", "Das-Man"]
+    },
+    {
+      "id": "aufhebung",
+      "term": "Aufhebung",
+      "lang": "de",
+      "category": ["philosophie", "dialectique"],
+      "definition": "Sublation—Hegel's untranslatable term. Three meanings: cancel, preserve, elevate. Thesis and antithesis are aufgehoben in synthesis: negated yet preserved at a higher level. Dialectic's engine. The word that does the work.",
+      "related": ["Dialectique", "Synthese"]
+    },
+    {
+      "id": "entfremdung",
+      "term": "Entfremdung",
+      "lang": "de",
+      "category": ["philosophie", "sociologie"],
+      "definition": "Alienation, estrangement. Hegel: spirit alienated in objectivity. Marx: the worker alienated from product, process, species-being, fellow workers. Modernity's disease: we don't recognize ourselves in our world.",
+      "related": ["Verfremdung", "Reification"]
+    },
+    {
+      "id": "verfremdung",
+      "term": "Verfremdungseffekt",
+      "lang": "de",
+      "category": ["théâtre", "esthétique"],
+      "definition": "Alienation effect, estrangement effect. Brecht's technique: break illusion, remind the audience it's watching a play. Placards, songs, direct address. Don't feel—think. Theater as pedagogy, not catharsis.",
+      "related": ["Entfremdung", "Distanciation"]
+    },
+    {
+      "id": "gesamtkunstwerk",
+      "term": "Gesamtkunstwerk",
+      "lang": "de",
+      "category": ["art", "opéra"],
+      "definition": "Total work of art—Wagner's ideal. Opera uniting music, drama, poetry, visual spectacle. Bayreuth: the temple. All arts synthesized, the audience immersed. The dream of unity. Modernism's other: fragmentation.",
+      "related": ["Synthese"]
+    },
+    {
+      "id": "ursprung",
+      "term": "Ursprung",
+      "lang": "de",
+      "category": ["philosophie", "esthétique"],
+      "definition": "Origin, primal leap. Benjamin: the origin is not the beginning but the eddy in the stream of becoming. Art's Ursprung is revealed in criticism. Not historical source but essential emergence. The original that keeps originating.",
+      "related": ["Arche"]
+    },
+    {
+      "id": "stimmung",
+      "term": "Stimmung",
+      "lang": "de",
+      "category": ["philosophie", "esthétique"],
+      "definition": "Mood, atmosphere, attunement. Heidegger: Stimmung discloses the world. Angst, boredom, joy—each reveals differently. Art creates Stimmungen. Not subjective feeling but how being appears. The world's tone.",
+      "related": ["Angst", "Atmosphère"]
+    },
+    {
+      "id": "ennui",
+      "term": "Ennui",
+      "lang": "fr",
+      "category": ["psychologie", "littérature"],
+      "definition": "Boredom, world-weariness—but more refined than English 'boredom.' Baudelaire's spleen, Flaubert's mal. The French sickness: too much civilization, too little meaning. The sophisticated form of despair.",
+      "related": ["Acedia", "Spleen"]
+    },
+    {
+      "id": "flaneur",
+      "term": "Flâneur",
+      "lang": "fr",
+      "category": ["culture", "modernité"],
+      "definition": "The stroller, the urban observer. Baudelaire, Benjamin: the flâneur walks the arcades, reads the city. Anonymous in the crowd, he sees all. Modernity's detective. Now impossible: no one strolls; everyone hurries.",
+      "related": ["Modernité"]
+    },
+    {
+      "id": "ecriture",
+      "term": "Écriture",
+      "lang": "fr",
+      "category": ["littérature", "philosophie"],
+      "definition": "Writing—but for Barthes, Derrida, more than that. The materiality of text, the trace, the différance. Écriture vs parole. Literature as écriture: not expression but production. The text writes itself.",
+      "related": ["Différance", "Trace"]
+    },
+    {
+      "id": "regard",
+      "term": "Regard",
+      "lang": "fr",
+      "category": ["philosophie", "psychanalyse"],
+      "definition": "The gaze, the look. Sartre: under the Other's gaze, I become an object. Lacan: the gaze as objet petit a. Foucault: the medical gaze, the disciplinary gaze. Power looks. We are seen before we see.",
+      "related": ["Objet-a", "Panopticon"]
+    },
+    {
+      "id": "alterite",
+      "term": "Altérité",
+      "lang": "fr",
+      "category": ["philosophie", "éthique"],
+      "definition": "Otherness, alterity. Levinas: the face of the Other commands me before I choose. Ethics as first philosophy. Not sameness, not totality: the Other's absolute difference. Responsibility precedes freedom.",
+      "related": ["Visage", "Éthique"]
     }
   ]
 }

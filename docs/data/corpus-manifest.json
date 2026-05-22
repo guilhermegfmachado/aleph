@@ -2373,6 +2373,796 @@
           "tags": ["essays", "practical wisdom", "aphorisms", "science"]
         }
       ]
+    },
+    "german_idealism": {
+      "name": "German Idealism",
+      "documents": [
+        {
+          "id": "kant-prolegomena",
+          "title": "Prolegomena to Any Future Metaphysics",
+          "author": "Immanuel Kant",
+          "period": "modern",
+          "year": 1783,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 52821 } },
+          "tags": ["metaphysics", "critique", "epistemology", "a priori"]
+        },
+        {
+          "id": "fichte-science-knowledge",
+          "title": "The Science of Knowledge",
+          "author": "Johann Gottlieb Fichte",
+          "period": "modern",
+          "year": 1794,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["idealism", "ego", "self-positing", "transcendental"]
+        },
+        {
+          "id": "schelling-transcendental-idealism",
+          "title": "System of Transcendental Idealism",
+          "author": "F.W.J. Schelling",
+          "period": "modern",
+          "year": 1800,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["idealism", "nature", "art", "absolute"]
+        },
+        {
+          "id": "schopenhauer-world-will",
+          "title": "The World as Will and Representation",
+          "author": "Arthur Schopenhauer",
+          "period": "modern",
+          "year": 1818,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 38427 } },
+          "tags": ["pessimism", "will", "representation", "suffering"]
+        }
+      ]
+    },
+    "existentialism": {
+      "name": "Existentialist Texts",
+      "documents": [
+        {
+          "id": "kierkegaard-either-or",
+          "title": "Either/Or",
+          "author": "Søren Kierkegaard",
+          "period": "modern",
+          "year": 1843,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["existentialism", "aesthetics", "ethics", "choice"]
+        },
+        {
+          "id": "kierkegaard-fear-trembling",
+          "title": "Fear and Trembling",
+          "author": "Søren Kierkegaard",
+          "period": "modern",
+          "year": 1843,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 61681 } },
+          "tags": ["existentialism", "faith", "abraham", "leap"]
+        },
+        {
+          "id": "nietzsche-zarathustra",
+          "title": "Thus Spoke Zarathustra",
+          "author": "Friedrich Nietzsche",
+          "period": "modern",
+          "year": 1883,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1998 } },
+          "tags": ["philosophy", "übermensch", "eternal recurrence", "nihilism"]
+        },
+        {
+          "id": "nietzsche-beyond-good-evil",
+          "title": "Beyond Good and Evil",
+          "author": "Friedrich Nietzsche",
+          "period": "modern",
+          "year": 1886,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4363 } },
+          "tags": ["philosophy", "morality", "will to power", "perspectivism"]
+        },
+        {
+          "id": "nietzsche-genealogy-morals",
+          "title": "On the Genealogy of Morals",
+          "author": "Friedrich Nietzsche",
+          "period": "modern",
+          "year": 1887,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 52319 } },
+          "tags": ["philosophy", "morality", "ressentiment", "guilt"]
+        },
+        {
+          "id": "dostoevsky-notes-underground",
+          "title": "Notes from Underground",
+          "author": "Fyodor Dostoevsky",
+          "period": "modern",
+          "year": 1864,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 600 } },
+          "tags": ["existentialism", "psychology", "freedom", "underground man"]
+        }
+      ]
+    },
+    "russian_literature": {
+      "name": "Russian Literature",
+      "documents": [
+        {
+          "id": "dostoevsky-brothers-karamazov",
+          "title": "The Brothers Karamazov",
+          "author": "Fyodor Dostoevsky",
+          "period": "modern",
+          "year": 1880,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 28054 } },
+          "tags": ["novel", "theodicy", "faith", "psychology", "grand inquisitor"]
+        },
+        {
+          "id": "dostoevsky-crime-punishment",
+          "title": "Crime and Punishment",
+          "author": "Fyodor Dostoevsky",
+          "period": "modern",
+          "year": 1866,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2554 } },
+          "tags": ["novel", "guilt", "redemption", "psychology"]
+        },
+        {
+          "id": "dostoevsky-idiot",
+          "title": "The Idiot",
+          "author": "Fyodor Dostoevsky",
+          "period": "modern",
+          "year": 1869,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2638 } },
+          "tags": ["novel", "innocence", "epilepsy", "christ figure"]
+        },
+        {
+          "id": "dostoevsky-demons",
+          "title": "Demons",
+          "author": "Fyodor Dostoevsky",
+          "period": "modern",
+          "year": 1872,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 8117 } },
+          "tags": ["novel", "nihilism", "revolution", "terrorism"]
+        },
+        {
+          "id": "tolstoy-war-peace",
+          "title": "War and Peace",
+          "author": "Leo Tolstoy",
+          "period": "modern",
+          "year": 1869,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2600 } },
+          "tags": ["epic", "napoleon", "history", "philosophy"]
+        },
+        {
+          "id": "tolstoy-anna-karenina",
+          "title": "Anna Karenina",
+          "author": "Leo Tolstoy",
+          "period": "modern",
+          "year": 1877,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1399 } },
+          "tags": ["novel", "adultery", "society", "faith"]
+        },
+        {
+          "id": "tolstoy-death-ivan-ilyich",
+          "title": "The Death of Ivan Ilyich",
+          "author": "Leo Tolstoy",
+          "period": "modern",
+          "year": 1886,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 43424 } },
+          "tags": ["novella", "death", "meaning", "authentic life"]
+        },
+        {
+          "id": "gogol-dead-souls",
+          "title": "Dead Souls",
+          "author": "Nikolai Gogol",
+          "period": "modern",
+          "year": 1842,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1081 } },
+          "tags": ["novel", "satire", "russia", "chichikov"]
+        },
+        {
+          "id": "turgenev-fathers-sons",
+          "title": "Fathers and Sons",
+          "author": "Ivan Turgenev",
+          "period": "modern",
+          "year": 1862,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 30723 } },
+          "tags": ["novel", "nihilism", "generations", "bazarov"]
+        },
+        {
+          "id": "chekhov-stories",
+          "title": "Selected Stories",
+          "author": "Anton Chekhov",
+          "period": "modern",
+          "year": 1898,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1732 } },
+          "tags": ["stories", "realism", "humanity", "russia"]
+        },
+        {
+          "id": "pushkin-eugene-onegin",
+          "title": "Eugene Onegin",
+          "author": "Alexander Pushkin",
+          "period": "modern",
+          "year": 1833,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 23997 } },
+          "tags": ["verse novel", "romanticism", "love", "superfluous man"]
+        }
+      ]
+    },
+    "modernist_literature": {
+      "name": "Modernist Literature",
+      "documents": [
+        {
+          "id": "joyce-ulysses",
+          "title": "Ulysses",
+          "author": "James Joyce",
+          "period": "modern",
+          "year": 1922,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4300 } },
+          "tags": ["modernism", "stream of consciousness", "dublin", "odyssey"]
+        },
+        {
+          "id": "joyce-portrait-artist",
+          "title": "A Portrait of the Artist as a Young Man",
+          "author": "James Joyce",
+          "period": "modern",
+          "year": 1916,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4217 } },
+          "tags": ["modernism", "künstlerroman", "ireland", "epiphany"]
+        },
+        {
+          "id": "joyce-dubliners",
+          "title": "Dubliners",
+          "author": "James Joyce",
+          "period": "modern",
+          "year": 1914,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2814 } },
+          "tags": ["stories", "paralysis", "dublin", "epiphany"]
+        },
+        {
+          "id": "kafka-metamorphosis",
+          "title": "The Metamorphosis",
+          "author": "Franz Kafka",
+          "period": "modern",
+          "year": 1915,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5200 } },
+          "tags": ["modernism", "alienation", "transformation", "absurd"]
+        },
+        {
+          "id": "kafka-trial",
+          "title": "The Trial",
+          "author": "Franz Kafka",
+          "period": "modern",
+          "year": 1925,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7849 } },
+          "tags": ["modernism", "law", "guilt", "bureaucracy"]
+        },
+        {
+          "id": "kafka-castle",
+          "title": "The Castle",
+          "author": "Franz Kafka",
+          "period": "modern",
+          "year": 1926,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["modernism", "bureaucracy", "alienation", "labyrinth"]
+        },
+        {
+          "id": "woolf-mrs-dalloway",
+          "title": "Mrs Dalloway",
+          "author": "Virginia Woolf",
+          "period": "modern",
+          "year": 1925,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["modernism", "stream of consciousness", "time", "party"]
+        },
+        {
+          "id": "woolf-lighthouse",
+          "title": "To the Lighthouse",
+          "author": "Virginia Woolf",
+          "period": "modern",
+          "year": 1927,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["modernism", "time", "art", "family"]
+        },
+        {
+          "id": "proust-swanns-way",
+          "title": "Swann's Way",
+          "author": "Marcel Proust",
+          "period": "modern",
+          "year": 1913,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7178 } },
+          "tags": ["modernism", "memory", "time", "madeleine"]
+        },
+        {
+          "id": "mann-magic-mountain",
+          "title": "The Magic Mountain",
+          "author": "Thomas Mann",
+          "period": "modern",
+          "year": 1924,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["modernism", "bildungsroman", "sanatorium", "time"]
+        },
+        {
+          "id": "mann-death-venice",
+          "title": "Death in Venice",
+          "author": "Thomas Mann",
+          "period": "modern",
+          "year": 1912,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 12108 } },
+          "tags": ["novella", "beauty", "death", "apollonian dionysian"]
+        },
+        {
+          "id": "hesse-steppenwolf",
+          "title": "Steppenwolf",
+          "author": "Hermann Hesse",
+          "period": "modern",
+          "year": 1927,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["modernism", "alienation", "duality", "magic theater"]
+        },
+        {
+          "id": "hesse-siddhartha",
+          "title": "Siddhartha",
+          "author": "Hermann Hesse",
+          "period": "modern",
+          "year": 1922,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2500 } },
+          "tags": ["spiritual", "buddhism", "self-discovery", "river"]
+        }
+      ]
+    },
+    "american_literature": {
+      "name": "American Literature",
+      "documents": [
+        {
+          "id": "melville-moby-dick",
+          "title": "Moby-Dick",
+          "author": "Herman Melville",
+          "period": "modern",
+          "year": 1851,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2701 } },
+          "tags": ["novel", "whale", "obsession", "maritime"]
+        },
+        {
+          "id": "melville-bartleby",
+          "title": "Bartleby, the Scrivener",
+          "author": "Herman Melville",
+          "period": "modern",
+          "year": 1853,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 11231 } },
+          "tags": ["story", "refusal", "wall street", "prefer not to"]
+        },
+        {
+          "id": "hawthorne-scarlet-letter",
+          "title": "The Scarlet Letter",
+          "author": "Nathaniel Hawthorne",
+          "period": "modern",
+          "year": 1850,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 25344 } },
+          "tags": ["novel", "puritanism", "sin", "guilt"]
+        },
+        {
+          "id": "poe-tales",
+          "title": "Tales of Mystery and Imagination",
+          "author": "Edgar Allan Poe",
+          "period": "modern",
+          "year": 1845,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2147 } },
+          "tags": ["gothic", "horror", "detective", "macabre"]
+        },
+        {
+          "id": "twain-huckleberry-finn",
+          "title": "Adventures of Huckleberry Finn",
+          "author": "Mark Twain",
+          "period": "modern",
+          "year": 1884,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 76 } },
+          "tags": ["novel", "mississippi", "slavery", "vernacular"]
+        },
+        {
+          "id": "whitman-leaves-grass",
+          "title": "Leaves of Grass",
+          "author": "Walt Whitman",
+          "period": "modern",
+          "year": 1855,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 1322 } },
+          "tags": ["poetry", "democracy", "body", "america"]
+        },
+        {
+          "id": "dickinson-poems",
+          "title": "Poems",
+          "author": "Emily Dickinson",
+          "period": "modern",
+          "year": 1890,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 12242 } },
+          "tags": ["poetry", "death", "immortality", "slant"]
+        },
+        {
+          "id": "emerson-essays",
+          "title": "Essays: First Series",
+          "author": "Ralph Waldo Emerson",
+          "period": "modern",
+          "year": 1841,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2944 } },
+          "tags": ["transcendentalism", "self-reliance", "nature", "over-soul"]
+        },
+        {
+          "id": "thoreau-walden",
+          "title": "Walden",
+          "author": "Henry David Thoreau",
+          "period": "modern",
+          "year": 1854,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 205 } },
+          "tags": ["transcendentalism", "simplicity", "nature", "solitude"]
+        },
+        {
+          "id": "thoreau-civil-disobedience",
+          "title": "Civil Disobedience",
+          "author": "Henry David Thoreau",
+          "period": "modern",
+          "year": 1849,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 71 } },
+          "tags": ["essay", "resistance", "conscience", "government"]
+        },
+        {
+          "id": "james-portrait-lady",
+          "title": "The Portrait of a Lady",
+          "author": "Henry James",
+          "period": "modern",
+          "year": 1881,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2833 } },
+          "tags": ["novel", "americans abroad", "freedom", "consciousness"]
+        },
+        {
+          "id": "james-turn-screw",
+          "title": "The Turn of the Screw",
+          "author": "Henry James",
+          "period": "modern",
+          "year": 1898,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 209 } },
+          "tags": ["novella", "gothic", "ambiguity", "ghosts"]
+        }
+      ]
+    },
+    "french_poetry": {
+      "name": "French Poetry",
+      "documents": [
+        {
+          "id": "baudelaire-fleurs-mal",
+          "title": "Les Fleurs du mal",
+          "author": "Charles Baudelaire",
+          "period": "modern",
+          "year": 1857,
+          "languages": {
+            "fr": { "source": "wikisource" },
+            "en": { "source": "gutenberg", "gutenberg_id": 6099 }
+          },
+          "tags": ["poetry", "spleen", "modernity", "decadence"]
+        },
+        {
+          "id": "rimbaud-illuminations",
+          "title": "Illuminations",
+          "author": "Arthur Rimbaud",
+          "period": "modern",
+          "year": 1886,
+          "languages": {
+            "fr": { "source": "wikisource" },
+            "en": { "source": "gutenberg", "gutenberg_id": 60108 }
+          },
+          "tags": ["poetry", "visionary", "symbolism", "prose poetry"]
+        },
+        {
+          "id": "rimbaud-season-hell",
+          "title": "A Season in Hell",
+          "author": "Arthur Rimbaud",
+          "period": "modern",
+          "year": 1873,
+          "languages": {
+            "fr": { "source": "wikisource" },
+            "en": { "source": "gutenberg", "gutenberg_id": 60108 }
+          },
+          "tags": ["poetry", "confession", "alchemy", "damnation"]
+        },
+        {
+          "id": "mallarme-poems",
+          "title": "Poésies",
+          "author": "Stéphane Mallarmé",
+          "period": "modern",
+          "year": 1887,
+          "languages": {
+            "fr": { "source": "wikisource" },
+            "en": { "source": "archive" }
+          },
+          "tags": ["poetry", "symbolism", "hermeticism", "pure poetry"]
+        },
+        {
+          "id": "verlaine-poems",
+          "title": "Selected Poems",
+          "author": "Paul Verlaine",
+          "period": "modern",
+          "year": 1884,
+          "languages": {
+            "fr": { "source": "wikisource" },
+            "en": { "source": "gutenberg", "gutenberg_id": 36098 }
+          },
+          "tags": ["poetry", "music", "symbolism", "melancholy"]
+        }
+      ]
+    },
+    "german_poetry": {
+      "name": "German Poetry & Romanticism",
+      "documents": [
+        {
+          "id": "goethe-faust",
+          "title": "Faust",
+          "author": "Johann Wolfgang von Goethe",
+          "period": "modern",
+          "year": 1832,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 14591 } },
+          "tags": ["drama", "devil", "striving", "salvation"]
+        },
+        {
+          "id": "goethe-sorrows-werther",
+          "title": "The Sorrows of Young Werther",
+          "author": "Johann Wolfgang von Goethe",
+          "period": "modern",
+          "year": 1774,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2527 } },
+          "tags": ["novel", "sensibility", "suicide", "sturm und drang"]
+        },
+        {
+          "id": "holderlin-poems",
+          "title": "Selected Poems",
+          "author": "Friedrich Hölderlin",
+          "period": "modern",
+          "year": 1826,
+          "languages": {
+            "de": { "source": "gutenberg-de" },
+            "en": { "source": "archive" }
+          },
+          "tags": ["poetry", "greece", "gods", "madness"]
+        },
+        {
+          "id": "novalis-hymns-night",
+          "title": "Hymns to the Night",
+          "author": "Novalis",
+          "period": "modern",
+          "year": 1800,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5636 } },
+          "tags": ["poetry", "romanticism", "death", "night"]
+        },
+        {
+          "id": "rilke-duino-elegies",
+          "title": "Duino Elegies",
+          "author": "Rainer Maria Rilke",
+          "period": "modern",
+          "year": 1923,
+          "languages": {
+            "de": { "source": "gutenberg-de" },
+            "en": { "source": "archive" }
+          },
+          "tags": ["poetry", "angels", "transformation", "interiority"]
+        },
+        {
+          "id": "rilke-sonnets-orpheus",
+          "title": "Sonnets to Orpheus",
+          "author": "Rainer Maria Rilke",
+          "period": "modern",
+          "year": 1923,
+          "languages": {
+            "de": { "source": "gutenberg-de" },
+            "en": { "source": "archive" }
+          },
+          "tags": ["poetry", "orpheus", "transformation", "praise"]
+        }
+      ]
+    },
+    "theosophical_mystical": {
+      "name": "Theosophical & Mystical Texts",
+      "documents": [
+        {
+          "id": "bohme-aurora",
+          "title": "Aurora",
+          "author": "Jakob Böhme",
+          "period": "early_modern",
+          "year": 1612,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["theosophy", "mysticism", "ungrund", "alchemy"]
+        },
+        {
+          "id": "swedenborg-heaven-hell",
+          "title": "Heaven and Hell",
+          "author": "Emanuel Swedenborg",
+          "period": "early_modern",
+          "year": 1758,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 36733 } },
+          "tags": ["visions", "correspondences", "afterlife", "angels"]
+        },
+        {
+          "id": "eckhart-sermons",
+          "title": "Meister Eckhart's Sermons",
+          "author": "Meister Eckhart",
+          "period": "medieval",
+          "year": 1300,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["mysticism", "detachment", "ground of soul", "godhead"]
+        },
+        {
+          "id": "cloud-unknowing",
+          "title": "The Cloud of Unknowing",
+          "author": "Anonymous",
+          "period": "medieval",
+          "year": 1375,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 21600 } },
+          "tags": ["mysticism", "apophatic", "contemplation", "love"]
+        },
+        {
+          "id": "julian-revelations",
+          "title": "Revelations of Divine Love",
+          "author": "Julian of Norwich",
+          "period": "medieval",
+          "year": 1395,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 52958 } },
+          "tags": ["mysticism", "visions", "optimism", "mother god"]
+        },
+        {
+          "id": "john-cross-dark-night",
+          "title": "Dark Night of the Soul",
+          "author": "John of the Cross",
+          "period": "early_modern",
+          "year": 1584,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 21947 } },
+          "tags": ["mysticism", "night", "purgation", "union"]
+        },
+        {
+          "id": "therese-interior-castle",
+          "title": "The Interior Castle",
+          "author": "Teresa of Ávila",
+          "period": "early_modern",
+          "year": 1577,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 36093 } },
+          "tags": ["mysticism", "mansions", "prayer", "spiritual marriage"]
+        }
+      ]
+    },
+    "scandinavian_drama": {
+      "name": "Scandinavian Drama",
+      "documents": [
+        {
+          "id": "ibsen-dolls-house",
+          "title": "A Doll's House",
+          "author": "Henrik Ibsen",
+          "period": "modern",
+          "year": 1879,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 2542 } },
+          "tags": ["drama", "feminism", "marriage", "freedom"]
+        },
+        {
+          "id": "ibsen-hedda-gabler",
+          "title": "Hedda Gabler",
+          "author": "Henrik Ibsen",
+          "period": "modern",
+          "year": 1891,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 4093 } },
+          "tags": ["drama", "psychology", "suicide", "boredom"]
+        },
+        {
+          "id": "ibsen-peer-gynt",
+          "title": "Peer Gynt",
+          "author": "Henrik Ibsen",
+          "period": "modern",
+          "year": 1867,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5765 } },
+          "tags": ["drama", "fantasy", "identity", "trolls"]
+        },
+        {
+          "id": "ibsen-ghosts",
+          "title": "Ghosts",
+          "author": "Henrik Ibsen",
+          "period": "modern",
+          "year": 1881,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 8121 } },
+          "tags": ["drama", "heredity", "duty", "syphilis"]
+        },
+        {
+          "id": "strindberg-miss-julie",
+          "title": "Miss Julie",
+          "author": "August Strindberg",
+          "period": "modern",
+          "year": 1888,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 8499 } },
+          "tags": ["drama", "naturalism", "class", "sexuality"]
+        },
+        {
+          "id": "strindberg-dream-play",
+          "title": "A Dream Play",
+          "author": "August Strindberg",
+          "period": "modern",
+          "year": 1901,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["drama", "expressionism", "dream", "suffering"]
+        }
+      ]
+    },
+    "spanish_golden_age": {
+      "name": "Spanish Golden Age",
+      "documents": [
+        {
+          "id": "cervantes-don-quixote-1",
+          "title": "Don Quixote, Part One",
+          "author": "Miguel de Cervantes",
+          "period": "early_modern",
+          "year": 1605,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 996 } },
+          "tags": ["novel", "chivalry", "madness", "metafiction"]
+        },
+        {
+          "id": "cervantes-don-quixote-2",
+          "title": "Don Quixote, Part Two",
+          "author": "Miguel de Cervantes",
+          "period": "early_modern",
+          "year": 1615,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 997 } },
+          "tags": ["novel", "chivalry", "disenchantment", "death"]
+        },
+        {
+          "id": "calderon-life-dream",
+          "title": "Life is a Dream",
+          "author": "Calderón de la Barca",
+          "period": "early_modern",
+          "year": 1635,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 7700 } },
+          "tags": ["drama", "dream", "fate", "free will"]
+        },
+        {
+          "id": "lazarillo-tormes",
+          "title": "Lazarillo de Tormes",
+          "author": "Anonymous",
+          "period": "early_modern",
+          "year": 1554,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 35521 } },
+          "tags": ["picaresque", "satire", "poverty", "anticlericalism"]
+        }
+      ]
+    },
+    "critical_theory": {
+      "name": "Critical Theory & Continental Philosophy",
+      "documents": [
+        {
+          "id": "marx-communist-manifesto",
+          "title": "The Communist Manifesto",
+          "author": "Karl Marx & Friedrich Engels",
+          "period": "modern",
+          "year": 1848,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 61 } },
+          "tags": ["politics", "communism", "class struggle", "history"]
+        },
+        {
+          "id": "marx-capital-v1",
+          "title": "Capital, Volume I",
+          "author": "Karl Marx",
+          "period": "modern",
+          "year": 1867,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 67243 } },
+          "tags": ["economics", "capitalism", "surplus value", "alienation"]
+        },
+        {
+          "id": "freud-interpretation-dreams",
+          "title": "The Interpretation of Dreams",
+          "author": "Sigmund Freud",
+          "period": "modern",
+          "year": 1899,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 66892 } },
+          "tags": ["psychoanalysis", "dreams", "unconscious", "wish fulfillment"]
+        },
+        {
+          "id": "freud-civilization-discontents",
+          "title": "Civilization and Its Discontents",
+          "author": "Sigmund Freud",
+          "period": "modern",
+          "year": 1930,
+          "languages": { "en": { "source": "archive" } },
+          "tags": ["psychoanalysis", "civilization", "aggression", "guilt"]
+        },
+        {
+          "id": "wittgenstein-tractatus",
+          "title": "Tractatus Logico-Philosophicus",
+          "author": "Ludwig Wittgenstein",
+          "period": "modern",
+          "year": 1921,
+          "languages": { "en": { "source": "gutenberg", "gutenberg_id": 5740 } },
+          "tags": ["logic", "language", "limits", "silence"]
+        }
+      ]
     }
   },
   "stats": {

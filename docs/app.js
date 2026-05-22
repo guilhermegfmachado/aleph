@@ -223,13 +223,17 @@ function updateThemeIcon() {
 // NAVIGATION
 // ─────────────────────────────────────────────────────────────────────────────
 function setupNavigation() {
-    document.querySelectorAll('.main-nav a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = link.getAttribute('data-page');
-            navigateTo(page);
+    const nav = document.querySelector('.main-nav');
+    if (nav) {
+        nav.addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-page]');
+            if (link) {
+                e.preventDefault();
+                const page = link.getAttribute('data-page');
+                navigateTo(page);
+            }
         });
-    });
+    }
 }
 
 function navigateTo(page) {

@@ -71,13 +71,17 @@ async function init() {
 
     await loadData();
 
-    renderHomePage();
-    renderBrowsePage();
-    renderGlossaryPage();
-    renderSourcesPage();
-    renderAuthorsPage();
-    setupSearchPage();
-    setupReaderPage();
+    try {
+        renderHomePage();
+        renderBrowsePage();
+        renderGlossaryPage();
+        renderSourcesPage();
+        renderAuthorsPage();
+        setupSearchPage();
+        setupReaderPage();
+    } catch (err) {
+        console.error('Render error:', err);
+    }
 
     handleHashChange();
     window.addEventListener('hashchange', handleHashChange);

@@ -23837,6 +23837,486 @@
       "category": ["alchimie", "philosophie"],
       "definition": "The great work—the alchemical project entire. From prima materia through nigredo, albedo, rubedo to the Stone. Years, lifetimes, impossible. Jung's reading: individuation, becoming who you are. The work that works on you.",
       "related": ["Lapis-philosophorum", "Rubedo"]
+    },
+    {
+      "id": "eudaimonia",
+      "term": "Εὐδαιμονία",
+      "lang": "el",
+      "category": ["philosophie", "éthique"],
+      "definition": "Flourishing, well-being, happiness—but deeper than 'happiness.' The good life, life lived well. Aristotle's telos for humans. Not feeling good but being good. Activity of the soul in accordance with virtue. The aim of ethics.",
+      "related": ["Arete", "Phronesis"]
+    },
+    {
+      "id": "arete",
+      "term": "Ἀρετή",
+      "lang": "el",
+      "category": ["philosophie", "éthique"],
+      "definition": "Excellence, virtue. Not moral virtue alone but excellence at being what you are. The arete of a knife is sharpness; of a human, living well. Homer's warriors had arete; Socrates redefined it as knowledge. The goal of Greek ethics.",
+      "related": ["Eudaimonia", "Phronesis"]
+    },
+    {
+      "id": "phronesis",
+      "term": "Φρόνησις",
+      "lang": "el",
+      "category": ["philosophie", "éthique"],
+      "definition": "Practical wisdom—knowing how to act in particular situations. Not theoretical knowledge but judgment, discernment. Aristotle: you can't learn it from books, only from experience. The virtue that governs virtues.",
+      "related": ["Eudaimonia", "Arete", "Sophia"]
+    },
+    {
+      "id": "sophia",
+      "term": "Σοφία",
+      "lang": "el",
+      "category": ["philosophie", "théologie"],
+      "definition": "Wisdom—theoretical, contemplative, divine. Higher than phronesis: knowledge of first principles, eternal truths. Philosophia: love of sophia. In Christianity, personified as divine Wisdom, identified with Christ or the Spirit.",
+      "related": ["Phronesis", "Logos", "Nous"]
+    },
+    {
+      "id": "logos",
+      "term": "Λόγος",
+      "lang": "el",
+      "category": ["philosophie", "théologie"],
+      "definition": "Word, reason, principle, account. Heraclitus: the cosmic law. Stoics: divine reason pervading all. John's Gospel: 'In the beginning was the Logos.' The word that creates and explains. Untranslatable: every translation betrays.",
+      "related": ["Sophia", "Nous"]
+    },
+    {
+      "id": "nous",
+      "term": "Νοῦς",
+      "lang": "el",
+      "category": ["philosophie", "métaphysique"],
+      "definition": "Mind, intellect, understanding. Anaxagoras: cosmic Mind ordering chaos. Aristotle: the divine element in us. Plotinus: the second hypostasis, thinking Being. The faculty that grasps eternal truths. Not discursive but intuitive.",
+      "related": ["Logos", "Sophia", "Psyche"]
+    },
+    {
+      "id": "psyche",
+      "term": "Ψυχή",
+      "lang": "el",
+      "category": ["philosophie", "psychologie"],
+      "definition": "Soul, life, breath. Homer: shade of the dead. Plato: immortal, tripartite (reason, spirit, appetite). Aristotle: form of the body. Psychology's root, but psyche meant more: the animating principle, what makes living things live.",
+      "related": ["Nous", "Soma"]
+    },
+    {
+      "id": "techne",
+      "term": "Τέχνη",
+      "lang": "el",
+      "category": ["philosophie", "art"],
+      "definition": "Craft, art, skill. Knowing how to make something. Includes both 'art' and 'technology'—the Greek didn't separate them. Plato worried about techne vs episteme; Aristotle analyzed productive knowledge. The root of 'technique.'",
+      "related": ["Episteme", "Poiesis"]
+    },
+    {
+      "id": "episteme",
+      "term": "Ἐπιστήμη",
+      "lang": "el",
+      "category": ["philosophie", "épistémologie"],
+      "definition": "Knowledge, science. Not opinion (doxa) but certain knowledge of causes. Aristotle: demonstrative, universal, necessary. Epistemology's root. Foucault's épistème: the unconscious structure of knowledge in an era.",
+      "related": ["Doxa", "Techne", "Gnosis"]
+    },
+    {
+      "id": "doxa",
+      "term": "Δόξα",
+      "lang": "el",
+      "category": ["philosophie", "épistémologie"],
+      "definition": "Opinion, belief, appearance. What seems to be. Parmenides opposed it to truth. Plato: knowledge of the visible, not the Forms. Also: glory, reputation (hence 'doxology'). The epistemological and the social intertwined.",
+      "related": ["Episteme", "Aletheia"]
+    },
+    {
+      "id": "aletheia",
+      "term": "Ἀλήθεια",
+      "lang": "el",
+      "category": ["philosophie", "métaphysique"],
+      "definition": "Truth—literally, 'un-concealment.' Heidegger made much of the etymology: truth as disclosure, unconcealment of Being. Not correspondence but revelation. The Greeks named truth by what it overcomes: forgetting, hiding.",
+      "related": ["Doxa", "Logos"]
+    },
+    {
+      "id": "aporia",
+      "term": "Ἀπορία",
+      "lang": "el",
+      "category": ["philosophie", "rhétorique"],
+      "definition": "Impasse, puzzle, perplexity. Literally: no way through. Socratic dialogues end in aporia—the interlocutor realizes he doesn't know. Not failure but beginning: aporia clears the ground. Derrida revived the term.",
+      "related": ["Elenchus"]
+    },
+    {
+      "id": "elenchus",
+      "term": "Ἔλεγχος",
+      "lang": "el",
+      "category": ["philosophie", "logique"],
+      "definition": "Refutation, cross-examination. The Socratic method: question beliefs until they contradict. Not teaching but unlearning. The midwife of truth delivers by showing what's false. Constructive destruction.",
+      "related": ["Aporia", "Maieutique"]
+    },
+    {
+      "id": "catharsis",
+      "term": "Κάθαρσις",
+      "lang": "el",
+      "category": ["esthétique", "psychologie"],
+      "definition": "Purification, purgation, cleansing. Aristotle on tragedy: catharsis of pity and fear. Medical metaphor: discharge of excess emotion. Psychoanalytic abreaction. The dark feelings, felt and released. Art heals.",
+      "related": ["Mimesis", "Pathos"]
+    },
+    {
+      "id": "mimesis",
+      "term": "Μίμησις",
+      "lang": "el",
+      "category": ["esthétique", "philosophie"],
+      "definition": "Imitation, representation. Plato condemned art as mimesis of mimesis—copy of a copy. Aristotle redeemed it: mimesis is natural, pleasurable, instructive. The oldest theory of art. Auerbach's Mimesis: Western representation traced.",
+      "related": ["Catharsis", "Poiesis"]
+    },
+    {
+      "id": "poiesis",
+      "term": "Ποίησις",
+      "lang": "el",
+      "category": ["esthétique", "philosophie"],
+      "definition": "Making, bringing-forth, creation. Root of 'poetry'—the poet is a maker. Heidegger: poiesis as unconcealment, techne as a mode of aletheia. Art and craft united before modernity split them.",
+      "related": ["Techne", "Mimesis"]
+    },
+    {
+      "id": "kairos",
+      "term": "Καιρός",
+      "lang": "el",
+      "category": ["rhétorique", "théologie"],
+      "definition": "The right moment, the opportune time. Not chronos (clock time) but the moment that matters. Rhetoric: knowing when to speak. Theology: God's decisive intervention. Kairos has a forelock—seize it or miss it forever.",
+      "related": ["Chronos"]
+    },
+    {
+      "id": "wabi-sabi",
+      "term": "侘寂",
+      "lang": "ja",
+      "category": ["esthétique", "philosophie"],
+      "definition": "Beauty in imperfection, impermanence, incompleteness. Wabi: rustic simplicity, understated elegance. Sabi: patina of age, beauty of wear. The cracked tea bowl, the weathered wood. Japanese aesthetics distilled: less, older, quieter.",
+      "related": ["Mono-no-aware", "Yugen"]
+    },
+    {
+      "id": "mono-no-aware",
+      "term": "物の哀れ",
+      "lang": "ja",
+      "category": ["esthétique", "littérature"],
+      "definition": "The pathos of things—bittersweet awareness of transience. Cherry blossoms fall; autumn leaves redden; beauty intensifies because it passes. Motoori Norinaga named it as the heart of Japanese literature. Sensitivity to ephemerality.",
+      "related": ["Wabi-sabi", "Yugen", "Mujo"]
+    },
+    {
+      "id": "yugen",
+      "term": "幽玄",
+      "lang": "ja",
+      "category": ["esthétique", "poésie"],
+      "definition": "Mysterious depth, profound grace. Originally Buddhist: the profound, the dark. In Noh: what lies beneath the surface, suggested not shown. The wild geese in the mist, the moon behind clouds. Beauty that conceals more than it reveals.",
+      "related": ["Mono-no-aware", "Wabi-sabi"]
+    },
+    {
+      "id": "ma",
+      "term": "間",
+      "lang": "ja",
+      "category": ["esthétique", "art"],
+      "definition": "Interval, gap, negative space. The pause between notes, the emptiness in a room. Ma is not nothing but pregnant space—what makes the rest meaningful. Japanese architecture, music, conversation depend on ma. Less is not nothing.",
+      "related": ["Wabi-sabi", "Mu"]
+    },
+    {
+      "id": "mu",
+      "term": "無",
+      "lang": "ja",
+      "category": ["philosophie", "bouddhisme"],
+      "definition": "Nothing, non-being, no. Zen's most famous answer: 'Does a dog have Buddha-nature?' 'Mu.' Not yes, not no—the question itself is rejected. Meditate on mu until concepts dissolve. The gateless gate.",
+      "related": ["Sunyata", "Ma", "Koan"]
+    },
+    {
+      "id": "koan",
+      "term": "公案",
+      "lang": "ja",
+      "category": ["bouddhisme", "zen"],
+      "definition": "A Zen riddle, a case to crack. 'What is the sound of one hand clapping?' Not solved by logic but by direct insight that explodes categories. The teacher watches the student struggle until breakthrough. Enlightenment by paradox.",
+      "related": ["Mu", "Satori"]
+    },
+    {
+      "id": "satori",
+      "term": "悟り",
+      "lang": "ja",
+      "category": ["bouddhisme", "zen"],
+      "definition": "Awakening, enlightenment—sudden, intuitive seeing. Not gradual cultivation but immediate recognition. The ox seen, the ox caught, the self forgotten. Japanese Zen's word for what the Buddha had under the Bodhi tree. A flash, then everything changed.",
+      "related": ["Bodhi", "Koan", "Kensho"]
+    },
+    {
+      "id": "ikigai",
+      "term": "生き甲斐",
+      "lang": "ja",
+      "category": ["philosophie", "éthique"],
+      "definition": "Reason for being, what makes life worth living. The intersection of passion, mission, vocation, profession. Okinawan longevity secret, Western self-help appropriation. Deeper in Japanese: the small daily joys that sustain existence.",
+      "related": ["Eudaimonia"]
+    },
+    {
+      "id": "wu-wei",
+      "term": "無為",
+      "lang": "zh",
+      "category": ["taoïsme", "philosophie"],
+      "definition": "Non-action, effortless action. Not inaction but acting without forcing, without ego. Water flows to the lowest place—that's wu wei. The sage rules by not ruling. Laozi's paradox: do nothing, and nothing is undone.",
+      "related": ["Dao", "Ziran"]
+    },
+    {
+      "id": "dao",
+      "term": "道",
+      "lang": "zh",
+      "category": ["taoïsme", "philosophie"],
+      "definition": "The Way—but the Way that can be spoken is not the eternal Way. Source of all, pattern of all, beyond name and form. Laozi's first word, Confucius's path of virtue. The character: a head walking, knowledge in motion.",
+      "related": ["Wu-wei", "De"]
+    },
+    {
+      "id": "de",
+      "term": "德",
+      "lang": "zh",
+      "category": ["taoïsme", "confucianisme"],
+      "definition": "Virtue, power, inner nature. The Dao within, individualized. Confucian moral virtue; Taoist natural potency. The Daodejing: classic of Dao and De. The charismatic force of the sage that transforms without commanding.",
+      "related": ["Dao", "Ren"]
+    },
+    {
+      "id": "ren",
+      "term": "仁",
+      "lang": "zh",
+      "category": ["confucianisme", "éthique"],
+      "definition": "Benevolence, humaneness, goodness. The cardinal Confucian virtue. The character: 'person' plus 'two'—humanity is relational. The junzi embodies ren. Mencius: innate, a sprout to be cultivated. The heart that cannot bear others' suffering.",
+      "related": ["Li-rite", "Junzi"]
+    },
+    {
+      "id": "li-rite",
+      "term": "禮",
+      "lang": "zh",
+      "category": ["confucianisme", "éthique"],
+      "definition": "Ritual, propriety, ceremony. Not empty formalism but the forms that shape virtue. Confucius: ren is substance, li is form. Bowing, sacrificing, mourning—the body learns reverence. Civilization is ritual internalized.",
+      "related": ["Ren", "Junzi"]
+    },
+    {
+      "id": "junzi",
+      "term": "君子",
+      "lang": "zh",
+      "category": ["confucianisme", "éthique"],
+      "definition": "The exemplary person, the gentleman. Originally 'lord's son'—Confucius democratized it: anyone can become a junzi through cultivation. Contrasted with xiaoren (small person). The ethical ideal, always learning, always improving.",
+      "related": ["Ren", "Li-rite", "De"]
+    },
+    {
+      "id": "qi",
+      "term": "氣",
+      "lang": "zh",
+      "category": ["philosophie", "médecine"],
+      "definition": "Vital energy, breath, matter-energy. Not quite matter, not quite spirit—the stuff of reality before that split. Acupuncture moves qi. Cultivation refines qi. The cosmos is qi in motion. Untranslatable: 'energy' flattens it.",
+      "related": ["Yin-yang", "Li-principe"]
+    },
+    {
+      "id": "li-principe",
+      "term": "理",
+      "lang": "zh",
+      "category": ["néoconfucianisme", "philosophie"],
+      "definition": "Principle, pattern, reason. The inherent order of things. Neo-Confucian metaphysics: li is form, qi is matter. Zhu Xi: investigate things to grasp their li. The grain in wood, the logic in things. Cosmic rationality.",
+      "related": ["Qi", "Dao"]
+    },
+    {
+      "id": "yin-yang",
+      "term": "陰陽",
+      "lang": "zh",
+      "category": ["philosophie", "cosmologie"],
+      "definition": "The primal pair: dark/light, female/male, passive/active, cold/hot. Not opposites but complements, each containing the seed of the other. The taiji diagram: eternal interplay. Chinese cosmology's fundamental rhythm.",
+      "related": ["Qi", "Dao"]
+    },
+    {
+      "id": "ethos",
+      "term": "Ἦθος",
+      "lang": "el",
+      "category": ["rhétorique", "éthique"],
+      "definition": "Character, credibility, the speaker's moral appeal. Aristotle's three proofs: ethos, pathos, logos. You trust the speaker because of who they are. Ethics derives from ethos: character shapes conduct. The voice behind the words.",
+      "related": ["Pathos", "Logos-rhetorique"]
+    },
+    {
+      "id": "pathos",
+      "term": "Πάθος",
+      "lang": "el",
+      "category": ["rhétorique", "esthétique"],
+      "definition": "Suffering, emotion, passion. Rhetorical pathos: moving the audience emotionally. Aristotle: pathos completes ethos and logos. Pathetic (original sense): capable of evoking pity. From passive to powerful—felt, not argued.",
+      "related": ["Ethos", "Catharsis"]
+    },
+    {
+      "id": "chiasmus",
+      "term": "Chiasmus",
+      "lang": "la",
+      "category": ["rhétorique", "littérature"],
+      "definition": "Cross-shaped reversal: ABBA structure. 'Ask not what your country can do for you—ask what you can do for your country.' The mirror pattern, elegant reversal. Named for chi (X). Memory aid, emphasis, wit.",
+      "related": ["Antithesis"]
+    },
+    {
+      "id": "antithesis",
+      "term": "Antithesis",
+      "lang": "la",
+      "category": ["rhétorique", "littérature"],
+      "definition": "Contrast, opposition of ideas in parallel structure. 'It was the best of times, it was the worst of times.' Hegel's triad: thesis, antithesis, synthesis. The rhetoric of opposition, the dialectic of thought.",
+      "related": ["Chiasmus", "Dialectique"]
+    },
+    {
+      "id": "anaphora",
+      "term": "Anaphora",
+      "lang": "la",
+      "category": ["rhétorique", "littérature"],
+      "definition": "Repetition at the beginning of successive clauses. 'I have a dream... I have a dream...' Builds rhythm, emphasis, momentum. The hammer stroke of rhetoric. Also liturgical: the eucharistic prayer. Repetition as power.",
+      "related": ["Epistrophe"]
+    },
+    {
+      "id": "kenosis",
+      "term": "Κένωσις",
+      "lang": "el",
+      "category": ["théologie", "philosophie"],
+      "definition": "Self-emptying. Philippians 2: Christ 'emptied himself' (ekenosen), taking the form of a slave. God's descent, the divine humiliation. Mystical theology: empty yourself of self to be filled with God. The fullness of emptiness.",
+      "related": ["Theosis", "Incarnation"]
+    },
+    {
+      "id": "theosis",
+      "term": "Θέωσις",
+      "lang": "el",
+      "category": ["théologie", "mystique"],
+      "definition": "Deification, divinization. Eastern Orthodox goal: 'God became man that man might become God' (Athanasius). Not absorption but participation in divine nature. Grace transforms, doesn't destroy. The creature ascends; the Creator descends. Meeting.",
+      "related": ["Kenosis", "Hesychasm"]
+    },
+    {
+      "id": "hesychasm",
+      "term": "Ἡσυχασμός",
+      "lang": "el",
+      "category": ["mystique", "théologie"],
+      "definition": "Stillness, inner quiet. Eastern Orthodox contemplative tradition. The Jesus Prayer repeated: 'Lord Jesus Christ, Son of God, have mercy on me, a sinner.' The uncreated light of Tabor. Gregory Palamas defended it. The body prays: breath, posture, heartbeat.",
+      "related": ["Theosis", "Prière"]
+    },
+    {
+      "id": "apophatic",
+      "term": "Ἀποφατικός",
+      "lang": "el",
+      "category": ["théologie", "philosophie"],
+      "definition": "The negative way—theology by negation. God is not this, not that. Every affirmation fails; only denial approaches. Pseudo-Dionysius: the divine darkness beyond light. What God is not is more true than what God is. The cloud of unknowing.",
+      "related": ["Cataphatic", "Via-negativa"]
+    },
+    {
+      "id": "eschatology",
+      "term": "Ἐσχατολογία",
+      "lang": "el",
+      "category": ["théologie", "philosophie"],
+      "definition": "Study of last things: death, judgment, heaven, hell, the end of the world. Christian: the Kingdom coming, parousia, resurrection. Realized eschatology: the end is now. Apocalyptic: the end is near. History has a direction.",
+      "related": ["Parousia", "Apocalypse"]
+    },
+    {
+      "id": "parousia",
+      "term": "Παρουσία",
+      "lang": "el",
+      "category": ["théologie", "eschatologie"],
+      "definition": "Presence, arrival—specifically, Christ's second coming. The early church waited; two millennia later, still waiting. Maranatha: come, Lord. The tension between 'already' and 'not yet.' The hope that shapes time.",
+      "related": ["Eschatology", "Apocalypse"]
+    },
+    {
+      "id": "agape",
+      "term": "Ἀγάπη",
+      "lang": "el",
+      "category": ["théologie", "éthique"],
+      "definition": "Divine love, unconditional love. Not eros (desire) or philia (friendship) but self-giving love. 'God is agape' (1 John). The love feast, the eucharist. Nygren: agape descends; eros ascends. The love that loves the unlovable.",
+      "related": ["Eros", "Caritas"]
+    },
+    {
+      "id": "eros",
+      "term": "Ἔρως",
+      "lang": "el",
+      "category": ["philosophie", "théologie"],
+      "definition": "Desire, longing, passionate love. Plato's Symposium: eros as ascent to Beauty. Freud: the life drive. Anders Nygren opposed it to agape; others (Pseudo-Dionysius, Dante) united them. The force that moves the sun and other stars.",
+      "related": ["Agape", "Philia"]
+    },
+    {
+      "id": "hypostasis",
+      "term": "Ὑπόστασις",
+      "lang": "el",
+      "category": ["théologie", "métaphysique"],
+      "definition": "Substance, person, underlying reality. Trinitarian theology: one ousia (essence), three hypostases (persons). Plotinus: three hypostases—One, Intellect, Soul. The word that made the Trinity speakable, barely.",
+      "related": ["Ousia", "Trinitas"]
+    },
+    {
+      "id": "ousia",
+      "term": "Οὐσία",
+      "lang": "el",
+      "category": ["philosophie", "théologie"],
+      "definition": "Being, essence, substance. Aristotle's primary ousia: the individual thing. Secondary: species, genus. Nicaea: Father and Son are homoousios—same substance. Metaphysics' most fought-over word. What something really is.",
+      "related": ["Hypostasis", "Essence"]
+    },
+    {
+      "id": "duende",
+      "term": "Duende",
+      "lang": "es",
+      "category": ["esthétique", "art"],
+      "definition": "The dark spirit of art, Lorca's term. Not angel (inspiration from above) or muse (external guidance) but duende: earth-force, aware of death. Flamenco's edge, bullfighting's moment. Art that risks, that bleeds. 'All that has black sounds has duende.'",
+      "related": ["Pathos", "Catharsis"]
+    },
+    {
+      "id": "saudade",
+      "term": "Saudade",
+      "lang": "pt",
+      "category": ["esthétique", "psychologie"],
+      "definition": "Longing, melancholy, nostalgia for the absent. Portuguese soul-word, untranslatable. Missing someone, something, someplace, sometime—or nothing specific. Fado's feeling. The presence of absence, the pleasure of melancholy. The heart of lusophone identity.",
+      "related": ["Sehnsucht", "Mono-no-aware"]
+    },
+    {
+      "id": "sehnsucht",
+      "term": "Sehnsucht",
+      "lang": "de",
+      "category": ["philosophie", "romantisme"],
+      "definition": "Longing, yearning—especially for something unattainable. The Romantics' word. C.S. Lewis: 'inconsolable longing' for we know not what. Homesickness for a home we've never seen. The desire that proves another world.",
+      "related": ["Saudade", "Fernweh"]
+    },
+    {
+      "id": "fernweh",
+      "term": "Fernweh",
+      "lang": "de",
+      "category": ["psychologie", "romantisme"],
+      "definition": "Far-sickness—the opposite of homesickness. Longing for distant places, for the elsewhere. Wanderlust's melancholy twin. The horizon calls. German Romanticism's restlessness, the affliction of those who belong nowhere, everywhere.",
+      "related": ["Sehnsucht", "Wanderlust"]
+    },
+    {
+      "id": "weltschmerz",
+      "term": "Weltschmerz",
+      "lang": "de",
+      "category": ["philosophie", "romantisme"],
+      "definition": "World-pain, world-weariness. The gap between the ideal and the real, felt as ache. Heine coined it. Romantic malady: the world disappoints the soul. Existential dissatisfaction, cosmic sadness. The sensitive suffer the world's imperfection.",
+      "related": ["Sehnsucht", "Angst"]
+    },
+    {
+      "id": "bildung",
+      "term": "Bildung",
+      "lang": "de",
+      "category": ["philosophie", "éducation"],
+      "definition": "Formation, cultivation, self-development. Not just education but the shaping of character through culture. The Bildungsroman: novel of formation. Hegel, Humboldt: the individual becomes universal through Bildung. German humanism's ideal.",
+      "related": ["Paideia", "Erziehung"]
+    },
+    {
+      "id": "zeitgeist",
+      "term": "Zeitgeist",
+      "lang": "de",
+      "category": ["philosophie", "histoire"],
+      "definition": "Spirit of the age. Hegel: history moves through epochs, each with its spirit. The invisible climate of an era, its assumptions, its sense of possibility. To grasp one's Zeitgeist is to understand one's limits and leverage.",
+      "related": ["Weltanschauung"]
+    },
+    {
+      "id": "weltanschauung",
+      "term": "Weltanschauung",
+      "lang": "de",
+      "category": ["philosophie", "épistémologie"],
+      "definition": "Worldview—comprehensive vision of reality. Not just opinions but the frame within which opinions form. Dilthey: Weltanschauungen are the glasses through which we see. Philosophy articulates what life already assumes.",
+      "related": ["Zeitgeist", "Paradigm"]
+    },
+    {
+      "id": "sprezzatura",
+      "term": "Sprezzatura",
+      "lang": "it",
+      "category": ["esthétique", "éthique"],
+      "definition": "Studied carelessness, effortless grace. Castiglione's Courtier: conceal effort, appear natural. The art that hides art. Aristocratic ease, rehearsed spontaneity. The opposite of striving. Nonchalance masking mastery.",
+      "related": ["Arete", "Wu-wei"]
+    },
+    {
+      "id": "chiaroscuro",
+      "term": "Chiaroscuro",
+      "lang": "it",
+      "category": ["art", "esthétique"],
+      "definition": "Light-dark—the dramatic contrast of light and shadow. Caravaggio, Rembrandt. Not just technique but metaphysics: illumination emerges from darkness. Moral ambiguity painted. The visible carved from the invisible.",
+      "related": ["Tenebrism"]
+    },
+    {
+      "id": "terribilita",
+      "term": "Terribilità",
+      "lang": "it",
+      "category": ["art", "esthétique"],
+      "definition": "Terrifying grandeur, awe-inspiring power. Vasari on Michelangelo: his art inspires terror. The sublime before Burke named it. Moses' horns, the Last Judgment's Christ. Art that overwhelms, that makes you tremble. Greatness that frightens.",
+      "related": ["Sublime", "Pathos"]
     }
   ]
 }

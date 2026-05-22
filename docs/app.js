@@ -731,7 +731,8 @@ function renderAuthorsPage() {
     }
 
     container.innerHTML = filtered.map(author => {
-        const workCount = author.works.filter(id => state.bookIndex[id]).length;
+        const works = author.works || [];
+        const workCount = works.filter(id => state.bookIndex[id]).length;
         return `
             <article class="author-card" id="author-${author.id}">
                 <header class="author-card-header">
@@ -745,7 +746,7 @@ function renderAuthorsPage() {
                 <p class="author-card-bio">${escapeHtml(author.bio)}</p>
                 <div class="author-card-works">
                     <span class="works-label">${workCount} œuvre${workCount > 1 ? 's' : ''} :</span>
-                    ${author.works.map(workId => {
+                    ${works.map(workId => {
                         const book = state.bookIndex[workId];
                         if (!book) return '';
                         return `<a href="#" class="work-link" onclick="openReader('${workId}'); return false;">${escapeHtml(book.title)}</a>`;

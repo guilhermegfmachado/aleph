@@ -9864,6 +9864,491 @@
         "unitotalité",
         "russie"
       ]
+    },
+    {
+      "id": "adam-smith",
+      "name": "Adam Smith",
+      "dates": "1723–1790",
+      "bio": "Scottish economist and philosopher, founder of modern economics. His Wealth of Nations established political economy as an independent discipline.",
+      "tags": [
+        "economics",
+        "enlightenment",
+        "scottish"
+      ]
+    },
+    {
+      "id": "aristophanes",
+      "name": "Aristophanes",
+      "originalName": "Ἀριστοφάνης",
+      "dates": "c. 446–386 BCE",
+      "bio": "Father of comedy. His plays satirized Athenian politics, philosophy, and society with bawdy wit and poetic brilliance.",
+      "tags": [
+        "comedy",
+        "greek",
+        "classical"
+      ]
+    },
+    {
+      "id": "augustine-hippo",
+      "name": "Augustine of Hippo",
+      "originalName": "Aurelius Augustinus",
+      "dates": "354–430 CE",
+      "bio": "Church Father and philosopher. His Confessions invented autobiography; City of God shaped Christian political theology for a millennium.",
+      "tags": [
+        "theology",
+        "philosophy",
+        "patristics",
+        "latin"
+      ]
+    },
+    {
+      "id": "buddha",
+      "name": "Buddha",
+      "originalName": "सिद्धार्थ गौतम",
+      "dates": "c. 563–483 BCE",
+      "bio": "Siddhartha Gautama, founder of Buddhism. His teachings on suffering, impermanence, and liberation form the foundation of one of the world's great religions.",
+      "tags": [
+        "buddhism",
+        "indian",
+        "philosophy",
+        "religion"
+      ]
+    },
+    {
+      "id": "catullus",
+      "name": "Catullus",
+      "originalName": "Gaius Valerius Catullus",
+      "dates": "c. 84–54 BCE",
+      "bio": "Roman lyric poet whose passionate verses to 'Lesbia' pioneered personal poetry in Latin. Master of the epigram and invective.",
+      "tags": [
+        "poetry",
+        "roman",
+        "latin"
+      ]
+    },
+    {
+      "id": "david-ricardo",
+      "name": "David Ricardo",
+      "dates": "1772–1823",
+      "bio": "British political economist who developed the theory of comparative advantage and the labor theory of value. His Principles shaped classical economics.",
+      "tags": [
+        "economics",
+        "british",
+        "classical"
+      ]
+    },
+    {
+      "id": "euclid",
+      "name": "Euclid",
+      "originalName": "Εὐκλείδης",
+      "dates": "c. 300 BCE",
+      "bio": "Greek mathematician whose Elements established geometry as a deductive science. The most influential mathematics textbook ever written.",
+      "tags": [
+        "mathematics",
+        "greek",
+        "classical"
+      ]
+    },
+    {
+      "id": "petrarca",
+      "name": "Francesco Petrarca",
+      "originalName": "Petrarch",
+      "dates": "1304–1374",
+      "bio": "Italian poet and scholar, father of humanism. His sonnets to Laura established the Petrarchan form that dominated European poetry for centuries.",
+      "tags": [
+        "poetry",
+        "italian",
+        "renaissance",
+        "humanism"
+      ]
+    },
+    {
+      "id": "francis-bacon",
+      "name": "Francis Bacon",
+      "dates": "1561–1626",
+      "bio": "English philosopher and statesman, father of empiricism. His Novum Organum proposed the scientific method of inductive reasoning.",
+      "tags": [
+        "philosophy",
+        "english",
+        "science"
+      ]
+    },
+    {
+      "id": "hayek",
+      "name": "Friedrich Hayek",
+      "dates": "1899–1992",
+      "bio": "Austrian-British economist and philosopher. His Road to Serfdom warned of totalitarianism; his work on spontaneous order influenced libertarian thought.",
+      "tags": [
+        "economics",
+        "austrian",
+        "liberalism"
+      ]
+    },
+    {
+      "id": "galileo",
+      "name": "Galileo Galilei",
+      "dates": "1564–1642",
+      "bio": "Italian astronomer and physicist, father of modern science. His telescope observations and mechanics experiments revolutionized our understanding of the cosmos.",
+      "tags": [
+        "science",
+        "italian",
+        "astronomy"
+      ]
+    },
+    {
+      "id": "hammurabi",
+      "name": "Hammurabi",
+      "dates": "r. 1792–1750 BCE",
+      "bio": "Babylonian king whose law code is one of the oldest deciphered writings of significant length. 'An eye for an eye' codified Mesopotamian justice.",
+      "tags": [
+        "law",
+        "mesopotamian",
+        "ancient"
+      ]
+    },
+    {
+      "id": "hesiod",
+      "name": "Hesiod",
+      "originalName": "Ἡσίοδος",
+      "dates": "c. 700 BCE",
+      "bio": "Greek poet whose Theogony organized the gods into a family tree, and whose Works and Days gave practical and moral advice for farmers.",
+      "tags": [
+        "poetry",
+        "greek",
+        "archaic"
+      ]
+    },
+    {
+      "id": "horace",
+      "name": "Horace",
+      "originalName": "Quintus Horatius Flaccus",
+      "dates": "65–8 BCE",
+      "bio": "Roman lyric poet whose Odes, Satires, and Epistles set the standard for Latin verse. 'Carpe diem' is his most famous phrase.",
+      "tags": [
+        "poetry",
+        "roman",
+        "latin"
+      ]
+    },
+    {
+      "id": "newton",
+      "name": "Isaac Newton",
+      "dates": "1642–1727",
+      "bio": "English mathematician and physicist. His Principia established classical mechanics; he co-invented calculus and discovered the nature of light.",
+      "tags": [
+        "science",
+        "mathematics",
+        "english"
+      ]
+    },
+    {
+      "id": "turgenev",
+      "name": "Ivan Turgenev",
+      "originalName": "Иван Тургенев",
+      "dates": "1818–1883",
+      "bio": "Russian novelist whose Fathers and Sons captured the generational conflict between romantics and nihilists. Master of the prose poem.",
+      "tags": [
+        "novel",
+        "russian",
+        "realism"
+      ]
+    },
+    {
+      "id": "keynes",
+      "name": "John Maynard Keynes",
+      "dates": "1883–1946",
+      "bio": "British economist who revolutionized macroeconomics. His General Theory argued for government intervention during recessions.",
+      "tags": [
+        "economics",
+        "british",
+        "modern"
+      ]
+    },
+    {
+      "id": "mill",
+      "name": "John Stuart Mill",
+      "dates": "1806–1873",
+      "bio": "British philosopher and economist. On Liberty defined modern liberalism; Utilitarianism refined ethical consequentialism.",
+      "tags": [
+        "philosophy",
+        "economics",
+        "british",
+        "liberalism"
+      ]
+    },
+    {
+      "id": "john-cross",
+      "name": "John of the Cross",
+      "originalName": "San Juan de la Cruz",
+      "dates": "1542–1591",
+      "bio": "Spanish mystic and poet, Doctor of the Church. His Dark Night of the Soul describes the soul's journey to union with God.",
+      "tags": [
+        "mysticism",
+        "poetry",
+        "spanish",
+        "catholic"
+      ]
+    },
+    {
+      "id": "caesar",
+      "name": "Julius Caesar",
+      "originalName": "Gaius Julius Caesar",
+      "dates": "100–44 BCE",
+      "bio": "Roman general, statesman, and author. His Commentaries on the Gallic War are masterpieces of military history and Latin prose.",
+      "tags": [
+        "history",
+        "roman",
+        "latin"
+      ]
+    },
+    {
+      "id": "justinian",
+      "name": "Justinian I",
+      "dates": "c. 482–565 CE",
+      "bio": "Byzantine emperor whose Corpus Juris Civilis codified Roman law and became the foundation of Western legal systems.",
+      "tags": [
+        "law",
+        "byzantine",
+        "roman"
+      ]
+    },
+    {
+      "id": "juvenal",
+      "name": "Juvenal",
+      "originalName": "Decimus Junius Juvenalis",
+      "dates": "c. 55–130 CE",
+      "bio": "Roman satirist whose bitter attacks on Roman vice established the genre of satirical invective. 'Bread and circuses' is his phrase.",
+      "tags": [
+        "satire",
+        "roman",
+        "latin"
+      ]
+    },
+    {
+      "id": "marx",
+      "name": "Karl Marx",
+      "dates": "1818–1883",
+      "bio": "German philosopher and economist. Das Kapital analyzed capitalism; the Communist Manifesto called workers to revolution. His thought shaped the 20th century.",
+      "tags": [
+        "philosophy",
+        "economics",
+        "german",
+        "socialism"
+      ]
+    },
+    {
+      "id": "longus",
+      "name": "Longus",
+      "dates": "c. 2nd century CE",
+      "bio": "Greek novelist whose Daphnis and Chloe is the finest of the ancient romances, a pastoral love story that influenced Renaissance literature.",
+      "tags": [
+        "novel",
+        "greek",
+        "romance"
+      ]
+    },
+    {
+      "id": "margery-kempe",
+      "name": "Margery Kempe",
+      "dates": "c. 1373–1438",
+      "bio": "English mystic whose Book of Margery Kempe is considered the first autobiography in English. Her visions and pilgrimages scandalized her contemporaries.",
+      "tags": [
+        "mysticism",
+        "english",
+        "medieval"
+      ]
+    },
+    {
+      "id": "moliere",
+      "name": "Molière",
+      "originalName": "Jean-Baptiste Poquelin",
+      "dates": "1622–1673",
+      "bio": "French playwright and actor, master of comedy. Tartuffe, The Misanthrope, and Le Bourgeois gentilhomme satirize human vice and folly.",
+      "tags": [
+        "comedy",
+        "drama",
+        "french",
+        "baroque"
+      ]
+    },
+    {
+      "id": "copernicus",
+      "name": "Nicolaus Copernicus",
+      "dates": "1473–1543",
+      "bio": "Polish astronomer who proposed the heliocentric model. De Revolutionibus launched the Scientific Revolution.",
+      "tags": [
+        "science",
+        "astronomy",
+        "polish",
+        "renaissance"
+      ]
+    },
+    {
+      "id": "abelard-heloise",
+      "name": "Peter Abelard & Heloise",
+      "dates": "1079–1142 / c. 1100–1164",
+      "bio": "Medieval philosopher and his beloved student. Their letters chronicle one of history's great love stories and intellectual partnerships.",
+      "tags": [
+        "philosophy",
+        "letters",
+        "french",
+        "medieval"
+      ]
+    },
+    {
+      "id": "petronius",
+      "name": "Petronius",
+      "originalName": "Gaius Petronius Arbiter",
+      "dates": "c. 27–66 CE",
+      "bio": "Roman courtier and author of the Satyricon, a picaresque novel satirizing Roman excess. Nero's 'arbiter of elegance.'",
+      "tags": [
+        "novel",
+        "satire",
+        "roman",
+        "latin"
+      ]
+    },
+    {
+      "id": "pindar",
+      "name": "Pindar",
+      "originalName": "Πίνδαρος",
+      "dates": "c. 518–438 BCE",
+      "bio": "Greatest of Greek lyric poets. His victory odes for athletes soar with mythological imagery and complex meters.",
+      "tags": [
+        "poetry",
+        "greek",
+        "classical"
+      ]
+    },
+    {
+      "id": "pliny-younger",
+      "name": "Pliny the Younger",
+      "originalName": "Gaius Plinius Caecilius Secundus",
+      "dates": "61–113 CE",
+      "bio": "Roman lawyer and author whose Letters illuminate Roman life and include eyewitness accounts of Vesuvius and early Christians.",
+      "tags": [
+        "letters",
+        "roman",
+        "latin"
+      ]
+    },
+    {
+      "id": "qoheleth",
+      "name": "Qoheleth",
+      "originalName": "קהלת",
+      "dates": "c. 3rd century BCE",
+      "bio": "The 'Preacher' or 'Gatherer,' author of Ecclesiastes. 'Vanity of vanities'—his meditation on life's transience is unique in the Bible.",
+      "tags": [
+        "wisdom",
+        "hebrew",
+        "biblical"
+      ]
+    },
+    {
+      "id": "solomon",
+      "name": "Solomon",
+      "originalName": "שְׁלֹמֹה",
+      "dates": "c. 970–931 BCE",
+      "bio": "King of Israel traditionally credited with Proverbs, Ecclesiastes, and Song of Songs. Symbol of wisdom in Jewish, Christian, and Islamic traditions.",
+      "tags": [
+        "wisdom",
+        "hebrew",
+        "biblical"
+      ]
+    },
+    {
+      "id": "teresa-avila",
+      "name": "Teresa of Ávila",
+      "originalName": "Santa Teresa de Jesús",
+      "dates": "1515–1582",
+      "bio": "Spanish mystic and reformer, Doctor of the Church. Her Interior Castle maps the soul's journey through seven mansions to divine union.",
+      "tags": [
+        "mysticism",
+        "spanish",
+        "catholic"
+      ]
+    },
+    {
+      "id": "hobbes",
+      "name": "Thomas Hobbes",
+      "dates": "1588–1679",
+      "bio": "English philosopher whose Leviathan founded modern political philosophy. Life without government is 'solitary, poor, nasty, brutish, and short.'",
+      "tags": [
+        "philosophy",
+        "politics",
+        "english"
+      ]
+    },
+    {
+      "id": "malory",
+      "name": "Thomas Malory",
+      "dates": "c. 1415–1471",
+      "bio": "English knight who compiled Le Morte d'Arthur, the definitive Arthurian romance in English, while imprisoned.",
+      "tags": [
+        "romance",
+        "english",
+        "medieval"
+      ]
+    },
+    {
+      "id": "kempis",
+      "name": "Thomas à Kempis",
+      "dates": "c. 1380–1471",
+      "bio": "German-Dutch mystic whose Imitation of Christ is the most widely read devotional book after the Bible.",
+      "tags": [
+        "mysticism",
+        "devotional",
+        "german",
+        "medieval"
+      ]
+    },
+    {
+      "id": "vyasa",
+      "name": "Vyasa",
+      "originalName": "व्यास",
+      "dates": "legendary",
+      "bio": "Legendary compiler of the Vedas and author of the Mahabharata, the longest epic poem in existence.",
+      "tags": [
+        "epic",
+        "sanskrit",
+        "indian"
+      ]
+    },
+    {
+      "id": "langland",
+      "name": "William Langland",
+      "dates": "c. 1332–1386",
+      "bio": "English poet whose Piers Plowman is a visionary allegory of Christian life and social criticism in alliterative verse.",
+      "tags": [
+        "poetry",
+        "english",
+        "medieval",
+        "allegory"
+      ]
+    },
+    {
+      "id": "tsunetomo",
+      "name": "Yamamoto Tsunetomo",
+      "originalName": "山本常朝",
+      "dates": "1659–1719",
+      "bio": "Japanese samurai whose Hagakure ('Hidden by Leaves') codifies bushido. 'The Way of the Warrior is found in death.'",
+      "tags": [
+        "philosophy",
+        "japanese",
+        "bushido"
+      ]
+    },
+    {
+      "id": "yasumaro",
+      "name": "Ō no Yasumaro",
+      "originalName": "太安万侶",
+      "dates": "d. 723",
+      "bio": "Japanese court noble who compiled the Kojiki, Japan's oldest chronicle of mythology and imperial history.",
+      "tags": [
+        "history",
+        "mythology",
+        "japanese"
+      ]
     }
   ]
 }

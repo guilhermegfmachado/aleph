@@ -25037,6 +25037,502 @@
       "category": ["philosophie", "éthique"],
       "definition": "Otherness, alterity. Levinas: the face of the Other commands me before I choose. Ethics as first philosophy. Not sameness, not totality: the Other's absolute difference. Responsibility precedes freedom.",
       "related": ["Visage", "Éthique"]
+    },
+    {
+      "id": "depense",
+      "term": "Dépense",
+      "lang": "fr",
+      "category": ["économie", "bataille"],
+      "definition": "Unproductive expenditure—Bataille's counter-economics. Against utility: sacrifice, potlatch, eroticism, art. The accursed share must be spent or it destroys. The sun gives without return. Excess, not scarcity, is the problem.",
+      "related": ["Part-maudite", "Potlatch"]
+    },
+    {
+      "id": "part-maudite",
+      "term": "La Part maudite",
+      "lang": "fr",
+      "category": ["économie", "bataille"],
+      "definition": "The accursed share—the surplus energy that must be squandered. Bataille: every society produces excess. Spend it on pyramids, cathedrals, wars, or orgies. Accumulation leads to catastrophe. General economy vs. restricted economy.",
+      "related": ["Dépense", "Potlatch"]
+    },
+    {
+      "id": "heterologie",
+      "term": "Hétérologie",
+      "lang": "fr",
+      "category": ["philosophie", "bataille"],
+      "definition": "Science of the wholly other—Bataille's never-completed project. Study what reason excludes: waste, madness, eroticism, death. The formless (informe), the base materialism. Philosophy as excremental vision.",
+      "related": ["Informe", "Transgression"]
+    },
+    {
+      "id": "informe",
+      "term": "Informe",
+      "lang": "fr",
+      "category": ["esthétique", "bataille"],
+      "definition": "Formless—not absence of form but active un-forming. Bataille's anti-aesthetic: spit, crushed spider, universe as decay. Declassifying, lowering. Rosalind Krauss and Yve-Alain Bois revived it. Art that undoes itself.",
+      "related": ["Hétérologie", "Base-materialisme"]
+    },
+    {
+      "id": "desoeuvrement",
+      "term": "Désœuvrement",
+      "lang": "fr",
+      "category": ["littérature", "blanchot"],
+      "definition": "Worklessness, unworking, inoperativity. Blanchot: literature as the work's undoing. Agamben: potential not actualized. Nancy: community without work. The action that suspends action. Inoperative but not inactive.",
+      "related": ["Neutre", "Inoperosita"]
+    },
+    {
+      "id": "neutre",
+      "term": "Le Neutre",
+      "lang": "fr",
+      "category": ["littérature", "blanchot"],
+      "definition": "The neutral—neither this nor that, suspending opposition. Blanchot: writing as approach to the neutral. Barthes's last course. Not indifference but vigilance. The third term that refuses dialectics.",
+      "related": ["Désœuvrement", "Dehors"]
+    },
+    {
+      "id": "dehors",
+      "term": "Le Dehors",
+      "lang": "fr",
+      "category": ["philosophie", "blanchot"],
+      "definition": "The outside—Blanchot and Foucault's term. Thought's other: not interiority but exposure. Literature opens onto the dehors. Madness, death, language itself. The space where the subject dissolves.",
+      "related": ["Neutre", "Limite"]
+    },
+    {
+      "id": "homo-sacer",
+      "term": "Homo sacer",
+      "lang": "la",
+      "category": ["biopolitique", "agamben"],
+      "definition": "Sacred man—who may be killed but not sacrificed. Agamben: archaic Roman figure for modern biopolitics. The banned, the refugee, the detainee. Bare life exposed to sovereign violence. The exception as paradigm.",
+      "related": ["Vie-nue", "État-exception"]
+    },
+    {
+      "id": "vie-nue",
+      "term": "Nuda vita",
+      "lang": "la",
+      "category": ["biopolitique", "agamben"],
+      "definition": "Bare life—life stripped of political qualification. Zoē vs bios. Agamben: modernity includes bare life in politics by excluding it. The camp as biopolitical space. The body as site of sovereignty.",
+      "related": ["Homo-sacer", "Biopolitique"]
+    },
+    {
+      "id": "etat-exception",
+      "term": "État d'exception",
+      "lang": "fr",
+      "category": ["politique", "agamben"],
+      "definition": "State of exception—Schmitt's Ausnahmezustand. Agamben: exception becomes the rule. Emergency powers, camps, indefinite detention. Law suspended in the name of law. The paradigm of contemporary government.",
+      "related": ["Homo-sacer", "Souveraineté"]
+    },
+    {
+      "id": "inoperosita",
+      "term": "Inoperosità",
+      "lang": "it",
+      "category": ["politique", "agamben"],
+      "definition": "Inoperativity, worklessness. Agamben's positive concept: not laziness but deactivation of function. The sabbath, contemplation, play. Politics without work. Human potential resting in itself.",
+      "related": ["Désœuvrement", "Potenza"]
+    },
+    {
+      "id": "qualunque",
+      "term": "Quodlibet",
+      "lang": "la",
+      "category": ["ontologie", "agamben"],
+      "definition": "Whatever, whichever you please. Agamben: the coming community is of whatever singularities. Not identity, not indifference: being such that it always matters. The singularity that has no identity to claim.",
+      "related": ["Singularité"]
+    },
+    {
+      "id": "immunitas",
+      "term": "Immunitas",
+      "lang": "la",
+      "category": ["biopolitique", "esposito"],
+      "definition": "Immunity—Esposito's paradigm. Exempt from munus (obligation). The community (communitas) demands giving; immunity protects against it. Modern politics as immunization. Protection that threatens what it protects.",
+      "related": ["Communitas", "Biopolitique"]
+    },
+    {
+      "id": "communitas",
+      "term": "Communitas",
+      "lang": "la",
+      "category": ["anthropologie", "philosophie"],
+      "definition": "Community as shared obligation (munus). Turner: liminal togetherness. Esposito: community exposes, makes vulnerable. Not identity but debt. The common as wound, not property.",
+      "related": ["Immunitas", "Liminalité"]
+    },
+    {
+      "id": "transindividuel",
+      "term": "Transindividuel",
+      "lang": "fr",
+      "category": ["philosophie", "simondon"],
+      "definition": "Transindividual—Simondon's term for the collective dimension of individuation. Neither individual nor social: the relation that constitutes both. Psychic and collective individuations are one process. Beyond the I/we split.",
+      "related": ["Individuation", "Préindividuel"]
+    },
+    {
+      "id": "preindividuel",
+      "term": "Préindividuel",
+      "lang": "fr",
+      "category": ["philosophie", "simondon"],
+      "definition": "Preindividual—the metastable field from which individuals emerge. Simondon: being is not substance but process. The preindividual is potential, tension, not-yet. Individuation never exhausts the preindividual.",
+      "related": ["Individuation", "Transindividuel"]
+    },
+    {
+      "id": "transduction",
+      "term": "Transduction",
+      "lang": "fr",
+      "category": ["philosophie", "simondon"],
+      "definition": "Transduction—operation where activity propagates, structuring a domain. Simondon: neither induction nor deduction. Crystal growth, embryogenesis, invention. Process that creates its own structure as it proceeds.",
+      "related": ["Individuation", "Métastabilité"]
+    },
+    {
+      "id": "metastabilite",
+      "term": "Métastabilité",
+      "lang": "fr",
+      "category": ["physique", "simondon"],
+      "definition": "Metastability—supersaturated state with potential energy. Simondon: being is metastable, not stable. Equilibrium is death. The preindividual field holds tensions. A trigger, and individuation cascades.",
+      "related": ["Préindividuel", "Transduction"]
+    },
+    {
+      "id": "correlationisme",
+      "term": "Corrélationnisme",
+      "lang": "fr",
+      "category": ["philosophie", "meillassoux"],
+      "definition": "Correlationism—Meillassoux's diagnosis. Since Kant: we only access the correlation of thought and being, never being itself. Finitude as prison. Speculative realism breaks the correlational circle.",
+      "related": ["Ancestralité", "Réalisme-spéculatif"]
+    },
+    {
+      "id": "ancestralite",
+      "term": "Ancestralité",
+      "lang": "fr",
+      "category": ["philosophie", "meillassoux"],
+      "definition": "Ancestrality—events before consciousness. Meillassoux: the arche-fossil (radioactive decay, cosmic background) proves a world without witness. Correlationism cannot think 4.5 billion years ago. The ancestral refutes finitude.",
+      "related": ["Corrélationnisme", "Arche-fossile"]
+    },
+    {
+      "id": "hyperchaos",
+      "term": "Hyperchaos",
+      "lang": "fr",
+      "category": ["ontologie", "meillassoux"],
+      "definition": "Hyperchaos—Meillassoux's absolute. Not disorder but absolute contingency: even the laws of nature could change for no reason. No necessary being, no sufficient reason. The only necessity is contingency itself.",
+      "related": ["Contingence", "Factualité"]
+    },
+    {
+      "id": "retrait",
+      "term": "Withdrawal",
+      "lang": "en",
+      "category": ["ontologie", "OOO"],
+      "definition": "Withdrawal—Harman's key claim. Objects withdraw from all relations, never fully accessible. Heidegger's tool-being generalized. Every object has a dark volcanic core. Even fire doesn't exhaust cotton.",
+      "related": ["OOO", "Real-object"]
+    },
+    {
+      "id": "ooo",
+      "term": "Object-Oriented Ontology",
+      "lang": "en",
+      "category": ["ontologie", "réalisme spéculatif"],
+      "definition": "OOO—Harman's position. Objects are primary, not subjects or matter. All objects are equally real: quarks, armies, fictions. Flat ontology. Against correlationism and undermining/overmining. Things in themselves.",
+      "related": ["Withdrawal", "Flat-ontology"]
+    },
+    {
+      "id": "hyperstition",
+      "term": "Hyperstition",
+      "lang": "en",
+      "category": ["théorie", "CCRU"],
+      "definition": "Hyperstition—fictions that make themselves real. CCRU: ideas that function as time-traveling viruses. Capitalism as hyperstition. The future causing the past. Narrative as sorcery. Belief becomes fact.",
+      "related": ["CCRU", "Accélérationnisme"]
+    },
+    {
+      "id": "accelerationnisme",
+      "term": "Accélérationnisme",
+      "lang": "fr",
+      "category": ["politique", "théorie"],
+      "definition": "Accelerationism—don't resist capitalism, accelerate it. Land: meltdown, inhuman capital. Left accelerationism: repurpose technology for liberation. Right: let it collapse. Controversial, influential. Speed as strategy.",
+      "related": ["Hyperstition", "CCRU"]
+    },
+    {
+      "id": "hauntologie",
+      "term": "Hauntologie",
+      "lang": "fr",
+      "category": ["philosophie", "culture"],
+      "definition": "Hauntology—Derrida's pun (hantologie = ontologie). Specters of Marx: the ghost is neither present nor absent. Mark Fisher: culture haunted by lost futures. Retromania, the inability to escape the past. The future that didn't happen.",
+      "related": ["Spectre", "Futur-antérieur"]
+    },
+    {
+      "id": "realisme-capitaliste",
+      "term": "Capitalist Realism",
+      "lang": "en",
+      "category": ["politique", "fisher"],
+      "definition": "Capitalist realism—Fisher's term. Easier to imagine the end of the world than the end of capitalism. Ideology as nature, alternatives unthinkable. The mental health crisis as political. The dominant mood of late capitalism.",
+      "related": ["Hauntologie", "Accélérationnisme"]
+    },
+    {
+      "id": "weird-eerie",
+      "term": "Weird/Eerie",
+      "lang": "en",
+      "category": ["esthétique", "fisher"],
+      "definition": "The weird and the eerie—Fisher's aesthetics. Weird: wrong presence, thing that shouldn't be there. Eerie: wrong absence, something missing. Lovecraft, Tarkovsky, Burial. Affects of the outside. The strange at the edge.",
+      "related": ["Unheimlich", "Hauntologie"]
+    },
+    {
+      "id": "grammatisation",
+      "term": "Grammatisation",
+      "lang": "fr",
+      "category": ["technique", "stiegler"],
+      "definition": "Grammatization—Stiegler's term. The process by which mental and bodily flows become discrete, reproducible units. Writing, recording, code. Tertiary retention. Technical memory externalizing, transforming us. The pharmakon again.",
+      "related": ["Rétention-tertiaire", "Prolétarisation"]
+    },
+    {
+      "id": "retention-tertiaire",
+      "term": "Rétention tertiaire",
+      "lang": "fr",
+      "category": ["technique", "stiegler"],
+      "definition": "Tertiary retention—Stiegler extending Husserl. Primary: present. Secondary: memory. Tertiary: technical supports (writing, recording). We are constituted by our tertiary retentions. External memory shapes internal time.",
+      "related": ["Grammatisation", "Épiphylogénèse"]
+    },
+    {
+      "id": "epiphylogenese",
+      "term": "Épiphylogénèse",
+      "lang": "fr",
+      "category": ["anthropologie", "stiegler"],
+      "definition": "Epiphylogenesis—Stiegler's term. Evolution continued by other means: not genes but technics. Tools, writing, institutions constitute the human. We inherit acquired characteristics—not biologically but technically. Leroi-Gourhan extended.",
+      "related": ["Rétention-tertiaire", "Grammatisation"]
+    },
+    {
+      "id": "spherologie",
+      "term": "Sphérologie",
+      "lang": "fr",
+      "category": ["philosophie", "sloterdijk"],
+      "definition": "Spherology—Sloterdijk's grand project. Humans live in spheres: bubbles (intimate), globes (metaphysical), foams (modern plural). Immunitary architecture. Being-in as being-in-spheres. Where are we? In protected space.",
+      "related": ["Immunité", "Anthropotechnique"]
+    },
+    {
+      "id": "anthropotechnique",
+      "term": "Anthropotechnique",
+      "lang": "fr",
+      "category": ["philosophie", "sloterdijk"],
+      "definition": "Anthropotechnics—Sloterdijk's term. Humans as self-cultivating animals. Exercise, training, asceticism: techniques of producing humans. From ancient askēsis to biopolitics. We make ourselves through practice. The return of the vertical.",
+      "related": ["Sphérologie", "Exercice"]
+    },
+    {
+      "id": "autopoiese",
+      "term": "Autopoïèse",
+      "lang": "fr",
+      "category": ["biologie", "systèmes"],
+      "definition": "Autopoiesis—self-making. Maturana and Varela: living systems produce their own components. Operationally closed, structurally coupled. Luhmann applied it to society: communication produces communication. Systems that make themselves.",
+      "related": ["Système", "Couplage-structurel"]
+    },
+    {
+      "id": "double-bind",
+      "term": "Double Bind",
+      "lang": "en",
+      "category": ["psychiatrie", "bateson"],
+      "definition": "Double bind—Bateson's schizogenesis. Contradictory injunctions with no escape: 'Be spontaneous!' Damned if you do, damned if you don't. The context forbids recognizing the contradiction. Madness as logical response to impossible situation.",
+      "related": ["Schismogenèse", "Méta-communication"]
+    },
+    {
+      "id": "schismogenese",
+      "term": "Schismogenèse",
+      "lang": "fr",
+      "category": ["anthropologie", "bateson"],
+      "definition": "Schismogenesis—Bateson's term for escalating differentiation. Symmetrical: rivalry spirals (arms race). Complementary: roles reinforce (dominance/submission). Social fission generated by interaction patterns. How relationships break.",
+      "related": ["Double-bind", "Feedback"]
+    },
+    {
+      "id": "ungrund",
+      "term": "Ungrund",
+      "lang": "de",
+      "category": ["théosophie", "böhme"],
+      "definition": "Ungrund—the groundless ground. Böhme: before God, there is the Ungrund—dark, empty, pure will without object. God emerges from the Ungrund through Sehnsucht. The abyss behind divinity. Schelling, Heidegger heard echoes.",
+      "related": ["Théosophie", "Abîme"]
+    },
+    {
+      "id": "correspondances",
+      "term": "Correspondances",
+      "lang": "fr",
+      "category": ["ésotérisme", "swedenborg"],
+      "definition": "Correspondences—Swedenborg's doctrine. Everything material corresponds to something spiritual. As above, so below—systematized. Baudelaire's poem, Symbolist theory. The world as network of hidden meanings.",
+      "related": ["Analogie", "Symbolisme"]
+    },
+    {
+      "id": "mundus-imaginalis",
+      "term": "Mundus imaginalis",
+      "lang": "la",
+      "category": ["soufisme", "corbin"],
+      "definition": "Mundus imaginalis—Corbin's term for the imaginal world. Not imaginary (unreal) but a distinct ontological realm. Alam al-mithal in Arabic. Where angels are seen, visions occur. Between matter and intellect. Iran's gift to ontology.",
+      "related": ["Imaginal", "Hûrqalyâ"]
+    },
+    {
+      "id": "ta-wil",
+      "term": "Ta'wīl",
+      "lang": "ar",
+      "category": ["herméneutique", "soufisme"],
+      "definition": "Ta'wīl—esoteric interpretation. Returning the text to its origin. Beyond literal (zahir) to hidden (batin). Corbin: spiritual hermeneutics. The angel of interpretation. Every text has an inside. Reading as ascent.",
+      "related": ["Bâtin", "Zâhir"]
+    },
+    {
+      "id": "tsimtsum",
+      "term": "Tsimtsoum",
+      "lang": "he",
+      "category": ["kabbale", "luria"],
+      "definition": "Tsimtsum—contraction, withdrawal. Isaac Luria: God contracted to make space for creation. The infinite withdrew into itself. Exile as cosmogony. The vacuum theology creates. Scholem: myth of exile as creation.",
+      "related": ["Shevirat-kelim", "Tikkun"]
+    },
+    {
+      "id": "shevirat-kelim",
+      "term": "Shevírat ha-Kelím",
+      "lang": "he",
+      "category": ["kabbale", "luria"],
+      "definition": "Breaking of the vessels—Luria's catastrophe. Divine light poured into vessels; they shattered. Sparks fell, trapped in shells (kelipot). Creation as disaster. Tikkun gathers the sparks. Redemption as repair. Exile built into ontology.",
+      "related": ["Tsimtsum", "Tikkun-olam"]
+    },
+    {
+      "id": "pleroma",
+      "term": "Πλήρωμα",
+      "lang": "el",
+      "category": ["gnosticisme", "théologie"],
+      "definition": "Pleroma—the fullness, the divine totality. Gnostic: the realm of aeons before the fall. Jung: the collective unconscious. Against the kenoma (emptiness). The wholeness we fell from, the wholeness we seek.",
+      "related": ["Aeon", "Sophia"]
+    },
+    {
+      "id": "demiurge",
+      "term": "Δημιουργός",
+      "lang": "el",
+      "category": ["gnosticisme", "philosophie"],
+      "definition": "Demiurge—the craftsman god. Plato's Timaeus: good, forms the cosmos. Gnosticism: ignorant or evil, created this prison world. Yaldabaoth, the lion-headed archon. The god who thinks he's God. The maker who doesn't know.",
+      "related": ["Archonte", "Pleroma"]
+    },
+    {
+      "id": "energeia-ousia",
+      "term": "Ἐνέργεια/Οὐσία",
+      "lang": "el",
+      "category": ["théologie byzantine", "palamas"],
+      "definition": "Essence/energies distinction—Palamas's defense. We participate in divine energies (uncreated grace, light of Tabor), not divine essence. Real deification, not created effects. Orthodox answer to Barlaam. The light is God but God is more.",
+      "related": ["Théosis", "Hésychasme"]
+    },
+    {
+      "id": "perichoresis",
+      "term": "Περιχώρησις",
+      "lang": "el",
+      "category": ["théologie", "trinité"],
+      "definition": "Perichoresis—mutual indwelling. The Trinity: Father, Son, Spirit interpenetrate without confusion. Latin: circumincessio. Each in each. The dance of three-in-one. Relational ontology at the heart of God.",
+      "related": ["Trinité", "Hypostase"]
+    },
+    {
+      "id": "theandric",
+      "term": "Θεανδρικός",
+      "lang": "el",
+      "category": ["christologie", "byzantin"],
+      "definition": "Theandric—divine-human. Pseudo-Dionysius: Christ's actions are theandric, neither purely divine nor purely human. The hyphenated being. Chalcedon in a word: two natures, one person, new kind of operation.",
+      "related": ["Hypostase", "Énergie"]
+    },
+    {
+      "id": "enhypostasia",
+      "term": "Ἐνυπόστασις",
+      "lang": "el",
+      "category": ["christologie", "byzantin"],
+      "definition": "Enhypostasia—Christ's human nature exists 'in' the divine hypostasis. No human person, but fully human nature. Leontius of Byzantium's solution. Against Apollinarianism and Nestorianism. The human assumed into the divine person.",
+      "related": ["Hypostase", "Christologie"]
+    },
+    {
+      "id": "logoi",
+      "term": "Λόγοι",
+      "lang": "el",
+      "category": ["théologie byzantine", "maxime"],
+      "definition": "Logoi—divine reasons, principles, wills. Maximus: every creature has its logos in the Logos. Participation in Christ's creative ideas. Natural contemplation discovers logoi. The world as text of God. Theophany everywhere.",
+      "related": ["Logos", "Theoria"]
+    },
+    {
+      "id": "tropos",
+      "term": "Τρόπος",
+      "lang": "el",
+      "category": ["théologie byzantine", "maxime"],
+      "definition": "Tropos—mode, manner of existence. Maximus: logos is what a thing is, tropos is how it exists. Sin perverts tropos, not logos. Redemption restores proper mode. The modal flexibility of creaturely being.",
+      "related": ["Logoi", "Gnomi"]
+    },
+    {
+      "id": "sophiologie",
+      "term": "Sophiologie",
+      "lang": "fr",
+      "category": ["théologie russe", "soloviev"],
+      "definition": "Sophiology—the wisdom theology. Soloviev, Bulgakov, Florensky: Sophia as divine-creaturely link. Fourth hypostasis? World-soul? Church? Controversial, condemned. The feminine face of God. Russia's strange gift to theology.",
+      "related": ["Sophia", "Unitotalité"]
+    },
+    {
+      "id": "unitotalite",
+      "term": "Всеединство",
+      "lang": "ru",
+      "category": ["philosophie russe", "soloviev"],
+      "definition": "All-unity, unitotality—Soloviev's principle. Not monism, not pluralism: all in one, one in all. Positive all-unity: love, not force, unites. The differents remain, the whole holds. Russia's answer to German idealism.",
+      "related": ["Sophiologie", "Sobornost"]
+    },
+    {
+      "id": "bogochelovechestvo",
+      "term": "Богочеловечество",
+      "lang": "ru",
+      "category": ["philosophie russe", "soloviev"],
+      "definition": "Godmanhood, divine humanity—Soloviev's christological anthropology. Not just Christ: the whole human vocation. We are to become God-men. Theosis as collective project. The divinization of humanity.",
+      "related": ["Théosis", "Unitotalité"]
+    },
+    {
+      "id": "meon",
+      "term": "Μή ὄν",
+      "lang": "el",
+      "category": ["ontologie", "philosophie russe"],
+      "definition": "Meon—relative non-being, not absolute nothing (ouk on). Plato's Sophist. Russian thought: Berdyaev's meonic freedom—uncreated, prior to God's act. Freedom from the nothing. The abyss that isn't simply null.",
+      "related": ["Ungrund", "Liberté"]
+    },
+    {
+      "id": "antinomie",
+      "term": "Antinomie",
+      "lang": "fr",
+      "category": ["logique", "théologie"],
+      "definition": "Antinomy—Kant: reason's self-contradictions. Florensky radicalized: truth is antinomical. Contradiction is the form of truth, not its failure. Hold both sides. Crucifixion of logic. Russian antirationalism.",
+      "related": ["Paradoxe", "Coïncidentia-oppositorum"]
+    },
+    {
+      "id": "coincidentia-oppositorum",
+      "term": "Coincidentia oppositorum",
+      "lang": "la",
+      "category": ["philosophie", "nicolas de cues"],
+      "definition": "Coincidence of opposites—Nicholas of Cusa's principle. God beyond contradiction: maximum and minimum coincide. Learned ignorance reaches the unthinkable. The wall of paradise where opposites meet. Mystical logic.",
+      "related": ["Docte-ignorance", "Antinomie"]
+    },
+    {
+      "id": "docte-ignorance",
+      "term": "Docta ignorantia",
+      "lang": "la",
+      "category": ["philosophie", "nicolas de cues"],
+      "definition": "Learned ignorance—knowing that we don't know. Socrates Christianized. Cusanus: the more we know, the more we know we can't know. Negative theology as epistemology. Ignorance as achievement, not failure.",
+      "related": ["Apophatique", "Coincidentia-oppositorum"]
+    },
+    {
+      "id": "decalage-prometheen",
+      "term": "Décalage prométhéen",
+      "lang": "fr",
+      "category": ["technique", "anders"],
+      "definition": "Promethean gap—Anders's diagnosis. We can make what we cannot imagine or feel. The bomb: we know millions will die, but can't feel it. Capacities exceed faculties. Technical shame: obsolescence of the human.",
+      "related": ["Technique", "Obsolescence"]
+    },
+    {
+      "id": "mimesis-desirsocial",
+      "term": "Désir mimétique",
+      "lang": "fr",
+      "category": ["anthropologie", "girard"],
+      "definition": "Mimetic desire—Girard's key. We desire what others desire. The model is also rival. Triangular desire, not autonomous. Mimesis generates conflict, rivalry, violence. The sacrificial mechanism manages it. Culture is founded on murder.",
+      "related": ["Bouc-émissaire", "Violence-fondatrice"]
+    },
+    {
+      "id": "bouc-emissaire",
+      "term": "Bouc émissaire",
+      "lang": "fr",
+      "category": ["anthropologie", "girard"],
+      "definition": "Scapegoat—Girard's mechanism. Mimetic crisis resolved by unanimous violence against one victim. The victim becomes sacred: cause of crisis and cure. Myth hides this; Gospels reveal it. The truth of religion is its lie.",
+      "related": ["Désir-mimétique", "Sacrifice"]
+    },
+    {
+      "id": "contre-productivite",
+      "term": "Contre-productivité",
+      "lang": "fr",
+      "category": ["critique", "illich"],
+      "definition": "Counterproductivity—Illich's concept. Beyond a threshold, institutions produce the opposite of their aim. Schools make people stupid, medicine makes them sick, transport immobilizes. Radical thresholds. The institution as nemesis.",
+      "related": ["Convivialité", "Seuil"]
+    },
+    {
+      "id": "convivialite",
+      "term": "Convivialité",
+      "lang": "fr",
+      "category": ["politique", "illich"],
+      "definition": "Conviviality—Illich's alternative. Tools for autonomous, creative use. Bicycles not cars, libraries not schools. Low-energy, high-communication. The good society is convivial. Against industrial intensity. The alternative that was refused.",
+      "related": ["Contre-productivité", "Autonomie"]
     }
   ]
 }

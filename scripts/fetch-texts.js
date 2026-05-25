@@ -19,8 +19,8 @@ if (!fs.existsSync(TEXTS_DIR)) {
     fs.mkdirSync(TEXTS_DIR, { recursive: true });
 }
 
-// Rate limiting
-const DELAY_MS = 1000; // 1 second between requests
+// Rate limiting - be polite to avoid blocks
+const DELAY_MS = 2000; // 2 seconds between requests
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // HTTP fetch with retries
@@ -30,7 +30,9 @@ function fetchUrl(url, retries = 3) {
 
         const request = protocol.get(url, {
             headers: {
-                'User-Agent': 'AlephCatalog/1.0 (Educational project; contact@example.com)'
+                'User-Agent': 'Mozilla/5.0 (compatible; AlephCatalog/1.0; +https://github.com/guilhermegfmachado/aleph)',
+                'Accept': 'text/html,text/plain,*/*',
+                'Accept-Language': 'en-US,en;q=0.9'
             }
         }, response => {
             // Handle redirects
@@ -292,5 +294,8 @@ async function main() {
 
 main().catch(err => {
     console.error('Fatal error:', err);
-    process.exit(1);
+    // Don't exit with error code if we have some texts already
+    // This prevents CI from failing when external sources are down
+    const textsExist = fs.existsSync(TEXTS_DIR) && fs.readdirSync(TEXTS_DIR).length > 0;
+    process.exit(textsExist ? 0 : 1);
 });

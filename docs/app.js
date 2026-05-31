@@ -575,6 +575,7 @@ function renderHomePage() {
     renderLangPills();
     renderReadingLists();
     renderFeaturedAuthors();
+    renderFavorites();
     renderRecentlyRead();
     setupSurpriseButton();
     setupRandomPassage();
@@ -905,6 +906,61 @@ function renderRecentlyRead() {
         return `
             <a href="#reader" class="recent-item" onclick="openReader('${id}'); return false;">
                 <span class="recent-title">${escapeHtml(book.title)}</span>
+                <span class="recent-author">${escapeHtml(book.author)}</span>
+            </a>
+        `;
+    }).join('');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FAVORITES / LIBRARY
+// ─────────────────────────────────────────────────────────────────────────────
+function getFavorites() {
+    return JSON.parse(localStorage.getItem('aleph-favorites') || '[]');
+}
+
+function isFavorite(bookId) {
+    return getFavorites().includes(bookId);
+}
+
+function toggleFavorite(bookId) {
+    const favs = getFavorites();
+    const idx = favs.indexOf(bookId);
+    if (idx >= 0) favs.splice(idx, 1);
+    else favs.unshift(bookId);
+    localStorage.setItem('aleph-favorites', JSON.stringify(favs));
+    updateFavoriteButton();
+    renderFavorites();
+    return isFavorite(bookId);
+}
+window.toggleFavorite = toggleFavorite;
+
+function updateFavoriteButton() {
+    const btn = document.getElementById('readerFavBtn');
+    if (!btn || !state.reader.bookId) return;
+    const fav = isFavorite(state.reader.bookId);
+    btn.textContent = fav ? '★' : '☆';
+    btn.classList.toggle('active', fav);
+    btn.title = fav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+}
+
+function renderFavorites() {
+    const container = document.getElementById('favoritesSection');
+    const list = document.getElementById('favoritesList');
+    if (!container || !list) return;
+
+    const favs = getFavorites().filter(id => state.bookIndex[id]).slice(0, 8);
+    if (!favs.length) {
+        container.style.display = 'none';
+        return;
+    }
+
+    container.style.display = '';
+    list.innerHTML = favs.map(id => {
+        const book = state.bookIndex[id];
+        return `
+            <a href="#reader" class="recent-item" onclick="openReader('${id}'); return false;">
+                <span class="recent-title">★ ${escapeHtml(book.title)}</span>
                 <span class="recent-author">${escapeHtml(book.author)}</span>
             </a>
         `;
@@ -2164,6 +2220,14 @@ function setupReaderPage() {
 
     // Text-to-speech controls
     document.getElementById('readerTtsBtn')?.addEventListener('click', toggleReaderTts);
+
+    // Favorite toggle
+    document.getElementById('readerFavBtn')?.addEventListener('click', () => {
+        if (state.reader.bookId) toggleFavorite(state.reader.bookId);
+    });
+
+    // Print / export to PDF
+    document.getElementById('readerPrintBtn')?.addEventListener('click', () => window.print());
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -2241,6 +2305,7 @@ async function openReader(bookId, opts = {}) {
     trackRecentlyRead(bookId);
     renderReaderShell(book);
     renderRelatedTexts(book);
+    updateFavoriteButton();
     updateSideBySideUI();
     navigateTo('reader');
 

@@ -2413,8 +2413,10 @@ details.sources-section[open] > summary::after {
 
 .reader-external:hover { color: var(--accent); border-color: var(--accent); }
 
-/* Text-to-speech button */
-.reader-tts-btn {
+/* Text-to-speech, favorite, print buttons */
+.reader-tts-btn,
+.reader-fav-btn,
+.reader-print-btn {
   font-family: var(--mono);
   font-size: 0.7rem;
   letter-spacing: 0.06em;
@@ -2426,13 +2428,18 @@ details.sources-section[open] > summary::after {
   transition: all 0.15s;
 }
 
-.reader-tts-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+.reader-tts-btn:hover,
+.reader-fav-btn:hover,
+.reader-print-btn:hover { color: var(--ink); border-color: var(--ink-2); }
 
-.reader-tts-btn.active {
+.reader-tts-btn.active,
+.reader-fav-btn.active {
   color: var(--accent);
   border-color: var(--accent);
   background: rgba(193, 77, 44, 0.08);
 }
+
+.reader-fav-btn { font-size: 0.95rem; line-height: 1; }
 
 /* Reading progress bar */
 .reader-progress {

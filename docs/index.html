@@ -114,6 +114,14 @@
                 </button>
             </div>
 
+            <!-- Favorites -->
+            <section class="recently-read" id="favoritesSection" style="display: none;">
+                <h2 class="section-title">Ma bibliothèque</h2>
+                <div class="recent-list" id="favoritesList">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
             <!-- Recently Read -->
             <section class="recently-read" id="recentlyRead" style="display: none;">
                 <h2 class="section-title">Lectures récentes</h2>
@@ -228,7 +236,9 @@
                     <p class="reader-author" id="readerAuthor">—</p>
                     <div class="reader-actions">
                         <div class="reader-lang-switch" id="readerLangSwitch"></div>
+                        <button class="reader-fav-btn" id="readerFavBtn" title="Ajouter aux favoris">☆</button>
                         <button class="reader-tts-btn" id="readerTtsBtn" title="Écouter le texte">▶ Écouter</button>
+                        <button class="reader-print-btn" id="readerPrintBtn" title="Imprimer ou exporter en PDF">⎙ PDF</button>
                         <button class="reader-side-by-side-btn" id="sideBySideToggle" title="Afficher deux langues côte à côte">⫼</button>
                         <select class="reader-side-lang" id="sideLangSelect" style="display:none;"></select>
                         <input type="text" class="reader-search-input" id="readerSearchInput" placeholder="chercher dans ce texte...">

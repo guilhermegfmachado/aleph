@@ -11,6 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aleph — catalogue littéraire universel</title>
     <meta name="description" content="Index de littérature du domaine public à travers toutes les traditions — grec, sanskrit, japonais, hébreu, latin, et plus.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aleph — Catalogue littéraire universel">
+    <meta property="og:description" content="Index de littérature du domaine public à travers toutes les traditions — grec, sanskrit, japonais, hébreu, latin, et plus.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guilhermegfmachado.github.io/aleph/">
+    <meta property="og:locale" content="fr_FR">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Aleph — Catalogue littéraire universel">
+    <meta name="twitter:description" content="Index de littérature du domaine public à travers toutes les traditions.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#c14d2c">
@@ -20,9 +30,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js" integrity="sha384-rRoXxn2yHlrZYB587Ki9RO1tONhLdM6XfORg7Rw4uwH4/Fh/5nP7IUX91bkaKUgs" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
     <!-- ═══════════════════════════════════════════════════════════════════════
          HEADER
          ═══════════════════════════════════════════════════════════════════════ -->
@@ -51,7 +64,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- ═══════════════════════════════════════════════════════════════════
              HOME PAGE
              ═══════════════════════════════════════════════════════════════════ -->
@@ -153,7 +166,8 @@
                 </aside>
 
                 <div class="browse-main">
-                    <input type="text" class="browse-filter-input" id="browseFilter" placeholder="filtrer par titre, auteur, mot-clé...">
+                    <label for="browseFilter" class="visually-hidden">Filtrer les textes</label>
+                    <input type="text" class="browse-filter-input" id="browseFilter" placeholder="filtrer par titre, auteur, mot-clé..." aria-label="Filtrer par titre, auteur, mot-clé">
 
                     <div class="browse-toolbar">
                         <span class="browse-count">
@@ -204,7 +218,8 @@
                 </header>
 
                 <div class="search-controls">
-                    <input type="text" class="fulltext-input" id="fulltextInput" placeholder="ex: virtue, ataraxia, république..." autocomplete="off">
+                    <label for="fulltextInput" class="visually-hidden">Rechercher dans les textes</label>
+                    <input type="text" class="fulltext-input" id="fulltextInput" placeholder="ex: virtue, ataraxia, république..." autocomplete="off" aria-label="Rechercher dans les textes">
                     <div class="search-meta" id="searchMeta"></div>
                 </div>
 
@@ -221,7 +236,7 @@
              READER PAGE — full text of a single work
              ═══════════════════════════════════════════════════════════════════ -->
         <section id="reader" class="page">
-            <div class="reader-progress" id="readerProgress"><div class="reader-progress-bar" id="readerProgressBar"></div></div>
+            <div class="reader-progress" id="readerProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progression de lecture"><div class="reader-progress-bar" id="readerProgressBar"></div></div>
             <div class="reader-page">
                 <header class="reader-header">
                     <button class="reader-back" id="readerBack">← Retour</button>
@@ -236,12 +251,12 @@
                     <p class="reader-author" id="readerAuthor">—</p>
                     <div class="reader-actions">
                         <div class="reader-lang-switch" id="readerLangSwitch"></div>
-                        <button class="reader-fav-btn" id="readerFavBtn" title="Ajouter aux favoris">☆</button>
-                        <button class="reader-tts-btn" id="readerTtsBtn" title="Écouter le texte">▶ Écouter</button>
-                        <button class="reader-print-btn" id="readerPrintBtn" title="Imprimer ou exporter en PDF">⎙ PDF</button>
+                        <button class="reader-fav-btn" id="readerFavBtn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris" aria-pressed="false">☆</button>
+                        <button class="reader-tts-btn" id="readerTtsBtn" title="Écouter le texte" aria-label="Écouter le texte à voix haute" aria-pressed="false">▶ Écouter</button>
+                        <button class="reader-print-btn" id="readerPrintBtn" title="Imprimer ou exporter en PDF" aria-label="Imprimer ou exporter en PDF">⎙ PDF</button>
                         <button class="reader-side-by-side-btn" id="sideBySideToggle" title="Afficher deux langues côte à côte">⫼</button>
                         <select class="reader-side-lang" id="sideLangSelect" style="display:none;"></select>
-                        <input type="text" class="reader-search-input" id="readerSearchInput" placeholder="chercher dans ce texte...">
+                        <input type="text" class="reader-search-input" id="readerSearchInput" placeholder="chercher dans ce texte..." aria-label="Chercher dans ce texte">
                         <div class="reader-font-controls">
                             <button class="reader-font-btn" id="fontDecrease" title="Réduire">A−</button>
                             <button class="reader-font-btn" id="fontIncrease" title="Agrandir">A+</button>
@@ -277,7 +292,8 @@
                 </header>
 
                 <div class="glossary-controls">
-                    <input type="text" class="glossary-search" id="glossarySearch" placeholder="rechercher un terme...">
+                    <label for="glossarySearch" class="visually-hidden">Rechercher un terme</label>
+                    <input type="text" class="glossary-search" id="glossarySearch" placeholder="rechercher un terme..." aria-label="Rechercher un terme dans le glossaire">
                     <select class="glossary-lang-filter" id="glossaryLangFilter">
                         <option value="">toutes les langues</option>
                     </select>
@@ -332,7 +348,7 @@
                 </div>
 
                 <footer class="sources-colophon-inline">
-                    <p><strong>Composé en</strong> EB Garamond et JetBrains Mono. <strong>Conçu par</strong> <a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme Machado</a>, 2025. <strong>Licence</strong> MIT.</p>
+                    <p><strong>Composé en</strong> EB Garamond et JetBrains Mono. <strong>Conçu par</strong> <a href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener noreferrer">Guilherme Machado</a>, 2025. <strong>Licence</strong> MIT.</p>
                 </footer>
             </div>
         </section>
@@ -353,7 +369,8 @@
                 </header>
 
                 <div class="authors-controls">
-                    <input type="text" class="authors-search" id="authorsSearch" placeholder="rechercher un auteur...">
+                    <label for="authorsSearch" class="visually-hidden">Rechercher un auteur</label>
+                    <input type="text" class="authors-search" id="authorsSearch" placeholder="rechercher un auteur..." aria-label="Rechercher un auteur">
                     <div class="authors-tag-cloud" id="authorsTagCloud">
                         <!-- Populated by JS -->
                     </div>
@@ -373,7 +390,8 @@
          ═══════════════════════════════════════════════════════════════════════ -->
     <div class="command-palette-overlay" id="commandPalette">
         <div class="command-palette">
-            <input type="text" class="command-palette-input" id="commandInput" placeholder="Chercher textes et termes...">
+            <label for="commandInput" class="visually-hidden">Recherche rapide</label>
+            <input type="text" class="command-palette-input" id="commandInput" placeholder="Chercher textes et termes..." aria-label="Recherche rapide de textes et termes">
             <div class="command-palette-results" id="commandResults">
                 <!-- Populated by JS -->
             </div>
@@ -387,8 +405,16 @@
         <div class="footer-links">
             <a href="#" id="openPaletteFooter">/ · Chercher</a>
         </div>
-        <span class="footer-tagline">Aleph · Catalogue littéraire universel · <a href="https://guilhermegfmachado.github.io/work/" target="_blank">Guilherme Machado</a></span>
+        <span class="footer-tagline">Aleph · Catalogue littéraire universel · <a href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener noreferrer">Guilherme Machado</a></span>
     </footer>
+
+    <noscript>
+        <div style="padding: 2rem; text-align: center; font-family: Georgia, serif;">
+            <h1>Aleph — Catalogue littéraire universel</h1>
+            <p>Ce site nécessite JavaScript pour fonctionner correctement.</p>
+            <p>Veuillez activer JavaScript dans votre navigateur pour accéder au catalogue.</p>
+        </div>
+    </noscript>
 
     <script src="search-engine.js"></script>
     <script src="app.js"></script>

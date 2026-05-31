@@ -83,6 +83,12 @@ async function init() {
         console.error('Render error:', err);
     }
 
+    // Hide TTS button if Web Speech API not supported
+    if (!('speechSynthesis' in window)) {
+        const ttsBtn = document.getElementById('readerTtsBtn');
+        if (ttsBtn) ttsBtn.style.display = 'none';
+    }
+
     handleHashChange();
     window.addEventListener('hashchange', handleHashChange);
 }
@@ -942,6 +948,8 @@ function updateFavoriteButton() {
     btn.textContent = fav ? '★' : '☆';
     btn.classList.toggle('active', fav);
     btn.title = fav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    btn.setAttribute('aria-pressed', fav ? 'true' : 'false');
+    btn.setAttribute('aria-label', fav ? 'Retirer des favoris' : 'Ajouter aux favoris');
 }
 
 function renderFavorites() {
@@ -2235,11 +2243,13 @@ function setupReaderPage() {
 // ─────────────────────────────────────────────────────────────────────────────
 function updateReaderProgress() {
     const bar = document.getElementById('readerProgressBar');
+    const progress = document.getElementById('readerProgress');
     if (!bar) return;
     const doc = document.documentElement;
     const scrollable = doc.scrollHeight - doc.clientHeight;
-    const pct = scrollable > 0 ? Math.min(100, (window.scrollY / scrollable) * 100) : 0;
+    const pct = scrollable > 0 ? Math.min(100, Math.round((window.scrollY / scrollable) * 100)) : 0;
     bar.style.width = pct + '%';
+    if (progress) progress.setAttribute('aria-valuenow', pct);
 }
 
 function applyReaderFontSize(size) {
@@ -2794,6 +2804,8 @@ function stopReaderTts() {
     if (btn) {
         btn.textContent = '▶ Écouter';
         btn.classList.remove('active');
+        btn.setAttribute('aria-label', 'Écouter le texte à voix haute');
+        btn.setAttribute('aria-pressed', 'false');
     }
     document.querySelectorAll('.reader-para.tts-speaking')
         .forEach(p => p.classList.remove('tts-speaking'));
@@ -2813,7 +2825,12 @@ function toggleReaderTts() {
     if (!paras.length) return;
 
     ttsActive = true;
-    if (btn) { btn.textContent = '⏸ Arrêter'; btn.classList.add('active'); }
+    if (btn) {
+        btn.textContent = '⏸ Arrêter';
+        btn.classList.add('active');
+        btn.setAttribute('aria-label', 'Arrêter la lecture à voix haute');
+        btn.setAttribute('aria-pressed', 'true');
+    }
 
     const lang = SPEECH_LANG_MAP[state.reader.lang] || 'en-US';
     // Start near the first visible paragraph

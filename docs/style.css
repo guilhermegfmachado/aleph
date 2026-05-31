@@ -2492,6 +2492,42 @@ details.sources-section[open] > summary::after {
   gap: 1rem;
 }
 
+/* Glossary concepts appearing in the text */
+.reader-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.reader-concept-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  padding: 0.4rem 0.75rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.reader-concept-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.reader-concept-lang {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  font-style: normal;
+}
+
 .reader-related-card {
   display: flex;
   flex-direction: column;

@@ -2863,9 +2863,10 @@ function renderRelatedTexts(book) {
         .sort((a, b) => b.score - a.score || (a.book.year || 0) - (b.book.year || 0))
         .slice(0, 6);
 
-    if (!scored.length) { container.innerHTML = ''; return; }
+    // Glossary concepts that appear in this text (crosslinks)
+    const conceptsHtml = renderReaderConcepts(book);
 
-    container.innerHTML = `
+    const relatedHtml = scored.length ? `
         <h2 class="reader-related-title">À lire ensuite</h2>
         <div class="reader-related-grid">
             ${scored.map(({ book: b }) => `
@@ -2873,6 +2874,54 @@ function renderRelatedTexts(book) {
                     <span class="reader-related-card-title">${escapeHtml(b.title)}</span>
                     <span class="reader-related-card-author">${escapeHtml(b.author)}</span>
                     <span class="reader-related-card-meta">${b.year || ''} · ${b.lang.toUpperCase()}</span>
+                </button>
+            `).join('')}
+        </div>
+    ` : '';
+
+    container.innerHTML = conceptsHtml + relatedHtml;
+}
+
+// Glossary terms (concepts) that appear in the current text
+function renderReaderConcepts(book) {
+    if (!state.crosslinks?.textToTerms || !state.terms.length) return '';
+
+    // textToTerms is keyed by textId (bookId_lang); try current lang then any lang
+    const t2t = state.crosslinks.textToTerms;
+    let termIds = t2t[`${book.id}_${state.reader.lang}`];
+    if (!termIds || !termIds.length) {
+        // fall back to any language variant of this book
+        const key = Object.keys(t2t).find(k => k.startsWith(book.id + '_'));
+        termIds = key ? t2t[key] : [];
+    }
+    if (!termIds || !termIds.length) return '';
+
+    const termById = {};
+    state.terms.forEach(t => { termById[t.id] = t; });
+
+    const concepts = termIds
+        .map(id => termById[id])
+        .filter(Boolean)
+        // Surface the "intraduisibles" — non-English terms are the meaningful
+        // matches; plain English glossary words tend to be coincidental.
+        .sort((a, b) => {
+            const aEn = (a.lang === 'en') ? 1 : 0;
+            const bEn = (b.lang === 'en') ? 1 : 0;
+            if (aEn !== bEn) return aEn - bEn;
+            return a.term.localeCompare(b.term);
+        })
+        .slice(0, 18);
+
+    if (!concepts.length) return '';
+
+    return `
+        <h2 class="reader-related-title">Concepts dans ce texte</h2>
+        <div class="reader-concepts">
+            ${concepts.map(t => `
+                <button class="reader-concept-pill" onclick="selectGlossaryTerm('${t.id}'); navigateTo('glossary');"
+                        title="${escapeHtml((t.definition || '').slice(0, 120))}">
+                    ${escapeHtml(t.term)}
+                    <span class="reader-concept-lang">${(t.lang || '').toUpperCase()}</span>
                 </button>
             `).join('')}
         </div>

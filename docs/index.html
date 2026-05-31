@@ -213,6 +213,7 @@
              READER PAGE — full text of a single work
              ═══════════════════════════════════════════════════════════════════ -->
         <section id="reader" class="page">
+            <div class="reader-progress" id="readerProgress"><div class="reader-progress-bar" id="readerProgressBar"></div></div>
             <div class="reader-page">
                 <header class="reader-header">
                     <button class="reader-back" id="readerBack">← Retour</button>
@@ -227,6 +228,7 @@
                     <p class="reader-author" id="readerAuthor">—</p>
                     <div class="reader-actions">
                         <div class="reader-lang-switch" id="readerLangSwitch"></div>
+                        <button class="reader-tts-btn" id="readerTtsBtn" title="Écouter le texte">▶ Écouter</button>
                         <button class="reader-side-by-side-btn" id="sideBySideToggle" title="Afficher deux langues côte à côte">⫼</button>
                         <select class="reader-side-lang" id="sideLangSelect" style="display:none;"></select>
                         <input type="text" class="reader-search-input" id="readerSearchInput" placeholder="chercher dans ce texte...">
@@ -242,6 +244,8 @@
                 <div class="reader-body" id="readerBody">
                     <p class="reader-loading">Chargement…</p>
                 </div>
+
+                <aside class="reader-related" id="readerRelated"></aside>
             </div>
         </section>
 

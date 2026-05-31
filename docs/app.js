@@ -264,6 +264,9 @@ function handleHashChange() {
         return;
     }
 
+    // Stop any reading-aloud when leaving the reader
+    if (hash !== 'reader' && typeof stopReaderTts === 'function') stopReaderTts();
+
     // Update active nav link
     document.querySelectorAll('.main-nav a').forEach(link => {
         link.classList.toggle('active', link.getAttribute('data-page') === hash);
@@ -2149,18 +2152,30 @@ function setupReaderPage() {
         }
     });
 
-    // Save reading position on scroll
+    // Save reading position on scroll + update progress bar
     let scrollTimer = null;
-    document.getElementById('readerBody')?.addEventListener('scroll', () => {
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(saveReadingPosition, 500);
-    }, { passive: true });
     window.addEventListener('scroll', () => {
-        if (window.location.hash === '#reader') {
+        if (window.location.hash.startsWith('#reader') || state.reader.bookId) {
+            updateReaderProgress();
             clearTimeout(scrollTimer);
             scrollTimer = setTimeout(saveReadingPosition, 500);
         }
     }, { passive: true });
+
+    // Text-to-speech controls
+    document.getElementById('readerTtsBtn')?.addEventListener('click', toggleReaderTts);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// READING PROGRESS
+// ─────────────────────────────────────────────────────────────────────────────
+function updateReaderProgress() {
+    const bar = document.getElementById('readerProgressBar');
+    if (!bar) return;
+    const doc = document.documentElement;
+    const scrollable = doc.scrollHeight - doc.clientHeight;
+    const pct = scrollable > 0 ? Math.min(100, (window.scrollY / scrollable) * 100) : 0;
+    bar.style.width = pct + '%';
 }
 
 function applyReaderFontSize(size) {
@@ -2222,8 +2237,10 @@ async function openReader(bookId, opts = {}) {
     const searchInput = document.getElementById('readerSearchInput');
     if (searchInput) searchInput.value = state.reader.query;
 
+    stopReaderTts();
     trackRecentlyRead(bookId);
     renderReaderShell(book);
+    renderRelatedTexts(book);
     updateSideBySideUI();
     navigateTo('reader');
 
@@ -2699,6 +2716,103 @@ function speakTerm(term, lang) {
     window.speechSynthesis.speak(utterance);
 }
 window.speakTerm = speakTerm;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// READER TEXT-TO-SPEECH
+// ─────────────────────────────────────────────────────────────────────────────
+let ttsActive = false;
+
+function stopReaderTts() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    ttsActive = false;
+    const btn = document.getElementById('readerTtsBtn');
+    if (btn) {
+        btn.textContent = '▶ Écouter';
+        btn.classList.remove('active');
+    }
+    document.querySelectorAll('.reader-para.tts-speaking')
+        .forEach(p => p.classList.remove('tts-speaking'));
+}
+
+function toggleReaderTts() {
+    const btn = document.getElementById('readerTtsBtn');
+    if (!('speechSynthesis' in window)) {
+        if (btn) btn.textContent = '✕ non supporté';
+        return;
+    }
+    if (ttsActive) { stopReaderTts(); return; }
+
+    // Read each visible paragraph in sequence, highlighting as we go
+    const paras = Array.from(document.querySelectorAll('#readerBody .reader-para'))
+        .filter(p => p.textContent.trim());
+    if (!paras.length) return;
+
+    ttsActive = true;
+    if (btn) { btn.textContent = '⏸ Arrêter'; btn.classList.add('active'); }
+
+    const lang = SPEECH_LANG_MAP[state.reader.lang] || 'en-US';
+    // Start near the first visible paragraph
+    let startIdx = paras.findIndex(p => p.getBoundingClientRect().bottom > 120);
+    if (startIdx < 0) startIdx = 0;
+
+    let i = startIdx;
+    const speakNext = () => {
+        if (!ttsActive || i >= paras.length) { stopReaderTts(); return; }
+        const para = paras[i];
+        document.querySelectorAll('.reader-para.tts-speaking')
+            .forEach(p => p.classList.remove('tts-speaking'));
+        para.classList.add('tts-speaking');
+        para.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        const u = new SpeechSynthesisUtterance(
+            para.textContent.replace(/[•§]/g, '').trim()
+        );
+        u.lang = lang;
+        u.rate = 0.95;
+        u.onend = () => { i++; speakNext(); };
+        u.onerror = () => { i++; speakNext(); };
+        window.speechSynthesis.speak(u);
+    };
+    speakNext();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RELATED TEXTS ("À lire ensuite")
+// ─────────────────────────────────────────────────────────────────────────────
+function renderRelatedTexts(book) {
+    const container = document.getElementById('readerRelated');
+    if (!container || !book) return;
+
+    const bookTags = new Set(book.tags || []);
+    const scored = state.books
+        .filter(b => b.id !== book.id)
+        .map(b => {
+            let score = 0;
+            if (b.author === book.author && book.author !== 'Anonyme') score += 5;
+            (b.tags || []).forEach(t => { if (bookTags.has(t)) score += 2; });
+            if (b.type === book.type) score += 1;
+            if (b.year && book.year && Math.abs(b.year - book.year) <= 100) score += 1;
+            return { book: b, score };
+        })
+        .filter(x => x.score > 0)
+        .sort((a, b) => b.score - a.score || (a.book.year || 0) - (b.book.year || 0))
+        .slice(0, 6);
+
+    if (!scored.length) { container.innerHTML = ''; return; }
+
+    container.innerHTML = `
+        <h2 class="reader-related-title">À lire ensuite</h2>
+        <div class="reader-related-grid">
+            ${scored.map(({ book: b }) => `
+                <button class="reader-related-card" onclick="openReader('${b.id}', {from: 'reader'})">
+                    <span class="reader-related-card-title">${escapeHtml(b.title)}</span>
+                    <span class="reader-related-card-author">${escapeHtml(b.author)}</span>
+                    <span class="reader-related-card-meta">${b.year || ''} · ${b.lang.toUpperCase()}</span>
+                </button>
+            `).join('')}
+        </div>
+    `;
+}
 
 function escapeHtml(str) {
     if (!str) return '';

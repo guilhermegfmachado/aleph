@@ -29,6 +29,35 @@
   },
   "terms": [
     {
+      "id": "incurvatus-in-se",
+      "term": "Incurvatus in se",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "philosophie"
+      ],
+      "definition": "Curved in on oneself. Augustine's diagnosis of sin: the soul turned inward, away from God and neighbor, trapped in self-regard. Luther made it central: we are bent, folded, unable to straighten ourselves. The self devouring the self. Pride as curvature.",
+      "related": [
+        "Amor sui",
+        "Concupiscence"
+      ]
+    },
+    {
+      "id": "modistae",
+      "term": "Modistae",
+      "lang": "la",
+      "category": [
+        "grammaire",
+        "philosophie",
+        "médiéval"
+      ],
+      "definition": "The Modists, speculative grammarians of the 13th–14th century. They sought universal grammar beneath all languages: modi significandi, modes of signifying. Language mirrors being. Thomas of Erfurt, Martin of Dacia, Boethius of Dacia. Words have properties because things have properties. Grammar as metaphysics.",
+      "related": [
+        "Grammatica speculativa",
+        "Universaux"
+      ]
+    },
+    {
       "id": "prima-materia",
       "term": "Prima Materia",
       "lang": "la",

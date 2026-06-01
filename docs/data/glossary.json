@@ -190,6 +190,818 @@
       ]
     },
     {
+      "id": "wabi-sabi",
+      "term": "侘寂",
+      "lang": "ja",
+      "category": ["esthétique", "philosophie"],
+      "definition": "Beauty in imperfection, transience, incompleteness. Wabi: rustic simplicity, quietude. Sabi: the patina of age, melancholy of passing. A cracked bowl, moss on stone, fading autumn. The aesthetics of impermanence."
+    },
+    {
+      "id": "mono-no-aware",
+      "term": "物の哀れ",
+      "lang": "ja",
+      "category": ["esthétique", "littérature"],
+      "definition": "The pathos of things. Sensitivity to ephemerality—cherry blossoms fall, beauty passes. Motoori Norinaga named what Genji always knew. Bittersweet awareness that nothing lasts. The tear at the heart of beauty."
+    },
+    {
+      "id": "yugen",
+      "term": "幽玄",
+      "lang": "ja",
+      "category": ["esthétique", "théâtre"],
+      "definition": "Mysterious depth, profound grace. What lies beneath surfaces, suggested not shown. Zeami's Noh ideal: the flower of the unseen. A half-hidden moon. Elegance beyond elegance. The beauty of shadows."
+    },
+    {
+      "id": "ikigai",
+      "term": "生き甲斐",
+      "lang": "ja",
+      "category": ["philosophie", "psychologie"],
+      "definition": "Reason for being. What gets you up in the morning—the intersection of passion, mission, vocation, profession. Okinawan longevity secret. Purpose that makes life worth living."
+    },
+    {
+      "id": "ma",
+      "term": "間",
+      "lang": "ja",
+      "category": ["esthétique", "architecture"],
+      "definition": "Negative space, the pause, the interval. Not emptiness but pregnant stillness. The silence between notes that makes music. Japanese architecture breathes through ma. Space as presence."
+    },
+    {
+      "id": "kintsugi",
+      "term": "金継ぎ",
+      "lang": "ja",
+      "category": ["esthétique", "artisanat"],
+      "definition": "Golden joinery. Repairing broken pottery with gold lacquer, making the cracks visible, beautiful. Embracing damage as history. The flaw as feature. Wabi-sabi in practice."
+    },
+    {
+      "id": "shinrin-yoku",
+      "term": "森林浴",
+      "lang": "ja",
+      "category": ["nature", "santé"],
+      "definition": "Forest bathing. Immersion in woodland atmosphere for healing. Not hiking—just being among trees. Japanese practice now backed by phytoncide science. Nature as medicine."
+    },
+    {
+      "id": "komorebi",
+      "term": "木漏れ日",
+      "lang": "ja",
+      "category": ["nature", "esthétique"],
+      "definition": "Sunlight filtering through leaves. Dappled light, dancing shadows. A single word for what other languages need sentences to describe. Japanese attention to evanescent natural beauty."
+    },
+    {
+      "id": "tsundoku",
+      "term": "積ん読",
+      "lang": "ja",
+      "category": ["livres", "psychologie"],
+      "definition": "Buying books and letting them pile up unread. The stack by the bed that grows faster than you read. Guilty pleasure, hopeful intention. Bibliophile's syndrome."
+    },
+    {
+      "id": "natsukashii",
+      "term": "懐かしい",
+      "lang": "ja",
+      "category": ["émotion", "mémoire"],
+      "definition": "Nostalgic longing, but warmer than Western nostalgia. Happy-sad remembrance. When the past feels close and dear. Finding an old letter, a childhood smell. Bittersweet homecoming of the heart."
+    },
+    {
+      "id": "wu-wei",
+      "term": "無為",
+      "lang": "zh",
+      "category": ["taoïsme", "philosophie"],
+      "definition": "Non-action, effortless action. Not passivity but flow with the Tao. The sage acts without forcing, leads without dominating. Water's way: soft overcomes hard. Doing by not-doing."
+    },
+    {
+      "id": "qi",
+      "term": "氣",
+      "lang": "zh",
+      "category": ["philosophie", "médecine"],
+      "definition": "Vital energy, life force, breath. Flows through body and cosmos. Acupuncture balances it, tai chi cultivates it, feng shui channels it. Not spirit, not matter—the dynamic between."
+    },
+    {
+      "id": "ren",
+      "term": "仁",
+      "lang": "zh",
+      "category": ["confucianisme", "éthique"],
+      "definition": "Benevolence, humaneness, goodness. Confucius's supreme virtue: treating others as fully human. The character combines 'person' and 'two'—humanity is relational. The heart that cannot bear others' suffering."
+    },
+    {
+      "id": "li-ritual",
+      "term": "禮",
+      "lang": "zh",
+      "category": ["confucianisme", "éthique"],
+      "definition": "Ritual propriety, ceremony, manners. Not empty formalism but embodied virtue. Confucius: through li we become human. The choreography of civilization. How to bow, mourn, govern."
+    },
+    {
+      "id": "de",
+      "term": "德",
+      "lang": "zh",
+      "category": ["taoïsme", "confucianisme"],
+      "definition": "Virtue, power, moral force. The Tao manifests as de in beings. Confucian: cultivated moral character. Taoist: natural potency. The charisma of the sage. Te in Tao Te Ching."
+    },
+    {
+      "id": "tian",
+      "term": "天",
+      "lang": "zh",
+      "category": ["philosophie", "religion"],
+      "definition": "Heaven, sky, nature, fate. Not a personal God but cosmic order, moral pattern. The Mandate of Heaven legitimizes rulers. Tian sees, judges, withdraws favor from tyrants. Above and within."
+    },
+    {
+      "id": "junzi",
+      "term": "君子",
+      "lang": "zh",
+      "category": ["confucianisme", "éthique"],
+      "definition": "The exemplary person, the gentleman. Confucius's ideal: not birth but cultivation. Practices ren, embodies li, pursues yi. Contrasted with xiaoren, the petty person. The self always under construction."
+    },
+    {
+      "id": "xiao",
+      "term": "孝",
+      "lang": "zh",
+      "category": ["confucianisme", "famille"],
+      "definition": "Filial piety. Reverence for parents, ancestors, elders. The root of all virtue in Confucian ethics. Care for the living, rites for the dead. The family as school of humanity."
+    },
+    {
+      "id": "yi",
+      "term": "義",
+      "lang": "zh",
+      "category": ["confucianisme", "éthique"],
+      "definition": "Righteousness, duty, moral rightness. Doing what is fitting in the situation. Mencius: the heart that feels shame. Yi responds to ren as form responds to feeling. Justice internalized."
+    },
+    {
+      "id": "ziran",
+      "term": "自然",
+      "lang": "zh",
+      "category": ["taoïsme", "philosophie"],
+      "definition": "Naturalness, spontaneity, self-so. Not 'nature' as object but the way things are of themselves. The Tao's own way. Wu-wei aims at ziran: acting without artifice, being without forcing."
+    },
+    {
+      "id": "pu",
+      "term": "朴",
+      "lang": "zh",
+      "category": ["taoïsme", "esthétique"],
+      "definition": "The uncarved block. Original simplicity before concepts divide it. The Taoist ideal: return to primordial wholeness. Civilization carves us into tools; wisdom uncarves."
+    },
+    {
+      "id": "dharma-sa",
+      "term": "धर्म",
+      "lang": "sa",
+      "category": ["hindouisme", "bouddhisme"],
+      "definition": "Cosmic law, duty, teaching, righteousness. In Hinduism: one's role in the moral order. In Buddhism: the Buddha's teaching and the nature of reality. That which upholds. The pattern beneath patterns."
+    },
+    {
+      "id": "karma-sa",
+      "term": "कर्म",
+      "lang": "sa",
+      "category": ["hindouisme", "bouddhisme"],
+      "definition": "Action and its consequences. Not fate but causation: deeds shape future. Good karma, bad karma—the residue of choices. The wheel turns; you reap what you sow, across lifetimes."
+    },
+    {
+      "id": "moksha",
+      "term": "मोक्ष",
+      "lang": "sa",
+      "category": ["hindouisme", "philosophie"],
+      "definition": "Liberation, release from samsara. The fourth and highest aim of life. Breaking the cycle of rebirth. Union with Brahman or dissolution of self—schools differ on what freedom means."
+    },
+    {
+      "id": "samsara",
+      "term": "संसार",
+      "lang": "sa",
+      "category": ["hindouisme", "bouddhisme"],
+      "definition": "The cycle of death and rebirth. The wheel of becoming, driven by karma. Not a place but a process: craving leads to birth leads to death leads to craving. Moksha/nirvana is the exit."
+    },
+    {
+      "id": "atman",
+      "term": "आत्मन्",
+      "lang": "sa",
+      "category": ["hindouisme", "philosophie"],
+      "definition": "The self, soul, essence. In Vedanta: identical with Brahman—tat tvam asi, you are that. Buddhists deny atman exists. Hinduism's great debate: is there a permanent self, or not?"
+    },
+    {
+      "id": "brahman",
+      "term": "ब्रह्मन्",
+      "lang": "sa",
+      "category": ["hindouisme", "métaphysique"],
+      "definition": "The ultimate reality, absolute, ground of being. Not a god but that from which gods emerge. Neti neti—not this, not that. Sat-chit-ananda: being-consciousness-bliss. The ocean; atman is the wave."
+    },
+    {
+      "id": "maya-sa",
+      "term": "माया",
+      "lang": "sa",
+      "category": ["hindouisme", "métaphysique"],
+      "definition": "Illusion, appearance, creative power. The world-show that veils Brahman. Not falsehood but relative reality. Maya makes the one appear many. Shankara: wake up; the snake was always a rope."
+    },
+    {
+      "id": "ahimsa",
+      "term": "अहिंसा",
+      "lang": "sa",
+      "category": ["éthique", "hindouisme"],
+      "definition": "Non-violence, non-harm. Jain monks sweep insects from their path. Gandhi weaponized it politically. More than not killing: not injuring by thought, word, deed. Reverence for all life."
+    },
+    {
+      "id": "dukkha",
+      "term": "दुःख",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "Suffering, unsatisfactoriness, dis-ease. The First Noble Truth: life is dukkha. Not just pain but the ache of impermanence—even joy passes. The wheel's axle is off-center."
+    },
+    {
+      "id": "nirvana-sa",
+      "term": "निर्वाण",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "Extinction, blowing out. Cessation of craving and the suffering it causes. Not annihilation but unbinding. The Buddha said what it isn't, not what it is. Beyond samsara, beyond words."
+    },
+    {
+      "id": "sunyata",
+      "term": "शून्यता",
+      "lang": "sa",
+      "category": ["bouddhisme", "métaphysique"],
+      "definition": "Emptiness, voidness. Nagarjuna's key concept: all phenomena lack inherent existence. Not nihilism—emptiness enables everything. Form is emptiness, emptiness is form. The open space of interdependence."
+    },
+    {
+      "id": "prajna",
+      "term": "प्रज्ञा",
+      "lang": "sa",
+      "category": ["bouddhisme", "philosophie"],
+      "definition": "Wisdom, insight, transcendent knowledge. Not book-learning but direct seeing. Prajna realizes sunyata. In Zen: the sword that cuts through illusion. The eye that sees itself."
+    },
+    {
+      "id": "karuna",
+      "term": "करुणा",
+      "lang": "sa",
+      "category": ["bouddhisme", "éthique"],
+      "definition": "Compassion. The wish that beings be free from suffering. With prajna, one of Buddhism's two wings. Avalokiteshvara embodies it. Not pity but active engagement with pain."
+    },
+    {
+      "id": "metta",
+      "term": "मैत्री",
+      "lang": "sa",
+      "category": ["bouddhisme", "méditation"],
+      "definition": "Loving-kindness, friendliness. Universal goodwill toward all beings. The first of four brahmaviharas. Metta meditation: may all beings be happy. The heart's natural warmth, cultivated."
+    },
+    {
+      "id": "rasa",
+      "term": "रस",
+      "lang": "sa",
+      "category": ["esthétique", "théâtre"],
+      "definition": "Flavor, essence, aesthetic emotion. Bharata's Natyashastra lists nine rasas: love, humor, fury, compassion, disgust, terror, wonder, peace, heroism. Art evokes rasa; we taste it. India's theory of aesthetic experience."
+    },
+    {
+      "id": "rta",
+      "term": "ऋत",
+      "lang": "sa",
+      "category": ["védique", "cosmologie"],
+      "definition": "Cosmic order, truth, rightness. Vedic concept: the pattern of the universe, maintained by gods and sacrifice. Rivers flow, seasons turn, dharma unfolds—all by rta. The Tao of ancient India."
+    },
+    {
+      "id": "tapas",
+      "term": "तपस्",
+      "lang": "sa",
+      "category": ["hindouisme", "ascétisme"],
+      "definition": "Heat, austerity, ascetic discipline. The fire of spiritual practice. Yogis generate tapas through renunciation. Even gods performed tapas to create. Inner fire that transforms."
+    },
+    {
+      "id": "satori",
+      "term": "悟り",
+      "lang": "ja",
+      "category": ["zen", "bouddhisme"],
+      "definition": "Awakening, enlightenment. Sudden insight into one's true nature. The moment the koan breaks open, the bottom falls out. Not gradual cultivation but flash of seeing. Then chop wood, carry water."
+    },
+    {
+      "id": "kensho",
+      "term": "見性",
+      "lang": "ja",
+      "category": ["zen", "bouddhisme"],
+      "definition": "Seeing one's nature. Initial glimpse of Buddha-nature. Satori's younger sibling. The first breakthrough, not the final arrival. Kensho must be deepened, tested, integrated."
+    },
+    {
+      "id": "mu",
+      "term": "無",
+      "lang": "ja",
+      "category": ["zen", "philosophie"],
+      "definition": "Nothing, non-being, negation. Joshu's answer to 'Does a dog have Buddha-nature?' Not yes, not no—MU! The gateless gate. Meditate on mu until you become it, or it swallows you."
+    },
+    {
+      "id": "mushin",
+      "term": "無心",
+      "lang": "ja",
+      "category": ["zen", "arts martiaux"],
+      "definition": "No-mind, empty mind. The state where action flows without deliberation. The swordsman who doesn't think about cutting. Mushin acts; self gets out of the way. Mind like water, like moon."
+    },
+    {
+      "id": "zanshin",
+      "term": "残心",
+      "lang": "ja",
+      "category": ["arts martiaux", "esthétique"],
+      "definition": "Remaining mind, lingering awareness. After the arrow flies, maintain presence. After the bow, awareness continues. The follow-through of martial arts and tea ceremony. Never truly finished."
+    },
+    {
+      "id": "tawakkul",
+      "term": "توكّل",
+      "lang": "ar",
+      "category": ["islam", "soufisme"],
+      "definition": "Trust in God, reliance on the divine. Not passive fatalism but active surrender. Tie your camel, then trust. The station where anxiety dissolves into providence. Let go, God holds."
+    },
+    {
+      "id": "baraka",
+      "term": "بركة",
+      "lang": "ar",
+      "category": ["islam", "spiritualité"],
+      "definition": "Blessing, spiritual power, divine grace. Saints radiate baraka; tombs hold it; objects transmit it. Contagious holiness. The energy that makes pilgrimage worthwhile."
+    },
+    {
+      "id": "fana",
+      "term": "فناء",
+      "lang": "ar",
+      "category": ["soufisme", "mystique"],
+      "definition": "Annihilation, passing away in God. The Sufi goal: ego dissolves, only Allah remains. Al-Hallaj cried 'Ana al-Haqq'—I am the Truth—and was crucified. Fana precedes baqa, subsistence in God."
+    },
+    {
+      "id": "baqa",
+      "term": "بقاء",
+      "lang": "ar",
+      "category": ["soufisme", "mystique"],
+      "definition": "Subsistence, abiding in God. After fana's annihilation, the mystic returns—but transformed. Living through God, not self. The saint among people, inwardly with the Beloved."
+    },
+    {
+      "id": "tawhid",
+      "term": "توحيد",
+      "lang": "ar",
+      "category": ["islam", "théologie"],
+      "definition": "Oneness of God, divine unity. Islam's core doctrine: there is no god but God. Not just monotheism but absolute unity—no partners, no divisions. Shirk (association) is the unforgivable sin."
+    },
+    {
+      "id": "dhikr",
+      "term": "ذكر",
+      "lang": "ar",
+      "category": ["soufisme", "pratique"],
+      "definition": "Remembrance of God. Sufi practice of repeating divine names, verses, prayers. The tongue remembers, then the heart, then the whole being. Dhikr circles whirl. Polishing the mirror of the heart."
+    },
+    {
+      "id": "hal",
+      "term": "حال",
+      "lang": "ar",
+      "category": ["soufisme", "psychologie"],
+      "definition": "Spiritual state, passing condition. Visitations of grace that come unbidden and pass. Hal is gift; maqam (station) is earned. The mystic moved by winds not of their making."
+    },
+    {
+      "id": "maqam",
+      "term": "مقام",
+      "lang": "ar",
+      "category": ["soufisme", "spiritualité"],
+      "definition": "Station, stage on the path. Unlike hal, maqam is earned through practice and becomes permanent. Repentance, patience, gratitude, trust—the ladder to God. Each station has its science."
+    },
+    {
+      "id": "nafs",
+      "term": "نفس",
+      "lang": "ar",
+      "category": ["islam", "psychologie"],
+      "definition": "Self, soul, ego. The commanding self (nafs al-ammara) urges evil. The blaming self (nafs al-lawwama) struggles. The peaceful self (nafs al-mutma'inna) rests in God. Jihad is against nafs."
+    },
+    {
+      "id": "tikkun",
+      "term": "תיקון",
+      "lang": "he",
+      "category": ["kabbale", "éthique"],
+      "definition": "Repair, restoration, healing. Tikkun olam: repairing the world. Lurianic Kabbalah: gathering divine sparks scattered in the breaking of vessels. Every mitzvah heals. Human action completes creation."
+    },
+    {
+      "id": "tzimtzum",
+      "term": "צמצום",
+      "lang": "he",
+      "category": ["kabbale", "métaphysique"],
+      "definition": "Contraction, withdrawal. Luria's radical idea: God contracted to make room for creation. The infinite withdrew so finite could exist. Divine absence enables presence. Theology of the void."
+    },
+    {
+      "id": "shevirat-hakelim",
+      "term": "שבירת הכלים",
+      "lang": "he",
+      "category": ["kabbale", "cosmologie"],
+      "definition": "Breaking of the vessels. Divine light poured into vessels that shattered; sparks scattered into matter. Creation as catastrophe. Explains evil's origin and redemption's task: gather the sparks."
+    },
+    {
+      "id": "devekut",
+      "term": "דבקות",
+      "lang": "he",
+      "category": ["kabbale", "mystique"],
+      "definition": "Cleaving, communion with God. The Hasidic ideal: constant attachment to the divine. In prayer, study, even mundane acts—never separate. The soul stuck to its source."
+    },
+    {
+      "id": "hitbonenut",
+      "term": "התבוננות",
+      "lang": "he",
+      "category": ["kabbale", "méditation"],
+      "definition": "Contemplation, meditation. Deep reflection on divine concepts until understanding becomes feeling. Chabad practice: intellect ignites the heart. The mind's path to devekut."
+    },
+    {
+      "id": "teshuva",
+      "term": "תשובה",
+      "lang": "he",
+      "category": ["judaïsme", "éthique"],
+      "definition": "Repentance, return. Not guilt but turning back—to God, to self, to right path. Maimonides: regret, confession, resolve. The High Holidays demand it. You can always turn."
+    },
+    {
+      "id": "kavanah",
+      "term": "כוונה",
+      "lang": "he",
+      "category": ["judaïsme", "spiritualité"],
+      "definition": "Intention, direction of heart. Prayer without kavanah is body without soul. The inner attitude that makes ritual meaningful. Not just doing but meaning what you do."
+    },
+    {
+      "id": "chesed",
+      "term": "חסד",
+      "lang": "he",
+      "category": ["judaïsme", "éthique"],
+      "definition": "Loving-kindness, grace, mercy. One of the sefirot: God's overflowing love. In ethics: acts of kindness without expectation. Chesed builds the world. The attribute that exceeds justice."
+    },
+    {
+      "id": "hesychasm",
+      "term": "ἡσυχασμός",
+      "lang": "el",
+      "category": ["orthodoxie", "mystique"],
+      "definition": "Stillness, inner quiet. Byzantine mystical practice: silence the mind, repeat the Jesus Prayer, descend into the heart. Gregory Palamas defended it. Monks on Athos still practice. Inner Mount Tabor."
+    },
+    {
+      "id": "theosis",
+      "term": "θέωσις",
+      "lang": "el",
+      "category": ["orthodoxie", "théologie"],
+      "definition": "Deification, becoming god-like. Eastern Orthodox goal: participation in divine nature. God became human so humans could become divine. Not identity with God but union, transfiguration."
+    },
+    {
+      "id": "apatheia",
+      "term": "ἀπάθεια",
+      "lang": "el",
+      "category": ["stoïcisme", "psychologie"],
+      "definition": "Freedom from passion, equanimity. Not apathy but non-attachment. The Stoic sage is unmoved by fortune. Emotions arise; the wise don't identify. Inner citadel, storm outside."
+    },
+    {
+      "id": "ataraxia-el",
+      "term": "ἀταραξία",
+      "lang": "el",
+      "category": ["philosophie", "éthique"],
+      "definition": "Tranquility, freedom from disturbance. Epicurean and Skeptic goal: undisturbed calm. The pond without ripples. Suspend judgment (Skeptics) or limit desires (Epicureans) to reach it."
+    },
+    {
+      "id": "eudaimonia",
+      "term": "εὐδαιμονία",
+      "lang": "el",
+      "category": ["philosophie", "éthique"],
+      "definition": "Flourishing, well-being, happiness. Not feeling good but living well. Aristotle: activity of soul in accordance with virtue. The good life, not just good feelings. What ethics aims at."
+    },
+    {
+      "id": "arete",
+      "term": "ἀρετή",
+      "lang": "el",
+      "category": ["philosophie", "éthique"],
+      "definition": "Excellence, virtue. Whatever makes a thing good at being what it is. A knife's arete is sharpness; a human's is wisdom, courage, justice. Becoming what you are meant to be."
+    },
+    {
+      "id": "phronesis",
+      "term": "φρόνησις",
+      "lang": "el",
+      "category": ["philosophie", "éthique"],
+      "definition": "Practical wisdom, prudence. Knowing what to do in particular situations. Not rulebook ethics but cultivated judgment. Aristotle's key virtue: the eye of the soul."
+    },
+    {
+      "id": "logos-el",
+      "term": "λόγος",
+      "lang": "el",
+      "category": ["philosophie", "théologie"],
+      "definition": "Word, reason, principle. Heraclitus: the logic of the cosmos. Stoics: divine rational order. John: the Word made flesh. Greek thought's most elastic concept—language, logic, God."
+    },
+    {
+      "id": "nous",
+      "term": "νοῦς",
+      "lang": "el",
+      "category": ["philosophie", "psychologie"],
+      "definition": "Mind, intellect, intuitive reason. Anaxagoras: cosmic mind ordering chaos. Aristotle: the divine in us. Plotinus: the level below the One. The thinking that thinks itself."
+    },
+    {
+      "id": "sophia",
+      "term": "σοφία",
+      "lang": "el",
+      "category": ["philosophie", "théologie"],
+      "definition": "Wisdom. Not mere knowledge but deep understanding of what matters. Sophia is what philosophers love (philo-sophia). In Judaism: personified as feminine divine presence. The crown of virtues."
+    },
+    {
+      "id": "kairos",
+      "term": "καιρός",
+      "lang": "el",
+      "category": ["philosophie", "rhétorique"],
+      "definition": "The right moment, opportune time. Not chronos (sequential time) but the pregnant instant. Seize it or lose it. Rhetoric needs kairos; so does wisdom. The crack where everything shifts."
+    },
+    {
+      "id": "ubuntu",
+      "term": "Ubuntu",
+      "lang": "zu",
+      "category": ["philosophie", "afrique"],
+      "definition": "I am because we are. Southern African philosophy: personhood is relational. No isolated individual—we become human through others. Umuntu ngumuntu ngabantu. Community as foundation of identity."
+    },
+    {
+      "id": "ujamaa",
+      "term": "Ujamaa",
+      "lang": "sw",
+      "category": ["politique", "afrique"],
+      "definition": "Familyhood, cooperative economics. Nyerere's Tanzanian socialism: extended family as social model. Collective work, shared resources. African answer to capitalism and communism both."
+    },
+    {
+      "id": "sankofa",
+      "term": "Sankofa",
+      "lang": "akan",
+      "category": ["philosophie", "afrique"],
+      "definition": "Go back and fetch it. Akan symbol and concept: retrieve what's valuable from the past. Look backward to move forward. The bird with turned head. Tradition as resource, not prison."
+    },
+    {
+      "id": "saudade",
+      "term": "Saudade",
+      "lang": "pt",
+      "category": ["émotion", "littérature"],
+      "definition": "Longing for the absent. Not quite nostalgia—deeper, vaguer. The presence of absence. Portuguese soul-word: fado sings it, Pessoa writes it. Missing what may never have been."
+    },
+    {
+      "id": "duende",
+      "term": "Duende",
+      "lang": "es",
+      "category": ["esthétique", "musique"],
+      "definition": "Dark creative force, goblin-spirit. Lorca's concept: art touched by death, coming from blood not brain. Flamenco has duende or it has nothing. The shiver of authentic intensity."
+    },
+    {
+      "id": "querencia",
+      "term": "Querencia",
+      "lang": "es",
+      "category": ["psychologie", "tauromachie"],
+      "definition": "The place where one feels safe. In bullfighting: where the bull returns to gather strength. By extension: home ground, refuge, the spot where you're yourself. We all seek querencia."
+    },
+    {
+      "id": "sobremesa",
+      "term": "Sobremesa",
+      "lang": "es",
+      "category": ["culture", "convivialité"],
+      "definition": "The time spent talking after a meal. Not just dessert—the lingering conversation, the second coffee. Spanish ritual: food ends, communion continues. The meal beyond the meal."
+    },
+    {
+      "id": "hygge",
+      "term": "Hygge",
+      "lang": "da",
+      "category": ["culture", "bien-être"],
+      "definition": "Cozy togetherness, warm atmosphere. Danish art of intimate comfort: candles, friends, blankets, cake. Creating pockets of warmth in dark winters. Deliberate cultivation of contentment."
+    },
+    {
+      "id": "lagom",
+      "term": "Lagom",
+      "lang": "sv",
+      "category": ["culture", "philosophie"],
+      "definition": "Just right, enough, balanced. Swedish golden mean: not too much, not too little. Neither excess nor deficiency. The moderate way. Lagom är bäst—enough is best."
+    },
+    {
+      "id": "friluftsliv",
+      "term": "Friluftsliv",
+      "lang": "no",
+      "category": ["nature", "philosophie"],
+      "definition": "Open-air life. Norwegian philosophy of outdoor living. Not extreme sports but simple being in nature: walking, skiing, breathing. Weather doesn't cancel plans. Life belongs outside."
+    },
+    {
+      "id": "joie-de-vivre",
+      "term": "Joie de vivre",
+      "lang": "fr",
+      "category": ["émotion", "culture"],
+      "definition": "Joy of living, exuberance. French celebration of life's pleasures: food, wine, conversation, beauty. Not happiness as achievement but delight as attitude. The art of savoring."
+    },
+    {
+      "id": "terroir",
+      "term": "Terroir",
+      "lang": "fr",
+      "category": ["agriculture", "esthétique"],
+      "definition": "The taste of place. Wine reflects its soil, climate, traditions. Cheese knows its mountain. Not just origin but character—how land shapes flavor. Geography you can taste."
+    },
+    {
+      "id": "flaneur",
+      "term": "Flâneur",
+      "lang": "fr",
+      "category": ["culture", "modernité"],
+      "definition": "The urban stroller, idle observer. Baudelaire's figure: wandering the arcade, reading the city. Neither tourist nor resident—the detached connoisseur of street life. Modernity's witness."
+    },
+    {
+      "id": "gemutlichkeit",
+      "term": "Gemütlichkeit",
+      "lang": "de",
+      "category": ["culture", "psychologie"],
+      "definition": "Coziness, friendliness, good cheer. German sense of comfortable belonging. The beer hall, the Stammtisch, old friends. Social warmth, absence of hurry. Being at home in the world."
+    },
+    {
+      "id": "fernweh",
+      "term": "Fernweh",
+      "lang": "de",
+      "category": ["émotion", "voyage"],
+      "definition": "Far-sickness, wanderlust. The opposite of homesickness: longing for distant places. The ache to be elsewhere, anywhere but here. German Romantic restlessness. The horizon calls."
+    },
+    {
+      "id": "waldeinsamkeit",
+      "term": "Waldeinsamkeit",
+      "lang": "de",
+      "category": ["nature", "romantisme"],
+      "definition": "Forest solitude. The feeling of being alone in the woods. German Romantics treasured it: communion with nature, distance from society. Tieck coined it. The trees as companions."
+    },
+    {
+      "id": "torschlusspanik",
+      "term": "Torschlusspanik",
+      "lang": "de",
+      "category": ["psychologie", "société"],
+      "definition": "Gate-closing panic. Fear that time is running out, opportunities closing. The medieval town gate closing at nightfall. Life's deadlines approaching: career, family, youth. Now or never."
+    },
+    {
+      "id": "sprezzatura",
+      "term": "Sprezzatura",
+      "lang": "it",
+      "category": ["esthétique", "Renaissance"],
+      "definition": "Studied carelessness, nonchalance. Castiglione's ideal: make difficulty look effortless. The courtier's art: conceal the art. Grace without visible strain. Cool before cool."
+    },
+    {
+      "id": "dolce-far-niente",
+      "term": "Dolce far niente",
+      "lang": "it",
+      "category": ["culture", "bien-être"],
+      "definition": "The sweetness of doing nothing. Italian art of pleasant idleness. Not laziness but savored rest. The piazza, the afternoon, the permission to simply be. Productivity's antidote."
+    },
+    {
+      "id": "meraki",
+      "term": "μεράκι",
+      "lang": "el",
+      "category": ["travail", "créativité"],
+      "definition": "Doing something with soul, creativity, love. Putting yourself into your work. Greek concept: when passion enters the task. The craftsman's devotion. Labor as love."
+    },
+    {
+      "id": "philotimo",
+      "term": "φιλότιμο",
+      "lang": "el",
+      "category": ["éthique", "culture"],
+      "definition": "Love of honor, pride in right action. Greek virtue: doing what's right because you're that kind of person. Self-respect through integrity. The unwritten code."
+    },
+    {
+      "id": "hiraeth",
+      "term": "Hiraeth",
+      "lang": "cy",
+      "category": ["émotion", "identité"],
+      "definition": "Welsh homesickness, longing for homeland. Deeper than nostalgia: grief for what's lost, maybe what never was. The exile's ache. Wales as wound. Belonging that persists in absence."
+    },
+    {
+      "id": "cwtch",
+      "term": "Cwtch",
+      "lang": "cy",
+      "category": ["émotion", "famille"],
+      "definition": "A hug that's also a safe place. Welsh word: cuddle and cubbyhole merged. The embrace that shelters. To cwtch is to hold and be held, physically or emotionally."
+    },
+    {
+      "id": "gigil",
+      "term": "Gigil",
+      "lang": "tl",
+      "category": ["émotion", "affection"],
+      "definition": "The urge to pinch something unbearably cute. Filipino word for overwhelming affection's physical expression. Babies, puppies—so adorable you must squeeze. Cuteness aggression, named."
+    },
+    {
+      "id": "kilig",
+      "term": "Kilig",
+      "lang": "tl",
+      "category": ["émotion", "amour"],
+      "definition": "Romantic butterflies, giddy excitement. Filipino word for the rush when your crush texts back. The shiver of new love. Kilig moments: cinema's goal, life's bonus."
+    },
+    {
+      "id": "han",
+      "term": "한",
+      "lang": "ko",
+      "category": ["émotion", "culture"],
+      "definition": "Korean sorrow, collective grief. Not depression but accumulated resentment, suppressed pain. Historical suffering internalized: invasions, divisions, han'gul. The tear that won't fall. Pansori sings it."
+    },
+    {
+      "id": "jeong",
+      "term": "정",
+      "lang": "ko",
+      "category": ["émotion", "relations"],
+      "definition": "Korean affection, deep attachment. Jeong grows slowly through shared time. Not chosen like love—accumulated. The bond with old friends, hometowns, worn objects. Emotional sediment."
+    },
+    {
+      "id": "nunchi",
+      "term": "눈치",
+      "lang": "ko",
+      "category": ["social", "psychologie"],
+      "definition": "Eye-measure, social awareness. Korean art of reading the room—sensing moods, unspoken expectations. Subtle intelligence. Without nunchi, you blunder. With it, you belong."
+    },
+    {
+      "id": "pochemuchka",
+      "term": "почемучка",
+      "lang": "ru",
+      "category": ["enfance", "curiosité"],
+      "definition": "A person who asks too many questions. Russian: literally 'whyer.' Usually a child. The endless 'but why?' Curiosity as character. Annoying and necessary."
+    },
+    {
+      "id": "toska",
+      "term": "тоска",
+      "lang": "ru",
+      "category": ["émotion", "littérature"],
+      "definition": "Russian ache, longing without object. Nabokov: 'No single English word conveys all the shades.' Spiritual ennui, vague restlessness, sick pining. The soul wants what it cannot name."
+    },
+    {
+      "id": "razliubit",
+      "term": "разлюбить",
+      "lang": "ru",
+      "category": ["émotion", "amour"],
+      "definition": "To fall out of love. Russian verb for love's death. Not betrayal, not boredom—simply: feeling stops. The cruelest word: it has no reason."
+    },
+    {
+      "id": "mamihlapinatapai",
+      "term": "Mamihlapinatapai",
+      "lang": "yag",
+      "category": ["émotion", "communication"],
+      "definition": "A look shared between two people, each wishing the other would initiate something both want but neither will start. Yaghan word from Tierra del Fuego. The pause before the leap."
+    },
+    {
+      "id": "jayus",
+      "term": "Jayus",
+      "lang": "id",
+      "category": ["humour", "social"],
+      "definition": "A joke so bad it's funny. Indonesian word for the failed joke that succeeds through failure. The groan that turns to laugh. Accidentally hilarious."
+    },
+    {
+      "id": "goya",
+      "term": "Goya",
+      "lang": "ur",
+      "category": ["littérature", "vérité"],
+      "definition": "The suspension of disbelief. Urdu: when fiction feels real. Good storytelling creates goya—you forget you're reading. The dream of narrative. What art does to time."
+    },
+    {
+      "id": "naz",
+      "term": "ناز",
+      "lang": "ur",
+      "category": ["amour", "esthétique"],
+      "definition": "Coy pride, playful reluctance. Urdu poetics: the beloved's graceful refusal. Not rejection but dance. Naz makes pursuit worthwhile. Flirtation as art form."
+    },
+    {
+      "id": "tarab",
+      "term": "طرب",
+      "lang": "ar",
+      "category": ["musique", "émotion"],
+      "definition": "Musical ecstasy. Arabic word for when music transports: the gasp, the tear, the shout of 'Allah!' Umm Kulthum held audiences in tarab for hours. Emotion beyond emotion."
+    },
+    {
+      "id": "firgun",
+      "term": "פירגון",
+      "lang": "he",
+      "category": ["émotion", "social"],
+      "definition": "Genuine, unenvious joy in another's success. Modern Hebrew slang: the opposite of schadenfreude. Your friend wins; you're purely happy. Rarer than it should be."
+    },
+    {
+      "id": "cafune",
+      "term": "Cafuné",
+      "lang": "pt",
+      "category": ["affection", "intimité"],
+      "definition": "Running fingers through someone's hair. Brazilian Portuguese: tender, specific, untranslatable. The gesture itself becomes the word. Love made tactile."
+    },
+    {
+      "id": "desenrascanço",
+      "term": "Desenrascanço",
+      "lang": "pt",
+      "category": ["culture", "créativité"],
+      "definition": "The art of improvised solutions. Portuguese: untangling yourself from problems creatively. MacGyver thinking. When the manual fails, desenrascanço begins."
+    },
+    {
+      "id": "mångata",
+      "term": "Mångata",
+      "lang": "sv",
+      "category": ["nature", "poésie"],
+      "definition": "The road-like reflection of moonlight on water. Swedish: moon-street. The glittering path across the lake at night. One word for what takes a sentence elsewhere."
+    },
+    {
+      "id": "gluggaveður",
+      "term": "Gluggaveður",
+      "lang": "is",
+      "category": ["nature", "humour"],
+      "definition": "Window-weather. Icelandic: weather that looks nice from inside but is miserable outside. The deceptive sunshine. Stay by the fire."
+    },
+    {
+      "id": "uitwaaien",
+      "term": "Uitwaaien",
+      "lang": "nl",
+      "category": ["nature", "bien-être"],
+      "definition": "Walking in the wind for refreshment. Dutch: blowing out the cobwebs. The beach, the dunes, wind clearing the mind. Weather as therapy."
+    },
+    {
+      "id": "gezellig",
+      "term": "Gezellig",
+      "lang": "nl",
+      "category": ["culture", "social"],
+      "definition": "Cozy, convivial, belonging. Dutch hygge-cousin: the warm atmosphere of good company. A gezellig evening: friends, drinks, laughter. The opposite of lonely."
+    },
+    {
+      "id": "akihi",
+      "term": "Akihi",
+      "lang": "haw",
+      "category": ["humour", "navigation"],
+      "definition": "Forgetting directions as soon as you hear them. Hawaiian word: the information evaporates. Universal experience, specific name."
+    },
+    {
+      "id": "pana-poʻo",
+      "term": "Pana poʻo",
+      "lang": "haw",
+      "category": ["psychologie", "mémoire"],
+      "definition": "Scratching your head to help you remember. Hawaiian: the gesture of trying to recall. As if memory lives in the scalp."
+    },
+    {
       "id": "prima-materia",
       "term": "Prima Materia",
       "lang": "la",

@@ -5772,6 +5772,66 @@
       ]
     },
     {
+      "id": "thomas-erfurt",
+      "name": "Thomas d'Erfurt",
+      "name_original": "Thomas de Erfordia",
+      "dates": "fl. c. 1300",
+      "origin": "Erfurt, Thuringe",
+      "lang": "la",
+      "bio": "Le plus grand des Modistes. Sa Grammatica speculativa (longtemps attribuée à Duns Scot) systématise les modes de signifier : modi essendi, modi intelligendi, modi significandi. Le langage reflète l'être. La grammaire comme métaphysique. Redécouvert par Heidegger dans sa thèse.",
+      "works": [],
+      "tags": [
+        "modistae",
+        "grammaire",
+        "scolastique"
+      ]
+    },
+    {
+      "id": "peter-spain",
+      "name": "Pierre d'Espagne",
+      "name_original": "Petrus Hispanus",
+      "dates": "c. 1215–1277",
+      "origin": "Lisbonne, Portugal",
+      "lang": "la",
+      "bio": "Summulae Logicales — le manuel de logique de l'Europe pendant trois siècles. Théorie de la suppositio : comment les termes tiennent lieu des choses. Médecin, philosophe, puis pape (Jean XXI). Mort quand le plafond de son palais s'effondra.",
+      "works": [],
+      "tags": [
+        "logique",
+        "scolastique",
+        "terminisme"
+      ]
+    },
+    {
+      "id": "martin-dacia",
+      "name": "Martin de Dacie",
+      "name_original": "Martinus de Dacia",
+      "dates": "c. 1220–1304",
+      "origin": "Danemark",
+      "lang": "la",
+      "bio": "Modiste danois, maître à Paris. De modis significandi : la grammaire universelle sous-tend toutes les langues. Avec Boèce de Dacie, il forma le cercle danois des grammairiens spéculatifs. La logique du langage comme voie vers l'être.",
+      "works": [],
+      "tags": [
+        "modistae",
+        "grammaire",
+        "scolastique"
+      ]
+    },
+    {
+      "id": "boethius-dacia",
+      "name": "Boèce de Dacie",
+      "name_original": "Boethius de Dacia",
+      "dates": "fl. c. 1270",
+      "origin": "Danemark",
+      "lang": "la",
+      "bio": "De aeternitate mundi, De summo bono. Averroïste latin : la philosophie comme vie suprême. Condamné en 1277 avec Siger de Brabant. Il défendit l'autonomie de la raison contre la théologie. Grammairien spéculatif et philosophe radical.",
+      "works": [],
+      "tags": [
+        "modistae",
+        "averroïsme",
+        "scolastique"
+      ]
+    },
+    {
       "id": "albertus-magnus",
       "name": "Albert le Grand",
       "name_original": "Albertus Magnus",
@@ -7529,6 +7589,38 @@
       "origin": "Offenbach, Allemagne",
       "lang": "de",
       "bio": "Die Philosophie der Erlösung. Poussant Schopenhauer jusqu'au bout : Dieu s'est suicidé pour créer le monde, et l'univers tend vers le néant. Le pessimisme comme rédemption. Il se pendit le jour où il reçut le premier exemplaire de son œuvre. La mort volontaire comme délivrance métaphysique.",
+      "works": [],
+      "tags": [
+        "pessimisme",
+        "philosophie",
+        "allemagne",
+        "xixe"
+      ]
+    },
+    {
+      "id": "hartmann-eduard",
+      "name": "Eduard von Hartmann",
+      "name_original": "Karl Robert Eduard von Hartmann",
+      "dates": "1842–1906",
+      "origin": "Berlin, Prusse",
+      "lang": "de",
+      "bio": "Philosophie de l'Inconscient. Il synthétisa Schopenhauer et Hegel : la Volonté est inconsciente, mais l'histoire progresse vers sa propre abolition. Pessimisme évolutif. L'humanité doit prendre conscience du néant pour s'en libérer. Très lu en son temps, puis oublié.",
+      "works": [],
+      "tags": [
+        "pessimisme",
+        "philosophie",
+        "allemagne",
+        "xixe"
+      ]
+    },
+    {
+      "id": "bahnsen",
+      "name": "Julius Bahnsen",
+      "name_original": "Julius Friedrich August Bahnsen",
+      "dates": "1830–1881",
+      "origin": "Tondern, Schleswig",
+      "lang": "de",
+      "bio": "Realdialektik : la contradiction est réelle, pas seulement logique. La volonté se combat elle-même sans synthèse possible. Plus sombre que Schopenhauer : nulle délivrance, nul art, nulle ascèse. Le tragique absolu. Caractérologie. Fou et génial, mort dans l'obscurité.",
       "works": [],
       "tags": [
         "pessimisme",

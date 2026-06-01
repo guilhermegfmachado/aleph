@@ -58,6 +58,138 @@
       ]
     },
     {
+      "id": "amor-sui",
+      "term": "Amor sui",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "philosophie"
+      ],
+      "definition": "Love of self. Augustine opposed it to amor Dei: we love either God or ourselves, and self-love curves us inward. Not mere selfishness but ontological misdirection—the creature worshipping itself instead of its source. The root of all sin.",
+      "related": [
+        "Incurvatus in se",
+        "Concupiscence",
+        "Superbia"
+      ]
+    },
+    {
+      "id": "simul-justus-et-peccator",
+      "term": "Simul justus et peccator",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "protestantisme"
+      ],
+      "definition": "Simultaneously righteous and sinner. Luther's formula: the Christian is fully justified by grace yet remains fully sinful in nature. Not partly saved—wholly both at once. The tension never resolves in this life. Forensic righteousness, existential corruption.",
+      "related": [
+        "Sola fide",
+        "Incurvatus in se"
+      ]
+    },
+    {
+      "id": "taedium-vitae",
+      "term": "Taedium vitae",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "psychologie"
+      ],
+      "definition": "Weariness of life. Roman term for the exhaustion with existence itself—not depression over circumstances but disgust with living as such. Seneca discussed it. The pessimists systematized it. When continuation feels heavier than cessation.",
+      "related": [
+        "Acedia",
+        "Weltschmerz",
+        "Ennui"
+      ]
+    },
+    {
+      "id": "wille-zum-tode",
+      "term": "Wille zum Tode",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "pessimisme"
+      ],
+      "definition": "Will to death. Mainländer's inversion of Schopenhauer: the fundamental drive is not blind will-to-live but will toward non-being. God's suicide fragmented into the universe, which now tends toward annihilation. Entropy as metaphysics. Redemption through extinction.",
+      "related": [
+        "Wille zum Leben",
+        "Erlösung",
+        "Pessimismus"
+      ]
+    },
+    {
+      "id": "erlosung",
+      "term": "Erlösung",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "théologie"
+      ],
+      "definition": "Redemption, deliverance, release. In Wagner: love-death transfiguration. In Schopenhauer: escape from the wheel of willing through art, compassion, asceticism. In Mainländer: the final peace of non-existence. German Romanticism's ultimate chord.",
+      "related": [
+        "Wille zum Tode",
+        "Nirvana",
+        "Liebestod"
+      ]
+    },
+    {
+      "id": "modi-significandi",
+      "term": "Modi significandi",
+      "lang": "la",
+      "category": [
+        "grammaire",
+        "philosophie",
+        "médiéval"
+      ],
+      "definition": "Modes of signifying. The Modistae's key concept: words signify through formal properties (modes) that mirror the modes of being and understanding. Noun-ness reflects substance-ness. Grammar is not arbitrary convention but ontological structure made audible.",
+      "related": [
+        "Modistae",
+        "Grammatica speculativa"
+      ]
+    },
+    {
+      "id": "grammatica-speculativa",
+      "term": "Grammatica speculativa",
+      "lang": "la",
+      "category": [
+        "grammaire",
+        "philosophie",
+        "médiéval"
+      ],
+      "definition": "Speculative grammar. The Modist project: grammar as mirror (speculum) of reality. Universal grammar underlies all languages because being underlies all thought. Thomas of Erfurt's treatise bore this title. Heidegger's Habilitationsschrift analyzed it. Language as the house of being, medieval style.",
+      "related": [
+        "Modistae",
+        "Modi significandi"
+      ]
+    },
+    {
+      "id": "suppositio",
+      "term": "Suppositio",
+      "lang": "la",
+      "category": [
+        "logique",
+        "médiéval"
+      ],
+      "definition": "Supposition. Medieval logic's theory of reference: how terms 'stand for' things in propositions. Personal supposition (for individuals), simple (for universals), material (for the word itself). Peter of Spain systematized it. The ancestors of modern semantics.",
+      "related": [
+        "Significatio",
+        "Terminus"
+      ]
+    },
+    {
+      "id": "realdialektik",
+      "term": "Realdialektik",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "pessimisme"
+      ],
+      "definition": "Real dialectic. Bahnsen's anti-Hegelian concept: contradictions are not resolved in synthesis but persist in reality itself. The will is self-divided, fighting itself eternally. No Aufhebung, no reconciliation. Tragedy without catharsis. The wound that never heals.",
+      "related": [
+        "Dialektik",
+        "Wille"
+      ]
+    },
+    {
       "id": "prima-materia",
       "term": "Prima Materia",
       "lang": "la",

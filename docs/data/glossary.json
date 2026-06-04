@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2446
+    "count": 2472
   },
   "terms": [
     {
@@ -1748,6 +1748,356 @@
         "amour"
       ],
       "definition": "To fall out of love. Russian verb for love's death. Not betrayal, not boredom—simply: feeling stops. The cruelest word: it has no reason."
+    },
+    {
+      "id": "rodna-vjara",
+      "term": "Родна вяра",
+      "lang": "bg",
+      "category": [
+        "religion",
+        "slavique"
+      ],
+      "definition": "Native faith. Bulgarian neo-pagan movement reviving pre-Christian Slavic beliefs. Perun the thunderer, Veles of the underworld, the World Tree. The old gods remembered. Rodnovery across Slavic lands."
+    },
+    {
+      "id": "karachun",
+      "term": "Карачун",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "slavique"
+      ],
+      "definition": "The Slavic winter demon, lord of cold and death. The winter solstice bears his name. When Karachun comes, the sun dies—then is reborn. The darkest night before the light returns."
+    },
+    {
+      "id": "nav",
+      "term": "Навь",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "slavique"
+      ],
+      "definition": "The realm of the dead in Slavic cosmology. Nav below, Yav (the visible world) in the middle, Prav (divine law) above. The ancestors dwell in Nav. The dead are not gone but near."
+    },
+    {
+      "id": "yav",
+      "term": "Явь",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "slavique"
+      ],
+      "definition": "The manifest world, reality as seen. Middle realm of Slavic cosmology between Nav (the dead) and Prav (cosmic order). What appears. The waking world we inhabit between depths and heights."
+    },
+    {
+      "id": "prav",
+      "term": "Правь",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "slavique"
+      ],
+      "definition": "Divine law, cosmic truth, the realm of gods. The highest level of Slavic cosmology. Root of 'pravda' (truth) and 'pravy' (right). The order that governs all. Heaven as justice."
+    },
+    {
+      "id": "litost",
+      "term": "Lítost",
+      "lang": "cs",
+      "category": [
+        "émotion",
+        "littérature"
+      ],
+      "definition": "Czech torment: the sudden sight of one's own misery. Kundera called it untranslatable—a state of agony caused by the spectacle of our own powerlessness. Humiliation internalized. The sting of seeing yourself small."
+    },
+    {
+      "id": "prozvonit",
+      "term": "Prozvonit",
+      "lang": "cs",
+      "category": [
+        "social",
+        "moderne"
+      ],
+      "definition": "To call someone's phone and hang up so they call back, saving your credit. Czech practicality. The missed call as message: 'Call me, you pay.' Modern frugality's small poetry."
+    },
+    {
+      "id": "tesknost",
+      "term": "Tesknost",
+      "lang": "cs",
+      "category": [
+        "émotion",
+        "mélancolie"
+      ],
+      "definition": "Czech longing and melancholy. Kindred to German Sehnsucht but with Slavic coloring. The ache for something unnamed. Bohemian sadness, autumn in the soul."
+    },
+    {
+      "id": "zal",
+      "term": "Żal",
+      "lang": "pl",
+      "category": [
+        "émotion",
+        "deuil"
+      ],
+      "definition": "Polish grief, regret, sorrow. Deeper than sadness—a complex of mourning and reproach. Żal for the dead, żal for lost chances. The heart's complaint against fate. Central to Polish Romanticism."
+    },
+    {
+      "id": "tesknota",
+      "term": "Tęsknota",
+      "lang": "pl",
+      "category": [
+        "émotion",
+        "nostalgie"
+      ],
+      "definition": "Polish longing, yearning. For homeland, for the beloved, for what was. The émigré's constant companion. Chopin's nocturnes are tęsknota made audible. The soul reaching toward absence."
+    },
+    {
+      "id": "zadumy",
+      "term": "Zadumy",
+      "lang": "pl",
+      "category": [
+        "contemplation",
+        "romantisme"
+      ],
+      "definition": "Deep reverie, pensive meditation. Polish Romantic state: lost in thought at the edge of forests, ruins, graves. Mickiewicz wandered in zadumy. The mind's pilgrimage inward."
+    },
+    {
+      "id": "przedmurze",
+      "term": "Przedmurze",
+      "lang": "pl",
+      "category": [
+        "identité",
+        "histoire"
+      ],
+      "definition": "The bulwark, the rampart. Poland's self-image: Antemurale Christianitatis, the wall defending Christendom from the East. Vienna 1683, the eternal frontier. Identity as sacrifice, geography as destiny."
+    },
+    {
+      "id": "messianisme-polonais",
+      "term": "Mesjanism",
+      "lang": "pl",
+      "category": [
+        "philosophie",
+        "romantisme"
+      ],
+      "definition": "Polish messianism. Mickiewicz, Słowacki: Poland as the Christ of nations, crucified and risen. Suffering redeems Europe. The partitioned nation mystically necessary. Romantic nationalism as theodicy."
+    },
+    {
+      "id": "duma",
+      "term": "Дума",
+      "lang": "uk",
+      "category": [
+        "musique",
+        "épique"
+      ],
+      "definition": "Ukrainian epic song, sung by wandering kobzars. Tales of Cossack heroes, Turkish captivity, the steppe's freedom. Not written but remembered. The nation's memory in melody. Blind singers, seeing history."
+    },
+    {
+      "id": "vatra",
+      "term": "Ватра",
+      "lang": "uk",
+      "category": [
+        "culture",
+        "symbolisme"
+      ],
+      "definition": "The sacred fire, the bonfire. Ukrainian and South Slavic: the flame of community, of Kupala night, of resistance. Vatra burns when people gather. The hearth extended. Fire as belonging."
+    },
+    {
+      "id": "molitfa",
+      "term": "Молитва",
+      "lang": "bg",
+      "category": [
+        "spiritualité",
+        "orthodoxie"
+      ],
+      "definition": "Prayer in Bulgarian and other Slavic languages. Not just petition but presence, standing before God. Orthodox spirituality: the prayer of the heart, the Jesus Prayer repeated until it prays itself."
+    },
+    {
+      "id": "sabor",
+      "term": "Сабор",
+      "lang": "sr",
+      "category": [
+        "culture",
+        "communauté"
+      ],
+      "definition": "Serbian assembly, gathering, council. The meeting of the people for decision, celebration, memory. Church sabor, village sabor. Democracy before democracy. Where the narod (people) becomes one body."
+    },
+    {
+      "id": "inat",
+      "term": "Инат",
+      "lang": "sr",
+      "category": [
+        "émotion",
+        "identité"
+      ],
+      "definition": "Serbian spite, defiant stubbornness. Doing something precisely because you were told not to. 'Inat kuća' in Belgrade: a house rebuilt as spite against demolition. Resistance as identity. The Balkan no."
+    },
+    {
+      "id": "slava",
+      "term": "Слава",
+      "lang": "sr",
+      "category": [
+        "religion",
+        "tradition"
+      ],
+      "definition": "Serbian family patron saint's day. Each family celebrates its saint, passed through generations. The candle, the kolač bread, the wine. Where Christianity meets ancestor cult. Glory that binds the living and dead."
+    },
+    {
+      "id": "zadruga",
+      "term": "Задруга",
+      "lang": "sr",
+      "category": [
+        "société",
+        "famille"
+      ],
+      "definition": "South Slavic extended family commune. Multiple generations under one patriarch, sharing land and labor. Pre-modern survival strategy, socialist ideal, memory now. The family as village."
+    },
+    {
+      "id": "sevdah",
+      "term": "Sevdah",
+      "lang": "bs",
+      "category": [
+        "musique",
+        "émotion"
+      ],
+      "definition": "Bosnian love-longing, melancholic passion. From Arabic sawda (black bile). The music of sevdalinka songs: desire and loss inseparable. Sarajevo's soul genre. You sing because the heart cannot contain it."
+    },
+    {
+      "id": "merak",
+      "term": "Мерак",
+      "lang": "sr",
+      "category": [
+        "émotion",
+        "plaisir"
+      ],
+      "definition": "Serbian/Balkan pleasure in small things. The coffee with a friend, the slow afternoon. Not hedonism but savoring. Merak cannot be hurried. The art of making joy from nothing special. Turkish loanword, Balkan soul."
+    },
+    {
+      "id": "dor",
+      "term": "Dor",
+      "lang": "ro",
+      "category": [
+        "émotion",
+        "nostalgie"
+      ],
+      "definition": "Romanian longing, yearning, ache of absence. Kindred to saudade but with Carpathian mist. Dor of the emigrant, dor for the beloved. Eminescu's poetry drips with dor. The heart's distance from what it loves."
+    },
+    {
+      "id": "doina",
+      "term": "Doina",
+      "lang": "ro",
+      "category": [
+        "musique",
+        "folklore"
+      ],
+      "definition": "Romanian lyrical song of longing. Free rhythm, ornamental melody, the singer's soul spilling out. Shepherds sang doina on mountainsides. Loss, love, landscape—all woven. The musical form of dor."
+    },
+    {
+      "id": "strigoi",
+      "term": "Strigoi",
+      "lang": "ro",
+      "category": [
+        "mythologie",
+        "mort"
+      ],
+      "definition": "Romanian troubled dead, revenants. Those who died wrongly—unbaptized, suicides, cursed—return. Strigoi drink life from the living. Garlic, stakes, proper burial. The vampire before Dracula made it Gothic."
+    },
+    {
+      "id": "zmaj",
+      "term": "Змај",
+      "lang": "sr",
+      "category": [
+        "mythologie",
+        "slavique"
+      ],
+      "definition": "South Slavic dragon, protector or destroyer. Unlike Western dragons, some zmaj guard villages, fight demons, love human women. Hero and monster in one. The sky serpent, bringer of storms."
+    },
+    {
+      "id": "vila",
+      "term": "Вила",
+      "lang": "sr",
+      "category": [
+        "mythologie",
+        "slavique"
+      ],
+      "definition": "South Slavic fairy, nature spirit. Beautiful, dangerous, dwelling in clouds, mountains, waters. Vila can heal or kill, help heroes or lead travelers astray. The Balkans' nymphs, never quite tamed by Christianity."
+    },
+    {
+      "id": "pusta",
+      "term": "Puszta",
+      "lang": "hu",
+      "category": [
+        "paysage",
+        "identité"
+      ],
+      "definition": "The Hungarian steppe, the great plain. Endless grassland, horsemen, mirages. Magyar soul-landscape: freedom and melancholy under huge sky. The csikós rides, the wind blows, nothing stops the eye."
+    },
+    {
+      "id": "hiusvag",
+      "term": "Hiúság",
+      "lang": "hu",
+      "category": [
+        "émotion",
+        "morale"
+      ],
+      "definition": "Hungarian vanity, but deeper—futility touched with pride. The emptiness of striving. Magyar awareness that glory passes: the kingdom shrunk, Trianon's wound. Vanitas with a saber."
+    },
+    {
+      "id": "bun",
+      "term": "Bún",
+      "lang": "hu",
+      "category": [
+        "émotion",
+        "mélancolie"
+      ],
+      "definition": "Hungarian grief, sorrow, guilt combined. The weight of sin and sadness together. Not just sad but complicit in sadness. The Magyar soul's favorite minor key."
+    },
+    {
+      "id": "sorstalanság",
+      "term": "Sorstalanság",
+      "lang": "hu",
+      "category": [
+        "philosophie",
+        "littérature"
+      ],
+      "definition": "Fatelessness. Kertész's word: the condition of having one's fate removed. In the camps, normal causation stopped. Things happened without reason. The horror of meaninglessness, not meaning. When story breaks down."
+    },
+    {
+      "id": "sisu",
+      "term": "Sisu",
+      "lang": "fi",
+      "category": [
+        "caractère",
+        "identité"
+      ],
+      "definition": "Finnish grit, resilience, determination beyond reason. What kept them fighting in the Winter War. Not bravery but stubborn endurance. When strength runs out, sisu begins. The Finn's untranslatable virtue."
+    },
+    {
+      "id": "kalsarikannit",
+      "term": "Kalsarikännit",
+      "lang": "fi",
+      "category": [
+        "culture",
+        "humour"
+      ],
+      "definition": "Drinking at home in your underwear with no intention of going out. Finnish honesty about solitary pleasure. Not sad—deliberate. The planned night in. Self-care, Nordic style."
+    },
+    {
+      "id": "myötähäpeä",
+      "term": "Myötähäpeä",
+      "lang": "fi",
+      "category": [
+        "émotion",
+        "empathie"
+      ],
+      "definition": "Secondhand embarrassment. Finnish cringe: feeling shame on behalf of someone who should feel it but doesn't. Watching awkwardness, unable to look away. Empathy's uncomfortable cousin."
+    },
+    {
+      "id": "saudade-galega",
+      "term": "Morriña",
+      "lang": "gl",
+      "category": [
+        "émotion",
+        "nostalgie"
+      ],
+      "definition": "Galician homesickness, kindred to Portuguese saudade. The emigrant's ache for green hills, rain, the Atlantic. Rosalía de Castro wrote it. Galicia's gift and curse: the beauty that drives you away, then calls you back."
     },
     {
       "id": "mamihlapinatapai",
@@ -6244,20 +6594,6 @@
       "related": []
     },
     {
-      "id": "kalsarikannit",
-      "term": "Kalsarikännit",
-      "lang": "fi",
-      "pronunciation": "KAL-sah-ree-kahn-nit",
-      "partOfSpeech": "noun",
-      "definition": "Drinking at home alone in your underwear with no intention of going out. Finnish honest self-care.",
-      "category": [
-        "culture"
-      ],
-      "related": [
-        "Hygge"
-      ]
-    },
-    {
       "id": "keyif",
       "term": "Keyif",
       "lang": "tr",
@@ -8356,21 +8692,6 @@
       "related": []
     },
     {
-      "id": "litost",
-      "term": "Lítost",
-      "lang": "cs",
-      "pronunciation": "LEE-tost",
-      "partOfSpeech": "noun",
-      "definition": "A state of torment created by the sudden sight of one's own misery. Kundera's untranslatable Czech concept.",
-      "category": [
-        "émotion"
-      ],
-      "related": [
-        "Toska",
-        "Żal"
-      ]
-    },
-    {
       "id": "merak-tr",
       "term": "Merak",
       "lang": "tr",
@@ -8459,23 +8780,6 @@
         "Sehnsucht",
         "Toska",
         "Hiraeth"
-      ]
-    },
-    {
-      "id": "zal",
-      "term": "Żal",
-      "lang": "pl",
-      "pronunciation": "zhahl",
-      "partOfSpeech": "noun",
-      "definition": "Grief, regret, and resentment combined; a specifically Polish sense of historical grievance and personal sorrow intertwined.",
-      "category": [
-        "émotion",
-        "culture"
-      ],
-      "related": [
-        "Han",
-        "Toska",
-        "Tŭga"
       ]
     },
     {
@@ -8574,15 +8878,6 @@
         "Toska",
         "Natsukashii"
       ]
-    },
-    {
-      "id": "merak",
-      "term": "Мерак (Merak)",
-      "lang": "sr",
-      "category": [
-        "émotion"
-      ],
-      "definition": "Serbian/Balkan feeling of blissful pleasure, especially from small things. Coffee, conversation."
     },
     {
       "id": "veselje",
@@ -13622,16 +13917,6 @@
         "musique"
       ],
       "definition": "The river, the nation—Smetana's tone poem. Czech musical nationalism."
-    },
-    {
-      "id": "sevdah",
-      "term": "Sevdah",
-      "lang": "bs",
-      "category": [
-        "musique",
-        "émotion"
-      ],
-      "definition": "Bosnian blues: love-longing music with Ottoman roots. Bittersweet ache."
     },
     {
       "id": "gusle",
@@ -19002,15 +19287,6 @@
       "definition": "A short Russian folk poem, often humorous or satirical. Sung rapidly, four lines."
     },
     {
-      "id": "duma",
-      "term": "Дума (Duma)",
-      "lang": "uk",
-      "category": [
-        "poésie"
-      ],
-      "definition": "Ukrainian epic song of Cossack deeds. Sung by kobzars."
-    },
-    {
       "id": "ausnahmezustand",
       "term": "Ausnahmezustand",
       "native": "Ausnahmezustand",
@@ -19983,21 +20259,6 @@
       "usage": "Nietzsche analyzed Schadenfreude as a manifestation of ressentiment."
     },
     {
-      "id": "sisu",
-      "term": "Sisu",
-      "lang": "fi",
-      "pronunciation": "SEE-soo",
-      "partOfSpeech": "noun",
-      "definition": "Extraordinary determination and courage in adversity; Finnish grit. The strength to keep going when all seems lost.",
-      "category": [
-        "psychologie"
-      ],
-      "related": [
-        "Gaman",
-        "Inat"
-      ]
-    },
-    {
       "id": "sitzfleisch",
       "term": "Sitzfleisch",
       "lang": "de",
@@ -20121,22 +20382,6 @@
       "related": [
         "Noblesse oblige",
         "Arete"
-      ]
-    },
-    {
-      "id": "inat",
-      "term": "Инат (Inat)",
-      "lang": "bg",
-      "pronunciation": "ee-NAHT",
-      "partOfSpeech": "noun",
-      "definition": "Stubborn defiance out of spite; doing something difficult or unreasonable purely to prove a point, even against one's own interest.",
-      "etymology": "From Turkish inat (stubbornness)",
-      "category": [
-        "psychologie",
-        "émotion"
-      ],
-      "related": [
-        "Ressentiment"
       ]
     },
     {
@@ -21293,16 +21538,6 @@
         "culture"
       ],
       "definition": "A holy fool: feigning madness to speak prophetic truth. Protected by tradition."
-    },
-    {
-      "id": "slava",
-      "term": "Слава (Slava)",
-      "lang": "sr",
-      "category": [
-        "spiritualité",
-        "culture"
-      ],
-      "definition": "Serbian family patron saint's day. Each family has one, celebrated annually."
     },
     {
       "id": "jugaad",

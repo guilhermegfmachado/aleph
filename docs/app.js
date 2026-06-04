@@ -1506,7 +1506,7 @@ function renderGlossaryTerm(t) {
             <header class="glossary-entry-header">
                 <span class="glossary-dropcap">${firstLetter}</span>
                 <span class="glossary-term">${escapeHtml(t.term)}</span>
-                <button class="glossary-speak" onclick="speakTerm('${escapeHtml(t.term)}', '${t.lang}'); event.stopPropagation();" title="Écouter la prononciation">♫</button>
+                <button class="glossary-speak" onclick="speakTerm('${escapeAttr(t.term)}', '${t.lang}'); event.stopPropagation();" title="Écouter la prononciation">♫</button>
                 <span class="glossary-lang">${t.lang.toUpperCase()}</span>
                 ${textIds.length ? `<span class="glossary-textcount" title="Apparaît dans ${textIds.length} textes">№${textIds.length}</span>` : ''}
                 <span class="glossary-expand">+</span>
@@ -2776,7 +2776,11 @@ const SPEECH_LANG_MAP = {
     it: 'it-IT', pt: 'pt-PT', ru: 'ru-RU', ja: 'ja-JP',
     zh: 'zh-CN', ar: 'ar-SA', he: 'he-IL', fa: 'fa-IR',
     sa: 'hi-IN', pi: 'hi-IN', // Sanskrit/Pali approximate with Hindi
-    tr: 'tr-TR', nl: 'nl-NL', pl: 'pl-PL', no: 'nb-NO'
+    tr: 'tr-TR', nl: 'nl-NL', pl: 'pl-PL', no: 'nb-NO',
+    cs: 'cs-CZ', sk: 'sk-SK', bg: 'bg-BG', uk: 'uk-UA',
+    hr: 'hr-HR', sr: 'sr-RS', sl: 'sl-SI', ro: 'ro-RO',
+    hu: 'hu-HU', fi: 'fi-FI', sv: 'sv-SE', da: 'da-DK',
+    is: 'is-IS', lt: 'lt-LT', lv: 'lv-LV', et: 'et-EE'
 };
 
 function speakTerm(term, lang) {
@@ -2950,6 +2954,11 @@ function escapeHtml(str) {
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+}
+
+function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/'/g, '&#39;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 function truncate(str, maxLen) {

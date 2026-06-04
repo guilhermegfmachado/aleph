@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2552
+    "count": 2598
   },
   "terms": [
     {
@@ -2670,156 +2670,6 @@
       "definition": "A joke so bad it's funny. Indonesian word for the failed joke that succeeds through failure. The groan that turns to laugh. Accidentally hilarious."
     },
     {
-      "id": "desenrascanco",
-      "term": "Desenrascanço",
-      "lang": "pt",
-      "category": [
-        "culture",
-        "survie"
-      ],
-      "definition": "Portuguese art of improvised solutions. Untangling yourself creatively from problems. MacGyver thinking. When the manual fails, desenrascanço begins. The Portuguese way."
-    },
-    {
-      "id": "fado-pt",
-      "term": "Fado",
-      "lang": "pt",
-      "category": [
-        "musique",
-        "destin"
-      ],
-      "definition": "Portuguese fate-song. From Latin fatum: destiny. Lisbon's mournful music: loss, longing, resignation. The fadista sings what cannot be changed. Embracing fate through beauty."
-    },
-    {
-      "id": "sino",
-      "term": "O nosso sino",
-      "lang": "pt",
-      "category": [
-        "communauté",
-        "identité"
-      ],
-      "definition": "Our bell—belonging to a parish, a village, a community defined by what bells you hear. Portuguese identity: local before national. The sound that says: you're home."
-    },
-    {
-      "id": "sebastianismo",
-      "term": "Sebastianismo",
-      "lang": "pt",
-      "category": [
-        "mythe",
-        "messianisme"
-      ],
-      "definition": "Portuguese messianic hope. King Sebastian died at Alcácer Quibir (1578); Portugal believes he'll return in fog. The Once and Future King, Iberian style. Waiting for salvation from the past."
-    },
-    {
-      "id": "quinto-imperio",
-      "term": "Quinto Império",
-      "lang": "pt",
-      "category": [
-        "prophétie",
-        "politique"
-      ],
-      "definition": "The Fifth Empire. Padre António Vieira's prophecy: after Assyria, Persia, Greece, Rome—Portugal will lead the final universal empire. Pessoa revived it. Portuguese exceptionalism, mystical edition."
-    },
-    {
-      "id": "soledad",
-      "term": "Soledad",
-      "lang": "es",
-      "category": [
-        "émotion",
-        "flamenco"
-      ],
-      "definition": "Spanish solitude, loneliness—but charged with flamenco's intensity. La Soledad: the pain sung in soleares. Not mere being alone but aloneness as wound, as truth, as art."
-    },
-    {
-      "id": "aguante",
-      "term": "Aguante",
-      "lang": "es",
-      "category": [
-        "caractère",
-        "endurance"
-      ],
-      "definition": "Argentine endurance, resilience, bearing what must be borne. The fútbol fan's loyalty, the worker's persistence. Aguantar: to withstand. The virtue of not breaking. Tango-land's grit."
-    },
-    {
-      "id": "madrugada",
-      "term": "Madrugada",
-      "lang": "es",
-      "category": [
-        "temps",
-        "nuit"
-      ],
-      "definition": "The small hours, between midnight and dawn. Not night, not morning—its own zone. Spain comes alive in the madrugada. The time when truth emerges, when parties transcend."
-    },
-    {
-      "id": "desvelado",
-      "term": "Desvelado",
-      "lang": "es",
-      "category": [
-        "état",
-        "insomnie"
-      ],
-      "definition": "Unable to sleep, sleepless—but specifically from worry, love, thought. The unveiled one: what keeps you awake strips away comfort. Mexican poets know desvelado well."
-    },
-    {
-      "id": "estrenar",
-      "term": "Estrenar",
-      "lang": "es",
-      "category": [
-        "expérience",
-        "nouveauté"
-      ],
-      "definition": "To use or wear something for the first time. The verb for new shoes, new dress, new house. Spanish marks the premiere of possessions. First use as ceremony."
-    },
-    {
-      "id": "tutear",
-      "term": "Tutear",
-      "lang": "es",
-      "category": [
-        "social",
-        "langage"
-      ],
-      "definition": "To address someone with tú (informal you) rather than usted. The verb for intimacy's grammar. Tutear marks friendship, disrespect, or equality. Spanish verbs for social distance."
-    },
-    {
-      "id": "consuegros",
-      "term": "Consuegros",
-      "lang": "es",
-      "category": [
-        "famille",
-        "relation"
-      ],
-      "definition": "The relationship between sets of in-laws—your child's spouse's parents. Spanish names a bond English ignores. Co-parents-in-law. The family that marriage's marriage creates."
-    },
-    {
-      "id": "empalagar",
-      "term": "Empalagar",
-      "lang": "es",
-      "category": [
-        "sensation",
-        "excès"
-      ],
-      "definition": "To be sickened by sweetness—too much sugar, too much sentiment. The cloy, the saccharine overdose. Spanish knows when pleasure curdles. Enough becomes too much."
-    },
-    {
-      "id": "anteayer",
-      "term": "Anteayer",
-      "lang": "es",
-      "category": [
-        "temps",
-        "passé"
-      ],
-      "definition": "The day before yesterday. Spanish and Portuguese (anteontem) have words English lacks. Not just 'two days ago' but a named day. Time with more gradations."
-    },
-    {
-      "id": "trasantier",
-      "term": "Trasanteayer",
-      "lang": "es",
-      "category": [
-        "temps",
-        "passé"
-      ],
-      "definition": "Three days ago—the day before anteayer. Even deeper into the past. Spanish names what English numbers. Memory with its own vocabulary."
-    },
-    {
       "id": "koselig",
       "term": "Koselig",
       "lang": "no",
@@ -3118,6 +2968,676 @@
         "lieu"
       ],
       "definition": "The Isle of Apples—Avalon in Welsh. Where Arthur sleeps, where the wounded go to heal. The otherworld just offshore. Welsh geography always half in myth."
+    },
+    {
+      "id": "velky-inkvizitor",
+      "term": "Legenda o Velkém Inkvizitorovi",
+      "lang": "cs",
+      "category": [
+        "littérature",
+        "philosophie"
+      ],
+      "definition": "The Legend of the Grand Inquisitor. Dostoevsky's Czech echo: Christ returns, the Church imprisons him. Freedom is burden; the Inquisitor offers bread instead. The parable that haunts Bohemia's religious memory."
+    },
+    {
+      "id": "havran",
+      "term": "Havran",
+      "lang": "cs",
+      "category": [
+        "symbolisme",
+        "littérature"
+      ],
+      "definition": "The raven in Czech—bird of ill omen, of battlefields, of prophecy. Karel Jaromír Erben's ballads are full of havrani. Black wings over Bohemian landscapes. The bird that knows what's coming."
+    },
+    {
+      "id": "polednice",
+      "term": "Polednice",
+      "lang": "cs",
+      "category": [
+        "mythologie",
+        "folklore"
+      ],
+      "definition": "The Noon Witch. Czech demon who appears at midday, steals children, brings madness. Erben's ballad, Dvořák's tone poem. The terror that strikes when the sun is highest. Noon as witching hour."
+    },
+    {
+      "id": "vodnik",
+      "term": "Vodník",
+      "lang": "cs",
+      "category": [
+        "mythologie",
+        "eau"
+      ],
+      "definition": "Czech water sprite, green-skinned, dwelling in ponds and rivers. Vodník drowns the unwary, keeps souls in pots. Erben made him famous. Every Czech pond might hide him. The danger in still water."
+    },
+    {
+      "id": "bludicky",
+      "term": "Bludičky",
+      "lang": "cs",
+      "category": [
+        "mythologie",
+        "lumière"
+      ],
+      "definition": "Czech will-o'-the-wisps, wandering lights over marshes. Souls of the unbaptized, or demons leading travelers astray. Follow bludičky and drown. The light that lies. Bohemian swamps glow with them."
+    },
+    {
+      "id": "divoka-honba",
+      "term": "Divoká honba",
+      "lang": "cs",
+      "category": [
+        "mythologie",
+        "chasse"
+      ],
+      "definition": "The Wild Hunt in Czech tradition. Spectral riders cross the night sky, hunting souls. Hear them and hide. The storm as supernatural cavalry. Pan-European terror with Slavic coloring."
+    },
+    {
+      "id": "zaklete-princezny",
+      "term": "Zakleta princezna",
+      "lang": "cs",
+      "category": [
+        "folklore",
+        "conte"
+      ],
+      "definition": "The enchanted princess—Czech fairy tale motif. Cursed to wait, transformed to beast or stone, until the right hero breaks the spell. Patience as virtue; love as magic. Bohemia's sleeping beauties."
+    },
+    {
+      "id": "cerny-myslivec",
+      "term": "Černý myslivec",
+      "lang": "cs",
+      "category": [
+        "mythologie",
+        "diable"
+      ],
+      "definition": "The Black Huntsman. Czech figure of death or devil, hunting in forests. Make a deal with him; regret it forever. The Faustian bargain in gamekeeper's clothes. Bohemian woods have dark masters."
+    },
+    {
+      "id": "dziady",
+      "term": "Dziady",
+      "lang": "pl",
+      "category": [
+        "rituel",
+        "ancêtres"
+      ],
+      "definition": "Forefathers' Eve. Ancient Slavic feast of the dead, when ancestors return. Mickiewicz's drama bears the name: spirits speak, Poles suffer, redemption waits. The night the veil thins. Poland's Day of the Dead."
+    },
+    {
+      "id": "gusla",
+      "term": "Gusła",
+      "lang": "pl",
+      "category": [
+        "magie",
+        "rituel"
+      ],
+      "definition": "Polish sorcery, folk magic, the old ways. Gusła names what the Church condemned. Village healers, love spells, curses. The persistence of pre-Christian practice. Mickiewicz collected them."
+    },
+    {
+      "id": "strzyga",
+      "term": "Strzyga",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "vampire"
+      ],
+      "definition": "Polish vampire-demon, born with two souls. When one soul dies, the other becomes strzyga, hunting the living. Two hearts, two rows of teeth. The Slavic undead's most terrifying form."
+    },
+    {
+      "id": "latawiec",
+      "term": "Latawiec",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "esprit"
+      ],
+      "definition": "Polish flying spirit, incubus or succubus. Latawiec visits at night, brings dreams or nightmares, steals breath. The demon of sleep paralysis. What presses on your chest at 3am."
+    },
+    {
+      "id": "topielec",
+      "term": "Topielec",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "eau"
+      ],
+      "definition": "Polish drowned spirit, the ghost of those who died in water. Topielec lures others to drown. Green-skinned, weed-haired, dwelling in rivers. Poland's lakes are haunted. The dead want company."
+    },
+    {
+      "id": "zmora",
+      "term": "Zmora",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "cauchemar"
+      ],
+      "definition": "Polish nightmare demon, sitting on sleepers' chests. Zmora is the mare of nightmare—the weight, the paralysis, the terror. Often a jealous woman's spirit. Sleep is not safe."
+    },
+    {
+      "id": "swiatewidz",
+      "term": "Światowid",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "dieu"
+      ],
+      "definition": "Four-faced Slavic god of war and divination. Światowid's idol stood at Arkona until Christians destroyed it. Four faces see all directions. The old god of the Baltic Slavs, not quite forgotten."
+    },
+    {
+      "id": "weles",
+      "term": "Weles",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "dieu"
+      ],
+      "definition": "Slavic god of the underworld, cattle, and poetry. Veles in Russian. Opponent of Perun the thunderer—cosmic struggle, seasonal myth. The lowland god against the sky god. Poetry belongs to the depths."
+    },
+    {
+      "id": "perun",
+      "term": "Perun",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "dieu"
+      ],
+      "definition": "Slavic thunder god, lord of the sky. Perun wields lightning, fights Veles, rules from the oak tree. Thursday is his day. The supreme god before Christianity. Thunder still carries his name."
+    },
+    {
+      "id": "kupala",
+      "term": "Noc Kupały",
+      "lang": "pl",
+      "category": [
+        "fête",
+        "solstice"
+      ],
+      "definition": "Kupala Night—midsummer festival of fire and water. Jump bonfires, float wreaths, seek the fern flower. Lovers pair, spirits walk. The Slavic solstice survives baptism. Magic night, once a year."
+    },
+    {
+      "id": "kwiat-paproci",
+      "term": "Kwiat paproci",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "quête"
+      ],
+      "definition": "The fern flower—Polish legend says ferns bloom once a year, on Kupala Night. Find it and gain powers: understand animals, find treasure, know secrets. But the forest guards it. The quest that never ends."
+    },
+    {
+      "id": "biala-dama",
+      "term": "Biała Dama",
+      "lang": "pl",
+      "category": [
+        "fantôme",
+        "château"
+      ],
+      "definition": "The White Lady. Polish castles have her: spectral woman in white, omen of death or guardian spirit. Wronged wives, murdered maidens. Every ruin has its Biała Dama. The ghost that watches."
+    },
+    {
+      "id": "boruty",
+      "term": "Boruta",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "diable"
+      ],
+      "definition": "Polish devil of Łęczyca castle. Boruta guards treasure, makes deals, tricks the greedy. A local devil, almost friendly. Folk Catholicism's tame demon. The devil you know."
+    },
+    {
+      "id": "samotnija",
+      "term": "Самотия",
+      "lang": "bg",
+      "category": [
+        "émotion",
+        "solitude"
+      ],
+      "definition": "Bulgarian solitude with metaphysical weight. Not just alone but cosmically alone. The soul's isolation that neither company nor faith fully heals. Balkan loneliness goes deep."
+    },
+    {
+      "id": "mara-bg",
+      "term": "Мара",
+      "lang": "bg",
+      "category": [
+        "mythologie",
+        "cauchemar"
+      ],
+      "definition": "Bulgarian nightmare spirit, cognate to Polish zmora. Mara rides sleepers, steals breath, brings paralysis. She may be a living witch's wandering spirit. Lock your doors; she enters anyway."
+    },
+    {
+      "id": "samodiva",
+      "term": "Самодива",
+      "lang": "bg",
+      "category": [
+        "mythologie",
+        "nature"
+      ],
+      "definition": "Bulgarian woodland nymph, wild and dangerous. Samodivi dance in moonlight, enchant men, punish oath-breakers. Beautiful, fierce, not human. The forest's feminine power. Don't follow the music."
+    },
+    {
+      "id": "karakondjul",
+      "term": "Караконджул",
+      "lang": "bg",
+      "category": [
+        "mythologie",
+        "démon"
+      ],
+      "definition": "Bulgarian Christmas demon. During the Dirty Days (Christmas to Epiphany), karakondjuli emerge—dark, hairy, malevolent. They ride travelers, cause chaos. Fire and cross protect. Yule's dark side."
+    },
+    {
+      "id": "talasum",
+      "term": "Талъсъм",
+      "lang": "bg",
+      "category": [
+        "magie",
+        "protection"
+      ],
+      "definition": "Bulgarian talisman, amulet, magical charm. Talasumi protect against evil eye, disease, bad luck. Village magic that persists. The small object that carries power."
+    },
+    {
+      "id": "uroki",
+      "term": "Уроки",
+      "lang": "bg",
+      "category": [
+        "magie",
+        "malédiction"
+      ],
+      "definition": "Bulgarian evil eye curse. Uroki come from envy, intentional or not. Symptoms: illness, bad luck, withering. Counter with talasumi, lead-pouring rituals, garlic. The danger of being seen."
+    },
+    {
+      "id": "nestinari",
+      "term": "Нестинари",
+      "lang": "bg",
+      "category": [
+        "rituel",
+        "extase"
+      ],
+      "definition": "Bulgarian fire-dancers. On Saints Constantine and Helena's day, nestinari dance barefoot on embers, holding icons, in trance. Pre-Christian ecstasy baptized. Fire cannot burn the holy. The body transcends."
+    },
+    {
+      "id": "kukeri",
+      "term": "Кукери",
+      "lang": "bg",
+      "category": [
+        "rituel",
+        "masque"
+      ],
+      "definition": "Bulgarian masked mummers. At New Year, kukeri in monstrous costumes parade, driving out evil spirits. Bells clang, fertility returns. Ancient apotropaic magic, still performed. The masks that scare demons."
+    },
+    {
+      "id": "martenitsa",
+      "term": "Мартеница",
+      "lang": "bg",
+      "category": [
+        "tradition",
+        "printemps"
+      ],
+      "definition": "Bulgarian red-and-white bracelet for March 1. Martenitsi bring health, welcome spring, protect from Baba Marta's capricious weather. Wear until you see a stork, then tie to a tree. Spring's talisman."
+    },
+    {
+      "id": "baba-marta",
+      "term": "Баба Марта",
+      "lang": "bg",
+      "category": [
+        "mythologie",
+        "saison"
+      ],
+      "definition": "Grandmother March—Bulgarian personification of the month. Baba Marta is moody: sunny one day, snowy the next. Please her with martenitsi, or she'll extend winter. The capricious hag of spring."
+    },
+    {
+      "id": "zavet",
+      "term": "Завет",
+      "lang": "bg",
+      "category": [
+        "rituel",
+        "voeu"
+      ],
+      "definition": "Bulgarian sacred vow, ritual promise. Zavet binds you to a saint, a place, an action. Break it and suffer. The word as chain. Balkan Christianity's binding power."
+    },
+    {
+      "id": "pomak-prayers",
+      "term": "Кабарлък",
+      "lang": "bg",
+      "category": [
+        "spiritualité",
+        "syncrétisme"
+      ],
+      "definition": "Pomak Bulgarian Muslim folk practices—mixing Islam with Slavic traditions. Saints and Sufi dervishes, fasting and fire-dancing. Syncretic faith in the Rhodope mountains. Islam with a Balkan face."
+    },
+    {
+      "id": "ksiondz",
+      "term": "Ksiądz",
+      "lang": "pl",
+      "category": [
+        "religion",
+        "autorité"
+      ],
+      "definition": "Polish priest—but the word carries weight. In partitioned Poland, ksiądz kept language and nation alive. The priest as patriot, teacher, resistance. Not just clergy but custodian of Polishness."
+    },
+    {
+      "id": "matka-boska",
+      "term": "Matka Boska",
+      "lang": "pl",
+      "category": [
+        "religion",
+        "dévotion"
+      ],
+      "definition": "Mother of God—Polish Marian devotion at its deepest. Matka Boska Częstochowska: the Black Madonna, Poland's queen, scarred by Hussites. The nation kneels before her. Poland under her mantle."
+    },
+    {
+      "id": "wielka-improwizacja",
+      "term": "Wielka Improwizacja",
+      "lang": "pl",
+      "category": [
+        "littérature",
+        "romantisme"
+      ],
+      "definition": "The Great Improvisation. Konrad's monologue in Mickiewicz's Dziady: man challenges God, demands answers, nearly falls. Polish Romanticism's peak: the poet as prophet, rebel, almost damned."
+    },
+    {
+      "id": "wieszcz",
+      "term": "Wieszcz",
+      "lang": "pl",
+      "category": [
+        "littérature",
+        "prophète"
+      ],
+      "definition": "Polish poet-prophet, national bard. Mickiewicz, Słowacki, Krasiński—the Three Bards. Wieszcz speaks for the nation, sees its destiny. Not just poet but seer. Poland entrusts its soul to wieszcze."
+    },
+    {
+      "id": "wallenrodyzm",
+      "term": "Wallenrodyzm",
+      "lang": "pl",
+      "category": [
+        "éthique",
+        "résistance"
+      ],
+      "definition": "From Mickiewicz's Konrad Wallenrod: serving the enemy to destroy them from within. Heroic treachery, patriotic betrayal. The ethics of occupied nations. Do you damn your soul to save your people?"
+    },
+    {
+      "id": "prometeizm",
+      "term": "Prometeizm",
+      "lang": "pl",
+      "category": [
+        "philosophie",
+        "romantisme"
+      ],
+      "definition": "Polish Promethean idealism. The hero defies gods, steals fire, suffers for humanity. Mickiewicz's Konrad is Promethean. Poland as Prometheus: suffering for Europe's freedom. Romantic rebellion as national myth."
+    },
+    {
+      "id": "kresowa-nostalgia",
+      "term": "Kresy",
+      "lang": "pl",
+      "category": [
+        "histoire",
+        "nostalgie"
+      ],
+      "definition": "The Borderlands—Poland's lost eastern territories, now in Ukraine, Belarus, Lithuania. Kresy: manor houses, multicultural towns, the world before 1939. Polish wound, Lithuanian memory, Ukrainian reality. The homeland that isn't there."
+    },
+    {
+      "id": "targowica",
+      "term": "Targowica",
+      "lang": "pl",
+      "category": [
+        "histoire",
+        "trahison"
+      ],
+      "definition": "The Confederation of Targowica (1792)—Polish nobles who invited Russian intervention. Targowica became synonymous with treason. To be called Targowica is the ultimate Polish insult. The betrayal that ended Poland."
+    },
+    {
+      "id": "listopad",
+      "term": "Powstanie Listopadowe",
+      "lang": "pl",
+      "category": [
+        "histoire",
+        "insurrection"
+      ],
+      "definition": "The November Uprising (1830). Poland rose against Russia; Poland fell. Exile, repression, Great Emigration. The uprising that created Polish Romanticism abroad. Failure as founding myth."
+    },
+    {
+      "id": "zmierzch-bogow",
+      "term": "Zmierzch bogów",
+      "lang": "pl",
+      "category": [
+        "mythologie",
+        "eschatologie"
+      ],
+      "definition": "Twilight of the gods—Polish rendering of Götterdämmerung. The old order ending, world-fire coming. Slavic paganism had its own versions: the final battle, the new world after. Everything ends; something begins."
+    },
+    {
+      "id": "hora",
+      "term": "Хоро",
+      "lang": "bg",
+      "category": [
+        "danse",
+        "communauté"
+      ],
+      "definition": "Bulgarian circle dance. Horo binds the community: hands held, feet stepping patterns, the music driving. Weddings, holidays, village squares. The dance that makes strangers kin."
+    },
+    {
+      "id": "gajda",
+      "term": "Гайда",
+      "lang": "bg",
+      "category": [
+        "musique",
+        "tradition"
+      ],
+      "definition": "Bulgarian bagpipe. Gajda's drone and chanter carry mountain music: shepherds' tunes, wedding songs, ritual rhythms. The sound of the Balkans before amplifiers. Breath becomes landscape."
+    },
+    {
+      "id": "kaval",
+      "term": "Кавал",
+      "lang": "bg",
+      "category": [
+        "musique",
+        "pastorale"
+      ],
+      "definition": "Bulgarian end-blown flute. Kaval is the shepherd's instrument: lonely, haunting, speaking to mountains. Orpheus might have played kaval. The flute that makes sheep follow and hearts ache."
+    },
+    {
+      "id": "narodna-pesna",
+      "term": "Народна песен",
+      "lang": "bg",
+      "category": [
+        "musique",
+        "folklore"
+      ],
+      "definition": "Bulgarian folk song. Narodna pesen carries everything: history, myth, love, grief. Village women singing in dissonant harmonies. UNESCO protects it now. The voice of a people who remember."
+    },
+    {
+      "id": "pirin-planina",
+      "term": "Пирин планина",
+      "lang": "bg",
+      "category": [
+        "géographie",
+        "sacré"
+      ],
+      "definition": "The Pirin Mountains—Bulgaria's wildest range. Named for Perun the thunder god. Pirin is sacred landscape: monasteries, forests, peaks where gods lived. Geography as theology."
+    },
+    {
+      "id": "stara-planina",
+      "term": "Стара Планина",
+      "lang": "bg",
+      "category": [
+        "géographie",
+        "identité"
+      ],
+      "definition": "The Balkan Mountains—the Old Mountain, spine of Bulgaria. Stara Planina gave the peninsula its name. Refuge for rebels, home of haiduti outlaws. The mountain that defines a nation."
+    },
+    {
+      "id": "haiduk",
+      "term": "Хайдук",
+      "lang": "bg",
+      "category": [
+        "histoire",
+        "résistance"
+      ],
+      "definition": "Balkan outlaw-rebel. Haiduti fought Ottomans, robbed the rich, hid in mountains. Heroes or bandits? Both. The Balkans' Robin Hoods. Freedom's price was living outside law."
+    },
+    {
+      "id": "komita",
+      "term": "Комита",
+      "lang": "bg",
+      "category": [
+        "histoire",
+        "révolution"
+      ],
+      "definition": "Bulgarian revolutionary, member of liberation committees. Komiti fought for freedom from Ottomans, died for the dream. Levski, Botev—komiti saints. The revolutionary as martyr, the martyr as saint."
+    },
+    {
+      "id": "levski",
+      "term": "Апостолът",
+      "lang": "bg",
+      "category": [
+        "histoire",
+        "sainteté"
+      ],
+      "definition": "The Apostle—title for Vasil Levski, Bulgaria's revolutionary saint. He organized, dreamed republic, was hanged (1873). Levski is more than hero: he's sacred. The man who died so Bulgaria could live."
+    },
+    {
+      "id": "opulchenie",
+      "term": "Опълчение",
+      "lang": "bg",
+      "category": [
+        "histoire",
+        "guerre"
+      ],
+      "definition": "Bulgarian volunteer militia of liberation war (1877-78). Opulchentsi fought alongside Russians against Ottomans. Shipka Pass, where they held. The militia that made a nation."
+    },
+    {
+      "id": "koliada",
+      "term": "Коляда",
+      "lang": "bg",
+      "category": [
+        "fête",
+        "solstice"
+      ],
+      "definition": "Slavic winter solstice, surviving as Christmas carols. Koledari go house to house singing, blessing. Ancient sun-worship in Christian dress. The light returns; the carolers announce it."
+    },
+    {
+      "id": "lazarovden",
+      "term": "Лазаровден",
+      "lang": "bg",
+      "category": [
+        "fête",
+        "printemps"
+      ],
+      "definition": "Lazarus Saturday in Bulgaria. Girls in folk costume go singing door to door, blessing homes. Spring ritual, fertility magic, village beauty. The Saturday before Palm Sunday belongs to Lazarki."
+    },
+    {
+      "id": "gergiovden",
+      "term": "Гергьовден",
+      "lang": "bg",
+      "category": [
+        "fête",
+        "berger"
+      ],
+      "definition": "St. George's Day (May 6)—Bulgaria's shepherd holiday. Lambs sacrificed, first milk rituals, army day too. The dragon-slayer christianizes spring fertility. Gergiovden: when summer officially begins."
+    },
+    {
+      "id": "eniovden",
+      "term": "Еньовден",
+      "lang": "bg",
+      "category": [
+        "fête",
+        "solstice"
+      ],
+      "definition": "Midsummer Day (June 24)—Bulgarian herb-gathering festival. Herbs picked on Eniovden have maximum power. Fire, water, magic. The summer solstice's green pharmacy. Pick before dawn; the dew is holy."
+    },
+    {
+      "id": "rusalka",
+      "term": "Русалка",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "eau"
+      ],
+      "definition": "Slavic water spirit, drowned maiden's ghost. Rusalki haunt rivers and lakes, lure men to death with song and beauty. Dangerous, tragic, beautiful. The death in the water that sings."
+    },
+    {
+      "id": "domovoi",
+      "term": "Домовой",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "foyer"
+      ],
+      "definition": "Slavic house spirit, protector of home. Domovoi lives behind the stove, guards the family—if respected. Anger him and misfortune follows. The small god of domestic space. Feed him; he's family."
+    },
+    {
+      "id": "leshy",
+      "term": "Леший",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "forêt"
+      ],
+      "definition": "Slavic forest spirit, lord of woods and wolves. Leshy leads travelers astray, protects animals, stands as tall as trees. The wild's guardian. Enter his realm with respect, or don't return."
+    },
+    {
+      "id": "baba-yaga",
+      "term": "Баба-Яга",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "sorcière"
+      ],
+      "definition": "The witch of Slavic tales. Baba Yaga lives in a hut on chicken legs, flies in a mortar, eats children—or helps heroes. Terrifying crone, dangerous helper. The forest's ambiguous grandmother."
+    },
+    {
+      "id": "koschei",
+      "term": "Кощей Бессмертный",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "immortel"
+      ],
+      "definition": "Koschei the Deathless. His death is hidden in a needle, in an egg, in a duck, in a hare, in a chest, on an island. The villain who cannot die—unless you find the needle. Nested immortality."
+    },
+    {
+      "id": "firebird",
+      "term": "Жар-птица",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "quête"
+      ],
+      "definition": "The Firebird. Zhar-ptitsa glows, drops feathers of gold, sets heroes on impossible quests. Catch one feather and your troubles begin. Russian fairy tale's luminous MacGuffin. The beauty you shouldn't pursue."
+    },
+    {
+      "id": "ivan-durak",
+      "term": "Иван-дурак",
+      "lang": "ru",
+      "category": [
+        "folklore",
+        "archétype"
+      ],
+      "definition": "Ivan the Fool—Russian fairy tales' hero. The youngest son, the simple one, mocked by clever brothers. But Ivan's simplicity wins: he befriends animals, trusts magic, gains the kingdom. The fool's wisdom."
+    },
+    {
+      "id": "bylina",
+      "term": "Былина",
+      "lang": "ru",
+      "category": [
+        "littérature",
+        "épique"
+      ],
+      "definition": "Russian oral epic poem. Byliny tell of bogatyrs—heroes like Ilya Muromets, Dobrynya Nikitich. Chanted by skaziteli, preserved in the north. Russia's Iliad, sung not written. The hero-tales."
+    },
+    {
+      "id": "bogatyr",
+      "term": "Богатырь",
+      "lang": "ru",
+      "category": [
+        "mythologie",
+        "héros"
+      ],
+      "definition": "Russian epic hero, warrior of supernatural strength. Bogatyri defend Holy Russia, fight dragons and Tatars. Ilya Muromets sat paralyzed 33 years, then rose invincible. The hero Russia needs."
+    },
+    {
+      "id": "skazka",
+      "term": "Сказка",
+      "lang": "ru",
+      "category": [
+        "littérature",
+        "conte"
+      ],
+      "definition": "Russian fairy tale, wonder tale. Skazki are told, not read: 'In a certain kingdom, in a certain land...' Propp analyzed their structure. The tales that teach Russia's children what forests hide."
     },
     {
       "id": "goya",
@@ -7942,15 +8462,6 @@
       "definition": "A Balkan tavern for coffee, rakija, music, and passionate conversation."
     },
     {
-      "id": "nestinari",
-      "term": "Нестинари (Nestinari)",
-      "lang": "bg",
-      "category": [
-        "culture"
-      ],
-      "definition": "Bulgarian fire dancers who walk on embers in trance. Thracian survival."
-    },
-    {
       "id": "vyshyvanka",
       "term": "Вишиванка (Vyshyvanka)",
       "lang": "uk",
@@ -7958,42 +8469,6 @@
         "culture"
       ],
       "definition": "Ukrainian embroidered shirt. Regional patterns identify origins."
-    },
-    {
-      "id": "domovoi",
-      "term": "Домовой (Domovoi)",
-      "lang": "ru",
-      "category": [
-        "culture"
-      ],
-      "definition": "Slavic house spirit. Protects the home if respected."
-    },
-    {
-      "id": "baba-yaga",
-      "term": "Баба-Яга (Baba Yaga)",
-      "lang": "ru",
-      "category": [
-        "culture"
-      ],
-      "definition": "Slavic witch who lives in a hut on chicken legs. Ambiguous: danger or help."
-    },
-    {
-      "id": "rusalka",
-      "term": "Русалка (Rusalka)",
-      "lang": "ru",
-      "category": [
-        "culture"
-      ],
-      "definition": "Slavic water spirit, often a drowned maiden. Dangerous beauty."
-    },
-    {
-      "id": "kupala",
-      "term": "Купала (Kupala)",
-      "lang": "ru",
-      "category": [
-        "culture"
-      ],
-      "definition": "Slavic midsummer festival: bonfires, water, fern-flower seeking."
     },
     {
       "id": "plie",
@@ -20063,15 +20538,6 @@
         "poésie"
       ],
       "definition": "A poem or song using an existing melody or form with new words. Sacred made secular or vice versa."
-    },
-    {
-      "id": "bylina",
-      "term": "Былина (Bylina)",
-      "lang": "ru",
-      "category": [
-        "poésie"
-      ],
-      "definition": "Russian epic oral poetry celebrating bogatyrs (heroes). Sung, not recited."
     },
     {
       "id": "chastushka",

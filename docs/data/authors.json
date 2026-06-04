@@ -241,6 +241,22 @@
       ]
     },
     {
+      "id": "hamann",
+      "name": "Johann Georg Hamann",
+      "name_original": "Johann Georg Hamann",
+      "dates": "1730–1788",
+      "origin": "Königsberg, Prusse",
+      "lang": "de",
+      "bio": "Le Mage du Nord. Contre les Lumières depuis leur cœur même : ami et critique de Kant, maître de Herder. Dieu parle dans la nature, l'histoire, le langage — tout est révélation. Style oraculaire, citations enchevêtrées. La raison est langage, le langage est incarnation. Précurseur méconnu du romantisme et de l'existentialisme.",
+      "works": [],
+      "tags": [
+        "philosophie",
+        "contre-Lumières",
+        "mysticisme",
+        "allemagne"
+      ]
+    },
+    {
       "id": "lao-tzu",
       "name": "Lao Tseu",
       "name_original": "老子",

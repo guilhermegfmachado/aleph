@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2398
+    "count": 2446
   },
   "terms": [
     {
@@ -41,6 +41,546 @@
         "Amor sui",
         "Concupiscence"
       ]
+    },
+    {
+      "id": "te-saxa-loquuntur",
+      "term": "Te saxa loquuntur",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "nature"
+      ],
+      "definition": "The stones speak to you. Nature addresses the attentive soul. Hamann's motto: creation is God's speech, and those with ears hear it everywhere. The rocks cry out (Luke 19:40). Romantic nature-mysticism in three words."
+    },
+    {
+      "id": "deus-absconditus",
+      "term": "Deus absconditus",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "mystique"
+      ],
+      "definition": "The hidden God. Isaiah 45:15. Luther's terrifying insight: God conceals himself behind his opposite—strength in weakness, wisdom in folly, life in death. The cross reveals by hiding. Pascal's God who hides to be sought."
+    },
+    {
+      "id": "coincidentia-oppositorum",
+      "term": "Coincidentia oppositorum",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "philosophie"
+      ],
+      "definition": "Coincidence of opposites. Nicholas of Cusa's principle: in the infinite, contradictions unite. God is both maximum and minimum, being and nothing. The mind breaks trying to grasp it—and in breaking, glimpses. Mystical logic beyond logic."
+    },
+    {
+      "id": "docta-ignorantia",
+      "term": "Docta ignorantia",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "philosophie"
+      ],
+      "definition": "Learned ignorance. Cusanus: the highest knowledge is knowing we don't know. Not skepticism but reverence—the infinite exceeds every concept. Socrates baptized. The more you learn, the more you know the mystery deepens."
+    },
+    {
+      "id": "noli-foras-ire",
+      "term": "Noli foras ire",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "augustinien"
+      ],
+      "definition": "Do not go outside. Augustine's inward turn: truth dwells within. In interiore homine habitat veritas. The soul contains more than the cosmos. Stop wandering; descend into yourself; there find what exceeds yourself."
+    },
+    {
+      "id": "in-interiore-homine",
+      "term": "In interiore homine habitat veritas",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "augustinien"
+      ],
+      "definition": "Truth dwells in the inner man. Augustine's direction: not outward to nature but inward to soul, then upward to God. The deepest self opens onto the infinite. Interior intimo meo—closer to me than I am to myself."
+    },
+    {
+      "id": "interior-intimo-meo",
+      "term": "Interior intimo meo",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "augustinien"
+      ],
+      "definition": "More inward than my innermost. Augustine on God: closer than my own depths. You were within, I was without. The paradox of transcendence through immanence. Find yourself, lose yourself, find God."
+    },
+    {
+      "id": "fides-quaerens-intellectum",
+      "term": "Fides quaerens intellectum",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "scolastique"
+      ],
+      "definition": "Faith seeking understanding. Anselm's program: believe first, then comprehend. Not blind faith but faith that thinks. Credo ut intelligam—I believe in order to understand. The mind's love for what it already trusts."
+    },
+    {
+      "id": "credo-ut-intelligam",
+      "term": "Credo ut intelligam",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "scolastique"
+      ],
+      "definition": "I believe in order to understand. Anselm's formula, from Augustine: faith precedes, understanding follows. Not credulity but method. You cannot understand what you will not first inhabit. Knowledge requires commitment."
+    },
+    {
+      "id": "nox-mystica",
+      "term": "Nox mystica",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "contemplation"
+      ],
+      "definition": "The mystical night. Pseudo-Dionysius, John of the Cross: God dwells in darkness. The brighter the divine light, the blinder the mortal eye. In the dark night the soul finds what day conceals. Via negativa's geography."
+    },
+    {
+      "id": "via-negativa",
+      "term": "Via negativa",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "théologie"
+      ],
+      "definition": "The negative way. Theology by denial: God is not this, not that. Every affirmation falls short; only negation approaches. Pseudo-Dionysius's method: strip away until silence remains. What you can say, God is not."
+    },
+    {
+      "id": "tenebrae-lucidissimae",
+      "term": "Tenebrae lucidissimae",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "paradoxe"
+      ],
+      "definition": "Most luminous darkness. Mystical paradox: the divine dark outshines every light. The sun at midnight. Where reason fails, a deeper seeing begins. Dionysian theology's signature image."
+    },
+    {
+      "id": "raptus",
+      "term": "Raptus",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "expérience"
+      ],
+      "definition": "Ecstatic transport, rapture. The soul seized and lifted beyond itself. Paul caught up to the third heaven. The mystic's involuntary flight. Not achieved but undergone—you don't climb, you're taken."
+    },
+    {
+      "id": "excessus-mentis",
+      "term": "Excessus mentis",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "contemplation"
+      ],
+      "definition": "The mind's going-out, ecstasy. The intellect transcends itself, leaves its normal operations behind. Richard of St. Victor: the highest contemplation exceeds the mind that attempts it. Thinking beyond thinking."
+    },
+    {
+      "id": "apex-mentis",
+      "term": "Apex mentis",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "psychologie"
+      ],
+      "definition": "The mind's peak, the soul's summit. Medieval psychology: the highest faculty, above reason, that touches God. Synderesis, the spark. Where the human almost dissolves into the divine. The point of contact."
+    },
+    {
+      "id": "scintilla-animae",
+      "term": "Scintilla animae",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "psychologie"
+      ],
+      "definition": "The spark of the soul. Meister Eckhart's term for the uncreated ground of the soul, where God is born. Deeper than intellect or will. The point where creature and creator are one. The divine seed."
+    },
+    {
+      "id": "abditum-mentis",
+      "term": "Abditum mentis",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "augustinien"
+      ],
+      "definition": "The hidden depth of the mind. Augustine: below memory, below consciousness, the abyss where God dwells. You cannot find your own foundation. The ground falls away into mystery."
+    },
+    {
+      "id": "oculus-cordis",
+      "term": "Oculus cordis",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "contemplation"
+      ],
+      "definition": "The eye of the heart. Augustine's inner vision: not bodily sight but spiritual perception. Blessed are the pure in heart, for they shall see. The organ of contemplation, cleansed by love."
+    },
+    {
+      "id": "cor-inquietum",
+      "term": "Cor inquietum",
+      "lang": "la",
+      "category": [
+        "augustinien",
+        "anthropologie"
+      ],
+      "definition": "The restless heart. Augustine's Confessions: 'Our hearts are restless until they rest in you.' Human longing that nothing finite satisfies. The engine of the spiritual life. Desire as compass."
+    },
+    {
+      "id": "fecisti-nos-ad-te",
+      "term": "Fecisti nos ad te",
+      "lang": "la",
+      "category": [
+        "augustinien",
+        "anthropologie"
+      ],
+      "definition": "You have made us for yourself. Augustine's anthropology in one phrase: humans are oriented toward God by design. The heart's restlessness is not error but structure. We are arrows seeking a target."
+    },
+    {
+      "id": "pondus-meum-amor-meus",
+      "term": "Pondus meum amor meus",
+      "lang": "la",
+      "category": [
+        "augustinien",
+        "éthique"
+      ],
+      "definition": "My weight is my love. Augustine's physics of the soul: as bodies fall toward their proper place, souls are drawn by what they love. Love God, rise. Love world, sink. Tell me what you love; I'll tell you what you are."
+    },
+    {
+      "id": "ordo-amoris",
+      "term": "Ordo amoris",
+      "lang": "la",
+      "category": [
+        "augustinien",
+        "éthique"
+      ],
+      "definition": "The order of love. Augustine: virtue is rightly ordered loves. Love everything, but in proper measure. God above all, neighbor as self, self in God. Sin is disordered love—loving lesser goods too much."
+    },
+    {
+      "id": "ama-et-fac-quod-vis",
+      "term": "Ama et fac quod vis",
+      "lang": "la",
+      "category": [
+        "augustinien",
+        "éthique"
+      ],
+      "definition": "Love and do what you will. Augustine's radical formula: if love is rightly ordered, action follows. Not license but freedom—the lover cannot harm the beloved. The heart's law transcends the letter."
+    },
+    {
+      "id": "mysterium-tremendum",
+      "term": "Mysterium tremendum",
+      "lang": "la",
+      "category": [
+        "phénoménologie",
+        "religion"
+      ],
+      "definition": "The tremendous mystery. Rudolf Otto's term for the holy: overwhelming, terrifying, fascinating. The numinous that makes you tremble. Before God, Moses removes his shoes. Awe that silences."
+    },
+    {
+      "id": "mysterium-fascinans",
+      "term": "Mysterium fascinans",
+      "lang": "la",
+      "category": [
+        "phénoménologie",
+        "religion"
+      ],
+      "definition": "The fascinating mystery. Otto's other pole: the holy attracts as it terrifies. You cannot look away. The moth and the flame. Dread and desire fused. The sacred's magnetic pull."
+    },
+    {
+      "id": "sensus-divinitatis",
+      "term": "Sensus divinitatis",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "épistémologie"
+      ],
+      "definition": "The sense of divinity. Calvin's concept: an innate awareness of God planted in every soul. Suppressed but not erased. Even idolatry proves it—we cannot not worship. The seed of religion."
+    },
+    {
+      "id": "semen-religionis",
+      "term": "Semen religionis",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "anthropologie"
+      ],
+      "definition": "The seed of religion. Calvin: God sowed awareness of himself in human nature. It sprouts everywhere, though often into weeds. Religion is not invention but response to what's already there."
+    },
+    {
+      "id": "testimonium-spiritus",
+      "term": "Testimonium internum Spiritus Sancti",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "protestantisme"
+      ],
+      "definition": "The internal testimony of the Holy Spirit. Calvin: Scripture is self-authenticating through the Spirit's witness in the heart. No external proof needed; the soul recognizes its Lord's voice."
+    },
+    {
+      "id": "finitum-non-capax-infiniti",
+      "term": "Finitum non capax infiniti",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "réformé"
+      ],
+      "definition": "The finite cannot contain the infinite. Reformed axiom against Lutheran ubiquity: Christ's human nature cannot be everywhere. Distinct natures remain distinct. The boundary that defines incarnation's miracle."
+    },
+    {
+      "id": "finitum-capax-infiniti",
+      "term": "Finitum capax infiniti",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "luthérien"
+      ],
+      "definition": "The finite can contain the infinite. Lutheran counter-axiom: in Christ, human nature participates in divine omnipresence. The bread is truly body. The creature can bear the creator. Incarnation's full scandal."
+    },
+    {
+      "id": "sub-specie-aeternitatis",
+      "term": "Sub specie aeternitatis",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "spinozisme"
+      ],
+      "definition": "Under the aspect of eternity. Spinoza's perspective: see things as God sees them, outside time, in their necessary connections. The view from nowhere. Detachment that is also deepest understanding."
+    },
+    {
+      "id": "deus-sive-natura",
+      "term": "Deus sive natura",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "spinozisme"
+      ],
+      "definition": "God or nature. Spinoza's equation: there is one substance, call it what you will. Not pantheism exactly—God is not the sum of things but their infinite essence. The formula that scandalized Europe."
+    },
+    {
+      "id": "amor-dei-intellectualis",
+      "term": "Amor Dei intellectualis",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "spinozisme"
+      ],
+      "definition": "The intellectual love of God. Spinoza's highest blessedness: the mind's joy in understanding its place in the whole. Not mystical union but rational comprehension. Philosophy as salvation."
+    },
+    {
+      "id": "natura-naturans",
+      "term": "Natura naturans",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "métaphysique"
+      ],
+      "definition": "Nature naturing, active nature. Scholastic distinction Spinoza adopted: God as creative power, the infinite substance expressing itself. Not the world but what makes worlds. The verb behind nouns."
+    },
+    {
+      "id": "natura-naturata",
+      "term": "Natura naturata",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "métaphysique"
+      ],
+      "definition": "Nature natured, passive nature. The world of modes and modifications—what natura naturans produces. Everything finite, everything we see. The noun that the verb becomes."
+    },
+    {
+      "id": "ex-nihilo-nihil-fit",
+      "term": "Ex nihilo nihil fit",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "cosmologie"
+      ],
+      "definition": "Nothing comes from nothing. Parmenides, Lucretius: being cannot arise from non-being. The eternity of matter follows. Against this, creation ex nihilo asserts God's absolute sovereignty. The first question."
+    },
+    {
+      "id": "creatio-ex-nihilo",
+      "term": "Creatio ex nihilo",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "cosmologie"
+      ],
+      "definition": "Creation from nothing. Jewish-Christian doctrine against Greek eternity of matter: God spoke, and there was. No pre-existing stuff, no demiurge shaping chaos. Absolute origination. The world is gift, not given."
+    },
+    {
+      "id": "creatio-continua",
+      "term": "Creatio continua",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "métaphysique"
+      ],
+      "definition": "Continuous creation. Not just the first moment but every moment: God sustains being. Without divine will, existence collapses into nothing. Providence as constant creating. The world hangs by a thread of love."
+    },
+    {
+      "id": "esse-est-percipi",
+      "term": "Esse est percipi",
+      "lang": "la",
+      "category": [
+        "philosophie",
+        "idéalisme"
+      ],
+      "definition": "To be is to be perceived. Berkeley's principle: material substance doesn't exist independently; things exist in being perceived. God perceives always, so the world continues. Idealism's founding formula."
+    },
+    {
+      "id": "stat-crux-dum-volvitur-orbis",
+      "term": "Stat crux dum volvitur orbis",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "devise"
+      ],
+      "definition": "The cross stands while the world turns. Carthusian motto: amid all change, the cross remains. The still point. History revolves around Golgotha. What seems foolishness is the axis of everything."
+    },
+    {
+      "id": "in-hoc-signo-vinces",
+      "term": "In hoc signo vinces",
+      "lang": "la",
+      "category": [
+        "histoire",
+        "devise"
+      ],
+      "definition": "In this sign you will conquer. Constantine's vision before the Milvian Bridge: the cross as battle standard. Christianity's entry into power. The sign of defeat becomes sign of victory—but whose victory?"
+    },
+    {
+      "id": "per-crucem-ad-lucem",
+      "term": "Per crucem ad lucem",
+      "lang": "la",
+      "category": [
+        "mystique",
+        "ascétique"
+      ],
+      "definition": "Through the cross to light. The mystical path: suffering precedes glory. No Easter without Friday. The pattern of Christ's life becomes the pattern of the soul's journey. Death, then resurrection."
+    },
+    {
+      "id": "per-aspera-ad-astra",
+      "term": "Per aspera ad astra",
+      "lang": "la",
+      "category": [
+        "devise",
+        "stoïcisme"
+      ],
+      "definition": "Through hardships to the stars. Roman aspiration, now on coats of arms and spacecraft. Difficulty is the way. Seneca's spirit: obstacles are the path. The stars are not given; they're earned."
+    },
+    {
+      "id": "memento-mori",
+      "term": "Memento mori",
+      "lang": "la",
+      "category": [
+        "ascétique",
+        "philosophie"
+      ],
+      "definition": "Remember you will die. The slave's whisper in the triumph. Skulls on desks, hourglasses in paintings. Not morbidity but clarity: death reveals what matters. Live accordingly."
+    },
+    {
+      "id": "vanitas-vanitatum",
+      "term": "Vanitas vanitatum",
+      "lang": "la",
+      "category": [
+        "sagesse",
+        "biblique"
+      ],
+      "definition": "Vanity of vanities. Ecclesiastes' verdict: all is hebel—breath, vapor, vanity. Achievements dissolve, pleasures pass, wisdom cannot save. Under the sun, nothing lasts. The preacher's truth before the Teacher came."
+    },
+    {
+      "id": "sic-transit-gloria-mundi",
+      "term": "Sic transit gloria mundi",
+      "lang": "la",
+      "category": [
+        "sagesse",
+        "devise"
+      ],
+      "definition": "Thus passes the glory of the world. Spoken at papal coronations as flax burns: remember, this too shall pass. Empires crumble, fame fades. The leveling perspective. What remains when glory goes?"
+    },
+    {
+      "id": "tempus-fugit",
+      "term": "Tempus fugit",
+      "lang": "la",
+      "category": [
+        "sagesse",
+        "poésie"
+      ],
+      "definition": "Time flies. Virgil's Georgics: it flees irretrievably. The sundial's motto. Not just that time passes but that it escapes—you cannot hold it. Urgency's whisper. What will you do with your days?"
+    },
+    {
+      "id": "carpe-diem",
+      "term": "Carpe diem",
+      "lang": "la",
+      "category": [
+        "sagesse",
+        "épicurisme"
+      ],
+      "definition": "Seize the day. Horace's counsel: harvest today, trust tomorrow little. Not hedonism but presence. Death waits; meanwhile, there's wine, friendship, poetry. The philosophy of the present tense."
+    },
+    {
+      "id": "ubi-sunt",
+      "term": "Ubi sunt",
+      "lang": "la",
+      "category": [
+        "poésie",
+        "élégie"
+      ],
+      "definition": "Where are they? Medieval poetic formula: where are the snows of yesteryear, where are the great ones now? Villon asked it best. The elegiac mode. All the living join the dead, and we follow."
+    },
+    {
+      "id": "Et-in-arcadia-ego",
+      "term": "Et in Arcadia ego",
+      "lang": "la",
+      "category": [
+        "esthétique",
+        "pastorale"
+      ],
+      "definition": "I too am in Arcadia. Death speaks from the tomb in paradise. Even in the golden land, I am present. Poussin painted it twice. No escape, no Eden without the skull. Beauty and death, inseparable."
+    },
+    {
+      "id": "felix-culpa",
+      "term": "Felix culpa",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "paradoxe"
+      ],
+      "definition": "Happy fault. The Easter Vigil's daring: O felix culpa, O necessary sin of Adam, that merited such a Redeemer. Without the fall, no incarnation. Evil redeemed beyond what good could have achieved. The greater story."
+    },
+    {
+      "id": "o-magnum-mysterium",
+      "term": "O magnum mysterium",
+      "lang": "la",
+      "category": [
+        "liturgie",
+        "nativité"
+      ],
+      "definition": "O great mystery. Christmas responsory: that animals should see the newborn Lord. Victoria, Palestrina set it to music. The God in the manger. Wonder that kneels before what it cannot comprehend."
+    },
+    {
+      "id": "verbum-caro-factum-est",
+      "term": "Verbum caro factum est",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "incarnation"
+      ],
+      "definition": "The Word became flesh. John 1:14—Christianity's hinge. Logos enters matter, eternity enters time, God enters a womb. The scandal to Greeks, stumbling block to Jews. Everything hangs on this claim."
+    },
+    {
+      "id": "caro-cardo-salutis",
+      "term": "Caro cardo salutis",
+      "lang": "la",
+      "category": [
+        "théologie",
+        "incarnation"
+      ],
+      "definition": "The flesh is the hinge of salvation. Tertullian: against Gnostic denial of body. Christianity affirms matter. What God assumed, God redeemed. The body is not prison but temple. Salvation is enfleshed."
     },
     {
       "id": "modistae",
@@ -13440,27 +13980,6 @@
       ]
     },
     {
-      "id": "carpe-diem",
-      "term": "Carpe diem",
-      "lang": "la",
-      "pronunciation": "/ˈkarpe ˈdi.em/",
-      "partOfSpeech": "expression",
-      "definition": "Seize the day; enjoy the present moment rather than placing hope in the future.",
-      "etymology": "Carpe (pluck, seize) + diem (day)",
-      "category": [
-        "philosophie",
-        "littérature"
-      ],
-      "related": [
-        "Memento mori",
-        "Tempus fugit"
-      ],
-      "usage": "Horace's carpe diem acknowledges mortality while affirming life's pleasures.",
-      "sources": [
-        "Horace - Odes 1.11"
-      ]
-    },
-    {
       "id": "cataphatic-apophatic",
       "term": "Cataphatic / Apophatic",
       "native": "κατάφασις / ἀπόφασις",
@@ -14129,26 +14648,6 @@
       ]
     },
     {
-      "id": "memento-mori",
-      "term": "Memento mori",
-      "lang": "la",
-      "pronunciation": "/meˈmento ˈmoriː/",
-      "partOfSpeech": "expression",
-      "definition": "Remember that you will die; a reminder of mortality meant to inspire humility and proper priorities.",
-      "etymology": "Memento (remember) + mori (to die)",
-      "category": [
-        "philosophie",
-        "art",
-        "religion"
-      ],
-      "related": [
-        "Carpe diem",
-        "Vanitas",
-        "Tempus fugit"
-      ],
-      "usage": "Memento mori imagery proliferated in medieval and Baroque art."
-    },
-    {
       "id": "menefreghismo",
       "term": "Menefreghismo",
       "lang": "it",
@@ -14567,22 +15066,6 @@
       "sources": [
         "Ortega y Gasset - La rebelión de las masas",
         "Heidegger - Sein und Zeit"
-      ]
-    },
-    {
-      "id": "via-negativa",
-      "term": "Via negativa",
-      "native": "via negativa",
-      "lang": "la",
-      "definition": "The negative way. Apophatic theology: God can only be described by what God is not, since all positive predicates derive from finite experience and distort the infinite. God is not good, not powerful, not wise — in the sense that human concepts of these things fail to reach. Pseudo-Dionysius the Areopagite systematised it. Maimonides applied it to Jewish theology. The via negativa converges with mystical experience: the approach to the divine through the stripping away of all images.",
-      "etymology": "Via (way, path) + negativa (from negare, to deny). Also called apophatic theology, from Greek apophasis (denial).",
-      "category": [
-        "philosophie"
-      ],
-      "related": [
-        "aletheia",
-        "aporia",
-        "fana"
       ]
     },
     {
@@ -15161,16 +15644,6 @@
       ]
     },
     {
-      "id": "sic-transit-gloria-mundi",
-      "term": "Sic Transit Gloria Mundi",
-      "lang": "la",
-      "definition": "Thus passes the glory of the world — everything fades. Spoken at papal coronations while burning flax: even the Pope's glory is temporary. The vanitas sentiment in five words.",
-      "category": [
-        "philosophie",
-        "religion"
-      ]
-    },
-    {
       "id": "ars-longa-vita-brevis",
       "term": "Ars Longa, Vita Brevis",
       "lang": "la",
@@ -15178,15 +15651,6 @@
       "category": [
         "philosophie",
         "art"
-      ]
-    },
-    {
-      "id": "tempus-fugit",
-      "term": "Tempus Fugit",
-      "lang": "la",
-      "definition": "Time flies — Virgil's reminder that hours vanish while we hesitate. On sundials and motivational posters alike. The pressure to act before it's too late.",
-      "category": [
-        "philosophie"
       ]
     },
     {
@@ -26115,20 +26579,6 @@
       "related": [
         "Paradoxe",
         "Coïncidentia-oppositorum"
-      ]
-    },
-    {
-      "id": "coincidentia-oppositorum",
-      "term": "Coincidentia oppositorum",
-      "lang": "la",
-      "category": [
-        "philosophie",
-        "nicolas de cues"
-      ],
-      "definition": "Coincidence of opposites—Nicholas of Cusa's principle. God beyond contradiction: maximum and minimum coincide. Learned ignorance reaches the unthinkable. The wall of paradise where opposites meet. Mystical logic.",
-      "related": [
-        "Docte-ignorance",
-        "Antinomie"
       ]
     },
     {

@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2598
+    "count": 2633
   },
   "terms": [
     {
@@ -3638,6 +3638,396 @@
         "conte"
       ],
       "definition": "Russian fairy tale, wonder tale. Skazki are told, not read: 'In a certain kingdom, in a certain land...' Propp analyzed their structure. The tales that teach Russia's children what forests hide."
+    },
+    {
+      "id": "oikonomia",
+      "term": "Οἰκονομία",
+      "lang": "grc",
+      "category": [
+        "économie",
+        "antiquité"
+      ],
+      "definition": "Household management—the Greek root of 'economy.' Oikos (house) + nomos (law). Aristotle distinguished it from chrematistics (money-making). The art of the household, not accumulation. Before economics forgot its home."
+    },
+    {
+      "id": "chrematistics",
+      "term": "Χρηματιστική",
+      "lang": "grc",
+      "category": [
+        "économie",
+        "antiquité"
+      ],
+      "definition": "The art of money-making. Aristotle condemned chrematistics as unnatural—wealth without limit, accumulation for its own sake. Oikonomia serves life; chrematistics serves itself. The ancient critique of capitalism."
+    },
+    {
+      "id": "homo-economicus",
+      "term": "Homo economicus",
+      "lang": "la",
+      "category": [
+        "économie",
+        "anthropologie"
+      ],
+      "definition": "Economic man—the rational, self-interested actor of classical economics. He maximizes utility, calculates costs, feels no loyalty. A useful fiction or a dangerous lie? The model that shaped markets and missed humans."
+    },
+    {
+      "id": "laissez-faire",
+      "term": "Laissez-faire",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "libéralisme"
+      ],
+      "definition": "Let do, let pass. The physiocrats' motto: government should not interfere with markets. Natural order will prevail. Adam Smith's invisible hand. The doctrine that markets know best. Still contested."
+    },
+    {
+      "id": "invisible-hand",
+      "term": "Invisible hand",
+      "lang": "en",
+      "category": [
+        "économie",
+        "métaphore"
+      ],
+      "definition": "Smith's famous metaphor: pursuing self-interest, we serve the common good unintentionally. The market's self-regulation. But Smith used it rarely; others made it gospel. The hand that guides or the hand that waves away responsibility?"
+    },
+    {
+      "id": "division-du-travail",
+      "term": "Division du travail",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "production"
+      ],
+      "definition": "Division of labor. Smith's pin factory: specialization multiplies productivity. But Marx saw alienation: the worker becomes a fragment. Efficiency's gift, humanity's cost. The factory's logic."
+    },
+    {
+      "id": "mehrwert",
+      "term": "Mehrwert",
+      "lang": "de",
+      "category": [
+        "économie",
+        "marxisme"
+      ],
+      "definition": "Surplus value. Marx's key concept: workers create more value than their wages. The difference is surplus value, extracted by capital. Exploitation formalized. The secret of profit revealed."
+    },
+    {
+      "id": "entfremdung",
+      "term": "Entfremdung",
+      "lang": "de",
+      "category": [
+        "économie",
+        "marxisme"
+      ],
+      "definition": "Alienation, estrangement. Marx: the worker is alienated from product, process, species-being, and fellow workers. Labor under capitalism estranges us from ourselves. The wound of modern work."
+    },
+    {
+      "id": "fetischismus",
+      "term": "Warenfetischismus",
+      "lang": "de",
+      "category": [
+        "économie",
+        "marxisme"
+      ],
+      "definition": "Commodity fetishism. Marx: we see commodities as having inherent value, forgetting the labor that made them. Social relations appear as relations between things. The mystification of the market."
+    },
+    {
+      "id": "gebrauchswert",
+      "term": "Gebrauchswert",
+      "lang": "de",
+      "category": [
+        "économie",
+        "marxisme"
+      ],
+      "definition": "Use value—the utility of a thing, its ability to satisfy needs. Contrasted with Tauschwert (exchange value). A coat keeps you warm (use value) and trades for linen (exchange value). The distinction that unlocks Capital."
+    },
+    {
+      "id": "tauschwert",
+      "term": "Tauschwert",
+      "lang": "de",
+      "category": [
+        "économie",
+        "marxisme"
+      ],
+      "definition": "Exchange value—what a commodity trades for. Under capitalism, exchange value dominates use value. We produce to sell, not to use. The abstraction that rules concrete life."
+    },
+    {
+      "id": "kapital",
+      "term": "Das Kapital",
+      "lang": "de",
+      "category": [
+        "économie",
+        "marxisme"
+      ],
+      "definition": "Capital—not just money but value in motion, self-expanding through exploitation. Money becomes commodity becomes more money (M-C-M'). The vampire that lives by sucking labor. Marx's anatomy of capitalism."
+    },
+    {
+      "id": "ursprungliche-akkumulation",
+      "term": "Ursprüngliche Akkumulation",
+      "lang": "de",
+      "category": [
+        "économie",
+        "histoire"
+      ],
+      "definition": "Primitive accumulation. Marx: capitalism didn't start from savings but from violence—enclosures, colonialism, slavery. The blood and dirt from which capital emerged. The crime before the contract."
+    },
+    {
+      "id": "grenznutzen",
+      "term": "Grenznutzen",
+      "lang": "de",
+      "category": [
+        "économie",
+        "marginalisme"
+      ],
+      "definition": "Marginal utility. Menger, Jevons, Walras: value comes from the last unit's usefulness. Water is cheap because the marginal glass matters little. The revolution that dethroned labor theory of value."
+    },
+    {
+      "id": "gleichgewicht",
+      "term": "Gleichgewicht",
+      "lang": "de",
+      "category": [
+        "économie",
+        "théorie"
+      ],
+      "definition": "Equilibrium. Neoclassical economics' holy grail: supply equals demand, markets clear, prices stabilize. Does it exist? Does it matter? The fiction that organizes the science."
+    },
+    {
+      "id": "creative-destruction",
+      "term": "Schöpferische Zerstörung",
+      "lang": "de",
+      "category": [
+        "économie",
+        "capitalisme"
+      ],
+      "definition": "Creative destruction. Schumpeter: capitalism advances by destroying the old—industries, firms, jobs. The entrepreneur disrupts. Progress through ruin. Innovation's collateral damage."
+    },
+    {
+      "id": "animal-spirits",
+      "term": "Animal spirits",
+      "lang": "en",
+      "category": [
+        "économie",
+        "psychologie"
+      ],
+      "definition": "Keynes's term for the irrational drives behind investment—confidence, optimism, fear. Not calculation but gut. Markets move on mood. The psychology economics forgot and rediscovered."
+    },
+    {
+      "id": "liquidity-trap",
+      "term": "Liquidity trap",
+      "lang": "en",
+      "category": [
+        "économie",
+        "keynésianisme"
+      ],
+      "definition": "When interest rates hit zero and monetary policy fails—people hoard cash, investment dies. Keynes's nightmare, Japan's reality. The floor where conventional policy ends."
+    },
+    {
+      "id": "multiplier",
+      "term": "Multiplicateur",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "keynésianisme"
+      ],
+      "definition": "The Keynesian multiplier: government spending ripples through the economy, creating more income than the initial outlay. One dollar becomes many. The arithmetic of stimulus."
+    },
+    {
+      "id": "paradox-of-thrift",
+      "term": "Paradox of thrift",
+      "lang": "en",
+      "category": [
+        "économie",
+        "keynésianisme"
+      ],
+      "definition": "Keynes: if everyone saves, demand falls, income falls, and total savings fall. Individual virtue becomes collective vice. The fallacy of composition. What's good for one isn't good for all."
+    },
+    {
+      "id": "monetarisme",
+      "term": "Monétarisme",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "politique"
+      ],
+      "definition": "Friedman's doctrine: inflation is always monetary, control the money supply. Central banks should follow rules, not discretion. The counter-revolution against Keynes. Money matters most."
+    },
+    {
+      "id": "stagflation",
+      "term": "Stagflation",
+      "lang": "en",
+      "category": [
+        "économie",
+        "crise"
+      ],
+      "definition": "Stagnation plus inflation—the 1970s nightmare Keynesianism couldn't explain. Growth stops, prices rise. The Phillips curve breaks. The crisis that opened the door to neoliberalism."
+    },
+    {
+      "id": "neoliberalisme",
+      "term": "Néolibéralisme",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "politique"
+      ],
+      "definition": "The post-1980 consensus: deregulation, privatization, free trade, fiscal austerity. Hayek and Friedman's children. Markets über alles. Now contested from left and right. The order that's unraveling."
+    },
+    {
+      "id": "trickle-down",
+      "term": "Trickle-down economics",
+      "lang": "en",
+      "category": [
+        "économie",
+        "politique"
+      ],
+      "definition": "The theory that tax cuts for the rich benefit everyone—wealth trickles down. Critics call it 'horse and sparrow.' Supply-side economics' promise. Did it work? The debate continues."
+    },
+    {
+      "id": "moral-hazard",
+      "term": "Moral hazard",
+      "lang": "en",
+      "category": [
+        "économie",
+        "finance"
+      ],
+      "definition": "When insurance encourages the risk it covers. Banks take risks knowing they'll be bailed out. The perverse incentive. Too big to fail creates too big to behave."
+    },
+    {
+      "id": "rent-seeking",
+      "term": "Rent-seeking",
+      "lang": "en",
+      "category": [
+        "économie",
+        "politique"
+      ],
+      "definition": "Manipulating rules to capture wealth without creating it. Lobbying for subsidies, barriers, monopolies. Not making the pie bigger but grabbing more of it. The game that's not a game."
+    },
+    {
+      "id": "dutch-disease",
+      "term": "Dutch disease",
+      "lang": "en",
+      "category": [
+        "économie",
+        "ressources"
+      ],
+      "definition": "When natural resource wealth kills other industries. Currency rises, manufacturing dies. The Netherlands after gas, Nigeria after oil. The curse of abundance. Rich in resources, poor in development."
+    },
+    {
+      "id": "externality",
+      "term": "Externalité",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "environnement"
+      ],
+      "definition": "Costs or benefits not reflected in prices. Pollution is negative externality; education is positive. Markets fail to account for them. The gap between private and social cost."
+    },
+    {
+      "id": "commons",
+      "term": "Tragedy of the commons",
+      "lang": "en",
+      "category": [
+        "économie",
+        "écologie"
+      ],
+      "definition": "Hardin's parable: shared resources get overused because no one owns them. Each herder adds sheep; the pasture dies. But Ostrom showed communities can manage commons. The tragedy isn't inevitable."
+    },
+    {
+      "id": "degrowth",
+      "term": "Décroissance",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "écologie"
+      ],
+      "definition": "Degrowth—the radical proposal that economies must shrink, not grow, for ecological survival. GDP is the problem, not the goal. Less is more. The heresy that growth itself must end."
+    },
+    {
+      "id": "buen-vivir",
+      "term": "Buen vivir",
+      "lang": "es",
+      "category": [
+        "économie",
+        "alternative"
+      ],
+      "definition": "Good living—Andean alternative to development. Sumak kawsay in Quechua. Harmony with nature, community over accumulation. Ecuador and Bolivia put it in constitutions. The indigenous critique of GDP."
+    },
+    {
+      "id": "commons-new",
+      "term": "New commons",
+      "lang": "en",
+      "category": [
+        "économie",
+        "alternative"
+      ],
+      "definition": "Beyond private and public: shared resources managed by communities. Open-source software, community land trusts, cooperatives. Ostrom's legacy. Neither market nor state but something older and newer."
+    },
+    {
+      "id": "financialization",
+      "term": "Financiarisation",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "critique"
+      ],
+      "definition": "The growing dominance of financial motives, markets, and actors. When making things yields to trading claims. The economy becomes a casino. Wall Street eats Main Street."
+    },
+    {
+      "id": "quantitative-easing",
+      "term": "Quantitative easing",
+      "lang": "en",
+      "category": [
+        "économie",
+        "monétaire"
+      ],
+      "definition": "Central banks buying assets to inject money when rates hit zero. The Fed's post-2008 policy. Money creation by another name. Does it cause inflation? Asset bubbles? Salvation? Experiment ongoing."
+    },
+    {
+      "id": "precariat",
+      "term": "Précariat",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "travail"
+      ],
+      "definition": "The precarious proletariat—workers without stability: gig workers, temps, zero-hours contracts. Standing's term. Not unemployed but never secure. The new class that lives on the edge."
+    },
+    {
+      "id": "bullshit-jobs",
+      "term": "Bullshit jobs",
+      "lang": "en",
+      "category": [
+        "économie",
+        "travail"
+      ],
+      "definition": "Graeber's term: jobs that even the workers think are pointless. Consultants, administrators, box-tickers. Why does capitalism create meaningless work? The anthropologist's question to economics."
+    },
+    {
+      "id": "ubi",
+      "term": "Universal basic income",
+      "lang": "en",
+      "category": [
+        "économie",
+        "politique"
+      ],
+      "definition": "Regular cash payments to all citizens, no conditions. Left sees freedom from wage slavery; right sees simplified welfare. Paine proposed it in 1797. Pilots multiply. The idea whose time keeps almost coming."
+    },
+    {
+      "id": "cryptocurrency",
+      "term": "Cryptomonnaie",
+      "lang": "fr",
+      "category": [
+        "économie",
+        "technologie"
+      ],
+      "definition": "Digital currency secured by cryptography, without central authority. Bitcoin's promise: money beyond states. Blockchain's gift. Revolutionary technology or speculative bubble? The future or the fever."
+    },
+    {
+      "id": "platform-capitalism",
+      "term": "Platform capitalism",
+      "lang": "en",
+      "category": [
+        "économie",
+        "technologie"
+      ],
+      "definition": "The business model of intermediation: Uber, Airbnb, Amazon. Platforms don't own assets; they own the network. Data as the new oil. The middleman economy. Rent extraction in digital dress."
     },
     {
       "id": "goya",
@@ -9867,15 +10257,6 @@
       ]
     },
     {
-      "id": "moral-hazard",
-      "term": "Moral Hazard",
-      "lang": "en",
-      "definition": "When insurance against risk encourages risk-taking — banks that expect bailouts gamble bigger. The more protected you are from consequences, the more recklessly you act. Every safety net creates perverse incentives.",
-      "category": [
-        "économie"
-      ]
-    },
-    {
       "id": "adverse-selection",
       "term": "Adverse Selection",
       "lang": "en",
@@ -9916,15 +10297,6 @@
       "term": "Goodwill",
       "lang": "en",
       "definition": "The premium paid above book value in acquisitions — the accounting entry for overpaying. Supposedly represents brand value, synergies, intangibles. Often written down years later when the deal sours. The graveyard of M&A optimism.",
-      "category": [
-        "économie"
-      ]
-    },
-    {
-      "id": "quantitative-easing",
-      "term": "Quantitative Easing",
-      "lang": "en",
-      "definition": "Central bank buying assets to inject money into the economy — printing money with extra steps. QE1, QE2, QE∞. The policy that worked until it caused inflation. The monetary experiment of the 2010s.",
       "category": [
         "économie"
       ]
@@ -15892,25 +16264,6 @@
         "Acédie"
       ],
       "usage": "Baudelaire made ennui the central malaise of modern existence in Les Fleurs du mal."
-    },
-    {
-      "id": "entfremdung",
-      "term": "Entfremdung",
-      "lang": "de",
-      "pronunciation": "/ɛntˈfʁɛmdʊŋ/",
-      "partOfSpeech": "noun",
-      "definition": "Alienation; the estrangement of individuals from their labor, fellow humans, or essential nature. Key concept in Marxist and existentialist thought.",
-      "etymology": "From 'entfremden' (to alienate), from 'fremd' (foreign, strange)",
-      "category": [
-        "philosophie",
-        "politique",
-        "sociologie"
-      ],
-      "related": [
-        "Vermassung",
-        "Verdinglichung"
-      ],
-      "usage": "Marx argued that capitalism produces Entfremdung by separating workers from the products of their labor."
     },
     {
       "id": "ex-nihilo",
@@ -23834,15 +24187,6 @@
         "théorie des jeux"
       ],
       "definition": "Enjoying benefits without contributing. Public goods dilemma."
-    },
-    {
-      "id": "rent-seeking",
-      "term": "Rent Seeking",
-      "lang": "en",
-      "category": [
-        "théorie des jeux"
-      ],
-      "definition": "Expending resources to capture existing wealth rather than create it."
     },
     {
       "id": "coordination-game",

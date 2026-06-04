@@ -257,6 +257,134 @@
       ]
     },
     {
+      "id": "bohme",
+      "name": "Jakob Böhme",
+      "name_original": "Jakob Böhme",
+      "dates": "1575–1624",
+      "origin": "Alt-Seidenberg, Silésie",
+      "lang": "de",
+      "bio": "Le cordonnier de Görlitz devenu théosophe. Aurora, De signatura rerum. Il vit l'Ungrund, l'abîme sans fond d'où Dieu naît. Lumière et ténèbres, colère et amour entrelacés dans le divin. Persécuté par les luthériens, lu par les romantiques. Le visionnaire qui cousait des chaussures.",
+      "works": [],
+      "tags": [
+        "mysticisme",
+        "théosophie",
+        "allemagne",
+        "xviie"
+      ]
+    },
+    {
+      "id": "weigel",
+      "name": "Valentin Weigel",
+      "name_original": "Valentin Weigel",
+      "dates": "1533–1588",
+      "origin": "Hayn, Saxe",
+      "lang": "de",
+      "bio": "Pasteur luthérien, mystique secret. Ses œuvres publiées posthumes scandalisèrent : Dieu en l'homme, l'Église intérieure, le Christ né dans l'âme. Précurseur de Böhme. Il prêcha l'orthodoxie le dimanche et écrivit l'hérésie la nuit.",
+      "works": [],
+      "tags": [
+        "mysticisme",
+        "protestantisme",
+        "allemagne",
+        "xvie"
+      ]
+    },
+    {
+      "id": "arndt",
+      "name": "Johann Arndt",
+      "name_original": "Johann Arndt",
+      "dates": "1555–1621",
+      "origin": "Edderitz, Anhalt",
+      "lang": "de",
+      "bio": "Wahres Christentum — le Vrai Christianisme. Contre la scolastique luthérienne desséchée, il prêcha la piété du cœur, l'union à Christ, la nouvelle naissance. Père du piétisme avant Spener. Le livre le plus lu après la Bible en Allemagne protestante.",
+      "works": [],
+      "tags": [
+        "piétisme",
+        "mysticisme",
+        "allemagne",
+        "xviie"
+      ]
+    },
+    {
+      "id": "pordage",
+      "name": "John Pordage",
+      "name_original": "John Pordage",
+      "dates": "1607–1681",
+      "origin": "Londres, Angleterre",
+      "lang": "en",
+      "bio": "Médecin, astrologue, visionnaire böhmiste. Il fonda la Société Philadelphienne avec Jane Leade. Visions d'anges, de mondes intérieurs, de Sophia la Sagesse divine. Accusé de commerce avec les esprits. L'Angleterre aussi eut ses théosophes.",
+      "works": [],
+      "tags": [
+        "mysticisme",
+        "théosophie",
+        "angleterre",
+        "xviie"
+      ]
+    },
+    {
+      "id": "swedenborg",
+      "name": "Emanuel Swedenborg",
+      "name_original": "Emanuel Swedenborg",
+      "dates": "1688–1772",
+      "origin": "Stockholm, Suède",
+      "lang": "sv",
+      "bio": "Savant devenu visionnaire. Il cartographia le ciel et l'enfer, conversa avec les anges, révéla les correspondances entre mondes. Du ciel et de ses merveilles. Blake le lut, Balzac l'admira, Borges le cita. Le Suédois qui voyagea dans l'au-delà.",
+      "works": [],
+      "tags": [
+        "mysticisme",
+        "visionnaire",
+        "suède",
+        "xviiie"
+      ]
+    },
+    {
+      "id": "young-edward",
+      "name": "Edward Young",
+      "name_original": "Edward Young",
+      "dates": "1683–1765",
+      "origin": "Upham, Angleterre",
+      "lang": "en",
+      "bio": "Night Thoughts — Les Nuits. Méditation sur la mort, l'immortalité, le temps qui fuit. Poésie du cimetière, mélancolie sublime. L'Europe entière le lut ; les romantiques allemands l'adorèrent. Le poète de minuit.",
+      "works": [],
+      "tags": [
+        "poésie",
+        "préromantisme",
+        "angleterre",
+        "xviiie"
+      ]
+    },
+    {
+      "id": "oetinger",
+      "name": "Friedrich Christoph Oetinger",
+      "name_original": "Friedrich Christoph Oetinger",
+      "dates": "1702–1782",
+      "origin": "Göppingen, Wurtemberg",
+      "lang": "de",
+      "bio": "Le Mage du Sud. Piétiste, kabbaliste, böhmiste, swedenborgien. Il chercha la sagesse partout : alchimie, Kabbale, sciences naturelles. La corporéité est la fin des voies de Dieu. Théosophe souabe, influençant Schelling et Hegel sans qu'ils l'avouent.",
+      "works": [],
+      "tags": [
+        "mysticisme",
+        "piétisme",
+        "kabbale",
+        "allemagne"
+      ]
+    },
+    {
+      "id": "saint-martin",
+      "name": "Louis-Claude de Saint-Martin",
+      "name_original": "Louis-Claude de Saint-Martin",
+      "dates": "1743–1803",
+      "origin": "Amboise, France",
+      "lang": "fr",
+      "bio": "Le Philosophe Inconnu. Disciple de Martinès de Pasqually, traducteur de Böhme. Des erreurs et de la vérité, L'Homme de désir. Illuminisme français, théosophie chrétienne. Il chercha le retour à l'unité perdue. Le mystique des salons.",
+      "works": [],
+      "tags": [
+        "mysticisme",
+        "illuminisme",
+        "france",
+        "xviiie"
+      ]
+    },
+    {
       "id": "lao-tzu",
       "name": "Lao Tseu",
       "name_original": "老子",
@@ -4999,23 +5127,6 @@
       ]
     },
     {
-      "id": "swedenborg",
-      "name": "Emanuel Swedenborg",
-      "name_original": "Emanuel Swedberg",
-      "dates": "1688–1772",
-      "origin": "Stockholm, Suède",
-      "lang": "la",
-      "bio": "Scientifique et visionnaire suédois, cartographe du ciel. Ingénieur des mines, anatomiste, il eut à 56 ans des visions : il visita le ciel et l'enfer, conversa avec les anges. 30 volumes de révélations. Kant le critiqua, Blake l'adora, Borges le relut. Fondateur involontaire d'une Église qui existe toujours.",
-      "works": [
-        "swedenborg-ciel-enfer"
-      ],
-      "tags": [
-        "mystique",
-        "visions",
-        "correspondances"
-      ]
-    },
-    {
       "id": "agrippa",
       "name": "Cornelius Agrippa",
       "name_original": "Heinrich Cornelius Agrippa von Nettesheim",
@@ -9698,23 +9809,6 @@
         "cybernétique",
         "information",
         "feedback"
-      ]
-    },
-    {
-      "id": "bohme",
-      "name": "Jakob Böhme",
-      "name_original": "Jakob Böhme",
-      "dates": "1575–1624",
-      "origin": "Alt-Seidenberg, Silésie",
-      "lang": "de",
-      "bio": "Aurora, De signatura rerum. L'Ungrund, le ternaire, la théosophie. Cordonnier illuminé. Persécuté par le pasteur. Hegel le lut, les romantiques aussi. Le mystique du néant, le philosophe teutonique.",
-      "works": [
-        "bohme-aurora"
-      ],
-      "tags": [
-        "théosophie",
-        "mystique",
-        "ungrund"
       ]
     },
     {

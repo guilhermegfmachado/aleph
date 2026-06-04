@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2472
+    "count": 2552
   },
   "terms": [
     {
@@ -2100,6 +2100,556 @@
       "definition": "Galician homesickness, kindred to Portuguese saudade. The emigrant's ache for green hills, rain, the Atlantic. Rosalía de Castro wrote it. Galicia's gift and curse: the beauty that drives you away, then calls you back."
     },
     {
+      "id": "etxe",
+      "term": "Etxe",
+      "lang": "eu",
+      "category": [
+        "culture",
+        "identité"
+      ],
+      "definition": "Basque house, but more—the family line, the name, the ancestors. Etxe passes through generations; people belong to houses, not houses to people. The building is body; the lineage is soul. Basque identity rooted in stone."
+    },
+    {
+      "id": "auzolan",
+      "term": "Auzolan",
+      "lang": "eu",
+      "category": [
+        "société",
+        "communauté"
+      ],
+      "definition": "Basque communal labor. Neighbors work together: building barns, clearing roads, harvesting. No payment but obligation to reciprocate. The village as mutual aid society. Auzolan built the country."
+    },
+    {
+      "id": "aberri",
+      "term": "Aberri",
+      "lang": "eu",
+      "category": [
+        "politique",
+        "identité"
+      ],
+      "definition": "Fatherland in Basque. Aberri Eguna: Day of the Fatherland. A nation without a state, a language isolate, Europe's mystery people. Aberri is less soil than stubborn continuity. The oldest Europeans, still here."
+    },
+    {
+      "id": "euskaldun",
+      "term": "Euskaldun",
+      "lang": "eu",
+      "category": [
+        "identité",
+        "langue"
+      ],
+      "definition": "One who has Basque—not ethnicity but language defines belonging. Lose the language, cease to be Euskaldun. The word itself contains the criterion: speak Euskara, be Basque. Identity as speech act."
+    },
+    {
+      "id": "herri",
+      "term": "Herri",
+      "lang": "eu",
+      "category": [
+        "politique",
+        "communauté"
+      ],
+      "definition": "Basque people, village, country—all in one word. Herri kirolak: people's sports (stone-lifting, wood-chopping). The community as unit. Neither tribe nor nation exactly: herri."
+    },
+    {
+      "id": "sorgin",
+      "term": "Sorgin",
+      "lang": "eu",
+      "category": [
+        "mythologie",
+        "sorcellerie"
+      ],
+      "definition": "Basque witch, nature spirit. Sorginak danced at akelarre (sabbath), flew by night, healed and cursed. The Inquisition hunted them at Zugarramurdi. Pre-Christian priestesses or Christian fantasy? The mountains remember."
+    },
+    {
+      "id": "mari",
+      "term": "Mari",
+      "lang": "eu",
+      "category": [
+        "mythologie",
+        "déesse"
+      ],
+      "definition": "Basque goddess of the mountains. Mari dwells in caves, commands storms, punishes liars. Her consort is the serpent Sugaar. She survives beneath the Virgin's mantle. The lady of the peaks, never quite Christianized."
+    },
+    {
+      "id": "basajaun",
+      "term": "Basajaun",
+      "lang": "eu",
+      "category": [
+        "mythologie",
+        "folklore"
+      ],
+      "definition": "Lord of the forest. Basque wild man, giant, protector of flocks. Basajaun taught humans agriculture and ironworking—Prometheus in the Pyrenees. He guards the woods; shepherds hear his whistle as warning."
+    },
+    {
+      "id": "akelarrea",
+      "term": "Akelarre",
+      "lang": "eu",
+      "category": [
+        "mythologie",
+        "sorcellerie"
+      ],
+      "definition": "Meadow of the he-goat. Basque name for witches' sabbath, exported into Spanish and beyond. At Zugarramurdi's caves, the sorginak gathered. Now: any coven, any midnight meeting. Euskara's gift to demonology."
+    },
+    {
+      "id": "irrintzi",
+      "term": "Irrintzi",
+      "lang": "eu",
+      "category": [
+        "culture",
+        "expression"
+      ],
+      "definition": "The Basque cry—a high, long, piercing yell of joy or defiance. Shepherds called across valleys; warriors screamed it charging. The sound that is purely Basque. Irrintzi cannot be written, only released."
+    },
+    {
+      "id": "il-basan",
+      "term": "Dita e Verës",
+      "lang": "sq",
+      "category": [
+        "fête",
+        "tradition"
+      ],
+      "definition": "Albanian Summer Day. March 14: the pagan new year survives. Ballokume cookies, bonfires, red-and-white bracelets against evil eye. Albania's oldest holiday, older than Illyrians maybe. Spring defeats winter, again."
+    },
+    {
+      "id": "besa",
+      "term": "Besa",
+      "lang": "sq",
+      "category": [
+        "éthique",
+        "honneur"
+      ],
+      "definition": "Albanian sacred oath, word of honor. Besa binds absolutely—Albanians sheltered Jews under besa during WWII. To break besa is to cease being human. The word as bond, stronger than law."
+    },
+    {
+      "id": "kanun",
+      "term": "Kanun",
+      "lang": "sq",
+      "category": [
+        "droit",
+        "tradition"
+      ],
+      "definition": "Albanian customary law, attributed to Lekë Dukagjini. The Kanun governs blood feud, hospitality, honor. A guest is sacred; a killer's family owes blood. Older than the state, still invoked. Law before lawyers."
+    },
+    {
+      "id": "gjakmarrja",
+      "term": "Gjakmarrja",
+      "lang": "sq",
+      "category": [
+        "droit",
+        "violence"
+      ],
+      "definition": "Albanian blood feud, blood-taking. The Kanun's darkest chapter: murder demands revenge across generations. Families locked indoors for decades. Modern Albania still bleeds from gjakmarrja. Honor's endless debt."
+    },
+    {
+      "id": "xhiro",
+      "term": "Xhiro",
+      "lang": "sq",
+      "category": [
+        "culture",
+        "social"
+      ],
+      "definition": "Albanian evening promenade. The whole town walks the korso, sees and is seen. Mediterranean ritual adapted to the Balkans. Xhiro is where news spreads, matches are made, boredom defeated."
+    },
+    {
+      "id": "mejtep",
+      "term": "Mësonjëtore",
+      "lang": "sq",
+      "category": [
+        "éducation",
+        "histoire"
+      ],
+      "definition": "Albanian secret school under Ottoman rule. Teaching Albanian was forbidden; patriots taught in basements. The language survived by whisper. Mësonjëtore made the Rilindja (National Awakening) possible."
+    },
+    {
+      "id": "kurbet",
+      "term": "Kurbet",
+      "lang": "sq",
+      "category": [
+        "émotion",
+        "migration"
+      ],
+      "definition": "Albanian exile, working abroad. Kurbet is both necessity and wound. Men leave for Germany, Greece, America; families wait. The Albanian condition: half the nation elsewhere. Kurbet songs are the saddest."
+    },
+    {
+      "id": "kefi",
+      "term": "Κέφι",
+      "lang": "el",
+      "category": [
+        "émotion",
+        "fête"
+      ],
+      "definition": "Greek high spirits, the mood of celebration. When kefi rises, plates smash, dancing erupts, the night extends. Not just happiness—exuberance, release, the moment breaking free. Bouzouki summoning kefi."
+    },
+    {
+      "id": "meraki-el",
+      "term": "Μεράκι",
+      "lang": "el",
+      "category": [
+        "travail",
+        "passion"
+      ],
+      "definition": "Greek soul in the work. Doing something with devotion, leaving yourself in it. The cook with meraki, the craftsman with meraki. Labor as love. The opposite of alienated work."
+    },
+    {
+      "id": "filoxenia",
+      "term": "Φιλοξενία",
+      "lang": "el",
+      "category": [
+        "éthique",
+        "hospitalité"
+      ],
+      "definition": "Greek hospitality, love of strangers. Zeus Xenios protected guests; dishonoring them meant divine wrath. Odysseus tested it everywhere. The stranger might be a god. Filoxenia as sacred duty."
+    },
+    {
+      "id": "palikari",
+      "term": "Παλικάρι",
+      "lang": "el",
+      "category": [
+        "identité",
+        "héroïsme"
+      ],
+      "definition": "Greek brave young man, warrior, hero. The klephts in the mountains were palikaria. Courage, swagger, defiance of Turks. The ideal Greek male: strong, proud, ready to die standing."
+    },
+    {
+      "id": "kamaki",
+      "term": "Καμάκι",
+      "lang": "el",
+      "category": [
+        "social",
+        "séduction"
+      ],
+      "definition": "Greek for harpoon—slang for hitting on tourists. The kamaki hunts beaches and bars. Criticized as harassment, defended as sport. Mediterranean masculinity's controversial form. The summer game."
+    },
+    {
+      "id": "parea",
+      "term": "Παρέα",
+      "lang": "el",
+      "category": [
+        "social",
+        "amitié"
+      ],
+      "definition": "Greek company of friends, the group that gathers. Not just friends but the entity they form together. Parea meets at the taverna, shares meze, argues politics. Solitude's antidote. The Greek social unit."
+    },
+    {
+      "id": "dolce-vita",
+      "term": "La dolce vita",
+      "lang": "it",
+      "category": [
+        "culture",
+        "hédonisme"
+      ],
+      "definition": "The sweet life. Fellini named it: Rome's nightlife, beautiful people, empty pleasures, glamorous despair. Now any luxurious, pleasure-seeking lifestyle. Italian gift to lifestyle vocabulary. Sweet, and hollow."
+    },
+    {
+      "id": "bella-figura",
+      "term": "Bella figura",
+      "lang": "it",
+      "category": [
+        "social",
+        "apparence"
+      ],
+      "definition": "Beautiful figure—making a good impression. Italian art of presentation: dress well, speak well, show yourself at your best. Reputation matters; shame is social death. The opposite: brutta figura, disaster."
+    },
+    {
+      "id": "passeggiata",
+      "term": "Passeggiata",
+      "lang": "it",
+      "category": [
+        "culture",
+        "social"
+      ],
+      "definition": "The Italian evening stroll. The whole town promenades before dinner: seeing, being seen, greeting, gossiping. Sacred ritual, free theater. Passeggiata is where Italy happens."
+    },
+    {
+      "id": "arrangiarsi",
+      "term": "Arrangiarsi",
+      "lang": "it",
+      "category": [
+        "culture",
+        "survie"
+      ],
+      "definition": "Italian art of getting by, making do, improvising. When systems fail, arrangiarsi saves you. Not cheating—creative survival. L'arte di arrangiarsi: the skill that built Italy despite Italy."
+    },
+    {
+      "id": "furbizia",
+      "term": "Furbizia",
+      "lang": "it",
+      "category": [
+        "éthique",
+        "ruse"
+      ],
+      "definition": "Italian cunning, slyness, clever deceit. The furbo outsmarts the rules. Admired and deplored: survival skill or civic poison? Italy's ambivalent vice-virtue. Machiavelli's children."
+    },
+    {
+      "id": "menefreghismo",
+      "term": "Menefreghismo",
+      "lang": "it",
+      "category": [
+        "attitude",
+        "nihilisme"
+      ],
+      "definition": "Italian not-giving-a-damn. Me ne frego: I don't care. Fascists used it as slogan; now it means cynical detachment. When everything's corrupt, why bother? The shrug that surrenders."
+    },
+    {
+      "id": "combinazione",
+      "term": "Combinazione",
+      "lang": "it",
+      "category": [
+        "société",
+        "corruption"
+      ],
+      "definition": "The Italian fix, the arrangement. Not quite bribe, not quite favor—the combinazione gets things done outside official channels. Italy's shadow system. Everyone knows; no one says."
+    },
+    {
+      "id": "querelle",
+      "term": "Querelle des Anciens et des Modernes",
+      "lang": "fr",
+      "category": [
+        "littérature",
+        "philosophie"
+      ],
+      "definition": "The quarrel of Ancients and Moderns. 17th-century French debate: can we surpass antiquity? Perrault said yes; Boileau said no. Foundational argument about progress. Every generation replays it."
+    },
+    {
+      "id": "ennui-fr",
+      "term": "Ennui",
+      "lang": "fr",
+      "category": [
+        "émotion",
+        "psychologie"
+      ],
+      "definition": "French boredom, but existential—world-weariness, the void when nothing interests. Baudelaire's spleen. Not having nothing to do but finding nothing worth doing. The affliction of the lucid."
+    },
+    {
+      "id": "malaise",
+      "term": "Malaise",
+      "lang": "fr",
+      "category": [
+        "émotion",
+        "société"
+      ],
+      "definition": "French unease, discomfort, social awkwardness. A national malaise: collective unrest without clear cause. Also personal: the malaise at the dinner party, the thing unsaid. Dis-ease."
+    },
+    {
+      "id": "sangfroid",
+      "term": "Sang-froid",
+      "lang": "fr",
+      "category": [
+        "caractère",
+        "stoïcisme"
+      ],
+      "definition": "Cold blood—composure under pressure. The duelist's nerve, the diplomat's calm. French ideal: never let them see you sweat. Passion governed by will. Cool when it costs."
+    },
+    {
+      "id": "dépaysement",
+      "term": "Dépaysement",
+      "lang": "fr",
+      "category": [
+        "voyage",
+        "émotion"
+      ],
+      "definition": "Disorientation of being in a foreign place. Not homesickness but strangeness, the land that isn't yours. Also: escape from the familiar. Travel's double gift: losing yourself, finding elsewhere."
+    },
+    {
+      "id": "retrouvailles",
+      "term": "Retrouvailles",
+      "lang": "fr",
+      "category": [
+        "émotion",
+        "reunion"
+      ],
+      "definition": "The joy of reunion after long separation. Not just meeting again but the happiness of meeting again. French names what English has to explain. The embrace at the airport."
+    },
+    {
+      "id": "esprit-de-escalier",
+      "term": "Esprit de l'escalier",
+      "lang": "fr",
+      "category": [
+        "émotion",
+        "communication"
+      ],
+      "definition": "Staircase wit—the perfect reply you think of too late, leaving the party. Diderot named it. The retort that comes on the stairs. We all live with esprit de l'escalier."
+    },
+    {
+      "id": "je-ne-sais-quoi",
+      "term": "Je ne sais quoi",
+      "lang": "fr",
+      "category": [
+        "esthétique",
+        "mystère"
+      ],
+      "definition": "I don't know what—the indefinable something. She has a certain je ne sais quoi. Quality beyond analysis, charm that can't be pinned down. French surrender to mystery. The unnameable something."
+    },
+    {
+      "id": "frisson",
+      "term": "Frisson",
+      "lang": "fr",
+      "category": [
+        "émotion",
+        "physique"
+      ],
+      "definition": "The shiver—of fear, excitement, cold, or aesthetic thrill. The frisson of a perfect chord, a sudden insight, danger approaching. The body's truth-signal. French precision for sensation."
+    },
+    {
+      "id": "savoir-vivre",
+      "term": "Savoir-vivre",
+      "lang": "fr",
+      "category": [
+        "éthique",
+        "social"
+      ],
+      "definition": "Knowing how to live—social grace, good manners, the art of living well. Not just etiquette but wisdom of conduct. The French manual of civilization. Savoir-vivre or barbarism."
+    },
+    {
+      "id": "weltanschauung",
+      "term": "Weltanschauung",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "culture"
+      ],
+      "definition": "World-view, comprehensive philosophy of life. Everyone has a Weltanschauung, conscious or not. The lens through which you see everything. German concept for total perspective."
+    },
+    {
+      "id": "zeitgeist",
+      "term": "Zeitgeist",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "histoire"
+      ],
+      "definition": "Spirit of the age. Hegel's concept: each era has its defining spirit, its collective consciousness. Capture the Zeitgeist or be left behind. History as succession of moods."
+    },
+    {
+      "id": "bildung",
+      "term": "Bildung",
+      "lang": "de",
+      "category": [
+        "éducation",
+        "culture"
+      ],
+      "definition": "Formation, cultivation, self-development. Not just education but the shaping of a complete human being. The Bildungsroman traces it; German humanism demands it. Becoming what you ought to be."
+    },
+    {
+      "id": "schadenfreude",
+      "term": "Schadenfreude",
+      "lang": "de",
+      "category": [
+        "émotion",
+        "psychologie"
+      ],
+      "definition": "Damage-joy—pleasure in another's misfortune. The guilty smile when the rival falls. German named what everyone feels. Universal, shameful, delicious. The emotion we pretend not to have."
+    },
+    {
+      "id": "wanderlust-de",
+      "term": "Wanderlust",
+      "lang": "de",
+      "category": [
+        "émotion",
+        "voyage"
+      ],
+      "definition": "The lust to wander. German Romantics made walking holy: through forests, over mountains, into the unknown. Not tourism but pilgrimage without shrine. The road as destination."
+    },
+    {
+      "id": "angst",
+      "term": "Angst",
+      "lang": "de",
+      "category": [
+        "philosophie",
+        "psychologie"
+      ],
+      "definition": "Existential dread, anxiety without object. Kierkegaard and Heidegger: Angst reveals our being-toward-death. Not fear of something but fear of nothing, of freedom, of the abyss. The mood that unmasks."
+    },
+    {
+      "id": "kitsch",
+      "term": "Kitsch",
+      "lang": "de",
+      "category": [
+        "esthétique",
+        "critique"
+      ],
+      "definition": "Art that lies, beauty that cheats—sentimental, cheap, false. Kitsch pretends to feeling it doesn't earn. Kundera: kitsch excludes shit. The aesthetic of denial. We swim in kitsch."
+    },
+    {
+      "id": "leitmotif",
+      "term": "Leitmotiv",
+      "lang": "de",
+      "category": [
+        "musique",
+        "littérature"
+      ],
+      "definition": "Leading motif—Wagner's technique: themes attached to characters, ideas, emotions, returning transformed. Now any recurring element. The musical signature that accrues meaning through repetition."
+    },
+    {
+      "id": "doppelganger",
+      "term": "Doppelgänger",
+      "lang": "de",
+      "category": [
+        "folklore",
+        "psychologie"
+      ],
+      "definition": "Double-walker, ghostly duplicate. To meet your Doppelgänger means death. Romantic literature loved the motif: the uncanny twin, the other self. Jung: the shadow you cannot escape."
+    },
+    {
+      "id": "gesamtkunstwerk",
+      "term": "Gesamtkunstwerk",
+      "lang": "de",
+      "category": [
+        "esthétique",
+        "musique"
+      ],
+      "definition": "Total work of art. Wagner's ambition: music, drama, poetry, spectacle unified in one overwhelming experience. Every sense recruited. The artwork that swallows you whole. Opera as world."
+    },
+    {
+      "id": "fingerspitzengefuhl",
+      "term": "Fingerspitzengefühl",
+      "lang": "de",
+      "category": [
+        "compétence",
+        "intuition"
+      ],
+      "definition": "Fingertip-feeling—intuitive tact, knowing exactly how to handle delicate situations. Not learned from books but absorbed through experience. The diplomat's gift, the surgeon's touch. Sensitivity at the tips."
+    },
+    {
+      "id": "kummerspeck",
+      "term": "Kummerspeck",
+      "lang": "de",
+      "category": [
+        "émotion",
+        "corps"
+      ],
+      "definition": "Grief-bacon—the weight you gain from emotional eating. German precision for the universal experience. Sadness becomes fat. The body's record of sorrow."
+    },
+    {
+      "id": "verschlimmbesserung",
+      "term": "Verschlimmbesserung",
+      "lang": "de",
+      "category": [
+        "erreur",
+        "ironie"
+      ],
+      "definition": "An improvement that makes things worse. German compound for the reform that backfires. Every bureaucrat knows it; every coder dreads it. The fix that breaks."
+    },
+    {
+      "id": "backpfeifengesicht",
+      "term": "Backpfeifengesicht",
+      "lang": "de",
+      "category": [
+        "social",
+        "humour"
+      ],
+      "definition": "A face in need of a slap. German compound for the punchable face. Some faces just ask for it. The look that provokes violence. Social judgment compressed into one word."
+    },
+    {
+      "id": "treppenwitz",
+      "term": "Treppenwitz",
+      "lang": "de",
+      "category": [
+        "histoire",
+        "ironie"
+      ],
+      "definition": "Staircase joke—history's ironic reversals. Also: German version of esprit de l'escalier. The joke you think of too late, or the joke history plays on us. Hindsight's bitter humor."
+    },
+    {
       "id": "mamihlapinatapai",
       "term": "Mamihlapinatapai",
       "lang": "yag",
@@ -2118,6 +2668,456 @@
         "social"
       ],
       "definition": "A joke so bad it's funny. Indonesian word for the failed joke that succeeds through failure. The groan that turns to laugh. Accidentally hilarious."
+    },
+    {
+      "id": "desenrascanco",
+      "term": "Desenrascanço",
+      "lang": "pt",
+      "category": [
+        "culture",
+        "survie"
+      ],
+      "definition": "Portuguese art of improvised solutions. Untangling yourself creatively from problems. MacGyver thinking. When the manual fails, desenrascanço begins. The Portuguese way."
+    },
+    {
+      "id": "fado-pt",
+      "term": "Fado",
+      "lang": "pt",
+      "category": [
+        "musique",
+        "destin"
+      ],
+      "definition": "Portuguese fate-song. From Latin fatum: destiny. Lisbon's mournful music: loss, longing, resignation. The fadista sings what cannot be changed. Embracing fate through beauty."
+    },
+    {
+      "id": "sino",
+      "term": "O nosso sino",
+      "lang": "pt",
+      "category": [
+        "communauté",
+        "identité"
+      ],
+      "definition": "Our bell—belonging to a parish, a village, a community defined by what bells you hear. Portuguese identity: local before national. The sound that says: you're home."
+    },
+    {
+      "id": "sebastianismo",
+      "term": "Sebastianismo",
+      "lang": "pt",
+      "category": [
+        "mythe",
+        "messianisme"
+      ],
+      "definition": "Portuguese messianic hope. King Sebastian died at Alcácer Quibir (1578); Portugal believes he'll return in fog. The Once and Future King, Iberian style. Waiting for salvation from the past."
+    },
+    {
+      "id": "quinto-imperio",
+      "term": "Quinto Império",
+      "lang": "pt",
+      "category": [
+        "prophétie",
+        "politique"
+      ],
+      "definition": "The Fifth Empire. Padre António Vieira's prophecy: after Assyria, Persia, Greece, Rome—Portugal will lead the final universal empire. Pessoa revived it. Portuguese exceptionalism, mystical edition."
+    },
+    {
+      "id": "soledad",
+      "term": "Soledad",
+      "lang": "es",
+      "category": [
+        "émotion",
+        "flamenco"
+      ],
+      "definition": "Spanish solitude, loneliness—but charged with flamenco's intensity. La Soledad: the pain sung in soleares. Not mere being alone but aloneness as wound, as truth, as art."
+    },
+    {
+      "id": "aguante",
+      "term": "Aguante",
+      "lang": "es",
+      "category": [
+        "caractère",
+        "endurance"
+      ],
+      "definition": "Argentine endurance, resilience, bearing what must be borne. The fútbol fan's loyalty, the worker's persistence. Aguantar: to withstand. The virtue of not breaking. Tango-land's grit."
+    },
+    {
+      "id": "madrugada",
+      "term": "Madrugada",
+      "lang": "es",
+      "category": [
+        "temps",
+        "nuit"
+      ],
+      "definition": "The small hours, between midnight and dawn. Not night, not morning—its own zone. Spain comes alive in the madrugada. The time when truth emerges, when parties transcend."
+    },
+    {
+      "id": "desvelado",
+      "term": "Desvelado",
+      "lang": "es",
+      "category": [
+        "état",
+        "insomnie"
+      ],
+      "definition": "Unable to sleep, sleepless—but specifically from worry, love, thought. The unveiled one: what keeps you awake strips away comfort. Mexican poets know desvelado well."
+    },
+    {
+      "id": "estrenar",
+      "term": "Estrenar",
+      "lang": "es",
+      "category": [
+        "expérience",
+        "nouveauté"
+      ],
+      "definition": "To use or wear something for the first time. The verb for new shoes, new dress, new house. Spanish marks the premiere of possessions. First use as ceremony."
+    },
+    {
+      "id": "tutear",
+      "term": "Tutear",
+      "lang": "es",
+      "category": [
+        "social",
+        "langage"
+      ],
+      "definition": "To address someone with tú (informal you) rather than usted. The verb for intimacy's grammar. Tutear marks friendship, disrespect, or equality. Spanish verbs for social distance."
+    },
+    {
+      "id": "consuegros",
+      "term": "Consuegros",
+      "lang": "es",
+      "category": [
+        "famille",
+        "relation"
+      ],
+      "definition": "The relationship between sets of in-laws—your child's spouse's parents. Spanish names a bond English ignores. Co-parents-in-law. The family that marriage's marriage creates."
+    },
+    {
+      "id": "empalagar",
+      "term": "Empalagar",
+      "lang": "es",
+      "category": [
+        "sensation",
+        "excès"
+      ],
+      "definition": "To be sickened by sweetness—too much sugar, too much sentiment. The cloy, the saccharine overdose. Spanish knows when pleasure curdles. Enough becomes too much."
+    },
+    {
+      "id": "anteayer",
+      "term": "Anteayer",
+      "lang": "es",
+      "category": [
+        "temps",
+        "passé"
+      ],
+      "definition": "The day before yesterday. Spanish and Portuguese (anteontem) have words English lacks. Not just 'two days ago' but a named day. Time with more gradations."
+    },
+    {
+      "id": "trasantier",
+      "term": "Trasanteayer",
+      "lang": "es",
+      "category": [
+        "temps",
+        "passé"
+      ],
+      "definition": "Three days ago—the day before anteayer. Even deeper into the past. Spanish names what English numbers. Memory with its own vocabulary."
+    },
+    {
+      "id": "koselig",
+      "term": "Koselig",
+      "lang": "no",
+      "category": [
+        "bien-être",
+        "intimité"
+      ],
+      "definition": "Norwegian coziness, warmth, togetherness. Kindred to Danish hygge but with more nature. Cabin life, candlelight, wool blankets. Koselig: the Norwegian way of fighting winter."
+    },
+    {
+      "id": "dugnad",
+      "term": "Dugnad",
+      "lang": "no",
+      "category": [
+        "société",
+        "communauté"
+      ],
+      "definition": "Norwegian voluntary communal work. Neighbors paint the fence, clean the school, help without pay. Not charity but citizenship. Dugnad built Norway; oil didn't change it."
+    },
+    {
+      "id": "utepils",
+      "term": "Utepils",
+      "lang": "no",
+      "category": [
+        "culture",
+        "plaisir"
+      ],
+      "definition": "Outdoor beer—the first beer drunk outside when spring finally comes. Norwegian ritual: surviving winter earns this reward. Utepils is celebration, is relief, is beer in sunlight after darkness."
+    },
+    {
+      "id": "forelsket",
+      "term": "Forelsket",
+      "lang": "no",
+      "category": [
+        "amour",
+        "émotion"
+      ],
+      "definition": "Norwegian for the euphoria of falling in love. Not loving but falling—the intoxication, the obsession, the first stage. Forelsket is temporary, intense, and wonderful. Before it settles into love."
+    },
+    {
+      "id": "fika",
+      "term": "Fika",
+      "lang": "sv",
+      "category": [
+        "culture",
+        "social"
+      ],
+      "definition": "Swedish coffee break elevated to institution. Not just drinking coffee but pausing, connecting, being human mid-day. Fika with colleagues, with friends, alone with thoughts. The civilized pause."
+    },
+    {
+      "id": "lagom-sv",
+      "term": "Lagom",
+      "lang": "sv",
+      "category": [
+        "philosophie",
+        "équilibre"
+      ],
+      "definition": "Swedish just-right, enough, balanced. Not too much, not too little: lagom. The golden mean as lifestyle. Sweden's national philosophy: moderation in all things. Lagom är bäst."
+    },
+    {
+      "id": "smultronställe",
+      "term": "Smultronställe",
+      "lang": "sv",
+      "category": [
+        "lieu",
+        "mémoire"
+      ],
+      "definition": "Wild strawberry place—a personal spot of peace and nostalgia. Bergman's film named it. Everyone has a smultronställe: the remembered garden, the childhood haunt. The geography of the soul."
+    },
+    {
+      "id": "orka",
+      "term": "Orka",
+      "lang": "sv",
+      "category": [
+        "énergie",
+        "capacité"
+      ],
+      "definition": "Swedish verb for having the energy to do something. Jag orkar inte: I can't be bothered, I'm too tired. Orka names the resource that runs out. Modern exhaustion's word."
+    },
+    {
+      "id": "tretår",
+      "term": "Tretår",
+      "lang": "sv",
+      "category": [
+        "café",
+        "coutume"
+      ],
+      "definition": "The third cup of coffee—specifically, the refill of the refill. Swedish coffee culture's persistence. Tretår: still more coffee. The cup that says you're staying."
+    },
+    {
+      "id": "hyggelig",
+      "term": "Hyggelig",
+      "lang": "da",
+      "category": [
+        "social",
+        "bien-être"
+      ],
+      "definition": "Danish cozy, pleasant, nice—the adjective of hygge. A hyggelig evening, a hyggelig person. Not extreme praise but warm approval. The compliment Denmark gives itself."
+    },
+    {
+      "id": "pyt",
+      "term": "Pyt",
+      "lang": "da",
+      "category": [
+        "attitude",
+        "résilience"
+      ],
+      "definition": "Danish interjection: oh well, never mind, let it go. Pyt acknowledges setbacks without drama. The shrug that moves on. Danish equanimity in one syllable."
+    },
+    {
+      "id": "arbejdsglæde",
+      "term": "Arbejdsglæde",
+      "lang": "da",
+      "category": [
+        "travail",
+        "bonheur"
+      ],
+      "definition": "Work-joy—happiness from your job. Scandinavian concept that work can be fulfilling, not just endured. Arbejdsglæde explains Nordic productivity: they like what they do. Or try to."
+    },
+    {
+      "id": "janteloven",
+      "term": "Janteloven",
+      "lang": "da",
+      "category": [
+        "société",
+        "égalité"
+      ],
+      "definition": "The Law of Jante—don't think you're special, don't think you're better. Aksel Sandemose's satire became sociology. Scandinavian leveling: tall poppies get cut. Equality as conformity's alibi."
+    },
+    {
+      "id": "bjartsýni",
+      "term": "Bjartsýni",
+      "lang": "is",
+      "category": [
+        "attitude",
+        "optimisme"
+      ],
+      "definition": "Icelandic optimism—literally bright-sight. Seeing the good side. In a land of volcanoes, glaciers, and darkness, bjartsýni is survival skill. The Icelander's stubborn cheer."
+    },
+    {
+      "id": "þetta-reddast",
+      "term": "Þetta reddast",
+      "lang": "is",
+      "category": [
+        "attitude",
+        "confiance"
+      ],
+      "definition": "It will all work out. Icelandic national philosophy: faith that things resolve. Not fatalism but confidence. Þetta reddast explains Icelandic risk-taking and calm. Somehow, it works."
+    },
+    {
+      "id": "nenna",
+      "term": "Nenna",
+      "lang": "is",
+      "category": [
+        "énergie",
+        "motivation"
+      ],
+      "definition": "Icelandic verb for having the energy, the will, the bothered-ness. Ég nenni ekki: I can't be bothered. Nenna or don't—but be honest. Iceland's word for motivation's presence or absence."
+    },
+    {
+      "id": "slainte",
+      "term": "Sláinte",
+      "lang": "ga",
+      "category": [
+        "toast",
+        "santé"
+      ],
+      "definition": "Irish Gaelic toast: health! Raised glasses, met eyes. Sláinte is command, wish, and celebration in one. The word that starts and blesses drinking. Ireland's gift to bars worldwide."
+    },
+    {
+      "id": "craic",
+      "term": "Craic",
+      "lang": "ga",
+      "category": [
+        "social",
+        "plaisir"
+      ],
+      "definition": "Irish fun, good times, the buzz of good company. What's the craic? News, gossip, entertainment. Where's the craic? Where the party is. Ireland's atmosphere made noun."
+    },
+    {
+      "id": "seanchai",
+      "term": "Seanchaí",
+      "lang": "ga",
+      "category": [
+        "culture",
+        "tradition"
+      ],
+      "definition": "Irish traditional storyteller. Keeper of tales, genealogies, histories. The seanchaí performed at firesides, holding memory before writing. Still invoked: Ireland's living library."
+    },
+    {
+      "id": "meitheal",
+      "term": "Meitheal",
+      "lang": "ga",
+      "category": [
+        "travail",
+        "communauté"
+      ],
+      "definition": "Irish work party—neighbors helping with harvest, turf-cutting, building. Like Norwegian dugnad, Basque auzolan. The old way: community as mutual insurance. Meitheal survives as spirit."
+    },
+    {
+      "id": "flaithiulacht",
+      "term": "Flaithiúlacht",
+      "lang": "ga",
+      "category": [
+        "caractère",
+        "générosité"
+      ],
+      "definition": "Irish generosity, hospitality to the point of excess. The open hand, the extra round, the meal that won't stop. Flaithiúlacht doesn't count costs. Generosity as identity."
+    },
+    {
+      "id": "caoineadh",
+      "term": "Caoineadh",
+      "lang": "ga",
+      "category": [
+        "deuil",
+        "rituel"
+      ],
+      "definition": "Irish keen, the lament for the dead. Women wailed, tore hair, praised the departed. The caoineadh was ritual grief, performance, and poetry. Now mostly silent, but the word remains."
+    },
+    {
+      "id": "duthchas",
+      "term": "Dùthchas",
+      "lang": "gd",
+      "category": [
+        "identité",
+        "appartenance"
+      ],
+      "definition": "Scottish Gaelic hereditary connection to land. Not ownership but belonging: this is your people's place. Dùthchas ties lineage to landscape. The mountains know your name."
+    },
+    {
+      "id": "ceilidh",
+      "term": "Cèilidh",
+      "lang": "gd",
+      "category": [
+        "culture",
+        "fête"
+      ],
+      "definition": "Scottish/Irish social gathering with music and dance. Originally house visits; now the village hall dances. Cèilidh is where tradition lives: reels, stories, community re-formed."
+    },
+    {
+      "id": "tartan",
+      "term": "Tartan",
+      "lang": "gd",
+      "category": [
+        "identité",
+        "clan"
+      ],
+      "definition": "Scottish clan pattern in cloth. Each family has its tartan; wearing it declares belonging. Victorian invention or ancient custom? Both. Identity woven, wrapped around you."
+    },
+    {
+      "id": "cynefin",
+      "term": "Cynefin",
+      "lang": "cy",
+      "category": [
+        "appartenance",
+        "lieu"
+      ],
+      "definition": "Welsh sense of place, habitat, belonging. Where you're from in the deepest sense. The landscape that shaped you. More than home—cynefin is where you're made. Cannot be chosen, only recognized."
+    },
+    {
+      "id": "hwyl",
+      "term": "Hwyl",
+      "lang": "cy",
+      "category": [
+        "émotion",
+        "éloquence"
+      ],
+      "definition": "Welsh emotional fervor, especially in preaching or singing. When hwyl rises, speech becomes music, logic becomes fire. The chapel roar. Wales's characteristic ecstasy."
+    },
+    {
+      "id": "eisteddfod",
+      "term": "Eisteddfod",
+      "lang": "cy",
+      "category": [
+        "culture",
+        "festival"
+      ],
+      "definition": "Welsh festival of poetry, music, literature. Competitive, ceremonial, bardic. The National Eisteddfod crowns poets. Culture as contest, tradition as performance. Wales preserves itself through eisteddfodau."
+    },
+    {
+      "id": "bara-brith",
+      "term": "Bara brith",
+      "lang": "cy",
+      "category": [
+        "cuisine",
+        "tradition"
+      ],
+      "definition": "Speckled bread—Welsh fruit loaf soaked in tea. Every grandmother has her recipe. Bara brith is Wales on a plate: not fancy, but loved. The taste of home."
+    },
+    {
+      "id": "ynys-affalon",
+      "term": "Ynys Afallon",
+      "lang": "cy",
+      "category": [
+        "mythologie",
+        "lieu"
+      ],
+      "definition": "The Isle of Apples—Avalon in Welsh. Where Arthur sleeps, where the wounded go to heal. The otherworld just offshore. Welsh geography always half in myth."
     },
     {
       "id": "goya",
@@ -6465,34 +7465,6 @@
       "definition": "Matching details between shots. Continuity errors break the illusion."
     },
     {
-      "id": "backpfeifengesicht",
-      "term": "Backpfeifengesicht",
-      "lang": "de",
-      "pronunciation": "BAHK-pfy-fen-geh-zikht",
-      "partOfSpeech": "noun",
-      "definition": "A face in need of a slap; someone whose appearance invites a punch. German precision in describing the punchable.",
-      "category": [
-        "culture",
-        "psychologie"
-      ],
-      "related": []
-    },
-    {
-      "id": "bella-figura",
-      "term": "Bella figura",
-      "lang": "it",
-      "pronunciation": "BEL-lah fee-GOO-rah",
-      "partOfSpeech": "noun",
-      "definition": "Beautiful figure; the art of making a good impression. Appearance, style, and dignity combined.",
-      "category": [
-        "culture",
-        "sociologie"
-      ],
-      "related": [
-        "Sprezzatura"
-      ]
-    },
-    {
       "id": "culaccino",
       "term": "Culaccino",
       "lang": "it",
@@ -6519,21 +7491,6 @@
         "psychologie"
       ],
       "related": []
-    },
-    {
-      "id": "fika",
-      "term": "Fika",
-      "lang": "sv",
-      "pronunciation": "FEE-kah",
-      "partOfSpeech": "noun/verb",
-      "definition": "The Swedish coffee break elevated to cultural institution; taking time to slow down with coffee and pastry.",
-      "category": [
-        "culture"
-      ],
-      "related": [
-        "Hygge",
-        "Keyif"
-      ]
     },
     {
       "id": "gattara",
@@ -6667,18 +7624,6 @@
       "category": [
         "culture",
         "philosophie"
-      ],
-      "related": []
-    },
-    {
-      "id": "kamaki",
-      "term": "Καμάκι (Kamaki)",
-      "lang": "el",
-      "pronunciation": "kah-MAH-kee",
-      "partOfSpeech": "noun",
-      "definition": "Harpoon; Greek slang for men who pursue tourists romantically. A summer coastal phenomenon.",
-      "category": [
-        "culture"
       ],
       "related": []
     },
@@ -8678,20 +9623,6 @@
       ]
     },
     {
-      "id": "kummerspeck",
-      "term": "Kummerspeck",
-      "lang": "de",
-      "pronunciation": "KOO-mer-shpek",
-      "partOfSpeech": "noun",
-      "definition": "Grief bacon; the weight gained from emotional overeating, especially during times of sorrow or stress.",
-      "etymology": "From Kummer (grief) + Speck (bacon/fat)",
-      "category": [
-        "émotion",
-        "médecine"
-      ],
-      "related": []
-    },
-    {
       "id": "merak-tr",
       "term": "Merak",
       "lang": "tr",
@@ -8780,22 +9711,6 @@
         "Sehnsucht",
         "Toska",
         "Hiraeth"
-      ]
-    },
-    {
-      "id": "kefi",
-      "term": "Κέφι (Kefi)",
-      "lang": "el",
-      "pronunciation": "KEH-fee",
-      "partOfSpeech": "noun",
-      "definition": "The spirit of joy, passion, and enthusiasm; a state of frenzy or high spirits, especially when celebrating or dancing.",
-      "category": [
-        "émotion",
-        "culture"
-      ],
-      "related": [
-        "Joie de vivre",
-        "Tarab"
       ]
     },
     {
@@ -9665,28 +10580,6 @@
       "related": [
         "sachlichkeit",
         "bildung"
-      ]
-    },
-    {
-      "id": "gesamtkunstwerk",
-      "term": "Gesamtkunstwerk",
-      "lang": "de",
-      "pronunciation": "/ɡəˈzamtˌkʊnstvɛʁk/",
-      "partOfSpeech": "noun",
-      "definition": "Total work of art; a synthesis of all art forms (music, drama, poetry, visual arts) into a unified aesthetic experience.",
-      "etymology": "Gesamt (total) + Kunst (art) + Werk (work)",
-      "category": [
-        "esthétique",
-        "art",
-        "musique"
-      ],
-      "related": [
-        "Musikdrama",
-        "Synthese"
-      ],
-      "usage": "Wagner conceived his operas as Gesamtkunstwerke that would transform society.",
-      "sources": [
-        "Wagner - Das Kunstwerk der Zukunft"
       ]
     },
     {
@@ -12596,18 +13489,6 @@
       ]
     },
     {
-      "id": "leitmotif",
-      "term": "Leitmotif",
-      "lang": "de",
-      "pronunciation": "LITE-moh-teef",
-      "definition": "Leading motif — a recurring musical theme associated with a person, idea, or situation. Wagner's innovation: the ring, the sword, fate itself gets a melody. Now ubiquitous: Darth Vader's breath, Jaws' two notes.",
-      "etymology": "German: Leit (leading) + Motiv (motif)",
-      "category": [
-        "musique",
-        "art"
-      ]
-    },
-    {
       "id": "rubato",
       "term": "Rubato",
       "lang": "it",
@@ -14228,29 +15109,6 @@
       ]
     },
     {
-      "id": "bildung",
-      "term": "Bildung",
-      "lang": "de",
-      "pronunciation": "/ˈbɪldʊŋ/",
-      "partOfSpeech": "noun",
-      "definition": "Self-cultivation and formation; the process of developing one's intellectual, aesthetic, and moral capacities into a harmonious whole.",
-      "etymology": "From 'Bild' (image, form) - forming oneself",
-      "category": [
-        "philosophie",
-        "éducation",
-        "culture"
-      ],
-      "related": [
-        "Erziehung",
-        "Kultur"
-      ],
-      "usage": "German Idealism made Bildung central to human flourishing.",
-      "sources": [
-        "Wilhelm von Humboldt",
-        "Goethe - Wilhelm Meister"
-      ]
-    },
-    {
       "id": "bricolage",
       "term": "Bricolage",
       "lang": "fr",
@@ -14933,22 +15791,6 @@
       ]
     },
     {
-      "id": "menefreghismo",
-      "term": "Menefreghismo",
-      "lang": "it",
-      "pronunciation": "meh-neh-freh-GEEZ-moh",
-      "partOfSpeech": "noun",
-      "definition": "An attitude of indifference; the philosophy of 'I don't care'—either as callous apathy or as liberating detachment from others' opinions.",
-      "etymology": "From me ne frego (I don't care)",
-      "category": [
-        "philosophie",
-        "psychologie"
-      ],
-      "related": [
-        "Ataraxia"
-      ]
-    },
-    {
       "id": "mitschuld",
       "term": "Mitschuld",
       "lang": "de",
@@ -15352,43 +16194,6 @@
         "Ortega y Gasset - La rebelión de las masas",
         "Heidegger - Sein und Zeit"
       ]
-    },
-    {
-      "id": "weltanschauung",
-      "term": "Weltanschauung",
-      "lang": "de",
-      "pronunciation": "/ˈvɛltʔanˌʃaʊ.ʊŋ/",
-      "partOfSpeech": "noun",
-      "definition": "World-view; a comprehensive conception or philosophy of the world and human life. The framework through which an individual or society interprets reality.",
-      "etymology": "Welt (world) + Anschauung (view, intuition)",
-      "category": [
-        "philosophie",
-        "culture"
-      ],
-      "related": [
-        "Zeitgeist",
-        "Lebensanschauung"
-      ],
-      "usage": "Every culture develops its own Weltanschauung that shapes its values and institutions."
-    },
-    {
-      "id": "zeitgeist",
-      "term": "Zeitgeist",
-      "lang": "de",
-      "pronunciation": "/ˈtsaɪ̯tˌɡaɪ̯st/",
-      "partOfSpeech": "noun",
-      "definition": "The spirit of the age; the defining intellectual, moral, and cultural climate of an era.",
-      "etymology": "Zeit (time) + Geist (spirit)",
-      "category": [
-        "philosophie",
-        "histoire",
-        "culture"
-      ],
-      "related": [
-        "Weltanschauung",
-        "Volksgeist"
-      ],
-      "usage": "Hegel saw history as the unfolding of the Zeitgeist through successive epochs."
     },
     {
       "id": "ecriture",
@@ -18917,15 +19722,6 @@
       "definition": "An Irish quatrain form with end-rhyme and alliteration. Multiple subtypes."
     },
     {
-      "id": "caoineadh",
-      "term": "Caoineadh",
-      "lang": "ga",
-      "category": [
-        "poésie"
-      ],
-      "definition": "An Irish lament, often sung over the dead. The keen: wailing poetry."
-    },
-    {
       "id": "aisling",
       "term": "Aisling",
       "lang": "ga",
@@ -20104,22 +20900,6 @@
       ]
     },
     {
-      "id": "fingerspitzengefuhl",
-      "term": "Fingerspitzengefühl",
-      "lang": "de",
-      "pronunciation": "FING-er-shpit-sen-geh-fool",
-      "partOfSpeech": "noun",
-      "definition": "Fingertip feeling; instinctive sensitivity and tact. The ability to handle delicate situations with subtlety.",
-      "category": [
-        "psychologie",
-        "sociologie"
-      ],
-      "related": [
-        "Nunchi",
-        "Tact"
-      ]
-    },
-    {
       "id": "fort-da",
       "term": "Fort/Da",
       "native": "fort/da",
@@ -20241,24 +21021,6 @@
       ]
     },
     {
-      "id": "schadenfreude",
-      "term": "Schadenfreude",
-      "lang": "de",
-      "pronunciation": "/ˈʃaːdənˌfʁɔʏ̯də/",
-      "partOfSpeech": "noun",
-      "definition": "Pleasure derived from another person's misfortune.",
-      "etymology": "Schaden (damage, harm) + Freude (joy)",
-      "category": [
-        "psychologie",
-        "philosophie"
-      ],
-      "related": [
-        "Neid",
-        "Missgunst"
-      ],
-      "usage": "Nietzsche analyzed Schadenfreude as a manifestation of ressentiment."
-    },
-    {
       "id": "sitzfleisch",
       "term": "Sitzfleisch",
       "lang": "de",
@@ -20271,22 +21033,6 @@
       ],
       "related": [
         "Gaman"
-      ]
-    },
-    {
-      "id": "soledad",
-      "term": "Soledad",
-      "lang": "es",
-      "definition": "Solitude that aches. Not simply aloneness — soledad is inhabited, productive, sorrowful. The solitude of the flamenco singer, the desert mystic, the exile. Machado (Antonio): 'caminante, son tus huellas el camino y nada más.' The concept is embedded in Spanish Romanticism and the Generation of '98's diagnosis of Spain's historical isolation.",
-      "etymology": "From Latin solitudo (solitude). The suffix -edad intensifies into a condition, not merely a state.",
-      "category": [
-        "psychologie",
-        "esthétique"
-      ],
-      "related": [
-        "duende",
-        "weltschmerz",
-        "ennui"
       ]
     },
     {
@@ -21350,22 +22096,6 @@
       "definition": "Mesoamerican reclining figure with offering vessel on belly. Toltec, Maya, Aztec."
     },
     {
-      "id": "parea",
-      "term": "Παρέα (Parea)",
-      "lang": "el",
-      "pronunciation": "pah-REH-ah",
-      "partOfSpeech": "noun",
-      "definition": "A group of friends who gather regularly to share life; the essential Greek social unit beyond family.",
-      "category": [
-        "sociologie",
-        "culture"
-      ],
-      "related": [
-        "Gezelligheid",
-        "Gemütlichkeit"
-      ]
-    },
-    {
       "id": "kreng-jai",
       "term": "เกรงใจ (Kreng jai)",
       "lang": "th",
@@ -21807,15 +22537,6 @@
         "textile"
       ],
       "definition": "Cotton fabric with vertical ribs (wales). 'Corde du roi'—king's cord."
-    },
-    {
-      "id": "tartan",
-      "term": "Tartan",
-      "lang": "en",
-      "category": [
-        "textile"
-      ],
-      "definition": "Scottish plaid pattern: horizontal and vertical bands creating checks. Clan identity."
     },
     {
       "id": "houndstooth",
@@ -24797,20 +25518,6 @@
       ]
     },
     {
-      "id": "angst",
-      "term": "Angst",
-      "lang": "de",
-      "category": [
-        "psychanalyse",
-        "affect"
-      ],
-      "definition": "Anxiety—not fear of something but objectless dread. Freud evolved: first, dammed-up libido; later, signal of danger. Existential angst: Heidegger's Sein-zum-Tode, Kierkegaard's dizziness of freedom. The affect that reveals.",
-      "related": [
-        "Trieb",
-        "Es-Ich-Ueberich"
-      ]
-    },
-    {
       "id": "spaltung",
       "term": "Spaltung",
       "lang": "de",
@@ -25510,19 +26217,6 @@
       "related": [
         "Terribilita",
         "Pathos"
-      ]
-    },
-    {
-      "id": "kitsch",
-      "term": "Kitsch",
-      "lang": "de",
-      "category": [
-        "esthétique",
-        "culture"
-      ],
-      "definition": "Cheap sentiment, fake art. Broch: kitsch as evil, substituting formula for feeling. Kundera: the denial of shit. Garden gnomes, velvet Elvises, Hallmark wisdom. But also: why do we need the word? What are we defending?",
-      "related": [
-        "Avantgarde"
       ]
     },
     {

@@ -25,7 +25,7 @@
       "zu",
       "sw"
     ],
-    "count": 2633
+    "count": 2608
   },
   "terms": [
     {
@@ -2280,16 +2280,6 @@
       "definition": "Greek high spirits, the mood of celebration. When kefi rises, plates smash, dancing erupts, the night extends. Not just happiness—exuberance, release, the moment breaking free. Bouzouki summoning kefi."
     },
     {
-      "id": "meraki-el",
-      "term": "Μεράκι",
-      "lang": "el",
-      "category": [
-        "travail",
-        "passion"
-      ],
-      "definition": "Greek soul in the work. Doing something with devotion, leaving yourself in it. The cook with meraki, the craftsman with meraki. Labor as love. The opposite of alienated work."
-    },
-    {
       "id": "filoxenia",
       "term": "Φιλοξενία",
       "lang": "el",
@@ -2718,16 +2708,6 @@
         "social"
       ],
       "definition": "Swedish coffee break elevated to institution. Not just drinking coffee but pausing, connecting, being human mid-day. Fika with colleagues, with friends, alone with thoughts. The civilized pause."
-    },
-    {
-      "id": "lagom-sv",
-      "term": "Lagom",
-      "lang": "sv",
-      "category": [
-        "philosophie",
-        "équilibre"
-      ],
-      "definition": "Swedish just-right, enough, balanced. Not too much, not too little: lagom. The golden mean as lifestyle. Sweden's national philosophy: moderation in all things. Lagom är bäst."
     },
     {
       "id": "smultronställe",
@@ -10545,22 +10525,6 @@
       ]
     },
     {
-      "id": "tuskowac",
-      "term": "Tęsknota",
-      "lang": "pl",
-      "pronunciation": "tensh-KNO-tah",
-      "partOfSpeech": "noun",
-      "definition": "A deep longing or yearning, especially for one's homeland, loved ones, or a lost past. The Polish ache for what is absent.",
-      "category": [
-        "émotion"
-      ],
-      "related": [
-        "Sehnsucht",
-        "Toska",
-        "Hiraeth"
-      ]
-    },
-    {
       "id": "nadryv",
       "term": "Надрыв (Nadryv)",
       "lang": "ru",
@@ -12073,15 +12037,6 @@
         "héraldique"
       ],
       "definition": "One fourth of a shield, when divided by a cross. Quartering combines arms from different lineages."
-    },
-    {
-      "id": "tincture",
-      "term": "Tincture",
-      "lang": "en",
-      "category": [
-        "héraldique"
-      ],
-      "definition": "The colors used in heraldry. Metals (or, argent), colours (gules, azure, vert, sable, purpure), and furs."
     },
     {
       "id": "or",
@@ -15770,22 +15725,6 @@
       "definition": "The single-string bow that leads capoeira. Its rhythm sets the game."
     },
     {
-      "id": "puszta",
-      "term": "Puszta",
-      "lang": "hu",
-      "pronunciation": "POOS-tah",
-      "partOfSpeech": "noun",
-      "definition": "The vast Hungarian steppe; also the emotional state of emptiness and wild freedom it evokes—a landscape that is both desolate and liberating.",
-      "category": [
-        "nature",
-        "émotion"
-      ],
-      "related": [
-        "Fernweh",
-        "Friluftsliv"
-      ]
-    },
-    {
       "id": "yakamoz",
       "term": "Yakamoz",
       "lang": "tr",
@@ -16244,26 +16183,6 @@
         "Karma",
         "Yuanfen"
       ]
-    },
-    {
-      "id": "ennui",
-      "term": "Ennui",
-      "lang": "fr",
-      "pronunciation": "/ɑ̃.nɥi/",
-      "partOfSpeech": "noun",
-      "definition": "A feeling of listlessness and dissatisfaction arising from lack of occupation or interest; existential boredom that goes beyond mere tedium.",
-      "etymology": "From Old French 'enui' (annoyance), from Latin 'in odio' (in hatred)",
-      "category": [
-        "philosophie",
-        "littérature",
-        "psychologie"
-      ],
-      "related": [
-        "Spleen",
-        "Mélancolie",
-        "Acédie"
-      ],
-      "usage": "Baudelaire made ennui the central malaise of modern existence in Les Fleurs du mal."
     },
     {
       "id": "ex-nihilo",
@@ -16923,37 +16842,6 @@
       ]
     },
     {
-      "id": "urakkumulation",
-      "term": "Ursprüngliche Akkumulation",
-      "native": "ursprüngliche Akkumulation",
-      "lang": "de",
-      "domain": [
-        "philosophy",
-        "economics"
-      ],
-      "period": [
-        "19c",
-        "20c"
-      ],
-      "definition": "Primitive accumulation — the originary violence that created capitalism. Marx's concept in Capital, Part VIII: the \"so-called primitive accumulation\" is not the peaceful saving that classical economics posits as capitalism's foundation, but the systematic dispossession that created the conditions for wage labour: the enclosures (peasants driven from common land), the slave trade, the colonial plunder. The idyllic past of capital is written in blood. Silvia Federici extended it: the witch hunts were part of primitive accumulation — the enclosure of the female body.",
-      "etymology": "Ursprünglich (original, primordial) + Akkumulation. Marx called it \"so-called\" to signal his critique of the classical economists' myth.",
-      "related": [
-        "nomos",
-        "entfremdung",
-        "feticismo"
-      ],
-      "quotes": [
-        {
-          "text": "Das Kapital kommt mit Blut und Schmutz aus allen Poren, von Kopf bis Zehen.",
-          "source": "Karl Marx, Das Kapital, Bd. I, Kap. 24, 1867"
-        }
-      ],
-      "category": [
-        "philosophie",
-        "économie"
-      ]
-    },
-    {
       "id": "ubuntu-sw",
       "term": "Utu",
       "lang": "sw",
@@ -16967,37 +16855,6 @@
       "related": [
         "Ubuntu",
         "Philoxenia"
-      ]
-    },
-    {
-      "id": "vanitas",
-      "term": "Vanitas vanitatum",
-      "native": "vanitas vanitatum",
-      "lang": "la",
-      "domain": [
-        "philosophy",
-        "aesthetics"
-      ],
-      "period": [
-        "roman",
-        "medieval"
-      ],
-      "definition": "Vanity of vanities — the Preacher's formula that is also the best four-word theory of history. The Hebrew hevel (breath, vapour): everything is as insubstantial as breath. The Vulgate's vanitas captures the Latin sense of emptiness and vain show. The vanitas painting (skull, guttering candle, rotting fruit) is its visual theology: the beautiful things of the world exist, but they pass. Not nihilism — the Preacher asks what remains: the fear of God. But the formula survives detached from its conclusion.",
-      "etymology": "Latin vanitas (emptiness, worthlessness) + vanitatum (genitive plural). Ecclesiastes 1:2 in Jerome's Vulgate.",
-      "related": [
-        "memento-mori",
-        "acedia",
-        "weltschmerz"
-      ],
-      "quotes": [
-        {
-          "text": "Vanitas vanitatum, dixit Ecclesiastes, vanitas vanitatum et omnia vanitas.",
-          "source": "Ecclesiastes 1:2, Vulgata"
-        }
-      ],
-      "category": [
-        "philosophie",
-        "esthétique"
       ]
     },
     {
@@ -21888,20 +21745,6 @@
       ]
     },
     {
-      "id": "wanderlust",
-      "term": "Wanderlust",
-      "lang": "de",
-      "definition": "The compulsion to travel. More than curiosity — an ache, a drive that cannot be satisfied by staying still. The Romantic walker who must keep moving to feel alive. Borrowed wholesale into English because English has no equivalent for the compulsive dimension: wandering as psychological necessity.",
-      "etymology": "wandern (to hike, to travel) + Lust (desire, pleasure). The German Romantic walking tradition.",
-      "category": [
-        "psychologie"
-      ],
-      "related": [
-        "fernweh",
-        "flaneur"
-      ]
-    },
-    {
       "id": "wiederholungszwang",
       "term": "Wiederholungszwang",
       "native": "Wiederholungszwang",
@@ -24171,15 +24014,6 @@
       "definition": "A strategy that, if adopted by a population, cannot be invaded by mutants."
     },
     {
-      "id": "tragedy-commons",
-      "term": "Tragedy of the Commons",
-      "lang": "en",
-      "category": [
-        "théorie des jeux"
-      ],
-      "definition": "Shared resources depleted because individual incentives diverge from collective good."
-    },
-    {
       "id": "free-rider",
       "term": "Free Rider Problem",
       "lang": "en",
@@ -24689,15 +24523,6 @@
       "definition": "When a printed element extends beyond the trim edge. The image 'bleeds' off the page—no white margin."
     },
     {
-      "id": "trim-typo",
-      "term": "Trim",
-      "lang": "en",
-      "category": [
-        "typographie"
-      ],
-      "definition": "The final cut size of a printed piece. What remains after the edges are cut away."
-    },
-    {
       "id": "slug",
       "term": "Slug",
       "lang": "en",
@@ -24918,15 +24743,6 @@
       "definition": "A Roman military standard—a cloth square hung from a crossbar. The ancestor of modern flags. Gives vexillology its name."
     },
     {
-      "id": "canton-flag",
-      "term": "Canton",
-      "lang": "en",
-      "category": [
-        "vexillologie"
-      ],
-      "definition": "The upper corner of a flag, typically the hoist side. The U.S. stars occupy the canton."
-    },
-    {
       "id": "fly",
       "term": "Fly",
       "lang": "en",
@@ -24943,24 +24759,6 @@
         "vexillologie"
       ],
       "definition": "The half of the flag nearest the pole. Also the flag's vertical width. You hoist a flag up the pole."
-    },
-    {
-      "id": "field-flag",
-      "term": "Field",
-      "lang": "en",
-      "category": [
-        "vexillologie"
-      ],
-      "definition": "The background color or pattern of a flag. The French field is three vertical stripes; Japan's is white."
-    },
-    {
-      "id": "charge-flag",
-      "term": "Charge",
-      "lang": "en",
-      "category": [
-        "vexillologie"
-      ],
-      "definition": "Any emblem or device on a flag. Stars, crescents, eagles, symbols—all are charges."
     },
     {
       "id": "fimbriation",
@@ -26032,36 +25830,6 @@
       ]
     },
     {
-      "id": "nirvana",
-      "term": "निर्वाण",
-      "lang": "sa",
-      "category": [
-        "bouddhisme",
-        "philosophie"
-      ],
-      "definition": "Extinction—the blowing out of craving, aversion, delusion. Not annihilation, not heaven: the end of suffering, the end of becoming. The Buddha's silence when asked what nirvana is. Beyond concepts.",
-      "related": [
-        "Samsara",
-        "Bodhi",
-        "Moksha"
-      ]
-    },
-    {
-      "id": "karma",
-      "term": "कर्म",
-      "lang": "sa",
-      "category": [
-        "bouddhisme",
-        "hindouisme"
-      ],
-      "definition": "Action and its fruit. Not fate but consequence: intentional acts leave traces that ripen into future experience. Good karma, bad karma—both bind. Liberation is acting without attachment to results.",
-      "related": [
-        "Samsara",
-        "Dharma",
-        "Moksha"
-      ]
-    },
-    {
       "id": "bodhi",
       "term": "बोधि",
       "lang": "sa",
@@ -26258,20 +26026,6 @@
       ]
     },
     {
-      "id": "uebertragung",
-      "term": "Übertragung",
-      "lang": "de",
-      "category": [
-        "psychanalyse",
-        "clinique"
-      ],
-      "definition": "Transference—the patient projects past relationships onto the analyst. The mother, the father, the beloved—ghosts in the consulting room. Resistance and royal road: analysis happens through transference, not despite it.",
-      "related": [
-        "Widerstand",
-        "Gegenübertragung"
-      ]
-    },
-    {
       "id": "gegenubertragung",
       "term": "Gegenübertragung",
       "lang": "de",
@@ -26463,20 +26217,6 @@
       ]
     },
     {
-      "id": "reductio",
-      "term": "Reductio ad absurdum",
-      "lang": "la",
-      "category": [
-        "logique",
-        "philosophie"
-      ],
-      "definition": "Reduction to absurdity. Assume the opposite, derive a contradiction, conclude the original. Euclid's proof of infinite primes. Zeno's paradoxes. The most powerful tool in the logician's kit.",
-      "related": [
-        "Modus-tollens",
-        "Contradiction"
-      ]
-    },
-    {
       "id": "tertium-non-datur",
       "term": "Tertium non datur",
       "lang": "la",
@@ -26501,19 +26241,6 @@
       "related": [
         "Tertium-non-datur",
         "Identitas"
-      ]
-    },
-    {
-      "id": "quod-erat-demonstrandum",
-      "term": "Q.E.D.",
-      "lang": "la",
-      "category": [
-        "logique",
-        "mathématiques"
-      ],
-      "definition": "That which was to be demonstrated. The proof is complete, the theorem established. Euclid's triumphant stamp. Mathematicians still write it; some use a tombstone (∎). The satisfaction of closure.",
-      "related": [
-        "Reductio"
       ]
     },
     {
@@ -26655,20 +26382,6 @@
       ]
     },
     {
-      "id": "opus-magnum",
-      "term": "Magnum opus",
-      "lang": "la",
-      "category": [
-        "alchimie",
-        "philosophie"
-      ],
-      "definition": "The great work—the alchemical project entire. From prima materia through nigredo, albedo, rubedo to the Stone. Years, lifetimes, impossible. Jung's reading: individuation, becoming who you are. The work that works on you.",
-      "related": [
-        "Lapis-philosophorum",
-        "Rubedo"
-      ]
-    },
-    {
       "id": "psyche",
       "term": "Ψυχή",
       "lang": "el",
@@ -26751,20 +26464,6 @@
       "related": [
         "Wu-wei",
         "De"
-      ]
-    },
-    {
-      "id": "li-rite",
-      "term": "禮",
-      "lang": "zh",
-      "category": [
-        "confucianisme",
-        "éthique"
-      ],
-      "definition": "Ritual, propriety, ceremony. Not empty formalism but the forms that shape virtue. Confucius: ren is substance, li is form. Bowing, sacrificing, mourning—the body learns reverence. Civilization is ritual internalized.",
-      "related": [
-        "Ren",
-        "Junzi"
       ]
     },
     {
@@ -26933,19 +26632,6 @@
       "related": [
         "Sublime",
         "Pathos"
-      ]
-    },
-    {
-      "id": "leitmotiv",
-      "term": "Leitmotiv",
-      "lang": "de",
-      "category": [
-        "musique",
-        "opéra"
-      ],
-      "definition": "Leading motive—a musical phrase representing a person, idea, or thing. Wagner perfected it: the Ring's web of motives. Memory in music: the past returns transformed. Film scores inherit the technique. Music that means.",
-      "related": [
-        "Motiv"
       ]
     },
     {
@@ -27706,19 +27392,6 @@
       ]
     },
     {
-      "id": "qualunque",
-      "term": "Quodlibet",
-      "lang": "la",
-      "category": [
-        "ontologie",
-        "agamben"
-      ],
-      "definition": "Whatever, whichever you please. Agamben: the coming community is of whatever singularities. Not identity, not indifference: being such that it always matters. The singularity that has no identity to claim.",
-      "related": [
-        "Singularité"
-      ]
-    },
-    {
       "id": "immunitas",
       "term": "Immunitas",
       "lang": "la",
@@ -28013,20 +27686,6 @@
       ]
     },
     {
-      "id": "autopoiese",
-      "term": "Autopoïèse",
-      "lang": "fr",
-      "category": [
-        "biologie",
-        "systèmes"
-      ],
-      "definition": "Autopoiesis—self-making. Maturana and Varela: living systems produce their own components. Operationally closed, structurally coupled. Luhmann applied it to society: communication produces communication. Systems that make themselves.",
-      "related": [
-        "Système",
-        "Couplage-structurel"
-      ]
-    },
-    {
       "id": "double-bind",
       "term": "Double Bind",
       "lang": "en",
@@ -28318,20 +27977,6 @@
       "related": [
         "Paradoxe",
         "Coïncidentia-oppositorum"
-      ]
-    },
-    {
-      "id": "docte-ignorance",
-      "term": "Docta ignorantia",
-      "lang": "la",
-      "category": [
-        "philosophie",
-        "nicolas de cues"
-      ],
-      "definition": "Learned ignorance—knowing that we don't know. Socrates Christianized. Cusanus: the more we know, the more we know we can't know. Negative theology as epistemology. Ignorance as achievement, not failure.",
-      "related": [
-        "Apophatique",
-        "Coincidentia-oppositorum"
       ]
     },
     {

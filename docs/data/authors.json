@@ -5264,23 +5264,6 @@
       ]
     },
     {
-      "id": "garcia-marquez",
-      "name": "Gabriel García Márquez",
-      "name_original": "Gabriel José de la Concordia García Márquez",
-      "dates": "1927–2014",
-      "origin": "Aracataca, Colombie",
-      "lang": "es",
-      "bio": "Romancier colombien, Gabo pour tous. Cent ans de solitude : Macondo, les Buendía, le réalisme magique planétaire. Nobel 1982. Journaliste, ami de Castro, il naviguait entre les mondes. L'Amour au temps du choléra : preuve qu'il n'avait pas tout dit. Il mourut à Mexico, Macondo dans la tête.",
-      "works": [
-        "garcia-marquez-cent-ans"
-      ],
-      "tags": [
-        "amérique latine",
-        "réalisme magique",
-        "nobel"
-      ]
-    },
-    {
       "id": "vargas-llosa",
       "name": "Mario Vargas Llosa",
       "name_original": "Jorge Mario Pedro Vargas Llosa",
@@ -5801,23 +5784,6 @@
       ]
     },
     {
-      "id": "thomas-aquinas",
-      "name": "Thomas d'Aquin",
-      "name_original": "Thomas Aquinas",
-      "dates": "1225–1274",
-      "origin": "Roccasecca, Italie",
-      "lang": "la",
-      "bio": "Doctor Angelicus. Dominicain, il synthétisa Aristote et le christianisme. La Somme théologique : cathédrale de raison. Les cinq voies prouvent Dieu. La grâce ne détruit pas la nature mais l'accomplit. Canonisé, Docteur de l'Église. Le thomisme règne encore.",
-      "works": [
-        "aquinas-summa"
-      ],
-      "tags": [
-        "scolastique",
-        "théologie",
-        "thomisme"
-      ]
-    },
-    {
       "id": "anselm",
       "name": "Anselme de Canterbury",
       "name_original": "Anselmus Cantuariensis",
@@ -6022,23 +5988,6 @@
         "scolastique",
         "néoplatonisme",
         "irlandais"
-      ]
-    },
-    {
-      "id": "nicholas-cusa",
-      "name": "Nicolas de Cues",
-      "name_original": "Nicolaus Cusanus",
-      "dates": "1401–1464",
-      "origin": "Cues, Allemagne",
-      "lang": "la",
-      "bio": "Cardinal, philosophe, mathématicien. La docte ignorance : Dieu est coïncidence des opposés, infini incompréhensible. L'univers n'a pas de centre — anticipant Copernic. Réformateur, légat pontifical. Entre scolastique et Renaissance, entre foi et raison.",
-      "works": [
-        "cusa-docta-ignorantia"
-      ],
-      "tags": [
-        "scolastique",
-        "mystique",
-        "cardinal"
       ]
     },
     {
@@ -7504,57 +7453,6 @@
       ]
     },
     {
-      "id": "pico-mirandola",
-      "name": "Pic de la Mirandole",
-      "name_original": "Giovanni Pico della Mirandola",
-      "dates": "1463–1494",
-      "origin": "Mirandola, Italie",
-      "lang": "la",
-      "bio": "900 thèses, toutes traditions réconciliées. De la dignité de l'homme : l'homme se crée lui-même, n'a pas de nature fixe. Condamné par Rome, protégé par Laurent. Mort à 31 ans, peut-être empoisonné. Le prodige de la synthèse.",
-      "works": [
-        "pico-dignite"
-      ],
-      "tags": [
-        "humanisme",
-        "philosophie",
-        "renaissance"
-      ]
-    },
-    {
-      "id": "marsilio-ficino",
-      "name": "Marsile Ficin",
-      "name_original": "Marsilio Ficino",
-      "dates": "1433–1499",
-      "origin": "Figline Valdarno, Italie",
-      "lang": "la",
-      "bio": "Traducteur de Platon, fondateur de l'Académie florentine. Theologia Platonica : le platonisme chrétien. Il traduisit aussi Plotin, Hermès Trismégiste. Prêtre, astrologue, médecin des âmes. Le magicien philosophe de la Renaissance.",
-      "works": [
-        "ficino-theologia"
-      ],
-      "tags": [
-        "humanisme",
-        "néoplatonisme",
-        "renaissance"
-      ]
-    },
-    {
-      "id": "thomas-more",
-      "name": "Thomas More",
-      "name_original": "Sir Thomas More",
-      "dates": "1478–1535",
-      "origin": "Londres, Angleterre",
-      "lang": "la",
-      "bio": "Utopia : l'île de nulle part, critique sociale par fiction. Chancelier d'Henri VIII, il refusa le schisme et fut décapité. Ami d'Érasme, humaniste chrétien. Canonisé. Patron des hommes politiques — ironie de l'histoire.",
-      "works": [
-        "more-utopia"
-      ],
-      "tags": [
-        "humanisme",
-        "politique",
-        "renaissance"
-      ]
-    },
-    {
       "id": "leibniz",
       "name": "Gottfried Wilhelm Leibniz",
       "name_original": "Gottfried Wilhelm Leibniz",
@@ -7822,23 +7720,6 @@
         "modernisme",
         "théâtre",
         "absurde"
-      ]
-    },
-    {
-      "id": "mann",
-      "name": "Thomas Mann",
-      "name_original": "Paul Thomas Mann",
-      "dates": "1875–1955",
-      "origin": "Lübeck, Allemagne",
-      "lang": "de",
-      "bio": "Les Buddenbrook, La Montagne magique, Docteur Faustus. L'ironie, le bourgeois, l'artiste. Nobel 1929. Exilé en Suisse puis en Amérique, il dénonça les nazis. Le grand styliste, le monument allemand, le conservateur devenu démocrate.",
-      "works": [
-        "mann-montagne-magique"
-      ],
-      "tags": [
-        "modernisme",
-        "littérature",
-        "allemagne"
       ]
     },
     {
@@ -8554,40 +8435,6 @@
       ]
     },
     {
-      "id": "herbert",
-      "name": "Zbigniew Herbert",
-      "name_original": "Zbigniew Herbert",
-      "dates": "1924–1998",
-      "origin": "Lwów, Pologne",
-      "lang": "pl",
-      "bio": "Monsieur Cogito : le personnage qui pense. Élégie pour un départ. Résistant, censuré, exilé. Classicisme moderne, ironie, intégrité. « Va où vont ceux de ta génération. » Le poète de la fidélité.",
-      "works": [
-        "herbert-cogito"
-      ],
-      "tags": [
-        "poésie",
-        "résistance",
-        "pologne"
-      ]
-    },
-    {
-      "id": "schulz-bruno",
-      "name": "Bruno Schulz",
-      "name_original": "Bruno Schulz",
-      "dates": "1892–1942",
-      "origin": "Drohobycz, Galicie",
-      "lang": "pl",
-      "bio": "Les Boutiques de cannelle, Le Sanatorium au croque-mort. Prose onirique, père démiurge. Professeur de dessin, reclus. Abattu par un officier SS dans la rue. Le Kafka de Drohobycz, le magicien assassiné.",
-      "works": [
-        "schulz-boutiques"
-      ],
-      "tags": [
-        "littérature",
-        "shoah",
-        "pologne"
-      ]
-    },
-    {
       "id": "witkacy",
       "name": "Witkacy",
       "name_original": "Stanisław Ignacy Witkiewicz",
@@ -8619,40 +8466,6 @@
         "science-fiction",
         "philosophie",
         "pologne"
-      ]
-    },
-    {
-      "id": "bulgakov-mikhail",
-      "name": "Mikhaïl Boulgakov",
-      "name_original": "Михаил Афанасьевич Булгаков",
-      "dates": "1891–1940",
-      "origin": "Kiev, Ukraine",
-      "lang": "ru",
-      "bio": "Le Maître et Marguerite : le Diable à Moscou, Ponce Pilate, le chat géant. Censuré, désespéré, dicté mourant. Publié 26 ans après sa mort. Le chef-d'œuvre clandestin, le rire contre la terreur.",
-      "works": [
-        "boulgakov-maitre"
-      ],
-      "tags": [
-        "littérature",
-        "fantastique",
-        "russie"
-      ]
-    },
-    {
-      "id": "mandelstam-osip",
-      "name": "Ossip Mandelstam",
-      "name_original": "Осип Эмильевич Мандельштам",
-      "dates": "1891–1938",
-      "origin": "Varsovie, Pologne",
-      "lang": "ru",
-      "bio": "L'épigramme sur Staline : le montagnard du Kremlin aux doigts gras. Acméiste, traducteur, voyageur. Arrêté, exilé, mort au Goulag. Sa femme mémorisa les poèmes. Le martyr de la poésie russe.",
-      "works": [
-        "mandelstam-poemes"
-      ],
-      "tags": [
-        "poésie",
-        "goulag",
-        "russie"
       ]
     },
     {
@@ -8839,23 +8652,6 @@
       "tags": [
         "théâtre",
         "modernisme",
-        "italie"
-      ]
-    },
-    {
-      "id": "primo-levi",
-      "name": "Primo Levi",
-      "name_original": "Primo Michele Levi",
-      "dates": "1919–1987",
-      "origin": "Turin, Italie",
-      "lang": "it",
-      "bio": "Si c'est un homme : Auschwitz témoigné avec clarté. La Trêve, Le Système périodique. Chimiste turinois, survivant, écrivain par devoir. Il tomba dans la cage d'escalier — suicide ou accident. Le témoin indispensable.",
-      "works": [
-        "levi-si-cest-homme"
-      ],
-      "tags": [
-        "témoignage",
-        "shoah",
         "italie"
       ]
     },
@@ -9877,23 +9673,6 @@
         "technique",
         "apocalypse",
         "bombe"
-      ]
-    },
-    {
-      "id": "jünger",
-      "name": "Ernst Jünger",
-      "name_original": "Ernst Jünger",
-      "dates": "1895–1998",
-      "origin": "Heidelberg, Allemagne",
-      "lang": "de",
-      "bio": "Orages d'acier, Le Travailleur, Sur les falaises de marbre. L'expérience de la guerre, la mobilisation totale, l'Anarque. Héros de 14-18, drogues, entomologie. 102 ans. Le guerrier devenu sage. L'inclassable.",
-      "works": [
-        "junger-orages-acier"
-      ],
-      "tags": [
-        "guerre",
-        "technique",
-        "anarque"
       ]
     },
     {

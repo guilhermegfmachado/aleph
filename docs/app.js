@@ -313,6 +313,29 @@ function setupCommandPalette() {
         openPalette();
     });
 
+    // Colophon / About modal
+    const colophonOverlay = document.getElementById('colophonOverlay');
+    const colophonOpen = document.getElementById('openColophon');
+    const colophonClose = document.getElementById('colophonClose');
+
+    colophonOpen?.addEventListener('click', (e) => {
+        e.preventDefault();
+        colophonOverlay?.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    colophonClose?.addEventListener('click', () => {
+        colophonOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    colophonOverlay?.addEventListener('click', (e) => {
+        if (e.target === colophonOverlay) {
+            colophonOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) closePalette();
     });

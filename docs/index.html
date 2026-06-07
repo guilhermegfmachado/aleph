@@ -404,9 +404,72 @@
     <footer class="site-footer">
         <div class="footer-links">
             <a href="#" id="openPaletteFooter">/ · Chercher</a>
+            <a href="#" id="openColophon">À propos</a>
         </div>
         <span class="footer-tagline">Aleph · Catalogue littéraire universel · <a href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener noreferrer">Guilherme Machado</a></span>
     </footer>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         COLOPHON / ABOUT MODAL
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="colophon-overlay" id="colophonOverlay">
+        <article class="colophon-modal">
+            <button class="colophon-close" id="colophonClose" aria-label="Fermer">×</button>
+
+            <h1>À propos d'Aleph</h1>
+
+            <section class="colophon-section">
+                <h2>Le projet</h2>
+                <p>Aleph est un catalogue littéraire universel indexant la littérature du domaine public à travers toutes les traditions — grec, latin, sanskrit, japonais, hébreu, arabe, chinois, et bien d'autres. Le projet met en lumière les <em>intraduisibles</em> : ces mots qui refusent le passage d'une langue à l'autre et révèlent comment chaque culture découpe le monde différemment.</p>
+            </section>
+
+            <section class="colophon-section">
+                <h2>Sources</h2>
+                <ul>
+                    <li><strong>Textes :</strong> Project Gutenberg, Internet Archive, Perseus Digital Library, Wikisource, sacred-texts.com</li>
+                    <li><strong>Métadonnées :</strong> VIAF, WorldCat, BnF data, Library of Congress</li>
+                    <li><strong>Références académiques :</strong> JSTOR, Persée, OpenEdition, Stanford Encyclopedia of Philosophy</li>
+                </ul>
+                <p>Tous les textes indexés sont dans le domaine public ou sous licence libre.</p>
+            </section>
+
+            <section class="colophon-section">
+                <h2>Méthodologie</h2>
+                <p>Le glossaire des intraduisibles s'inspire du <em>Vocabulaire européen des philosophies</em> dirigé par Barbara Cassin, élargi aux traditions non-européennes. Les définitions visent la concision et l'évocation plutôt que l'exhaustivité académique.</p>
+                <p>Les biographies d'auteurs privilégient l'angle littéraire et la portée de l'œuvre sur les détails biographiques factuels.</p>
+            </section>
+
+            <section class="colophon-section">
+                <h2>Transparence : assistance IA</h2>
+                <p>Une partie du contenu de ce catalogue — notamment les définitions du glossaire, les biographies d'auteurs, et certaines métadonnées — a été rédigée avec l'assistance de Claude (Anthropic). Ce contenu a été supervisé, édité et validé par l'auteur humain du projet.</p>
+                <p>L'utilisation de l'IA a permis d'atteindre une ampleur (2600+ termes, 600+ auteurs, 80 langues) qui aurait été impossible autrement pour un projet individuel. Cependant, des erreurs peuvent subsister. Les corrections sont bienvenues.</p>
+            </section>
+
+            <section class="colophon-section">
+                <h2>Limites</h2>
+                <ul>
+                    <li>Ce catalogue n'est pas une source académique primaire — il est conçu comme porte d'entrée et invitation à l'exploration.</li>
+                    <li>Les translittérations et romanisations peuvent varier selon les conventions.</li>
+                    <li>Les datations anciennes sont souvent approximatives ou disputées.</li>
+                    <li>Le projet reflète inévitablement certains biais de sélection et de perspective.</li>
+                </ul>
+            </section>
+
+            <section class="colophon-section">
+                <h2>Technique</h2>
+                <p><strong>Stack :</strong> Vanilla JavaScript, CSS custom properties, D3.js pour les visualisations. Aucun framework, aucun tracking, aucun cookie.</p>
+                <p><strong>Typographie :</strong> EB Garamond (corps), JetBrains Mono (code et labels).</p>
+                <p><strong>Hébergement :</strong> GitHub Pages.</p>
+                <p><strong>Licence :</strong> MIT (code), CC BY-SA 4.0 (contenu original).</p>
+            </section>
+
+            <section class="colophon-section">
+                <h2>Contact</h2>
+                <p>Conçu par <a href="https://guilhermegfmachado.github.io/work/" target="_blank" rel="noopener noreferrer">Guilherme Machado</a>, 2025.</p>
+                <p>Code source : <a href="https://github.com/guilhermegfmachado/aleph" target="_blank" rel="noopener noreferrer">github.com/guilhermegfmachado/aleph</a></p>
+            </section>
+        </article>
+    </div>
 
     <noscript>
         <div style="padding: 2rem; text-align: center; font-family: Georgia, serif;">

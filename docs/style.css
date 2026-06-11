@@ -3836,3 +3836,68 @@ details.sources-section[open] > summary::after {
     font-size: 1.75rem;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLOSSARY ENHANCEMENTS — link button, virtualization
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.glossary-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--ink-3);
+  padding: 0.25rem;
+  opacity: 0.6;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+.glossary-link:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.glossary-link.copied {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.glossary-sentinel {
+  height: 1px;
+  margin-top: 2rem;
+}
+
+/* Loading indicator for virtualized content */
+.glossary-terms-list::after {
+  content: '';
+  display: block;
+  height: 0;
+}
+
+.glossary-terms-list:empty::after {
+  content: 'Chargement…';
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+/* Reading list print button */
+.list-print-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--ink-3);
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.15s, color 0.15s;
+  vertical-align: middle;
+}
+
+.list-print-btn:hover {
+  opacity: 1;
+  color: var(--accent);
+}

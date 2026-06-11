@@ -69,14 +69,11 @@ async function init() {
     setupCommandPalette();
     setupKeyboardShortcuts();
 
-    await loadData();
+    await loadCoreData();
 
     try {
         renderHomePage();
         renderBrowsePage();
-        renderGlossaryPage();
-        renderSourcesPage();
-        renderAuthorsPage();
         setupSearchPage();
         setupReaderPage();
     } catch (err) {
@@ -91,17 +88,45 @@ async function init() {
 
     handleHashChange();
     window.addEventListener('hashchange', handleHashChange);
+
+    // Heavy datasets load after first paint so the landing page is instant
+    ensureGlossary().then(() => {
+        try {
+            renderQuickStats();
+            renderMotDuJour();
+            renderLangPills();
+            renderGlossaryPage();
+        } catch (err) {
+            console.error('Glossary render error:', err);
+        }
+    }).catch(() => {});
+
+    ensureAuthors().then(() => {
+        try {
+            renderFeaturedAuthors();
+            renderAuthorsPage();
+        } catch (err) {
+            console.error('Authors render error:', err);
+        }
+    }).catch(() => {});
+
+    ensureReferences().then(() => {
+        try {
+            renderQuickStats();
+            renderSourcesPage();
+        } catch (err) {
+            console.error('Sources render error:', err);
+        }
+    }).catch(() => {});
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// DATA LOADING
+// DATA LOADING — lazy load heavy datasets after first paint
 // ─────────────────────────────────────────────────────────────────────────────
-async function loadData() {
+async function loadCoreData() {
     try {
-        const [corpusRes, glossaryRes, refsRes, crosslinksRes, listsRes] = await Promise.all([
+        const [corpusRes, crosslinksRes, listsRes] = await Promise.all([
             fetch('data/corpus-manifest.json'),
-            fetch('data/glossary.json'),
-            fetch('data/references.json'),
             fetch('data/crosslinks.json'),
             fetch('data/reading-lists.json')
         ]);
@@ -111,15 +136,6 @@ async function loadData() {
             processCorpus();
         }
 
-        if (glossaryRes.ok) {
-            state.glossary = await glossaryRes.json();
-            state.terms = state.glossary.terms || [];
-        }
-
-        if (refsRes.ok) {
-            state.references = await refsRes.json();
-        }
-
         if (crosslinksRes.ok) {
             state.crosslinks = await crosslinksRes.json();
         }
@@ -127,14 +143,61 @@ async function loadData() {
         if (listsRes.ok) {
             state.readingLists = await listsRes.json();
         }
-
-        const authorsRes = await fetch('data/authors.json');
-        if (authorsRes.ok) {
-            state.authors = await authorsRes.json();
-        }
     } catch (err) {
-        console.error('Failed to load data:', err);
+        console.error('Failed to load core data:', err);
     }
+}
+
+let glossaryPromise = null;
+function ensureGlossary() {
+    if (state.glossary) return Promise.resolve(state.glossary);
+    if (glossaryPromise) return glossaryPromise;
+    glossaryPromise = fetch('data/glossary.json')
+        .then(r => r.json())
+        .then(data => {
+            state.glossary = data;
+            state.terms = data.terms || [];
+            return data;
+        })
+        .catch(err => {
+            glossaryPromise = null;
+            throw err;
+        });
+    return glossaryPromise;
+}
+
+let authorsPromise = null;
+function ensureAuthors() {
+    if (state.authors) return Promise.resolve(state.authors);
+    if (authorsPromise) return authorsPromise;
+    authorsPromise = fetch('data/authors.json')
+        .then(r => r.json())
+        .then(data => {
+            state.authors = data;
+            return data;
+        })
+        .catch(err => {
+            authorsPromise = null;
+            throw err;
+        });
+    return authorsPromise;
+}
+
+let referencesPromise = null;
+function ensureReferences() {
+    if (state.references) return Promise.resolve(state.references);
+    if (referencesPromise) return referencesPromise;
+    referencesPromise = fetch('data/references.json')
+        .then(r => r.json())
+        .then(data => {
+            state.references = data;
+            return data;
+        })
+        .catch(err => {
+            referencesPromise = null;
+            throw err;
+        });
+    return referencesPromise;
 }
 
 function processCorpus() {
@@ -270,6 +333,18 @@ function handleHashChange() {
         return;
     }
 
+    // Handle glossary deep links: #/glossary/termId
+    if (hash.startsWith('/glossary/')) {
+        const termId = hash.replace('/glossary/', '');
+        ensureGlossary().then(() => {
+            if (!document.querySelector('.glossary-cat-btn')) {
+                renderGlossaryPage();
+            }
+            setTimeout(() => selectGlossaryTerm(termId), 100);
+        }).catch(() => {});
+        hash = 'glossary';
+    }
+
     // Stop any reading-aloud when leaving the reader
     if (hash !== 'reader' && typeof stopReaderTts === 'function') stopReaderTts();
 
@@ -282,6 +357,55 @@ function handleHashChange() {
     document.querySelectorAll('.page').forEach(page => {
         page.classList.toggle('active', page.id === hash);
     });
+
+    // Update document title and meta for SEO / shareability
+    updatePageMeta(hash);
+
+    // Lazy-load data for heavy sections on first visit
+    if (hash === 'glossary') {
+        ensureGlossary().then(() => {
+            if (!document.querySelector('.glossary-cat-btn')) {
+                renderGlossaryPage();
+            }
+        }).catch(() => {});
+    } else if (hash === 'authors') {
+        ensureAuthors().then(() => {
+            if (!document.querySelector('.author-card')) {
+                renderAuthorsPage();
+            }
+        }).catch(() => {});
+    } else if (hash === 'sources') {
+        ensureReferences().then(() => {
+            if (!document.querySelector('.sources-section')) {
+                renderSourcesPage();
+            }
+        }).catch(() => {});
+    }
+}
+
+function updatePageMeta(hash) {
+    const titles = {
+        home: 'Aleph — Catalogue littéraire universel',
+        browse: 'L\'Archive — Aleph',
+        glossary: 'Rêverie — Glossaire des intraduisibles — Aleph',
+        sources: 'L\'Enquête — Sources et références — Aleph',
+        authors: 'Panthéon — Auteurs — Aleph',
+        search: 'L\'Atelier — Recherche plein-texte — Aleph',
+        reader: 'Lecteur — Aleph'
+    };
+    document.title = titles[hash] || 'Aleph — Catalogue littéraire universel';
+
+    const desc = document.querySelector('meta[name="description"]');
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    const descriptions = {
+        home: 'Catalogue littéraire universel indexant la littérature du domaine public à travers toutes les traditions.',
+        glossary: `Glossaire de ${state.terms?.length || 2600}+ termes intraduisibles en ${new Set(state.terms?.map(t => t.lang) || []).size || 80} langues.`,
+        authors: `Biographies de ${state.authors?.authors?.length || 600}+ auteurs de l'Antiquité à nos jours.`,
+        browse: `${state.books?.length || 140}+ textes fondateurs : philosophie, littérature, droit, sciences.`
+    };
+    const descText = descriptions[hash] || descriptions.home;
+    if (desc) desc.content = descText;
+    if (ogDesc) ogDesc.content = descText;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -313,27 +437,40 @@ function setupCommandPalette() {
         openPalette();
     });
 
-    // Colophon / About modal
+    // Colophon / About modal with full accessibility
     const colophonOverlay = document.getElementById('colophonOverlay');
     const colophonOpen = document.getElementById('openColophon');
     const colophonClose = document.getElementById('colophonClose');
+    const colophonModal = colophonOverlay?.querySelector('.colophon-modal');
+
+    function openColophonModal() {
+        if (!colophonOverlay) return;
+        colophonOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        colophonClose?.focus();
+        trapFocus(colophonModal);
+    }
+
+    function closeColophonModal() {
+        if (!colophonOverlay) return;
+        colophonOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        colophonOpen?.focus();
+    }
 
     colophonOpen?.addEventListener('click', (e) => {
         e.preventDefault();
-        colophonOverlay?.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        openColophonModal();
     });
 
-    colophonClose?.addEventListener('click', () => {
-        colophonOverlay?.classList.remove('active');
-        document.body.style.overflow = '';
-    });
+    colophonClose?.addEventListener('click', closeColophonModal);
 
     colophonOverlay?.addEventListener('click', (e) => {
-        if (e.target === colophonOverlay) {
-            colophonOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+        if (e.target === colophonOverlay) closeColophonModal();
+    });
+
+    colophonOverlay?.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeColophonModal();
     });
 
     overlay.addEventListener('click', (e) => {
@@ -644,12 +781,8 @@ function renderReadingLists() {
 }
 
 function openReadingList(listId) {
-    console.log('Opening reading list:', listId);
     const list = state.readingLists?.lists?.find(l => l.id === listId);
-    if (!list) {
-        console.log('List not found:', listId);
-        return;
-    }
+    if (!list) return;
 
     state.currentList = list;
     state.browseFilter = '';
@@ -664,7 +797,7 @@ function openReadingList(listId) {
     const totalEl = document.getElementById('browseTotal');
 
     if (countEl) countEl.textContent = filteredBooks.length;
-    if (totalEl) totalEl.innerHTML = `<em>${escapeHtml(list.name)}</em>`;
+    if (totalEl) totalEl.innerHTML = `<em>${escapeHtml(list.name)}</em> <button class="list-print-btn" onclick="printReadingList('${listId}'); event.stopPropagation();" title="Imprimer cette liste">⎙</button>`;
 
     container.innerHTML = filteredBooks.map(b => `
         <a href="#reader" class="book-card" data-id="${b.id}" onclick="openReader('${b.id}'); return false;">
@@ -681,6 +814,52 @@ function openReadingList(listId) {
     navigateTo('browse');
 }
 window.openReadingList = openReadingList;
+
+function printReadingList(listId) {
+    const list = state.readingLists?.lists?.find(l => l.id === listId);
+    if (!list) return;
+
+    const listBookIds = new Set(list.texts);
+    const books = state.books.filter(b => listBookIds.has(b.id));
+
+    const printContent = `
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <title>${escapeHtml(list.name)} — Aleph</title>
+            <style>
+                body { font-family: 'EB Garamond', Georgia, serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+                h1 { font-size: 2rem; margin-bottom: 0.5rem; font-style: italic; }
+                .desc { color: #666; margin-bottom: 2rem; font-style: italic; }
+                .book { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #ddd; }
+                .book:last-child { border-bottom: none; }
+                .title { font-size: 1.125rem; font-weight: 500; margin: 0; }
+                .meta { color: #666; font-size: 0.9rem; margin: 0.25rem 0; }
+                .footer { margin-top: 3rem; font-size: 0.8rem; color: #999; text-align: center; }
+                @media print { body { margin: 0; } }
+            </style>
+        </head>
+        <body>
+            <h1>${list.icon} ${escapeHtml(list.name)}</h1>
+            <p class="desc">${escapeHtml(list.description)}</p>
+            ${books.map((b, i) => `
+                <div class="book">
+                    <p class="title">${i + 1}. ${escapeHtml(b.title)}</p>
+                    <p class="meta">${escapeHtml(b.author)} · ${b.year || '—'} · ${b.lang.toUpperCase()}</p>
+                </div>
+            `).join('')}
+            <p class="footer">Généré par Aleph — guilhermegfmachado.github.io/aleph</p>
+        </body>
+        </html>
+    `;
+
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(printContent);
+    printWindow.document.close();
+    printWindow.print();
+}
+window.printReadingList = printReadingList;
 
 function renderFeaturedAuthors() {
     const container = document.getElementById('featuredAuthors');
@@ -1469,6 +1648,9 @@ function renderGlossarySidebar() {
     });
 }
 
+// Glossary virtualization state
+let glossaryRenderState = { terms: [], rendered: 0, batchSize: 30, observer: null };
+
 function renderGlossaryContent(category) {
     const content = document.getElementById('glossaryContent');
     if (!content) return;
@@ -1484,15 +1666,70 @@ function renderGlossaryContent(category) {
     const [cat, terms] = found;
     terms.sort((a, b) => a.term.localeCompare(b.term));
 
+    // Clean up previous observer
+    if (glossaryRenderState.observer) {
+        glossaryRenderState.observer.disconnect();
+    }
+
+    // Initialize virtualization state
+    glossaryRenderState.terms = terms;
+    glossaryRenderState.rendered = 0;
+
+    // Render header and initial batch
+    const initialBatch = terms.slice(0, glossaryRenderState.batchSize);
+    glossaryRenderState.rendered = initialBatch.length;
+
     content.innerHTML = `
         <header class="glossary-content-header">
             <h2 class="glossary-content-title">${escapeHtml(cat)}</h2>
             <span class="glossary-content-count">${terms.length} termes</span>
         </header>
-        <div class="glossary-terms-list">
-            ${terms.map(t => renderGlossaryTerm(t)).join('')}
+        <div class="glossary-terms-list" id="glossaryTermsList">
+            ${initialBatch.map(t => renderGlossaryTerm(t)).join('')}
         </div>
+        ${terms.length > glossaryRenderState.batchSize ? '<div class="glossary-sentinel" id="glossarySentinel"></div>' : ''}
     `;
+
+    // Set up IntersectionObserver for infinite scroll
+    if (terms.length > glossaryRenderState.batchSize) {
+        const sentinel = document.getElementById('glossarySentinel');
+        glossaryRenderState.observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                renderMoreGlossaryTerms();
+            }
+        }, { rootMargin: '200px' });
+        if (sentinel) glossaryRenderState.observer.observe(sentinel);
+    }
+}
+
+function renderMoreGlossaryTerms() {
+    const list = document.getElementById('glossaryTermsList');
+    const sentinel = document.getElementById('glossarySentinel');
+    if (!list) return;
+
+    const { terms, rendered, batchSize } = glossaryRenderState;
+    if (rendered >= terms.length) {
+        if (glossaryRenderState.observer) glossaryRenderState.observer.disconnect();
+        if (sentinel) sentinel.remove();
+        return;
+    }
+
+    const nextBatch = terms.slice(rendered, rendered + batchSize);
+    glossaryRenderState.rendered += nextBatch.length;
+
+    const fragment = document.createDocumentFragment();
+    const temp = document.createElement('div');
+    temp.innerHTML = nextBatch.map(t => renderGlossaryTerm(t)).join('');
+    while (temp.firstChild) {
+        fragment.appendChild(temp.firstChild);
+    }
+    list.appendChild(fragment);
+
+    // Remove sentinel if all rendered
+    if (glossaryRenderState.rendered >= terms.length) {
+        if (glossaryRenderState.observer) glossaryRenderState.observer.disconnect();
+        if (sentinel) sentinel.remove();
+    }
 }
 
 function renderGlossaryTerm(t) {
@@ -1530,6 +1767,7 @@ function renderGlossaryTerm(t) {
                 <span class="glossary-dropcap">${firstLetter}</span>
                 <span class="glossary-term">${escapeHtml(t.term)}</span>
                 <button class="glossary-speak" onclick="speakTerm('${escapeAttr(t.term)}', '${t.lang}'); event.stopPropagation();" title="Écouter la prononciation">♫</button>
+                <button class="glossary-link" onclick="copyTermLink('${t.id}', this); event.stopPropagation();" title="Copier le lien">§</button>
                 <span class="glossary-lang">${t.lang.toUpperCase()}</span>
                 ${textIds.length ? `<span class="glossary-textcount" title="Apparaît dans ${textIds.length} textes">№${textIds.length}</span>` : ''}
                 <span class="glossary-expand">+</span>
@@ -1655,10 +1893,34 @@ function selectGlossaryTermByName(name) {
     if (term) selectGlossaryTerm(term.id);
 }
 
+function copyTermLink(termId, btn) {
+    const url = `${window.location.origin}${window.location.pathname}#/glossary/${termId}`;
+    navigator.clipboard.writeText(url).then(() => {
+        const original = btn.textContent;
+        btn.textContent = '✓';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('copied');
+        }, 1500);
+    }).catch(() => {
+        // Fallback for older browsers
+        const input = document.createElement('input');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        btn.textContent = '✓';
+        setTimeout(() => { btn.textContent = '§'; }, 1500);
+    });
+}
+
 // Make it globally accessible
 window.selectGlossaryTerm = selectGlossaryTerm;
 window.selectGlossaryTermByName = selectGlossaryTermByName;
 window.toggleGlossaryEntry = toggleGlossaryEntry;
+window.copyTermLink = copyTermLink;
 window.navigateTo = navigateTo;
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -2977,6 +3239,30 @@ function escapeHtml(str) {
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+}
+
+// Focus trap for modals (accessibility)
+function trapFocus(element) {
+    if (!element) return;
+    const focusable = element.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    function handleTab(e) {
+        if (e.key !== 'Tab') return;
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last?.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first?.focus();
+        }
+    }
+
+    element.addEventListener('keydown', handleTab);
+    element._removeTrap = () => element.removeEventListener('keydown', handleTab);
 }
 
 function escapeAttr(str) {

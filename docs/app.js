@@ -2037,7 +2037,10 @@ function setSourcesView(view) {
         if (listContainer) listContainer.style.display = 'none';
         if (networkContainer) {
             networkContainer.style.display = 'block';
-            initNetwork();
+            // Wait for browser reflow before measuring container dimensions
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => initNetwork());
+            });
         }
     } else {
         if (listContainer) listContainer.style.display = '';
@@ -2186,8 +2189,9 @@ function initNetwork() {
     networkState.highlight = '';
 
     const rect = container.getBoundingClientRect();
-    networkState.width = rect.width || 800;
-    networkState.height = Math.max(600, rect.height || 600);
+    // Ensure we have valid dimensions; fallback for tablets where reflow may be slow
+    networkState.width = Math.max(rect.width, container.offsetWidth, 320);
+    networkState.height = Math.max(rect.height, container.offsetHeight, 400);
 
     container.innerHTML = `
         <div class="network-toolbar">
@@ -2250,6 +2254,23 @@ function initNetwork() {
         }
         updateNetwork();
     });
+
+    // Handle tablet rotation / resize
+    if (networkState.resizeObserver) networkState.resizeObserver.disconnect();
+    networkState.resizeObserver = new ResizeObserver(entries => {
+        const entry = entries[0];
+        if (!entry) return;
+        const newWidth = entry.contentRect.width;
+        const newHeight = Math.max(entry.contentRect.height, 400);
+        // Only re-render if size changed significantly (>50px)
+        if (Math.abs(newWidth - networkState.width) > 50 || Math.abs(newHeight - networkState.height) > 50) {
+            networkState.width = newWidth;
+            networkState.height = newHeight;
+            networkState.svg.attr('viewBox', `0 0 ${newWidth} ${newHeight}`).attr('height', newHeight);
+            updateNetwork();
+        }
+    });
+    networkState.resizeObserver.observe(container);
 
     updateNetwork();
 }

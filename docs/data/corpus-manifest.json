@@ -3977,6 +3977,206 @@
             "grail",
             "camelot"
           ]
+        },
+        {
+          "id": "chretien-arthurian",
+          "title": "Arthurian Romances (Lancelot, Yvain, Erec)",
+          "author": "Chrétien de Troyes",
+          "period": "medieval",
+          "year": 1180,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 831
+            }
+          },
+          "tags": [
+            "arthurian",
+            "courtly love",
+            "chivalry",
+            "french romance",
+            "grail"
+          ]
+        },
+        {
+          "id": "wolfram-parzival",
+          "title": "Parzival",
+          "author": "Wolfram von Eschenbach",
+          "period": "medieval",
+          "year": 1210,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 2087
+            }
+          },
+          "tags": [
+            "arthurian",
+            "grail quest",
+            "german romance",
+            "knighthood",
+            "spiritual growth"
+          ]
+        },
+        {
+          "id": "mabinogion",
+          "title": "The Mabinogion",
+          "author": "Anonymous",
+          "period": "medieval",
+          "year": 1100,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 5160
+            }
+          },
+          "tags": [
+            "welsh mythology",
+            "celtic",
+            "arthurian",
+            "folklore",
+            "magic"
+          ]
+        },
+        {
+          "id": "geoffrey-britain",
+          "title": "History of the Kings of Britain",
+          "author": "Geoffrey of Monmouth",
+          "period": "medieval",
+          "year": 1136,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1126
+            }
+          },
+          "tags": [
+            "arthurian",
+            "pseudo-history",
+            "king arthur",
+            "merlin",
+            "britain"
+          ]
+        },
+        {
+          "id": "prose-edda",
+          "title": "The Prose Edda",
+          "author": "Snorri Sturluson",
+          "period": "medieval",
+          "year": 1220,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 18947
+            }
+          },
+          "tags": [
+            "norse mythology",
+            "old norse",
+            "cosmology",
+            "ragnarok",
+            "iceland"
+          ]
+        },
+        {
+          "id": "heimskringla",
+          "title": "Heimskringla (Chronicle of the Kings of Norway)",
+          "author": "Snorri Sturluson",
+          "period": "medieval",
+          "year": 1230,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 598
+            }
+          },
+          "tags": [
+            "norse history",
+            "sagas",
+            "vikings",
+            "norway",
+            "kings"
+          ]
+        },
+        {
+          "id": "njals-saga",
+          "title": "Njál's Saga",
+          "author": "Anonymous",
+          "period": "medieval",
+          "year": 1280,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 597
+            }
+          },
+          "tags": [
+            "icelandic saga",
+            "blood feud",
+            "law",
+            "honor",
+            "vikings"
+          ]
+        },
+        {
+          "id": "egils-saga",
+          "title": "Egil's Saga",
+          "author": "Anonymous",
+          "period": "medieval",
+          "year": 1240,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 45953
+            }
+          },
+          "tags": [
+            "icelandic saga",
+            "vikings",
+            "skaldic poetry",
+            "warrior",
+            "family"
+          ]
+        },
+        {
+          "id": "marie-lais",
+          "title": "The Lais of Marie de France",
+          "author": "Marie de France",
+          "period": "medieval",
+          "year": 1175,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 26718
+            }
+          },
+          "tags": [
+            "breton lais",
+            "courtly love",
+            "women writers",
+            "romance",
+            "fairy"
+          ]
+        },
+        {
+          "id": "roman-rose",
+          "title": "Le Roman de la Rose",
+          "author": "Guillaume de Lorris & Jean de Meun",
+          "period": "medieval",
+          "year": 1275,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 16816
+            }
+          },
+          "tags": [
+            "allegory",
+            "courtly love",
+            "dream vision",
+            "french poetry",
+            "romance"
+          ]
         }
       ]
     },
@@ -4079,6 +4279,146 @@
             "pilgrimage",
             "visions",
             "women"
+          ]
+        },
+        {
+          "id": "chaucer-troilus",
+          "title": "Troilus and Criseyde",
+          "author": "Geoffrey Chaucer",
+          "period": "medieval",
+          "year": 1385,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 257
+            }
+          },
+          "tags": [
+            "troy",
+            "courtly love",
+            "tragedy",
+            "middle english",
+            "boethius"
+          ]
+        },
+        {
+          "id": "gower-confessio",
+          "title": "Confessio Amantis",
+          "author": "John Gower",
+          "period": "medieval",
+          "year": 1390,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 266
+            }
+          },
+          "tags": [
+            "frame narrative",
+            "seven sins",
+            "love",
+            "morality",
+            "middle english"
+          ]
+        },
+        {
+          "id": "marco-polo",
+          "title": "The Travels of Marco Polo",
+          "author": "Marco Polo",
+          "period": "medieval",
+          "year": 1300,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 10636
+            }
+          },
+          "tags": [
+            "travel",
+            "china",
+            "mongol empire",
+            "silk road",
+            "exploration"
+          ]
+        },
+        {
+          "id": "mandeville-travels",
+          "title": "The Travels of Sir John Mandeville",
+          "author": "John Mandeville",
+          "period": "medieval",
+          "year": 1357,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 782
+            }
+          },
+          "tags": [
+            "travel",
+            "holy land",
+            "marvels",
+            "orient",
+            "medieval geography"
+          ]
+        },
+        {
+          "id": "froissart-chronicles",
+          "title": "Chronicles of England, France, and Spain",
+          "author": "Jean Froissart",
+          "period": "medieval",
+          "year": 1400,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1640
+            }
+          },
+          "tags": [
+            "chronicles",
+            "hundred years war",
+            "chivalry",
+            "history",
+            "knighthood"
+          ]
+        },
+        {
+          "id": "christine-pizan-city",
+          "title": "The Book of the City of Ladies",
+          "author": "Christine de Pizan",
+          "period": "medieval",
+          "year": 1405,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 57180
+            }
+          },
+          "tags": [
+            "women",
+            "allegory",
+            "feminism",
+            "virtue",
+            "defense of women"
+          ]
+        },
+        {
+          "id": "golden-legend",
+          "title": "The Golden Legend (Selections)",
+          "author": "Jacobus de Voragine",
+          "period": "medieval",
+          "year": 1260,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 17295
+            }
+          },
+          "tags": [
+            "hagiography",
+            "saints",
+            "miracles",
+            "legends",
+            "medieval piety"
           ]
         }
       ]
@@ -4184,6 +4524,66 @@
             "monasticism",
             "tragedy"
           ]
+        },
+        {
+          "id": "boethius-consolation",
+          "title": "The Consolation of Philosophy",
+          "author": "Boethius",
+          "period": "medieval",
+          "year": 524,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 14328
+            }
+          },
+          "tags": [
+            "philosophy",
+            "fortune",
+            "providence",
+            "free will",
+            "late antiquity"
+          ]
+        },
+        {
+          "id": "anselm-proslogion",
+          "title": "Proslogion",
+          "author": "Anselm of Canterbury",
+          "period": "medieval",
+          "year": 1078,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 25884
+            }
+          },
+          "tags": [
+            "ontological argument",
+            "theology",
+            "god",
+            "scholasticism",
+            "faith and reason"
+          ]
+        },
+        {
+          "id": "kempis-imitation",
+          "title": "The Imitation of Christ",
+          "author": "Thomas à Kempis",
+          "period": "medieval",
+          "year": 1427,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 1653
+            }
+          },
+          "tags": [
+            "devotio moderna",
+            "spirituality",
+            "humility",
+            "devotion",
+            "christian life"
+          ]
         }
       ]
     },
@@ -4277,6 +4677,46 @@
             "novel",
             "court life",
             "mono no aware"
+          ]
+        },
+        {
+          "id": "pillow-book",
+          "title": "The Pillow Book",
+          "author": "Sei Shōnagon",
+          "period": "medieval",
+          "year": 1002,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 30720
+            }
+          },
+          "tags": [
+            "japanese",
+            "heian",
+            "zuihitsu",
+            "court life",
+            "observation"
+          ]
+        },
+        {
+          "id": "essays-idleness",
+          "title": "Essays in Idleness (Tsurezuregusa)",
+          "author": "Yoshida Kenkō",
+          "period": "medieval",
+          "year": 1332,
+          "languages": {
+            "en": {
+              "source": "gutenberg",
+              "gutenberg_id": 56046
+            }
+          },
+          "tags": [
+            "japanese",
+            "zuihitsu",
+            "buddhism",
+            "aesthetics",
+            "impermanence"
           ]
         },
         {

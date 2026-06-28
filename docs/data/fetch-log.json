@@ -1,6 +1,28 @@
 {
-  "timestamp": "2026-06-21T02:45:07.101Z",
-  "success": [],
+  "timestamp": "2026-06-28T02:36:26.008Z",
+  "success": [
+    "chretien-arthurian_en",
+    "wolfram-parzival_en",
+    "mabinogion_en",
+    "geoffrey-britain_en",
+    "prose-edda_en",
+    "heimskringla_en",
+    "njals-saga_en",
+    "egils-saga_en",
+    "marie-lais_en",
+    "roman-rose_en",
+    "chaucer-troilus_en",
+    "gower-confessio_en",
+    "marco-polo_en",
+    "mandeville-travels_en",
+    "froissart-chronicles_en",
+    "christine-pizan-city_en",
+    "golden-legend_en",
+    "anselm-proslogion_en",
+    "kempis-imitation_en",
+    "pillow-book_en",
+    "essays-idleness_en"
+  ],
   "failed": [
     {
       "id": "euclid-elements_en",
@@ -218,6 +240,7 @@
     "aquinas-summa_en",
     "meister-eckhart_en",
     "abelard-heloise_en",
+    "boethius-consolation_en",
     "rubaiyat-khayyam_en",
     "rumi-masnavi_en",
     "arabian-nights_en",

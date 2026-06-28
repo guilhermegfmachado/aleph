@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aleph-v6';
+const CACHE_NAME = 'aleph-v7';
 const STATIC_ASSETS = [
   './',
   './index.html',

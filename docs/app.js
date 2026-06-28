@@ -257,8 +257,12 @@ function externalUrlFor(book, lang) {
     if (book.celex) {
         return `https://eur-lex.europa.eu/legal-content/${lang.toUpperCase()}/TXT/?uri=CELEX:${book.celex}`;
     }
-    const sources = (state.corpus && state.corpus.sources) || {};
     const langData = book.languages?.[lang] || {};
+    // Direct Gutenberg ebook page — works even when the full text isn't local.
+    if (langData.gutenberg_id) {
+        return `https://www.gutenberg.org/ebooks/${langData.gutenberg_id}`;
+    }
+    const sources = (state.corpus && state.corpus.sources) || {};
     if (langData.source && sources[langData.source]) return sources[langData.source];
     return book.externalUrl;
 }
@@ -2960,7 +2964,7 @@ function setupSearchPage() {
     const input = document.getElementById('fulltextInput');
     const corpusCount = document.getElementById('searchCorpusCount');
 
-    if (corpusCount) corpusCount.textContent = '146';
+    if (corpusCount) corpusCount.textContent = state.books?.length || '280';
 
     let debounceTimer = null;
     input?.addEventListener('input', () => {

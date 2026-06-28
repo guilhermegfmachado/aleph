@@ -241,6 +241,7 @@ function processCorpus() {
                 tags: doc.tags || [],
                 source: category.name,
                 celex: doc.celex || null,
+                url: doc.url || null,
                 externalUrl: externalUrl,
                 languages: doc.languages || {}
             };
@@ -254,6 +255,8 @@ function processCorpus() {
 function externalUrlFor(book, lang) {
     if (!book) return null;
     lang = lang || book.lang;
+    // Curated deep link to the specific document wins over generic fallbacks.
+    if (book.url) return book.url;
     if (book.celex) {
         return `https://eur-lex.europa.eu/legal-content/${lang.toUpperCase()}/TXT/?uri=CELEX:${book.celex}`;
     }
@@ -262,6 +265,8 @@ function externalUrlFor(book, lang) {
     if (langData.gutenberg_id) {
         return `https://www.gutenberg.org/ebooks/${langData.gutenberg_id}`;
     }
+    // Last resort: the source's site. Specific document URL (book.url) is
+    // always preferred above; this only fires for entries without one.
     const sources = (state.corpus && state.corpus.sources) || {};
     if (langData.source && sources[langData.source]) return sources[langData.source];
     return book.externalUrl;

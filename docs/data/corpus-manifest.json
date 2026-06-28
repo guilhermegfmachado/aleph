@@ -761,7 +761,8 @@
             "contracts",
             "sale of goods",
             "cisg"
-          ]
+          ],
+          "url": "https://uncitral.un.org/en/texts/salegoods/conventions/sale_of_goods/cisg"
         },
         {
           "id": "uncitral-model-arbitration",
@@ -785,7 +786,8 @@
             "arbitration",
             "dispute resolution",
             "model law"
-          ]
+          ],
+          "url": "https://uncitral.un.org/en/texts/arbitration/modellaw/commercial_arbitration"
         },
         {
           "id": "new-york-convention",
@@ -809,7 +811,8 @@
             "arbitration",
             "enforcement",
             "convention"
-          ]
+          ],
+          "url": "https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards"
         },
         {
           "id": "wto-gatt",
@@ -833,7 +836,8 @@
             "trade",
             "tariffs",
             "gatt"
-          ]
+          ],
+          "url": "https://www.wto.org/english/docs_e/legal_e/gatt47_e.htm"
         },
         {
           "id": "wto-gats",
@@ -857,7 +861,8 @@
             "services",
             "trade",
             "gats"
-          ]
+          ],
+          "url": "https://www.wto.org/english/docs_e/legal_e/26-gats_e.htm"
         },
         {
           "id": "wto-trips",
@@ -882,7 +887,8 @@
             "patents",
             "copyright",
             "trips"
-          ]
+          ],
+          "url": "https://www.wto.org/english/docs_e/legal_e/27-trips_e.htm"
         },
         {
           "id": "icsid-convention",
@@ -906,7 +912,8 @@
             "arbitration",
             "isds",
             "icsid"
-          ]
+          ],
+          "url": "https://icsid.worldbank.org/sites/default/files/documents/ICSID%20Convention%20English.pdf"
         }
       ]
     },
@@ -943,7 +950,8 @@
             "human rights",
             "un",
             "declaration"
-          ]
+          ],
+          "url": "https://www.un.org/en/about-us/universal-declaration-of-human-rights"
         },
         {
           "id": "iccpr",
@@ -967,7 +975,8 @@
             "civil rights",
             "political rights",
             "covenant"
-          ]
+          ],
+          "url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights"
         },
         {
           "id": "icescr",
@@ -991,7 +1000,8 @@
             "economic rights",
             "social rights",
             "covenant"
-          ]
+          ],
+          "url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights"
         },
         {
           "id": "echr",
@@ -1012,7 +1022,8 @@
             "europe",
             "convention",
             "echr"
-          ]
+          ],
+          "url": "https://www.echr.coe.int/documents/d/echr/convention_ENG"
         }
       ]
     },
@@ -1057,7 +1068,8 @@
             "securities",
             "registration",
             "disclosure"
-          ]
+          ],
+          "url": "https://www.sec.gov/about/laws/sa33.pdf"
         },
         {
           "id": "us-securities-exchange-act-1934",
@@ -1076,7 +1088,8 @@
             "sec",
             "exchanges",
             "reporting"
-          ]
+          ],
+          "url": "https://www.sec.gov/about/laws/sea34.pdf"
         },
         {
           "id": "us-sarbanes-oxley",
@@ -1095,7 +1108,8 @@
             "audit",
             "sox",
             "accounting"
-          ]
+          ],
+          "url": "https://www.sec.gov/about/laws/soa2002.pdf"
         },
         {
           "id": "us-dodd-frank",
@@ -1113,7 +1127,8 @@
             "financial regulation",
             "systemic risk",
             "consumer protection"
-          ]
+          ],
+          "url": "https://www.congress.gov/bill/111th-congress/house-bill/4173"
         },
         {
           "id": "us-fcpa",
@@ -1131,7 +1146,8 @@
             "anti-corruption",
             "bribery",
             "fcpa"
-          ]
+          ],
+          "url": "https://www.justice.gov/criminal-fraud/foreign-corrupt-practices-act"
         }
       ]
     },
@@ -1177,7 +1193,8 @@
             "company law",
             "directors duties",
             "corporate governance"
-          ]
+          ],
+          "url": "https://www.legislation.gov.uk/ukpga/2006/46/contents"
         },
         {
           "id": "uk-bribery-act",
@@ -1195,7 +1212,8 @@
             "anti-corruption",
             "bribery",
             "criminal law"
-          ]
+          ],
+          "url": "https://www.legislation.gov.uk/ukpga/2010/23/contents"
         },
         {
           "id": "uk-modern-slavery",
@@ -1213,7 +1231,8 @@
             "human rights",
             "supply chain",
             "transparency"
-          ]
+          ],
+          "url": "https://www.legislation.gov.uk/ukpga/2015/30/contents"
         },
         {
           "id": "uk-corporate-governance",
@@ -1231,7 +1250,8 @@
             "corporate governance",
             "board",
             "comply or explain"
-          ]
+          ],
+          "url": "https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/uk-corporate-governance-code/"
         }
       ]
     },
@@ -1331,7 +1351,8 @@
             "oecd",
             "principles",
             "best practice"
-          ]
+          ],
+          "url": "https://www.oecd.org/en/publications/g20-oecd-principles-of-corporate-governance-2023_ed750b30-en.html"
         },
         {
           "id": "un-global-compact",
@@ -1355,7 +1376,8 @@
             "un",
             "sustainability",
             "principles"
-          ]
+          ],
+          "url": "https://unglobalcompact.org/what-is-gc/mission/principles"
         },
         {
           "id": "un-guiding-principles",
@@ -1379,7 +1401,8 @@
             "business",
             "due diligence",
             "ruggie"
-          ]
+          ],
+          "url": "https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf"
         },
         {
           "id": "oecd-mne-guidelines",
@@ -1400,7 +1423,8 @@
             "corporate responsibility",
             "oecd",
             "guidelines"
-          ]
+          ],
+          "url": "https://www.oecd.org/en/publications/oecd-guidelines-for-multinational-enterprises-on-responsible-business-conduct_81f92357-en.html"
         }
       ]
     },
@@ -1423,7 +1447,8 @@
             "capital",
             "liquidity",
             "basel"
-          ]
+          ],
+          "url": "https://www.bis.org/bcbs/basel3.htm"
         },
         {
           "id": "ifrs-conceptual",
@@ -1441,7 +1466,8 @@
             "ifrs",
             "financial reporting",
             "framework"
-          ]
+          ],
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/"
         },
         {
           "id": "tcfd-recommendations",
@@ -1459,7 +1485,8 @@
             "disclosure",
             "risk",
             "tcfd"
-          ]
+          ],
+          "url": "https://www.fsb-tcfd.org/recommendations/"
         },
         {
           "id": "issb-s1",
@@ -1477,7 +1504,8 @@
             "disclosure",
             "issb",
             "reporting"
-          ]
+          ],
+          "url": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s1-general-requirements/"
         },
         {
           "id": "issb-s2",
@@ -1495,7 +1523,8 @@
             "disclosure",
             "issb",
             "reporting"
-          ]
+          ],
+          "url": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s2-climate-related-disclosures/"
         }
       ]
     },

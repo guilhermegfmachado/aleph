@@ -3141,8 +3141,10 @@ details.sources-section[open] > summary::after {
 
 @media (max-width: 768px) {
   :root {
-    --page-x: 24px;
-    --page-y: 32px;
+    --page-x: 20px;
+    --page-y: 28px;
+    /* Uniform vertical rhythm between home sections */
+    --section-gap: 2.25rem;
   }
 
   .site-header {
@@ -3197,13 +3199,32 @@ details.sources-section[open] > summary::after {
     gap: 1rem;
   }
 
-  /* Home page mobile */
+  /* Home page mobile — one gutter (--page-x), one rhythm (--section-gap) */
   .home-hero {
-    padding: 2.5rem var(--page-x) 1.5rem;
+    padding: 2rem var(--page-x) 1.75rem;
+  }
+
+  .hero-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .mot-du-jour,
+  .lang-explore,
+  .reading-lists,
+  .featured-authors {
+    padding-left: var(--page-x);
+    padding-right: var(--page-x);
+    padding-bottom: var(--section-gap);
+  }
+
+  /* Consistent header spacing for every home section */
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
   }
 
   .quick-stats {
-    margin: 0 1rem 2rem;
+    margin: 0 var(--page-x) var(--section-gap);
     flex-wrap: wrap;
   }
 
@@ -3216,16 +3237,8 @@ details.sources-section[open] > summary::after {
     font-size: 1.25rem;
   }
 
-  .mot-du-jour {
-    padding: 0 1rem 2rem;
-  }
-
   .mdj-term {
     font-size: 1.25rem;
-  }
-
-  .lang-explore {
-    padding: 0 1rem 2rem;
   }
 
   .lang-pills {
@@ -3234,6 +3247,36 @@ details.sources-section[open] > summary::after {
 
   .lang-pill {
     padding: 0.4rem 0.6rem;
+  }
+
+  /* Declutter reading lists: 2-up compact cards, drop descriptions */
+  .lists-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .list-card {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.9rem;
+  }
+
+  .list-desc {
+    display: none;
+  }
+
+  .list-name {
+    font-size: 0.95rem;
+  }
+
+  /* Featured authors 2-up to match the lists grid */
+  .featured-authors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .author-card-small {
+    padding: 0.8rem 0.6rem;
   }
 
   .source-item {
@@ -3434,9 +3477,20 @@ details.sources-section[open] > summary::after {
     font-size: 0.65rem;
   }
 
+  /* Two compact side-by-side buttons instead of stacked full-width ones */
+  .surprise-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 1.5rem var(--page-x) 2.5rem;
+  }
+
   .surprise-btn {
-    width: 100%;
-    max-width: 280px;
+    flex: 1 1 auto;
+    justify-content: center;
+    max-width: 220px;
+    padding: 0.7rem 1rem;
   }
 
   /* Tighter book cards */

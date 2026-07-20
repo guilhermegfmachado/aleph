@@ -593,6 +593,11 @@ main {
   gap: 1rem;
 }
 
+/* Mobile-only "show more" toggle for reading lists (revealed in media query) */
+.lists-more-btn {
+  display: none;
+}
+
 .list-card {
   display: flex;
   align-items: flex-start;
@@ -3253,6 +3258,31 @@ details.sources-section[open] > summary::after {
   .lists-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem;
+  }
+
+  /* Collapse a long list to the first 6; "show more" reveals the rest */
+  .lists-grid:not(.expanded) .list-card:nth-child(n+7) {
+    display: none;
+  }
+
+  .lists-more-btn {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 0.6rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink-2);
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .lists-more-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   .list-card {

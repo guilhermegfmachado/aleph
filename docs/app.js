@@ -787,6 +787,25 @@ function renderReadingLists() {
             }
         });
     }
+
+    // Mobile "show more" toggle — collapse a long list to 6 (CSS-driven),
+    // reveal the rest in place. Button is hidden on desktop via CSS.
+    const section = container.closest('.reading-lists');
+    const total = state.readingLists.lists.length;
+    if (section && total > 6) {
+        let moreBtn = section.querySelector('.lists-more-btn');
+        if (!moreBtn) {
+            moreBtn = document.createElement('button');
+            moreBtn.className = 'lists-more-btn';
+            moreBtn.addEventListener('click', () => {
+                const expanded = container.classList.toggle('expanded');
+                moreBtn.textContent = expanded ? 'Voir moins' : `Voir les ${total} parcours`;
+            });
+            section.appendChild(moreBtn);
+        }
+        container.classList.remove('expanded');
+        moreBtn.textContent = `Voir les ${total} parcours`;
+    }
 }
 
 function openReadingList(listId) {

@@ -3246,6 +3246,14 @@ details.sources-section[open] > summary::after {
     font-size: 1.25rem;
   }
 
+  /* Keep the card compact: clamp long definitions (full text is one tap away) */
+  .mdj-definition {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .lang-pills {
     gap: 0.4rem;
   }

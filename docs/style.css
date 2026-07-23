@@ -3489,8 +3489,11 @@ details.sources-section[open] > summary::after {
     padding: 0.35rem 0.4rem;
   }
 
+  /* Keep 2-up so covers stay small — 1 column made each cover a huge
+     full-width block, showing barely one book per screen */
   .books-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
 
   .network-container {

@@ -92,7 +92,6 @@ async function init() {
     // Heavy datasets load after first paint so the landing page is instant
     ensureGlossary().then(() => {
         try {
-            renderQuickStats();
             renderMotDuJour();
             renderLangPills();
             renderGlossaryPage();
@@ -112,7 +111,6 @@ async function init() {
 
     ensureReferences().then(() => {
         try {
-            renderQuickStats();
             renderSourcesPage();
         } catch (err) {
             console.error('Sources render error:', err);
@@ -767,7 +765,6 @@ function navigateBookGrid(key) {
 // HOME PAGE
 // ─────────────────────────────────────────────────────────────────────────────
 function renderHomePage() {
-    renderQuickStats();
     renderMotDuJour();
     renderLangPills();
     renderReadingLists();
@@ -1063,27 +1060,6 @@ function openAuthorPage(authorId) {
     }, 100);
 }
 window.openAuthorPage = openAuthorPage;
-
-function renderQuickStats() {
-    const statTerms = document.getElementById('statTerms');
-    const statLangs = document.getElementById('statLangs');
-    const statTexts = document.getElementById('statTexts');
-    const statSources = document.getElementById('statSources');
-
-    if (statTerms) statTerms.textContent = state.terms.length;
-    if (statLangs) {
-        const langs = new Set(state.terms.map(t => t.lang));
-        statLangs.textContent = langs.size;
-    }
-    if (statTexts) statTexts.textContent = state.books.length;
-    if (statSources && state.references) {
-        let total = 0;
-        (state.references.sections || []).forEach(sec => {
-            sec.groups.forEach(g => { total += g.resources.length; });
-        });
-        statSources.textContent = total;
-    }
-}
 
 function renderMotDuJour() {
     const termEl = document.getElementById('mdjTerm');

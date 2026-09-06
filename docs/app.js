@@ -914,13 +914,14 @@ window.printReadingList = printReadingList;
 function renderFeaturedAuthors() {
     const container = document.getElementById('featuredAuthors');
     if (!container || !state.authors?.authors) return;
+    setupAuthorsDelegation();
 
     // Show 4 random featured authors
     const shuffled = [...state.authors.authors].sort(() => Math.random() - 0.5);
     const featured = shuffled.slice(0, 4);
 
     container.innerHTML = featured.map(author => `
-        <button class="author-card-small" onclick="openAuthorPage('${author.id}')">
+        <button class="author-card-small" data-author="${escapeAttr(author.id)}">
             <span class="author-name">${escapeHtml(author.name)}</span>
             <span class="author-dates">${escapeHtml(author.dates)}</span>
         </button>
@@ -935,6 +936,7 @@ function renderAuthorsPage() {
     const resultsInfo = document.getElementById('authorsResultsInfo');
 
     if (!container || !state.authors?.authors) return;
+    setupAuthorsDelegation();
 
     // Collect all unique tags with counts
     const tagCounts = {};
@@ -1015,15 +1017,35 @@ function renderAuthorsPage() {
                     ${works.map(workId => {
                         const book = state.bookIndex[workId];
                         if (!book) return '';
-                        return `<a href="#" class="work-link" onclick="openReader('${workId}'); return false;">${escapeHtml(book.title)}</a>`;
+                        return `<a href="#" class="work-link" data-book="${escapeAttr(workId)}">${escapeHtml(book.title)}</a>`;
                     }).filter(Boolean).join(' · ')}
                 </div>
                 <div class="author-card-tags">
-                    ${(author.tags || []).map(t => `<button class="author-tag" onclick="filterAuthorsByTag('${escapeHtml(t)}')">${escapeHtml(t)}</button>`).join('')}
+                    ${(author.tags || []).map(t => `<button class="author-tag" data-tag="${escapeAttr(t)}">${escapeHtml(t)}</button>`).join('')}
                 </div>
             </article>
         `;
     }).join('');
+}
+
+// Delegated handlers for author cards, work links and tag pills. Values live
+// in data-* attributes so entries like "rabi'a" or the tag "siècle d'or" work.
+function setupAuthorsDelegation() {
+    const targets = [document.getElementById('authorsGrid'), document.getElementById('featuredAuthors')];
+    targets.forEach(el => {
+        if (!el || el.dataset.delegated) return;
+        el.dataset.delegated = 'true';
+        el.addEventListener('click', (e) => {
+            const tag = e.target.closest('.author-tag');
+            if (tag) { e.preventDefault(); filterAuthorsByTag(tag.dataset.tag); return; }
+
+            const work = e.target.closest('.work-link');
+            if (work) { e.preventDefault(); openReader(work.dataset.book); return; }
+
+            const card = e.target.closest('.author-card-small');
+            if (card) { e.preventDefault(); openAuthorPage(card.dataset.author); }
+        });
+    });
 }
 
 function filterAuthorsByTag(tag) {

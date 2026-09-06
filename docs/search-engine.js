@@ -30,20 +30,27 @@ function alephSearch(query, maxResults = 50) {
 
     if (terms.length === 0) return [];
 
+    const docIds = idx.docIds || null;
     const scores = {};
 
     for (const term of terms) {
-        const matches = idx.terms[term] || [];
-        for (const match of matches) {
-            if (!scores[match.doc]) {
-                scores[match.doc] = { score: 0, termMatches: 0, hits: 0, positions: [] };
-            }
-            const tf = Math.log(1 + match.freq);
-            const idf = Math.log(idx.meta.totalDocs / matches.length);
-            scores[match.doc].score += tf * idf;
-            scores[match.doc].termMatches++;
-            scores[match.doc].hits += match.freq;
-            scores[match.doc].positions.push(...(match.pos || []));
+        const entry = idx.terms[term];
+        if (!entry) continue;
+
+        // v2 stores postings as a flat [docIndex, freq, ...] array; older
+        // builds used [{doc, freq}] objects.
+        const flat = docIds && !Array.isArray(entry[0]) && typeof entry[0] === 'number';
+        const postings = flat ? entry.length / 2 : entry.length;
+        const idf = Math.log(idx.meta.totalDocs / postings);
+
+        for (let i = 0; i < postings; i++) {
+            const docId = flat ? docIds[entry[i * 2]] : entry[i].doc;
+            const freq = flat ? entry[i * 2 + 1] : entry[i].freq;
+            if (docId === undefined) continue;
+            if (!scores[docId]) scores[docId] = { score: 0, termMatches: 0, hits: 0 };
+            scores[docId].score += Math.log(1 + freq) * idf;
+            scores[docId].termMatches++;
+            scores[docId].hits += freq;
         }
     }
 
@@ -58,7 +65,6 @@ function alephSearch(query, maxResults = 50) {
             id: docId,
             score: data.score,
             hits: data.hits,
-            positions: data.positions.sort((a, b) => a - b).slice(0, 5),
             ...idx.docs[docId]
         }));
 }

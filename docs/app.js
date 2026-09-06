@@ -777,10 +777,7 @@ function renderHomePage() {
 
 function renderReadingLists() {
     const container = document.getElementById('listsGrid');
-    if (!container || !state.readingLists?.lists) {
-        console.log('Reading lists not ready:', { container: !!container, lists: state.readingLists?.lists });
-        return;
-    }
+    if (!container || !state.readingLists?.lists) return;
 
     container.innerHTML = state.readingLists.lists.map(list => {
         const textCount = list.texts.filter(id => state.bookIndex[id]).length;

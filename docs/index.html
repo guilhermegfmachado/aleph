@@ -253,6 +253,7 @@
                         <button class="reader-fav-btn" id="readerFavBtn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris" aria-pressed="false">☆</button>
                         <button class="reader-tts-btn" id="readerTtsBtn" title="Écouter le texte" aria-label="Écouter le texte à voix haute" aria-pressed="false">▶ Écouter</button>
                         <button class="reader-print-btn" id="readerPrintBtn" title="Imprimer ou exporter en PDF" aria-label="Imprimer ou exporter en PDF">⎙ PDF</button>
+                        <button class="reader-cite-btn" id="readerCiteBtn" title="Citer ce texte" aria-label="Citer ce texte">❝ Citer</button>
                         <button class="reader-side-by-side-btn" id="sideBySideToggle" title="Afficher deux langues côte à côte">⫼</button>
                         <select class="reader-side-lang" id="sideLangSelect" style="display:none;"></select>
                         <input type="text" class="reader-search-input" id="readerSearchInput" placeholder="chercher dans ce texte..." aria-label="Chercher dans ce texte">
@@ -382,7 +383,29 @@
                 </div>
             </div>
         </section>
-    </main>
+    
+    <!-- Citation modal -->
+    <div class="citation-overlay" id="citationOverlay" role="dialog" aria-modal="true" aria-labelledby="citationTitle">
+        <div class="citation-modal">
+            <div class="citation-modal-header">
+                <h2 id="citationTitle">Citer ce texte</h2>
+                <button class="citation-close" id="citationClose" aria-label="Fermer">×</button>
+            </div>
+            <div class="citation-tabs" id="citationTabs" role="tablist">
+                <button class="citation-tab active" data-format="chicago" role="tab" aria-selected="true">Chicago</button>
+                <button class="citation-tab" data-format="mla" role="tab" aria-selected="false">MLA</button>
+                <button class="citation-tab" data-format="bibtex" role="tab" aria-selected="false">BibTeX</button>
+                <button class="citation-tab" data-format="ris" role="tab" aria-selected="false">RIS</button>
+            </div>
+            <pre class="citation-output" id="citationOutput" tabindex="0"></pre>
+            <div class="citation-actions">
+                <button class="citation-copy" id="citationCopy">Copier</button>
+                <button class="citation-download" id="citationDownload">Télécharger</button>
+            </div>
+        </div>
+    </div>
+
+</main>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
          COMMAND PALETTE

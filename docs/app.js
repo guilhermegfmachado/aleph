@@ -68,6 +68,7 @@ async function init() {
     setupNavigation();
     setupCommandPalette();
     setupKeyboardShortcuts();
+    setupCitations();
 
     await loadCoreData();
 
@@ -372,6 +373,17 @@ function handleHashChange() {
             setTimeout(() => selectGlossaryTerm(termId), 100);
         }).catch(() => {});
         hash = 'glossary';
+    }
+
+    // Handle search deep links: #search/query
+    if (hash.startsWith('search/')) {
+        const q = decodeURIComponent(hash.slice('search/'.length));
+        const input = document.getElementById('fulltextInput');
+        if (input && input.value !== q) {
+            input.value = q;
+            runFulltextSearch(q);
+        }
+        hash = 'search';
     }
 
     // Stop any reading-aloud when leaving the reader
@@ -1740,6 +1752,8 @@ function renderGlossaryContent(category) {
         ${terms.length > glossaryRenderState.batchSize ? '<div class="glossary-sentinel" id="glossarySentinel"></div>' : ''}
     `;
 
+    updateSpeakButtons(content);
+
     // Set up IntersectionObserver for infinite scroll
     if (terms.length > glossaryRenderState.batchSize) {
         const sentinel = document.getElementById('glossarySentinel');
@@ -1774,6 +1788,7 @@ function renderMoreGlossaryTerms() {
         fragment.appendChild(temp.firstChild);
     }
     list.appendChild(fragment);
+    updateSpeakButtons(list);
 
     // Remove sentinel if all rendered
     if (glossaryRenderState.rendered >= terms.length) {
@@ -2978,6 +2993,169 @@ function renderReaderBody() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// CITATIONS — Chicago / MLA / BibTeX / RIS
+// ─────────────────────────────────────────────────────────────────────────────
+const MONTHS_FR = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin',
+                   'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+
+// "Marcus Aurelius" -> "Aurelius, Marcus"; leaves single-word and corporate
+// names ("UNCITRAL", "Anonyme") untouched.
+function invertName(name) {
+    if (!name || name === 'Anonyme') return name || 'Anonyme';
+    const parts = name.trim().split(/\s+/);
+    if (parts.length < 2) return name;
+    const last = parts.pop();
+    return `${last}, ${parts.join(' ')}`;
+}
+
+function citationKey(book) {
+    const author = (book.author || 'anon').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const word = (book.title || 'text').toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/)[0] || 'text';
+    return `${author || 'anon'}${book.year || ''}${word}`;
+}
+
+function buildCitations(book, lang) {
+    const permalink = `${window.location.origin}${window.location.pathname}#read/${book.id}/${lang}`;
+    const sourceUrl = externalUrlFor(book, lang) || permalink;
+    const year = book.year ? String(book.year) : 's.d.';
+    // "s.d." already carries its period; don't emit "s.d..".
+    const yearPart = year.endsWith('.') ? year : `${year}.`;
+    const yearBib = book.year ? String(book.year) : 'n.d.';
+    const now = new Date();
+    const accessed = `${now.getDate()} ${MONTHS_FR[now.getMonth()]} ${now.getFullYear()}`;
+    const accessedIso = now.toISOString().slice(0, 10);
+    const author = book.author || 'Anonyme';
+
+    return {
+        chicago: `${invertName(author)}. « ${book.title} ». ${yearPart} Aleph : Catalogue littéraire universel, ${book.code}. Consulté le ${accessed}. ${permalink}.`,
+
+        mla: `${invertName(author)}. « ${book.title} ». ${yearPart} Aleph : Catalogue littéraire universel, ${book.code}, ${permalink}. Consulté le ${accessed}.`,
+
+        bibtex: [
+            `@book{${citationKey(book)},`,
+            `  author    = {${author}},`,
+            `  title     = {${book.title}},`,
+            `  year      = {${yearBib}},`,
+            `  language  = {${lang}},`,
+            `  publisher = {Aleph : Catalogue littéraire universel},`,
+            `  note      = {${book.code}. Source : ${sourceUrl}},`,
+            `  url       = {${permalink}},`,
+            `  urldate   = {${accessedIso}}`,
+            `}`
+        ].join('\n'),
+
+        ris: [
+            'TY  - BOOK',
+            `AU  - ${invertName(author)}`,
+            `TI  - ${book.title}`,
+            `PY  - ${book.year || ''}`,
+            `LA  - ${lang}`,
+            'PB  - Aleph : Catalogue littéraire universel',
+            `UR  - ${permalink}`,
+            `N1  - ${book.code}. Source : ${sourceUrl}`,
+            `Y2  - ${accessedIso}`,
+            'ER  - '
+        ].join('\n')
+    };
+}
+
+let citationState = { formats: null, format: 'chicago', lastFocus: null };
+
+function openCitationModal() {
+    const book = state.bookIndex[state.reader.bookId];
+    const overlay = document.getElementById('citationOverlay');
+    if (!book || !overlay) return;
+
+    citationState.formats = buildCitations(book, state.reader.lang);
+    citationState.lastFocus = document.activeElement;
+    renderCitation();
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('citationClose')?.focus();
+    trapFocus(overlay.querySelector('.citation-modal'));
+}
+
+function closeCitationModal() {
+    const overlay = document.getElementById('citationOverlay');
+    if (!overlay) return;
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    citationState.lastFocus?.focus();
+}
+
+function renderCitation() {
+    const out = document.getElementById('citationOutput');
+    if (!out || !citationState.formats) return;
+    out.textContent = citationState.formats[citationState.format] || '';
+    document.querySelectorAll('.citation-tab').forEach(tab => {
+        const on = tab.dataset.format === citationState.format;
+        tab.classList.toggle('active', on);
+        tab.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+}
+
+function setupCitations() {
+    const overlay = document.getElementById('citationOverlay');
+    if (!overlay) return;
+
+    document.getElementById('readerCiteBtn')?.addEventListener('click', openCitationModal);
+    document.getElementById('citationClose')?.addEventListener('click', closeCitationModal);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeCitationModal(); });
+    overlay.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCitationModal(); });
+
+    document.getElementById('citationTabs')?.addEventListener('click', (e) => {
+        const tab = e.target.closest('.citation-tab');
+        if (!tab) return;
+        citationState.format = tab.dataset.format;
+        renderCitation();
+    });
+
+    const copyBtn = document.getElementById('citationCopy');
+    copyBtn?.addEventListener('click', () => {
+        const text = citationState.formats?.[citationState.format] || '';
+        copyText(text).then(() => {
+            copyBtn.textContent = 'Copié ✓';
+            setTimeout(() => { copyBtn.textContent = 'Copier'; }, 1500);
+        });
+    });
+
+    document.getElementById('citationDownload')?.addEventListener('click', () => {
+        const book = state.bookIndex[state.reader.bookId];
+        if (!book) return;
+        const fmt = citationState.format;
+        const ext = fmt === 'bibtex' ? 'bib' : fmt === 'ris' ? 'ris' : 'txt';
+        const blob = new Blob([citationState.formats[fmt] || ''], { type: 'text/plain;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${citationKey(book)}.${ext}`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    });
+}
+
+// Clipboard with a fallback for browsers that block the async API.
+function copyText(text) {
+    if (navigator.clipboard?.writeText) {
+        return navigator.clipboard.writeText(text).catch(() => legacyCopy(text));
+    }
+    return Promise.resolve(legacyCopy(text));
+}
+
+function legacyCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch { /* ignore */ }
+    document.body.removeChild(ta);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // USER NOTES
 // ─────────────────────────────────────────────────────────────────────────────
 function getUserNote(key) {
@@ -3069,7 +3247,15 @@ function setupSearchPage() {
     let debounceTimer = null;
     input?.addEventListener('input', () => {
         clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => runFulltextSearch(input.value), 200);
+        debounceTimer = setTimeout(() => {
+            const q = input.value.trim();
+            runFulltextSearch(input.value);
+            // Keep the URL shareable without adding a history entry per keystroke.
+            const target = q.length >= 3 ? `#search/${encodeURIComponent(q)}` : '#search';
+            if (window.location.hash !== target) {
+                history.replaceState(null, '', target);
+            }
+        }, 200);
     });
 
     document.querySelectorAll('.search-empty [data-suggest]').forEach(a => {
@@ -3215,7 +3401,10 @@ function refreshVoices() {
 }
 if ('speechSynthesis' in window) {
     refreshVoices();
-    window.speechSynthesis.addEventListener?.('voiceschanged', refreshVoices);
+    window.speechSynthesis.addEventListener?.('voiceschanged', () => {
+        refreshVoices();
+        updateSpeakButtons();
+    });
 }
 
 // Pick the best installed voice for a BCP-47 tag: exact match first, then the
@@ -3229,6 +3418,24 @@ function pickVoice(tag) {
     return cachedVoices.find(v => v.lang && v.lang.toLowerCase() === lower)
         || cachedVoices.find(v => v.lang && v.lang.toLowerCase().replace('_', '-').split('-')[0] === base)
         || null;
+}
+
+// True when the device can actually pronounce this language. Used to hide the
+// ♫ button rather than read e.g. Tibetan aloud with an English voice.
+function hasVoiceFor(lang) {
+    if (!('speechSynthesis' in window)) return false;
+    const tag = SPEECH_LANG_MAP[lang];
+    if (!tag) return false;
+    return !!pickVoice(tag);
+}
+
+// Voices arrive asynchronously, so entries are rendered with the button in
+// place and this pass hides the ones we cannot honour.
+function updateSpeakButtons(root) {
+    const scope = root || document;
+    scope.querySelectorAll('.glossary-speak').forEach(btn => {
+        btn.hidden = !hasVoiceFor(btn.dataset.speakLang);
+    });
 }
 
 function speakTerm(term, lang) {

@@ -8,8 +8,8 @@
 const fs = require('fs');
 
 const idx = JSON.parse(fs.readFileSync('search-index.json', 'utf8'));
-if (!Array.isArray(idx.docIds)) {
-  console.error('Index is not v2 (flat-pairs). Rebuild it before appending.');
+if (!Array.isArray(idx.docIds) || !Array.isArray(idx.docLen)) {
+  console.error('Index is not v2 (flat-pairs + docLen). Rebuild it before appending.');
   process.exit(1);
 }
 const manifest = JSON.parse(fs.readFileSync('corpus-manifest.json', 'utf8'));
@@ -54,6 +54,7 @@ for (const id of missing) {
   // (Object.hasOwn guards prototype keys like "constructor".)
   const docIndex = idx.docIds.length;
   idx.docIds.push(id);
+  idx.docLen.push(tokens.length); // BM25 length normalisation
   for (const [term, freq] of local) {
     if (!Object.hasOwn(idx.terms, term)) idx.terms[term] = [];
     idx.terms[term].push(docIndex, freq);
@@ -69,6 +70,8 @@ for (const id of missing) {
 
 idx.v = 2;
 idx.meta.format = 'flat-pairs';
+idx.meta.ranking = 'bm25';
+idx.meta.avgDocLen = Math.round(idx.docLen.reduce((a, b) => a + b, 0) / (idx.docLen.length || 1));
 idx.meta.totalDocs = Object.keys(idx.docs).length;
 idx.meta.totalTerms = Object.keys(idx.terms).length;
 idx.meta.builtAt = process.env.BUILD_TIME || idx.meta.builtAt;

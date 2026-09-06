@@ -200,6 +200,28 @@ function ensureReferences() {
     return referencesPromise;
 }
 
+let d3Promise = null;
+// d3 is self-hosted and loaded on demand — it is only needed for the timeline
+// and the sources network, and a third-party CDN failing left those blank.
+function ensureD3() {
+    if (typeof d3 !== 'undefined') return Promise.resolve(window.d3);
+    if (d3Promise) return d3Promise;
+    d3Promise = new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'vendor/d3.v7.min.js';
+        s.async = true;
+        s.onload = () => resolve(window.d3);
+        s.onerror = () => { d3Promise = null; reject(new Error('d3 failed to load')); };
+        document.head.appendChild(s);
+    });
+    return d3Promise;
+}
+
+function vizError(container, msg) {
+    if (!container) return;
+    container.innerHTML = `<div class="viz-error"><p>${escapeHtml(msg)}</p></div>`;
+}
+
 function processCorpus() {
     if (!state.corpus || !state.corpus.corpus) return;
 
@@ -1383,7 +1405,10 @@ function setupBrowseControls() {
             if (timeline) timeline.style.display = view === 'timeline' ? 'block' : 'none';
             if (mapContainer) mapContainer.style.display = view === 'map' ? 'block' : 'none';
 
-            if (view === 'timeline') renderTimeline();
+            if (view === 'timeline') {
+                ensureD3().then(renderTimeline).catch(() =>
+                    vizError(timeline, 'La frise chronologique n\u2019a pas pu être chargée.'));
+            }
             if (view === 'map') renderMap();
         });
     });
@@ -1607,6 +1632,7 @@ function renderGlossaryPage() {
     renderGlossaryLangFilter();
     renderGlossarySidebar();
     setupGlossaryControls();
+    setupGlossaryDelegation();
 }
 
 function renderGlossaryStats() {
@@ -1682,6 +1708,7 @@ let glossaryRenderState = { terms: [], rendered: 0, batchSize: 30, observer: nul
 function renderGlossaryContent(category) {
     const content = document.getElementById('glossaryContent');
     if (!content) return;
+    setupGlossaryDelegation();
 
     const categories = getGlossaryCategories();
     const found = categories.find(([cat]) => cat === category);
@@ -1772,7 +1799,7 @@ function renderGlossaryTerm(t) {
     const related = validRelated.length ? `
         <div class="entry-related">
             <strong>Voir aussi:</strong>
-            ${validRelated.map(r => `<a href="#" onclick="selectGlossaryTermByName('${escapeHtml(r)}'); return false;">${escapeHtml(r)}</a>`).join(', ')}
+            ${validRelated.map(r => `<a href="#" class="entry-related-link" data-term="${escapeAttr(r)}">${escapeHtml(r)}</a>`).join(', ')}
         </div>
     ` : '';
 
@@ -1782,28 +1809,29 @@ function renderGlossaryTerm(t) {
         <div class="entry-appears">
             <strong>Apparaît dans:</strong>
             ${textIds.slice(0, 5).map(tid => {
-                const book = state.bookIndex[tid.replace(/_[a-z]+$/, '')];
+                const bookId = tid.replace(/_[a-z]+$/, '');
+                const book = state.bookIndex[bookId];
                 const title = book?.title || tid;
-                return `<a href="#" onclick="openReader('${tid.replace(/_[a-z]+$/, '')}', {query: '${escapeHtml(t.term)}'}); return false;">${escapeHtml(title)}</a>`;
+                return `<a href="#" class="entry-appears-link" data-book="${escapeAttr(bookId)}" data-query="${escapeAttr(t.term)}">${escapeHtml(title)}</a>`;
             }).join(', ')}${textIds.length > 5 ? ` <span class="entry-more">+${textIds.length - 5}</span>` : ''}
         </div>
     ` : '';
 
     return `
-        <article class="glossary-entry" data-id="${t.id}" data-lang="${t.lang}" onclick="toggleGlossaryEntry(this)">
+        <article class="glossary-entry" data-id="${escapeAttr(t.id)}" data-lang="${escapeAttr(t.lang)}">
             <header class="glossary-entry-header">
                 <span class="glossary-dropcap">${firstLetter}</span>
                 <span class="glossary-term">${escapeHtml(t.term)}</span>
-                <button class="glossary-speak" onclick="speakTerm('${escapeAttr(t.term)}', '${t.lang}'); event.stopPropagation();" title="Écouter la prononciation">♫</button>
-                <button class="glossary-link" onclick="copyTermLink('${t.id}', this); event.stopPropagation();" title="Copier le lien">§</button>
-                <span class="glossary-lang">${t.lang.toUpperCase()}</span>
+                <button class="glossary-speak" data-speak="${escapeAttr(t.term)}" data-speak-lang="${escapeAttr(t.lang)}" title="Écouter la prononciation" aria-label="Écouter ${escapeAttr(t.term)}">♫</button>
+                <button class="glossary-link" data-copy="${escapeAttr(t.id)}" title="Copier le lien" aria-label="Copier le lien vers ${escapeAttr(t.term)}">§</button>
+                <span class="glossary-lang">${escapeHtml(t.lang.toUpperCase())}</span>
                 ${textIds.length ? `<span class="glossary-textcount" title="Apparaît dans ${textIds.length} textes">№${textIds.length}</span>` : ''}
                 <span class="glossary-expand">+</span>
             </header>
             <div class="glossary-entry-body">
                 <div class="entry-meta">
                     ${cats.slice(1).map(c => `<span class="entry-tag">${escapeHtml(c)}</span>`).join('')}
-                    ${pron ? `<span class="entry-pron">${pron}</span>` : ''}
+                    ${pron ? `<span class="entry-pron">${escapeHtml(pron)}</span>` : ''}
                 </div>
                 <p class="entry-definition">${escapeHtml(t.definition || '')}</p>
                 ${etymology}
@@ -1813,6 +1841,50 @@ function renderGlossaryTerm(t) {
             </div>
         </article>
     `;
+}
+
+// One delegated listener for every glossary entry action. Values travel in
+// data-* attributes rather than being interpolated into inline JS, which used
+// to break outright on terms containing an apostrophe (Esprit de l'escalier).
+function setupGlossaryDelegation() {
+    const content = document.getElementById('glossaryContent');
+    if (!content || content.dataset.delegated) return;
+    content.dataset.delegated = 'true';
+
+    content.addEventListener('click', (e) => {
+        const speak = e.target.closest('.glossary-speak');
+        if (speak) {
+            e.stopPropagation();
+            speakTerm(speak.dataset.speak, speak.dataset.speakLang);
+            return;
+        }
+
+        const copy = e.target.closest('.glossary-link');
+        if (copy) {
+            e.stopPropagation();
+            copyTermLink(copy.dataset.copy, copy);
+            return;
+        }
+
+        const rel = e.target.closest('.entry-related-link');
+        if (rel) {
+            e.preventDefault();
+            e.stopPropagation();
+            selectGlossaryTermByName(rel.dataset.term);
+            return;
+        }
+
+        const appears = e.target.closest('.entry-appears-link');
+        if (appears) {
+            e.preventDefault();
+            e.stopPropagation();
+            openReader(appears.dataset.book, { query: appears.dataset.query });
+            return;
+        }
+
+        const entry = e.target.closest('.glossary-entry');
+        if (entry) toggleGlossaryEntry(entry);
+    });
 }
 
 function setupGlossaryControls() {
@@ -2065,10 +2137,14 @@ function setSourcesView(view) {
         if (listContainer) listContainer.style.display = 'none';
         if (networkContainer) {
             networkContainer.style.display = 'block';
-            // Wait for browser reflow before measuring container dimensions
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => initNetwork());
-            });
+            networkContainer.innerHTML = '<div class="viz-error"><p>Chargement du réseau…</p></div>';
+            ensureD3().then(() => {
+                // Wait for browser reflow before measuring container dimensions
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => initNetwork());
+                });
+            }).catch(() => vizError(networkContainer,
+                'La visualisation en réseau n\u2019a pas pu être chargée. Utilisez la vue liste.'));
         }
     } else {
         if (listContainer) listContainer.style.display = '';
@@ -2206,8 +2282,13 @@ function collapseNetworkDescendants(nodeId) {
 
 function initNetwork() {
     const container = document.getElementById('networkContainer');
-    if (!container || typeof d3 === 'undefined') {
-        console.warn('D3 not loaded or container not found');
+    if (!container) return;
+    if (typeof d3 === 'undefined') {
+        vizError(container, 'La visualisation en réseau n\u2019a pas pu être chargée. Utilisez la vue liste.');
+        return;
+    }
+    if (!state.references) {
+        vizError(container, 'Références en cours de chargement…');
         return;
     }
 
@@ -3105,7 +3186,7 @@ async function buildSnippet(hit, query) {
 // ─────────────────────────────────────────────────────────────────────────────
 // Audio pronunciation using Web Speech API
 const SPEECH_LANG_MAP = {
-    grc: 'el-GR', el: 'el-GR', la: 'it-IT', // Greek/Latin approximate
+    grc: 'el-GR', 'el-anc': 'el-GR', el: 'el-GR', la: 'it-IT', // Greek/Latin approximate
     en: 'en-US', fr: 'fr-FR', de: 'de-DE', es: 'es-ES',
     it: 'it-IT', pt: 'pt-PT', ru: 'ru-RU', ja: 'ja-JP',
     zh: 'zh-CN', ar: 'ar-SA', he: 'he-IL', fa: 'fa-IR',
@@ -3114,17 +3195,55 @@ const SPEECH_LANG_MAP = {
     cs: 'cs-CZ', sk: 'sk-SK', bg: 'bg-BG', uk: 'uk-UA',
     hr: 'hr-HR', sr: 'sr-RS', sl: 'sl-SI', ro: 'ro-RO',
     hu: 'hu-HU', fi: 'fi-FI', sv: 'sv-SE', da: 'da-DK',
-    is: 'is-IS', lt: 'lt-LT', lv: 'lv-LV', et: 'et-EE'
+    is: 'is-IS', lt: 'lt-LT', lv: 'lv-LV', et: 'et-EE',
+    // Additional languages present in the glossary
+    hi: 'hi-IN', ko: 'ko-KR', vi: 'vi-VN', th: 'th-TH',
+    cy: 'cy-GB', ga: 'ga-IE', gd: 'gd-GB', eu: 'eu-ES',
+    sq: 'sq-AL', ur: 'ur-PK', zu: 'zu-ZA', xh: 'xh-ZA',
+    sw: 'sw-KE', yo: 'yo-NG', af: 'af-ZA', sn: 'sn-ZW',
+    id: 'id-ID', ms: 'ms-MY', jv: 'jv-ID', tl: 'fil-PH',
+    ta: 'ta-IN', te: 'te-IN', ml: 'ml-IN', kn: 'kn-IN',
+    mr: 'mr-IN', or: 'or-IN', ne: 'ne-NP', bo: 'bo-CN',
+    mn: 'mn-MN', am: 'am-ET', haw: 'haw-US', mi: 'mi-NZ',
+    gl: 'gl-ES', bs: 'bs-BA', yi: 'yi', to: 'to-TO',
+    // Approximations for languages without their own synthesis voice
+    oc: 'fr-FR',   // Occitan → French
+    nah: 'es-MX',  // Nahuatl → Mexican Spanish orthography
+    yua: 'es-MX',  // Yucatec Maya → Mexican Spanish orthography
+    cu: 'ru-RU'    // Church Slavonic → Russian
 };
 
+// Voice list is populated asynchronously in most browsers.
+let cachedVoices = [];
+function refreshVoices() {
+    if ('speechSynthesis' in window) cachedVoices = window.speechSynthesis.getVoices() || [];
+}
+if ('speechSynthesis' in window) {
+    refreshVoices();
+    window.speechSynthesis.addEventListener?.('voiceschanged', refreshVoices);
+}
+
+// Pick the best installed voice for a BCP-47 tag: exact match first, then the
+// base language (fr-CA satisfies fr-FR), so terms are read in their own tongue
+// rather than with an English voice.
+function pickVoice(tag) {
+    if (!cachedVoices.length) refreshVoices();
+    if (!cachedVoices.length) return null;
+    const lower = tag.toLowerCase();
+    const base = lower.split('-')[0];
+    return cachedVoices.find(v => v.lang && v.lang.toLowerCase() === lower)
+        || cachedVoices.find(v => v.lang && v.lang.toLowerCase().replace('_', '-').split('-')[0] === base)
+        || null;
+}
+
 function speakTerm(term, lang) {
-    if (!('speechSynthesis' in window)) {
-        console.warn('Speech synthesis not supported');
-        return;
-    }
+    if (!term || !('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
+    const tag = SPEECH_LANG_MAP[lang] || 'en-US';
     const utterance = new SpeechSynthesisUtterance(term);
-    utterance.lang = SPEECH_LANG_MAP[lang] || 'en-US';
+    utterance.lang = tag;
+    const voice = pickVoice(tag);
+    if (voice) utterance.voice = voice;
     utterance.rate = 0.8;
     window.speechSynthesis.speak(utterance);
 }

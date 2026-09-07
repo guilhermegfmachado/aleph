@@ -255,7 +255,8 @@ function processCorpus() {
                 code: `AL.${String(codeNum++).padStart(4, '0')}`,
                 title: doc.title,
                 author: doc.author || 'Anonyme',
-                year: doc.year || null,
+                year: doc.year ?? null,
+                circa: doc.circa === true,
                 type: type,
                 lang: firstLang,
                 langs: langs,
@@ -271,6 +272,25 @@ function processCorpus() {
             state.bookIndex[doc.id] = book;
         });
     }
+}
+
+// BCE years are stored as negative numbers; rendering them raw produced
+// "-385" everywhere. `circa` marks dates that are scholarly estimates.
+function formatYear(year, circa) {
+    if (year === null || year === undefined || year === '') return '—';
+    const n = Number(year);
+    if (!Number.isFinite(n)) return String(year);
+    const label = n < 0 ? `${Math.abs(n)} av. J.-C.` : String(n);
+    return circa ? `c. ${label}` : label;
+}
+
+// ASCII form for bibliographic records (BibTeX/RIS), which travel into other tools.
+function formatYearPlain(year, circa) {
+    if (year === null || year === undefined || year === '') return '';
+    const n = Number(year);
+    if (!Number.isFinite(n)) return String(year);
+    const label = n < 0 ? `${Math.abs(n)} BC` : String(n);
+    return circa ? `c. ${label}` : label;
 }
 
 function externalUrlFor(book, lang) {
@@ -863,7 +883,7 @@ function openReadingList(listId) {
             </div>
             <h3 class="book-title">${escapeHtml(b.title)}</h3>
             <p class="book-author">${escapeHtml(b.author)}</p>
-            <p class="book-meta">${b.year || '—'}${b.langs.length > 1 ? ` · ${b.langs.length} langues` : ''}</p>
+            <p class="book-meta">${formatYear(b.year, b.circa)}${b.langs.length > 1 ? ` · ${b.langs.length} langues` : ''}</p>
         </a>
     `).join('');
 
@@ -902,7 +922,7 @@ function printReadingList(listId) {
             ${books.map((b, i) => `
                 <div class="book">
                     <p class="title">${i + 1}. ${escapeHtml(b.title)}</p>
-                    <p class="meta">${escapeHtml(b.author)} · ${b.year || '—'} · ${b.lang.toUpperCase()}</p>
+                    <p class="meta">${escapeHtml(b.author)} · ${formatYear(b.year, b.circa)} · ${b.lang.toUpperCase()}</p>
                 </div>
             `).join('')}
             <p class="footer">Généré par Aleph — guilhermegfmachado.github.io/aleph</p>
@@ -1382,7 +1402,7 @@ function renderBooksGrid() {
             </div>
             <h3 class="book-title">${escapeHtml(b.title)}</h3>
             <p class="book-author">${escapeHtml(b.author)}</p>
-            <p class="book-meta">${b.year || '—'}${b.langs.length > 1 ? ` · ${b.langs.length} langues` : ''}</p>
+            <p class="book-meta">${formatYear(b.year, b.circa)}${b.langs.length > 1 ? ` · ${b.langs.length} langues` : ''}</p>
         </a>
     `).join('');
 }
@@ -1466,9 +1486,10 @@ function renderTimeline() {
     });
 
     // Draw axis
+    // "2000 av. J.-C." is a wide label; too many ticks and they collide.
     const xAxis = d3.axisBottom(x)
         .tickFormat(d => d < 0 ? `${Math.abs(d)} av. J.-C.` : d)
-        .ticks(10);
+        .ticks(Math.max(4, Math.floor(width / 190)));
 
     svg.append('g')
         .attr('class', 'timeline-axis')
@@ -1512,7 +1533,7 @@ function renderTimeline() {
         .on('mouseover', function(event, d) {
             d3.select(this).attr('r', 12);
             tooltip.transition().duration(100).style('opacity', 1);
-            tooltip.html(`<strong>${d.title}</strong><br>${d.author}<br><em>${d.year < 0 ? Math.abs(d.year) + ' av. J.-C.' : d.year}</em>`)
+            tooltip.html(`<strong>${d.title}</strong><br>${d.author}<br><em>${formatYear(d.year, d.circa)}</em>`)
                 .style('left', (event.pageX - container.offsetLeft + 10) + 'px')
                 .style('top', (event.pageY - container.offsetTop - 60) + 'px');
         })
@@ -2772,7 +2793,7 @@ window.openReader = openReader;
 
 function renderReaderShell(book) {
     document.getElementById('readerCode').textContent = book.code;
-    document.getElementById('readerYear').textContent = book.year || '—';
+    document.getElementById('readerYear').textContent = formatYear(book.year, book.circa);
     document.getElementById('readerTitle').textContent = book.title;
     document.getElementById('readerAuthor').textContent = book.author;
     document.getElementById('readerLang').textContent = state.reader.lang.toUpperCase();
@@ -3011,16 +3032,17 @@ function invertName(name) {
 function citationKey(book) {
     const author = (book.author || 'anon').toLowerCase().replace(/[^a-z0-9]/g, '');
     const word = (book.title || 'text').toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/)[0] || 'text';
-    return `${author || 'anon'}${book.year || ''}${word}`;
+    const yr = book.year != null ? `${Math.abs(book.year)}${book.year < 0 ? 'bc' : ''}` : '';
+    return `${author || 'anon'}${yr}${word}`;
 }
 
 function buildCitations(book, lang) {
     const permalink = `${window.location.origin}${window.location.pathname}#read/${book.id}/${lang}`;
     const sourceUrl = externalUrlFor(book, lang) || permalink;
-    const year = book.year ? String(book.year) : 's.d.';
-    // "s.d." already carries its period; don't emit "s.d..".
+    const year = book.year != null ? formatYear(book.year, book.circa) : 's.d.';
+    // "s.d." and "av. J.-C." already carry a period; don't emit a doubled one.
     const yearPart = year.endsWith('.') ? year : `${year}.`;
-    const yearBib = book.year ? String(book.year) : 'n.d.';
+    const yearBib = book.year != null ? formatYearPlain(book.year, book.circa) : 'n.d.';
     const now = new Date();
     const accessed = `${now.getDate()} ${MONTHS_FR[now.getMonth()]} ${now.getFullYear()}`;
     const accessedIso = now.toISOString().slice(0, 10);
@@ -3048,7 +3070,7 @@ function buildCitations(book, lang) {
             'TY  - BOOK',
             `AU  - ${invertName(author)}`,
             `TI  - ${book.title}`,
-            `PY  - ${book.year || ''}`,
+            `PY  - ${formatYearPlain(book.year, book.circa)}`,
             `LA  - ${lang}`,
             'PB  - Aleph : Catalogue littéraire universel',
             `UR  - ${permalink}`,
@@ -3549,7 +3571,7 @@ function renderRelatedTexts(book) {
                 <button class="reader-related-card" onclick="openReader('${b.id}', {from: 'reader'})">
                     <span class="reader-related-card-title">${escapeHtml(b.title)}</span>
                     <span class="reader-related-card-author">${escapeHtml(b.author)}</span>
-                    <span class="reader-related-card-meta">${b.year || ''} · ${b.lang.toUpperCase()}</span>
+                    <span class="reader-related-card-meta">${formatYear(b.year, b.circa)} · ${b.lang.toUpperCase()}</span>
                 </button>
             `).join('')}
         </div>

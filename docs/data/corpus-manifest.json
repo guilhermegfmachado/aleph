@@ -96,7 +96,8 @@
             "treaty",
             "institutions",
             "internal market"
-          ]
+          ],
+          "year": 1957
         },
         {
           "id": "eu-charter-fundamental",
@@ -1278,7 +1279,9 @@
             "ancient",
             "babylon",
             "code"
-          ]
+          ],
+          "year": -1754,
+          "circa": true
         },
         {
           "id": "justinian-institutes",
@@ -1299,7 +1302,8 @@
             "roman law",
             "civil law",
             "legal education"
-          ]
+          ],
+          "year": 533
         },
         {
           "id": "declaration-rights-man",
@@ -1653,7 +1657,9 @@
             "political philosophy",
             "justice",
             "ideal state"
-          ]
+          ],
+          "year": -375,
+          "circa": true
         },
         {
           "id": "plato-symposium",
@@ -1746,7 +1752,9 @@
             "political philosophy",
             "state",
             "citizenship"
-          ]
+          ],
+          "year": -335,
+          "circa": true
         },
         {
           "id": "aristotle-ethics",
@@ -1815,7 +1823,9 @@
             "stoicism",
             "self-reflection",
             "ethics"
-          ]
+          ],
+          "year": 175,
+          "circa": true
         },
         {
           "id": "machiavelli-prince",
@@ -2138,7 +2148,9 @@
             "achilles",
             "greek mythology",
             "oral tradition"
-          ]
+          ],
+          "year": -750,
+          "circa": true
         },
         {
           "id": "homer-odyssey",
@@ -2165,7 +2177,9 @@
             "nostos",
             "greek mythology",
             "journey"
-          ]
+          ],
+          "year": -725,
+          "circa": true
         },
         {
           "id": "virgil-aeneid",
@@ -2192,7 +2206,8 @@
             "trojan war",
             "founding myth",
             "latin poetry"
-          ]
+          ],
+          "year": -19
         },
         {
           "id": "dante-divine-comedy",
@@ -2331,7 +2346,9 @@
             "prophecy",
             "recognition",
             "greek drama"
-          ]
+          ],
+          "year": -429,
+          "circa": true
         },
         {
           "id": "aeschylus-oresteia",
@@ -2357,7 +2374,8 @@
             "vengeance",
             "greek drama",
             "atrides"
-          ]
+          ],
+          "year": -458
         },
         {
           "id": "shakespeare-hamlet",
@@ -2487,7 +2505,9 @@
             "axioms",
             "proof",
             "number theory"
-          ]
+          ],
+          "year": -300,
+          "circa": true
         },
         {
           "id": "copernicus-revolutions",
@@ -2660,7 +2680,9 @@
             "ethnography",
             "inquiry",
             "father of history"
-          ]
+          ],
+          "year": -430,
+          "circa": true
         },
         {
           "id": "thucydides-peloponnesian",
@@ -2687,7 +2709,9 @@
             "war",
             "realism",
             "power politics"
-          ]
+          ],
+          "year": -400,
+          "circa": true
         },
         {
           "id": "caesar-gallic-wars",
@@ -2714,7 +2738,9 @@
             "military",
             "autobiography",
             "conquest"
-          ]
+          ],
+          "year": -51,
+          "circa": true
         },
         {
           "id": "tacitus-annals",
@@ -2740,7 +2766,9 @@
             "tyranny",
             "historiography",
             "latin prose"
-          ]
+          ],
+          "year": 117,
+          "circa": true
         },
         {
           "id": "plutarch-parallel-lives",
@@ -2766,7 +2794,9 @@
             "greek and roman heroes",
             "moral philosophy",
             "comparative"
-          ]
+          ],
+          "year": 100,
+          "circa": true
         },
         {
           "id": "sun-tzu-art-of-war",
@@ -2793,7 +2823,9 @@
             "chinese classics",
             "deception",
             "leadership"
-          ]
+          ],
+          "year": -500,
+          "circa": true
         }
       ]
     },
@@ -2828,7 +2860,9 @@
             "nature",
             "simplicity",
             "chinese philosophy"
-          ]
+          ],
+          "year": -400,
+          "circa": true
         },
         {
           "id": "analects-confucius",
@@ -2855,7 +2889,9 @@
             "rites",
             "humaneness",
             "chinese philosophy"
-          ]
+          ],
+          "year": -400,
+          "circa": true
         },
         {
           "id": "bhagavad-gita",
@@ -2883,7 +2919,9 @@
             "dharma",
             "moksha",
             "vedanta"
-          ]
+          ],
+          "year": -200,
+          "circa": true
         },
         {
           "id": "dhammapada",
@@ -2910,7 +2948,9 @@
             "karma",
             "suffering",
             "pali canon"
-          ]
+          ],
+          "year": -250,
+          "circa": true
         },
         {
           "id": "augustine-confessions",

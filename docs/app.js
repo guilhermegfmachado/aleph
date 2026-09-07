@@ -2352,6 +2352,7 @@ function initNetwork() {
         .attr('preserveAspectRatio', 'xMidYMid meet');
 
     networkState.g = networkState.svg.append('g');
+    networkState.layers = null;
 
     const zoom = d3.zoom()
         .scaleExtent([0.2, 4])
@@ -2368,9 +2369,7 @@ function initNetwork() {
         networkState.expandedNodes = new Set(['root']);
         updateNetwork();
     });
-    document.getElementById('networkReset')?.addEventListener('click', () => {
-        networkState.svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
-    });
+    document.getElementById('networkReset')?.addEventListener('click', () => fitNetworkToView(500));
     document.getElementById('networkSearch')?.addEventListener('input', (e) => {
         networkState.highlight = e.target.value.toLowerCase().trim();
         if (networkState.highlight) {
@@ -2415,6 +2414,90 @@ function initNetwork() {
     updateNetwork();
 }
 
+// Soft elliptical containment. The old layout hard-clamped x and y to a
+// rectangle every tick, so nodes piled up along the edges and the graph read
+// as a square. This eases them back inside an ellipse that matches the
+// container, so the cloud keeps a round, organic edge.
+function networkBounds() {
+    // The ellipse grows with the number of visible nodes; 800 expanded nodes
+    // will not fit the viewport at 1:1, so the layout spreads out and
+    // fitNetworkToView() zooms to frame it instead of cramming everything in.
+    const spread = networkState.spread || 1;
+    return {
+        cx: networkState.width / 2,
+        cy: networkState.height / 2,
+        rx: Math.max(60, (networkState.width / 2 - 28) * spread),
+        ry: Math.max(60, (networkState.height / 2 - 28) * spread)
+    };
+}
+
+// Structural changes (expand/collapse) reframe the view. The simulation's
+// 'end' event alone is unreliable with hundreds of nodes, so fit on a short
+// timer as well; both paths funnel through here so they cannot fight.
+function scheduleNetworkFit(delay = 900) {
+    clearTimeout(networkState.fitTimer);
+    networkState.fitTimer = setTimeout(() => fitNetworkToView(), delay);
+}
+
+// Frame the whole graph smoothly, whatever it currently spans.
+function fitNetworkToView(duration = 650) {
+    if (!networkState.svg || !networkState.zoom || !networkState.simulation) return;
+    const nodes = networkState.simulation.nodes();
+    if (!nodes.length) return;
+
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const d of nodes) {
+        if (!Number.isFinite(d.x) || !Number.isFinite(d.y)) continue;
+        const r = nodeRadius(d) + 10;
+        minX = Math.min(minX, d.x - r); maxX = Math.max(maxX, d.x + r);
+        minY = Math.min(minY, d.y - r); maxY = Math.max(maxY, d.y + r);
+    }
+    const w = maxX - minX, h = maxY - minY;
+    if (!(w > 0 && h > 0)) return;
+
+    const scale = Math.min(networkState.width / w, networkState.height / h, 1.8) * 0.9;
+    const tx = networkState.width / 2 - scale * (minX + maxX) / 2;
+    const ty = networkState.height / 2 - scale * (minY + maxY) / 2;
+
+    networkState.svg.transition().duration(duration)
+        .call(networkState.zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
+}
+
+function boundaryForce() {
+    let nodes = [];
+    function force(alpha) {
+        const { cx, cy, rx, ry } = networkBounds();
+        for (const d of nodes) {
+            if (d.fx != null || d.fy != null) continue;
+            const r = nodeRadius(d);
+            const ex = Math.max(20, rx - r);
+            const ey = Math.max(20, ry - r);
+            const dx = d.x - cx;
+            const dy = d.y - cy;
+            const norm = Math.sqrt((dx / ex) ** 2 + (dy / ey) ** 2);
+            if (norm > 1) {
+                // Pull proportionally to how far outside the ellipse it drifted.
+                const k = (norm - 1) * alpha * 1.6;
+                d.vx -= dx * k;
+                d.vy -= dy * k;
+            }
+        }
+    }
+    force.initialize = _ => { nodes = _; };
+    return force;
+}
+
+// Each depth orbits the root at its own radius, which is what gives the
+// arrangement its ball shape instead of a drifting blob.
+function ringRadius(d) {
+    const { rx, ry } = networkBounds();
+    const base = Math.min(rx, ry);
+    if (d.depth === 0) return 0;
+    if (d.depth === 1) return base * 0.34;
+    if (d.depth === 2) return base * 0.62;
+    return base * 0.86;
+}
+
 function updateNetwork() {
     if (!networkState.svg) return;
 
@@ -2428,30 +2511,31 @@ function updateNetwork() {
         resource: isDark ? '#5a5a4a' : '#a09080'
     };
 
-    if (networkState.simulation) networkState.simulation.stop();
+    // ~24 nodes fill the viewport comfortably; beyond that the layout expands.
+    networkState.spread = Math.max(1, Math.sqrt(data.nodes.length / 24));
 
-    const cx = networkState.width / 2;
-    const cy = networkState.height / 2;
+    const { cx, cy } = networkBounds();
 
+    // Seed new nodes at their parent so they appear to grow out of it.
     data.nodes.forEach(n => {
         if (n.id === 'root') {
-            n.fx = cx;
-            n.fy = cy;
-            n.x = cx;
-            n.y = cy;
+            n.fx = cx; n.fy = cy; n.x = cx; n.y = cy;
             return;
         }
-        if (networkState.nodePositions[n.id]) {
-            n.x = networkState.nodePositions[n.id].x;
-            n.y = networkState.nodePositions[n.id].y;
+        const saved = networkState.nodePositions[n.id];
+        if (saved) {
+            n.x = saved.x; n.y = saved.y;
         } else {
             const parent = data.nodes.find(p => p.id === n.parent);
-            const px = parent?.x ?? cx;
-            const py = parent?.y ?? cy;
-            n.x = px + (Math.random() - 0.5) * 60;
-            n.y = py + (Math.random() - 0.5) * 60;
+            const px = parent?.x ?? networkState.nodePositions[n.parent]?.x ?? cx;
+            const py = parent?.y ?? networkState.nodePositions[n.parent]?.y ?? cy;
+            const angle = Math.random() * Math.PI * 2;
+            n.x = px + Math.cos(angle) * 12;
+            n.y = py + Math.sin(angle) * 12;
         }
     });
+
+    if (networkState.simulation) networkState.simulation.stop();
 
     networkState.simulation = d3.forceSimulation(data.nodes)
         .force('link', d3.forceLink(data.links)
@@ -2459,68 +2543,100 @@ function updateNetwork() {
             .distance(d => {
                 const sr = nodeRadius(d.source);
                 const tr = nodeRadius(d.target);
-                if (sr >= 20 || tr >= 20) return 140;
-                if (sr >= 12 || tr >= 12) return 100;
-                if (sr >= 8 || tr >= 8) return 65;
-                return 36;
+                if (sr >= 20 || tr >= 20) return 130;
+                if (sr >= 12 || tr >= 12) return 92;
+                if (sr >= 8 || tr >= 8) return 60;
+                return 34;
             })
-            .strength(0.45))
-        .force('charge', d3.forceManyBody().strength(d => -30 * nodeRadius(d)))
-        .force('collide', d3.forceCollide().radius(d => nodeRadius(d) + 8).iterations(2))
-        .force('x', d3.forceX(cx).strength(0.04))
-        .force('y', d3.forceY(cy).strength(0.04))
-        .alphaDecay(0.02)
-        .velocityDecay(0.4);
+            .strength(0.35))
+        .force('charge', d3.forceManyBody().strength(d => -26 * nodeRadius(d)).distanceMax(520))
+        .force('collide', d3.forceCollide().radius(d => nodeRadius(d) + 7).iterations(2))
+        .force('radial', d3.forceRadial(ringRadius, cx, cy).strength(d => d.depth === 0 ? 0 : 0.32))
+        .force('bounds', boundaryForce())
+        .alphaDecay(0.028)
+        .velocityDecay(0.45);
 
-    networkState.g.selectAll('*').remove();
+    // Persistent layers so expanding a node animates instead of rebuilding
+    // the whole scene (the old code cleared and re-appended everything).
+    if (!networkState.layers) {
+        networkState.layers = {
+            links: networkState.g.append('g').attr('class', 'net-links'),
+            nodes: networkState.g.append('g').attr('class', 'net-nodes'),
+            labels: networkState.g.append('g').attr('class', 'net-labels')
+        };
+    }
+    const layers = networkState.layers;
 
-    const link = networkState.g.append('g')
-        .selectAll('line')
-        .data(data.links)
-        .join('line')
+    const link = layers.links.selectAll('line')
+        .data(data.links, d => `${d.source.id ?? d.source}|${d.target.id ?? d.target}`)
+        .join(
+            enter => enter.append('line')
+                .attr('stroke-opacity', 0)
+                .call(sel => sel.transition().duration(420).attr('stroke-opacity', 0.5)),
+            update => update,
+            exit => exit.call(sel => sel.transition().duration(220).attr('stroke-opacity', 0).remove())
+        )
         .attr('stroke', isDark ? '#555' : '#c8b89a')
-        .attr('stroke-opacity', 0.5)
-        .attr('stroke-width', d => d.target.depth >= 3 ? 0.5 : 1);
+        .attr('stroke-width', d => (d.target.depth ?? 3) >= 3 ? 0.5 : 1);
 
-    const node = networkState.g.append('g')
-        .selectAll('g')
-        .data(data.nodes)
-        .join('g')
-        .style('cursor', 'pointer')
-        .call(d3.drag()
-            .on('start', dragstart)
-            .on('drag', dragging)
-            .on('end', dragend));
+    const node = layers.nodes.selectAll('g.net-node')
+        .data(data.nodes, d => d.id)
+        .join(
+            enter => {
+                const g = enter.append('g')
+                    .attr('class', 'net-node')
+                    .style('cursor', 'pointer')
+                    .style('opacity', 0);
+                g.append('circle').attr('r', 0);
+                g.append('text')
+                    .attr('class', 'net-plus')
+                    .attr('text-anchor', 'middle')
+                    .attr('dy', '0.35em')
+                    .attr('fill', '#fff')
+                    .attr('font-weight', 'bold')
+                    .style('pointer-events', 'none');
+                g.call(sel => sel.transition().duration(420).style('opacity', 1));
+                return g;
+            },
+            update => update,
+            exit => exit.call(sel => sel.transition().duration(220).style('opacity', 0).remove())
+        );
 
-    node.append('circle')
+    node.select('circle')
+        .transition().duration(320)
         .attr('r', d => nodeRadius(d))
         .attr('fill', d => colors[d.group])
         .attr('stroke', d => networkState.expandedNodes.has(d.id) ? (isDark ? '#fff' : '#1a1410') : 'none')
         .attr('stroke-width', 2);
 
-    node.filter(d => hasNetworkChildren(d.id) && !networkState.expandedNodes.has(d.id))
-        .append('text')
-        .attr('text-anchor', 'middle')
-        .attr('dy', '0.35em')
-        .attr('fill', '#fff')
+    node.select('text.net-plus')
         .attr('font-size', d => d.depth <= 1 ? '12px' : '8px')
-        .attr('font-weight', 'bold')
-        .text('+');
+        .text(d => (hasNetworkChildren(d.id) && !networkState.expandedNodes.has(d.id)) ? '+' : '');
 
-    const labels = networkState.g.append('g')
-        .selectAll('text')
-        .data(data.nodes)
-        .join('text')
-        .attr('text-anchor', 'start')
-        .attr('dominant-baseline', 'central')
+    node.call(d3.drag()
+        .on('start', dragstart)
+        .on('drag', dragging)
+        .on('end', dragend));
+
+    const labels = layers.labels.selectAll('text')
+        .data(data.nodes, d => d.id)
+        .join(
+            enter => enter.append('text')
+                .attr('text-anchor', 'start')
+                .attr('dominant-baseline', 'central')
+                .style('pointer-events', 'none')
+                .style('font-family', 'var(--mono)')
+                .style('opacity', 0),
+            update => update,
+            exit => exit.call(sel => sel.transition().duration(220).style('opacity', 0).remove())
+        )
         .attr('dx', d => nodeRadius(d) + 6)
         .style('font-size', d => d.depth === 0 ? '14px' : d.depth === 1 ? '11px' : d.depth === 2 ? '9.5px' : '8.5px')
         .style('fill', d => labelOpacityForMatch(d) > 0 ? (isDark ? '#e8e0d0' : '#1a1410') : (isDark ? '#d0c8b8' : '#5a4a3a'))
         .style('font-weight', d => labelOpacityForMatch(d) > 0 ? 600 : 400)
-        .style('opacity', d => baseLabelOpacity(d))
-        .style('pointer-events', 'none')
-        .style('font-family', 'var(--mono)')
         .text(d => d.label);
+
+    labels.transition().duration(320).style('opacity', d => baseLabelOpacity(d));
 
     const tooltip = document.getElementById('networkTooltip');
 
@@ -2536,9 +2652,7 @@ function updateNetwork() {
     function moveTooltip(event) {
         if (!tooltip) return;
         const rect = networkState.svg.node().getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        tooltip.style.transform = `translate(${x + 14}px, ${y + 14}px)`;
+        tooltip.style.transform = `translate(${event.clientX - rect.left + 14}px, ${event.clientY - rect.top + 14}px)`;
     }
 
     node.on('mouseover', (event, d) => {
@@ -2572,16 +2686,11 @@ function updateNetwork() {
         return (d.fullLabel || d.label).toLowerCase().includes(networkState.highlight) ? 1 : 0;
     }
 
-    const padding = 30;
+    networkState.simulation.on('end', () => fitNetworkToView());
+    scheduleNetworkFit(data.nodes.length > 200 ? 2200 : 900);
+
     networkState.simulation.on('tick', () => {
-        data.nodes.forEach(d => {
-            if (!d.fx) {
-                const r = nodeRadius(d);
-                d.x = Math.max(r + padding, Math.min(networkState.width - r - padding, d.x));
-                d.y = Math.max(r + padding, Math.min(networkState.height - r - padding, d.y));
-            }
-            networkState.nodePositions[d.id] = { x: d.x, y: d.y };
-        });
+        for (const d of data.nodes) networkState.nodePositions[d.id] = { x: d.x, y: d.y };
 
         link.attr('x1', d => d.source.x)
             .attr('y1', d => d.source.y)
@@ -2592,18 +2701,31 @@ function updateNetwork() {
         labels.attr('x', d => d.x).attr('y', d => d.y);
     });
 
+    // Dragging is constrained to the same ellipse, so a node cannot be parked
+    // in a corner the layout would never otherwise use.
     function dragstart(e) {
         if (e.subject.id === 'root') return;
-        if (!e.active) networkState.simulation.alphaTarget(0.1).restart();
+        if (!e.active) networkState.simulation.alphaTarget(0.12).restart();
         e.subject.fx = e.subject.x;
         e.subject.fy = e.subject.y;
     }
 
     function dragging(e) {
         if (e.subject.id === 'root') return;
+        const b = networkBounds();
         const r = nodeRadius(e.subject);
-        e.subject.fx = Math.max(r + padding, Math.min(networkState.width - r - padding, e.x));
-        e.subject.fy = Math.max(r + padding, Math.min(networkState.height - r - padding, e.y));
+        const ex = Math.max(20, b.rx - r);
+        const ey = Math.max(20, b.ry - r);
+        const dx = e.x - b.cx;
+        const dy = e.y - b.cy;
+        const norm = Math.sqrt((dx / ex) ** 2 + (dy / ey) ** 2);
+        if (norm > 1) {
+            e.subject.fx = b.cx + dx / norm;
+            e.subject.fy = b.cy + dy / norm;
+        } else {
+            e.subject.fx = e.x;
+            e.subject.fy = e.y;
+        }
     }
 
     function dragend(e) {
